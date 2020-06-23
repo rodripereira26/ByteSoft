@@ -1,4 +1,4 @@
-﻿Imports AccesoBD
+﻿Imports Acceso_a_Datos
 Imports System.Data.Odbc
 
 Public Class Consultas
@@ -7,10 +7,10 @@ Public Class Consultas
     Private Shared instancia
 
     Public Shared Function GetSingleton() As Consultas
-        If (Instancia Is Nothing) Then
+        If (instancia Is Nothing) Then
             instancia = New Consultas
         End If
-        Return Instancia
+        Return instancia
     End Function
 
     Public Function verificarUsuario(usuario As String, pass As String) As Integer

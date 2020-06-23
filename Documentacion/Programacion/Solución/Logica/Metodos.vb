@@ -1,5 +1,3 @@
-﻿
-Public Class Metodos
-
+﻿Public Class Metodos
 
 End Class
