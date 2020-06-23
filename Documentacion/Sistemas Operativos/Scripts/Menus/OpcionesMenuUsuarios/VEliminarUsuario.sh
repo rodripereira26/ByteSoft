@@ -44,7 +44,7 @@ ejecutarEliminarUsuario(){
         VMenuEliminarUsuario
         if $abrirSeleccionarGrupo; then
             ejecutarElegirGrupo
-            if [ $(grep -E "^$usuarioAEliminar:.*::$pathUSUARIOS/USUARIOS/$grupoPerteneciente/$usuarioAEliminar" /etc/passwd) ]; then
+            if [ $(grep -E "^$usuarioAEliminar:.*::/home/USUARIOS/$grupoPerteneciente/$usuarioAEliminar" /etc/passwd) ]; then
                 if [ $(borrarUsuario $usuarioAEliminar) = "0" ]; then
                     VAvisoRegistrado "USUARIO ELIMINADO CORRECTAMENTE" 10
                 else

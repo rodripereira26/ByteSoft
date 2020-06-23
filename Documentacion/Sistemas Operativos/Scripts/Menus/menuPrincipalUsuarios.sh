@@ -16,7 +16,7 @@
 VMenuPrincipal(){
     # muestra diseño
     iniciarPantallaNueva
-    #animacionTitulo "Menus/tituloByteSoft.txt" 5 5
+    animacionTitulo "Menus/tituloByteSoft.txt" 5 5
     iniciarPantallaNueva
     dibujarTxt "MENU PRINCIPAL" 80 2
     dibujarBoton "USUARIOS" 20 5 80 3

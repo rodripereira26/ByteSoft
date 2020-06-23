@@ -89,7 +89,7 @@ ejecutarModificarUsuario(){
             agregarALaLista=false
 
             if [ -n "$user" -a -n "$pwN" -a ${#pwN} -gt 7 -a $posEnLista -gt 4 ]; then
-                if [ $(grep -E "^$user:.*::$pathUSUARIOS/USUARIOS/.*/$user" /etc/passwd) ]; then
+                if [ $(grep -E "^$user:.*::/home/USUARIOS/.*/$user" /etc/passwd) ]; then
                     if [ "$pwN" = "$reppwN" ];then
                         respCambioContrasena=$(echo -e "$pwN\n$pwN" | passwd $user)
                         pw=""
