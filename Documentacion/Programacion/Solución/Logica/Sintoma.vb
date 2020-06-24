@@ -1,26 +1,18 @@
-﻿Public Class Sintoma
-    Private _nombre, _descripcion As String
-
-    Public Property nombre() As String
-        Get
-            Return _nombre
-        End Get
-        Set(ByVal value As String)
-            _nombre = value
-        End Set
-    End Property
-    Public Property descripcion() As String
-        Get
-            Return _descripcion
-        End Get
-        Set(ByVal value As String)
-            _descripcion = value
-        End Set
-    End Property
+﻿Imports Acceso_a_Datos
+Public Class Sintoma
+    Property _nombre As String
+    Property _descripcion As String
     Public Sub New(nombre As String, descripcion As String)
 
-        Me.nombre = nombre
-        Me.descripcion = descripcion
+        Me._nombre = nombre
+        Me._descripcion = descripcion
 
     End Sub
+
+    Public Function agregar()
+        Dim c As New Consultas
+        Return c.agregarSintoma(_nombre, _descripcion)
+
+    End Function
+
 End Class
