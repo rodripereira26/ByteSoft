@@ -1,7 +1,10 @@
-﻿Public Class frmBienvenidaGestor
+﻿Imports Logica
+Public Class frmBienvenidaGestor
     Dim drag As Boolean
     Dim mousex, mousey As Integer
     Private Sub BienvenidaGestor_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+
         Dim p As New Principal
         p.roundedCorners(Me)
         p.roundedCorners(Panel3)
@@ -52,6 +55,8 @@
         drag = True
         mousex = Cursor.Position.X - Me.Left
         mousey = Cursor.Position.Y - Me.Top
+
+
     End Sub
 
     Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel6.MouseMove

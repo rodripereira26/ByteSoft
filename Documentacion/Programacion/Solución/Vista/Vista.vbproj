@@ -66,6 +66,10 @@
     <Reference Include="DynamicData, Version=6.15.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamicData.6.15.1\lib\net461\DynamicData.dll</HintPath>
     </Reference>
+    <Reference Include="Logica, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LibreriaLogica\Logica\bin\Debug\Logica.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.2.0.0\lib\net47\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -463,12 +467,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\op1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Logica\Logica.vbproj">
-      <Project>{4b28567e-bf5c-4dfd-9064-79486998542c}</Project>
-      <Name>Logica</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\v9.png" />

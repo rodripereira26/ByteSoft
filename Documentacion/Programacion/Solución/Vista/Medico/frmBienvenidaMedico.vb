@@ -1,4 +1,5 @@
-﻿Public Class frmBienvenidaMedico
+﻿Imports Logica
+Public Class frmBienvenidaMedico
     Dim drag As Boolean
     Dim mousex, mousey As Integer
 
@@ -11,7 +12,10 @@
         redondear(Panel6)
         redondear(Me)
 
+
     End Sub
+
+
 
     Private Sub redondear(panel As Object)
         Dim gp As New Drawing2D.GraphicsPath()
@@ -90,6 +94,8 @@
         Label11.ForeColor = col
         Label12.ForeColor = col
         Label13.ForeColor = col
+
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -141,6 +147,9 @@
         Me.Close()
     End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
 
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
         drag = False

@@ -1,0 +1,38 @@
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\source\repos\ByteSoft Proyecto\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.CoreCompileInputs.cache
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
+C:\Users\Mati\Desktop\VERSION 19-6-20\Nuevo\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.CoreCompileInputs.cache
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
+C:\Users\Mati\Desktop\GIT\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\SolucionesProyectoFinal\Acceso_a_datos\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache

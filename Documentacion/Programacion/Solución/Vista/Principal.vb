@@ -7,7 +7,9 @@ Public Class Principal
     Dim obj As New Panel
 
     Public Sub roundedCorners(rect As Object)
+
         Dim met As New Metodos
+
 
         Dim gp As New Drawing2D.GraphicsPath()
         Dim radio As Integer = 10
