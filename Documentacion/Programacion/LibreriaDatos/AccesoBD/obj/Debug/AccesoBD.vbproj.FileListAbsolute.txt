@@ -1,9 +1,0 @@
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\bin\Debug\AccesoBD.dll
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\bin\Debug\AccesoBD.pdb
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\bin\Debug\AccesoBD.xml
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\obj\Debug\AccesoBD.vbprojAssemblyReference.cache
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\obj\Debug\AccesoBD.Resources.resources
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\obj\Debug\AccesoBD.vbproj.GenerateResource.cache
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\obj\Debug\AccesoBD.dll
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\obj\Debug\AccesoBD.xml
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LibreriaDatos\AccesoBD\obj\Debug\AccesoBD.pdb
