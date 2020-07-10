@@ -6,7 +6,8 @@
 #
 
 . "ElementosTUI/Grafica/disenoVentana.sh" 
-. "InteraccionConCentOS/EntornoDeTrabajo.sh"
+. "InteraccionConCentOS/EntornoDeTrabajo/Respaldar.sh"
+. "InteraccionConCentOS/EntornoDeTrabajo/CrearCarpetasYVariables.sh"
 . "InteraccionConCentOS/Usuarios.sh"
 . "InteraccionConCentOS/SegundoPlano/Logica.sh"
 . "Menus/OpcionesMenuUsuarios/VPrincipalMenuUsuarios.sh"
