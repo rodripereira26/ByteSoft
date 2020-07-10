@@ -26,6 +26,11 @@
 
     End Sub
 
+    Private Sub Panel1_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel1.MouseClick
+        frmRegistrarSintoma.Show()
+        Me.Hide()
+    End Sub
+
 
 
     'Private Sub Panel1_MouseEnter_1(sender As Object, e As EventArgs) Handles Panel4.MouseEnter, Panel2.MouseEnter, Panel1.MouseEnter

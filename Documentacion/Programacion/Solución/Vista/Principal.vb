@@ -1,13 +1,12 @@
 ﻿Imports Logica
 Public Class Principal
 
-    Private WithEvents tEnter As New Timer
-    Private WithEvents tLeave As New Timer
-    Dim mousex, mousey As Integer
-    Dim obj As New Panel
+    'Private WithEvents tEnter As New Timer
+    'Private WithEvents tLeave As New Timer
+    'Dim obj As New Panel
 
     Public Sub roundedCorners(rect As Object)
-        Dim met As New Metodos
+
 
         Dim gp As New Drawing2D.GraphicsPath()
         Dim radio As Integer = 10

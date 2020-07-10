@@ -156,7 +156,7 @@ Partial Class frmSintomasRegistrados
         'Label10
         '
         Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label10.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(339, 25)
         Me.Label10.Name = "Label10"
@@ -364,7 +364,7 @@ Partial Class frmSintomasRegistrados
         Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
         Me.MaterialRaisedButton2.Visible = False
         '
-        'ListarSintomas
+        'frmSintomasRegistrados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -384,7 +384,7 @@ Partial Class frmSintomasRegistrados
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.txtCed)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ListarSintomas"
+        Me.Name = "frmSintomasRegistrados"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ListarSintomas"
         Me.Panel3.ResumeLayout(False)

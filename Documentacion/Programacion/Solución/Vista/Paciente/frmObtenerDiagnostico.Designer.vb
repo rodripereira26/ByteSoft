@@ -59,7 +59,7 @@ Partial Class frmObtenerDiagnostico
         'Label4
         '
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(337, 9)
         Me.Label4.Name = "Label4"
@@ -131,17 +131,17 @@ Partial Class frmObtenerDiagnostico
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(0, 182)
+        Me.Panel2.Location = New System.Drawing.Point(0, 177)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(600, 5)
+        Me.Panel2.Size = New System.Drawing.Size(600, 10)
         Me.Panel2.TabIndex = 30
         '
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label7.Font = New System.Drawing.Font("Montserrat Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(212, 149)
         Me.Label7.Name = "Label7"
@@ -155,7 +155,7 @@ Partial Class frmObtenerDiagnostico
         '
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(244, 9)
         Me.Label2.Name = "Label2"
@@ -169,7 +169,7 @@ Partial Class frmObtenerDiagnostico
         '
         Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label10.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(48, 63)
         Me.Label10.Name = "Label10"
@@ -209,17 +209,17 @@ Partial Class frmObtenerDiagnostico
         'Panel14
         '
         Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Panel14.Location = New System.Drawing.Point(0, 184)
+        Me.Panel14.Location = New System.Drawing.Point(0, 179)
         Me.Panel14.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(600, 5)
+        Me.Panel14.Size = New System.Drawing.Size(600, 10)
         Me.Panel14.TabIndex = 29
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(22, 62)
         Me.Label3.Name = "Label3"
@@ -234,7 +234,7 @@ Partial Class frmObtenerDiagnostico
         '
         Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label9.Font = New System.Drawing.Font("Montserrat Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(212, 144)
         Me.Label9.Name = "Label9"
@@ -248,7 +248,7 @@ Partial Class frmObtenerDiagnostico
         '
         Me.Label11.BackColor = System.Drawing.Color.White
         Me.Label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label11.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
         Me.Label11.Location = New System.Drawing.Point(244, 13)
         Me.Label11.Name = "Label11"
@@ -258,7 +258,7 @@ Partial Class frmObtenerDiagnostico
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label11.Visible = False
         '
-        'ObtenerDiagnóstico
+        'frmObtenerDiagnostico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -266,7 +266,7 @@ Partial Class frmObtenerDiagnostico
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel6)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ObtenerDiagnóstico"
+        Me.Name = "frmObtenerDiagnostico"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ObtenerDiagnóstico"
         Me.Panel6.ResumeLayout(False)

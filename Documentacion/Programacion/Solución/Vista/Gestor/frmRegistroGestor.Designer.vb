@@ -41,8 +41,6 @@ Partial Class frmRegistroGestor
         Me.txtSegundoNombre = New System.Windows.Forms.TextBox()
         Me.lblSegundoNombre = New System.Windows.Forms.Label()
         Me.lblPrimerNombre = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -54,7 +52,13 @@ Partial Class frmRegistroGestor
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton3 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Panel6.SuspendLayout()
+        Me.Panel11.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel9
@@ -113,7 +117,7 @@ Partial Class frmRegistroGestor
         'Label4
         '
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(301, 9)
         Me.Label4.Name = "Label4"
@@ -125,10 +129,10 @@ Partial Class frmRegistroGestor
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(134, 109)
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(125, 109)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(204, 22)
+        Me.Label1.Size = New System.Drawing.Size(198, 26)
         Me.Label1.TabIndex = 108
         Me.Label1.Text = "Cédula de Identidad"
         '
@@ -187,10 +191,10 @@ Partial Class frmRegistroGestor
         'lblSegundoApellido
         '
         Me.lblSegundoApellido.AutoSize = True
-        Me.lblSegundoApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSegundoApellido.Location = New System.Drawing.Point(794, 259)
+        Me.lblSegundoApellido.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSegundoApellido.Location = New System.Drawing.Point(785, 259)
         Me.lblSegundoApellido.Name = "lblSegundoApellido"
-        Me.lblSegundoApellido.Size = New System.Drawing.Size(172, 22)
+        Me.lblSegundoApellido.Size = New System.Drawing.Size(176, 26)
         Me.lblSegundoApellido.TabIndex = 102
         Me.lblSegundoApellido.Text = "Segundo Apellido"
         '
@@ -207,10 +211,10 @@ Partial Class frmRegistroGestor
         'lblPrimerApellido
         '
         Me.lblPrimerApellido.AutoSize = True
-        Me.lblPrimerApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrimerApellido.Location = New System.Drawing.Point(555, 266)
+        Me.lblPrimerApellido.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrimerApellido.Location = New System.Drawing.Point(546, 266)
         Me.lblPrimerApellido.Name = "lblPrimerApellido"
-        Me.lblPrimerApellido.Size = New System.Drawing.Size(144, 22)
+        Me.lblPrimerApellido.Size = New System.Drawing.Size(154, 26)
         Me.lblPrimerApellido.TabIndex = 101
         Me.lblPrimerApellido.Text = "Primer Apellido"
         '
@@ -227,40 +231,22 @@ Partial Class frmRegistroGestor
         'lblSegundoNombre
         '
         Me.lblSegundoNombre.AutoSize = True
-        Me.lblSegundoNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSegundoNombre.Location = New System.Drawing.Point(288, 261)
+        Me.lblSegundoNombre.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSegundoNombre.Location = New System.Drawing.Point(279, 261)
         Me.lblSegundoNombre.Name = "lblSegundoNombre"
-        Me.lblSegundoNombre.Size = New System.Drawing.Size(172, 22)
+        Me.lblSegundoNombre.Size = New System.Drawing.Size(175, 26)
         Me.lblSegundoNombre.TabIndex = 99
         Me.lblSegundoNombre.Text = "Segundo Nombre"
         '
         'lblPrimerNombre
         '
         Me.lblPrimerNombre.AutoSize = True
-        Me.lblPrimerNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrimerNombre.Location = New System.Drawing.Point(49, 262)
+        Me.lblPrimerNombre.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrimerNombre.Location = New System.Drawing.Point(40, 262)
         Me.lblPrimerNombre.Name = "lblPrimerNombre"
-        Me.lblPrimerNombre.Size = New System.Drawing.Size(144, 22)
+        Me.lblPrimerNombre.Size = New System.Drawing.Size(153, 26)
         Me.lblPrimerNombre.TabIndex = 96
         Me.lblPrimerNombre.Text = "Primer Nombre"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Location = New System.Drawing.Point(269, 479)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(218, 2)
-        Me.Panel1.TabIndex = 123
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(269, 449)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(218, 24)
-        Me.TextBox2.TabIndex = 122
         '
         'Panel7
         '
@@ -283,20 +269,20 @@ Partial Class frmRegistroGestor
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(612, 405)
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(603, 405)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 22)
+        Me.Label2.Size = New System.Drawing.Size(68, 26)
         Me.Label2.TabIndex = 120
         Me.Label2.Text = "e-mail"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(331, 405)
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(305, 395)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 22)
+        Me.Label3.Size = New System.Drawing.Size(106, 26)
         Me.Label3.TabIndex = 118
         Me.Label3.Text = "Teléfonos"
         '
@@ -321,10 +307,10 @@ Partial Class frmRegistroGestor
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(447, 109)
+        Me.Label5.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(438, 109)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(119, 22)
+        Me.Label5.Size = New System.Drawing.Size(120, 26)
         Me.Label5.TabIndex = 111
         Me.Label5.Text = "Contraseña"
         '
@@ -349,10 +335,10 @@ Partial Class frmRegistroGestor
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(661, 109)
+        Me.Label6.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(652, 109)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(189, 22)
+        Me.Label6.Size = New System.Drawing.Size(191, 26)
         Me.Label6.TabIndex = 114
         Me.Label6.Text = "Repetir Contraseña"
         '
@@ -371,21 +357,80 @@ Partial Class frmRegistroGestor
         Me.MaterialRaisedButton1.Text = "Crear cuenta"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
+        'MaterialRaisedButton2
+        '
+        Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton2.Depth = 0
+        Me.MaterialRaisedButton2.Icon = Nothing
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(49, 29)
+        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
+        Me.MaterialRaisedButton2.Primary = True
+        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(29, 29)
+        Me.MaterialRaisedButton2.TabIndex = 128
+        Me.MaterialRaisedButton2.Text = "+"
+        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
+        '
+        'MaterialRaisedButton3
+        '
+        Me.MaterialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton3.Depth = 0
+        Me.MaterialRaisedButton3.Icon = Nothing
+        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(14, 29)
+        Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton3.Name = "MaterialRaisedButton3"
+        Me.MaterialRaisedButton3.Primary = True
+        Me.MaterialRaisedButton3.Size = New System.Drawing.Size(29, 29)
+        Me.MaterialRaisedButton3.TabIndex = 130
+        Me.MaterialRaisedButton3.Text = "-"
+        Me.MaterialRaisedButton3.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.Location = New System.Drawing.Point(249, 476)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(230, 2)
+        Me.Panel1.TabIndex = 131
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.ListBox1)
+        Me.Panel11.Controls.Add(Me.MaterialRaisedButton2)
+        Me.Panel11.Controls.Add(Me.MaterialRaisedButton3)
+        Me.Panel11.Location = New System.Drawing.Point(27, 511)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(335, 146)
+        Me.Panel11.TabIndex = 132
+        '
+        'ListBox1
+        '
+        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ListBox1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.ListBox1.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 17
+        Me.ListBox1.Location = New System.Drawing.Point(121, 29)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(198, 87)
+        Me.ListBox1.TabIndex = 131
+        '
         'frmRegistroGestor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1012, 669)
+        Me.Controls.Add(Me.Panel11)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label2)
@@ -410,6 +455,7 @@ Partial Class frmRegistroGestor
         Me.Name = "frmRegistroGestor"
         Me.Text = "RegistrarGestor"
         Me.Panel6.ResumeLayout(False)
+        Me.Panel11.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -433,8 +479,6 @@ Partial Class frmRegistroGestor
     Friend WithEvents lblPrimerNombre As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Panel7 As Panel
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label2 As Label
@@ -446,4 +490,9 @@ Partial Class frmRegistroGestor
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRaisedButton3 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents ListBox1 As ListBox
 End Class

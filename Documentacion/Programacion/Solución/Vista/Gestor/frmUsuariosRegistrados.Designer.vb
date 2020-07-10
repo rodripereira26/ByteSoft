@@ -26,9 +26,16 @@ Partial Class frmUsuariosRegistrados
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsuariosRegistrados))
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsuariosRegistrados))
         Me.dgvEmp = New System.Windows.Forms.DataGridView()
+        Me.ci = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrimerNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SegundoNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Pape = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Segundoapellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.edad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -43,13 +50,6 @@ Partial Class frmUsuariosRegistrados
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.ci = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrimerNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SegundoNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Pape = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Segundoapellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.edad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -109,6 +109,57 @@ Partial Class frmUsuariosRegistrados
         Me.dgvEmp.Size = New System.Drawing.Size(1009, 553)
         Me.dgvEmp.TabIndex = 57
         '
+        'ci
+        '
+        Me.ci.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        Me.ci.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ci.HeaderText = "Cédula"
+        Me.ci.Name = "ci"
+        Me.ci.ReadOnly = True
+        '
+        'PrimerNombre
+        '
+        Me.PrimerNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PrimerNombre.HeaderText = "Primer Nombre"
+        Me.PrimerNombre.Name = "PrimerNombre"
+        Me.PrimerNombre.ReadOnly = True
+        '
+        'SegundoNombre
+        '
+        Me.SegundoNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.SegundoNombre.HeaderText = "Segundo Nombre"
+        Me.SegundoNombre.Name = "SegundoNombre"
+        Me.SegundoNombre.ReadOnly = True
+        '
+        'Pape
+        '
+        Me.Pape.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Pape.HeaderText = "Primer Apellido"
+        Me.Pape.Name = "Pape"
+        Me.Pape.ReadOnly = True
+        '
+        'Segundoapellido
+        '
+        Me.Segundoapellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Segundoapellido.HeaderText = "Segundo Apellido"
+        Me.Segundoapellido.Name = "Segundoapellido"
+        Me.Segundoapellido.ReadOnly = True
+        '
+        'tipo
+        '
+        Me.tipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.tipo.HeaderText = "Tipo"
+        Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
+        '
+        'edad
+        '
+        Me.edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.edad.HeaderText = "Edad"
+        Me.edad.Name = "edad"
+        Me.edad.ReadOnly = True
+        '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
@@ -148,7 +199,7 @@ Partial Class frmUsuariosRegistrados
         'Label1
         '
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(417, 9)
         Me.Label1.Name = "Label1"
@@ -182,7 +233,7 @@ Partial Class frmUsuariosRegistrados
         'Label2
         '
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(86, 15)
         Me.Label2.Name = "Label2"
@@ -206,7 +257,7 @@ Partial Class frmUsuariosRegistrados
         'Label3
         '
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(1061, 193)
         Me.Label3.Name = "Label3"
@@ -278,58 +329,7 @@ Partial Class frmUsuariosRegistrados
         Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
         Me.MaterialRaisedButton2.Visible = False
         '
-        'ci
-        '
-        Me.ci.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        Me.ci.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ci.HeaderText = "Cédula"
-        Me.ci.Name = "ci"
-        Me.ci.ReadOnly = True
-        '
-        'PrimerNombre
-        '
-        Me.PrimerNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.PrimerNombre.HeaderText = "Primer Nombre"
-        Me.PrimerNombre.Name = "PrimerNombre"
-        Me.PrimerNombre.ReadOnly = True
-        '
-        'SegundoNombre
-        '
-        Me.SegundoNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.SegundoNombre.HeaderText = "Segundo Nombre"
-        Me.SegundoNombre.Name = "SegundoNombre"
-        Me.SegundoNombre.ReadOnly = True
-        '
-        'Pape
-        '
-        Me.Pape.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Pape.HeaderText = "Primer Apellido"
-        Me.Pape.Name = "Pape"
-        Me.Pape.ReadOnly = True
-        '
-        'Segundoapellido
-        '
-        Me.Segundoapellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Segundoapellido.HeaderText = "Segundo Apellido"
-        Me.Segundoapellido.Name = "Segundoapellido"
-        Me.Segundoapellido.ReadOnly = True
-        '
-        'tipo
-        '
-        Me.tipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.tipo.HeaderText = "Tipo"
-        Me.tipo.Name = "tipo"
-        Me.tipo.ReadOnly = True
-        '
-        'edad
-        '
-        Me.edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.edad.HeaderText = "Edad"
-        Me.edad.Name = "edad"
-        Me.edad.ReadOnly = True
-        '
-        'ListadoGestor
+        'frmUsuariosRegistrados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -346,7 +346,7 @@ Partial Class frmUsuariosRegistrados
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.dgvEmp)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ListadoGestor"
+        Me.Name = "frmUsuariosRegistrados"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ListadoGestor"
         CType(Me.dgvEmp, System.ComponentModel.ISupportInitialize).EndInit()

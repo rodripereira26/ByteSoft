@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmRegistroPaciente
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,27 @@ Partial Class frmRegistroPaciente
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.MaterialRadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton1 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.cbF = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.cbM = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtPass2 = New System.Windows.Forms.TextBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtPass1 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtTel = New System.Windows.Forms.TextBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtMail = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCed = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -58,85 +58,81 @@ Partial Class frmRegistroPaciente
         Me.lblSegundoNombre = New System.Windows.Forms.Label()
         Me.lblPrimerNombre = New System.Windows.Forms.Label()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.Panel11.SuspendLayout()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.txtFecNac = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(492, 381)
+        Me.Label7.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(511, 380)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 22)
+        Me.Label7.Size = New System.Drawing.Size(51, 24)
         Me.Label7.TabIndex = 155
         Me.Label7.Text = "Sexo"
         '
-        'Panel11
+        'cbF
         '
-        Me.Panel11.Controls.Add(Me.MaterialRadioButton2)
-        Me.Panel11.Controls.Add(Me.MaterialRadioButton1)
-        Me.Panel11.Location = New System.Drawing.Point(449, 406)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(138, 100)
-        Me.Panel11.TabIndex = 154
+        Me.cbF.AutoSize = True
+        Me.cbF.Depth = 0
+        Me.cbF.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.cbF.Location = New System.Drawing.Point(486, 468)
+        Me.cbF.Margin = New System.Windows.Forms.Padding(0)
+        Me.cbF.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.cbF.MouseState = MaterialSkin.MouseState.HOVER
+        Me.cbF.Name = "cbF"
+        Me.cbF.Ripple = True
+        Me.cbF.Size = New System.Drawing.Size(90, 30)
+        Me.cbF.TabIndex = 31
+        Me.cbF.TabStop = True
+        Me.cbF.Text = "Femenino"
+        Me.cbF.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton2
+        'cbM
         '
-        Me.MaterialRadioButton2.AutoSize = True
-        Me.MaterialRadioButton2.Depth = 0
-        Me.MaterialRadioButton2.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton2.Location = New System.Drawing.Point(20, 62)
-        Me.MaterialRadioButton2.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton2.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton2.Name = "MaterialRadioButton2"
-        Me.MaterialRadioButton2.Ripple = True
-        Me.MaterialRadioButton2.Size = New System.Drawing.Size(90, 30)
-        Me.MaterialRadioButton2.TabIndex = 31
-        Me.MaterialRadioButton2.TabStop = True
-        Me.MaterialRadioButton2.Text = "Femenino"
-        Me.MaterialRadioButton2.UseVisualStyleBackColor = True
-        '
-        'MaterialRadioButton1
-        '
-        Me.MaterialRadioButton1.AutoSize = True
-        Me.MaterialRadioButton1.Depth = 0
-        Me.MaterialRadioButton1.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton1.Location = New System.Drawing.Point(20, 22)
-        Me.MaterialRadioButton1.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton1.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton1.Name = "MaterialRadioButton1"
-        Me.MaterialRadioButton1.Ripple = True
-        Me.MaterialRadioButton1.Size = New System.Drawing.Size(93, 30)
-        Me.MaterialRadioButton1.TabIndex = 30
-        Me.MaterialRadioButton1.TabStop = True
-        Me.MaterialRadioButton1.Text = "Masculino"
-        Me.MaterialRadioButton1.UseVisualStyleBackColor = True
+        Me.cbM.AutoSize = True
+        Me.cbM.Depth = 0
+        Me.cbM.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.cbM.Location = New System.Drawing.Point(486, 426)
+        Me.cbM.Margin = New System.Windows.Forms.Padding(0)
+        Me.cbM.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.cbM.MouseState = MaterialSkin.MouseState.HOVER
+        Me.cbM.Name = "cbM"
+        Me.cbM.Ripple = True
+        Me.cbM.Size = New System.Drawing.Size(93, 30)
+        Me.cbM.TabIndex = 30
+        Me.cbM.TabStop = True
+        Me.cbM.Text = "Masculino"
+        Me.cbM.UseVisualStyleBackColor = True
         '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.Black
-        Me.Panel10.Location = New System.Drawing.Point(664, 172)
+        Me.Panel10.Location = New System.Drawing.Point(569, 172)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(176, 2)
         Me.Panel10.TabIndex = 147
         '
-        'TextBox5
+        'txtPass2
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(664, 142)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(176, 24)
-        Me.TextBox5.TabIndex = 146
+        Me.txtPass2.BackColor = System.Drawing.Color.White
+        Me.txtPass2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass2.Location = New System.Drawing.Point(569, 142)
+        Me.txtPass2.Name = "txtPass2"
+        Me.txtPass2.Size = New System.Drawing.Size(176, 23)
+        Me.txtPass2.TabIndex = 146
+        Me.txtPass2.UseSystemPasswordChar = True
         '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.Black
-        Me.Panel8.Location = New System.Drawing.Point(417, 172)
+        Me.Panel8.Location = New System.Drawing.Point(322, 172)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(176, 2)
         Me.Panel8.TabIndex = 144
@@ -144,27 +140,28 @@ Partial Class frmRegistroPaciente
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(660, 108)
+        Me.Label6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(565, 108)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(189, 22)
+        Me.Label6.Size = New System.Drawing.Size(170, 24)
         Me.Label6.TabIndex = 145
         Me.Label6.Text = "Repetir Contraseña"
         '
-        'TextBox4
+        'txtPass1
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.White
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(417, 142)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(176, 24)
-        Me.TextBox4.TabIndex = 143
+        Me.txtPass1.BackColor = System.Drawing.Color.White
+        Me.txtPass1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass1.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass1.Location = New System.Drawing.Point(322, 142)
+        Me.txtPass1.Name = "txtPass1"
+        Me.txtPass1.Size = New System.Drawing.Size(176, 23)
+        Me.txtPass1.TabIndex = 143
+        Me.txtPass1.UseSystemPasswordChar = True
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Location = New System.Drawing.Point(112, 455)
+        Me.Panel1.Location = New System.Drawing.Point(153, 458)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(218, 2)
         Me.Panel1.TabIndex = 153
@@ -172,82 +169,83 @@ Partial Class frmRegistroPaciente
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(446, 108)
+        Me.Label5.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(351, 108)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(119, 22)
+        Me.Label5.Size = New System.Drawing.Size(105, 24)
         Me.Label5.TabIndex = 142
         Me.Label5.Text = "Contraseña"
         '
-        'TextBox2
+        'txtTel
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(112, 425)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(218, 24)
-        Me.TextBox2.TabIndex = 152
+        Me.txtTel.BackColor = System.Drawing.Color.White
+        Me.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtTel.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTel.Location = New System.Drawing.Point(153, 428)
+        Me.txtTel.Name = "txtTel"
+        Me.txtTel.Size = New System.Drawing.Size(218, 23)
+        Me.txtTel.TabIndex = 152
         '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Black
-        Me.Panel7.Location = New System.Drawing.Point(654, 452)
+        Me.Panel7.Location = New System.Drawing.Point(786, 172)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(218, 2)
         Me.Panel7.TabIndex = 151
         '
-        'TextBox3
+        'txtMail
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(660, 422)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(218, 24)
-        Me.TextBox3.TabIndex = 149
+        Me.txtMail.BackColor = System.Drawing.Color.White
+        Me.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtMail.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMail.Location = New System.Drawing.Point(792, 142)
+        Me.txtMail.Name = "txtMail"
+        Me.txtMail.Size = New System.Drawing.Size(218, 23)
+        Me.txtMail.TabIndex = 149
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(737, 381)
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(869, 101)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 22)
+        Me.Label2.Size = New System.Drawing.Size(62, 24)
         Me.Label2.TabIndex = 150
         Me.Label2.Text = "e-mail"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(174, 381)
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(215, 384)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 22)
+        Me.Label3.Size = New System.Drawing.Size(95, 24)
         Me.Label3.TabIndex = 148
         Me.Label3.Text = "Teléfonos"
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.Black
-        Me.Panel9.Location = New System.Drawing.Point(147, 172)
+        Me.Panel9.Location = New System.Drawing.Point(52, 172)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(176, 2)
         Me.Panel9.TabIndex = 140
         '
-        'TextBox1
+        'txtCed
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(147, 142)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 24)
-        Me.TextBox1.TabIndex = 139
+        Me.txtCed.BackColor = System.Drawing.Color.White
+        Me.txtCed.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCed.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCed.Location = New System.Drawing.Point(52, 142)
+        Me.txtCed.Name = "txtCed"
+        Me.txtCed.Size = New System.Drawing.Size(176, 23)
+        Me.txtCed.TabIndex = 139
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.PictureBox1)
         Me.Panel6.Controls.Add(Me.Label12)
         Me.Panel6.Controls.Add(Me.Label13)
         Me.Panel6.Controls.Add(Me.Label4)
@@ -255,6 +253,15 @@ Partial Class frmRegistroPaciente
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(1014, 77)
         Me.Panel6.TabIndex = 141
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.icons8_arrow_pointing_left_24px
+        Me.PictureBox1.Location = New System.Drawing.Point(23, 23)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(33, 27)
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
         '
         'Label12
         '
@@ -283,7 +290,7 @@ Partial Class frmRegistroPaciente
         'Label4
         '
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(301, 9)
         Me.Label4.Name = "Label4"
@@ -295,10 +302,10 @@ Partial Class frmRegistroPaciente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(133, 108)
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(38, 108)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(204, 22)
+        Me.Label1.Size = New System.Drawing.Size(178, 24)
         Me.Label1.TabIndex = 138
         Me.Label1.Text = "Cédula de Identidad"
         '
@@ -314,10 +321,10 @@ Partial Class frmRegistroPaciente
         '
         Me.txtPrimerNombre.BackColor = System.Drawing.Color.White
         Me.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrimerNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrimerNombre.Location = New System.Drawing.Point(11, 301)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
-        Me.txtPrimerNombre.Size = New System.Drawing.Size(218, 24)
+        Me.txtPrimerNombre.Size = New System.Drawing.Size(218, 23)
         Me.txtPrimerNombre.TabIndex = 136
         '
         'Panel5
@@ -348,19 +355,19 @@ Partial Class frmRegistroPaciente
         '
         Me.txtSegundoApellido.BackColor = System.Drawing.Color.White
         Me.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegundoApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSegundoApellido.Location = New System.Drawing.Point(770, 298)
         Me.txtSegundoApellido.Name = "txtSegundoApellido"
-        Me.txtSegundoApellido.Size = New System.Drawing.Size(218, 24)
+        Me.txtSegundoApellido.Size = New System.Drawing.Size(218, 23)
         Me.txtSegundoApellido.TabIndex = 130
         '
         'lblSegundoApellido
         '
         Me.lblSegundoApellido.AutoSize = True
-        Me.lblSegundoApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSegundoApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSegundoApellido.Location = New System.Drawing.Point(793, 258)
         Me.lblSegundoApellido.Name = "lblSegundoApellido"
-        Me.lblSegundoApellido.Size = New System.Drawing.Size(172, 22)
+        Me.lblSegundoApellido.Size = New System.Drawing.Size(159, 24)
         Me.lblSegundoApellido.TabIndex = 132
         Me.lblSegundoApellido.Text = "Segundo Apellido"
         '
@@ -368,19 +375,19 @@ Partial Class frmRegistroPaciente
         '
         Me.txtPrimerApellido.BackColor = System.Drawing.Color.White
         Me.txtPrimerApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrimerApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrimerApellido.Location = New System.Drawing.Point(517, 301)
         Me.txtPrimerApellido.Name = "txtPrimerApellido"
-        Me.txtPrimerApellido.Size = New System.Drawing.Size(218, 24)
+        Me.txtPrimerApellido.Size = New System.Drawing.Size(218, 23)
         Me.txtPrimerApellido.TabIndex = 128
         '
         'lblPrimerApellido
         '
         Me.lblPrimerApellido.AutoSize = True
-        Me.lblPrimerApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrimerApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrimerApellido.Location = New System.Drawing.Point(554, 265)
         Me.lblPrimerApellido.Name = "lblPrimerApellido"
-        Me.lblPrimerApellido.Size = New System.Drawing.Size(144, 22)
+        Me.lblPrimerApellido.Size = New System.Drawing.Size(141, 24)
         Me.lblPrimerApellido.TabIndex = 131
         Me.lblPrimerApellido.Text = "Primer Apellido"
         '
@@ -388,29 +395,29 @@ Partial Class frmRegistroPaciente
         '
         Me.txtSegundoNombre.BackColor = System.Drawing.Color.White
         Me.txtSegundoNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegundoNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSegundoNombre.Location = New System.Drawing.Point(264, 301)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
-        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 24)
+        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 23)
         Me.txtSegundoNombre.TabIndex = 127
         '
         'lblSegundoNombre
         '
         Me.lblSegundoNombre.AutoSize = True
-        Me.lblSegundoNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSegundoNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSegundoNombre.Location = New System.Drawing.Point(287, 260)
         Me.lblSegundoNombre.Name = "lblSegundoNombre"
-        Me.lblSegundoNombre.Size = New System.Drawing.Size(172, 22)
+        Me.lblSegundoNombre.Size = New System.Drawing.Size(158, 24)
         Me.lblSegundoNombre.TabIndex = 129
         Me.lblSegundoNombre.Text = "Segundo Nombre"
         '
         'lblPrimerNombre
         '
         Me.lblPrimerNombre.AutoSize = True
-        Me.lblPrimerNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrimerNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrimerNombre.Location = New System.Drawing.Point(48, 261)
         Me.lblPrimerNombre.Name = "lblPrimerNombre"
-        Me.lblPrimerNombre.Size = New System.Drawing.Size(144, 22)
+        Me.lblPrimerNombre.Size = New System.Drawing.Size(140, 24)
         Me.lblPrimerNombre.TabIndex = 126
         Me.lblPrimerNombre.Text = "Primer Nombre"
         '
@@ -429,29 +436,71 @@ Partial Class frmRegistroPaciente
         Me.MaterialRaisedButton1.Text = "solicitar cuenta"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.Black
+        Me.Panel11.Location = New System.Drawing.Point(702, 449)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(218, 2)
+        Me.Panel11.TabIndex = 154
+        '
+        'txtFecNac
+        '
+        Me.txtFecNac.BackColor = System.Drawing.Color.White
+        Me.txtFecNac.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtFecNac.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFecNac.Location = New System.Drawing.Point(708, 419)
+        Me.txtFecNac.Name = "txtFecNac"
+        Me.txtFecNac.Size = New System.Drawing.Size(218, 23)
+        Me.txtFecNac.TabIndex = 152
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(782, 476)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(0, 22)
+        Me.Label8.TabIndex = 153
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(720, 378)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(186, 24)
+        Me.Label9.TabIndex = 157
+        Me.Label9.Text = "Fecha de nacimiento"
+        '
         'frmRegistroPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1011, 605)
-        Me.Controls.Add(Me.MaterialRaisedButton1)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel11)
+        Me.Controls.Add(Me.txtFecNac)
+        Me.Controls.Add(Me.cbF)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.MaterialRaisedButton1)
+        Me.Controls.Add(Me.cbM)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Panel10)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtPass2)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtPass1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtTel)
         Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtMail)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel9)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtCed)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel3)
@@ -469,32 +518,30 @@ Partial Class frmRegistroPaciente
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmRegistroPaciente"
         Me.Text = "frmRegistroPaciente"
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel11.PerformLayout()
         Me.Panel6.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label7 As Label
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents MaterialRadioButton2 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton1 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents cbF As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents cbM As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents Panel10 As Panel
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtPass2 As TextBox
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtPass1 As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtTel As TextBox
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtMail As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCed As TextBox
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
@@ -513,4 +560,9 @@ Partial Class frmRegistroPaciente
     Friend WithEvents lblSegundoNombre As Label
     Friend WithEvents lblPrimerNombre As Label
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents txtFecNac As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class

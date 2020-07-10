@@ -133,7 +133,7 @@ Partial Class frmChat
         Me.Label10.Text = "Chat"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Chat
+        'frmChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -141,7 +141,7 @@ Partial Class frmChat
         Me.ClientSize = New System.Drawing.Size(872, 476)
         Me.Controls.Add(Me.Panel3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Chat"
+        Me.Name = "frmChat"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Chat"
         Me.Panel3.ResumeLayout(False)

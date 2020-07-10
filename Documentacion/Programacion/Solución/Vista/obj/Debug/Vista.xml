@@ -62,6 +62,11 @@ Vista
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Vista.My.Resources.Resources.icons8_arrow_pointing_left_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Vista.My.Resources.Resources.icons8_csv_64">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -103,6 +108,11 @@ Vista
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.login">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.Logincurva">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -158,11 +168,6 @@ Vista
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.solcmedico">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Vista.My.Resources.Resources.xdx2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
