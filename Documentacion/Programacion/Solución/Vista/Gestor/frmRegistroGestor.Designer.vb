@@ -22,8 +22,11 @@ Partial Class frmRegistroGestor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCI = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -42,23 +45,26 @@ Partial Class frmRegistroGestor
         Me.lblSegundoNombre = New System.Windows.Forms.Label()
         Me.lblPrimerNombre = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtPass1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtPass2 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton3 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btnEliminar = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.dgvTelefonos = New System.Windows.Forms.DataGridView()
+        Me.Telefonos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel6.SuspendLayout()
-        Me.Panel11.SuspendLayout()
+        Me.Panel12.SuspendLayout()
+        CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel9
@@ -69,15 +75,15 @@ Partial Class frmRegistroGestor
         Me.Panel9.Size = New System.Drawing.Size(176, 2)
         Me.Panel9.TabIndex = 110
         '
-        'TextBox1
+        'txtCI
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(148, 143)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 24)
-        Me.TextBox1.TabIndex = 109
+        Me.txtCI.BackColor = System.Drawing.Color.White
+        Me.txtCI.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCI.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCI.Location = New System.Drawing.Point(139, 143)
+        Me.txtCI.Name = "txtCI"
+        Me.txtCI.Size = New System.Drawing.Size(181, 24)
+        Me.txtCI.TabIndex = 109
         '
         'Panel6
         '
@@ -149,9 +155,9 @@ Partial Class frmRegistroGestor
         Me.txtPrimerNombre.BackColor = System.Drawing.Color.White
         Me.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrimerNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerNombre.Location = New System.Drawing.Point(12, 302)
+        Me.txtPrimerNombre.Location = New System.Drawing.Point(3, 302)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
-        Me.txtPrimerNombre.Size = New System.Drawing.Size(218, 24)
+        Me.txtPrimerNombre.Size = New System.Drawing.Size(223, 24)
         Me.txtPrimerNombre.TabIndex = 106
         '
         'Panel5
@@ -183,9 +189,9 @@ Partial Class frmRegistroGestor
         Me.txtSegundoApellido.BackColor = System.Drawing.Color.White
         Me.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSegundoApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoApellido.Location = New System.Drawing.Point(771, 299)
+        Me.txtSegundoApellido.Location = New System.Drawing.Point(762, 299)
         Me.txtSegundoApellido.Name = "txtSegundoApellido"
-        Me.txtSegundoApellido.Size = New System.Drawing.Size(218, 24)
+        Me.txtSegundoApellido.Size = New System.Drawing.Size(223, 24)
         Me.txtSegundoApellido.TabIndex = 100
         '
         'lblSegundoApellido
@@ -203,9 +209,9 @@ Partial Class frmRegistroGestor
         Me.txtPrimerApellido.BackColor = System.Drawing.Color.White
         Me.txtPrimerApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrimerApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerApellido.Location = New System.Drawing.Point(518, 302)
+        Me.txtPrimerApellido.Location = New System.Drawing.Point(509, 302)
         Me.txtPrimerApellido.Name = "txtPrimerApellido"
-        Me.txtPrimerApellido.Size = New System.Drawing.Size(218, 24)
+        Me.txtPrimerApellido.Size = New System.Drawing.Size(223, 24)
         Me.txtPrimerApellido.TabIndex = 98
         '
         'lblPrimerApellido
@@ -223,9 +229,9 @@ Partial Class frmRegistroGestor
         Me.txtSegundoNombre.BackColor = System.Drawing.Color.White
         Me.txtSegundoNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSegundoNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoNombre.Location = New System.Drawing.Point(265, 302)
+        Me.txtSegundoNombre.Location = New System.Drawing.Point(256, 302)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
-        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 24)
+        Me.txtSegundoNombre.Size = New System.Drawing.Size(223, 24)
         Me.txtSegundoNombre.TabIndex = 97
         '
         'lblSegundoNombre
@@ -251,26 +257,26 @@ Partial Class frmRegistroGestor
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Black
-        Me.Panel7.Location = New System.Drawing.Point(529, 476)
+        Me.Panel7.Location = New System.Drawing.Point(577, 449)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(218, 2)
         Me.Panel7.TabIndex = 121
         '
-        'TextBox3
+        'txtEmail
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(535, 446)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(218, 24)
-        Me.TextBox3.TabIndex = 119
+        Me.txtEmail.BackColor = System.Drawing.Color.White
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtEmail.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(574, 419)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(223, 24)
+        Me.txtEmail.TabIndex = 119
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(603, 405)
+        Me.Label2.Location = New System.Drawing.Point(651, 378)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 26)
         Me.Label2.TabIndex = 120
@@ -280,7 +286,7 @@ Partial Class frmRegistroGestor
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(305, 395)
+        Me.Label3.Location = New System.Drawing.Point(323, 373)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(106, 26)
         Me.Label3.TabIndex = 118
@@ -294,15 +300,15 @@ Partial Class frmRegistroGestor
         Me.Panel8.Size = New System.Drawing.Size(176, 2)
         Me.Panel8.TabIndex = 113
         '
-        'TextBox4
+        'txtPass1
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.White
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(418, 143)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(176, 24)
-        Me.TextBox4.TabIndex = 112
+        Me.txtPass1.BackColor = System.Drawing.Color.White
+        Me.txtPass1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass1.Location = New System.Drawing.Point(409, 143)
+        Me.txtPass1.Name = "txtPass1"
+        Me.txtPass1.Size = New System.Drawing.Size(181, 24)
+        Me.txtPass1.TabIndex = 112
         '
         'Label5
         '
@@ -322,15 +328,15 @@ Partial Class frmRegistroGestor
         Me.Panel10.Size = New System.Drawing.Size(176, 2)
         Me.Panel10.TabIndex = 116
         '
-        'TextBox5
+        'txtPass2
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(665, 143)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(176, 24)
-        Me.TextBox5.TabIndex = 115
+        Me.txtPass2.BackColor = System.Drawing.Color.White
+        Me.txtPass2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass2.Location = New System.Drawing.Point(656, 143)
+        Me.txtPass2.Name = "txtPass2"
+        Me.txtPass2.Size = New System.Drawing.Size(181, 24)
+        Me.txtPass2.TabIndex = 115
         '
         'Label6
         '
@@ -348,7 +354,7 @@ Partial Class frmRegistroGestor
         Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(433, 536)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(484, 621)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -357,63 +363,111 @@ Partial Class frmRegistroGestor
         Me.MaterialRaisedButton1.Text = "Crear cuenta"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton2
-        '
-        Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton2.Depth = 0
-        Me.MaterialRaisedButton2.Icon = Nothing
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(49, 29)
-        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
-        Me.MaterialRaisedButton2.Primary = True
-        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(29, 29)
-        Me.MaterialRaisedButton2.TabIndex = 128
-        Me.MaterialRaisedButton2.Text = "+"
-        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
-        '
-        'MaterialRaisedButton3
-        '
-        Me.MaterialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton3.Depth = 0
-        Me.MaterialRaisedButton3.Icon = Nothing
-        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(14, 29)
-        Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton3.Name = "MaterialRaisedButton3"
-        Me.MaterialRaisedButton3.Primary = True
-        Me.MaterialRaisedButton3.Size = New System.Drawing.Size(29, 29)
-        Me.MaterialRaisedButton3.TabIndex = 130
-        Me.MaterialRaisedButton3.Text = "-"
-        Me.MaterialRaisedButton3.UseVisualStyleBackColor = True
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Location = New System.Drawing.Point(249, 476)
+        Me.Panel1.Location = New System.Drawing.Point(256, 454)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(230, 2)
         Me.Panel1.TabIndex = 131
         '
-        'Panel11
+        'Label10
         '
-        Me.Panel11.Controls.Add(Me.ListBox1)
-        Me.Panel11.Controls.Add(Me.MaterialRaisedButton2)
-        Me.Panel11.Controls.Add(Me.MaterialRaisedButton3)
-        Me.Panel11.Location = New System.Drawing.Point(27, 511)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(335, 146)
-        Me.Panel11.TabIndex = 132
+        Me.Label10.AutoSize = True
+        Me.Label10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label10.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(288, 419)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(177, 25)
+        Me.Label10.TabIndex = 164
+        Me.Label10.Text = "Agregar teléfonos"
         '
-        'ListBox1
+        'Panel12
         '
-        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ListBox1.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.ListBox1.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 17
-        Me.ListBox1.Location = New System.Drawing.Point(121, 29)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(198, 87)
-        Me.ListBox1.TabIndex = 131
+        Me.Panel12.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel12.Controls.Add(Me.MaterialRaisedButton2)
+        Me.Panel12.Controls.Add(Me.btnEliminar)
+        Me.Panel12.Controls.Add(Me.dgvTelefonos)
+        Me.Panel12.Location = New System.Drawing.Point(223, 462)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(300, 128)
+        Me.Panel12.TabIndex = 163
+        Me.Panel12.Visible = False
+        '
+        'MaterialRaisedButton2
+        '
+        Me.MaterialRaisedButton2.AutoSize = True
+        Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton2.Depth = 0
+        Me.MaterialRaisedButton2.Icon = Nothing
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(212, 62)
+        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
+        Me.MaterialRaisedButton2.Primary = True
+        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(82, 36)
+        Me.MaterialRaisedButton2.TabIndex = 162
+        Me.MaterialRaisedButton2.Text = "aceptar"
+        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.AutoSize = True
+        Me.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnEliminar.Depth = 0
+        Me.btnEliminar.Enabled = False
+        Me.btnEliminar.Icon = Nothing
+        Me.btnEliminar.Location = New System.Drawing.Point(212, 20)
+        Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Primary = True
+        Me.btnEliminar.Size = New System.Drawing.Size(83, 36)
+        Me.btnEliminar.TabIndex = 161
+        Me.btnEliminar.Text = "eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'dgvTelefonos
+        '
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        Me.dgvTelefonos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvTelefonos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvTelefonos.BackgroundColor = System.Drawing.Color.White
+        Me.dgvTelefonos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.dgvTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTelefonos.ColumnHeadersVisible = False
+        Me.dgvTelefonos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Telefonos})
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle18.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle18
+        Me.dgvTelefonos.Location = New System.Drawing.Point(12, 3)
+        Me.dgvTelefonos.MultiSelect = False
+        Me.dgvTelefonos.Name = "dgvTelefonos"
+        Me.dgvTelefonos.RowHeadersVisible = False
+        Me.dgvTelefonos.RowHeadersWidth = 51
+        Me.dgvTelefonos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvTelefonos.Size = New System.Drawing.Size(194, 111)
+        Me.dgvTelefonos.TabIndex = 159
+        '
+        'Telefonos
+        '
+        Me.Telefonos.HeaderText = "Telefonos"
+        Me.Telefonos.Name = "Telefonos"
         '
         'frmRegistroGestor
         '
@@ -422,21 +476,22 @@ Partial Class frmRegistroGestor
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1012, 669)
-        Me.Controls.Add(Me.Panel11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Panel12)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.Panel10)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtPass2)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtPass1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel9)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtCI)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel3)
@@ -455,13 +510,15 @@ Partial Class frmRegistroGestor
         Me.Name = "frmRegistroGestor"
         Me.Text = "RegistrarGestor"
         Me.Panel6.ResumeLayout(False)
-        Me.Panel11.ResumeLayout(False)
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCI As TextBox
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
@@ -480,19 +537,21 @@ Partial Class frmRegistroGestor
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtPass1 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel10 As Panel
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtPass2 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton3 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents dgvTelefonos As DataGridView
+    Friend WithEvents Telefonos As DataGridViewTextBoxColumn
 End Class

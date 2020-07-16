@@ -56,7 +56,7 @@ Public Class frmRegistrarPatologia
 
         Next
 
-        Dim p As New Patologia(txtNomPat.Text, txtDescPat.Text, txtRecPat.Text, prioridad, ali)
-        p.agregar(ali)
+        'Dim p As New ControladorPatologia(txtNomPat.Text, txtDescPat.Text, txtRecPat.Text, prioridad, ali)
+        'p.agregar(ali)
     End Sub
 End Class

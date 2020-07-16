@@ -6,8 +6,8 @@ Public Class frmRegistrarSintoma
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
-        Dim sintoma As New Sintoma(txtNomSintoma.Text, txtDescripcion.Text)
-        sintoma.agregar()
+        Dim sintoma As New ControladorSintoma(txtNomSintoma.Text, txtDescripcion.Text)
+        sintoma.registrar()
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
