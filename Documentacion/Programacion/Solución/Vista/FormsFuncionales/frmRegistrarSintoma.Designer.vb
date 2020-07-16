@@ -23,6 +23,7 @@ Partial Class frmRegistrarSintoma
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.panelTitulo = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.lblRegistrarSintomas = New System.Windows.Forms.Label()
@@ -37,7 +38,6 @@ Partial Class frmRegistrarSintoma
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.txtNomSintoma = New System.Windows.Forms.TextBox()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelTitulo.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -53,6 +53,15 @@ Partial Class frmRegistrarSintoma
         Me.panelTitulo.Name = "panelTitulo"
         Me.panelTitulo.Size = New System.Drawing.Size(701, 77)
         Me.panelTitulo.TabIndex = 92
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.icons8_arrow_pointing_left_24px
+        Me.PictureBox1.Location = New System.Drawing.Point(28, 28)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(33, 27)
+        Me.PictureBox1.TabIndex = 26
+        Me.PictureBox1.TabStop = False
         '
         'Label12
         '
@@ -81,7 +90,7 @@ Partial Class frmRegistrarSintoma
         'lblRegistrarSintomas
         '
         Me.lblRegistrarSintomas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblRegistrarSintomas.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegistrarSintomas.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRegistrarSintomas.ForeColor = System.Drawing.Color.White
         Me.lblRegistrarSintomas.Location = New System.Drawing.Point(203, 9)
         Me.lblRegistrarSintomas.Name = "lblRegistrarSintomas"
@@ -129,10 +138,10 @@ Partial Class frmRegistrarSintoma
         'lblNomSintoma
         '
         Me.lblNomSintoma.AutoSize = True
-        Me.lblNomSintoma.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNomSintoma.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNomSintoma.Location = New System.Drawing.Point(260, 133)
         Me.lblNomSintoma.Name = "lblNomSintoma"
-        Me.lblNomSintoma.Size = New System.Drawing.Size(208, 26)
+        Me.lblNomSintoma.Size = New System.Drawing.Size(201, 26)
         Me.lblNomSintoma.TabIndex = 110
         Me.lblNomSintoma.Text = "Nombre del sintoma"
         '
@@ -148,7 +157,7 @@ Partial Class frmRegistrarSintoma
         '
         Me.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDescripcion.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDescripcion.Location = New System.Drawing.Point(127, 249)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
@@ -158,10 +167,10 @@ Partial Class frmRegistrarSintoma
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDescripcion.Location = New System.Drawing.Point(112, 209)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(126, 26)
+        Me.lblDescripcion.Size = New System.Drawing.Size(123, 26)
         Me.lblDescripcion.TabIndex = 112
         Me.lblDescripcion.Text = "Descripcion"
         '
@@ -169,10 +178,10 @@ Partial Class frmRegistrarSintoma
         '
         Me.txtNomSintoma.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtNomSintoma.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNomSintoma.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNomSintoma.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomSintoma.Location = New System.Drawing.Point(274, 171)
         Me.txtNomSintoma.Name = "txtNomSintoma"
-        Me.txtNomSintoma.Size = New System.Drawing.Size(176, 24)
+        Me.txtNomSintoma.Size = New System.Drawing.Size(176, 23)
         Me.txtNomSintoma.TabIndex = 115
         '
         'MaterialRaisedButton1
@@ -189,15 +198,6 @@ Partial Class frmRegistrarSintoma
         Me.MaterialRaisedButton1.TabIndex = 127
         Me.MaterialRaisedButton1.Text = "Registrar síntoma"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.icons8_arrow_pointing_left_24px
-        Me.PictureBox1.Location = New System.Drawing.Point(28, 28)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(33, 27)
-        Me.PictureBox1.TabIndex = 26
-        Me.PictureBox1.TabStop = False
         '
         'frmRegistrarSintoma
         '

@@ -65,7 +65,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.vb" />
     <Compile Include="Consultas.vb" />
+    <Compile Include="Modelos\ModeloGestor.vb" />
+    <Compile Include="Modelos\ModeloMedico.vb" />
+    <Compile Include="Modelos\ModeloPaciente.vb" />
+    <Compile Include="Modelos\ModeloPatologia.vb" />
+    <Compile Include="Modelos\ModeloSintoma.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

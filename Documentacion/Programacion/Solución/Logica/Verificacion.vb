@@ -95,9 +95,9 @@ Public Class Verificacion
 
     Public Function verificar(cedula As String, contraseña As String)
 
-        Dim datos As New Consultas
+        'Dim datos As New Consultas
 
-        Return datos.verificarUsuario(cedula, contraseña)
+        'Return datos.verificarUsuario(cedula, contraseña)
     End Function
 
 End Class

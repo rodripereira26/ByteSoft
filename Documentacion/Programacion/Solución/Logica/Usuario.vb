@@ -10,11 +10,11 @@
     Property _primer_apellido As String
     Property _segundo_nombre As String
     Property _segundo_apellido As String
-    Property _telefono As String
+    Property _telefono As ArrayList
     Property _email As String
 
 
-    Public Sub New(ci As String, contraseña As String, pNom As String, Snom As String, PApe As String, SApe As String, telefono As String, email As String)
+    Public Sub New(ci As String, contraseña As String, pNom As String, Snom As String, PApe As String, SApe As String, telefono As ArrayList, email As String)
 
         Me._ci = ci
         Me._contraseña = contraseña

@@ -65,10 +65,10 @@ Partial Class frmRegistrarMedico
         '
         Me.txtPrimerNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrimerNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrimerNombre.Location = New System.Drawing.Point(124, 263)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
-        Me.txtPrimerNombre.Size = New System.Drawing.Size(218, 24)
+        Me.txtPrimerNombre.Size = New System.Drawing.Size(218, 23)
         Me.txtPrimerNombre.TabIndex = 87
         '
         'Panel5
@@ -99,10 +99,10 @@ Partial Class frmRegistrarMedico
         '
         Me.txtSegundoApellido.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegundoApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSegundoApellido.Location = New System.Drawing.Point(372, 412)
         Me.txtSegundoApellido.Name = "txtSegundoApellido"
-        Me.txtSegundoApellido.Size = New System.Drawing.Size(218, 24)
+        Me.txtSegundoApellido.Size = New System.Drawing.Size(218, 23)
         Me.txtSegundoApellido.TabIndex = 81
         '
         'lblSegundoApellido
@@ -119,10 +119,10 @@ Partial Class frmRegistrarMedico
         '
         Me.txtPrimerApellido.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtPrimerApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrimerApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrimerApellido.Location = New System.Drawing.Point(124, 412)
         Me.txtPrimerApellido.Name = "txtPrimerApellido"
-        Me.txtPrimerApellido.Size = New System.Drawing.Size(218, 24)
+        Me.txtPrimerApellido.Size = New System.Drawing.Size(218, 23)
         Me.txtPrimerApellido.TabIndex = 79
         '
         'lblPrimerApellido
@@ -139,10 +139,10 @@ Partial Class frmRegistrarMedico
         '
         Me.txtSegundoNombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtSegundoNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegundoNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSegundoNombre.Location = New System.Drawing.Point(372, 260)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
-        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 24)
+        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 23)
         Me.txtSegundoNombre.TabIndex = 78
         '
         'lblSegundoNombre
@@ -274,10 +274,10 @@ Partial Class frmRegistrarMedico
         '
         Me.txtCed.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtCed.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCed.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCed.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCed.Location = New System.Drawing.Point(148, 146)
         Me.txtCed.Name = "txtCed"
-        Me.txtCed.Size = New System.Drawing.Size(176, 24)
+        Me.txtCed.Size = New System.Drawing.Size(176, 23)
         Me.txtCed.TabIndex = 90
         '
         'Label1
@@ -317,10 +317,10 @@ Partial Class frmRegistrarMedico
         '
         Me.txtEspe.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtEspe.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEspe.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEspe.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEspe.Location = New System.Drawing.Point(400, 146)
         Me.txtEspe.Name = "txtEspe"
-        Me.txtEspe.Size = New System.Drawing.Size(176, 24)
+        Me.txtEspe.Size = New System.Drawing.Size(176, 23)
         Me.txtEspe.TabIndex = 93
         '
         'Label5

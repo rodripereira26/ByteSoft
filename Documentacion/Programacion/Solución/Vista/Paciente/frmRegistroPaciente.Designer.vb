@@ -22,6 +22,9 @@ Partial Class frmRegistroPaciente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cbF = New MaterialSkin.Controls.MaterialRadioButton()
         Me.cbM = New MaterialSkin.Controls.MaterialRadioButton()
@@ -32,7 +35,6 @@ Partial Class frmRegistroPaciente
         Me.txtPass1 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtTel = New System.Windows.Forms.TextBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.txtMail = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -59,11 +61,19 @@ Partial Class frmRegistroPaciente
         Me.lblPrimerNombre = New System.Windows.Forms.Label()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.txtFecNac = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.dgvTelefonos = New System.Windows.Forms.DataGridView()
+        Me.Telefonos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btnEliminar = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtFecNac = New System.Windows.Forms.MaskedTextBox()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel12.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label7
@@ -161,7 +171,7 @@ Partial Class frmRegistroPaciente
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Location = New System.Drawing.Point(153, 458)
+        Me.Panel1.Location = New System.Drawing.Point(153, 457)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(218, 2)
         Me.Panel1.TabIndex = 153
@@ -175,16 +185,6 @@ Partial Class frmRegistroPaciente
         Me.Label5.Size = New System.Drawing.Size(105, 24)
         Me.Label5.TabIndex = 142
         Me.Label5.Text = "Contraseña"
-        '
-        'txtTel
-        '
-        Me.txtTel.BackColor = System.Drawing.Color.White
-        Me.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTel.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTel.Location = New System.Drawing.Point(153, 428)
-        Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(218, 23)
-        Me.txtTel.TabIndex = 152
         '
         'Panel7
         '
@@ -444,16 +444,6 @@ Partial Class frmRegistroPaciente
         Me.Panel11.Size = New System.Drawing.Size(218, 2)
         Me.Panel11.TabIndex = 154
         '
-        'txtFecNac
-        '
-        Me.txtFecNac.BackColor = System.Drawing.Color.White
-        Me.txtFecNac.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtFecNac.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFecNac.Location = New System.Drawing.Point(708, 419)
-        Me.txtFecNac.Name = "txtFecNac"
-        Me.txtFecNac.Size = New System.Drawing.Size(218, 23)
-        Me.txtFecNac.TabIndex = 152
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -473,15 +463,127 @@ Partial Class frmRegistroPaciente
         Me.Label9.TabIndex = 157
         Me.Label9.Text = "Fecha de nacimiento"
         '
+        'dgvTelefonos
+        '
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        Me.dgvTelefonos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvTelefonos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvTelefonos.BackgroundColor = System.Drawing.Color.White
+        Me.dgvTelefonos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        Me.dgvTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTelefonos.ColumnHeadersVisible = False
+        Me.dgvTelefonos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Telefonos})
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle12.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle12
+        Me.dgvTelefonos.Location = New System.Drawing.Point(12, 3)
+        Me.dgvTelefonos.MultiSelect = False
+        Me.dgvTelefonos.Name = "dgvTelefonos"
+        Me.dgvTelefonos.RowHeadersVisible = False
+        Me.dgvTelefonos.RowHeadersWidth = 51
+        Me.dgvTelefonos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvTelefonos.Size = New System.Drawing.Size(194, 111)
+        Me.dgvTelefonos.TabIndex = 159
+        '
+        'Telefonos
+        '
+        Me.Telefonos.HeaderText = "Telefonos"
+        Me.Telefonos.Name = "Telefonos"
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel12.Controls.Add(Me.MaterialRaisedButton2)
+        Me.Panel12.Controls.Add(Me.btnEliminar)
+        Me.Panel12.Controls.Add(Me.dgvTelefonos)
+        Me.Panel12.Location = New System.Drawing.Point(110, 465)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(300, 128)
+        Me.Panel12.TabIndex = 160
+        Me.Panel12.Visible = False
+        '
+        'MaterialRaisedButton2
+        '
+        Me.MaterialRaisedButton2.AutoSize = True
+        Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton2.Depth = 0
+        Me.MaterialRaisedButton2.Icon = Nothing
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(212, 62)
+        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
+        Me.MaterialRaisedButton2.Primary = True
+        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(82, 36)
+        Me.MaterialRaisedButton2.TabIndex = 162
+        Me.MaterialRaisedButton2.Text = "aceptar"
+        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.AutoSize = True
+        Me.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnEliminar.Depth = 0
+        Me.btnEliminar.Enabled = False
+        Me.btnEliminar.Icon = Nothing
+        Me.btnEliminar.Location = New System.Drawing.Point(212, 20)
+        Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Primary = True
+        Me.btnEliminar.Size = New System.Drawing.Size(83, 36)
+        Me.btnEliminar.TabIndex = 161
+        Me.btnEliminar.Text = "eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label10.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(179, 422)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(177, 25)
+        Me.Label10.TabIndex = 161
+        Me.Label10.Text = "Agregar teléfonos"
+        '
+        'txtFecNac
+        '
+        Me.txtFecNac.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtFecNac.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFecNac.Location = New System.Drawing.Point(770, 417)
+        Me.txtFecNac.Mask = "0000-00-00"
+        Me.txtFecNac.Name = "txtFecNac"
+        Me.txtFecNac.Size = New System.Drawing.Size(98, 26)
+        Me.txtFecNac.TabIndex = 162
+        Me.txtFecNac.ValidatingType = GetType(Date)
+        '
         'frmRegistroPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1011, 605)
+        Me.ClientSize = New System.Drawing.Size(1011, 632)
+        Me.Controls.Add(Me.txtFecNac)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel12)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel11)
-        Me.Controls.Add(Me.txtFecNac)
         Me.Controls.Add(Me.cbF)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.MaterialRaisedButton1)
@@ -492,9 +594,7 @@ Partial Class frmRegistroPaciente
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtPass1)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtTel)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.txtMail)
         Me.Controls.Add(Me.Label2)
@@ -520,6 +620,9 @@ Partial Class frmRegistroPaciente
         Me.Text = "frmRegistroPaciente"
         Me.Panel6.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -533,9 +636,7 @@ Partial Class frmRegistroPaciente
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents txtPass1 As TextBox
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtTel As TextBox
     Friend WithEvents Panel7 As Panel
     Friend WithEvents txtMail As TextBox
     Friend WithEvents Label2 As Label
@@ -551,7 +652,6 @@ Partial Class frmRegistroPaciente
     Friend WithEvents txtPrimerNombre As TextBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents txtSegundoApellido As TextBox
     Friend WithEvents lblSegundoApellido As Label
     Friend WithEvents txtPrimerApellido As TextBox
@@ -562,7 +662,15 @@ Partial Class frmRegistroPaciente
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents txtFecNac As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents dgvTelefonos As DataGridView
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Telefonos As DataGridViewTextBoxColumn
+    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents txtFecNac As MaskedTextBox
 End Class
