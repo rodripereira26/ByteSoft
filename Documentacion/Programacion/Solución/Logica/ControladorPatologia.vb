@@ -4,10 +4,13 @@ Public Class ControladorPatologia
     Property _nombre As String
     Property _descripcion As String
     Property _recomendacion As String
-    Property _prioridad As String
+    Property _prioridad As Byte
     Property _sintomas As ArrayList
+    Dim p As New ModeloPatologia
+    Public Sub New()
 
-    Public Sub New(nombre As String, descripcion As String, recomendacion As String, prioridad As String, sintomas As ArrayList)
+    End Sub
+    Public Sub New(nombre As String, descripcion As String, recomendacion As String, prioridad As Byte, sintomas As ArrayList)
 
         Me._nombre = nombre
         Me._descripcion = descripcion
@@ -16,15 +19,19 @@ Public Class ControladorPatologia
         Me._sintomas = sintomas
     End Sub
 
+    Public Sub registrar()
+        p.Registrar(_nombre, _descripcion, _recomendacion, _prioridad, _sintomas)
+        ' VERIFICACIONES
+    End Sub
+    '<summary>
+    'holaa
+    '</summary>
+    Public Function listarPatologias() As DataTable
 
-    'Public Function agregar(ali As ArrayList)
-    '    Dim c As New ModeloPatologia
-    '    Return c.Registrar(_nombre, _descripcion, _recomendacion, _prioridad, _sintomas, c.traerId(_sintomas))
+        Return p.listarPatologias
+    End Function
+    Public Sub eliminarPatologias(aliPatologias As ArrayList)
+        p.eliminarPatologias(aliPatologias)
 
-    'End Function
-    'Public Function buscarSintoma(ali As ArrayList)
-    '    Dim c As New Consultas
-    '    Return c.traerId(ali)
-    'End Function
-
+    End Sub
 End Class

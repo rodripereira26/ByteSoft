@@ -2,6 +2,9 @@
 Public Class ControladorSintoma
     Property _nombre As String
     Property _descripcion As String
+    Public Sub New()
+
+    End Sub
     Public Sub New(nombre As String, descripcion As String)
 
         Me._nombre = nombre
@@ -10,8 +13,14 @@ Public Class ControladorSintoma
     End Sub
 
     Public Function registrar()
-        Dim c As New ModeloSintoma
-        Return c.Registrar(_nombre, _descripcion)
+        Dim s As New ModeloSintoma
+        Return s.Registrar(_nombre, _descripcion)
     End Function
+
+    Public Function traerSintomas() As ArrayList
+        Dim s As New ModeloSintoma
+        Return s.traerSintomas
+    End Function
+
 
 End Class

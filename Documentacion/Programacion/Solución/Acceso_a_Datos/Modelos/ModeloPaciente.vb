@@ -1,8 +1,6 @@
 ﻿Public Class ModeloPaciente
     Inherits Conexion
 
-
-
     Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList, Mail As String, sexo As String, FechaNacimiento As String)
         Command.CommandText = "
             INSERT INTO 
@@ -27,17 +25,6 @@
 
         Next
 
-
-
-
-    End Function
-
-    Public Function Listar()
-
-
-        Reader = Command.ExecuteReader()
-
-        Return Reader
     End Function
 
 End Class

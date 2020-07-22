@@ -23,12 +23,12 @@ Partial Class frmRegistrarPatologia
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlTituloPatologia = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -39,7 +39,7 @@ Partial Class frmRegistrarPatologia
         Me.lblDescripcionPatologia = New System.Windows.Forms.Label()
         Me.pnlTxtRecomendaciones = New System.Windows.Forms.Panel()
         Me.lblRecomendaciones = New System.Windows.Forms.Label()
-        Me.dgvMisSintomas = New System.Windows.Forms.DataGridView()
+        Me.dgvSintomasSeleccionados = New System.Windows.Forms.DataGridView()
         Me.SINTOMAS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvTodos = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,7 +55,7 @@ Partial Class frmRegistrarPatologia
         Me.cb3 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.cb2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.pnlTituloPatologia.SuspendLayout()
-        CType(Me.dgvMisSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSintomasSeleccionados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvTodos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -160,48 +160,48 @@ Partial Class frmRegistrarPatologia
         Me.lblRecomendaciones.TabIndex = 110
         Me.lblRecomendaciones.Text = "Recomendaciones"
         '
-        'dgvMisSintomas
+        'dgvSintomasSeleccionados
         '
-        Me.dgvMisSintomas.AllowDrop = True
-        Me.dgvMisSintomas.AllowUserToAddRows = False
-        Me.dgvMisSintomas.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.dgvMisSintomas.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
-        Me.dgvMisSintomas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvMisSintomas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgvMisSintomas.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvMisSintomas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.dgvMisSintomas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMisSintomas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvMisSintomas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMisSintomas.ColumnHeadersVisible = False
-        Me.dgvMisSintomas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SINTOMAS})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(20)
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvMisSintomas.DefaultCellStyle = DataGridViewCellStyle9
-        Me.dgvMisSintomas.Location = New System.Drawing.Point(474, 170)
-        Me.dgvMisSintomas.MultiSelect = False
-        Me.dgvMisSintomas.Name = "dgvMisSintomas"
-        Me.dgvMisSintomas.ReadOnly = True
-        Me.dgvMisSintomas.RowHeadersVisible = False
-        Me.dgvMisSintomas.RowHeadersWidth = 51
-        Me.dgvMisSintomas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvMisSintomas.Size = New System.Drawing.Size(214, 430)
-        Me.dgvMisSintomas.TabIndex = 114
+        Me.dgvSintomasSeleccionados.AllowDrop = True
+        Me.dgvSintomasSeleccionados.AllowUserToAddRows = False
+        Me.dgvSintomasSeleccionados.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgvSintomasSeleccionados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvSintomasSeleccionados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvSintomasSeleccionados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvSintomasSeleccionados.BackgroundColor = System.Drawing.Color.White
+        Me.dgvSintomasSeleccionados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvSintomasSeleccionados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSintomasSeleccionados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvSintomasSeleccionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSintomasSeleccionados.ColumnHeadersVisible = False
+        Me.dgvSintomasSeleccionados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SINTOMAS})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(20)
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvSintomasSeleccionados.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvSintomasSeleccionados.Location = New System.Drawing.Point(474, 170)
+        Me.dgvSintomasSeleccionados.MultiSelect = False
+        Me.dgvSintomasSeleccionados.Name = "dgvSintomasSeleccionados"
+        Me.dgvSintomasSeleccionados.ReadOnly = True
+        Me.dgvSintomasSeleccionados.RowHeadersVisible = False
+        Me.dgvSintomasSeleccionados.RowHeadersWidth = 51
+        Me.dgvSintomasSeleccionados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSintomasSeleccionados.Size = New System.Drawing.Size(214, 430)
+        Me.dgvSintomasSeleccionados.TabIndex = 114
         '
         'SINTOMAS
         '
@@ -211,36 +211,37 @@ Partial Class frmRegistrarPatologia
         '
         'dgvTodos
         '
+        Me.dgvTodos.AllowDrop = True
         Me.dgvTodos.AllowUserToAddRows = False
         Me.dgvTodos.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.dgvTodos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgvTodos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvTodos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTodos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTodos.BackgroundColor = System.Drawing.Color.White
         Me.dgvTodos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvTodos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTodos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTodos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvTodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTodos.ColumnHeadersVisible = False
         Me.dgvTodos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1})
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle12.Padding = New System.Windows.Forms.Padding(20)
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvTodos.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(20)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTodos.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvTodos.Location = New System.Drawing.Point(847, 170)
         Me.dgvTodos.MultiSelect = False
         Me.dgvTodos.Name = "dgvTodos"
@@ -361,10 +362,10 @@ Partial Class frmRegistrarPatologia
         Me.cb1.MouseState = MaterialSkin.MouseState.HOVER
         Me.cb1.Name = "cb1"
         Me.cb1.Ripple = True
-        Me.cb1.Size = New System.Drawing.Size(37, 30)
+        Me.cb1.Size = New System.Drawing.Size(74, 30)
         Me.cb1.TabIndex = 129
         Me.cb1.TabStop = True
-        Me.cb1.Text = "1"
+        Me.cb1.Text = "1 (Alta)"
         Me.cb1.UseVisualStyleBackColor = True
         '
         'cb3
@@ -378,10 +379,10 @@ Partial Class frmRegistrarPatologia
         Me.cb3.MouseState = MaterialSkin.MouseState.HOVER
         Me.cb3.Name = "cb3"
         Me.cb3.Ripple = True
-        Me.cb3.Size = New System.Drawing.Size(37, 30)
+        Me.cb3.Size = New System.Drawing.Size(119, 30)
         Me.cb3.TabIndex = 130
         Me.cb3.TabStop = True
-        Me.cb3.Text = "3"
+        Me.cb3.Text = "3 (Media-Baja)"
         Me.cb3.UseVisualStyleBackColor = True
         '
         'cb2
@@ -395,10 +396,10 @@ Partial Class frmRegistrarPatologia
         Me.cb2.MouseState = MaterialSkin.MouseState.HOVER
         Me.cb2.Name = "cb2"
         Me.cb2.Ripple = True
-        Me.cb2.Size = New System.Drawing.Size(37, 30)
+        Me.cb2.Size = New System.Drawing.Size(88, 30)
         Me.cb2.TabIndex = 131
         Me.cb2.TabStop = True
-        Me.cb2.Text = "2"
+        Me.cb2.Text = "2 (Media)"
         Me.cb2.UseVisualStyleBackColor = True
         '
         'frmRegistrarPatologia
@@ -418,7 +419,7 @@ Partial Class frmRegistrarPatologia
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.dgvTodos)
-        Me.Controls.Add(Me.dgvMisSintomas)
+        Me.Controls.Add(Me.dgvSintomasSeleccionados)
         Me.Controls.Add(Me.pnlTxtRecomendaciones)
         Me.Controls.Add(Me.pnlDescripcionPatologia)
         Me.Controls.Add(Me.lblRecomendaciones)
@@ -431,7 +432,7 @@ Partial Class frmRegistrarPatologia
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.pnlTituloPatologia.ResumeLayout(False)
-        CType(Me.dgvMisSintomas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSintomasSeleccionados, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvTodos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -444,7 +445,7 @@ Partial Class frmRegistrarPatologia
     Friend WithEvents lblDescripcionPatologia As Label
     Friend WithEvents pnlTxtRecomendaciones As Panel
     Friend WithEvents lblRecomendaciones As Label
-    Friend WithEvents dgvMisSintomas As DataGridView
+    Friend WithEvents dgvSintomasSeleccionados As DataGridView
     Friend WithEvents SINTOMAS As DataGridViewTextBoxColumn
     Friend WithEvents dgvTodos As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
