@@ -119,7 +119,7 @@ gestorDeSwitch(){
     let FGplus=$colorFg+35
 
     codigoRespuesta=""
-    respuestaGestor=""
+    respuestaGestor=false
 
 
     cargarSwitch $posX $posY $largo $ancho $BGplus $FGplus $texto
@@ -142,8 +142,6 @@ gestorDeSwitch(){
 
     if [ "$texto" = "true" ]; then
         respuestaGestor=true
-    else
-        respuestaGestor=false
     fi
 }
 invertirColoresEntradaTxt(){
@@ -243,7 +241,7 @@ cargarBoton(){
     # $5 ancho del boton
     # $6 color background 
     # $7 color foreground
-
+    
     declare -i mitadDeBotonAncho=($5+2*$3)/2
     declare -i mitadDeBotonLargo=($4-${#1}+2*$2)/2
 

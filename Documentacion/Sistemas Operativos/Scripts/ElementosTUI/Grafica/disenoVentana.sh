@@ -185,8 +185,8 @@ dibujarSwitch(){
     # $3 : largo del switch
     # $4 : ancho del switch
     # $5 : estado inicial (true o false)
-    # $6 : color encendido 
-    # $7 : color apagada 
+    # $6 : color encendido (opcional)
+    # $7 : color apagada  (opcional)
     
     let colorEncendido=33
     let colorApagado=31

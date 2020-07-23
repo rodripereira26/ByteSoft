@@ -2,14 +2,16 @@
 
 . "Menus/OpcionesMenuConfigEntorno/VRespaldarDirectorios.sh"
 . "Menus/OpcionesMenuConfigEntorno/VRespaldarBD.sh"
-
+. "Menus/OpcionesMenuConfigEntorno/VConexiones.sh"
+  
 VMenuConfigEntorno(){
     iniciarPantallaNueva
     dibujarTxt "CONFIGURACION DEL ENTORNO" 80 2
     dibujarBoton "CREAR DIRECTORIOS Y VARIABLES" 20 4 80 3
     dibujarBoton "RESPALDAR DIRECTORIOS" 20 7 80 3
     dibujarBoton "RESPALDAR BASE DE DATOS" 20 10 80 3
-    dibujarBoton "VOLVER" 20 13 80 3
+    dibujarBoton "CONEXIONES (SQL, SSH)" 20 13 80 3
+    dibujarBoton "VOLVER" 20 16 80 3
 
     local continuar=true
     while $continuar; do
@@ -46,6 +48,10 @@ ejecutarConfigEntorno(){
                 ejecutarRespaldarBD
                 ;;
             "3")
+                ejecutarVConexiones
+                ;;
+
+            "4")
                 continuarCiclo=false
                 ;;
             *)
