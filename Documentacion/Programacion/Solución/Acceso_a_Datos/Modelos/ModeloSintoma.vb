@@ -11,6 +11,7 @@ Public Class ModeloSintoma
     End Function
 
     Public Function traerSintomas() As ArrayList
+
         Dim arraySintomas As New ArrayList
         Command.CommandText = "SELECT nombre FROM sintoma"
         Reader = Command.ExecuteReader
@@ -22,12 +23,8 @@ Public Class ModeloSintoma
                 i += 1
             End While
         End If
-        MsgBox(arraySintomas(0))
-
 
         Return arraySintomas
-
-
     End Function
 
 End Class

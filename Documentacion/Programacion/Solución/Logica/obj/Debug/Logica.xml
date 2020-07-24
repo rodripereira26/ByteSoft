@@ -22,5 +22,15 @@ Logica
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:Logica.ControladorSintoma.registrar">
+<summary>
+Función encargada de registrar los síntomas en la base de datos.
+</summary>
+</member>
+<member name="M:Logica.ControladorSintoma.traerSintomas">
+<summary>
+Función encargada de traer los síntomas ingresados en la base de datos.
+</summary>
+</member>
 </members>
 </doc>

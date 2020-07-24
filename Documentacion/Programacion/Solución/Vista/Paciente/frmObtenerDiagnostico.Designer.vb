@@ -22,6 +22,7 @@ Partial Class frmObtenerDiagnostico
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -33,16 +34,11 @@ Partial Class frmObtenerDiagnostico
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.MetroSetDivider2 = New MetroSet_UI.Controls.MetroSetDivider()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.dgv11 = New System.Windows.Forms.DataGridView()
         Me.Panel6.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        CType(Me.dgv11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel6
@@ -95,7 +91,7 @@ Partial Class frmObtenerDiagnostico
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel3)
+        Me.FlowLayoutPanel1.Controls.Add(Me.dgv11)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(200, 140)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(609, 401)
@@ -179,84 +175,26 @@ Partial Class frmObtenerDiagnostico
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label10.Visible = False
         '
-        'Panel3
+        'dgv11
         '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.MetroSetDivider2)
-        Me.Panel3.Controls.Add(Me.Panel14)
-        Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Location = New System.Drawing.Point(3, 201)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(603, 192)
-        Me.Panel3.TabIndex = 30
-        '
-        'MetroSetDivider2
-        '
-        Me.MetroSetDivider2.Location = New System.Drawing.Point(198, 127)
-        Me.MetroSetDivider2.Name = "MetroSetDivider2"
-        Me.MetroSetDivider2.Orientation = MetroSet_UI.Enums.DividerStyle.Horizontal
-        Me.MetroSetDivider2.Size = New System.Drawing.Size(221, 4)
-        Me.MetroSetDivider2.Style = MetroSet_UI.Design.Style.Light
-        Me.MetroSetDivider2.StyleManager = Nothing
-        Me.MetroSetDivider2.TabIndex = 31
-        Me.MetroSetDivider2.Text = "MetroSetDivider2"
-        Me.MetroSetDivider2.ThemeAuthor = "Narwin"
-        Me.MetroSetDivider2.ThemeName = "MetroLite"
-        Me.MetroSetDivider2.Thickness = 1
-        '
-        'Panel14
-        '
-        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Panel14.Location = New System.Drawing.Point(0, 179)
-        Me.Panel14.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(600, 10)
-        Me.Panel14.TabIndex = 29
-        '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(22, 62)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(559, 62)
-        Me.Label3.TabIndex = 27
-        Me.Label3.Text = "La gripe, también llamada influenza, es una infección respiratoria causada por vi" &
-    "rus."
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Label3.Visible = False
-        '
-        'Label9
-        '
-        Me.Label9.BackColor = System.Drawing.Color.White
-        Me.Label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label9.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(212, 144)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(187, 21)
-        Me.Label9.TabIndex = 29
-        Me.Label9.Text = "Más información"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Label9.Visible = False
-        '
-        'Label11
-        '
-        Me.Label11.BackColor = System.Drawing.Color.White
-        Me.Label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label11.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(244, 13)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(114, 40)
-        Me.Label11.TabIndex = 26
-        Me.Label11.Text = "Gripe"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Label11.Visible = False
+        Me.dgv11.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv11.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv11.ColumnHeadersVisible = False
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(20)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv11.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgv11.Location = New System.Drawing.Point(3, 201)
+        Me.dgv11.Name = "dgv11"
+        Me.dgv11.RowHeadersVisible = False
+        Me.dgv11.Size = New System.Drawing.Size(606, 200)
+        Me.dgv11.TabIndex = 1
         '
         'frmObtenerDiagnostico
         '
@@ -272,7 +210,7 @@ Partial Class frmObtenerDiagnostico
         Me.Panel6.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
+        CType(Me.dgv11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -282,16 +220,11 @@ Partial Class frmObtenerDiagnostico
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel14 As Panel
     Friend WithEvents MetroSetDivider1 As MetroSet_UI.Controls.MetroSetDivider
-    Friend WithEvents MetroSetDivider2 As MetroSet_UI.Controls.MetroSetDivider
+    Friend WithEvents dgv11 As DataGridView
 End Class

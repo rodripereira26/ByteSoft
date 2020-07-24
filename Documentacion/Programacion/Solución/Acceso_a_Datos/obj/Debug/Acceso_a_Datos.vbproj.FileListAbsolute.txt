@@ -37,3 +37,12 @@ C:\Users\Mati\Desktop\GIT MASTER\Documentacion\Programacion\Solución\Acceso_a_D
 C:\Users\Mati\Desktop\GIT MASTER\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
 C:\Users\Mati\Desktop\GIT MASTER\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
 C:\Users\Mati\Desktop\GIT MASTER\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb

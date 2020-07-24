@@ -1,29 +1,34 @@
-﻿Public Class frmIngresarSintomas
+﻿Imports Logica
+
+Public Class frmIngresarSintomas
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Dim p As New Principal
         p.roundedCorners(Me)
 
-        'dgvSintomas.Rows.Add("Dolor de cabeza")
-        'dgvSintomas.Rows.Add("Resfrio")
-        'dgvSintomas.Rows.Add("Fiebre")
-        'dgvSintomas.Rows.Add("Dolor de garganta")
-        'dgvSintomas.Rows.Add("Escalofrios")
+        Dim sintomas As New ControladorSintoma
 
-        'dgvMisSintomas.Rows.Add("Dolor de cabeza")
-        'dgvMisSintomas.Rows.Add("Resfrio")
+        For i As Integer = 0 To sintomas.traerSintomas.Count - 1
 
+            dgvSintomas.Rows.Add(sintomas.traerSintomas.Item(i))
+
+        Next
 
     End Sub
 
     Private Sub dgvSintomas_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvSintomas.MouseDown
+
         Dim SourceRow As Integer
         SourceRow = dgvSintomas.HitTest(e.X, e.Y).RowIndex
         dgvSintomas.DoDragDrop(SourceRow, DragDropEffects.Move)
+
     End Sub
 
     Private Sub dgvMisSintomas_DragOver(sender As Object, e As DragEventArgs) Handles dgvMisSintomas.DragOver
+
         e.Effect = DragDropEffects.Move
+
     End Sub
 
     Private Sub dgvMisSintomas_DragDrop(sender As Object, e As DragEventArgs) Handles dgvMisSintomas.DragDrop
@@ -38,10 +43,39 @@
             Dim rowDestino = hit.RowIndex
             Dim colDestino = hit.ColumnIndex
             dgvMisSintomas.Rows(rowDestino).Cells(colDestino).Value = dgvSintomas.Rows(SourceRow).Cells(0).Value
-
         End If
 
     End Sub
 
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+
+        Dim misSintomas As New ArrayList
+        Dim log As New ControladorPatologia
+
+        For i As Integer = 0 To dgvMisSintomas.RowCount - 1
+
+            If dgvMisSintomas.Rows.Item(i).Cells(0).Value <> Nothing Then
+
+                misSintomas.Add(dgvMisSintomas.Rows.Item(i).Cells(0).Value.ToString)
+
+            End If
+
+        Next
+
+        If misSintomas.Count > 0 Then
+
+            If log.obtenerPatologia(misSintomas).Rows.Count > 0 Then
+
+                frmObtenerDiagnostico.dgv11.DataSource = log.obtenerPatologia(misSintomas)
+                Me.Visible = False
+                frmObtenerDiagnostico.Show()
+
+            End If
+
+        Else
+            MsgBox("No ingresó ningún síntoma")
+        End If
+
+    End Sub
 
 End Class

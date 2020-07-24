@@ -34,4 +34,34 @@ Public Class ControladorPatologia
         p.eliminarPatologias(aliPatologias)
 
     End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Public Function obtenerPatologia(sintomas As ArrayList) As DataTable
+        Return p.obtenerPatologia(sintomas)
+    End Function
 End Class

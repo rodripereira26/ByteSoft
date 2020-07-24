@@ -12,11 +12,17 @@ Public Class ControladorSintoma
 
     End Sub
 
+    '''<summary>
+    '''Función encargada de registrar los síntomas en la base de datos.
+    '''</summary>
     Public Function registrar()
         Dim s As New ModeloSintoma
         Return s.Registrar(_nombre, _descripcion)
     End Function
 
+    '''<summary>
+    '''Función encargada de traer los síntomas ingresados en la base de datos.
+    '''</summary>
     Public Function traerSintomas() As ArrayList
         Dim s As New ModeloSintoma
         Return s.traerSintomas

@@ -5,7 +5,7 @@ Public MustInherit Class Conexion
     Public dsn As String = "driverODBC"
     Public Uid As String = "root"
     Public Pwd As String = ""
-    Public Port As String = "3308"
+    Public Port As String = "3306"
     Public DatabaseName As String = "bdd_proyecto"
     Public Host As String = "localhost"
     'Dim Connect As New OdbcConnection("dsn=driverODBC;uid=root;pwd=;")

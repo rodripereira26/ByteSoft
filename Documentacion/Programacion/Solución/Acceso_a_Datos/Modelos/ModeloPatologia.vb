@@ -58,10 +58,46 @@
             Command.ExecuteNonQuery()
         Next
 
-
-
-
     End Sub
+
+    '''<summary>
+    '''Consulta encargada de obtener las patologías asociadas a los síntomas ingresador por el paciente.
+    '''</summary>
+    Public Function obtenerPatologia(sintomas As ArrayList) As DataTable
+
+        Dim dt As New DataTable
+        Dim parametros As String
+        Dim consulta As String = "
+           SELECT p.nombre, p.descripcion
+           FROM patologia p, sintoma s, patologia_contiene_sintoma ps
+           WHERE p.idPatologia = ps.idPatologia and s.idSintoma = ps.idSintoma 
+           and s.nombre IN ("
+
+        For i As Integer = 0 To sintomas.Count - 1
+
+            parametros = parametros & "'" & sintomas.Item(i) & "'" & ","
+
+        Next
+
+        consulta = consulta & parametros.TrimEnd(",") & ")"
+        consulta = consulta & " GROUP BY ps.idPatologia ORDER BY count(*) desc"
+
+        Command.CommandText = consulta
+
+        dt.Load(Command.ExecuteReader())
+
+        Return dt
+    End Function
+
+
+
+
+
+
+
+
+
+
     'Public Function getIdSintomas(nomSintomas As ArrayList)
 
     '    Dim idSintomas As New ArrayList
