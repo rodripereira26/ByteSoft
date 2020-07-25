@@ -239,7 +239,7 @@ Partial Class frmIngresarSintomas
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvMisSintomas.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvMisSintomas.Location = New System.Drawing.Point(514, 241)
+        Me.dgvMisSintomas.Location = New System.Drawing.Point(521, 240)
         Me.dgvMisSintomas.MultiSelect = False
         Me.dgvMisSintomas.Name = "dgvMisSintomas"
         Me.dgvMisSintomas.ReadOnly = True

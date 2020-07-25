@@ -22,6 +22,11 @@ Acceso_a_Datos
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.eliminarPatologias(System.Collections.ArrayList)">
+<summary>
+Consulta encargada de eliminar patologías.
+</summary>
+</member>
 <member name="M:Acceso_a_Datos.ModeloPatologia.obtenerPatologia(System.Collections.ArrayList)">
 <summary>
 Consulta encargada de obtener las patologías asociadas a los síntomas ingresador por el paciente.

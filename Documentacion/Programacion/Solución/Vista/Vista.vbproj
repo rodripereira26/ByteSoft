@@ -204,6 +204,12 @@
     <Compile Include="Gestor\frmManualCsv.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gestor\frmModificarPatologia.Designer.vb">
+      <DependentUpon>frmModificarPatologia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestor\frmModificarPatologia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gestor\Teléfonos.Designer.vb">
       <DependentUpon>Teléfonos.vb</DependentUpon>
     </Compile>
@@ -359,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmManualCsv.resx">
       <DependentUpon>frmManualCsv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestor\frmModificarPatologia.resx">
+      <DependentUpon>frmModificarPatologia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\Teléfonos.resx">
       <DependentUpon>Teléfonos.vb</DependentUpon>
@@ -543,6 +552,144 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_arrow_pointing_left_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apcambios1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfzxczxczxcccccccc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIEL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIELD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fsdfds1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hgh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hvoersolcmedico1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HYUYUI1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_arrow_pointing_left_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-csv-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_16px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_32px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_filter_30px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_filter_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-form-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-form-64%281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_single_choice_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_80px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingmed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log byw1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xdx21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo byw1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo byw v31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dasdsa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\obt21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regpat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regsintoma1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solcmedico1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_48px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_16px_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_32px_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_filter_30px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_filter_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_single_choice_24px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />

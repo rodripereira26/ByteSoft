@@ -1,8 +1,0 @@
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\bin\Debug\Acceso_a_datos.dll
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\bin\Debug\Acceso_a_datos.pdb
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\bin\Debug\Acceso_a_datos.xml
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\obj\Debug\Acceso_a_datos.Resources.resources
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\obj\Debug\Acceso_a_datos.vbproj.GenerateResource.cache
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\obj\Debug\Acceso_a_datos.dll
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\obj\Debug\Acceso_a_datos.xml
-C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\LIbreriaBaseDeDatos\Acceso_a_datos\obj\Debug\Acceso_a_datos.pdb
