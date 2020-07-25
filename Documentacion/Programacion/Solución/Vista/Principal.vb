@@ -1,13 +1,15 @@
 ﻿Imports Logica
+Imports MaterialSkin
+
 Public Class Principal
+
 
     'Private WithEvents tEnter As New Timer
     'Private WithEvents tLeave As New Timer
     'Dim obj As New Panel
-
+    Dim drag As Boolean
+    Dim mousex, mousey As Integer
     Public Sub roundedCorners(rect As Object)
-
-
         Dim gp As New Drawing2D.GraphicsPath()
         Dim radio As Integer = 10
         gp.StartFigure()
@@ -35,6 +37,31 @@ Public Class Principal
 
     Public Sub hover(obj As Object)
 
+    End Sub
+
+    Public Sub metroStyle(form As MaterialSkin.Controls.MaterialForm)
+
+        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        SkinManager.AddFormToManage(form)
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+
+    End Sub
+
+    Public Sub moverVentanaDown(form As Form)
+        Me.drag = True
+        Me.mousex = Cursor.Position.X - form.Left
+        Me.mousey = Cursor.Position.Y - form.Top
+    End Sub
+    Public Sub moverVentanaUp()
+        Me.drag = False
+    End Sub
+
+    Public Sub moverVentanaMove(form As Form)
+        If Me.drag Then
+            form.Top = Cursor.Position.Y - mousey
+            form.Left = Cursor.Position.X - mousex
+        End If
     End Sub
     'Public Sub enterAnimation(obj As Panel)
 
