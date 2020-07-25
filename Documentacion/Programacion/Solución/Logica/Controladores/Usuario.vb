@@ -1,4 +1,7 @@
-﻿Public Class Usuario
+﻿'''<summary>
+'''Clase principal para los datos de los usuarios.
+'''</summary>
+Public Class Usuario
 
     Public Sub New()
 

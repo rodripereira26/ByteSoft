@@ -1,7 +1,13 @@
-﻿Public Class ModeloMedico
+﻿'''<summary>
+'''Clase encargada de las consultas pertenecientes a los médicos.
+'''</summary>
+Public Class ModeloMedico
     Inherits Conexion
 
-    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList, Especializacion As String)
+    '''<summary>
+    '''Consulta encargada de registrar a los usuarios médicos.
+    '''</summary>
+    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList, Especializacion As String) As Boolean
 
         Command.CommandText = "
             INSERT INTO 
@@ -16,6 +22,7 @@
         Command.ExecuteNonQuery()
 
         For i = 0 To Telefonos.Count - 1
+
             Command.CommandText = "
             INSERT INTO 
                 usuario_tel (cedula,telefono) 
@@ -24,7 +31,7 @@
 
         Next
 
-
+        Return True
     End Function
 
 End Class

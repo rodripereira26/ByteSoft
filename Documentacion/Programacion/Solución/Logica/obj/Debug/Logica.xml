@@ -22,14 +22,69 @@ Logica
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="M:Logica.ControladorSintoma.registrar">
+<member name="T:Logica.ControladorPaciente">
 <summary>
-Función encargada de registrar los síntomas en la base de datos.
+Clase encargada de los datos de los pacientes.
 </summary>
 </member>
-<member name="M:Logica.ControladorSintoma.traerSintomas">
+<member name="T:Logica.ControladorGestor">
 <summary>
-Función encargada de traer los síntomas ingresados en la base de datos.
+Clase encargada de los datos de los administradores.
+</summary>
+</member>
+<member name="T:Logica.ControladorMedico">
+<summary>
+Clase encargada de los datos de los médicos.
+</summary>
+</member>
+<member name="T:Logica.ControladorSintoma">
+<summary>
+Clase encargada de los datos de los síntomas.
+</summary>
+</member>
+<member name="T:Logica.ControladorPatologia">
+<summary>
+Clase encargada de los datos de las patologías.
+</summary>
+</member>
+<member name="T:Logica.Encriptar">
+<summary>
+Clase encargada de la seguridad del sistema.
+</summary>
+</member>
+<member name="M:Logica.Encriptar.SHA1(System.String)">
+<summary>
+Función encargada de encriptar las contraseñas mediante el algoritmo SHA1.
+</summary>
+</member>
+<member name="T:Logica.Usuario">
+<summary>
+Clase principal para los datos de los usuarios.
+</summary>
+</member>
+<member name="T:Logica.Verificacion">
+<summary>
+Clase encargada de las verificaciones del sistema.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_cedula(System.String)">
+<summary>
+Función encargada de verificar si la cédula ingresada contiene caracteres.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_digito(System.String)">
+<summary>
+Función encargada de verificar si el dígito verificador de la cédula es correcto.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_string(System.String)">
+<summary>
+Función encargada de verificar si el string ingresado contiene dígitos numéricos.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_int(System.String)">
+<summary>
+Función encargada de verificar si los dígitos ingresados contienen caracteres.
 </summary>
 </member>
 </members>

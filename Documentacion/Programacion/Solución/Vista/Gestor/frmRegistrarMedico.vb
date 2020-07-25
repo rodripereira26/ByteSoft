@@ -1,12 +1,12 @@
 ﻿Imports Logica
 Public Class frmRegistrarMedico
+
     Private Sub RegistrarMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Select()
     End Sub
 
-
-
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+
         'Dim med As New ControladorMedico(
         'txtCed.Text,
         'txtCed.Text,
@@ -21,4 +21,5 @@ Public Class frmRegistrarMedico
         'med.registrar()
 
     End Sub
+
 End Class

@@ -1,8 +1,13 @@
-﻿Public Class ModeloPatologia
+﻿'''<summary>
+'''Clase encargada de las consultas pertenecientes a las patologías.
+'''</summary>
+Public Class ModeloPatologia
     Inherits Conexion
 
+    '''<summary>
+    '''Consulta encargada de registrar las patologías.
+    '''</summary>
     Public Function Registrar(nombre As String, descripcion As String, recomendacion As String, prioridad As Byte, nomSintomas As ArrayList) As Boolean
-
 
         Command.CommandText = "INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ('" & nombre & "','" & descripcion & "','" & recomendacion & "','" & prioridad & "')"
         Command.ExecuteNonQuery()
@@ -26,22 +31,26 @@
 
             Command.ExecuteNonQuery()
         Next
+
         Return True
     End Function
 
+    '''<summary>
+    '''Consulta encargada de listar las patologías.
+    '''</summary>
     Public Function listarPatologias() As DataTable
 
-        Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia"
         Dim dt As New DataTable
+        Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia"
         dt.Load(Command.ExecuteReader())
-        Return dt
 
+        Return dt
     End Function
 
     '''<summary>
     '''Consulta encargada de eliminar patologías.
     '''</summary>
-    Public Function eliminarPatologias(ali As ArrayList)
+    Public Function eliminarPatologias(ali As ArrayList) As Boolean
 
         Dim parametros As String
         Dim consulta As String = "
@@ -51,15 +60,16 @@
                 WHERE patologia_contiene_sintoma.idPatologia = patologia.idPatologia AND
                 patologia_contiene_sintoma.idPatologia = patologia.idPatologia
                 AND patologia.nombre IN ("
+
         For i = 0 To ali.Count - 1
 
             parametros = parametros & "'" & ali.Item(i) & "'" & ","
         Next
+
         consulta = consulta & parametros.TrimEnd(",") & ")"
 
         Command.CommandText = consulta
         Command.ExecuteNonQuery()
-        MsgBox(consulta)
 
         Return True
     End Function

@@ -1,7 +1,13 @@
 ﻿Imports Acceso_a_Datos
 
+'''<summary>
+'''Clase encargada de las verificaciones del sistema.
+'''</summary>
 Public Class Verificacion
 
+    '''<summary>
+    '''Función encargada de verificar si la cédula ingresada contiene caracteres.
+    '''</summary>
     Public Function verificar_cedula(ced As String) As Boolean
 
         If ced <> "" Then
@@ -15,6 +21,9 @@ Public Class Verificacion
         Return False
     End Function
 
+    '''<summary>
+    '''Función encargada de verificar si el dígito verificador de la cédula es correcto.
+    '''</summary>
     Public Function verificar_digito(ced As String) As Boolean
 
         Dim array As New ArrayList
@@ -69,6 +78,9 @@ Public Class Verificacion
         Return False
     End Function
 
+    '''<summary>
+    '''Función encargada de verificar si el string ingresado contiene dígitos numéricos.
+    '''</summary>
     Public Function verificar_string(texto As String) As Boolean
 
         If texto <> "" Then
@@ -82,6 +94,9 @@ Public Class Verificacion
         Return False
     End Function
 
+    '''<summary>
+    '''Función encargada de verificar si los dígitos ingresados contienen caracteres.
+    '''</summary>
     Public Function verificar_int(numero As String) As Boolean
 
         If numero <> "" Then
@@ -93,6 +108,8 @@ Public Class Verificacion
         Return False
     End Function
 
+
+    ''ARREGLAR ESTE METODO
     Public Function verificar(cedula As String, contraseña As String)
 
         'Dim datos As New Consultas

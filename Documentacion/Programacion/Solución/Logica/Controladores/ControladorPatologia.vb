@@ -1,4 +1,8 @@
 ﻿Imports Acceso_a_Datos
+
+'''<summary>
+'''Clase encargada de los datos de las patologías.
+'''</summary>
 Public Class ControladorPatologia
 
     Property _nombre As String
@@ -6,6 +10,7 @@ Public Class ControladorPatologia
     Property _recomendacion As String
     Property _prioridad As Byte
     Property _sintomas As ArrayList
+
     Dim p As New ModeloPatologia
 
     Public Sub New()
@@ -19,6 +24,7 @@ Public Class ControladorPatologia
         Me._recomendacion = recomendacion
         Me._prioridad = prioridad
         Me._sintomas = sintomas
+
     End Sub
 
     Public Sub registrar()
@@ -33,7 +39,9 @@ Public Class ControladorPatologia
     Public Function eliminarPatologias(aliPatologias As ArrayList)
 
         If p.eliminarPatologias(aliPatologias) Then
+
             Return True
+
         End If
 
         Return False

@@ -1,13 +1,19 @@
-﻿Public Class ModeloPaciente
+﻿'''<summary>
+'''Clase encargada de las consultas pertenecientes a los pacientes.
+'''</summary>
+Public Class ModeloPaciente
     Inherits Conexion
 
-    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList, Mail As String, sexo As String, FechaNacimiento As String)
+    '''<summary>
+    '''Consulta encargada de registrar a los usuarios pacientes.
+    '''</summary>
+    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList, Mail As String, sexo As String, FechaNacimiento As String) As Boolean
+
         Command.CommandText = "
             INSERT INTO 
                 usuario (cedula, contrasena, pNom, sNom, pApe, sApe, correo) 
             VALUES ('" & cedula & "','" & contraseña & "','" & PrimerNombre & "','" & SegundoNombre & "','" & PrimerApellido & "','" & SegundoApellido & "','" & Mail & "')"
         Command.ExecuteNonQuery()
-
 
         Command.CommandText = "
             INSERT INTO 
@@ -25,6 +31,7 @@
 
         Next
 
+        Return True
     End Function
 
 End Class

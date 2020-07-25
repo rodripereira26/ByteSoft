@@ -3,17 +3,18 @@ Imports MaterialSkin
 
 Public Class Principal
 
-
     'Private WithEvents tEnter As New Timer
     'Private WithEvents tLeave As New Timer
     'Dim obj As New Panel
     Dim drag As Boolean
     Dim mousex, mousey As Integer
+
     Public Sub roundedCorners(rect As Object)
+
         Dim gp As New Drawing2D.GraphicsPath()
         Dim radio As Integer = 10
-        gp.StartFigure()
 
+        gp.StartFigure()
         gp.AddArc(New Rectangle(0, 0, radio, radio), 180, 90)
         gp.AddLine(radio, 0, rect.Width - radio, 0)
         gp.AddArc(New Rectangle(rect.Width - radio, 0, radio, radio), -90, 90)
@@ -21,7 +22,6 @@ Public Class Principal
         gp.AddArc(New Rectangle(rect.Width - radio, rect.Height - radio, radio, radio), 0, 90)
         gp.AddLine(rect.Width - radio, rect.Height, radio, rect.Height)
         gp.AddArc(New Rectangle(0, rect.Height - radio, radio, radio), 90, 90)
-
         gp.CloseFigure()
 
         rect.Region = New Region(gp)
@@ -49,20 +49,28 @@ Public Class Principal
     End Sub
 
     Public Sub moverVentanaDown(form As Form)
+
         Me.drag = True
         Me.mousex = Cursor.Position.X - form.Left
         Me.mousey = Cursor.Position.Y - form.Top
+
     End Sub
+
     Public Sub moverVentanaUp()
         Me.drag = False
     End Sub
 
     Public Sub moverVentanaMove(form As Form)
+
         If Me.drag Then
+
             form.Top = Cursor.Position.Y - mousey
             form.Left = Cursor.Position.X - mousex
+
         End If
+
     End Sub
+
     'Public Sub enterAnimation(obj As Panel)
 
     '    tEnter.Interval = 100
@@ -70,7 +78,6 @@ Public Class Principal
     '    tEnter.Start()
     '    Me.obj = obj
     'End Sub
-
 
     'Public Sub tEnter_Tick() Handles tEnter.Tick
     '    tEnter.Start()

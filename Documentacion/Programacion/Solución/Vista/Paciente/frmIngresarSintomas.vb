@@ -26,23 +26,23 @@ Public Class frmIngresarSintomas
     End Sub
 
     Private Sub dgvMisSintomas_DragOver(sender As Object, e As DragEventArgs) Handles dgvMisSintomas.DragOver
-
         e.Effect = DragDropEffects.Move
-
     End Sub
 
     Private Sub dgvMisSintomas_DragDrop(sender As Object, e As DragEventArgs) Handles dgvMisSintomas.DragDrop
 
         dgvMisSintomas.Rows.Add("") 'agrega una row vacia para que entre el elemento
-        Dim SourceRow = Convert.ToInt32(e.Data.GetData(Type.GetType("System.Int32")))
 
+        Dim SourceRow = Convert.ToInt32(e.Data.GetData(Type.GetType("System.Int32")))
         Dim clientPoint As Point = dgvMisSintomas.PointToClient(New Point(e.X, e.Y))
         Dim hit As DataGridView.HitTestInfo = dgvMisSintomas.HitTest(clientPoint.X, clientPoint.Y)
 
         If hit.Type = DataGridViewHitTestType.Cell Then
+
             Dim rowDestino = hit.RowIndex
             Dim colDestino = hit.ColumnIndex
             dgvMisSintomas.Rows(rowDestino).Cells(colDestino).Value = dgvSintomas.Rows(SourceRow).Cells(0).Value
+
         End If
 
     End Sub

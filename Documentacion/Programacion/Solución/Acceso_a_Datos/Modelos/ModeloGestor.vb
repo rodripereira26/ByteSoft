@@ -1,6 +1,13 @@
-﻿Public Class ModeloGestor
+﻿'''<summary>
+'''Clase encargada de las consultas pertenecientes a los administradores.
+'''</summary>
+Public Class ModeloGestor
     Inherits Conexion
-    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList)
+
+    '''<summary>
+    '''Consulta encargada de registar a los usuarios administradores del sistema.
+    '''</summary>
+    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList) As Boolean
 
         Command.CommandText = "
             INSERT INTO 
@@ -15,6 +22,7 @@
         Command.ExecuteNonQuery()
 
         For i = 0 To Telefonos.Count - 1
+
             Command.CommandText = "
             INSERT INTO 
                 usuario_tel (cedula,telefono) 
@@ -23,7 +31,7 @@
 
         Next
 
-
+        Return True
     End Function
 
 End Class

@@ -1,16 +1,20 @@
 ﻿Imports System.Data.Odbc
 Public Class frmBienvenidaPaciente
+
     Dim drag As Boolean
     Dim mousex, mousey As Integer
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Dim p As New Principal
+
         p.roundedCorners(Panel1)
         p.roundedCorners(Panel2)
         p.roundedCorners(Panel3)
         p.roundedCorners(Panel4)
         p.roundedCorners(Panel5)
         p.roundedCorners(Me)
+
         Me.BackColor = Color.FromArgb(236, 236, 236)
         Dim col As Color = Color.FromArgb(52, 73, 94)
 
@@ -32,22 +36,30 @@ Public Class frmBienvenidaPaciente
         Label11.ForeColor = col
         Label12.ForeColor = col
         Label13.ForeColor = col
+
     End Sub
 
     Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel6.MouseDown
+
         drag = True
         mousex = Cursor.Position.X - Me.Left
         mousey = Cursor.Position.Y - Me.Top
+
     End Sub
 
     Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel6.MouseMove
+
         If drag Then
+
             Me.Top = Cursor.Position.Y - mousey
             Me.Left = Cursor.Position.X - mousex
+
         End If
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Me.BackColor = Color.FromArgb(236, 236, 236)
         Dim col As Color = Color.FromArgb(52, 73, 94)
 
@@ -69,6 +81,7 @@ Public Class frmBienvenidaPaciente
         Label11.ForeColor = col
         Label12.ForeColor = col
         Label13.ForeColor = col
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -92,7 +105,9 @@ Public Class frmBienvenidaPaciente
         Label11.ForeColor = Color.White
         Label12.ForeColor = Color.White
         Label13.ForeColor = Color.White
+
     End Sub
+
     Private Sub hover(sender As Object)
         sender.backcolor = Color.FromArgb(56, 62, 80)
     End Sub
@@ -122,6 +137,6 @@ Public Class frmBienvenidaPaciente
 
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
         drag = False
-
     End Sub
+
 End Class

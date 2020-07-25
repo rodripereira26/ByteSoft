@@ -1,4 +1,8 @@
 ﻿Imports Acceso_a_Datos
+
+'''<summary>
+'''Clase encargada de los datos de los administradores.
+'''</summary>
 Public Class ControladorGestor
     Inherits Usuario
 
@@ -6,6 +10,7 @@ Public Class ControladorGestor
                   email As String)
 
         MyBase.New(ci, contraseña, pNom, Snom, PApe, SApe, telefono, email)
+
         Me._ci = ci
         Me._contraseña = contraseña
         Me._primer_nombre = pNom
@@ -16,8 +21,12 @@ Public Class ControladorGestor
         Me._email = email
 
     End Sub
+
     Public Function registrar()
+
         Dim datos As New ModeloGestor
+
         Return datos.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono)
     End Function
+
 End Class

@@ -65,11 +65,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControladorPaciente.vb" />
-    <Compile Include="ControladorGestor.vb" />
-    <Compile Include="ControladorMedico.vb" />
-    <Compile Include="ControladorSintoma.vb" />
-    <Compile Include="Metodos.vb" />
+    <Compile Include="Controladores\ControladorPaciente.vb" />
+    <Compile Include="Controladores\ControladorGestor.vb" />
+    <Compile Include="Controladores\ControladorMedico.vb" />
+    <Compile Include="Controladores\ControladorSintoma.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -85,10 +84,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ControladorPatologia.vb" />
+    <Compile Include="Controladores\ControladorPatologia.vb" />
     <Compile Include="Seguridad\Encriptar.vb" />
-    <Compile Include="Usuario.vb" />
-    <Compile Include="Verificacion.vb" />
+    <Compile Include="Controladores\Usuario.vb" />
+    <Compile Include="Verificaciones\Verificacion.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

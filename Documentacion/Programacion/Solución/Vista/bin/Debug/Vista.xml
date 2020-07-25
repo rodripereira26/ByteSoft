@@ -217,5 +217,10 @@ Vista
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:Vista.frmPatologiasRegistradas.Panel3_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+<summary>
+Movimiento de ventanas sin bordes
+</summary>
+</member>
 </members>
 </doc>

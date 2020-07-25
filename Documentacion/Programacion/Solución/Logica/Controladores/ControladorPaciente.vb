@@ -1,5 +1,8 @@
 ﻿Imports Acceso_a_Datos
 
+'''<summary>
+'''Clase encargada de los datos de los pacientes.
+'''</summary>
 Public Class ControladorPaciente
     Inherits Usuario
 
@@ -13,6 +16,7 @@ Public Class ControladorPaciente
                    email As String, sexo As String, fecNac As String)
 
         MyBase.New(ci, contraseña, pNom, Snom, PApe, SApe, telefono, email)
+
         Me._ci = ci
         Me._contraseña = contraseña
         Me._primer_nombre = pNom
@@ -23,6 +27,7 @@ Public Class ControladorPaciente
         Me._email = email
         Me._fecNac = fecNac
         Me._sexo = sexo
+
     End Sub
 
     Public Function registrar()
