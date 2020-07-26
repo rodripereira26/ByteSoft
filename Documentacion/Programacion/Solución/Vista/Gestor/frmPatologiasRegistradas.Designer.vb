@@ -67,6 +67,7 @@ Partial Class frmPatologiasRegistradas
         Me.txtBuscar.SelectionStart = 0
         Me.txtBuscar.Size = New System.Drawing.Size(851, 23)
         Me.txtBuscar.TabIndex = 155
+        Me.txtBuscar.TabStop = False
         Me.txtBuscar.Text = "Buscar"
         Me.txtBuscar.UseSystemPasswordChar = False
         '
@@ -369,7 +370,6 @@ Partial Class frmPatologiasRegistradas
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.dgvListadoPatologias)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmPatologiasRegistradas"
         Me.Text = "ListadoPatologias"
         Me.Panel1.ResumeLayout(False)

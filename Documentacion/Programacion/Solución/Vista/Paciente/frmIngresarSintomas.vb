@@ -71,7 +71,7 @@ Public Class frmIngresarSintomas
 
                     frmObtenerDiagnostico.dgv11.DataSource = pat.obtenerPatologia(misSintomas)
                     frmObtenerDiagnostico.Show()
-                    Me.Dispose()
+                    Me.Hide()
                 Else
                     MsgBox("No se encontraron patologías que contenga los síntomas seleccionados")
 
