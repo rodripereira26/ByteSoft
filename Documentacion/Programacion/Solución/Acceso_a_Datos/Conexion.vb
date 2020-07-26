@@ -32,4 +32,10 @@ Public MustInherit Class Conexion
 
     End Sub
 
+    Public Function cerrarConexion()
+
+        Me.Connect.Close()
+
+    End Function
+
 End Class

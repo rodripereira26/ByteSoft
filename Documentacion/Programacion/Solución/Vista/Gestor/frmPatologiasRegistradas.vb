@@ -198,10 +198,9 @@ Public Class frmPatologiasRegistradas
 
         bs.DataSource = dgvListadoPatologias.DataSource
         dt.DefaultView.RowFilter = String.Format("'{0}'", txtBuscar.Text)
-        bs.Filter = " '" & Me.criterio & "' like '%" & txtBuscar.Text & "%'"
-
-        ' TERMINAR
+        bs.Filter = "Nombre like '%" & txtBuscar.Text & "%'"
         dgvListadoPatologias.DataSource = bs
+
     End Sub
 
     Private Sub btnBuscarPor_TextChanged(sender As Object, e As EventArgs) Handles btnBuscarPor.TextChanged

@@ -30,6 +30,7 @@ Public Class ModeloPatologia
                             nombre = '" & nombre & "'))"
 
             Command.ExecuteNonQuery()
+            cerrarConexion()
         Next
 
         Return True
@@ -43,6 +44,7 @@ Public Class ModeloPatologia
         Dim dt As New DataTable
         Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia"
         dt.Load(Command.ExecuteReader())
+        cerrarConexion()
 
         Return dt
     End Function
@@ -70,6 +72,7 @@ Public Class ModeloPatologia
 
         Command.CommandText = consulta
         Command.ExecuteNonQuery()
+        cerrarConexion()
 
         Return True
     End Function
@@ -99,6 +102,7 @@ Public Class ModeloPatologia
         Command.CommandText = consulta
 
         dt.Load(Command.ExecuteReader())
+        cerrarConexion()
 
         Return dt
     End Function
