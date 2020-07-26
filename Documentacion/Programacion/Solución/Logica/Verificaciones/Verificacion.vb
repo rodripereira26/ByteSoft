@@ -1,4 +1,5 @@
 ﻿Imports Acceso_a_Datos
+Imports System.Text.RegularExpressions
 
 '''<summary>
 '''Clase encargada de las verificaciones del sistema.
@@ -108,6 +109,21 @@ Public Class Verificacion
         Return False
     End Function
 
+    '''<summary>
+    '''Función encargada de verificar si el formato del email ingresado es correcto.
+    '''</summary>
+    Function verificar_email(ByVal email As String) As Boolean
+
+        Dim patron As String = "^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"
+        Dim match As Match = Regex.Match(email, patron)
+
+        If match.Success Then
+            verificar_email = True
+        Else
+            verificar_email = False
+        End If
+
+    End Function
 
     ''ARREGLAR ESTE METODO
     Public Function verificar(cedula As String, contraseña As String)

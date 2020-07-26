@@ -1,27 +1,25 @@
-﻿Imports System.Security.Cryptography
+﻿Imports System.Text
+Imports System.Security.Cryptography
 '''<summary>
 '''Clase encargada de la seguridad del sistema.
 '''</summary>
 Public Class Encriptar
 
     '''<summary>
-    '''Función encargada de encriptar las contraseñas mediante el algoritmo SHA1.
+    '''Función encargada de encriptar las contraseñas mediante el algoritmo SHA25.
     '''</summary>
-    Public Function SHA1(ByVal hash As String) As String
+    Public Function HASHSHA2566(ByVal texto) As String
 
-        Dim sha1Obj As New Security.Cryptography.SHA1CryptoServiceProvider
-        Dim bytesToHash() As Byte = System.Text.Encoding.ASCII.GetBytes(hash)
+        Dim sha256 As SHA256 = SHA256Managed.Create()
+        Dim bytes As Byte() = Encoding.UTF8.GetBytes(texto)
+        Dim hash As Byte() = sha256.ComputeHash(bytes)
+        Dim stringBuilder As New StringBuilder()
 
-        bytesToHash = sha1Obj.ComputeHash(bytesToHash)
-
-        Dim strResult As String = ""
-
-        For Each b As Byte In bytesToHash
-            strResult += b.ToString("x2")
+        For i As Integer = 0 To hash.Length - 1
+            stringBuilder.Append(hash(i).ToString("X2"))
         Next
 
-        Return strResult
-
+        Return stringBuilder.ToString()
     End Function
 
 End Class

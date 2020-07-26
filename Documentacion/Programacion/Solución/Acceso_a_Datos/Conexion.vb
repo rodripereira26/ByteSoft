@@ -32,10 +32,16 @@ Public MustInherit Class Conexion
 
     End Sub
 
-    Public Function cerrarConexion()
+    Public Sub cerrarConexion()
 
         Me.Connect.Close()
 
-    End Function
+    End Sub
+
+    Public Sub abrirConexion()
+
+        Me.Connect.Open()
+
+    End Sub
 
 End Class

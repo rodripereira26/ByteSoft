@@ -1,4 +1,5 @@
-﻿'''<summary>
+﻿Imports Acceso_a_Datos
+'''<summary>
 '''Clase principal para los datos de los usuarios.
 '''</summary>
 Public Class Usuario
@@ -29,6 +30,20 @@ Public Class Usuario
         Me._email = email
 
     End Sub
+
+    Public Function verificarUsuario(usuario As String, pass As String)
+
+        Dim datos As New ModeloUsuario
+
+        Return datos.verificarUsuario(usuario, pass)
+    End Function
+
+    Public Function verificarRol(usuario As String)
+
+        Dim datos As New ModeloUsuario
+
+        Return datos.verificarRol(usuario)
+    End Function
 
 End Class
 

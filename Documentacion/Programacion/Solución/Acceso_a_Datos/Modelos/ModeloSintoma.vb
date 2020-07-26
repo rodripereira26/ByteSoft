@@ -14,7 +14,9 @@ Public Class ModeloSintoma
             sintoma (nombre, descripcion) 
         VALUES ('" & nombre & "','" & descripcion & "')"
 
+        abrirConexion()
         Command.ExecuteNonQuery()
+        cerrarConexion()
 
         Return True
     End Function
@@ -27,6 +29,7 @@ Public Class ModeloSintoma
         Dim arraySintomas As New ArrayList
 
         Command.CommandText = "SELECT nombre FROM sintoma"
+        abrirConexion()
         Reader = Command.ExecuteReader
 
         If Reader.HasRows Then
@@ -39,6 +42,8 @@ Public Class ModeloSintoma
             End While
 
         End If
+
+        cerrarConexion()
 
         Return arraySintomas
     End Function

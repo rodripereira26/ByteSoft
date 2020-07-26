@@ -25,7 +25,6 @@ Partial Class frmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.txtUsr = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -51,16 +50,16 @@ Partial Class frmLogin
         'txtUsr
         '
         Me.txtUsr.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUsr.Font = New System.Drawing.Font("Montserrat", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsr.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsr.Location = New System.Drawing.Point(163, 182)
+        Me.txtUsr.Multiline = True
         Me.txtUsr.Name = "txtUsr"
-        Me.txtUsr.Size = New System.Drawing.Size(182, 21)
+        Me.txtUsr.Size = New System.Drawing.Size(182, 20)
         Me.txtUsr.TabIndex = 18
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.CheckBox1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -74,16 +73,6 @@ Partial Class frmLogin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(480, 505)
         Me.Panel1.TabIndex = 23
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(206, 96)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 26)
-        Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Paciente"
         '
         'CheckBox1
         '
@@ -122,10 +111,10 @@ Partial Class frmLogin
         'txtPass
         '
         Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass.Font = New System.Drawing.Font("Montserrat", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.Location = New System.Drawing.Point(163, 289)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(182, 21)
+        Me.txtPass.Size = New System.Drawing.Size(182, 16)
         Me.txtPass.TabIndex = 19
         Me.txtPass.UseSystemPasswordChar = True
         '
@@ -153,7 +142,7 @@ Partial Class frmLogin
         '
         Me.Label1.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(81, 9)
+        Me.Label1.Location = New System.Drawing.Point(86, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(350, 109)
         Me.Label1.TabIndex = 0
@@ -183,7 +172,7 @@ Partial Class frmLogin
         Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(798, 9)
+        Me.Label5.Location = New System.Drawing.Point(798, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(24, 35)
         Me.Label5.TabIndex = 25
@@ -277,6 +266,5 @@ Partial Class frmLogin
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
 End Class

@@ -52,9 +52,9 @@ Clase encargada de los datos de las patologías.
 Clase encargada de la seguridad del sistema.
 </summary>
 </member>
-<member name="M:Logica.Encriptar.SHA1(System.String)">
+<member name="M:Logica.Encriptar.HASHSHA2566(System.Object)">
 <summary>
-Función encargada de encriptar las contraseñas mediante el algoritmo SHA1.
+Función encargada de encriptar las contraseñas mediante el algoritmo SHA25.
 </summary>
 </member>
 <member name="T:Logica.Usuario">
@@ -85,6 +85,11 @@ Función encargada de verificar si el string ingresado contiene dígitos numéri
 <member name="M:Logica.Verificacion.verificar_int(System.String)">
 <summary>
 Función encargada de verificar si los dígitos ingresados contienen caracteres.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_email(System.String)">
+<summary>
+Función encargada de verificar si el formato del email ingresado es correcto.
 </summary>
 </member>
 </members>

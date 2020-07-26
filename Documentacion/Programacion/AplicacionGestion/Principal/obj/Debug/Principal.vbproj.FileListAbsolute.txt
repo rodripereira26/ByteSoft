@@ -1,0 +1,24 @@
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Principal.exe.config
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Principal.exe
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Principal.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Principal.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Vista.exe
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\MaterialSkin.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\MetroSet UI.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Logica.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Vista.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Vista.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Vista.exe.config
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Logica.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Logica.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.vbprojAssemblyReference.cache
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.Resources.resources
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.vbproj.CopyComplete
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.exe
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\AplicacionGestion\Principal\obj\Debug\Principal.Form2.resources

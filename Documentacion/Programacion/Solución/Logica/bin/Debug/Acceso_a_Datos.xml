@@ -97,5 +97,15 @@ Consulta encargada de registrar los síntomas.
 Consulta encargada de obtener los síntomas existentes en la base de datos.
 </summary>
 </member>
+<member name="M:Acceso_a_Datos.ModeloUsuario.verificarUsuario(System.String,System.String)">
+<summary>
+Consulta encargada de verificar si el usuario y contraseña ingresados coinciden en la base de datos.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloUsuario.verificarRol(System.Object)">
+<summary>
+Consulta encargada de verificar a qué tabla pertenece el usuario.
+</summary>
+</member>
 </members>
 </doc>

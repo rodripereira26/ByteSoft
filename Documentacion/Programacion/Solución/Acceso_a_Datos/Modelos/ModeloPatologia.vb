@@ -10,6 +10,7 @@ Public Class ModeloPatologia
     Public Function Registrar(nombre As String, descripcion As String, recomendacion As String, prioridad As Byte, nomSintomas As ArrayList) As Boolean
 
         Command.CommandText = "INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ('" & nombre & "','" & descripcion & "','" & recomendacion & "','" & prioridad & "')"
+        abrirConexion()
         Command.ExecuteNonQuery()
 
         For Each nom In nomSintomas
@@ -43,6 +44,7 @@ Public Class ModeloPatologia
 
         Dim dt As New DataTable
         Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia"
+        abrirConexion()
         dt.Load(Command.ExecuteReader())
         cerrarConexion()
 

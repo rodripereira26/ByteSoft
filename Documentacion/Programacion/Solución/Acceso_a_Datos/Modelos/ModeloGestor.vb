@@ -13,6 +13,7 @@ Public Class ModeloGestor
             INSERT INTO 
                 usuario (cedula, contrasena, pNom, sNom, pApe, sApe) 
             VALUES ('" & cedula & "','" & contraseña & "','" & PrimerNombre & "','" & SegundoNombre & "','" & PrimerApellido & "','" & SegundoApellido & "')"
+        abrirConexion()
         Command.ExecuteNonQuery()
 
         Command.CommandText = "
@@ -27,11 +28,15 @@ Public Class ModeloGestor
             INSERT INTO 
                 usuario_tel (cedula,telefono) 
             VALUES ('" & cedula & "','" & Telefonos(i) & "')"
+
             Command.ExecuteNonQuery()
+            cerrarConexion()
+
+            Return True
 
         Next
 
-        Return True
+        Return False
     End Function
 
 End Class

@@ -28,6 +28,7 @@ Public Class ModeloMedico
                 usuario_tel (cedula,telefono) 
             VALUES ('" & cedula & "','" & Telefonos.Item(0) & "')"
             Command.ExecuteNonQuery()
+            cerrarConexion()
 
         Next
 
