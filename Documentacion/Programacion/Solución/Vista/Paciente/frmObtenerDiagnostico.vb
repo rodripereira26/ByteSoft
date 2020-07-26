@@ -1,14 +1,18 @@
-﻿Public Class frmObtenerDiagnostico
+﻿Imports Logica
+Public Class frmObtenerDiagnostico
 
     Private Sub frmObtenerDiagnostico_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-    End Sub
+        Dim nombreDiagnostico As New ArrayList
+        Dim pat As New ControladorPatologia
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        For i As Integer = 0 To dgv11.RowCount - 1
 
-    End Sub
+            nombreDiagnostico.Add(dgv11.Rows(i).Cells(0).Value.ToString)
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+        Next
+
+        pat.guardarDiagnostico(Datos_Temporales.user_temp, nombreDiagnostico)
 
     End Sub
 

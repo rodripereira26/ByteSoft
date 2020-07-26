@@ -18,7 +18,6 @@
 
             End If
 
-            cerrarConexion()
         End If
 
         cerrarConexion()

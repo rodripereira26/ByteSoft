@@ -43,11 +43,11 @@ Partial Class frmBienvenidaPaciente
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -277,6 +277,17 @@ Partial Class frmBienvenidaPaciente
         Me.Panel6.Size = New System.Drawing.Size(679, 80)
         Me.Panel6.TabIndex = 6
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(77, 35)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(143, 29)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "Bienvenido, "
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(562, 9)
@@ -320,17 +331,6 @@ Partial Class frmBienvenidaPaciente
         Me.Label13.TabIndex = 21
         Me.Label13.Text = "X"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(77, 35)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(143, 29)
-        Me.Label5.TabIndex = 26
-        Me.Label5.Text = "Bienvenido, "
         '
         'frmBienvenidaPaciente
         '

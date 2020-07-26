@@ -362,10 +362,10 @@ Partial Class frmRegistrarPatologia
         Me.cb1.MouseState = MaterialSkin.MouseState.HOVER
         Me.cb1.Name = "cb1"
         Me.cb1.Ripple = True
-        Me.cb1.Size = New System.Drawing.Size(74, 30)
+        Me.cb1.Size = New System.Drawing.Size(54, 30)
         Me.cb1.TabIndex = 129
         Me.cb1.TabStop = True
-        Me.cb1.Text = "1 (Alta)"
+        Me.cb1.Text = "Alta"
         Me.cb1.UseVisualStyleBackColor = True
         '
         'cb3
@@ -379,10 +379,10 @@ Partial Class frmRegistrarPatologia
         Me.cb3.MouseState = MaterialSkin.MouseState.HOVER
         Me.cb3.Name = "cb3"
         Me.cb3.Ripple = True
-        Me.cb3.Size = New System.Drawing.Size(119, 30)
+        Me.cb3.Size = New System.Drawing.Size(56, 30)
         Me.cb3.TabIndex = 130
         Me.cb3.TabStop = True
-        Me.cb3.Text = "3 (Media-Baja)"
+        Me.cb3.Text = "Baja"
         Me.cb3.UseVisualStyleBackColor = True
         '
         'cb2
@@ -396,10 +396,10 @@ Partial Class frmRegistrarPatologia
         Me.cb2.MouseState = MaterialSkin.MouseState.HOVER
         Me.cb2.Name = "cb2"
         Me.cb2.Ripple = True
-        Me.cb2.Size = New System.Drawing.Size(88, 30)
+        Me.cb2.Size = New System.Drawing.Size(67, 30)
         Me.cb2.TabIndex = 131
         Me.cb2.TabStop = True
-        Me.cb2.Text = "2 (Media)"
+        Me.cb2.Text = "Media"
         Me.cb2.UseVisualStyleBackColor = True
         '
         'frmRegistrarPatologia

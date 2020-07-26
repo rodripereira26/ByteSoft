@@ -48,7 +48,11 @@ Public Class ControladorPatologia
     End Function
 
     Public Function obtenerPatologia(sintomas As ArrayList) As DataTable
-        Return p.obtenerPatologia(sintomas)
+        Return p.obtenerDiagnostico(sintomas)
+    End Function
+
+    Public Function guardarDiagnostico(usuario As String, nombreDiagnostico As ArrayList) As Boolean
+        Return p.guardarDiagnosticos(usuario, nombreDiagnostico)
     End Function
 
 End Class

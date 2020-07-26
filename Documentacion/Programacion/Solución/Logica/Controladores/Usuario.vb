@@ -31,7 +31,7 @@ Public Class Usuario
 
     End Sub
 
-    Public Function verificarUsuario(usuario As String, pass As String)
+    Public Function verificarUsuario(usuario As String, pass As String) As Boolean
 
         Dim datos As New ModeloUsuario
 

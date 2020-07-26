@@ -89,6 +89,7 @@ Partial Class frmLogin
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Label3.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label3.Location = New System.Drawing.Point(159, 289)
@@ -100,6 +101,7 @@ Partial Class frmLogin
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Label2.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label2.Location = New System.Drawing.Point(159, 182)

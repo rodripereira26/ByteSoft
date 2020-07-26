@@ -10,7 +10,6 @@ Public Class ModeloPatologia
     Public Function Registrar(nombre As String, descripcion As String, recomendacion As String, prioridad As Byte, nomSintomas As ArrayList) As Boolean
 
         Command.CommandText = "INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ('" & nombre & "','" & descripcion & "','" & recomendacion & "','" & prioridad & "')"
-        abrirConexion()
         Command.ExecuteNonQuery()
 
         For Each nom In nomSintomas
@@ -34,6 +33,7 @@ Public Class ModeloPatologia
             cerrarConexion()
         Next
 
+        cerrarConexion()
         Return True
     End Function
 
@@ -44,7 +44,7 @@ Public Class ModeloPatologia
 
         Dim dt As New DataTable
         Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia"
-        abrirConexion()
+
         dt.Load(Command.ExecuteReader())
         cerrarConexion()
 
@@ -82,7 +82,7 @@ Public Class ModeloPatologia
     '''<summary>
     '''Consulta encargada de obtener las patologías asociadas a los síntomas ingresador por el paciente.
     '''</summary>
-    Public Function obtenerPatologia(sintomas As ArrayList) As DataTable
+    Public Function obtenerDiagnostico(sintomas As ArrayList) As DataTable
 
         Dim dt As New DataTable
         Dim parametros As String
@@ -101,12 +101,41 @@ Public Class ModeloPatologia
         consulta = consulta & parametros.TrimEnd(",") & ")"
         consulta = consulta & " GROUP BY ps.idPatologia ORDER BY count(*) desc"
 
-        Command.CommandText = consulta
 
+        Command.CommandText = consulta
         dt.Load(Command.ExecuteReader())
-        cerrarConexion()
+
 
         Return dt
+    End Function
+
+    '''<summary>
+    '''Consulta encargada de guardar en la base de datos los diagnosticos indicados para el usuario.
+    '''</summary>
+    Public Function guardarDiagnosticos(usuario As String, diagnosticos As ArrayList) As Boolean
+
+        Try
+
+            For Each nom In diagnosticos
+
+                Command.CommandText = "
+                    INSERT INTO paciente_obtiene_diagnostico (cedulaPaciente, idPatologia, fecha) 
+                    SELECT " & usuario & ", p.idPatologia, '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' 
+                    FROM patologia p WHERE p.nombre = '" & nom & "'"
+                Command.ExecuteNonQuery()
+
+            Next
+
+            cerrarConexion()
+            Return True
+
+        Catch ex As Exception
+
+            cerrarConexion()
+            Return False
+
+        End Try
+
     End Function
 
 End Class

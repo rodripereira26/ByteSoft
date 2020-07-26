@@ -33,4 +33,11 @@ Public Class ControladorSintoma
         Return s.traerSintomas
     End Function
 
+    Public Function guardarSintomas(usuario As String, nombreSintoma As ArrayList) As Boolean
+
+        Dim dato As New ModeloSintoma
+
+        Return dato.guardarSintomas(usuario, nombreSintoma)
+    End Function
+
 End Class

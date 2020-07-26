@@ -84,8 +84,8 @@ Public Class frmLogin
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
-        Me.Hide()
         frmRegistroPaciente.Show()
+        Me.Dispose()
 
     End Sub
 
@@ -132,6 +132,8 @@ Public Class frmLogin
             If IsNumeric(txtUsr.Text) Then
 
                 If log.verificarUsuario(txtUsr.Text, seg.HASHSHA2566(txtPass.Text)) Then
+
+                    Datos_Temporales.user_temp = txtUsr.Text
 
                     Select Case log.verificarRol(txtUsr.Text)
 

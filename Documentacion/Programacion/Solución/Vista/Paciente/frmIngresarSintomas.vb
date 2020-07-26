@@ -50,7 +50,8 @@ Public Class frmIngresarSintomas
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
         Dim misSintomas As New ArrayList
-        Dim log As New ControladorPatologia
+        Dim pat As New ControladorPatologia
+        Dim sin As New ControladorSintoma
 
         For i As Integer = 0 To dgvMisSintomas.RowCount - 1
 
@@ -64,16 +65,22 @@ Public Class frmIngresarSintomas
 
         If misSintomas.Count > 0 Then
 
-            If log.obtenerPatologia(misSintomas).Rows.Count > 0 Then
+            If sin.guardarSintomas(Datos_Temporales.user_temp, misSintomas) Then
 
-                frmObtenerDiagnostico.dgv11.DataSource = log.obtenerPatologia(misSintomas)
-                Me.Visible = False
-                frmObtenerDiagnostico.Show()
+                If pat.obtenerPatologia(misSintomas).Rows.Count > 0 Then
+
+                    frmObtenerDiagnostico.dgv11.DataSource = pat.obtenerPatologia(misSintomas)
+                    frmObtenerDiagnostico.Show()
+                    Me.Dispose()
+                Else
+                    MsgBox("No se encontraron patologías que contenga los síntomas seleccionados")
+
+                End If
 
             End If
 
         Else
-            MsgBox("No ingresó ningún síntoma")
+            MsgBox("No seleccionó ningún síntoma")
         End If
 
     End Sub

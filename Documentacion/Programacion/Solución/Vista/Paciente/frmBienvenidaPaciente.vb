@@ -135,6 +135,11 @@ Public Class frmBienvenidaPaciente
         Me.Close()
     End Sub
 
+    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
+        frmIngresarSintomas.Show()
+        Me.Dispose()
+    End Sub
+
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
         drag = False
     End Sub

@@ -77,9 +77,14 @@ Consulta encargada de listar las patologías.
 Consulta encargada de eliminar patologías.
 </summary>
 </member>
-<member name="M:Acceso_a_Datos.ModeloPatologia.obtenerPatologia(System.Collections.ArrayList)">
+<member name="M:Acceso_a_Datos.ModeloPatologia.obtenerDiagnostico(System.Collections.ArrayList)">
 <summary>
 Consulta encargada de obtener las patologías asociadas a los síntomas ingresador por el paciente.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.guardarDiagnosticos(System.String,System.Collections.ArrayList)">
+<summary>
+Consulta encargada de guardar en la base de datos los diagnosticos indicados para el usuario.
 </summary>
 </member>
 <member name="T:Acceso_a_Datos.ModeloSintoma">
@@ -95,6 +100,11 @@ Consulta encargada de registrar los síntomas.
 <member name="M:Acceso_a_Datos.ModeloSintoma.traerSintomas">
 <summary>
 Consulta encargada de obtener los síntomas existentes en la base de datos.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloSintoma.guardarSintomas(System.String,System.Collections.ArrayList)">
+<summary>
+Consulta encargada de guardar en la base de datos los síntomas seleccionados por el usuario.
 </summary>
 </member>
 <member name="M:Acceso_a_Datos.ModeloUsuario.verificarUsuario(System.String,System.String)">

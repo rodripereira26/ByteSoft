@@ -87,6 +87,7 @@
     <Compile Include="Controladores\ControladorPatologia.vb" />
     <Compile Include="Seguridad\Encriptar.vb" />
     <Compile Include="Controladores\Usuario.vb" />
+    <Compile Include="Temporales\Datos_Temporales.vb" />
     <Compile Include="Verificaciones\Verificacion.vb" />
   </ItemGroup>
   <ItemGroup>

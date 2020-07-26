@@ -11,7 +11,7 @@ Public Class frmRegistroPaciente
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
-        Me.Hide()
+        Me.Dispose()
         frmLogin.Show()
 
     End Sub
@@ -21,10 +21,10 @@ Public Class frmRegistroPaciente
         If verificarDatos() Then
             Dim pac As New ControladorPaciente(txtCed.Text,
                                        txtPass1.Text,
-                                       txtPrimerNombre.Text,
-                                       txtSegundoNombre.Text,
-                                       txtPrimerApellido.Text,
-                                       txtSegundoApellido.Text,
+                                       txtPrimerNombre.Text.ToUpper,
+                                       txtSegundoNombre.Text.ToUpper,
+                                       txtPrimerApellido.Text.ToUpper,
+                                       txtSegundoApellido.Text.ToUpper,
                                        aliTel, txtMail.Text,
                                        sexo, txtFecNac.Text)
             If pac.registrar() Then
