@@ -30,7 +30,7 @@ Public Class ControladorPaciente
 
     End Sub
 
-    Public Function registrar()
+    Public Function registrar() As Boolean
 
         Dim datos As New ModeloPaciente
 
