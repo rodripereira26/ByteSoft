@@ -9,15 +9,21 @@ Public Class ModeloSintoma
     '''</summary>
     Public Function Registrar(nombre As String, descripcion As String) As Boolean
 
-        Command.CommandText = "
-        INSERT INTO 
-            sintoma (nombre, descripcion) 
-        VALUES ('" & nombre & "','" & descripcion & "')"
+        Try
+            Command.CommandText = "
+            INSERT INTO 
+                sintoma (nombre, descripcion) 
+            VALUES ('" & nombre & "','" & descripcion & "')"
+            Command.ExecuteNonQuery()
 
+        Catch ex As Exception
 
-        Command.ExecuteNonQuery()
+            cerrarConexion()
+            Return False
+
+        End Try
+
         cerrarConexion()
-
         Return True
     End Function
 
@@ -43,7 +49,6 @@ Public Class ModeloSintoma
         End If
 
         cerrarConexion()
-
         Return arraySintomas
     End Function
 
@@ -64,9 +69,6 @@ Public Class ModeloSintoma
 
             Next
 
-            cerrarConexion()
-            Return True
-
         Catch ex As Exception
 
             cerrarConexion()
@@ -74,6 +76,8 @@ Public Class ModeloSintoma
 
         End Try
 
+        cerrarConexion()
+        Return True
     End Function
 
 End Class

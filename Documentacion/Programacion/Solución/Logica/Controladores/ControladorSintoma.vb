@@ -19,7 +19,7 @@ Public Class ControladorSintoma
 
     End Sub
 
-    Public Function registrar()
+    Public Function registrar() As Boolean
 
         Dim s As New ModeloSintoma
 

@@ -77,6 +77,9 @@ Public Class frmIngresarSintomas
 
                 End If
 
+            Else
+                MsgBox("Error al registrar los síntomas")
+
             End If
 
         Else

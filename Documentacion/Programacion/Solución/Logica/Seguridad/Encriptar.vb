@@ -8,7 +8,7 @@ Public Class Encriptar
     '''<summary>
     '''Función encargada de encriptar las contraseñas mediante el algoritmo SHA25.
     '''</summary>
-    Public Function HASHSHA2566(ByVal texto) As String
+    Public Function HASH256(ByVal texto) As String
 
         Dim sha256 As SHA256 = SHA256Managed.Create()
         Dim bytes As Byte() = Encoding.UTF8.GetBytes(texto)

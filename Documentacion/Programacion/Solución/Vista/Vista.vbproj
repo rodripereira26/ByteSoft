@@ -258,10 +258,10 @@
     <Compile Include="Gestor\frmRegistrarPatologia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsFuncionales\frmRegistrarSintoma.Designer.vb">
+    <Compile Include="Gestor\frmRegistrarSintoma.Designer.vb">
       <DependentUpon>frmRegistrarSintoma.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormsFuncionales\frmRegistrarSintoma.vb">
+    <Compile Include="Gestor\frmRegistrarSintoma.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestor\frmRegistrarMedico.Designer.vb">
@@ -393,7 +393,7 @@
     <EmbeddedResource Include="Gestor\frmRegistrarPatologia.resx">
       <DependentUpon>frmRegistrarPatologia.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsFuncionales\frmRegistrarSintoma.resx">
+    <EmbeddedResource Include="Gestor\frmRegistrarSintoma.resx">
       <DependentUpon>frmRegistrarSintoma.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmRegistrarMedico.resx">

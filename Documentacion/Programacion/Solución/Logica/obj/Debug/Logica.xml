@@ -52,7 +52,7 @@ Clase encargada de los datos de las patologías.
 Clase encargada de la seguridad del sistema.
 </summary>
 </member>
-<member name="M:Logica.Encriptar.HASHSHA2566(System.Object)">
+<member name="M:Logica.Encriptar.HASH256(System.Object)">
 <summary>
 Función encargada de encriptar las contraseñas mediante el algoritmo SHA25.
 </summary>

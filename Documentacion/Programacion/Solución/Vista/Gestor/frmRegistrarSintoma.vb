@@ -7,8 +7,17 @@ Public Class frmRegistrarSintoma
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
-        Dim sintoma As New ControladorSintoma(txtNomSintoma.Text, txtDescripcion.Text)
-        sintoma.registrar()
+        If txtDescripcion.Text.Length > 10 Then
+            Dim sintoma As New ControladorSintoma(txtNomSintoma.Text, txtDescripcion.Text)
+
+            If sintoma.registrar() Then
+                MsgBox("Síntoma registrado con éxito")
+                txtDescripcion.Clear()
+                txtNomSintoma.Clear()
+            Else
+                MsgBox("Error al registrar el síntoma")
+            End If
+        End If
 
     End Sub
 

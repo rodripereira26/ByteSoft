@@ -9,11 +9,12 @@ Public Class ModeloPatologia
     '''</summary>
     Public Function Registrar(nombre As String, descripcion As String, recomendacion As String, prioridad As Byte, nomSintomas As ArrayList) As Boolean
 
-        Command.CommandText = "INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ('" & nombre & "','" & descripcion & "','" & recomendacion & "','" & prioridad & "')"
-        Command.ExecuteNonQuery()
+        Try
+            Command.CommandText = "INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ('" & nombre & "','" & descripcion & "','" & recomendacion & "','" & prioridad & "')"
+            Command.ExecuteNonQuery()
 
-        For Each nom In nomSintomas
-            Command.CommandText = "
+            For Each nom In nomSintomas
+                Command.CommandText = "
                     INSERT INTO patologia_contiene_sintoma (idSintoma, idPatologia)
                     VALUES
                         ((SELECT
@@ -29,9 +30,14 @@ Public Class ModeloPatologia
                         WHERE
                             nombre = '" & nombre & "'))"
 
-            Command.ExecuteNonQuery()
+                Command.ExecuteNonQuery()
+            Next
+
+        Catch ex As Exception
             cerrarConexion()
-        Next
+            Return False
+
+        End Try
 
         cerrarConexion()
         Return True
@@ -46,8 +52,8 @@ Public Class ModeloPatologia
         Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia"
 
         dt.Load(Command.ExecuteReader())
-        cerrarConexion()
 
+        cerrarConexion()
         Return dt
     End Function
 
@@ -74,8 +80,8 @@ Public Class ModeloPatologia
 
         Command.CommandText = consulta
         Command.ExecuteNonQuery()
-        cerrarConexion()
 
+        cerrarConexion()
         Return True
     End Function
 
@@ -101,10 +107,8 @@ Public Class ModeloPatologia
         consulta = consulta & parametros.TrimEnd(",") & ")"
         consulta = consulta & " GROUP BY ps.idPatologia ORDER BY count(*) desc"
 
-
         Command.CommandText = consulta
         dt.Load(Command.ExecuteReader())
-
 
         Return dt
     End Function
@@ -126,9 +130,6 @@ Public Class ModeloPatologia
 
             Next
 
-            cerrarConexion()
-            Return True
-
         Catch ex As Exception
 
             cerrarConexion()
@@ -136,6 +137,8 @@ Public Class ModeloPatologia
 
         End Try
 
+        cerrarConexion()
+        Return True
     End Function
 
 End Class

@@ -69,6 +69,7 @@
     <Compile Include="Controladores\ControladorGestor.vb" />
     <Compile Include="Controladores\ControladorMedico.vb" />
     <Compile Include="Controladores\ControladorSintoma.vb" />
+    <Compile Include="Datos_Temporales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -87,7 +88,6 @@
     <Compile Include="Controladores\ControladorPatologia.vb" />
     <Compile Include="Seguridad\Encriptar.vb" />
     <Compile Include="Controladores\Usuario.vb" />
-    <Compile Include="Temporales\Datos_Temporales.vb" />
     <Compile Include="Verificaciones\Verificacion.vb" />
   </ItemGroup>
   <ItemGroup>

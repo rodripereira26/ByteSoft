@@ -12,13 +12,13 @@ Public Class ModeloPaciente
         Try
 
             Command.CommandText = "
-           INSERT INTO 
+            INSERT INTO 
                 usuario (cedula, contrasena, pNom, sNom, pApe, sApe, correo) 
             VALUES ('" & cedula & "','" & contraseña & "','" & PrimerNombre & "','" & SegundoNombre & "','" & PrimerApellido & "','" & SegundoApellido & "','" & Mail & "')"
             Command.ExecuteNonQuery()
 
             Command.CommandText = "
-           INSERT INTO 
+            INSERT INTO 
                 paciente (cedula, verificacion, fecNac, sexo) 
             VALUES ('" & cedula & "','0','" & FechaNacimiento & "','" & sexo & "')"
             Command.ExecuteNonQuery()
@@ -26,15 +26,12 @@ Public Class ModeloPaciente
             For i = 0 To Telefonos.Count - 1
 
                 Command.CommandText = "
-            INSERT INTO 
-                usuario_tel (cedula,telefono) 
-            VALUES ('" & cedula & "','" & Telefonos(i).ToString & "')"
+                INSERT INTO 
+                   usuario_tel (cedula,telefono) 
+                VALUES ('" & cedula & "','" & Telefonos(i).ToString & "')"
                 Command.ExecuteNonQuery()
 
             Next
-
-            cerrarConexion()
-            Return True
 
         Catch
 
@@ -43,6 +40,8 @@ Public Class ModeloPaciente
 
         End Try
 
+        cerrarConexion()
+        Return True
     End Function
 
 End Class

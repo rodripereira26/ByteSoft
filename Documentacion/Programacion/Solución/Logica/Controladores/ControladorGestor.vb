@@ -22,7 +22,7 @@ Public Class ControladorGestor
 
     End Sub
 
-    Public Function registrar()
+    Public Function registrar() As Boolean
 
         Dim datos As New ModeloGestor
 

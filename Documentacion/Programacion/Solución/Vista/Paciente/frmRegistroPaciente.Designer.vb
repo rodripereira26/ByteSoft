@@ -22,9 +22,9 @@ Partial Class frmRegistroPaciente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cbF = New MaterialSkin.Controls.MaterialRadioButton()
         Me.cbM = New MaterialSkin.Controls.MaterialRadioButton()
@@ -70,6 +70,7 @@ Partial Class frmRegistroPaciente
         Me.btnEliminar = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtFecNac = New System.Windows.Forms.MaskedTextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,7 +124,7 @@ Partial Class frmRegistroPaciente
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.Black
-        Me.Panel10.Location = New System.Drawing.Point(569, 172)
+        Me.Panel10.Location = New System.Drawing.Point(540, 172)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(176, 2)
         Me.Panel10.TabIndex = 147
@@ -133,16 +134,16 @@ Partial Class frmRegistroPaciente
         Me.txtPass2.BackColor = System.Drawing.Color.White
         Me.txtPass2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPass2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass2.Location = New System.Drawing.Point(569, 142)
+        Me.txtPass2.Location = New System.Drawing.Point(540, 142)
         Me.txtPass2.Name = "txtPass2"
         Me.txtPass2.Size = New System.Drawing.Size(176, 23)
-        Me.txtPass2.TabIndex = 146
+        Me.txtPass2.TabIndex = 141
         Me.txtPass2.UseSystemPasswordChar = True
         '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.Black
-        Me.Panel8.Location = New System.Drawing.Point(322, 172)
+        Me.Panel8.Location = New System.Drawing.Point(307, 172)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(176, 2)
         Me.Panel8.TabIndex = 144
@@ -151,7 +152,7 @@ Partial Class frmRegistroPaciente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(565, 108)
+        Me.Label6.Location = New System.Drawing.Point(536, 108)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(170, 24)
         Me.Label6.TabIndex = 145
@@ -162,10 +163,10 @@ Partial Class frmRegistroPaciente
         Me.txtPass1.BackColor = System.Drawing.Color.White
         Me.txtPass1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPass1.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass1.Location = New System.Drawing.Point(322, 142)
+        Me.txtPass1.Location = New System.Drawing.Point(307, 142)
         Me.txtPass1.Name = "txtPass1"
         Me.txtPass1.Size = New System.Drawing.Size(176, 23)
-        Me.txtPass1.TabIndex = 143
+        Me.txtPass1.TabIndex = 140
         Me.txtPass1.UseSystemPasswordChar = True
         '
         'Panel1
@@ -180,7 +181,7 @@ Partial Class frmRegistroPaciente
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(351, 108)
+        Me.Label5.Location = New System.Drawing.Point(336, 108)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(105, 24)
         Me.Label5.TabIndex = 142
@@ -189,7 +190,7 @@ Partial Class frmRegistroPaciente
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Black
-        Me.Panel7.Location = New System.Drawing.Point(786, 172)
+        Me.Panel7.Location = New System.Drawing.Point(754, 172)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(218, 2)
         Me.Panel7.TabIndex = 151
@@ -199,16 +200,16 @@ Partial Class frmRegistroPaciente
         Me.txtMail.BackColor = System.Drawing.Color.White
         Me.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMail.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMail.Location = New System.Drawing.Point(792, 142)
+        Me.txtMail.Location = New System.Drawing.Point(760, 142)
         Me.txtMail.Name = "txtMail"
         Me.txtMail.Size = New System.Drawing.Size(218, 23)
-        Me.txtMail.TabIndex = 149
+        Me.txtMail.TabIndex = 142
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(858, 108)
+        Me.Label2.Location = New System.Drawing.Point(826, 108)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(62, 24)
         Me.Label2.TabIndex = 150
@@ -241,6 +242,7 @@ Partial Class frmRegistroPaciente
         Me.txtCed.Name = "txtCed"
         Me.txtCed.Size = New System.Drawing.Size(176, 23)
         Me.txtCed.TabIndex = 139
+        Me.txtCed.TabStop = False
         '
         'Panel6
         '
@@ -325,12 +327,12 @@ Partial Class frmRegistroPaciente
         Me.txtPrimerNombre.Location = New System.Drawing.Point(11, 301)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
         Me.txtPrimerNombre.Size = New System.Drawing.Size(218, 23)
-        Me.txtPrimerNombre.TabIndex = 136
+        Me.txtPrimerNombre.TabIndex = 143
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Black
-        Me.Panel5.Location = New System.Drawing.Point(770, 328)
+        Me.Panel5.Location = New System.Drawing.Point(750, 329)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(218, 2)
         Me.Panel5.TabIndex = 135
@@ -356,16 +358,16 @@ Partial Class frmRegistroPaciente
         Me.txtSegundoApellido.BackColor = System.Drawing.Color.White
         Me.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSegundoApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoApellido.Location = New System.Drawing.Point(770, 298)
+        Me.txtSegundoApellido.Location = New System.Drawing.Point(750, 299)
         Me.txtSegundoApellido.Name = "txtSegundoApellido"
         Me.txtSegundoApellido.Size = New System.Drawing.Size(218, 23)
-        Me.txtSegundoApellido.TabIndex = 130
+        Me.txtSegundoApellido.TabIndex = 146
         '
         'lblSegundoApellido
         '
         Me.lblSegundoApellido.AutoSize = True
         Me.lblSegundoApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSegundoApellido.Location = New System.Drawing.Point(802, 260)
+        Me.lblSegundoApellido.Location = New System.Drawing.Point(782, 261)
         Me.lblSegundoApellido.Name = "lblSegundoApellido"
         Me.lblSegundoApellido.Size = New System.Drawing.Size(159, 24)
         Me.lblSegundoApellido.TabIndex = 132
@@ -379,13 +381,13 @@ Partial Class frmRegistroPaciente
         Me.txtPrimerApellido.Location = New System.Drawing.Point(517, 301)
         Me.txtPrimerApellido.Name = "txtPrimerApellido"
         Me.txtPrimerApellido.Size = New System.Drawing.Size(218, 23)
-        Me.txtPrimerApellido.TabIndex = 128
+        Me.txtPrimerApellido.TabIndex = 145
         '
         'lblPrimerApellido
         '
         Me.lblPrimerApellido.AutoSize = True
         Me.lblPrimerApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrimerApellido.Location = New System.Drawing.Point(546, 261)
+        Me.lblPrimerApellido.Location = New System.Drawing.Point(547, 261)
         Me.lblPrimerApellido.Name = "lblPrimerApellido"
         Me.lblPrimerApellido.Size = New System.Drawing.Size(141, 24)
         Me.lblPrimerApellido.TabIndex = 131
@@ -399,7 +401,7 @@ Partial Class frmRegistroPaciente
         Me.txtSegundoNombre.Location = New System.Drawing.Point(264, 301)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
         Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 23)
-        Me.txtSegundoNombre.TabIndex = 127
+        Me.txtSegundoNombre.TabIndex = 144
         '
         'lblSegundoNombre
         '
@@ -427,7 +429,7 @@ Partial Class frmRegistroPaciente
         Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(446, 547)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(446, 557)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -457,7 +459,7 @@ Partial Class frmRegistroPaciente
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(720, 378)
+        Me.Label9.Location = New System.Drawing.Point(720, 369)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(186, 24)
         Me.Label9.TabIndex = 157
@@ -465,34 +467,34 @@ Partial Class frmRegistroPaciente
         '
         'dgvTelefonos
         '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTelefonos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTelefonos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTelefonos.BackgroundColor = System.Drawing.Color.White
         Me.dgvTelefonos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTelefonos.ColumnHeadersVisible = False
         Me.dgvTelefonos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Telefonos})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvTelefonos.Location = New System.Drawing.Point(12, 3)
         Me.dgvTelefonos.MultiSelect = False
         Me.dgvTelefonos.Name = "dgvTelefonos"
@@ -570,7 +572,17 @@ Partial Class frmRegistroPaciente
         Me.txtFecNac.Mask = "0000-00-00"
         Me.txtFecNac.Name = "txtFecNac"
         Me.txtFecNac.Size = New System.Drawing.Size(130, 26)
-        Me.txtFecNac.TabIndex = 162
+        Me.txtFecNac.TabIndex = 147
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(750, 393)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(106, 21)
+        Me.Label11.TabIndex = 163
+        Me.Label11.Text = "yyyy-mm-dd"
         '
         'frmRegistroPaciente
         '
@@ -578,6 +590,7 @@ Partial Class frmRegistroPaciente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1011, 632)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.txtFecNac)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel1)
@@ -674,4 +687,5 @@ Partial Class frmRegistroPaciente
     Friend WithEvents Telefonos As DataGridViewTextBoxColumn
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents txtFecNac As MaskedTextBox
+    Friend WithEvents Label11 As Label
 End Class

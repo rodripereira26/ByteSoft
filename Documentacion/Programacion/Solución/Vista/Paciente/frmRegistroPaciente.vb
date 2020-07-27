@@ -3,7 +3,14 @@ Public Class frmRegistroPaciente
 
     Dim aliTel As New ArrayList
     Dim check As New Verificacion
+    Dim seg As New Encriptar
+    Dim pass As String
     Dim sexo As String
+    Dim p As New Principal
+
+    Private Sub frmRegistroPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        p.roundedCorners(Me)
+    End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
         Application.Exit()
@@ -18,25 +25,56 @@ Public Class frmRegistroPaciente
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
-        If verificarDatos() Then
-            Dim pac As New ControladorPaciente(txtCed.Text,
-                                       txtPass1.Text,
-                                       txtPrimerNombre.Text.ToUpper,
-                                       txtSegundoNombre.Text.ToUpper,
-                                       txtPrimerApellido.Text.ToUpper,
-                                       txtSegundoApellido.Text.ToUpper,
-                                       aliTel, txtMail.Text,
-                                       sexo, txtFecNac.Text)
-            If pac.registrar() Then
+        If p.verificarCedula(check, txtCed.Text) Then
+            If p.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
+                pass = seg.HASH256(txtPass1.Text)
+                If p.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
+                    If p.verificarEmail(check, txtMail.Text) Then
+                        If p.verificarTelefonos(dgvTelefonos, aliTel) Then
+                            If txtFecNac.Text <> "" Then
 
-                MsgBox("Paciente registrado")
-                limpiar()
+                                If cbM.Checked Then
+                                    sexo = "M"
+                                Else
+                                    sexo = "F"
+                                End If
 
-            Else
-                MsgBox("El paciente ya fue ingresado")
+                                Dim pac As New ControladorPaciente(txtCed.Text,
+                                           pass,
+                                           txtPrimerNombre.Text.ToUpper,
+                                           txtSegundoNombre.Text.ToUpper,
+                                           txtPrimerApellido.Text.ToUpper,
+                                           txtSegundoApellido.Text.ToUpper,
+                                           aliTel,
+                                           txtMail.Text,
+                                           sexo,
+                                           txtFecNac.Text)
 
+                                If pac.registrar() Then
+
+                                    MsgBox("Paciente registrado con éxito")
+                                    p.limpiar(txtCed, txtPass1, txtPass2, txtPrimerNombre,
+                                            txtPrimerApellido,
+                                            txtSegundoApellido, txtSegundoNombre,
+                                            txtMail, dgvTelefonos, aliTel)
+                                    txtFecNac.Clear()
+                                    cbM.Checked = True
+
+                                Else
+                                    MsgBox("El paciente ya fue registrado")
+
+                                End If
+
+                            Else
+                                MsgBox("Debe ingresar su fecha de nacimiento")
+                            End If
+
+                        End If
+                    End If
+                End If
             End If
-
+        Else
+            MsgBox("La cédula ingresada no es correcta")
         End If
 
     End Sub
@@ -53,100 +91,6 @@ Public Class frmRegistroPaciente
         ''add animacion
 
     End Sub
-
-    Private Sub limpiar()
-
-        txtCed.Clear()
-        txtPass1.Clear()
-        txtPass2.Clear()
-        txtPrimerApellido.Clear()
-        txtPrimerNombre.Clear()
-        txtSegundoApellido.Clear()
-        txtSegundoNombre.Clear()
-        txtMail.Clear()
-        aliTel.Clear()
-        txtFecNac.Clear()
-        dgvTelefonos.Rows.Clear()
-
-
-    End Sub
-
-    Private Function verificarDatos() As Boolean
-
-        Dim seg As New Encriptar
-        Dim pass As String
-
-        If check.verificar_cedula(txtCed.Text) And check.verificar_digito(txtCed.Text) Then
-
-            If check.verificar_string(txtPrimerNombre.Text) = False Then
-
-                MsgBox("Primer nombre incorrecto")
-                Return False
-
-            End If
-
-            If check.verificar_string(txtPrimerApellido.Text) = False Then
-
-                MsgBox("Primer apellido incorrecto")
-                Return False
-
-            End If
-
-            If IsNumeric(txtSegundoNombre.Text) Then
-
-                MsgBox("Segundo nombre incorrecto")
-                Return False
-
-            End If
-
-            If check.verificar_string(txtSegundoApellido.Text) = False Then
-
-                MsgBox("Segundo apellido incorrecto")
-                Return False
-
-            End If
-
-            If check.verificar_email(txtMail.Text) = False Then
-
-                MsgBox("Email incorrecto")
-                Return False
-
-            End If
-
-            If seg.HASHSHA2566(txtPass1.Text) = seg.HASHSHA2566(txtPass2.Text) Then
-
-                pass = seg.HASHSHA2566(txtPass1.Text)
-
-            Else
-                MsgBox("Las contraseñas no coinciden")
-                Return False
-
-            End If
-
-            For i = 0 To dgvTelefonos.Rows.Count - 2
-
-                If dgvTelefonos.Rows(i).Cells(0).Value <> "" Then
-
-                    aliTel.Add(dgvTelefonos.Rows(i).Cells(0).Value)
-
-                End If
-
-            Next
-
-            If cbM.Checked Then
-                sexo = "M"
-            Else
-                sexo = "F"
-            End If
-
-        Else
-            MsgBox("Cédula incorrecta")
-            Return False
-
-        End If
-
-        Return True
-    End Function
 
     Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
 
@@ -167,6 +111,10 @@ Public Class frmRegistroPaciente
         btnEliminar.Enabled = True
         ' no permite elimianr si no hay ninguna cell seleccionada
 
+    End Sub
+
+    Private Sub txtFecNac_Click(sender As Object, e As EventArgs) Handles txtFecNac.Click
+        txtFecNac.Select(0, 0)
     End Sub
 
 End Class

@@ -25,6 +25,121 @@ Public Class Principal
         gp.CloseFigure()
 
         rect.Region = New Region(gp)
+
+    End Sub
+
+    Public Function verificarCedula(check As Verificacion, cedula As String) As Boolean
+
+        If check.verificar_cedula(cedula) Then
+
+            If check.verificar_digito(cedula) Then
+
+                Return True
+
+            Else
+                Return False
+
+            End If
+        Else
+            Return False
+
+        End If
+
+        Return False
+    End Function
+
+    Public Function verificarString(check As Verificacion, pNom As String, pApe As String, sNom As String, sApe As String) As Boolean
+
+        If check.verificar_string(pNom) Then
+
+            If check.verificar_string(pApe) Then
+
+                If IsNumeric(sNom) = False Then
+
+                    If check.verificar_string(sApe) Then
+
+                        Return True
+
+                    Else
+                        MsgBox("Segundo apellido incorrecto")
+                        Return False
+
+                    End If
+
+                Else
+                    MsgBox("Segundo nombre incorrecto")
+                    Return False
+
+                End If
+            Else
+                MsgBox("Primer apellido incorrecto")
+                Return False
+
+            End If
+        Else
+            MsgBox("Primer nombre incorrecto")
+            Return False
+
+        End If
+
+        Return False
+    End Function
+
+    Public Function verificarEmail(check As Verificacion, mail As String) As Boolean
+
+        If check.verificar_email(mail) = False Then
+
+            MsgBox("Email incorrecto")
+            Return False
+
+        End If
+
+        Return True
+    End Function
+
+    Public Function verificarContraseña(seg As Encriptar, pass1 As String, pass2 As String) As Boolean
+
+        If seg.HASH256(pass1) = seg.HASH256(pass2) Then
+
+            Return True
+
+        Else
+            MsgBox("Las contraseñas no coinciden")
+            Return False
+
+        End If
+
+        Return False
+    End Function
+
+    Public Function verificarTelefonos(dgv As DataGridView, telefonos As ArrayList) As Boolean
+
+        For i = 0 To dgv.Rows.Count - 2
+
+            If dgv.Rows(i).Cells(0).Value <> "" Then
+
+                telefonos.Add(dgv.Rows(i).Cells(0).Value)
+
+            End If
+
+        Next
+
+        Return True
+    End Function
+
+    Public Sub limpiar(a As TextBox, b As TextBox, c As TextBox, d As TextBox, e As TextBox, f As TextBox, g As TextBox, h As TextBox, j As DataGridView, k As ArrayList)
+
+        a.Clear()
+        b.Clear()
+        c.Clear()
+        d.Clear()
+        e.Clear()
+        f.Clear()
+        g.Clear()
+        h.Clear()
+        j.Rows.Clear()
+        k.Clear()
+
     End Sub
 
     Public Sub darkMode(obj As Object)
