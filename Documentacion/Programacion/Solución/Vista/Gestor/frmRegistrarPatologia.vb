@@ -3,12 +3,7 @@ Public Class frmRegistrarPatologia
 
     Private Sub RegistrarPatologias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim s As New ControladorSintoma
-        Dim arraySintomas = s.traerSintomas
-
-        For i = 0 To arraySintomas.Count - 1
-            dgvTodos.Rows.Add(arraySintomas(i))
-        Next
+        traerSintomas()
 
     End Sub
 
@@ -59,6 +54,17 @@ Public Class frmRegistrarPatologia
 
     End Sub
 
+    Private Sub traerSintomas()
+
+        Dim s As New ControladorSintoma
+        Dim arraySintomas = s.traerSintomas
+
+        For i = 0 To arraySintomas.Count - 1
+            dgvTodos.Rows.Add(arraySintomas(i))
+        Next
+
+    End Sub
+
     Private Sub dgvTodos_DragOver(sender As Object, e As DragEventArgs) Handles dgvTodos.DragOver
         e.Effect = DragDropEffects.Move
     End Sub
@@ -79,25 +85,52 @@ Public Class frmRegistrarPatologia
 
         Dim prioridad As Byte
         Dim ali As New ArrayList
+        Dim check As New Verificacion
 
-        If cb1.Checked Then
-            prioridad = 1
-        ElseIf cb2.Checked Then
-            prioridad = 2
-        ElseIf cb3.Checked Then
-            prioridad = 3
+        If dgvSintomasSeleccionados.Rows.Count() <> 0 Then
+            If txtDescPat.Text.Length > 10 Then
+                If txtRecPat.Text.Length > 10 Then
+
+                    If cb1.Checked Then
+                        prioridad = 1
+                    ElseIf cb2.Checked Then
+                        prioridad = 2
+                    ElseIf cb3.Checked Then
+                        prioridad = 3
+                    End If
+
+                    For i = 0 To dgvSintomasSeleccionados.Rows.Count() - 1
+                        ali.Add(dgvSintomasSeleccionados.Rows(i).Cells(0).Value)
+                    Next
+
+                    Dim p As New ControladorPatologia(txtNomPat.Text, txtDescPat.Text, txtRecPat.Text, prioridad, ali)
+
+                    If p.registrar() Then
+
+                        MsgBox("Patología registrada con éxito")
+                        Dim s As New ControladorSintoma
+                        txtNomPat.Clear()
+                        txtDescPat.Clear()
+                        txtRecPat.Clear()
+                        dgvTodos.Rows.Clear()
+                        dgvSintomasSeleccionados.Rows.Clear()
+                        traerSintomas()
+
+                    Else
+                        MsgBox("Error al registrar la patología")
+                    End If
+
+                Else
+                    MsgBox("Debe ingresar una recomendación completa")
+                End If
+            Else
+                MsgBox("Debe ingresar una descripción completa")
+            End If
+        Else
+            MsgBox("Debe seleccionar síntomas para la patología")
         End If
 
-        For i = 0 To dgvSintomasSeleccionados.Rows.Count() - 1
-            ali.Add(dgvSintomasSeleccionados.Rows(i).Cells(0).Value)
-        Next
 
-        Try
-            Dim p As New ControladorPatologia(txtNomPat.Text, txtDescPat.Text, txtRecPat.Text, prioridad, ali)
-            p.registrar()
-        Catch ex As Exception
-
-        End Try
 
     End Sub
 

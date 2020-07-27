@@ -12,7 +12,9 @@ Public Class frmObtenerDiagnostico
 
         Next
 
-        pat.guardarDiagnostico(Datos_Temporales.user_temp, nombreDiagnostico)
+        If pat.guardarDiagnostico(Datos_Temporales.user_temp, nombreDiagnostico) = False Then
+            MsgBox("Error al almacenar el diagnóstico")
+        End If
 
     End Sub
 

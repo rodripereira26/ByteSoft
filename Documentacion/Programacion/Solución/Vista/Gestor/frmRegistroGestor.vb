@@ -1,91 +1,45 @@
 ﻿Imports Logica
 Public Class frmRegistroGestor
 
+    Dim pass As String
+    Dim aliTel As New ArrayList
     Dim check As New Verificacion
+    Dim seg As New Encriptar
+    Dim p As New Principal
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
-        Dim aliTel As New ArrayList
-        Dim seg As New Encriptar
-        Dim pass As String
-
-        Try
-            If check.verificar_cedula(txtCI.Text) And check.verificar_digito(txtCI.Text) Then
-
-                If check.verificar_string(txtPrimerNombre.Text) = False Then
-
-                    MsgBox("Primer nombre incorrecto")
-                    Exit Try
-
-                End If
-
-                If check.verificar_string(txtPrimerApellido.Text) = False Then
-
-                    MsgBox("Primer apellido incorrecto")
-                    Exit Try
-
-                End If
-
-                If IsNumeric(txtSegundoNombre.Text) Then
-
-                    MsgBox("Segundo nombre incorrecto")
-                    Exit Try
-
-                End If
-
-                If check.verificar_string(txtSegundoApellido.Text) = False Then
-
-                    MsgBox("Segundo apellido incorrecto")
-                    Exit Try
-
-                End If
-
-                If check.verificar_email(txtEmail.Text) = False Then
-
-                    MsgBox("Email incorrecto")
-                    Exit Try
-
-                End If
-
-                If seg.HASHSHA2566(txtPass1.Text) = seg.HASHSHA2566(txtPass2.Text) Then
-
-                    pass = seg.HASHSHA2566(txtPass1.Text)
-
-                Else
-                    MsgBox("Las contraseñas no coinciden")
-                    Exit Try
-
-                End If
-
-                For i = 0 To dgvTelefonos.Rows.Count - 2
-
-                    If dgvTelefonos.Rows(i).Cells(0).Value <> "" Then
-
-                        aliTel.Add(dgvTelefonos.Rows(i).Cells(0).Value)
-
-                    End If
-
-                Next
-
-                Dim ges As New ControladorGestor(txtCI.Text,
+        If p.verificarCedula(check, txtCI.Text) Then
+            If p.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
+                pass = seg.HASH256(txtPass1.Text)
+                If p.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
+                    If p.verificarEmail(check, txtEmail.Text) Then
+                        If p.verificarTelefonos(dgvTelefonos, aliTel) Then
+                            Dim ges As New ControladorGestor(txtCI.Text,
                                                  pass,
-                                                 txtPrimerNombre.Text,
-                                                 txtSegundoNombre.Text,
-                                                 txtPrimerApellido.Text,
-                                                 txtSegundoApellido.Text,
+                                                 txtPrimerNombre.Text.ToUpper,
+                                                 txtSegundoNombre.Text.ToUpper,
+                                                 txtPrimerApellido.Text.ToUpper,
+                                                 txtSegundoApellido.Text.ToUpper,
                                                  aliTel,
                                                  txtEmail.Text)
-                ges.registrar()
+                            If ges.registrar() Then
+                                MsgBox("Gestor registrado con éxito")
+                                p.limpiar(txtCI, txtPass1, txtPass2, txtPrimerApellido, txtPrimerNombre, txtSegundoApellido, txtSegundoNombre, txtEmail, dgvTelefonos, aliTel)
 
-            Else
-                MsgBox("Cédula incorrecta")
-                Exit Try
+                            Else
+                                MsgBox("El gestor ya fue registrado")
+                            End If
 
+                        End If
+                    End If
+                End If
             End If
 
-        Catch ex As Exception
+        Else
+            MsgBox("La cédula ingresada no es correcta")
 
-        End Try
+        End If
 
     End Sub
 

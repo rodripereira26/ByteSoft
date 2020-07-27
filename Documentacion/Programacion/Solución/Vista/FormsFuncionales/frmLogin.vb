@@ -131,7 +131,7 @@ Public Class frmLogin
 
             If IsNumeric(txtUsr.Text) Then
 
-                If log.verificarUsuario(txtUsr.Text, seg.HASHSHA2566(txtPass.Text)) Then
+                If log.verificarUsuario(txtUsr.Text, seg.HASH256(txtPass.Text)) Then
 
                     Datos_Temporales.user_temp = txtUsr.Text
 

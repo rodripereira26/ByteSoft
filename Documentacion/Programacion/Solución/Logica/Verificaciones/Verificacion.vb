@@ -85,11 +85,24 @@ Public Class Verificacion
     Public Function verificar_string(texto As String) As Boolean
 
         If texto <> "" Then
-            If IsNumeric(texto) = False Then
+
+            Dim bool As Boolean = Regex.IsMatch(texto, "^[a-zA-Z]+$")
+
+            If bool Then
+
                 If texto.Length >= 3 Then
+
                     Return True
+
+                Else
+                    Return False
                 End If
+
+            Else
+                Return False
+
             End If
+
         End If
 
         Return False
@@ -101,9 +114,17 @@ Public Class Verificacion
     Public Function verificar_int(numero As String) As Boolean
 
         If numero <> "" Then
+
             If IsNumeric(numero) = True Then
+
                 Return True
+            Else
+                Return False
+
             End If
+
+        Else
+            Return False
         End If
 
         Return False
@@ -123,14 +144,6 @@ Public Class Verificacion
             verificar_email = False
         End If
 
-    End Function
-
-    ''ARREGLAR ESTE METODO
-    Public Function verificar(cedula As String, contraseña As String)
-
-        'Dim datos As New Consultas
-
-        'Return datos.verificarUsuario(cedula, contraseña)
     End Function
 
 End Class

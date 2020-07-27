@@ -239,14 +239,14 @@ Partial Class frmIngresarSintomas
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvMisSintomas.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvMisSintomas.Location = New System.Drawing.Point(521, 240)
+        Me.dgvMisSintomas.Location = New System.Drawing.Point(521, 258)
         Me.dgvMisSintomas.MultiSelect = False
         Me.dgvMisSintomas.Name = "dgvMisSintomas"
         Me.dgvMisSintomas.ReadOnly = True
         Me.dgvMisSintomas.RowHeadersVisible = False
         Me.dgvMisSintomas.RowHeadersWidth = 51
         Me.dgvMisSintomas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgvMisSintomas.Size = New System.Drawing.Size(214, 430)
+        Me.dgvMisSintomas.Size = New System.Drawing.Size(214, 412)
         Me.dgvMisSintomas.TabIndex = 88
         '
         'DataGridViewTextBoxColumn1

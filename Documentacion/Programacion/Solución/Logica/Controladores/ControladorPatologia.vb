@@ -27,10 +27,9 @@ Public Class ControladorPatologia
 
     End Sub
 
-    Public Sub registrar()
-        p.Registrar(_nombre, _descripcion, _recomendacion, _prioridad, _sintomas)
-        ' VERIFICACIONES
-    End Sub
+    Public Function registrar() As Boolean
+        Return p.Registrar(_nombre, _descripcion, _recomendacion, _prioridad, _sintomas)
+    End Function
 
     Public Function listarPatologias() As DataTable
         Return p.listarPatologias
@@ -39,9 +38,7 @@ Public Class ControladorPatologia
     Public Function eliminarPatologias(aliPatologias As ArrayList)
 
         If p.eliminarPatologias(aliPatologias) Then
-
             Return True
-
         End If
 
         Return False

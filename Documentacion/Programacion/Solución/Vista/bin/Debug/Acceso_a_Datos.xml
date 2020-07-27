@@ -42,7 +42,7 @@ Consulta encargada de registar a los usuarios administradores del sistema.
 Clase encargada de las consultas pertenecientes a los médicos.
 </summary>
 </member>
-<member name="M:Acceso_a_Datos.ModeloMedico.Registrar(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList,System.String)">
+<member name="M:Acceso_a_Datos.ModeloMedico.Registrar(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
 <summary>
 Consulta encargada de registrar a los usuarios médicos.
 </summary>

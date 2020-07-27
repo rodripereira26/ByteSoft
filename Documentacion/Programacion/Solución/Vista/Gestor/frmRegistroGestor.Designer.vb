@@ -93,7 +93,7 @@ Partial Class frmRegistroGestor
         Me.Panel6.Controls.Add(Me.Label4)
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1014, 77)
+        Me.Panel6.Size = New System.Drawing.Size(1019, 77)
         Me.Panel6.TabIndex = 111
         '
         'Label12
@@ -158,7 +158,7 @@ Partial Class frmRegistroGestor
         Me.txtPrimerNombre.Location = New System.Drawing.Point(3, 302)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
         Me.txtPrimerNombre.Size = New System.Drawing.Size(223, 24)
-        Me.txtPrimerNombre.TabIndex = 106
+        Me.txtPrimerNombre.TabIndex = 112
         '
         'Panel5
         '
@@ -192,7 +192,7 @@ Partial Class frmRegistroGestor
         Me.txtSegundoApellido.Location = New System.Drawing.Point(762, 299)
         Me.txtSegundoApellido.Name = "txtSegundoApellido"
         Me.txtSegundoApellido.Size = New System.Drawing.Size(223, 24)
-        Me.txtSegundoApellido.TabIndex = 100
+        Me.txtSegundoApellido.TabIndex = 115
         '
         'lblSegundoApellido
         '
@@ -212,7 +212,7 @@ Partial Class frmRegistroGestor
         Me.txtPrimerApellido.Location = New System.Drawing.Point(509, 302)
         Me.txtPrimerApellido.Name = "txtPrimerApellido"
         Me.txtPrimerApellido.Size = New System.Drawing.Size(223, 24)
-        Me.txtPrimerApellido.TabIndex = 98
+        Me.txtPrimerApellido.TabIndex = 114
         '
         'lblPrimerApellido
         '
@@ -232,7 +232,7 @@ Partial Class frmRegistroGestor
         Me.txtSegundoNombre.Location = New System.Drawing.Point(256, 302)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
         Me.txtSegundoNombre.Size = New System.Drawing.Size(223, 24)
-        Me.txtSegundoNombre.TabIndex = 97
+        Me.txtSegundoNombre.TabIndex = 113
         '
         'lblSegundoNombre
         '
@@ -270,7 +270,7 @@ Partial Class frmRegistroGestor
         Me.txtEmail.Location = New System.Drawing.Point(574, 419)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(223, 24)
-        Me.txtEmail.TabIndex = 119
+        Me.txtEmail.TabIndex = 116
         '
         'Label2
         '
@@ -334,7 +334,7 @@ Partial Class frmRegistroGestor
         Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(484, 621)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(443, 606)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -458,7 +458,7 @@ Partial Class frmRegistroGestor
         Me.txtPass2.Name = "txtPass2"
         Me.txtPass2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass2.Size = New System.Drawing.Size(181, 24)
-        Me.txtPass2.TabIndex = 115
+        Me.txtPass2.TabIndex = 111
         '
         'txtPass1
         '
@@ -469,7 +469,7 @@ Partial Class frmRegistroGestor
         Me.txtPass1.Name = "txtPass1"
         Me.txtPass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass1.Size = New System.Drawing.Size(181, 24)
-        Me.txtPass1.TabIndex = 112
+        Me.txtPass1.TabIndex = 110
         '
         'frmRegistroGestor
         '
@@ -510,6 +510,7 @@ Partial Class frmRegistroGestor
         Me.Controls.Add(Me.lblPrimerNombre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmRegistroGestor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistrarGestor"
         Me.Panel6.ResumeLayout(False)
         Me.Panel12.ResumeLayout(False)
