@@ -1,22 +1,21 @@
 ﻿Public Class frmBienvenidaGestor
 
-    Dim drag As Boolean
-    Dim mousex, mousey As Integer
 
+    Dim p As New Principal
     Private Sub BienvenidaGestor_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Dim p As New Principal
+
 
         p.roundedCorners(Me)
-        p.roundedCorners(Panel3)
-        p.roundedCorners(Panel4)
-        p.roundedCorners(Panel1)
-        p.roundedCorners(Panel16)
-        p.roundedCorners(Panel15)
+        p.roundedCorners(pnlAjustes)
+        p.roundedCorners(pnlMiPerfil)
+        p.roundedCorners(pnlPatologias)
+        p.roundedCorners(pnlUsuarios)
+        p.roundedCorners(pnlSintomas)
         p.roundedCorners(Panel14)
-        p.roundedCorners(Panel12)
-        p.roundedCorners(Panel16)
-        p.roundedCorners(Panel5)
+        p.roundedCorners(pnlRegistrodeUsuarios)
+        p.roundedCorners(pnlUsuarios)
+        p.roundedCorners(pnlAyuda)
         p.roundedCorners(Panel14)
 
         'Me.BackColor = Color.FromArgb(236, 236, 236)
@@ -53,25 +52,33 @@
         'Label19.ForeColor = col
     End Sub
 
-    Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel6.MouseDown
-
-        drag = True
-        mousex = Cursor.Position.X - Me.Left
-        mousey = Cursor.Position.Y - Me.Top
-
+    Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseDown
+        p.moverVentanaDown(Me)
     End Sub
 
-    Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel6.MouseMove
-
-        If drag Then
-            Me.Top = Cursor.Position.Y - mousey
-            Me.Left = Cursor.Position.X - mousex
-        End If
-
+    Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseMove
+        p.moverVentanaMove(Me)
     End Sub
 
-    Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
-        drag = False
+    Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseUp
+        p.moverVentanaUp()
+    End Sub
+
+    Private Sub pnlPatologias_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlPatologias.MouseDown
+        frmModular.op = 0
+        frmModular.Visible = True
+        Me.Hide()
+    End Sub
+
+    Private Sub pnlSintomas_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlSintomas.MouseDown
+        frmModular.op = 1
+        frmModular.Visible = True
+        Me.Hide()
+    End Sub
+    Private Sub pnlRegistrodeUsuarios_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlRegistrodeUsuarios.MouseDown
+        frmModular.op = 2
+        frmModular.Visible = True
+        Me.Hide()
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click

@@ -2,63 +2,78 @@
 Imports MaterialSkin
 ''https://github.com/IgnaceMaes/MaterialSkin
 
-Public Class frmPatologiasRegistradas
+Public Class frmListadoPatologiasySintomas
+
+    Public op As String
+
 
     Dim p As New Principal
     Dim criterio As String
     Dim textoBusqueda As String = "Buscar por " & Me.criterio
 
+
     Private Sub frmPatologiasRegistradas_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Dim p As New ControladorPatologia
+        lblTitulo.Text = "LISTADO DE " & op.ToUpper
+
         Dim principal As New Principal
         principal.metroStyle(Me)
 
-        dgvListadoPatologias.DataSource = p.listarPatologias
+
         Panel1.Height = btnBuscarPor.Height
 
-        For i As Integer = 0 To dgvListadoPatologias.Rows.Count - 1
+        If op = "síntomas" Then
+            Dim s As New ControladorSintoma
+            dgvListado.DataSource = s.listarSintomas
 
-            If dgvListadoPatologias.Rows(i).Cells(3).Value = 1 Then
+        Else
+            Dim p As New ControladorPatologia
+            dgvListado.DataSource = p.listarPatologias
 
-                dgvListadoPatologias.Rows(i).Cells(3).Value = "Alta"
+            For i As Integer = 0 To dgvListado.Rows.Count - 1
 
-            ElseIf dgvListadoPatologias.Rows(i).Cells(3).Value = 2 Then
+                If dgvListado.Rows(i).Cells(3).Value = 1 Then
 
-                dgvListadoPatologias.Rows(i).Cells(3).Value = "Media"
+                    dgvListado.Rows(i).Cells(3).Value = "Alta"
 
-            Else
-                dgvListadoPatologias.Rows(i).Cells(3).Value = "Baja"
+                ElseIf dgvListado.Rows(i).Cells(3).Value = 2 Then
 
-            End If
+                    dgvListado.Rows(i).Cells(3).Value = "Media"
 
-        Next
+                Else
+                    dgvListado.Rows(i).Cells(3).Value = "Baja"
+
+                End If
+
+            Next
+        End If
+
 
     End Sub
 
     Private Sub btnSeleccionMultiple_Click(sender As Object, e As EventArgs)
 
-        If dgvListadoPatologias.MultiSelect = True Then
+        If dgvListado.MultiSelect = True Then
 
-            dgvListadoPatologias.MultiSelect = False
+            dgvListado.MultiSelect = False
             btnSeleccionMultiple.Text = "activar selección múltiple"
 
         Else
-            dgvListadoPatologias.MultiSelect = True
+            dgvListado.MultiSelect = True
             btnSeleccionMultiple.Text = "desactivar selección múltiple"
 
         End If
 
     End Sub
 
-    Private Sub dgvListadoPatologias_MouseClick(sender As Object, e As MouseEventArgs) Handles dgvListadoPatologias.MouseClick
+    Private Sub dgvListadoPatologias_MouseClick(sender As Object, e As MouseEventArgs) Handles dgvListado.MouseClick
         'btnEliminarElementos.Visible = True
         'btnModificarElemento.Visible = True
     End Sub
 
-    Private Sub dgvListadoPatologias_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoPatologias.CellDoubleClick
+    Private Sub dgvListadoPatologias_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListado.CellDoubleClick
 
-        If dgvListadoPatologias.MultiSelect = False Then
+        If dgvListado.MultiSelect = False Then
 
         End If
 
@@ -78,22 +93,22 @@ Public Class frmPatologiasRegistradas
 
     End Sub
 
-    Private Sub dgvListadoPatologias_SelectionChanged(sender As Object, e As EventArgs) Handles dgvListadoPatologias.SelectionChanged
+    Private Sub dgvListadoPatologias_SelectionChanged(sender As Object, e As EventArgs) Handles dgvListado.SelectionChanged
 
-        If dgvListadoPatologias.MultiSelect = True And dgvListadoPatologias.SelectedRows.Count > 1 Then
+        If dgvListado.MultiSelect = True And dgvListado.SelectedRows.Count > 1 Then
 
             btnEliminarElementos.Enabled = True
-            lblCantSelecc.Text = dgvListadoPatologias.SelectedRows.Count.ToString
-            btnEliminarElementos.Text = "eliminar " & dgvListadoPatologias.SelectedRows.Count.ToString & " patologías"
+            lblCantSelecc.Text = dgvListado.SelectedRows.Count.ToString
+            btnEliminarElementos.Text = "eliminar " & dgvListado.SelectedRows.Count.ToString & " "& op &""
             btnModificarElemento.Enabled = False
 
-        ElseIf dgvListadoPatologias.SelectedRows.Count = 1 Then
+        ElseIf dgvListado.SelectedRows.Count = 1 Then
 
             btnEliminarElementos.Enabled = True
             btnModificarElemento.Enabled = True
-            btnEliminarElementos.Text = "eliminar patología seleccionada"
+            btnEliminarElementos.Text = "eliminar elemento seleccionado"
 
-            If dgvListadoPatologias.MultiSelect = True Then
+            If dgvListado.MultiSelect = True Then
 
                 lblCantSelecc.Text = "1"
 
@@ -101,7 +116,7 @@ Public Class frmPatologiasRegistradas
 
         Else
 
-            lblCantSelecc.Text = Nothing 'al cambiar a modo de seleccion unica, el count de rows seleccionadas no cambiaba a 0
+            lblCantSelecc.Text = Nothing 'al cambiar a modo de seleccion unica, el contador de rows seleccionadas no cambiaba a 0
             btnEliminarElementos.Enabled = False
             btnModificarElemento.Enabled = False
 
@@ -148,13 +163,13 @@ Public Class frmPatologiasRegistradas
 
     Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles btnSeleccionMultiple.Click
 
-        If dgvListadoPatologias.MultiSelect = True Then
+        If dgvListado.MultiSelect = True Then
 
-            dgvListadoPatologias.MultiSelect = False
+            dgvListado.MultiSelect = False
             btnSeleccionMultiple.Text = "activar selección múltiple"
 
         Else
-            dgvListadoPatologias.MultiSelect = True
+            dgvListado.MultiSelect = True
             btnSeleccionMultiple.Text = "desactivar selección múltiple"
 
         End If
@@ -196,10 +211,10 @@ Public Class frmPatologiasRegistradas
         Dim dt As New DataTable
         Dim bs As New BindingSource
 
-        bs.DataSource = dgvListadoPatologias.DataSource
+        bs.DataSource = dgvListado.DataSource
         dt.DefaultView.RowFilter = String.Format("'{0}'", txtBuscar.Text)
         bs.Filter = "Nombre like '%" & txtBuscar.Text & "%'"
-        dgvListadoPatologias.DataSource = bs
+        dgvListado.DataSource = bs
 
     End Sub
 
@@ -236,31 +251,37 @@ Public Class frmPatologiasRegistradas
 
         Dim YN As Integer
 
-        If dgvListadoPatologias.SelectedRows.Count = 1 Then
+        If dgvListado.SelectedRows.Count = 1 Then
 
-            YN = MsgBox("¿Seguro desea eliminar esta patología?", vbQuestion + vbYesNo + vbDefaultButton2, "Eliminar patología")
+            YN = MsgBox("¿Seguro desea eliminar 1 " & op.Substring(0, op.Length - 1) & "?", vbQuestion + vbYesNo + vbDefaultButton2, "" & op.Substring(0, op.Length - 1 & ""))
 
         Else
-            YN = MsgBox("¿Seguro desea eliminar " & dgvListadoPatologias.SelectedRows.Count & " patologías?", vbQuestion + vbYesNo + vbDefaultButton2, "Eliminar patologías")
+            YN = MsgBox("¿Seguro desea eliminar " & dgvListado.SelectedRows.Count & " " & op & "?", vbQuestion + vbYesNo + vbDefaultButton2, "Eliminar patologías")
 
         End If
 
         If YN = vbYes Then
 
-            Dim pat As New ControladorPatologia
-            Dim arrayNombrePatologias As New ArrayList
 
-            For Each selectedRow As DataGridViewRow In dgvListadoPatologias.SelectedRows
-                arrayNombrePatologias.Add(dgvListadoPatologias.Rows(selectedRow.Index).Cells(0).Value.ToString)
+            Dim arrayNombres As New ArrayList
+
+            For Each selectedRow As DataGridViewRow In dgvListado.SelectedRows
+                arrayNombres.Add(dgvListado.Rows(selectedRow.Index).Cells(0).Value.ToString)
             Next
+            If op = "síntomas" Then
+                Dim sin As New ControladorPatologia
 
-            If pat.eliminarPatologias(arrayNombrePatologias) Then
+            Else
+                Dim pat As New ControladorPatologia
+                If pat.eliminarPatologias(arrayNombres) Then
 
-                For Each selectedRow2 As DataGridViewRow In dgvListadoPatologias.SelectedRows
-                    dgvListadoPatologias.Rows.Remove(selectedRow2)
-                Next
+                    For Each selectedRow2 As DataGridViewRow In dgvListado.SelectedRows
+                        dgvListado.Rows.Remove(selectedRow2)
+                    Next
 
+                End If
             End If
+
 
         End If
 

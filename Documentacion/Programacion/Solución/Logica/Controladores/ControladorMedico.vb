@@ -4,7 +4,7 @@
 '''Clase encargada de los datos de los médicos.
 '''</summary>
 Public Class ControladorMedico
-    Inherits Usuario
+    Inherits ControladorUsuario
 
     Property _especializacion As String
 

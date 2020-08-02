@@ -23,47 +23,47 @@ Partial Class frmBienvenidaGestor
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pnlAjustes = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.pnlMiPerfil = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.pnlAyuda = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.pnlTopBar = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.pnlRegistrodeUsuarios = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlPatologias = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.pnlSintomas = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.pnlUsuarios = New System.Windows.Forms.Panel()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel12.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel15.SuspendLayout()
-        Me.Panel16.SuspendLayout()
+        Me.pnlAjustes.SuspendLayout()
+        Me.pnlMiPerfil.SuspendLayout()
+        Me.pnlAyuda.SuspendLayout()
+        Me.pnlTopBar.SuspendLayout()
+        Me.pnlRegistrodeUsuarios.SuspendLayout()
+        Me.pnlPatologias.SuspendLayout()
+        Me.pnlSintomas.SuspendLayout()
+        Me.pnlUsuarios.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label5
@@ -77,17 +77,17 @@ Partial Class frmBienvenidaGestor
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Bienvenido, Gestor "
         '
-        'Panel3
+        'pnlAjustes
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Panel10)
-        Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel3.Location = New System.Drawing.Point(31, 320)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(225, 193)
-        Me.Panel3.TabIndex = 3
+        Me.pnlAjustes.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlAjustes.Controls.Add(Me.Panel10)
+        Me.pnlAjustes.Controls.Add(Me.Label6)
+        Me.pnlAjustes.Controls.Add(Me.Label7)
+        Me.pnlAjustes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlAjustes.Location = New System.Drawing.Point(31, 320)
+        Me.pnlAjustes.Name = "pnlAjustes"
+        Me.pnlAjustes.Size = New System.Drawing.Size(225, 193)
+        Me.pnlAjustes.TabIndex = 3
         '
         'Panel10
         '
@@ -104,7 +104,7 @@ Partial Class frmBienvenidaGestor
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(25, 91)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(178, 92)
+        Me.Label6.Size = New System.Drawing.Size(178, 76)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Entrar a la configuración de la aplicación"
         '
@@ -115,21 +115,21 @@ Partial Class frmBienvenidaGestor
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(22, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 38)
+        Me.Label7.Size = New System.Drawing.Size(125, 39)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Ajustes"
         '
-        'Panel4
+        'pnlMiPerfil
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.Panel11)
-        Me.Panel4.Controls.Add(Me.Label8)
-        Me.Panel4.Controls.Add(Me.Label9)
-        Me.Panel4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel4.Location = New System.Drawing.Point(595, 320)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(175, 193)
-        Me.Panel4.TabIndex = 4
+        Me.pnlMiPerfil.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlMiPerfil.Controls.Add(Me.Panel11)
+        Me.pnlMiPerfil.Controls.Add(Me.Label8)
+        Me.pnlMiPerfil.Controls.Add(Me.Label9)
+        Me.pnlMiPerfil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlMiPerfil.Location = New System.Drawing.Point(595, 320)
+        Me.pnlMiPerfil.Name = "pnlMiPerfil"
+        Me.pnlMiPerfil.Size = New System.Drawing.Size(175, 193)
+        Me.pnlMiPerfil.TabIndex = 4
         '
         'Panel11
         '
@@ -157,21 +157,21 @@ Partial Class frmBienvenidaGestor
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(17, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(135, 38)
+        Me.Label9.Size = New System.Drawing.Size(136, 39)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
-        'Panel5
+        'pnlAyuda
         '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.Panel8)
-        Me.Panel5.Controls.Add(Me.Label10)
-        Me.Panel5.Controls.Add(Me.Label11)
-        Me.Panel5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel5.Location = New System.Drawing.Point(783, 320)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(162, 193)
-        Me.Panel5.TabIndex = 5
+        Me.pnlAyuda.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlAyuda.Controls.Add(Me.Panel8)
+        Me.pnlAyuda.Controls.Add(Me.Label10)
+        Me.pnlAyuda.Controls.Add(Me.Label11)
+        Me.pnlAyuda.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlAyuda.Location = New System.Drawing.Point(783, 320)
+        Me.pnlAyuda.Name = "pnlAyuda"
+        Me.pnlAyuda.Size = New System.Drawing.Size(162, 193)
+        Me.pnlAyuda.TabIndex = 5
         '
         'Panel8
         '
@@ -199,20 +199,20 @@ Partial Class frmBienvenidaGestor
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(105, 38)
+        Me.Label11.Size = New System.Drawing.Size(106, 39)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
-        'Panel6
+        'pnlTopBar
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Label5)
-        Me.Panel6.Controls.Add(Me.Button2)
-        Me.Panel6.Controls.Add(Me.Button1)
-        Me.Panel6.Location = New System.Drawing.Point(12, 3)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(743, 80)
-        Me.Panel6.TabIndex = 6
+        Me.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
+        Me.pnlTopBar.Controls.Add(Me.Label5)
+        Me.pnlTopBar.Controls.Add(Me.Button2)
+        Me.pnlTopBar.Controls.Add(Me.Button1)
+        Me.pnlTopBar.Location = New System.Drawing.Point(12, 3)
+        Me.pnlTopBar.Name = "pnlTopBar"
+        Me.pnlTopBar.Size = New System.Drawing.Size(743, 80)
+        Me.pnlTopBar.TabIndex = 6
         '
         'Button2
         '
@@ -258,17 +258,17 @@ Partial Class frmBienvenidaGestor
         Me.Label13.Text = "X"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel12
+        'pnlRegistrodeUsuarios
         '
-        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel12.Controls.Add(Me.Label3)
-        Me.Panel12.Controls.Add(Me.Panel7)
-        Me.Panel12.Controls.Add(Me.Label14)
-        Me.Panel12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel12.Location = New System.Drawing.Point(595, 120)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(349, 180)
-        Me.Panel12.TabIndex = 6
+        Me.pnlRegistrodeUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlRegistrodeUsuarios.Controls.Add(Me.Label3)
+        Me.pnlRegistrodeUsuarios.Controls.Add(Me.Panel7)
+        Me.pnlRegistrodeUsuarios.Controls.Add(Me.Label14)
+        Me.pnlRegistrodeUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlRegistrodeUsuarios.Location = New System.Drawing.Point(595, 120)
+        Me.pnlRegistrodeUsuarios.Name = "pnlRegistrodeUsuarios"
+        Me.pnlRegistrodeUsuarios.Size = New System.Drawing.Size(349, 180)
+        Me.pnlRegistrodeUsuarios.TabIndex = 6
         '
         'Label3
         '
@@ -277,13 +277,13 @@ Partial Class frmBienvenidaGestor
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(13, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(314, 38)
+        Me.Label3.Size = New System.Drawing.Size(314, 39)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Registro de Usuarios"
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(157, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Panel7.Location = New System.Drawing.Point(0, 0)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(350, 10)
@@ -298,19 +298,19 @@ Partial Class frmBienvenidaGestor
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(247, 74)
         Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Habilite pacientes o registre un médico a la aplicación"
+        Me.Label14.Text = "Habilitar pacientes o registrar un médico a la aplicación"
         '
-        'Panel1
+        'pnlPatologias
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Panel13)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel1.Location = New System.Drawing.Point(31, 120)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(255, 180)
-        Me.Panel1.TabIndex = 3
+        Me.pnlPatologias.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlPatologias.Controls.Add(Me.Label1)
+        Me.pnlPatologias.Controls.Add(Me.Panel13)
+        Me.pnlPatologias.Controls.Add(Me.Label2)
+        Me.pnlPatologias.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlPatologias.Location = New System.Drawing.Point(31, 120)
+        Me.pnlPatologias.Name = "pnlPatologias"
+        Me.pnlPatologias.Size = New System.Drawing.Size(255, 180)
+        Me.pnlPatologias.TabIndex = 3
         '
         'Label1
         '
@@ -319,9 +319,9 @@ Partial Class frmBienvenidaGestor
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(30, 81)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(177, 74)
+        Me.Label1.Size = New System.Drawing.Size(196, 74)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Inserte, Modifique, Elimine y  Busque patologías"
+        Me.Label1.Text = "Registrar, modificar, eliminar y  buscar patologías"
         '
         'Panel13
         '
@@ -338,7 +338,7 @@ Partial Class frmBienvenidaGestor
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(23, 27)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 38)
+        Me.Label2.Size = New System.Drawing.Size(168, 39)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Patologías"
         '
@@ -350,28 +350,28 @@ Partial Class frmBienvenidaGestor
         Me.Panel14.Size = New System.Drawing.Size(274, 10)
         Me.Panel14.TabIndex = 7
         '
-        'Panel15
+        'pnlSintomas
         '
-        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel15.Controls.Add(Me.Panel14)
-        Me.Panel15.Controls.Add(Me.Label16)
-        Me.Panel15.Controls.Add(Me.Label17)
-        Me.Panel15.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel15.Location = New System.Drawing.Point(304, 120)
-        Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(273, 180)
-        Me.Panel15.TabIndex = 8
+        Me.pnlSintomas.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlSintomas.Controls.Add(Me.Label4)
+        Me.pnlSintomas.Controls.Add(Me.Panel14)
+        Me.pnlSintomas.Controls.Add(Me.Label17)
+        Me.pnlSintomas.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlSintomas.Location = New System.Drawing.Point(304, 120)
+        Me.pnlSintomas.Name = "pnlSintomas"
+        Me.pnlSintomas.Size = New System.Drawing.Size(273, 180)
+        Me.pnlSintomas.TabIndex = 8
         '
-        'Label16
+        'Label4
         '
-        Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label16.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(26, 81)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(177, 74)
-        Me.Label16.TabIndex = 1
-        Me.Label16.Text = "Inserte, Modifique, Elimine y  Busque síntomas"
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(26, 81)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(196, 74)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Registrar, modificar, eliminar y  buscar síntomas"
         '
         'Label17
         '
@@ -380,21 +380,21 @@ Partial Class frmBienvenidaGestor
         Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(23, 27)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(152, 38)
+        Me.Label17.Size = New System.Drawing.Size(152, 39)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Sintomas"
         '
-        'Panel16
+        'pnlUsuarios
         '
-        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel16.Controls.Add(Me.Panel17)
-        Me.Panel16.Controls.Add(Me.Label18)
-        Me.Panel16.Controls.Add(Me.Label19)
-        Me.Panel16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel16.Location = New System.Drawing.Point(275, 320)
-        Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(302, 193)
-        Me.Panel16.TabIndex = 6
+        Me.pnlUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlUsuarios.Controls.Add(Me.Panel17)
+        Me.pnlUsuarios.Controls.Add(Me.Label18)
+        Me.pnlUsuarios.Controls.Add(Me.Label19)
+        Me.pnlUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlUsuarios.Location = New System.Drawing.Point(275, 320)
+        Me.pnlUsuarios.Name = "pnlUsuarios"
+        Me.pnlUsuarios.Size = New System.Drawing.Size(302, 193)
+        Me.pnlUsuarios.TabIndex = 6
         '
         'Panel17
         '
@@ -411,7 +411,7 @@ Partial Class frmBienvenidaGestor
         Me.Label18.ForeColor = System.Drawing.Color.White
         Me.Label18.Location = New System.Drawing.Point(25, 90)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(238, 92)
+        Me.Label18.Size = New System.Drawing.Size(253, 77)
         Me.Label18.TabIndex = 1
         Me.Label18.Text = "Buscar, modificar o eliminar usuarios registrados en la aplicación"
         '
@@ -422,7 +422,7 @@ Partial Class frmBienvenidaGestor
         Me.Label19.ForeColor = System.Drawing.Color.White
         Me.Label19.Location = New System.Drawing.Point(22, 33)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(144, 38)
+        Me.Label19.Size = New System.Drawing.Size(144, 39)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Usuarios"
         '
@@ -432,49 +432,49 @@ Partial Class frmBienvenidaGestor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(981, 551)
-        Me.Controls.Add(Me.Panel16)
-        Me.Controls.Add(Me.Panel15)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel12)
+        Me.Controls.Add(Me.pnlUsuarios)
+        Me.Controls.Add(Me.pnlSintomas)
+        Me.Controls.Add(Me.pnlPatologias)
+        Me.Controls.Add(Me.pnlRegistrodeUsuarios)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.pnlTopBar)
+        Me.Controls.Add(Me.pnlAyuda)
+        Me.Controls.Add(Me.pnlMiPerfil)
+        Me.Controls.Add(Me.pnlAjustes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmBienvenidaGestor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel15.ResumeLayout(False)
-        Me.Panel15.PerformLayout()
-        Me.Panel16.ResumeLayout(False)
-        Me.Panel16.PerformLayout()
+        Me.pnlAjustes.ResumeLayout(False)
+        Me.pnlAjustes.PerformLayout()
+        Me.pnlMiPerfil.ResumeLayout(False)
+        Me.pnlMiPerfil.PerformLayout()
+        Me.pnlAyuda.ResumeLayout(False)
+        Me.pnlAyuda.PerformLayout()
+        Me.pnlTopBar.ResumeLayout(False)
+        Me.pnlTopBar.PerformLayout()
+        Me.pnlRegistrodeUsuarios.ResumeLayout(False)
+        Me.pnlRegistrodeUsuarios.PerformLayout()
+        Me.pnlPatologias.ResumeLayout(False)
+        Me.pnlPatologias.PerformLayout()
+        Me.pnlSintomas.ResumeLayout(False)
+        Me.pnlSintomas.PerformLayout()
+        Me.pnlUsuarios.ResumeLayout(False)
+        Me.pnlUsuarios.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Label5 As Label
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlAjustes As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents pnlMiPerfil As Panel
     Friend WithEvents Label9 As Label
-    Friend WithEvents Panel5 As Panel
+    Friend WithEvents pnlAyuda As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Panel6 As Panel
+    Friend WithEvents pnlTopBar As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Panel8 As Panel
@@ -483,21 +483,21 @@ Partial Class frmBienvenidaGestor
     Friend WithEvents Button2 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel10 As Panel
-    Friend WithEvents Panel12 As Panel
+    Friend WithEvents pnlRegistrodeUsuarios As Panel
     Friend WithEvents Label14 As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents pnlPatologias As Panel
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel14 As Panel
-    Friend WithEvents Panel15 As Panel
-    Friend WithEvents Label16 As Label
+    Friend WithEvents pnlSintomas As Panel
     Friend WithEvents Label17 As Label
-    Friend WithEvents Panel16 As Panel
+    Friend WithEvents pnlUsuarios As Panel
     Friend WithEvents Panel17 As Panel
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
 End Class
 

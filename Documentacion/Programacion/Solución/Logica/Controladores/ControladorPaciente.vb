@@ -4,7 +4,7 @@
 '''Clase encargada de los datos de los pacientes.
 '''</summary>
 Public Class ControladorPaciente
-    Inherits Usuario
+    Inherits ControladorUsuario
 
     Property _sexo As String
     Property _fecNac As String

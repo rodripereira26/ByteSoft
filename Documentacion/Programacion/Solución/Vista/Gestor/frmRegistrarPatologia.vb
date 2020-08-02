@@ -1,57 +1,59 @@
 ﻿Imports Logica
 Public Class frmRegistrarPatologia
-
+    Dim sourcedgv As String
+    Dim p As New Principal
     Private Sub RegistrarPatologias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        p.roundedCorners(Me)
         traerSintomas()
 
     End Sub
 
-    Private Sub dgvTodos_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvTodos.MouseDown
-
-        Dim SourceRow = dgvTodos.HitTest(e.X, e.Y).RowIndex 'obtiene el indice de la fila que contiene las coordenadas
+    Private Sub selectItem(origen As DataGridView, destino As DataGridView, e As MouseEventArgs)
+        sourcedgv = origen.Name ' obtiene el nombre del datagridview de origen
+        Dim SourceRow = origen.HitTest(e.X, e.Y).RowIndex 'obtiene el indice de la fila que contiene las coordenadas
 
         If SourceRow >= 0 Then ' el usuario solo puede seleccionar una fila, no el fondo de la tabla         
-
-            dgvTodos.Rows(SourceRow).Selected = True
-            dgvTodos.DoDragDrop(SourceRow, DragDropEffects.Move)
-
+            destino.BorderStyle = BorderStyle.FixedSingle
+            origen.Rows(SourceRow).Selected = True
+            origen.DoDragDrop(SourceRow, DragDropEffects.Move)
         End If
-
     End Sub
 
+    Private Sub dropItem(origen As DataGridView, destino As DataGridView, e As DragEventArgs)
+        If sourcedgv <> destino.Name Then ' evita que el usuario arrastre una row a la misma datagridview de origen
+
+            destino.BorderStyle = BorderStyle.None
+            destino.Rows.Add() 'agrega una row vacia para que entre el elemento
+
+            Dim SourceRow = (e.Data.GetData(Type.GetType("System.Int32")))
+
+            Dim rowDestino = destino.Rows.Count - 1
+
+            destino.Rows(rowDestino).Cells(0).Value = origen.Rows(SourceRow).Cells(0).Value
+            origen.Rows.RemoveAt(SourceRow)
+
+        Else
+            Exit Sub
+
+        End If
+    End Sub
+    Private Sub dgvTodos_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvTodos.MouseDown
+        selectItem(dgvTodos, dgvSintomasSeleccionados, e)
+    End Sub
+    Private Sub dgvSintomasSeleccionados_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvSintomasSeleccionados.MouseDown
+        selectItem(dgvSintomasSeleccionados, dgvTodos, e)
+    End Sub
     Private Sub dgvMisSintomas_DragOver(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragOver
         e.Effect = DragDropEffects.Move
     End Sub
-
     Private Sub dgvMisSintomas_DragDrop(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragDrop
-
-        dgvSintomasSeleccionados.Rows.Add() 'agrega una row vacia para que entre el elemento
-
-        Dim SourceRow = (e.Data.GetData(Type.GetType("System.Int32")))
-        Dim rowDestino = dgvSintomasSeleccionados.Rows.Count - 1
-
-        Try
-            dgvSintomasSeleccionados.Rows(rowDestino).Cells(0).Value = dgvTodos.Rows(SourceRow).Cells(0).Value
-        Catch ex As Exception
-
-        End Try
-
-        dgvTodos.Rows.RemoveAt(SourceRow)
-
+        dropItem(dgvTodos, dgvSintomasSeleccionados, e)
     End Sub
-
-    Private Sub dgvSintomasSeleccionados_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvSintomasSeleccionados.MouseDown
-
-        Dim SourceRow = dgvSintomasSeleccionados.HitTest(e.X, e.Y).RowIndex 'obtiene el indice de la fila que contiene las coordenadas
-
-        If SourceRow >= 0 Then
-
-            dgvSintomasSeleccionados.Rows(SourceRow).Selected = True
-            dgvSintomasSeleccionados.DoDragDrop(SourceRow, DragDropEffects.Move)
-
-        End If
-
+    Private Sub dgvTodos_DragOver(sender As Object, e As DragEventArgs) Handles dgvTodos.DragOver
+        e.Effect = DragDropEffects.Move
+    End Sub
+    Private Sub dgvTodos_DragDrop(sender As Object, e As DragEventArgs) Handles dgvTodos.DragDrop
+        dropItem(dgvSintomasSeleccionados, dgvTodos, e)
     End Sub
 
     Private Sub traerSintomas()
@@ -65,21 +67,6 @@ Public Class frmRegistrarPatologia
 
     End Sub
 
-    Private Sub dgvTodos_DragOver(sender As Object, e As DragEventArgs) Handles dgvTodos.DragOver
-        e.Effect = DragDropEffects.Move
-    End Sub
-
-    Private Sub dgvTodos_DragDrop(sender As Object, e As DragEventArgs) Handles dgvTodos.DragDrop
-
-        dgvTodos.Rows.Add() 'agrega una row vacia para que entre el elemento
-        Dim SourceRow = (e.Data.GetData(Type.GetType("System.Int32")))
-
-        Dim rowDestino = dgvTodos.Rows.Count - 1
-        dgvTodos.Rows(rowDestino).Cells(0).Value = dgvSintomasSeleccionados.Rows(SourceRow).Cells(0).Value
-
-        dgvSintomasSeleccionados.Rows.RemoveAt(SourceRow)
-
-    End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
@@ -130,12 +117,21 @@ Public Class frmRegistrarPatologia
             MsgBox("Debe seleccionar síntomas para la patología")
         End If
 
-
-
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
         Me.Close()
     End Sub
 
+    Private Sub pnlTituloPatologia_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTituloPatologia.MouseDown
+        p.moverVentanaDown(Me)
+    End Sub
+
+    Private Sub pnlTituloPatologia_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTituloPatologia.MouseMove
+        p.moverVentanaMove(Me)
+    End Sub
+
+    Private Sub pnlTituloPatologia_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTituloPatologia.MouseUp
+        p.moverVentanaUp()
+    End Sub
 End Class

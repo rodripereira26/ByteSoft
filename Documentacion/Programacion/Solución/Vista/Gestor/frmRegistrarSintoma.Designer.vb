@@ -23,10 +23,10 @@ Partial Class frmRegistrarSintoma
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.panelTitulo = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.lblRegistrarSintomas = New System.Windows.Forms.Label()
         Me.Panel1__ = New System.Windows.Forms.Panel()
         Me.Label1__ = New System.Windows.Forms.Label()
         Me.Panel9__ = New System.Windows.Forms.Panel()
@@ -44,15 +44,27 @@ Partial Class frmRegistrarSintoma
         '
         'panelTitulo
         '
-        Me.panelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.panelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.panelTitulo.Controls.Add(Me.Label10)
         Me.panelTitulo.Controls.Add(Me.PictureBox1)
         Me.panelTitulo.Controls.Add(Me.Label12)
         Me.panelTitulo.Controls.Add(Me.Label13)
-        Me.panelTitulo.Controls.Add(Me.lblRegistrarSintomas)
         Me.panelTitulo.Location = New System.Drawing.Point(-1, 0)
         Me.panelTitulo.Name = "panelTitulo"
         Me.panelTitulo.Size = New System.Drawing.Size(701, 77)
         Me.panelTitulo.TabIndex = 92
+        '
+        'Label10
+        '
+        Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label10.Font = New System.Drawing.Font("Roboto Light", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(186, 16)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(341, 45)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "REGISTRAR SÍNTOMA"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox1
         '
@@ -87,18 +99,6 @@ Partial Class frmRegistrarSintoma
         Me.Label13.Text = "X"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblRegistrarSintomas
-        '
-        Me.lblRegistrarSintomas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblRegistrarSintomas.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRegistrarSintomas.ForeColor = System.Drawing.Color.White
-        Me.lblRegistrarSintomas.Location = New System.Drawing.Point(203, 9)
-        Me.lblRegistrarSintomas.Name = "lblRegistrarSintomas"
-        Me.lblRegistrarSintomas.Size = New System.Drawing.Size(300, 57)
-        Me.lblRegistrarSintomas.TabIndex = 4
-        Me.lblRegistrarSintomas.Text = "Registrar sintomas"
-        Me.lblRegistrarSintomas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Panel1__
         '
         Me.Panel1__.Location = New System.Drawing.Point(0, 0)
@@ -130,7 +130,7 @@ Partial Class frmRegistrarSintoma
         'pnlTxtDescripcion
         '
         Me.pnlTxtDescripcion.BackColor = System.Drawing.Color.Black
-        Me.pnlTxtDescripcion.Location = New System.Drawing.Point(127, 336)
+        Me.pnlTxtDescripcion.Location = New System.Drawing.Point(128, 357)
         Me.pnlTxtDescripcion.Name = "pnlTxtDescripcion"
         Me.pnlTxtDescripcion.Size = New System.Drawing.Size(459, 2)
         Me.pnlTxtDescripcion.TabIndex = 114
@@ -155,20 +155,20 @@ Partial Class frmRegistrarSintoma
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.txtDescripcion.BackColor = System.Drawing.Color.White
         Me.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtDescripcion.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(127, 249)
+        Me.txtDescripcion.Location = New System.Drawing.Point(128, 259)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(459, 67)
+        Me.txtDescripcion.Size = New System.Drawing.Size(459, 92)
         Me.txtDescripcion.TabIndex = 113
         '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
         Me.lblDescripcion.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescripcion.Location = New System.Drawing.Point(112, 209)
+        Me.lblDescripcion.Location = New System.Drawing.Point(113, 230)
         Me.lblDescripcion.Name = "lblDescripcion"
         Me.lblDescripcion.Size = New System.Drawing.Size(123, 26)
         Me.lblDescripcion.TabIndex = 112
@@ -176,7 +176,7 @@ Partial Class frmRegistrarSintoma
         '
         'txtNomSintoma
         '
-        Me.txtNomSintoma.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.txtNomSintoma.BackColor = System.Drawing.Color.White
         Me.txtNomSintoma.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNomSintoma.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomSintoma.Location = New System.Drawing.Point(274, 171)
@@ -203,6 +203,7 @@ Partial Class frmRegistrarSintoma
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 499)
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.txtNomSintoma)
@@ -223,7 +224,6 @@ Partial Class frmRegistrarSintoma
 
     End Sub
     Friend WithEvents panelTitulo As Panel
-    Friend WithEvents lblRegistrarSintomas As Label
     Friend WithEvents Panel1__ As Panel
     Friend WithEvents Label1__ As Label
     Friend WithEvents Panel9__ As Panel
@@ -238,4 +238,5 @@ Partial Class frmRegistrarSintoma
     Friend WithEvents Label13 As Label
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label10 As Label
 End Class

@@ -8,8 +8,8 @@ Public MustInherit Class Conexion
     Public dsn As String = "driverODBC"
     Public Uid As String = "root"
     Public Pwd As String = ""
-    Public Port As String = "3306"
-    Public DatabaseName As String = "bdd_proyecto2"
+    Public Port As String = "3308"
+    Public DatabaseName As String = "bdd_proyecto"
     Public Host As String = "localhost"
 
     Public Connect As New OdbcConnection(
@@ -39,7 +39,7 @@ Public MustInherit Class Conexion
     End Sub
 
     Public Sub abrirConexion()
-
+        cerrarConexion()
         Me.Connect.Open()
 
     End Sub

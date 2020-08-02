@@ -125,7 +125,7 @@ Public Class frmLogin
     Private Sub ingresarUsuario()
 
         Dim seg As New Encriptar
-        Dim log As New Usuario
+        Dim log As New ControladorUsuario
 
         If txtUsr.Text <> "" And txtPass.Text <> "" Then
 

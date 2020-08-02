@@ -40,4 +40,15 @@ Public Class frmRegistrarMedico
 
     End Sub
 
+    Private Sub pnlTitulo_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseDown
+        p.moverVentanaDown(Me)
+    End Sub
+
+    Private Sub pnlTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseMove
+        p.moverVentanaMove(Me)
+    End Sub
+
+    Private Sub pnlTitulo_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseUp
+        p.moverVentanaUp()
+    End Sub
 End Class

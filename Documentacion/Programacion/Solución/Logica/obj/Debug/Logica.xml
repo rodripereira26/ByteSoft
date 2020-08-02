@@ -57,7 +57,7 @@ Clase encargada de la seguridad del sistema.
 Función encargada de encriptar las contraseñas mediante el algoritmo SHA25.
 </summary>
 </member>
-<member name="T:Logica.Usuario">
+<member name="T:Logica.ControladorUsuario">
 <summary>
 Clase principal para los datos de los usuarios.
 </summary>

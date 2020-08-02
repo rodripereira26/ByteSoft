@@ -2,7 +2,7 @@
 '''<summary>
 '''Clase principal para los datos de los usuarios.
 '''</summary>
-Public Class Usuario
+Public Class ControladorUsuario
 
     Public Sub New()
 

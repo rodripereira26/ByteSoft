@@ -4,7 +4,7 @@
 '''Clase encargada de los datos de los administradores.
 '''</summary>
 Public Class ControladorGestor
-    Inherits Usuario
+    Inherits ControladorUsuario
 
     Public Sub New(ci As String, contraseña As String, pNom As String, Snom As String, PApe As String, SApe As String, telefono As ArrayList,
                   email As String)

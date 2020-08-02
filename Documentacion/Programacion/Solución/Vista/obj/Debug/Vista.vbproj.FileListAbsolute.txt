@@ -516,22 +516,16 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vist
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmAjustes.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmBienvenidaGestor.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmManualCsv.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.Teléfonos.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.Historial_de_patologías.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmUsuariosRegistrados.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmPatologiasRegistradas.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmSintomasRegistrados.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmUsuarios.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmRegistroGestor.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmRegistrarPatologia.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmRegistrarSintoma.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmRegistrarMedico.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmVerificar.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmBienvenidaMedico.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmChat.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmIngresarSintomas.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmPatologias.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmSintomas.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmLogin.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmBienvenidaPaciente.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.Resources.resources
@@ -606,3 +600,6 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vist
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.vbproj.CopyComplete
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmModificarPatologia.resources
 C:\Users\Rodrigo\OneDrive\Trabajos\2020\Proyecto\Proyecto\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmModificarPatologia.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmListadoPatologiasySintomas.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmModular.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Vista\obj\Debug\Vista.frmHabilitar.resources

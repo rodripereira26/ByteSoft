@@ -210,12 +210,6 @@
     <Compile Include="Gestor\frmModificarPatologia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestor\Teléfonos.Designer.vb">
-      <DependentUpon>Teléfonos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gestor\Teléfonos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Paciente\frmHistorialPatologia.Designer.vb">
       <DependentUpon>frmHistorialPatologia.vb</DependentUpon>
     </Compile>
@@ -228,22 +222,16 @@
     <Compile Include="Gestor\frmUsuariosRegistrados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestor\frmPatologiasRegistradas.Designer.vb">
-      <DependentUpon>frmPatologiasRegistradas.vb</DependentUpon>
+    <Compile Include="Gestor\frmListadoPatologiasySintomas.Designer.vb">
+      <DependentUpon>frmListadoPatologiasySintomas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Gestor\frmPatologiasRegistradas.vb">
+    <Compile Include="Gestor\frmListadoPatologiasySintomas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestor\frmSintomasRegistrados.Designer.vb">
       <DependentUpon>frmSintomasRegistrados.vb</DependentUpon>
     </Compile>
     <Compile Include="Gestor\frmSintomasRegistrados.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gestor\frmUsuarios.Designer.vb">
-      <DependentUpon>frmUsuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gestor\frmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestor\frmRegistroGestor.Designer.vb">
@@ -270,10 +258,10 @@
     <Compile Include="Gestor\frmRegistrarMedico.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestor\frmVerificar.Designer.vb">
-      <DependentUpon>frmVerificar.vb</DependentUpon>
+    <Compile Include="Gestor\frmHabilitar.Designer.vb">
+      <DependentUpon>frmHabilitar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Gestor\frmVerificar.vb">
+    <Compile Include="Gestor\frmHabilitar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Medico\frmBienvenidaMedico.Designer.vb">
@@ -294,10 +282,10 @@
     <Compile Include="Paciente\frmIngresarSintomas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestor\frmPatologias.Designer.vb">
-      <DependentUpon>frmPatologias.vb</DependentUpon>
+    <Compile Include="Gestor\frmModular.Designer.vb">
+      <DependentUpon>frmModular.vb</DependentUpon>
     </Compile>
-    <Compile Include="Gestor\frmPatologias.vb">
+    <Compile Include="Gestor\frmModular.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -318,12 +306,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principal.vb" />
-    <Compile Include="Gestor\frmSintomas.Designer.vb">
-      <DependentUpon>frmSintomas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gestor\frmSintomas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormsFuncionales\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
@@ -369,23 +351,17 @@
     <EmbeddedResource Include="Gestor\frmModificarPatologia.resx">
       <DependentUpon>frmModificarPatologia.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\Teléfonos.resx">
-      <DependentUpon>Teléfonos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Paciente\frmHistorialPatologia.resx">
       <DependentUpon>frmHistorialPatologia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmUsuariosRegistrados.resx">
       <DependentUpon>frmUsuariosRegistrados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmPatologiasRegistradas.resx">
-      <DependentUpon>frmPatologiasRegistradas.vb</DependentUpon>
+    <EmbeddedResource Include="Gestor\frmListadoPatologiasySintomas.resx">
+      <DependentUpon>frmListadoPatologiasySintomas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmSintomasRegistrados.resx">
       <DependentUpon>frmSintomasRegistrados.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmUsuarios.resx">
-      <DependentUpon>frmUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmRegistroGestor.resx">
       <DependentUpon>frmRegistroGestor.vb</DependentUpon>
@@ -399,8 +375,8 @@
     <EmbeddedResource Include="Gestor\frmRegistrarMedico.resx">
       <DependentUpon>frmRegistrarMedico.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmVerificar.resx">
-      <DependentUpon>frmVerificar.vb</DependentUpon>
+    <EmbeddedResource Include="Gestor\frmHabilitar.resx">
+      <DependentUpon>frmHabilitar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medico\frmBienvenidaMedico.resx">
       <DependentUpon>frmBienvenidaMedico.vb</DependentUpon>
@@ -411,11 +387,8 @@
     <EmbeddedResource Include="Paciente\frmIngresarSintomas.resx">
       <DependentUpon>frmIngresarSintomas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmPatologias.resx">
-      <DependentUpon>frmPatologias.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmSintomas.resx">
-      <DependentUpon>frmSintomas.vb</DependentUpon>
+    <EmbeddedResource Include="Gestor\frmModular.resx">
+      <DependentUpon>frmModular.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsFuncionales\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>

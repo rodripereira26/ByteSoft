@@ -33,9 +33,10 @@ Public Class ModeloSintoma
     Public Function traerSintomas() As ArrayList
 
         Dim arraySintomas As New ArrayList
-
+        abrirConexion()
         Command.CommandText = "SELECT nombre FROM sintoma"
         Reader = Command.ExecuteReader
+
 
         If Reader.HasRows Then
 
@@ -79,5 +80,37 @@ Public Class ModeloSintoma
         cerrarConexion()
         Return True
     End Function
+    Public Function listarSintomas() As DataTable
 
+        Dim dt As New DataTable
+        Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion FROM sintoma"
+
+        dt.Load(Command.ExecuteReader())
+
+        cerrarConexion()
+        Return dt
+    End Function
+    Public Function eliminarSintomas(ali As ArrayList) As Boolean
+
+        Dim parametros As String
+        Dim consulta As String = "
+            DELETE patologia_contiene_sintoma , sintoma  
+            FROM patologia_contiene_sintoma  
+            INNER JOIN sintoma  
+                WHERE patologia_contiene_sintoma.idSintoma = sintoma.idSintoma AND               
+                AND sintoma.nombre IN ("
+
+        For i = 0 To ali.Count - 1
+
+            parametros = parametros & "'" & ali.Item(i) & "'" & ","
+        Next
+
+        consulta = consulta & parametros.TrimEnd(",") & ")"
+
+        Command.CommandText = consulta
+        Command.ExecuteNonQuery()
+
+        cerrarConexion()
+        Return True
+    End Function
 End Class

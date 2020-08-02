@@ -152,14 +152,22 @@ Public Class Principal
 
     Public Sub hover(obj As Object)
 
+        obj.BackColor = Color.FromArgb(245, 245, 245)
+
     End Sub
+    Public Sub leave(obj As Object)
+
+        obj.BackColor = Color.White
+
+    End Sub
+
 
     Public Sub metroStyle(form As MaterialSkin.Controls.MaterialForm)
 
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(form)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+        SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange100, TextShade.WHITE)
 
     End Sub
 
@@ -181,9 +189,7 @@ Public Class Principal
 
             form.Top = Cursor.Position.Y - mousey
             form.Left = Cursor.Position.X - mousex
-
         End If
-
     End Sub
 
     'Public Sub enterAnimation(obj As Panel)
