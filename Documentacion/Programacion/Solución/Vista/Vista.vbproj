@@ -222,10 +222,10 @@
     <Compile Include="Gestor\frmUsuariosRegistrados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestor\frmListadoPatologiasySintomas.Designer.vb">
-      <DependentUpon>frmListadoPatologiasySintomas.vb</DependentUpon>
+    <Compile Include="Gestor\frmListado.Designer.vb">
+      <DependentUpon>frmListado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Gestor\frmListadoPatologiasySintomas.vb">
+    <Compile Include="Gestor\frmListado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestor\frmSintomasRegistrados.Designer.vb">
@@ -357,8 +357,8 @@
     <EmbeddedResource Include="Gestor\frmUsuariosRegistrados.resx">
       <DependentUpon>frmUsuariosRegistrados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmListadoPatologiasySintomas.resx">
-      <DependentUpon>frmListadoPatologiasySintomas.vb</DependentUpon>
+    <EmbeddedResource Include="Gestor\frmListado.resx">
+      <DependentUpon>frmListado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmSintomasRegistrados.resx">
       <DependentUpon>frmSintomasRegistrados.vb</DependentUpon>
