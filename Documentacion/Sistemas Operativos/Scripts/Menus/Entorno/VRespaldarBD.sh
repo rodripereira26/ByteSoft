@@ -36,7 +36,7 @@ VRespaldarBD(){
     done
 }
 ejecutarRespaldarBD(){
-    VRespaldarDirectorios
+    VRespaldarBD
     if $guardarRespaldo; then
         if $usarPredeterminada;then
             ruta=$PATHB

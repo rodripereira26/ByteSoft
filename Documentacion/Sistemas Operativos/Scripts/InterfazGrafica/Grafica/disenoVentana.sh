@@ -1,5 +1,5 @@
 #!/bin/bash
-. "ElementosTUI/Logica/logicaVentana.sh"
+. "InterfazGrafica/Logica/logicaVentana.sh"
 
 declare -i colorBgDefecto=102
 borrarLinea(){
