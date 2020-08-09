@@ -1,24 +1,32 @@
 #!/bin/bash
-respaldarBD(){
+
+respaldarBD() {
 	# $1 : usuario de mysql
 	# $2 : path destino
 
 	local FECHA=$(date +"%d-%m-%y_%H-%M")
 	local USER=$1
-	local RUTA=$2
+	local RUTA
 
-	mysqldump --user="$USER" -p --all-databases > "$RUTA"/backupBD_"$FECHA".sql #Utilizo mysqldump para generar un backup de todas las bases de datos y lo envío a la ruta seleccionada
+	if [ $2 ]; 
+	then
+        RUTA=$2    
+    else
+        RUTA=$PATHB
+    fi
+
+	mysqldump --user="$USER" -p --all-databases > "$RUTA"/backupBD_"$FECHA".sql # Utilizo mysqldump para generar un backup de todas las bases de datos y lo envío a la ruta seleccionada
 	
-	if [ -s "$RUTA"/backupBD_"$FECHA".sql ] #Verifico que el backup creado no esté vacío
+	if [ -s "$RUTA"/backupBD_"$FECHA".sql ] # Verifico que el backup creado no esté vacío
 	then
 		tput setaf 2
 		tput cup 7 0
-		sed -i 's/'$CANTB'/'$NUM'/' /etc/environment #Si se logra el resplado intercambio el valor anterior del contador
+		sed -i 's/'$CANTB'/'$NUM'/' /etc/environment # Si se logra el resplado intercambio el valor anterior del contador
 		source /etc/environment
-        echo 0 
+        echo 0 # Devuelve 0 si se creó el backup
 	else
 		rm "$RUTA"/backupBD_"$FECHA".sql
-        echo 1
+        echo 1 # Devuelve 1 si el backup está vacío
 	fi
 }
 respaldarDirectorios(){
@@ -27,7 +35,8 @@ respaldarDirectorios(){
 	local FECHA=$(date +"%d-%m-%y_%H-%M")
 	local RUTA
 
-    if [ $1 ]; then
+    if [ $1 ]; 
+    then
         RUTA=$1    
     else
         RUTA=$PATHD

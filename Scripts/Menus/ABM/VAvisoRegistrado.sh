@@ -4,10 +4,12 @@ VAvisoRegistrado(){
     # $3 : tiempo de espera
     
     iniciarPantallaNueva
-    dibujarTxt "$1" 60 2 0 $2 
-    if [ "$3" ]; then
+    dibujarTxt "$1" 35 10 0 $2 
+
+    if [ "$3" ]; 
+    then
         sleep $3
     else
-        sleep 3
+        sleep 2
     fi
 }

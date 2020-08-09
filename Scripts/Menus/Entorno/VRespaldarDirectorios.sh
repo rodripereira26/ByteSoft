@@ -1,9 +1,9 @@
 #!/bin/bash
 VRespaldarDirectorios(){
     iniciarPantallaNueva
-    dibujarTxt "CONFIGURACION DEL ENTORNO" 80 2
+    dibujarTxt "RESPALDAR DIRECTORIOS" 50 2
 
-    dibujarTxt "DESEA USAR LA RUTA PREDETERMIDA?" 20 5
+    dibujarTxt "¿DESEA USAR LA RUTA PREDETERMINADA?" 20 5
     dibujarSwitch 20 6 20 1 true
 
     dibujarTxt "O" 20 8
@@ -19,50 +19,69 @@ VRespaldarDirectorios(){
     usarPredeterminada=true
     guardarRespaldo=false
     ruta=""
-    while $continuar; do
+    
+    while $continuar; 
+    do
         siguientePos
+
         case $posDeEsteElemento in
+
             "0")
                 usarPredeterminada=$respuestaGestor
                 ;;
+
             "1")
                 ruta=$respuestaGestor
                 tput setab $colorBgDefecto
                 borrarLinea 12
                 dibujarTxt "'$ruta'" 20 12
                 ;;
+
             "2")
-                if $respuestaGestor; then 
-                    if [ $ruta ] ||  $usarPredeterminada ; then
+                if $respuestaGestor; 
+                then 
+                    if [ $ruta ] ||  $usarPredeterminada ; 
+                    then
                         guardarRespaldo=true
                         continuar=false
                     fi
                 fi
                 ;;
+
             "3")
-                if $respuestaGestor; then
+                if $respuestaGestor; 
+                then
                     continuar=false
                 fi
                 ;;
+
             *)
                 ;;
         esac
     done
 }
-ejecutarRespaldarDirectorio(){
+
+ejecutarRespaldarDirectorio() {
+
     VRespaldarDirectorios
-    if $guardarRespaldo; then
-        if $usarPredeterminada;then
+
+    if $guardarRespaldo; 
+    then
+        if $usarPredeterminada;
+        then
             respaldoResp=$(respaldarDirectorios)
         else
             respaldoResp=$(respaldarDirectorios $ruta)
         fi
-        if [ $respaldoResp = "0" ]; then 
-            VAvisoRegistrado "RESPALDO REALIZADO CON ÉXITO" 10
+
+        if [ $respaldoResp = "0" ]; 
+        then 
+            VAvisoRegistrado "RESPALDO REALIZADO CON ÉXITO" 2 3
         else
-            VAvisoRegistrado "ERROR AL REALIZAR EL RESPALDO" 9
+            VAvisoRegistrado "ERROR AL REALIZAR EL RESPALDO" 1
         fi
     
     fi
     cerrarPantalla
+    
 }

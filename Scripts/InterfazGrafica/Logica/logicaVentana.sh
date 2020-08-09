@@ -76,7 +76,7 @@ tomarDelProximoElemento(){
 gestorDeBoton(){
     respuestaGestor=false
     codigoRespuesta=""
-    let BGplus=$colorBg+44
+    let BGplus=5
     let FGplus=$colorFg
 
     cargarBoton "$texto" $posX $posY $largo $ancho $BGplus $FGplus
@@ -115,11 +115,11 @@ gestorDeEntradaTexto(){
     fi
 }
 gestorDeSwitch(){
-    let BGplus=$colorBg+35
-    let FGplus=$colorFg+35
+    let BGplus=5 # 18
+    let FGplus=5 # 254
 
     codigoRespuesta=""
-    respuestaGestor=""
+    respuestaGestor=false
 
 
     cargarSwitch $posX $posY $largo $ancho $BGplus $FGplus $texto
@@ -142,8 +142,6 @@ gestorDeSwitch(){
 
     if [ "$texto" = "true" ]; then
         respuestaGestor=true
-    else
-        respuestaGestor=false
     fi
 }
 invertirColoresEntradaTxt(){
@@ -243,7 +241,7 @@ cargarBoton(){
     # $5 ancho del boton
     # $6 color background 
     # $7 color foreground
-
+    
     declare -i mitadDeBotonAncho=($5+2*$3)/2
     declare -i mitadDeBotonLargo=($4-${#1}+2*$2)/2
 
@@ -260,15 +258,22 @@ cargarSwitch(){
     # $6 : color parte apagada 
     # $7 : estado de switch (true o false)
 
+     # $1 posicion en x
+    # $2 posicion en y
+    # $3 largo
+    # $4 ancho
+    # $5 BG
+    # $6 FG
+
     let mitadLargoSwitch=$3/2
     let posXSegundoRectangulo=$1+$mitadLargoSwitch
 
     if [ "$7" = "true" ]; then
-        dibujarRectangulo $1 $2 $mitadLargoSwitch $4 250 15
-        dibujarRectangulo $posXSegundoRectangulo $2 $mitadLargoSwitch $4 $5 15
+        dibujarRectangulo $1 $2 $mitadLargoSwitch $4 7 2
+        dibujarRectangulo $posXSegundoRectangulo $2 $mitadLargoSwitch $4 $5 7
     else 
-        dibujarRectangulo $1 $2 $mitadLargoSwitch $4 $6 15 
-        dibujarRectangulo $posXSegundoRectangulo $2 $mitadLargoSwitch $4 250 15
+        dibujarRectangulo $1 $2 $mitadLargoSwitch $4 $6 2 
+        dibujarRectangulo $posXSegundoRectangulo $2 $mitadLargoSwitch $4 7 15
     fi
 
 }

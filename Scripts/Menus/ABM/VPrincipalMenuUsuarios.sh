@@ -1,14 +1,14 @@
 #!/bin/bash
 
-. "Menus/OpcionesMenuUsuarios/VAvisoRegistrado.sh"
-. "Menus/OpcionesMenuUsuarios/VEligeGrupo.sh"
-. "Menus/OpcionesMenuUsuarios/VEliminarUsuario.sh"
-. "Menus/OpcionesMenuUsuarios/VAgregarUsuario.sh"
-. "Menus/OpcionesMenuUsuarios/VModificarUsuario.sh"
+. "Menus/ABM/VAvisoRegistrado.sh"
+. "Menus/ABM/VEligeGrupo.sh"
+. "Menus/ABM/VEliminarUsuario.sh"
+. "Menus/ABM/VAgregarUsuario.sh"
+. "Menus/ABM/VModificarUsuario.sh"
 
 VMenuUsuarios(){
     iniciarPantallaNueva
-    dibujarTxt "QUE DESEA HACER?" 80 2
+    dibujarTxt "¿QUÉ DESEA HACER?" 50 2
     dibujarBoton "AGREGAR USUARIO" 20 4 80 3
     dibujarBoton "MODIFICAR USUARIO" 20 7 80 3
     dibujarBoton "ELIMINAR USUARIO" 20 10 80 3

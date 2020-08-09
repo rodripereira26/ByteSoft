@@ -3,24 +3,29 @@
 #
 # Obligatorio ejecutar con root
 #
-. "InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Logica/Entorno/EntornoDeTrabajo/Respaldar.sh"
-. "/Logica/Entorno/EntornoDeTrabajo/CrearCarpetasYVariables.sh"
-. "/Logica/Entorno/Usuarios.sh"
-. "/Logica/Entorno/SegundoPlano/Logica.sh"
-. "Menus/OpcionesMenuUsuarios/VPrincipalMenuUsuarios.sh"
-. "Menus/OpcionesMenuConfigEntorno/VPrincipalMenuConfigEntorno.sh"
 
+. "InterfazGrafica/Grafica/disenoVentana.sh" 
+. "Logica/Entorno/Respaldar.sh"
+. "Logica/Entorno/CrearCarpetasYVariables.sh"
+. "Logica/ABM/Usuarios.sh"
+. "Menus/ABM/VPrincipalMenuUsuarios.sh"
+. "Menus/Entorno/VPrincipalMenuConfigEntorno.sh"
+. "Menus/Logs/logs.sh"
 
 VMenuPrincipal(){
     # muestra diseño
     iniciarPantallaNueva
-    animacionTitulo "Menus/tituloByteSoft.txt" 5 5
-    iniciarPantallaNueva
-    dibujarTxt "MENU PRINCIPAL" 80 2
+    dibujarTxt "MENU PRINCIPAL" 53 2
+
+    dibujarTxt "4: ARRIBA" 9 2
+    dibujarTxt "5: ENTER " 9 3
+    dibujarTxt "6: ABAJO" 9 4
+    
     dibujarBoton "USUARIOS" 20 5 80 3
     dibujarBoton "CONFIGURACION ENTORNO" 20 8 80 3
-    dibujarBoton "SALIR" 20 11 80 3
+    dibujarBoton "VER LOGS" 20 11 80 3
+    dibujarBoton "SALIR" 20 14 80 3
+
     local continuar=true
     while $continuar; do
         siguientePos
@@ -42,6 +47,10 @@ ejecutarMenuPrincipal(){
                 ejecutarConfigEntorno
                 ;;
             "2")
+                ejecutarLogs
+                ;;
+
+            "3")
                 continuarCiclo=false
                 ;;
             *)
@@ -51,6 +60,10 @@ ejecutarMenuPrincipal(){
     done
 }
 main(){
+    tput sgr0
+    clear
+    tput civis
+    animacionTitulo "InterfazGrafica/tituloByteSoft.txt" 5 5
     ejecutarMenuPrincipal
     clear
 }

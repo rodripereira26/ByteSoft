@@ -1,7 +1,8 @@
 #!/bin/bash
 . "InterfazGrafica/Logica/logicaVentana.sh"
 
-declare -i colorBgDefecto=102
+declare -i colorBgDefecto=0
+
 borrarLinea(){
     # $1 : nro de linea
     nroCols=$(tput cols)
@@ -40,7 +41,7 @@ animacionTitulo(){
 
 
         if [ $nroRandomLinea -lt 2 -o $nroRandomLinea -gt $limiteSuperior ] ; then
-            tput setaf 28
+            tput setaf 4
         else
             tput setaf 5
         fi
@@ -68,7 +69,7 @@ animacionTitulo1(){
         let posArchivo=$y+1
         tput cup $posY $2
         if [ $y -lt 2 -o $y -gt $limiteSuperior ] ; then
-            tput setaf 28
+            tput setaf 4
         else
             tput setaf 5
         fi
@@ -83,7 +84,7 @@ animacionTitulo1(){
 
         tput cup $nroRandomLinea $nroRandomEjeX
         if [ $y -lt 2 -o $y -gt $limiteSuperior ] ; then
-            tput setaf 28
+            tput setaf 4
         else
             tput setaf 5
         fi
@@ -120,7 +121,7 @@ animacionTitulo2(){
 
         tput cup $nroRandomLinea $nroRandomEjeX
         if [ $y -lt 2 -o $y -gt $limiteSuperior ] ; then
-            tput setaf 28
+            tput setaf 4
         else
             tput setaf 5
         fi
@@ -148,7 +149,7 @@ dibujarTxt(){
     # $4 color foreground (opcional)
     # $5 color background (opcional)
 
-    let colorFg=231
+    let colorFg=7
     let colorBg=$colorBgDefecto
     if [ "$4" ]; then 
         colorFg=$4
@@ -169,9 +170,9 @@ dibujarEntradaTxt(){
     # $3 : es el largo de la entrada 
     # $4 : int es password
 
-    let colorBg=254
-    let colorFg=75
-    
+    let colorBg=7 
+    let colorFg=5
+            
     dibujarRectangulo $1 $2 $3 1 $colorBg $colorFg
     if $4 ; then
         agregarUbicacion "PWTXT" "" $1 $2 $3 1 $colorBg $colorFg
@@ -185,17 +186,22 @@ dibujarSwitch(){
     # $3 : largo del switch
     # $4 : ancho del switch
     # $5 : estado inicial (true o false)
-    # $6 : color encendido 
-    # $7 : color apagada 
+    # $6 : color encendido (opcional)
+    # $7 : color apagada  (opcional)
     
-    let colorEncendido=33
-    let colorApagado=31
-    if [ "$6" ]; then
-        colorEncendido=$6
+    let colorEncendido=2
+    let colorApagado=1
+
+    if [ "$6" ]; 
+    then
+        colorEncendido=2
     fi
-    if [ "$7" ]; then
-        colorApagado=$7
+
+    if [ "$7" ]; 
+    then
+        colorApagado=1
     fi
+
     cargarSwitch "$1" $2 $3 $4 $colorEncendido $colorApagado "$5" # color FG pasa a ser color cuando se apaga
     agregarUbicacion "SWITCH" "$5" $1 $2 $3 $4 $colorEncendido $colorApagado 
 }
@@ -203,13 +209,13 @@ dibujarBoton(){
     # $1 : el texto del boton
     # $2 : es el inicio de la entrada de texto en x
     # $3 : es el inicio de la entrada de texto en y
-    # $4 : largo del boton
+    # $4 : lar5go del boton
     # $5 : ancho del boton
     # $6 : color background 
     # $7 : color foreground
     
-    let colorBg=31
-    let colorFg=254
+    let colorBg=4      
+    let colorFg=7     
     if [ "$6" ]; then
         colorBg=$6
     fi
