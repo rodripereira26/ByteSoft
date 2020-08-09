@@ -17,14 +17,14 @@ VMenuPrincipal(){
     iniciarPantallaNueva
     dibujarTxt "MENU PRINCIPAL" 53 2
 
-    dibujarTxt "4: ARRIBA" 9 2
-    dibujarTxt "5: ENTER " 9 3
-    dibujarTxt "6: ABAJO" 9 4
+    dibujarTxt "4: anterior" 9 2
+    dibujarTxt "5: enter" 9 3
+    dibujarTxt "6: siguiente" 9 4
     
-    dibujarBoton "USUARIOS" 20 5 80 3
-    dibujarBoton "CONFIGURACION ENTORNO" 20 8 80 3
-    dibujarBoton "VER LOGS" 20 11 80 3
-    dibujarBoton "SALIR" 20 14 80 3
+    dibujarBoton "Usuarios" 20 5 80 3
+    dibujarBoton "Configuracion de entorno" 20 8 80 3
+    dibujarBoton "Ver logs" 20 11 80 3
+    dibujarBoton "Salir" 20 14 80 3
 
     local continuar=true
     while $continuar; do

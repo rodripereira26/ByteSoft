@@ -3,20 +3,20 @@
 VMenuAgregarUsuario() {
 
     iniciarPantallaNueva
-    dibujarTxt "INGRESAR USUARIO" 50 2
-    dibujarTxt "| EN LA CONTRASEÑA:" 48 6
-    dibujarTxt "| NO INGRESAR PALABRAS" 48 7
-    dibujarTxt "| INGRESAR MÁS DE 7 CARACTERES" 48 8
-    dibujarTxt "| DEBEN HABER MÍNIMO 4 CARACTERES DIFERENTES" 48 9
+    dibujarTxt "Ingresar usuario" 50 2
+    dibujarTxt "| en la contraseña:" 48 6
+    dibujarTxt "| no ingresar palabras" 48 7
+    dibujarTxt "| ingresar más de 7 caracteres" 48 8
+    dibujarTxt "| deben haber mínimo 4 caracteres diferentes" 48 9
 
-    dibujarTxt "NOMBRE DE USUARIO" 20 5
+    dibujarTxt "Nombre de usuario" 20 5
     dibujarEntradaTxt 20 6 20 false
 
-    dibujarTxt "CONTRASEÑA" 20 8
-    dibujarEntradaTxt 20 9 20 false
+    dibujarTxt "Contraseña" 20 8
+    dibujarEntradaTxt 20 9 20 true
 
-    dibujarBoton "SIGUIENTE" 20 13 40 3
-    dibujarBoton "VOLVER" 60 13 40 3
+    dibujarBoton "Siguiente" 20 13 40 3
+    dibujarBoton "Volver" 60 13 40 3
 
     local continuar=true
     local user=""
@@ -74,7 +74,7 @@ VMenuAgregarUsuario() {
                         then
                             if [ $(grep -E "^$user:" /etc/passwd) ]; 
                             then
-                                VAvisoRegistrado "YA HAY UN USUARIO CON EL MISMO NOMBRE" 9
+                                VAvisoRegistrado "Ya hay un usuario con el mismo nombre" 9
                             else
                                 resp=$(agregarUsuario $user $grupoPerteneciente)
 
@@ -82,11 +82,11 @@ VMenuAgregarUsuario() {
                                 then
                                     echo -e "$pw\n$pw" | passwd $user
                                     pw=""
-                                    VAvisoRegistrado "EL USUARIO SE HA INGRESADO CORRECTAMENTE" 10
+                                    VAvisoRegistrado "El usuario ha sido ingresado correctamente" 10
 
                                 elif [ $resp -eq 1 ]; 
                                     then
-                                    VAvisoRegistrado "HA OCURRIDO UN PROBLEMA CON LOS PERMISOS" 9
+                                    VAvisoRegistrado "Ha ocurrido un problema con los permisos" 9
                                 fi
 
                                 continuar=false

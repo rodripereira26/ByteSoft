@@ -1,26 +1,26 @@
 #!/bin/bash
 VMenuModificarUsuario(){
     iniciarPantallaNueva
-    dibujarTxt "MODIFICAR CONTRASEÑA" 80 2
-    dibujarTxt "| DEBE EN LA CONTRASEÑA:" 78 6
-    dibujarTxt "| NO INGRESAR PALABRAS" 78 7
-    dibujarTxt "| INGRESAR MÁS DE 7 CARACTERES" 78 8
-    dibujarTxt "| DEBEN HABER MINIMO 4 CARACTERES DIFERENTES" 78 9
+    dibujarTxt "Modificar contraseña" 80 2
+    dibujarTxt "| Debe en la contraseña:" 78 6
+    dibujarTxt "| * NO INGRESAR PALABRAS" 78 7
+    dibujarTxt "| * Ingresar más de 7 caracteres" 78 8
+    dibujarTxt "| * Mínimo 4 caracteres diferentes" 78 9
 
-    dibujarTxt "NOMBRE DE USUARIO" 20 5
+    dibujarTxt "Nombre de usuario" 20 5
     dibujarEntradaTxt 20 6 20 false
 
-    dibujarTxt "CONTRASEÑA" 50 5
+    dibujarTxt "Contraseña" 50 5
     dibujarEntradaTxt 50 6 20 true
     
-    dibujarTxt "NUEVA CONTRASEÑA" 20 8
+    dibujarTxt "Nueva contraseña" 20 8
     dibujarEntradaTxt 20 9 20 true
 
-    dibujarTxt "REPITE NUEVA CONTRASEÑA" 50 8
+    dibujarTxt "Repite nueva contraseña" 50 8
     dibujarEntradaTxt 50 9 20 true
 
-    dibujarBoton "SIGUIENTE" 20 13 40 3
-    dibujarBoton "VOLVER" 60 13 40 3
+    dibujarBoton "Siguiente" 20 13 40 3
+    dibujarBoton "Volver" 60 13 40 3
 
     local continuar=true
     user=""
@@ -95,15 +95,15 @@ ejecutarModificarUsuario(){
                         pw=""
                         pwN=""
                         reppwN=""
-                        VAvisoRegistrado "MODIFICADO CON EXITO" 10
+                        VAvisoRegistrado "Modificado con éxito" 10
                     else
-                        VAvisoRegistrado "CONTRASEÑAS NO COINCIDEN" 9
+                        VAvisoRegistrado "Contraseñas no coinciden" 9
                     fi
                 else
-                    VAvisoRegistrado "$user NO PERTENECE A USUARIOS" 9
+                    VAvisoRegistrado "$user no pertenece a usuarios" 9
                 fi
             else
-                VAvisoRegistrado "FORMULADO NO LLENO O LOS REQUISITOS DE CONTRASEÑA NO COINCIDEN" 9
+                VAvisoRegistrado "Formulario no lleno o los requisitos de contraseña no coinciden" 9
             fi
         else
             ciclo=false

@@ -8,11 +8,12 @@
 
 VMenuUsuarios(){
     iniciarPantallaNueva
-    dibujarTxt "¿QUÉ DESEA HACER?" 50 2
-    dibujarBoton "AGREGAR USUARIO" 20 4 80 3
-    dibujarBoton "MODIFICAR USUARIO" 20 7 80 3
-    dibujarBoton "ELIMINAR USUARIO" 20 10 80 3
-    dibujarBoton "VOLVER" 20 13 80 3
+    dibujarTxt "¿Qué desea hacer?" 50 2
+    dibujarBoton "Agregar usuario" 20 4 80 3
+    dibujarBoton "Modificar usuario" 20 7 80 3
+    dibujarBoton "Eliminar usuario" 20 10 80 3
+    dibujarBoton "Listar usuarios" 20 13 80 3
+    dibujarBoton "Volver" 20 16 80 3
 
     local continuar=true
     while $continuar; do
@@ -37,6 +38,9 @@ ejecutarUsuario(){
                 ejecutarEliminarUsuario
                 ;;
             "3")
+                echo "En construccion"
+                ;;
+            "4")
                 continuarCiclo=false
                 ;;
             *)

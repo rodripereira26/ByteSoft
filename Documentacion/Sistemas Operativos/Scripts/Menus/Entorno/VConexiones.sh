@@ -2,9 +2,9 @@
 
 VConexiones(){
     iniciarPantallaNueva
-    dibujarTxt "CONEXIONES" 50 2
+    dibujarTxt "Conexiones" 50 2
 
-    dibujarTxt "MYSQL" 20 5
+    dibujarTxt "MySql" 20 5
     dibujarSwitch 40 4 60 3 $estadoMYSQL
 
     dibujarTxt "SSH" 20 8
@@ -22,10 +22,10 @@ VConexiones(){
                 if [ $codigoRespuesta = "5" ]; then
                     if $estadoMYSQL; then
                         tput cup 0 0 
-                        service mysqld stop
+                        service mysqld stop > /dev/null 
                     else
                         tput cup 0 0
-                        service mysqld start                    
+                        service mysqld start > /dev/null                    
                     fi
                     actualizarEstadoServicios
                 fi
@@ -34,9 +34,9 @@ VConexiones(){
                 if [ $codigoRespuesta = "5" ]; then
                     tput cup 0 0
                     if $estadoSSH; then
-                        service sshd stop
+                        service sshd stop > /dev/null 
                     else
-                        service sshd start
+                        service sshd start > /dev/null 
                     fi
                     actualizarEstadoServicios
                 fi
