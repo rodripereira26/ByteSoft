@@ -3,6 +3,7 @@
 #
 # Obligatorio ejecutar con root
 #
+sudo ls #pide permisos root
 
 . "InterfazGrafica/Grafica/disenoVentana.sh" 
 . "Logica/Entorno/Respaldar.sh"
@@ -15,7 +16,7 @@
 VMenuPrincipal(){
     # muestra diseño
     iniciarPantallaNueva
-    dibujarTxt "MENU PRINCIPAL" 53 2
+    dibujarTxt "Menú principal" 53 2
 
     dibujarTxt "4: anterior" 9 2
     dibujarTxt "5: enter" 9 3
@@ -63,7 +64,7 @@ main(){
     tput sgr0
     clear
     tput civis
-    animacionTitulo "InterfazGrafica/tituloByteSoft.txt" 5 5
+    #animacionTitulo "InterfazGrafica/tituloByteSoft.txt" 5 5
     ejecutarMenuPrincipal
     clear
 }

@@ -38,7 +38,9 @@ ejecutarUsuario(){
                 ejecutarEliminarUsuario
                 ;;
             "3")
-                echo "En construccion"
+                clear
+                ( echo "name:pswd:UID:GID:Comment:dir:shell" && egrep ".+:.+:.+:.+:.?:/home/USUARIOS" /etc/passwd ) | less
+                
                 ;;
             "4")
                 continuarCiclo=false

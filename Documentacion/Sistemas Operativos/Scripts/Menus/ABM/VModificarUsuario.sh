@@ -3,9 +3,9 @@ VMenuModificarUsuario(){
     iniciarPantallaNueva
     dibujarTxt "Modificar contraseña" 80 2
     dibujarTxt "| Debe en la contraseña:" 78 6
-    dibujarTxt "| * NO INGRESAR PALABRAS" 78 7
-    dibujarTxt "| * Ingresar más de 7 caracteres" 78 8
-    dibujarTxt "| * Mínimo 4 caracteres diferentes" 78 9
+    dibujarTxt "| - No ingresar palabras" 78 7
+    dibujarTxt "| - Ingresar más de 7 caracteres" 78 8
+    dibujarTxt "| - Mínimo 4 caracteres diferentes" 78 9
 
     dibujarTxt "Nombre de usuario" 20 5
     dibujarEntradaTxt 20 6 20 false

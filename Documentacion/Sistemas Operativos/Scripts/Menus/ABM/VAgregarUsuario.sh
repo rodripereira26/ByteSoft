@@ -88,7 +88,6 @@ VMenuAgregarUsuario() {
                                     then
                                     VAvisoRegistrado "Ha ocurrido un problema con los permisos" 9
                                 fi
-
                                 continuar=false
                             fi
 
