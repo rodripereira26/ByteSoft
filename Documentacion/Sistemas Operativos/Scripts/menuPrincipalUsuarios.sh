@@ -12,6 +12,7 @@ sudo ls #pide permisos root
 . "Menus/ABM/VPrincipalMenuUsuarios.sh"
 . "Menus/Entorno/VPrincipalMenuConfigEntorno.sh"
 . "Menus/Logs/logs.sh"
+. "Menus/Servicios/VPrincipalMenuServicios.sh"
 
 VMenuPrincipal(){
     # muestra diseño
@@ -25,7 +26,8 @@ VMenuPrincipal(){
     dibujarBoton "Usuarios" 20 5 80 3
     dibujarBoton "Configuracion de entorno" 20 8 80 3
     dibujarBoton "Ver logs" 20 11 80 3
-    dibujarBoton "Salir" 20 14 80 3
+    dibujarBoton "Servicios" 20 14 80 3
+    dibujarBoton "Salir" 20 17 80 3
 
     local continuar=true
     while $continuar; do
@@ -50,8 +52,10 @@ ejecutarMenuPrincipal(){
             "2")
                 ejecutarLogs
                 ;;
-
             "3")
+                ejecutarMenuPrincipalServicios
+                ;;
+            "4")
                 continuarCiclo=false
                 ;;
             *)

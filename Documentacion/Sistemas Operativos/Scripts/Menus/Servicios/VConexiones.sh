@@ -22,10 +22,10 @@ VConexiones(){
                 if [ $codigoRespuesta = "5" ]; then
                     if $estadoMYSQL; then
                         tput cup 0 0 
-                        service mysqld stop > /dev/null 
+                        service mysqld stop & 
                     else
                         tput cup 0 0
-                        service mysqld start > /dev/null                    
+                        service mysqld start &                    
                     fi
                     actualizarEstadoServicios
                 fi
@@ -34,9 +34,9 @@ VConexiones(){
                 if [ $codigoRespuesta = "5" ]; then
                     tput cup 0 0
                     if $estadoSSH; then
-                        service sshd stop > /dev/null 
+                        service sshd stop & 
                     else
-                        service sshd start > /dev/null 
+                        service sshd start &
                     fi
                     actualizarEstadoServicios
                 fi

@@ -2,16 +2,14 @@
 
 . "Menus/Entorno/VRespaldarDirectorios.sh"
 . "Menus/Entorno/VRespaldarBD.sh"
-. "Menus/Entorno/VConexiones.sh"
   
 VMenuConfigEntorno(){
     iniciarPantallaNueva
-    dibujarTxt "Configuracion del enter" 48 2
+    dibujarTxt "Configuracion del entorno" 48 2
     dibujarBoton "Crear directorios y variables" 20 4 80 3
     dibujarBoton "Respaldar directorio" 20 7 80 3
     dibujarBoton "Respaldar base de datos" 20 10 80 3
-    dibujarBoton "Conexiones (MYSQL, SSH)" 20 13 80 3
-    dibujarBoton "Volver" 20 16 80 3
+    dibujarBoton "Volver" 20 13 80 3
 
     local continuar=true
     while $continuar; 
@@ -63,10 +61,6 @@ ejecutarConfigEntorno() {
                 ;;
 
             "3")
-                ejecutarVConexiones
-                ;;
-
-            "4")
                 continuarCiclo=false
                 ;;
             *)
