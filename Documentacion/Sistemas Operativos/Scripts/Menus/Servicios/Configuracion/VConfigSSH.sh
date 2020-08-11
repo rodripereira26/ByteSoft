@@ -2,7 +2,7 @@
 
 . "Logica/SSH/SSH_config.sh"
 
-
+############## todo
 VConfigurarSSH(){
     iniciarPantallaNueva
     dibujarTxt "Configurar SSH (no funciona)" 80 2

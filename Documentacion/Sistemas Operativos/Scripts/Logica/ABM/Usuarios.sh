@@ -5,7 +5,7 @@ declare -a gruposQueDeberianEstar=(ADMINISTRADORES MEDICOS)
 agregarUsuario(){
     # $1 : nombre del usuario
     # $2 : nombre del grupo
-    local dirDeTrabajo="/home/USUARIOS/$2/$1"
+    local dirDeTrabajo="/home/USUARIOS/$2/$1" ######################################################################3
 
     if [ $EUID -eq 0 ]; then # se ejecuto en root
         verificarExistenciaDeGrupos

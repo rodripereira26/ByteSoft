@@ -2,15 +2,15 @@
 
 VConexiones(){
     iniciarPantallaNueva
-    dibujarTxt "Conexiones" 50 2
+    dibujarTxt "Conexiones" 50 2 ##############
 
-    dibujarTxt "MySql" 20 5
+    dibujarTxt "MySql" 20 5 ############## 
     dibujarSwitch 40 4 60 3 $estadoMYSQL
 
-    dibujarTxt "SSH" 20 8
+    dibujarTxt "SSH" 20 8 ##############
     dibujarSwitch 40 7 60 3 $estadoSSH
 
-    dibujarBoton "VOLVER" 20 13 80 3
+    dibujarBoton "Volver" 20 13 80 3 ##############
 
     local continuar=true
     while $continuar; do
@@ -22,10 +22,10 @@ VConexiones(){
                 if [ $codigoRespuesta = "5" ]; then
                     if $estadoMYSQL; then
                         tput cup 0 0 
-                        service mysqld stop & 
+                        service mysqld stop & ##############
                     else
                         tput cup 0 0
-                        service mysqld start &                    
+                        service mysqld start & ##############                 
                     fi
                     actualizarEstadoServicios
                 fi
@@ -34,9 +34,9 @@ VConexiones(){
                 if [ $codigoRespuesta = "5" ]; then
                     tput cup 0 0
                     if $estadoSSH; then
-                        service sshd stop & 
+                        service sshd stop & ##############
                     else
-                        service sshd start &
+                        service sshd start & ##############
                     fi
                     actualizarEstadoServicios
                 fi

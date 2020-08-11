@@ -2,13 +2,13 @@
 
 VMenuEliminarUsuario(){
     iniciarPantallaNueva
-    dibujarTxt "Elimina usuario" 80 2
+    dibujarTxt "Elimina usuario" 80 2 ##############
 
-    dibujarTxt "Ingresa el usuario" 20 5
+    dibujarTxt "Ingresa el usuario" 20 5 ##############
     dibujarEntradaTxt 20 6 20 false
 
-    dibujarBoton "Siguiente" 20 13 40 3
-    dibujarBoton "Volver" 60 13 40 3
+    dibujarBoton "Siguiente" 20 13 40 3 ##############
+    dibujarBoton "Volver" 60 13 40 3 ##############
 
     local continuar=true
     usuarioAEliminar=""
@@ -46,13 +46,13 @@ ejecutarEliminarUsuario(){
             ejecutarElegirGrupo
             if [ $(grep -E "^$usuarioAEliminar:.*::/home/USUARIOS/$grupoPerteneciente/$usuarioAEliminar" /etc/passwd) ]; then
                 if [ $(borrarUsuario $usuarioAEliminar) = "0" ]; then
-                    VAvisoRegistrado "Usuario eliminado correctamente" 10
+                    VAvisoRegistrado "Usuario eliminado correctamente" 10 ##############
                 else
-                    VAvisoRegistrado "Necesita permisos para borrar usuarios" 9
+                    VAvisoRegistrado "Necesita permisos para borrar usuarios" 9 ##############
                 fi
                 
             else 
-                VAvisoRegistrado "Usuario inexistente o el grupo no fue el correspondiente" 9
+                VAvisoRegistrado "Usuario inexistente o el grupo no fue el correspondiente" 9 ##############
             fi
         else
             continuar=false

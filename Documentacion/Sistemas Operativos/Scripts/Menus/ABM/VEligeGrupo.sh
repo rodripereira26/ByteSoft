@@ -1,9 +1,9 @@
 #!/bin/bash
 VElegirGrupo(){
     iniciarPantallaNueva
-    dibujarTxt "Ingresar cargo" 80 2
-    dibujarBoton "Administracion" 20 7 80 3
-    dibujarBoton "Medico" 20 10 80 3
+    dibujarTxt "Ingresar cargo" 80 2 ##############
+    dibujarBoton "Administracion" 20 7 80 3 ##############
+    dibujarBoton "Medico" 20 10 80 3 ##############
     
     local continuar=true
     grupoPerteneciente=""

@@ -5,11 +5,11 @@
   
 VMenuConfigEntorno(){
     iniciarPantallaNueva
-    dibujarTxt "Configuracion del entorno" 48 2
-    dibujarBoton "Crear directorios y variables" 20 4 80 3
-    dibujarBoton "Respaldar directorio" 20 7 80 3
-    dibujarBoton "Respaldar base de datos" 20 10 80 3
-    dibujarBoton "Volver" 20 13 80 3
+    dibujarTxt "Configuracion del entorno" 48 2 ##############
+    dibujarBoton "Crear directorios y variables" 20 4 80 3 ##############
+    dibujarBoton "Respaldar directorio" 20 7 80 3 ##############
+    dibujarBoton "Respaldar base de datos" 20 10 80 3 ##############
+    dibujarBoton "Volver" 20 13 80 3 ##############
 
     local continuar=true
     while $continuar; 
@@ -45,7 +45,7 @@ ejecutarConfigEntorno() {
                     "1")
                         VAvisoRegistrado "Los directorios ya han sido creados" 2
                         ;;
-
+############## borrar conexiones ssh y mysql
                     *)
                         VAvisoRegistrado "Error desconocido" 1
                         ;;

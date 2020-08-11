@@ -1,19 +1,19 @@
 #!/bin/bash
 VRespaldarDirectorios(){
     iniciarPantallaNueva
-    dibujarTxt "Respaldar directorios" 50 2
+    dibujarTxt "Respaldar directorios" 50 2 ##############
 
-    dibujarTxt "¿Desea usar la ruta predeterminada?" 20 5
+    dibujarTxt "¿Desea usar la ruta predeterminada?" 20 5 ##############
     dibujarSwitch 20 6 20 1 true
 
     dibujarTxt "O" 20 8
-    dibujarTxt "Ruta respaldo" 20 10
+    dibujarTxt "Ruta respaldo" 20 10 ##############
     dibujarEntradaTxt 20 11 50 false
     dibujarTxt "" 20 12
 
 
-    dibujarBoton "Aceptar" 20 14 40 3
-    dibujarBoton "Volver" 60 14 40 3
+    dibujarBoton "Aceptar" 20 14 40 3 ##############
+    dibujarBoton "Volver" 60 14 40 3 ##############
  
     continuar=true
     usarPredeterminada=true
@@ -76,9 +76,9 @@ ejecutarRespaldarDirectorio() {
 
         if [ $respaldoResp = "0" ]; 
         then 
-            VAvisoRegistrado "Respaldo realizado con éxito" 2 3
+            VAvisoRegistrado "Respaldo realizado con éxito" 2 3 ##############
         else
-            VAvisoRegistrado "Error al realizar el respaldo" 1
+            VAvisoRegistrado "Error al realizar el respaldo" 1 ##############
         fi
     
     fi
