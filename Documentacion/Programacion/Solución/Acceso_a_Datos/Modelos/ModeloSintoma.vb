@@ -1,56 +1,34 @@
-﻿'''<summary>
+﻿Imports System.Data.Odbc
+'''<summary>
 '''Clase encargada de las consultas pertenecientes a los síntomas.
 '''</summary>
 Public Class ModeloSintoma
-    Inherits Conexion
 
     '''<summary>
     '''Consulta encargada de registrar los síntomas.
     '''</summary>
     Public Function Registrar(nombre As String, descripcion As String) As Boolean
 
-        Try
-            Command.CommandText = "
-            INSERT INTO 
-                sintoma (nombre, descripcion) 
-            VALUES ('" & nombre & "','" & descripcion & "')"
-            Command.ExecuteNonQuery()
+        Dim consulta As String = "INSERT INTO sintoma(nombre, descripcion) VALUES(?,?)"
+        Dim parametros As New List(Of OdbcParameter)
 
-        Catch ex As Exception
+        parametros.Add(New OdbcParameter("nombre", nombre))
+        parametros.Add(New OdbcParameter("descripcion", descripcion))
 
-            cerrarConexion()
-            Return False
+        If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
 
-        End Try
+            Return True
 
-        cerrarConexion()
-        Return True
+        End If
+
+        Return False
     End Function
 
     '''<summary>
     '''Consulta encargada de obtener los síntomas existentes en la base de datos.
     '''</summary>
     Public Function traerSintomas() As ArrayList
-
-        Dim arraySintomas As New ArrayList
-        abrirConexion()
-        Command.CommandText = "SELECT nombre FROM sintoma"
-        Reader = Command.ExecuteReader
-
-
-        If Reader.HasRows Then
-
-            Dim i = 0
-
-            While Reader.Read
-                arraySintomas.Add(Reader.GetString(0))
-                i += 1
-            End While
-
-        End If
-
-        cerrarConexion()
-        Return arraySintomas
+        Return ModeloConsultas.Singleton.ConsultaArray("SELECT nombre FROM sintoma")
     End Function
 
     '''<summary>
@@ -58,59 +36,48 @@ Public Class ModeloSintoma
     '''</summary>
     Public Function guardarSintomas(usuario As String, nombreSintoma As ArrayList) As Boolean
 
-        Try
+        Dim consulta As String
 
-            For Each nom In nombreSintoma
+        For Each nom In nombreSintoma
 
-                Command.CommandText = "
+            consulta = "
                     INSERT INTO paciente_indica_sintoma (cedula, idSintoma, fechaIngreso) 
                     SELECT " & usuario & ", s.idSintoma, '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' 
                     FROM sintoma s WHERE s.nombre = '" & nom & "'"
-                Command.ExecuteNonQuery()
+            ModeloConsultas.Singleton.InsertarSinParametros(consulta)
 
-            Next
+        Next
 
-        Catch ex As Exception
-
-            cerrarConexion()
-            Return False
-
-        End Try
-
-        cerrarConexion()
         Return True
     End Function
+
     Public Function listarSintomas() As DataTable
-
-        Dim dt As New DataTable
-        Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion FROM sintoma"
-
-        dt.Load(Command.ExecuteReader())
-
-        cerrarConexion()
-        Return dt
+        Return ModeloConsultas.Singleton.ConsultaTabla("SELECT nombre AS Nombre, descripcion AS Descripcion FROM sintoma")
     End Function
+
     Public Function eliminarSintomas(ali As ArrayList) As Boolean
 
-        Dim parametros As String
+        Dim valores As String
         Dim consulta As String = "
             DELETE patologia_contiene_sintoma , sintoma  
             FROM patologia_contiene_sintoma  
             INNER JOIN sintoma  
-                WHERE patologia_contiene_sintoma.idSintoma = sintoma.idSintoma AND               
-                AND sintoma.nombre IN ("
+                WHERE patologia_contiene_sintoma.idSintoma = sintoma.idSintoma AND sintoma.nombre IN ("
 
         For i = 0 To ali.Count - 1
 
-            parametros = parametros & "'" & ali.Item(i) & "'" & ","
+            valores = valores & "'" & ali.Item(i) & "'" & ","
         Next
 
-        consulta = consulta & parametros.TrimEnd(",") & ")"
+        consulta = consulta & valores.TrimEnd(",") & ")"
 
-        Command.CommandText = consulta
-        Command.ExecuteNonQuery()
+        If ModeloConsultas.Singleton.InsertarSinParametros(consulta) Then
 
-        cerrarConexion()
-        Return True
+            Return True
+
+        End If
+
+        Return False
     End Function
+
 End Class

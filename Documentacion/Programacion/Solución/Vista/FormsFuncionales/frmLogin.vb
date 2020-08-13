@@ -84,8 +84,9 @@ Public Class frmLogin
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
+
         frmRegistroPaciente.Show()
-        Me.Dispose()
+        Me.Hide()
 
     End Sub
 
@@ -137,15 +138,15 @@ Public Class frmLogin
 
                     Select Case log.verificarRol(txtUsr.Text)
 
-                        Case "Gestor"
+                        Case "G"
                             frmBienvenidaGestor.Show()
                             Me.Hide()
 
-                        Case "Paciente"
+                        Case "P"
                             frmBienvenidaPaciente.Show()
                             Me.Hide()
 
-                        Case "Medico"
+                        Case "M"
                             frmBienvenidaMedico.Show()
                             Me.Hide()
 

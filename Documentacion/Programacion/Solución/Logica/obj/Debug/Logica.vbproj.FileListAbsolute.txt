@@ -93,3 +93,29 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Logi
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.dll
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.xml
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.pdb
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\bin\Debug\Logica.dll
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\bin\Debug\Logica.pdb
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\bin\Debug\Logica.xml
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.CopyComplete
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\obj\Debug\Logica.dll
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\obj\Debug\Logica.xml
+C:\Users\Rodrigo\Downloads\Programacion\Solución\Logica\obj\Debug\Logica.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\bin\Debug\Logica.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\bin\Debug\Logica.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\bin\Debug\Logica.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.CopyComplete
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.dll
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.xml
+C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.pdb

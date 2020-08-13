@@ -44,8 +44,14 @@ Public Class ControladorPatologia
         Return False
     End Function
 
+    Public Function informacionPatologia(nombre As String) As String
+        Return p.informacionPatologia(nombre)
+    End Function
+
     Public Function obtenerPatologia(sintomas As ArrayList) As DataTable
+
         Return p.obtenerDiagnostico(sintomas)
+
     End Function
 
     Public Function guardarDiagnostico(usuario As String, nombreDiagnostico As ArrayList) As Boolean

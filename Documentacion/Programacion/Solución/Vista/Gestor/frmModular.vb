@@ -69,12 +69,12 @@
     Private Sub pnlOpcion2_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlOpcion2.MouseDown
         Select Case op
             Case 1
-                frmListado.op = "síntomas"
-                frmListado.Visible = True
+                frmListadoPatologiasySintomas.op = "síntomas"
+                frmListadoPatologiasySintomas.Visible = True
                 Me.Visible = False
             Case 0
-                frmListado.op = "patologías"
-                frmListado.Visible = True
+                frmListadoPatologiasySintomas.op = "patologías"
+                frmListadoPatologiasySintomas.Visible = True
                 Me.Visible = False
             Case 2
                 frmHabilitar.Visible = True

@@ -92,9 +92,9 @@ Public Class frmRegistrarPatologia
 
                     Dim p As New ControladorPatologia(txtNomPat.Text, txtDescPat.Text, txtRecPat.Text, prioridad, ali)
 
-                    If p.registrar() Then
+                    p.registrar()
 
-                        MsgBox("Patología registrada con éxito")
+                    MsgBox("Patología registrada con éxito")
                         Dim s As New ControladorSintoma
                         txtNomPat.Clear()
                         txtDescPat.Clear()
@@ -103,11 +103,9 @@ Public Class frmRegistrarPatologia
                         dgvSintomasSeleccionados.Rows.Clear()
                         traerSintomas()
 
-                    Else
-                        MsgBox("Error al registrar la patología")
-                    End If
 
-                Else
+
+                    Else
                     MsgBox("Debe ingresar una recomendación completa")
                 End If
             Else

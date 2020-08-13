@@ -3,44 +3,80 @@
 '''<summary>
 '''Clase encargada de generar la conexión con la base de datos.
 '''</summary>
-Public MustInherit Class Conexion
+Public Class Conexion
 
-    Public dsn As String = "driverODBC"
-    Public Uid As String = "root"
-    Public Pwd As String = ""
-    Public Port As String = "3308"
-    Public DatabaseName As String = "bdd_proyecto"
-    Public Host As String = "localhost"
+    Private Shared instance As Conexion
 
-    Public Connect As New OdbcConnection(
+    Private Const dsn As String = "driverODBC"
+    Private Const Port As String = "3306"
+    Private Const DatabaseName As String = "bdd_proyecto2"
+    Private Host As String = "localhost"
+    Private dblogin(,) As String = New String(4, 2) {}
+
+    Public Property Connection As New OdbcConnection
+    Public Command As New OdbcCommand
+    Public Property Reader As OdbcDataReader
+    Dim Adapter As OdbcDataAdapter
+
+    Public Shared Function Singleton() As Conexion
+
+        If (instance Is Nothing) Then
+            instance = New Conexion
+        End If
+
+        Return instance
+    End Function
+
+    Public Enum EnumDbLogin
+        aux
+        paciente
+        medico
+        admin
+    End Enum
+
+    Public Enum TipoDbLogin
+        user
+        pass
+    End Enum
+
+    Public Sub New()
+
+        dblogin(EnumDbLogin.aux, TipoDbLogin.user) = "sysAux"
+        dblogin(EnumDbLogin.aux, TipoDbLogin.pass) = "1DWbt9hj8xdk3C72"
+
+        dblogin(EnumDbLogin.paciente, TipoDbLogin.user) = "sysPac"
+        dblogin(EnumDbLogin.paciente, TipoDbLogin.pass) = "dV23UTXFZRbinBz3"
+
+        dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "sysMed"
+        dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "hF69t12lQal6hyiD"
+
+        dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "sysGest"
+        dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "yX4H84ZpgNp07kDy"
+
+    End Sub
+
+    Public Sub SetRolConexion(RolBD As EnumDbLogin)
+
+        Connection = New OdbcConnection(
             "dsn=" + Me.dsn +
-            ";UID=" + Me.Uid +
-            ";PWD=" + Me.Pwd +
+            ";UID=" + dblogin(RolBD, TipoDbLogin.user) +
+            ";PWD=" + dblogin(RolBD, TipoDbLogin.pass) +
             ";PORT=" + Me.Port +
             ";DATABASE=" + Me.DatabaseName +
             ";SERVER=" + Me.Host
         )
 
-    Public Command As New OdbcCommand
-    Public Reader As OdbcDataReader
-    Dim Adapter As OdbcDataAdapter
-
-    Public Sub New()
-
-        Me.Connect.Open()
-        Me.Command.Connection = Me.Connect
-
     End Sub
 
     Public Sub cerrarConexion()
-
-        Me.Connect.Close()
-
+        Me.Connection.Close()
     End Sub
 
-    Public Sub abrirConexion()
-        cerrarConexion()
-        Me.Connect.Open()
+    Public Sub CheckConexion()
+
+        If Connection.State = ConnectionState.Closed Then
+            Connection.Open()
+        End If
 
     End Sub
 

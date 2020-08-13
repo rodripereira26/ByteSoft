@@ -54,6 +54,7 @@ Public Class ControladorUsuario
         Dim datos As New ModeloUsuario
 
         Return datos.verificarRol(usuario)
+
     End Function
 
 End Class

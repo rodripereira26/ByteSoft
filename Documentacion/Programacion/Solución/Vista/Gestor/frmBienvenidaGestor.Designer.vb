@@ -115,7 +115,7 @@ Partial Class frmBienvenidaGestor
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(22, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 39)
+        Me.Label7.Size = New System.Drawing.Size(125, 38)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Ajustes"
         '
@@ -157,7 +157,7 @@ Partial Class frmBienvenidaGestor
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(17, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(136, 39)
+        Me.Label9.Size = New System.Drawing.Size(135, 38)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
@@ -199,7 +199,7 @@ Partial Class frmBienvenidaGestor
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 39)
+        Me.Label11.Size = New System.Drawing.Size(105, 38)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
@@ -222,7 +222,6 @@ Partial Class frmBienvenidaGestor
         Me.Button2.TabIndex = 24
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
-        Me.Button2.Visible = False
         '
         'Button1
         '
@@ -232,7 +231,6 @@ Partial Class frmBienvenidaGestor
         Me.Button1.TabIndex = 23
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
-        Me.Button1.Visible = False
         '
         'Label12
         '
@@ -277,7 +275,7 @@ Partial Class frmBienvenidaGestor
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(13, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(314, 39)
+        Me.Label3.Size = New System.Drawing.Size(314, 38)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Registro de Usuarios"
         '
@@ -338,7 +336,7 @@ Partial Class frmBienvenidaGestor
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(23, 27)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 39)
+        Me.Label2.Size = New System.Drawing.Size(168, 38)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Patologías"
         '
@@ -380,7 +378,7 @@ Partial Class frmBienvenidaGestor
         Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(23, 27)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(152, 39)
+        Me.Label17.Size = New System.Drawing.Size(152, 38)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Sintomas"
         '
@@ -422,7 +420,7 @@ Partial Class frmBienvenidaGestor
         Me.Label19.ForeColor = System.Drawing.Color.White
         Me.Label19.Location = New System.Drawing.Point(22, 33)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(144, 39)
+        Me.Label19.Size = New System.Drawing.Size(144, 38)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Usuarios"
         '

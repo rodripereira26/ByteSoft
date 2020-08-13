@@ -1,60 +1,69 @@
-﻿'''<summary>
+﻿Imports System.Data.Odbc
+'''<summary>
 '''Clase encargada de las consultas pertenecientes a las patologías.
 '''</summary>
 Public Class ModeloPatologia
-    Inherits Conexion
 
     '''<summary>
     '''Consulta encargada de registrar las patologías.
     '''</summary>
     Public Function Registrar(nombre As String, descripcion As String, recomendacion As String, prioridad As Byte, nomSintomas As ArrayList) As Boolean
 
-        Try
-            Command.CommandText = "INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ('" & nombre & "','" & descripcion & "','" & recomendacion & "','" & prioridad & "')"
-            Command.ExecuteNonQuery()
+        Dim consulta As String = "INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES (?,?,?,?)"
+        Dim parametros As New List(Of OdbcParameter)
 
-            For Each nom In nomSintomas
-                Command.CommandText = "
-                    INSERT INTO patologia_contiene_sintoma (idSintoma, idPatologia)
-                    VALUES
-                        ((SELECT
-                            idSintoma
-                        FROM
-                            sintoma
-                        WHERE
-                            nombre = '" & nom & "'),
-                        (SELECT
-                            idPatologia
-                        FROM
-                            patologia
-                        WHERE
-                            nombre = '" & nombre & "'))"
+        parametros.Add(New OdbcParameter("nombre", nombre))
+        parametros.Add(New OdbcParameter("descripcion", descripcion))
+        parametros.Add(New OdbcParameter("recomendacion", recomendacion))
+        parametros.Add(New OdbcParameter("prioridad", prioridad))
 
-                Command.ExecuteNonQuery()
-            Next
+        If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
 
-        Catch ex As Exception
-            cerrarConexion()
-            Return False
+            If RegistrarPatSintomas(nombre, nomSintomas) Then
 
-        End Try
+                Return True
 
-        cerrarConexion()
-        Return True
+            End If
+
+        End If
+
+        Return False
+    End Function
+
+    '''<summary>
+    '''Consulta encargada de registrar la asociación de los síntomas y las patologías.
+    '''</summary>
+    Public Function RegistrarPatSintomas(nombre As String, nomSintomas As ArrayList) As Boolean
+
+        Dim parametros As New List(Of OdbcParameter)
+        Dim contador As Int16 = 0
+        Dim consulta As String = " 
+                    INSERT INTO patologia_contiene_sintoma (idSintoma, idPatologia) VALUES ((SELECT idSintoma FROM sintoma WHERE nombre = ?), (SELECT idPatologia FROM patologia WHERE nombre = ?))"
+
+        For i As Int16 = 0 To nomSintomas.Count - 1
+
+            parametros.Clear()
+            parametros.Add(New OdbcParameter("nombre", nomSintomas.Item(i)))
+            parametros.Add(New OdbcParameter("nombre", nombre))
+
+            ModeloConsultas.Singleton.InsertParametros(consulta, parametros)
+            contador = +1
+        Next
+
+        If contador = nomSintomas.Count Then
+
+            Return True
+
+        End If
+
+        Return False
     End Function
 
     '''<summary>
     '''Consulta encargada de listar las patologías.
     '''</summary>
     Public Function listarPatologias() As DataTable
-
-        Dim dt As New DataTable
-        Command.CommandText = "SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia"
-
-        dt.Load(Command.ExecuteReader())
-
-        cerrarConexion()
-        Return dt
+        Return ModeloConsultas.Singleton.ConsultaTabla("SELECT nombre AS Nombre, descripcion AS Descripcion, recomendacion AS Recomendacion, prioridad AS Prioridad FROM patologia")
     End Function
 
     '''<summary>
@@ -62,7 +71,7 @@ Public Class ModeloPatologia
     '''</summary>
     Public Function eliminarPatologias(ali As ArrayList) As Boolean
 
-        Dim parametros As String
+        Dim valores As String
         Dim consulta As String = "
             DELETE patologia_contiene_sintoma , patologia  
             FROM patologia_contiene_sintoma  
@@ -73,16 +82,18 @@ Public Class ModeloPatologia
 
         For i = 0 To ali.Count - 1
 
-            parametros = parametros & "'" & ali.Item(i) & "'" & ","
+            valores = valores & "'" & ali.Item(i) & "'" & ","
         Next
 
-        consulta = consulta & parametros.TrimEnd(",") & ")"
+        consulta = consulta & valores.TrimEnd(",") & ")"
 
-        Command.CommandText = consulta
-        Command.ExecuteNonQuery()
+        If ModeloConsultas.Singleton.InsertarSinParametros(consulta) Then
 
-        cerrarConexion()
-        Return True
+            Return True
+
+        End If
+
+        Return False
     End Function
 
     '''<summary>
@@ -90,10 +101,9 @@ Public Class ModeloPatologia
     '''</summary>
     Public Function obtenerDiagnostico(sintomas As ArrayList) As DataTable
 
-        Dim dt As New DataTable
         Dim parametros As String
         Dim consulta As String = "
-           SELECT p.nombre, p.descripcion
+           SELECT p.nombre
            FROM patologia p, sintoma s, patologia_contiene_sintoma ps
            WHERE p.idPatologia = ps.idPatologia and s.idSintoma = ps.idSintoma 
            and s.nombre IN ("
@@ -105,39 +115,36 @@ Public Class ModeloPatologia
         Next
 
         consulta = consulta & parametros.TrimEnd(",") & ")"
-        consulta = consulta & " GROUP BY ps.idPatologia ORDER BY count(*) desc"
+        consulta = consulta & " GROUP BY ps.idPatologia HAVING count(*) >= " & sintomas.Count & " ORDER BY count(*) desc"
 
-        Command.CommandText = consulta
-        dt.Load(Command.ExecuteReader())
-
-        Return dt
+        Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
     End Function
 
     '''<summary>
-    '''Consulta encargada de guardar en la base de datos los diagnosticos indicados para el usuario.
+    '''Consulta encargada de traer la descripción de las patologías
     '''</summary>
+    Public Function informacionPatologia(nombre As String) As String
+
+        Dim consulta As String = "SELECT descripcion FROM patologia WHERE nombre = '" & nombre & "'"
+
+        Return CType(ModeloConsultas.Singleton.ConsultaCampo(consulta), String)
+    End Function
+
     Public Function guardarDiagnosticos(usuario As String, diagnosticos As ArrayList) As Boolean
 
-        Try
+        Dim consulta As String
 
-            For Each nom In diagnosticos
+        For Each nom In diagnosticos
 
-                Command.CommandText = "
+            consulta = "
                     INSERT INTO paciente_obtiene_diagnostico (cedulaPaciente, idPatologia, fecha) 
                     SELECT " & usuario & ", p.idPatologia, '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' 
                     FROM patologia p WHERE p.nombre = '" & nom & "'"
-                Command.ExecuteNonQuery()
 
-            Next
+            ModeloConsultas.Singleton.InsertarSinParametros(consulta)
 
-        Catch ex As Exception
+        Next
 
-            cerrarConexion()
-            Return False
-
-        End Try
-
-        cerrarConexion()
         Return True
     End Function
 

@@ -127,6 +127,16 @@ Vista
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Vista.My.Resources.Resources.icons8_left_32px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_long_arrow_left_32px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Vista.My.Resources.Resources.icons8_search_30px1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -1,85 +1,63 @@
 ﻿Public Class ModeloUsuario
-    Inherits Conexion
 
     '''<summary>
     '''Consulta encargada de verificar si el usuario y contraseña ingresados coinciden en la base de datos.
     '''</summary>
     Public Function verificarUsuario(usuario As String, pass As String) As Boolean
 
-        Command.CommandText = "SELECT count(*) FROM usuario WHERE cedula = " & usuario & " and contrasena = '" & pass & "'"
-        Reader = Command.ExecuteReader
+        Conexion.Singleton.cerrarConexion()
+        Conexion.Singleton.SetRolConexion(Conexion.EnumDbLogin.aux)
 
-        If Reader.HasRows Then
+        If ModeloConsultas.Singleton.ConsultaCampo("SELECT count(*) FROM usuario WHERE cedula = " & usuario & " and contrasena = '" & pass & "'") = 1 Then
 
-            If Reader.GetInt16(0) = 1 Then
-
-                cerrarConexion()
-                Return True
-
-            End If
+            Return True
 
         End If
 
-        cerrarConexion()
         Return False
     End Function
 
     '''<summary>
     '''Consulta encargada de verificar a qué tabla pertenece el usuario.
     '''</summary>
-    Public Function verificarRol(usuario) As String
+    Public Function verificarRol(usuario) As Char
 
-        Dim tabla As String
+        Dim tabla As Char
 
-        Command.CommandText = "SELECT count(*) FROM gestor WHERE cedula = " & usuario
-        Reader = Command.ExecuteReader
+        If ModeloConsultas.Singleton.ConsultaCampo("SELECT count(*) FROM gestor WHERE cedula = " & usuario) = 1 Then
 
-        If Reader.HasRows Then
+            tabla = "G"
 
-            If Reader.GetInt16(0) = 1 Then
-
-                cerrarConexion()
-                tabla = "Gestor"
-                Return tabla
-
-            End If
-
-            cerrarConexion()
         End If
 
-        Command.CommandText = "SELECT count(*) FROM paciente WHERE cedula = " & usuario
-        abrirConexion()
-        Reader = Command.ExecuteReader
+        If ModeloConsultas.Singleton.ConsultaCampo("SELECT count(*) FROM paciente WHERE cedula = " & usuario) = 1 Then
 
-        If Reader.HasRows Then
+            tabla = "P"
 
-            If Reader.GetInt16(0) = 1 Then
-
-                cerrarConexion()
-                tabla = "Paciente"
-                Return tabla
-
-            End If
-
-            cerrarConexion()
         End If
 
-        Command.CommandText = "SELECT count(*) FROM medico WHERE cedula = " & usuario
-        abrirConexion()
-        Reader = Command.ExecuteReader
+        If ModeloConsultas.Singleton.ConsultaCampo("SELECT count(*) FROM medico WHERE cedula = " & usuario) = 1 Then
 
-        If Reader.HasRows Then
+            tabla = "M"
 
-            If Reader.GetInt16(0) = 1 Then
-
-                cerrarConexion()
-                tabla = "Medico"
-                Return tabla
-
-            End If
-
-            cerrarConexion()
         End If
+
+        Conexion.Singleton.cerrarConexion()
+        Select Case tabla
+
+            Case "M"
+                Conexion.Singleton.SetRolConexion(Conexion.EnumDbLogin.medico)
+                Conexion.Singleton.CheckConexion()
+
+            Case "P"
+                Conexion.Singleton.SetRolConexion(Conexion.EnumDbLogin.paciente)
+                Conexion.Singleton.CheckConexion()
+
+            Case "G"
+                Conexion.Singleton.SetRolConexion(Conexion.EnumDbLogin.admin)
+                Conexion.Singleton.CheckConexion()
+
+        End Select
 
         Return tabla
     End Function

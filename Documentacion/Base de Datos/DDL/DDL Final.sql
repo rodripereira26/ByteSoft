@@ -1,5 +1,5 @@
 /*
-ByteSoft
+ByteSoft - 2020
 DDL Base de Datos 
 */
 
@@ -8,6 +8,7 @@ DDL Base de Datos
 	CREATE DATABASE IF NOT EXISTS bytesoft_bdd;
     USE bytesoft_bdd;
     
+SELECT USER(),CURRENT_USER();
     /* Creación de tablas */
     
     CREATE TABLE usuario (
@@ -19,7 +20,7 @@ DDL Base de Datos
     sApe VARCHAR (25) NOT NULL,
     correo VARCHAR (40) NOT NULL,
     fotoPerfil MEDIUMBLOB,
-    bajalogica BOOLEAN NOT NULL DEFAULT 0,
+    bajalogica BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (cedula),
     UNIQUE (correo)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
@@ -57,7 +58,7 @@ DDL Base de Datos
     cedula INT (9) NOT NULL,
     fecNac DATETIME NOT NULL,
     sexo CHAR (1) NOT NULL,
-    verificacion BOOLEAN NOT NULL DEFAULT 0,
+    verificacion BOOLEAN NOT NULL DEFAULT FALSE,
     CHECK (sexo in ("M", "F")),
     PRIMARY KEY (cedula),
     CONSTRAINT fk_paciente_cedula FOREIGN KEY (cedula) REFERENCES usuario (cedula)
@@ -74,7 +75,7 @@ DDL Base de Datos
     idSintoma INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR (25) NOT NULL,
     descripcion VARCHAR (50) NOT NULL,
-    bajalogica BOOLEAN NOT NULL DEFAULT 0,
+    bajalogica BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (idSintoma),
     UNIQUE (nombre)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
@@ -85,7 +86,7 @@ DDL Base de Datos
     descripcion VARCHAR (25) NOT NULL,
     recomendacion VARCHAR (60) NOT NULL,
     prioridad TINYINT (1) NOT NULL,
-    bajalogica BOOLEAN NOT NULL DEFAULT 0,
+    bajalogica BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (idPatologia),
     UNIQUE (nombre)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 

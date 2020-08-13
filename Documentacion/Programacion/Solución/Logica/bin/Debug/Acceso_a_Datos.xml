@@ -32,9 +32,19 @@ Clase encargada de generar la conexión con la base de datos.
 Clase encargada de las consultas pertenecientes a los administradores.
 </summary>
 </member>
-<member name="M:Acceso_a_Datos.ModeloGestor.Registrar(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList)">
+<member name="M:Acceso_a_Datos.ModeloGestor.Registrar(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList)">
 <summary>
-Consulta encargada de registar a los usuarios administradores del sistema.
+Consulta encargada de registar a los usuarios administradores del sistema en la tabla usuarios.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.RegistrarGestor(System.String)">
+<summary>
+Consulta encargada de registar a los usuarios administradores del sistema en la tabla gestor.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.RegistrarTelefono(System.String,System.Collections.ArrayList)">
+<summary>
+Consulta encargada de registar los telefonos de los gestores.
 </summary>
 </member>
 <member name="T:Acceso_a_Datos.ModeloMedico">
@@ -42,9 +52,14 @@ Consulta encargada de registar a los usuarios administradores del sistema.
 Clase encargada de las consultas pertenecientes a los médicos.
 </summary>
 </member>
-<member name="M:Acceso_a_Datos.ModeloMedico.Registrar(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
+<member name="M:Acceso_a_Datos.ModeloMedico.Registrar(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
 <summary>
-Consulta encargada de registrar a los usuarios médicos.
+Consulta encargada de registar a los usuarios médicos del sistema en la tabla usuarios.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloMedico.RegistrarMedico(System.String,System.String)">
+<summary>
+Consulta encargada de registar a los usuarios médicos del sistema en la tabla medico.
 </summary>
 </member>
 <member name="T:Acceso_a_Datos.ModeloPaciente">
@@ -52,9 +67,19 @@ Consulta encargada de registrar a los usuarios médicos.
 Clase encargada de las consultas pertenecientes a los pacientes.
 </summary>
 </member>
-<member name="M:Acceso_a_Datos.ModeloPaciente.Registrar(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList,System.String,System.String,System.String)">
+<member name="M:Acceso_a_Datos.ModeloPaciente.Registrar(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList,System.String,System.String,System.String)">
 <summary>
-Consulta encargada de registrar a los usuarios pacientes.
+Consulta encargada de registrar a los usuarios pacientes en la tabla usuario.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.RegistrarPaciente(System.String,System.String,System.String)">
+<summary>
+Consulta encargada de registar a los usuarios pacientes del sistema en la tabla paciente.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.RegistrarTelefono(System.String,System.Collections.ArrayList)">
+<summary>
+Consulta encargada de registar los telefonos de los pacientes.
 </summary>
 </member>
 <member name="T:Acceso_a_Datos.ModeloPatologia">
@@ -65,6 +90,11 @@ Clase encargada de las consultas pertenecientes a las patologías.
 <member name="M:Acceso_a_Datos.ModeloPatologia.Registrar(System.String,System.String,System.String,System.Byte,System.Collections.ArrayList)">
 <summary>
 Consulta encargada de registrar las patologías.
+</summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.RegistrarPatSintomas(System.String,System.Collections.ArrayList)">
+<summary>
+Consulta encargada de registrar la asociación de los síntomas y las patologías.
 </summary>
 </member>
 <member name="M:Acceso_a_Datos.ModeloPatologia.listarPatologias">
@@ -82,9 +112,9 @@ Consulta encargada de eliminar patologías.
 Consulta encargada de obtener las patologías asociadas a los síntomas ingresador por el paciente.
 </summary>
 </member>
-<member name="M:Acceso_a_Datos.ModeloPatologia.guardarDiagnosticos(System.String,System.Collections.ArrayList)">
+<member name="M:Acceso_a_Datos.ModeloPatologia.informacionPatologia(System.String)">
 <summary>
-Consulta encargada de guardar en la base de datos los diagnosticos indicados para el usuario.
+Consulta encargada de traer la descripción de las patologías
 </summary>
 </member>
 <member name="T:Acceso_a_Datos.ModeloSintoma">

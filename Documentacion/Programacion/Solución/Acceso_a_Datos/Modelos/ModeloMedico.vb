@@ -1,36 +1,58 @@
-﻿'''<summary>
+﻿Imports System.Data.Odbc
+
+'''<summary>
 '''Clase encargada de las consultas pertenecientes a los médicos.
 '''</summary>
 Public Class ModeloMedico
-    Inherits Conexion
 
     '''<summary>
-    '''Consulta encargada de registrar a los usuarios médicos.
+    '''Consulta encargada de registar a los usuarios médicos del sistema en la tabla usuarios.
     '''</summary>
-    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Especializacion As String) As Boolean
+    Public Function Registrar(cedula As String, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Especializacion As String) As Boolean
 
-        Try
-            Command.CommandText = "
-            INSERT INTO 
-                usuario (cedula, contrasena, pNom, sNom, pApe, sApe) 
-            VALUES ('" & cedula & "','" & cedula & "','" & PrimerNombre & "','" & SegundoNombre & "','" & PrimerApellido & "','" & SegundoApellido & "')"
-            Command.ExecuteNonQuery()
+        Dim consulta As String = "INSERT INTO usuario (cedula, contrasena, pNom, sNom, pApe, sApe) VALUES (?,?,?,?,?,?)"
 
-            Command.CommandText = "
-            INSERT INTO 
-                medico (cedula, especializacion) 
-            VALUES ('" & cedula & "','" & Especializacion & "')"
-            Command.ExecuteNonQuery()
+        Dim parametros As New List(Of OdbcParameter)
+        parametros.Add(New OdbcParameter("cedula", cedula))
+        parametros.Add(New OdbcParameter("contrasena", contraseña))
+        parametros.Add(New OdbcParameter("pNom", PrimerNombre))
+        parametros.Add(New OdbcParameter("sNom", SegundoNombre))
+        parametros.Add(New OdbcParameter("pApe", PrimerApellido))
+        parametros.Add(New OdbcParameter("sApe", cedula))
 
-        Catch ex As Exception
 
-            cerrarConexion()
-            Return False
+        If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
 
-        End Try
+            If RegistrarMedico(cedula, Especializacion) Then
 
-        cerrarConexion()
-        Return True
+                Return True
+
+            End If
+
+        End If
+
+        Return False
+    End Function
+
+    '''<summary>
+    '''Consulta encargada de registar a los usuarios médicos del sistema en la tabla medico.
+    '''</summary>
+    Public Function RegistrarMedico(cedula As String, esp As String) As Boolean
+
+        Dim parametros As New List(Of OdbcParameter)
+        Dim consulta As String = "INSERT INTO medico (cedula, especializacion) VALUES (?,?)"
+        parametros.Add(New OdbcParameter("cedula", cedula))
+        parametros.Add(New OdbcParameter("especializacion", esp))
+
+        If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
+
+            Return True
+
+        End If
+
+        Return False
     End Function
 
 End Class
+
+

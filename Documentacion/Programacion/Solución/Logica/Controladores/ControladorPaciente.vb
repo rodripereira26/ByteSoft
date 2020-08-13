@@ -35,6 +35,7 @@ Public Class ControladorPaciente
         Dim datos As New ModeloPaciente
 
         Return datos.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono, _email, _sexo, _fecNac)
+
     End Function
 
 End Class

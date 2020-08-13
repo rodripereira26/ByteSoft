@@ -88,20 +88,20 @@ Public Class frmIngresarSintomas
 
         If misSintomas.Count > 0 Then
 
-            If sin.guardarSintomas(Datos_Temporales.user_temp, misSintomas) Then
+            If pat.obtenerPatologia(misSintomas).Rows.Count > 0 Then
 
-                If pat.obtenerPatologia(misSintomas).Rows.Count > 0 Then
+                If sin.guardarSintomas(Datos_Temporales.user_temp, misSintomas) Then
 
-                    frmObtenerDiagnostico.dgv11.DataSource = pat.obtenerPatologia(misSintomas)
+                    frmObtenerDiagnostico.dgvPosiblesDiagnosticos.DataSource = pat.obtenerPatologia(misSintomas)
                     frmObtenerDiagnostico.Show()
                     Me.Hide()
-                Else
-                    MsgBox("No se encontraron patologías que contenga los síntomas seleccionados")
 
+                Else
+                    MsgBox("Error al registrar los síntomas")
                 End If
 
             Else
-                MsgBox("Error al registrar los síntomas")
+                MsgBox("No se encontraron patologías que contenga los síntomas seleccionados")
 
             End If
 

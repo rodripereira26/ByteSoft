@@ -215,8 +215,6 @@ Public Class Principal
     '    tEnter.Stop()
     'End Sub
 
-
-
     'Public Sub tleave_Tick() Handles tLeave.Tick
     '    tLeave.Start()
 

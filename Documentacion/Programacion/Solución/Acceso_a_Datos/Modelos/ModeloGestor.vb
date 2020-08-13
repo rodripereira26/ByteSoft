@@ -1,47 +1,87 @@
-﻿'''<summary>
+﻿Imports System.Data.Odbc
+'''<summary>
 '''Clase encargada de las consultas pertenecientes a los administradores.
 '''</summary>
 Public Class ModeloGestor
-    Inherits Conexion
 
     '''<summary>
-    '''Consulta encargada de registar a los usuarios administradores del sistema.
+    '''Consulta encargada de registar a los usuarios administradores del sistema en la tabla usuarios.
     '''</summary>
-    Public Function Registrar(cedula As Integer, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList) As Boolean
+    Public Function Registrar(cedula As String, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList) As Boolean
 
-        Try
-            Command.CommandText = "
-            INSERT INTO 
-                usuario (cedula, contrasena, pNom, sNom, pApe, sApe) 
-            VALUES ('" & cedula & "','" & contraseña & "','" & PrimerNombre & "','" & SegundoNombre & "','" & PrimerApellido & "','" & SegundoApellido & "')"
-            Command.ExecuteNonQuery()
+        Dim consulta As String = "INSERT INTO usuario (cedula, contrasena, pNom, sNom, pApe, sApe) VALUES (?,?,?,?,?,?)"
 
-            Command.CommandText = "
-            INSERT INTO 
-                gestor (cedula) 
-            VALUES ('" & cedula & "')"
-            Command.ExecuteNonQuery()
+        Dim parametros As New List(Of OdbcParameter)
+        parametros.Add(New OdbcParameter("cedula", cedula))
+        parametros.Add(New OdbcParameter("contrasena", contraseña))
+        parametros.Add(New OdbcParameter("pNom", PrimerNombre))
+        parametros.Add(New OdbcParameter("sNom", SegundoNombre))
+        parametros.Add(New OdbcParameter("pApe", PrimerApellido))
+        parametros.Add(New OdbcParameter("sApe", cedula))
 
-            For i = 0 To Telefonos.Count - 1
 
-                Command.CommandText = "
-                INSERT INTO 
-                    usuario_tel (cedula,telefono) 
-                VALUES ('" & cedula & "','" & Telefonos(i) & "')"
+        If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
 
-                Command.ExecuteNonQuery()
+            If RegistrarGestor(cedula) Then
 
-            Next
+                If RegistrarTelefono(cedula, Telefonos) Then
 
-        Catch ex As Exception
+                    Return True
 
-            cerrarConexion()
-            Return False
+                End If
 
-        End Try
+            End If
 
-        cerrarConexion()
-        Return True
+        End If
+
+        Return False
+    End Function
+
+    '''<summary>
+    '''Consulta encargada de registar a los usuarios administradores del sistema en la tabla gestor.
+    '''</summary>
+    Public Function RegistrarGestor(cedula As String) As Boolean
+
+        Dim parametros As New List(Of OdbcParameter)
+        Dim consulta As String = "INSERT INTO gestor (cedula) VALUES (?)"
+        parametros.Add(New OdbcParameter("cedula", cedula))
+
+        If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
+
+            Return True
+
+        End If
+
+        Return False
+    End Function
+
+    '''<summary>
+    '''Consulta encargada de registar los telefonos de los gestores.
+    '''</summary>
+    Public Function RegistrarTelefono(cedula As String, Telefonos As ArrayList)
+
+        Dim consulta = "INSERT INTO usuario_tel (cedula, telefono) VALUES (?,?)"
+        Dim parametros As New List(Of OdbcParameter)
+        Dim contador As Int16 = 0
+
+        For i As Int16 = 0 To Telefonos.Count - 1
+
+            parametros.Clear()
+            parametros.Add(New OdbcParameter("cedula", cedula))
+            parametros.Add(New OdbcParameter("telefono", Telefonos.Item(i)))
+
+            ModeloConsultas.Singleton.InsertParametros(consulta, parametros)
+            contador = +1
+
+        Next
+
+        If contador = Telefonos.Count Then
+
+            Return True
+
+        End If
+
+        Return False
     End Function
 
 End Class
