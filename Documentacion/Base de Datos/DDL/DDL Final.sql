@@ -1,6 +1,6 @@
 /*
 ByteSoft - 2020
-DDL Base de Datos 
+DDL - Creación de tablas
 */
 
 /* Inicio */
@@ -8,7 +8,6 @@ DDL Base de Datos
 	CREATE DATABASE IF NOT EXISTS bytesoft_bdd;
     USE bytesoft_bdd;
     
-SELECT USER(),CURRENT_USER();
     /* Creación de tablas */
     
     CREATE TABLE usuario (
@@ -34,6 +33,7 @@ SELECT USER(),CURRENT_USER();
     
     CREATE TABLE chat (
     idChat INT NOT NULL AUTO_INCREMENT,
+	finalizado BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (idChat)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
     
