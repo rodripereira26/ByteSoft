@@ -971,3 +971,5 @@ C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Deb
 C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.xml
 C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.pdb
 C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.frmListadoChat.resources
+C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.frmChat.resources
+C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.Mensaje.resources

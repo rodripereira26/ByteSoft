@@ -33,5 +33,21 @@ Public Class ControladorChat
 
     End Function
 
+    Public Function enviarMensaje(cedula As String, idchat As Long, mensaje As String, fecha As Date) As Boolean
+
+        Dim chat As New ModeloChat
+
+        If chat.enviarMensaje(cedula, idchat, mensaje, fecha) Then
+            Return True
+        End If
+
+        Return False
+    End Function
+
+    Public Function recargarChat() As DataTable
+        Dim chat As New ModeloChat
+        Return chat.recargarChat(Datos_Temporales.idchat)
+    End Function
+
 
 End Class

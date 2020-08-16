@@ -50,8 +50,8 @@ Public Class Conexion
         dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "root" 'sysMed
         dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "" 'hF69t12lQal6hyiD
 
-        dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "root"
-        dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "" 'yX4H84ZpgNp07kDy
+        dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "sysGest"
+        dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "yX4H84ZpgNp07kDy" 'yX4H84ZpgNp07kDy
 
     End Sub
 

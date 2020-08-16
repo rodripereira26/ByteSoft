@@ -210,10 +210,16 @@
     <Compile Include="Gestor\frmModificarPatologia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Medico\frmChat.Designer.vb">
+    <Compile Include="Medico\Componentes Chat\Mensaje.Designer.vb">
+      <DependentUpon>Mensaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Medico\Componentes Chat\Mensaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medico\Componentes Chat\frmChat.Designer.vb">
       <DependentUpon>frmChat.vb</DependentUpon>
     </Compile>
-    <Compile Include="Medico\frmChat.vb">
+    <Compile Include="Medico\Componentes Chat\frmChat.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Paciente\frmHistorialPatologia.Designer.vb">
@@ -369,6 +375,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmModificarPatologia.resx">
       <DependentUpon>frmModificarPatologia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medico\Componentes Chat\frmChat.resx">
+      <DependentUpon>frmChat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medico\Componentes Chat\Mensaje.resx">
+      <DependentUpon>Mensaje.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paciente\frmHistorialPatologia.resx">
       <DependentUpon>frmHistorialPatologia.vb</DependentUpon>

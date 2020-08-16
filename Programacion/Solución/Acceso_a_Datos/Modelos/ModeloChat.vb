@@ -44,4 +44,25 @@ Public Class ModeloChat
 
     End Function
 
+    Public Function enviarMensaje(cedula As String, idChat As Long, mensaje As String, fechaEnvio As Date)
+
+        Dim consulta As String = "INSERT INTO mensaje (cedula, idChat, mensaje, fechaEnvio) VALUES (?,?,?,?)"
+        Dim parametros As New List(Of OdbcParameter)
+
+        parametros.Add(New OdbcParameter("cedula", cedula))
+        parametros.Add(New OdbcParameter("idChat", idChat))
+        parametros.Add(New OdbcParameter("mensaje", mensaje))
+        parametros.Add(New OdbcParameter("fechaEnvio", fechaEnvio))
+
+        Return ModeloConsultas.Singleton.InsertParametros(consulta, parametros)
+    End Function
+
+    Public Function recargarChat(idChat As Long) As DataTable
+
+        Dim consulta = "SELECT cedula, mensaje, fecha FROM mensaje WHERE idChat = " + idChat
+
+        Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
+
+    End Function
+
 End Class
