@@ -22,6 +22,13 @@ Partial Class frmBienvenidaGestor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pnlAjustes = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -56,6 +63,14 @@ Partial Class frmBienvenidaGestor
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.pnlListadoPacientes = New System.Windows.Forms.Panel()
+        Me.lblTituloLIstadoPacientes = New System.Windows.Forms.Label()
+        Me.dgvListadoPacientes = New System.Windows.Forms.DataGridView()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnRefrescarListadoPac = New System.Windows.Forms.Button()
+        Me.btnNotificacion = New System.Windows.Forms.Button()
+        Me.Rechazar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Aceptar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.pnlAjustes.SuspendLayout()
         Me.pnlMiPerfil.SuspendLayout()
         Me.pnlAyuda.SuspendLayout()
@@ -64,6 +79,8 @@ Partial Class frmBienvenidaGestor
         Me.pnlPatologias.SuspendLayout()
         Me.pnlSintomas.SuspendLayout()
         Me.pnlUsuarios.SuspendLayout()
+        Me.pnlListadoPacientes.SuspendLayout()
+        CType(Me.dgvListadoPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label5
@@ -157,7 +174,7 @@ Partial Class frmBienvenidaGestor
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(17, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(135, 38)
+        Me.Label9.Size = New System.Drawing.Size(136, 38)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
@@ -199,7 +216,7 @@ Partial Class frmBienvenidaGestor
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(105, 38)
+        Me.Label11.Size = New System.Drawing.Size(106, 38)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
@@ -294,9 +311,9 @@ Partial Class frmBienvenidaGestor
         Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(20, 81)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(247, 74)
+        Me.Label14.Size = New System.Drawing.Size(247, 57)
         Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Habilitar pacientes o registrar un médico a la aplicación"
+        Me.Label14.Text = "Registrar médicos y gestores en la aplicación"
         '
         'pnlPatologias
         '
@@ -424,12 +441,144 @@ Partial Class frmBienvenidaGestor
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Usuarios"
         '
+        'pnlListadoPacientes
+        '
+        Me.pnlListadoPacientes.Controls.Add(Me.btnRefrescarListadoPac)
+        Me.pnlListadoPacientes.Controls.Add(Me.lblTituloLIstadoPacientes)
+        Me.pnlListadoPacientes.Controls.Add(Me.dgvListadoPacientes)
+        Me.pnlListadoPacientes.Location = New System.Drawing.Point(701, 62)
+        Me.pnlListadoPacientes.Name = "pnlListadoPacientes"
+        Me.pnlListadoPacientes.Size = New System.Drawing.Size(260, 451)
+        Me.pnlListadoPacientes.TabIndex = 24
+        Me.pnlListadoPacientes.Visible = False
+        '
+        'lblTituloLIstadoPacientes
+        '
+        Me.lblTituloLIstadoPacientes.AutoSize = True
+        Me.lblTituloLIstadoPacientes.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTituloLIstadoPacientes.ForeColor = System.Drawing.Color.White
+        Me.lblTituloLIstadoPacientes.Location = New System.Drawing.Point(63, 8)
+        Me.lblTituloLIstadoPacientes.Name = "lblTituloLIstadoPacientes"
+        Me.lblTituloLIstadoPacientes.Size = New System.Drawing.Size(135, 19)
+        Me.lblTituloLIstadoPacientes.TabIndex = 147
+        Me.lblTituloLIstadoPacientes.Text = "Habilitar pacientes"
+        '
+        'dgvListadoPacientes
+        '
+        Me.dgvListadoPacientes.AllowUserToAddRows = False
+        Me.dgvListadoPacientes.AllowUserToDeleteRows = False
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvListadoPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        Me.dgvListadoPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvListadoPacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvListadoPacientes.BackgroundColor = System.Drawing.Color.White
+        Me.dgvListadoPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvListadoPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvListadoPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.dgvListadoPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListadoPacientes.ColumnHeadersVisible = False
+        Me.dgvListadoPacientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Rechazar, Me.Aceptar})
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle17.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoPacientes.DefaultCellStyle = DataGridViewCellStyle17
+        Me.dgvListadoPacientes.EnableHeadersVisualStyles = False
+        Me.dgvListadoPacientes.Location = New System.Drawing.Point(0, 39)
+        Me.dgvListadoPacientes.MultiSelect = False
+        Me.dgvListadoPacientes.Name = "dgvListadoPacientes"
+        Me.dgvListadoPacientes.ReadOnly = True
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoPacientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
+        Me.dgvListadoPacientes.RowHeadersVisible = False
+        Me.dgvListadoPacientes.RowHeadersWidth = 51
+        Me.dgvListadoPacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvListadoPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvListadoPacientes.Size = New System.Drawing.Size(257, 409)
+        Me.dgvListadoPacientes.TabIndex = 146
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 6000
+        '
+        'btnRefrescarListadoPac
+        '
+        Me.btnRefrescarListadoPac.FlatAppearance.BorderSize = 0
+        Me.btnRefrescarListadoPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRefrescarListadoPac.Image = Global.Vista.My.Resources.Resources.icons8_refresh_20px
+        Me.btnRefrescarListadoPac.Location = New System.Drawing.Point(224, 3)
+        Me.btnRefrescarListadoPac.Name = "btnRefrescarListadoPac"
+        Me.btnRefrescarListadoPac.Size = New System.Drawing.Size(28, 30)
+        Me.btnRefrescarListadoPac.TabIndex = 25
+        Me.btnRefrescarListadoPac.UseVisualStyleBackColor = True
+        '
+        'btnNotificacion
+        '
+        Me.btnNotificacion.FlatAppearance.BorderSize = 0
+        Me.btnNotificacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnNotificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNotificacion.Image = Global.Vista.My.Resources.Resources.icons8_bell_35px
+        Me.btnNotificacion.Location = New System.Drawing.Point(838, 3)
+        Me.btnNotificacion.Name = "btnNotificacion"
+        Me.btnNotificacion.Size = New System.Drawing.Size(43, 44)
+        Me.btnNotificacion.TabIndex = 23
+        Me.btnNotificacion.UseVisualStyleBackColor = True
+        '
+        'Rechazar
+        '
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Rechazar.DefaultCellStyle = DataGridViewCellStyle15
+        Me.Rechazar.HeaderText = "Rechazar"
+        Me.Rechazar.Name = "Rechazar"
+        Me.Rechazar.ReadOnly = True
+        Me.Rechazar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Rechazar.Text = "rechazar"
+        '
+        'Aceptar
+        '
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Aceptar.DefaultCellStyle = DataGridViewCellStyle16
+        Me.Aceptar.HeaderText = "Aceptar"
+        Me.Aceptar.Name = "Aceptar"
+        Me.Aceptar.ReadOnly = True
+        Me.Aceptar.Text = "aceptar"
+        '
         'frmBienvenidaGestor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(981, 551)
+        Me.Controls.Add(Me.pnlListadoPacientes)
+        Me.Controls.Add(Me.btnNotificacion)
         Me.Controls.Add(Me.pnlUsuarios)
         Me.Controls.Add(Me.pnlSintomas)
         Me.Controls.Add(Me.pnlPatologias)
@@ -460,6 +609,9 @@ Partial Class frmBienvenidaGestor
         Me.pnlSintomas.PerformLayout()
         Me.pnlUsuarios.ResumeLayout(False)
         Me.pnlUsuarios.PerformLayout()
+        Me.pnlListadoPacientes.ResumeLayout(False)
+        Me.pnlListadoPacientes.PerformLayout()
+        CType(Me.dgvListadoPacientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -497,5 +649,13 @@ Partial Class frmBienvenidaGestor
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents btnNotificacion As Button
+    Friend WithEvents pnlListadoPacientes As Panel
+    Friend WithEvents lblTituloLIstadoPacientes As Label
+    Friend WithEvents dgvListadoPacientes As DataGridView
+    Friend WithEvents btnRefrescarListadoPac As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Rechazar As DataGridViewButtonColumn
+    Friend WithEvents Aceptar As DataGridViewButtonColumn
 End Class
 

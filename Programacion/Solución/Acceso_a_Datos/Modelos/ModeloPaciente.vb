@@ -5,6 +5,22 @@
 Public Class ModeloPaciente
 
     '''<summary>
+    '''Consulta encargada de verificar si el paciente fue ingresado.
+    '''</summary>
+    Public Function VerificarEstado(cedula As String) As Boolean
+
+        Dim consulta = "SELECT verificacion FROM paciente WHERE cedula = " + cedula
+
+        If ModeloConsultas.Singleton.ConsultaCampo(consulta) = 1 Then
+            Return True
+        Else
+            Return False
+        End If
+
+        Return False
+    End Function
+
+    '''<summary>
     '''Consulta encargada de registrar a los usuarios pacientes en la tabla usuario.
     '''</summary>
     Public Function Registrar(cedula As String, contraseña As String, PrimerNombre As String, SegundoNombre As String, PrimerApellido As String, SegundoApellido As String, Telefonos As ArrayList, Mail As String, sexo As String, FechaNacimiento As String) As Boolean
@@ -89,5 +105,7 @@ Public Class ModeloPaciente
 
         Return False
     End Function
-
+    Public Function traerPacientes() As DataTable
+        Return ModeloConsultas.Singleton.ConsultaTabla("SELECT cedula FROM paciente WHERE verificacion= ")
+    End Function
 End Class

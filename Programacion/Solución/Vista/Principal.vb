@@ -3,11 +3,8 @@ Imports MaterialSkin
 
 Public Class Principal
 
-    'Private WithEvents tEnter As New Timer
-    'Private WithEvents tLeave As New Timer
-    'Dim obj As New Panel
-    Dim drag As Boolean
-    Dim mousex, mousey As Integer
+    Private drag As Boolean
+    Private mousex, mousey As Integer
 
     Public Sub roundedCorners(rect As Object)
 

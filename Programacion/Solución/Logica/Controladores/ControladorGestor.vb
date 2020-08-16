@@ -5,7 +5,9 @@
 '''</summary>
 Public Class ControladorGestor
     Inherits ControladorUsuario
+    Public Sub New()
 
+    End Sub
     Public Sub New(ci As String, contraseña As String, pNom As String, Snom As String, PApe As String, SApe As String, telefono As ArrayList,
                   email As String)
 
@@ -27,6 +29,25 @@ Public Class ControladorGestor
         Dim datos As New ModeloGestor
 
         Return datos.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono)
+    End Function
+
+    Public Function listarPacientes() As DataTable
+
+        Dim datos As New ModeloGestor
+
+        Return datos.ListarPacientes
+    End Function
+    Public Function eliminar(cedula As String) As Boolean
+
+        Dim datos As New ModeloGestor
+        Return datos.eliminar(cedula)
+
+    End Function
+    Public Function habilitar(cedula As String) As Boolean
+
+        Dim datos As New ModeloGestor
+        Return datos.habilitarPaciente(cedula)
+
     End Function
 
 End Class

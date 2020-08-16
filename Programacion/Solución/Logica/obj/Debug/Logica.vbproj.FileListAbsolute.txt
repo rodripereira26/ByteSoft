@@ -119,3 +119,17 @@ C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\
 C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.dll
 C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.xml
 C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\Solución\Logica\obj\Debug\Logica.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.CoreCompileInputs.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Debug\Logica.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Debug\Logica.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Debug\Logica.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.CopyComplete

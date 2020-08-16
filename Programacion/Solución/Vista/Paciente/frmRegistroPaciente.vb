@@ -52,7 +52,7 @@ Public Class frmRegistroPaciente
 
                                 If pac.registrar() Then
 
-                                    MsgBox("Paciente registrado con éxito")
+                                    MsgBox("Paciente registrado, debe esperar a ser habilitiado")
                                     p.limpiar(txtCed, txtPass1, txtPass2, txtPrimerNombre,
                                             txtPrimerApellido,
                                             txtSegundoApellido, txtSegundoNombre,

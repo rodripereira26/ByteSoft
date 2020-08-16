@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -146,6 +146,36 @@ Namespace My.Resources
         Friend ReadOnly Property icons8_arrow_pointing_left_24px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8_arrow_pointing_left_24px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_bell_24px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_bell_24px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_bell_35px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_bell_35px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_bell_48px_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_bell_48px_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -286,6 +316,46 @@ Namespace My.Resources
         Friend ReadOnly Property icons8_long_arrow_left_32px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8_long_arrow_left_32px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_refresh_10px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_refresh_10px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_refresh_20px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_refresh_20px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_refresh_20px_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_refresh_20px_1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_refresh_35px_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_refresh_35px_1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

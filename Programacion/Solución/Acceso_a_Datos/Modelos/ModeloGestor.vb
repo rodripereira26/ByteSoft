@@ -84,4 +84,31 @@ Public Class ModeloGestor
         Return False
     End Function
 
+    Public Function ListarPacientes() As DataTable
+
+        Dim consulta = "SELECT paciente.cedula FROM paciente, usuario WHERE paciente.verificacion = 0 and usuario.bajaLogica = 0 and paciente.cedula=usuario.cedula"
+        Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
+
+    End Function
+
+    Public Function habilitarPaciente(cedula As String) As Boolean
+
+        Dim consulta As String = "UPDATE paciente SET verificacion = 1 WHERE cedula=" + cedula
+
+        If ModeloConsultas.Singleton.InsertarSinParametros(consulta) Then
+
+            Return True
+        End If
+        Return False
+    End Function
+
+    Public Function eliminar(cedula As String) As Boolean
+        Dim consulta As String = "UPDATE usuario SET bajaLogica = 1 WHERE cedula=" + cedula
+        If ModeloConsultas.Singleton.InsertarSinParametros(consulta) Then
+
+            Return True
+        End If
+        Return False
+    End Function
+
 End Class

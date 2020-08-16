@@ -143,8 +143,14 @@ Public Class frmLogin
                             Me.Hide()
 
                         Case "P"
-                            frmBienvenidaPaciente.Show()
-                            Me.Hide()
+                            Dim paciente As New ControladorPaciente
+
+                            If paciente.verificar Then
+                                frmBienvenidaPaciente.Show()
+                                Me.Hide()
+                            Else
+                                MsgBox("Usted no ha sido habilitado para ingresar al sistema")
+                            End If
 
                         Case "M"
                             frmBienvenidaMedico.Show()

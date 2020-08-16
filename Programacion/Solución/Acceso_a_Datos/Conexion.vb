@@ -8,8 +8,8 @@ Public Class Conexion
     Private Shared instance As Conexion
 
     Private Const dsn As String = "driverODBC"
-    Private Const Port As String = "3306"
-    Private Const DatabaseName As String = "bdd_proyecto2"
+    Private Const Port As String = "3308"
+    Private Const DatabaseName As String = "bytesoft_bdd"
     Private Host As String = "localhost"
     Private dblogin(,) As String = New String(4, 2) {}
 
@@ -41,8 +41,8 @@ Public Class Conexion
 
     Public Sub New()
 
-        dblogin(EnumDbLogin.aux, TipoDbLogin.user) = "sysAux"
-        dblogin(EnumDbLogin.aux, TipoDbLogin.pass) = "1DWbt9hj8xdk3C72"
+        dblogin(EnumDbLogin.aux, TipoDbLogin.user) = "root"
+        dblogin(EnumDbLogin.aux, TipoDbLogin.pass) = "" '1DWbt9hj8xdk3C72
 
         dblogin(EnumDbLogin.paciente, TipoDbLogin.user) = "sysPac"
         dblogin(EnumDbLogin.paciente, TipoDbLogin.pass) = "dV23UTXFZRbinBz3"
@@ -50,8 +50,8 @@ Public Class Conexion
         dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "sysMed"
         dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "hF69t12lQal6hyiD"
 
-        dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "sysGest"
-        dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "yX4H84ZpgNp07kDy"
+        dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "root"
+        dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "" 'yX4H84ZpgNp07kDy
 
     End Sub
 

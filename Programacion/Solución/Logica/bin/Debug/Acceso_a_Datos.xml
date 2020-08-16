@@ -67,6 +67,11 @@ Consulta encargada de registar a los usuarios médicos del sistema en la tabla m
 Clase encargada de las consultas pertenecientes a los pacientes.
 </summary>
 </member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.VerificarEstado(System.String)">
+<summary>
+Consulta encargada de verificar si el paciente fue ingresado.
+</summary>
+</member>
 <member name="M:Acceso_a_Datos.ModeloPaciente.Registrar(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList,System.String,System.String,System.String)">
 <summary>
 Consulta encargada de registrar a los usuarios pacientes en la tabla usuario.

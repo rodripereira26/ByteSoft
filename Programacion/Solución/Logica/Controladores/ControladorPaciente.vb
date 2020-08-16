@@ -37,5 +37,12 @@ Public Class ControladorPaciente
         Return datos.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono, _email, _sexo, _fecNac)
 
     End Function
+    ' Public Function traerPacientes() As Boolean
+    ' Return
+    '  End Function
 
+    Public Function verificar() As Boolean
+        Dim datos As New ModeloPaciente
+        Return datos.VerificarEstado(_ci)
+    End Function
 End Class
