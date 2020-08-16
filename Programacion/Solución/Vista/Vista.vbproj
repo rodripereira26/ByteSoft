@@ -210,6 +210,12 @@
     <Compile Include="Gestor\frmModificarPatologia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Medico\frmChat.Designer.vb">
+      <DependentUpon>frmChat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Medico\frmChat.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Paciente\frmHistorialPatologia.Designer.vb">
       <DependentUpon>frmHistorialPatologia.vb</DependentUpon>
     </Compile>
@@ -270,10 +276,10 @@
     <Compile Include="Medico\frmBienvenidaMedico.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Medico\frmChat.Designer.vb">
-      <DependentUpon>frmChat.vb</DependentUpon>
+    <Compile Include="Medico\frmListadoChat.Designer.vb">
+      <DependentUpon>frmListadoChat.vb</DependentUpon>
     </Compile>
-    <Compile Include="Medico\frmChat.vb">
+    <Compile Include="Medico\frmListadoChat.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Paciente\frmIngresarSintomas.Designer.vb">
@@ -394,8 +400,8 @@
     <EmbeddedResource Include="Medico\frmBienvenidaMedico.resx">
       <DependentUpon>frmBienvenidaMedico.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Medico\frmChat.resx">
-      <DependentUpon>frmChat.vb</DependentUpon>
+    <EmbeddedResource Include="Medico\frmListadoChat.resx">
+      <DependentUpon>frmListadoChat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paciente\frmIngresarSintomas.resx">
       <DependentUpon>frmIngresarSintomas.vb</DependentUpon>

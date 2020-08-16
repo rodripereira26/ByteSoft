@@ -8,7 +8,7 @@ Public Class Conexion
     Private Shared instance As Conexion
 
     Private Const dsn As String = "driverODBC"
-    Private Const Port As String = "3308"
+    Private Const Port As String = "3306"
     Private Const DatabaseName As String = "bytesoft_bdd"
     Private Host As String = "localhost"
     Private dblogin(,) As String = New String(4, 2) {}

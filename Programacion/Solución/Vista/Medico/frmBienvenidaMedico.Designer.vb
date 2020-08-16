@@ -22,6 +22,7 @@ Partial Class frmBienvenidaMedico
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,6 +44,7 @@ Partial Class frmBienvenidaMedico
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -51,7 +53,7 @@ Partial Class frmBienvenidaMedico
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -100,7 +102,7 @@ Partial Class frmBienvenidaMedico
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(22, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 39)
+        Me.Label1.Size = New System.Drawing.Size(83, 38)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Chat"
         '
@@ -142,7 +144,7 @@ Partial Class frmBienvenidaMedico
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(22, 33)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(181, 39)
+        Me.Label4.Size = New System.Drawing.Size(181, 38)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Mi Historial"
         '
@@ -184,7 +186,7 @@ Partial Class frmBienvenidaMedico
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(22, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 39)
+        Me.Label7.Size = New System.Drawing.Size(125, 38)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Ajustes"
         '
@@ -226,7 +228,7 @@ Partial Class frmBienvenidaMedico
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(3, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(136, 39)
+        Me.Label9.Size = New System.Drawing.Size(136, 38)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
@@ -268,7 +270,7 @@ Partial Class frmBienvenidaMedico
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 39)
+        Me.Label11.Size = New System.Drawing.Size(106, 38)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
@@ -281,6 +283,17 @@ Partial Class frmBienvenidaMedico
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(780, 80)
         Me.Panel6.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(59, 38)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(224, 29)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "Bienvenido, Médico"
         '
         'Button1
         '
@@ -307,9 +320,9 @@ Partial Class frmBienvenidaMedico
         Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(815, 9)
+        Me.Label12.Location = New System.Drawing.Point(823, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 35)
+        Me.Label12.Size = New System.Drawing.Size(24, 32)
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "_"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -319,7 +332,7 @@ Partial Class frmBienvenidaMedico
         Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(845, 9)
+        Me.Label13.Location = New System.Drawing.Point(848, 6)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(43, 35)
         Me.Label13.TabIndex = 21
@@ -364,27 +377,21 @@ Partial Class frmBienvenidaMedico
         Me.Label15.ForeColor = System.Drawing.Color.White
         Me.Label15.Location = New System.Drawing.Point(11, 27)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(168, 39)
+        Me.Label15.Size = New System.Drawing.Size(168, 38)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "Patologías"
         '
-        'Label5
+        'Timer1
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(59, 38)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(224, 29)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Bienvenido, Médico"
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 4000
         '
         'frmBienvenidaMedico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(903, 500)
+        Me.ClientSize = New System.Drawing.Size(915, 530)
         Me.Controls.Add(Me.Panel12)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
@@ -446,5 +453,6 @@ Partial Class frmBienvenidaMedico
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Timer1 As Timer
 End Class
 

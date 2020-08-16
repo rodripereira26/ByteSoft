@@ -154,6 +154,19 @@
         Me.Close()
     End Sub
 
+    Private Sub pnlListadoPacientes_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    End Sub
+
+    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
+        frmListadoChat.Show()
+        Me.Dispose()
+    End Sub
+
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
         drag = False
     End Sub

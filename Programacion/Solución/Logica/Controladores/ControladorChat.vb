@@ -5,7 +5,7 @@ Public Class ControladorChat
     Public Function crearChat()
 
         Dim chat As New ModeloChat
-        dim id as int16 = chat.crearChat
+        Dim id As int16 = chat.crearChat
 
         If id <> 0 Then
 
@@ -14,10 +14,24 @@ Public Class ControladorChat
 
         End If
 
-        return false
+        Return False
     End Function
 
+    Public Function entrarChat(cedula As String, id As Int32)
 
+        Dim chat As New ModeloChat
+
+        Return chat.entrarChat(cedula, id)
+
+    End Function
+
+    Public Function listarChat() As DataTable
+
+
+        Dim chat As New ModeloChat
+        Return chat.listarChat
+
+    End Function
 
 
 End Class

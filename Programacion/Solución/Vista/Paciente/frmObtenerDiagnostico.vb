@@ -44,9 +44,17 @@ Public Class frmObtenerDiagnostico
     End Sub
 
     Private Sub btnSolicitarChat_Click(sender As Object, e As EventArgs) Handles btnSolicitarChat.Click
+
         Dim chat As New ControladorChat
-        chat.crearChat()
-msgbox(Datos_Temporales.idchat)
+
+        If chat.crearChat() <> 0 Then
+            If chat.entrarChat(Datos_Temporales.user_temp, Datos_Temporales.idchat) Then
+                MsgBox("Se ha enviado una solicitud de chat")
+            Else
+                MsgBox("Error al enviar solicitud de chat")
+            End If
+        End If
+
     End Sub
 
 End Class
