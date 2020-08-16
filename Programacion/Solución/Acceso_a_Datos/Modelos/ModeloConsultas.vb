@@ -73,5 +73,4 @@ Public Class ModeloConsultas
         Return False
     End Function
 
-
 End Class

@@ -41,8 +41,8 @@ Public Class ControladorPaciente
     ' Return
     '  End Function
 
-    Public Function verificar() As Boolean
+    Public Function verificar(ci as string) As Boolean
         Dim datos As New ModeloPaciente
-        Return datos.VerificarEstado(_ci)
+        Return datos.VerificarEstado(ci)
     End Function
 End Class

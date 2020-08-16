@@ -42,4 +42,11 @@ Public Class frmObtenerDiagnostico
         frmIngresarSintomas.Visible = True
         Me.Dispose()
     End Sub
+
+    Private Sub btnSolicitarChat_Click(sender As Object, e As EventArgs) Handles btnSolicitarChat.Click
+        Dim chat As New ControladorChat
+        chat.crearChat()
+msgbox(Datos_Temporales.idchat)
+    End Sub
+
 End Class

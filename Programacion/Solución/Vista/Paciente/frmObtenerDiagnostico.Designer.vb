@@ -32,6 +32,7 @@ Partial Class frmObtenerDiagnostico
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.dgvPosiblesDiagnosticos = New System.Windows.Forms.DataGridView()
+        Me.btnSolicitarChat = New MaterialSkin.Controls.MaterialFlatButton()
         Me.UserControl11 = New Vista.UserControl1()
         Me.pnlTituloPatologia.SuspendLayout()
         CType(Me.dgvPosiblesDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,14 +155,30 @@ Partial Class frmObtenerDiagnostico
         Me.dgvPosiblesDiagnosticos.RowHeadersWidth = 51
         Me.dgvPosiblesDiagnosticos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvPosiblesDiagnosticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPosiblesDiagnosticos.Size = New System.Drawing.Size(1006, 601)
+        Me.dgvPosiblesDiagnosticos.Size = New System.Drawing.Size(1006, 541)
         Me.dgvPosiblesDiagnosticos.TabIndex = 146
+        '
+        'btnSolicitarChat
+        '
+        Me.btnSolicitarChat.AutoSize = True
+        Me.btnSolicitarChat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnSolicitarChat.Depth = 0
+        Me.btnSolicitarChat.Icon = Nothing
+        Me.btnSolicitarChat.Location = New System.Drawing.Point(393, 636)
+        Me.btnSolicitarChat.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnSolicitarChat.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnSolicitarChat.Name = "btnSolicitarChat"
+        Me.btnSolicitarChat.Primary = False
+        Me.btnSolicitarChat.Size = New System.Drawing.Size(215, 36)
+        Me.btnSolicitarChat.TabIndex = 149
+        Me.btnSolicitarChat.Text = "solicitar chat con médico"
+        Me.btnSolicitarChat.UseVisualStyleBackColor = True
         '
         'UserControl11
         '
         Me.UserControl11.BackColor = System.Drawing.Color.White
         Me.UserControl11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.UserControl11.Location = New System.Drawing.Point(199, 98)
+        Me.UserControl11.Location = New System.Drawing.Point(200, 77)
         Me.UserControl11.Name = "UserControl11"
         Me.UserControl11.Size = New System.Drawing.Size(607, 541)
         Me.UserControl11.TabIndex = 148
@@ -171,7 +188,9 @@ Partial Class frmObtenerDiagnostico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1004, 677)
+        Me.Controls.Add(Me.btnSolicitarChat)
         Me.Controls.Add(Me.UserControl11)
         Me.Controls.Add(Me.pnlTituloPatologia)
         Me.Controls.Add(Me.dgvPosiblesDiagnosticos)
@@ -182,6 +201,7 @@ Partial Class frmObtenerDiagnostico
         Me.pnlTituloPatologia.ResumeLayout(False)
         CType(Me.dgvPosiblesDiagnosticos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents pnlTituloPatologia As Panel
@@ -191,4 +211,5 @@ Partial Class frmObtenerDiagnostico
     Friend WithEvents dgvPosiblesDiagnosticos As DataGridView
     Friend WithEvents UserControl11 As UserControl1
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnSolicitarChat As MaterialSkin.Controls.MaterialFlatButton
 End Class

@@ -44,11 +44,11 @@ Public Class Conexion
         dblogin(EnumDbLogin.aux, TipoDbLogin.user) = "root"
         dblogin(EnumDbLogin.aux, TipoDbLogin.pass) = "" '1DWbt9hj8xdk3C72
 
-        dblogin(EnumDbLogin.paciente, TipoDbLogin.user) = "sysPac"
-        dblogin(EnumDbLogin.paciente, TipoDbLogin.pass) = "dV23UTXFZRbinBz3"
+        dblogin(EnumDbLogin.paciente, TipoDbLogin.user) = "root"
+        dblogin(EnumDbLogin.paciente, TipoDbLogin.pass) = "" 'dV23UTXFZRbinBz3
 
-        dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "sysMed"
-        dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "hF69t12lQal6hyiD"
+        dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "root" 'sysMed
+        dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "" 'hF69t12lQal6hyiD
 
         dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "root"
         dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "" 'yX4H84ZpgNp07kDy

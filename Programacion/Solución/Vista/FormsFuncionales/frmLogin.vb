@@ -145,7 +145,7 @@ Public Class frmLogin
                         Case "P"
                             Dim paciente As New ControladorPaciente
 
-                            If paciente.verificar Then
+                            If paciente.verificar(txtUsr.text) Then
                                 frmBienvenidaPaciente.Show()
                                 Me.Hide()
                             Else
