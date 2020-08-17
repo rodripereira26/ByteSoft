@@ -132,7 +132,7 @@
     End Sub
 
     Private Sub Panel1_MouseHover_1(sender As Object, e As EventArgs) Handles Panel1.MouseHover
-        hover(Panel1)
+        'hover(Panel1)
     End Sub
     Private Sub Panel2_MouseHover(sender As Object, e As EventArgs) Handles Panel2.MouseHover
         hover(Panel2)

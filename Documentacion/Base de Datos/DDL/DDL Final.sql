@@ -42,7 +42,7 @@ DDL - Creación de tablas
     fechaEnvio DATETIME NOT NULL,
     cedula INT (9) NOT NULL,
     idChat INT NOT NULL,
-    mensaje MEDIUMBLOB NOT NULL,
+    mensaje VARCHAR(300) NOT NULL,
     PRIMARY KEY (idMensaje, fechaEnvio),
     CONSTRAINT fk_chat_cedula FOREIGN KEY (cedula) REFERENCES usuario (cedula),
     CONSTRAINT fk_chat_idChat FOREIGN KEY (idChat) REFERENCES chat (idChat)
@@ -74,7 +74,7 @@ DDL - Creación de tablas
     CREATE TABLE sintoma (
     idSintoma INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR (25) NOT NULL,
-    descripcion VARCHAR (50) NOT NULL,
+    descripcion VARCHAR (550) NOT NULL,
     bajalogica BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (idSintoma),
     UNIQUE (nombre)
@@ -83,8 +83,8 @@ DDL - Creación de tablas
 	CREATE TABLE patologia (
     idPatologia INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR (25) NOT NULL,
-    descripcion VARCHAR (25) NOT NULL,
-    recomendacion VARCHAR (60) NOT NULL,
+    descripcion VARCHAR (550) NOT NULL,
+    recomendacion VARCHAR (550) NOT NULL,
     prioridad TINYINT (1) NOT NULL,
     bajalogica BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (idPatologia),

@@ -1,4 +1,5 @@
 ﻿Imports Acceso_a_Datos
+
 '''<summary>
 '''Clase principal para los datos de los usuarios.
 '''</summary>
@@ -44,16 +45,13 @@ Public Class ControladorUsuario
 
     Public Function verificarUsuario(usuario As String, pass As String) As Boolean
 
-        Dim datos As New ModeloUsuario
+        Return ModeloUsuario.Singleton.verificarUsuario(usuario, pass)
 
-        Return datos.verificarUsuario(usuario, pass)
     End Function
 
     Public Function verificarRol(usuario As String)
 
-        Dim datos As New ModeloUsuario
-
-        Return datos.verificarRol(usuario)
+        Return ModeloUsuario.Singleton.verificarRol(usuario)
 
     End Function
 

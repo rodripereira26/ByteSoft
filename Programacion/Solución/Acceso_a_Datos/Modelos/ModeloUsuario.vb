@@ -1,5 +1,16 @@
 ﻿Public Class ModeloUsuario
 
+    Private Shared instancia As ModeloUsuario
+
+    Public Shared Function Singleton() As ModeloUsuario
+
+        If instancia Is Nothing Then
+            instancia = New ModeloUsuario
+        End If
+
+        Return instancia
+    End Function
+
     '''<summary>
     '''Consulta encargada de verificar si el usuario y contraseña ingresados coinciden en la base de datos.
     '''</summary>

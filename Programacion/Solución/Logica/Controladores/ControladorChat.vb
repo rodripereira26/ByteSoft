@@ -4,8 +4,7 @@ Public Class ControladorChat
 
     Public Function crearChat()
 
-        Dim chat As New ModeloChat
-        Dim id As int16 = chat.crearChat
+        Dim id As Int16 = ModeloChat.Singleton.crearChat
 
         If id <> 0 Then
 
@@ -19,25 +18,19 @@ Public Class ControladorChat
 
     Public Function entrarChat(cedula As String, id As Int32)
 
-        Dim chat As New ModeloChat
-
-        Return chat.entrarChat(cedula, id)
+        Return ModeloChat.Singleton.entrarChat(cedula, id)
 
     End Function
 
     Public Function listarChat() As DataTable
 
-
-        Dim chat As New ModeloChat
-        Return chat.listarChat
+        Return ModeloChat.Singleton.listarChat
 
     End Function
 
     Public Function enviarMensaje(cedula As String, idchat As Long, mensaje As String, fecha As Date) As Boolean
 
-        Dim chat As New ModeloChat
-
-        If chat.enviarMensaje(cedula, idchat, mensaje, fecha) Then
+        If ModeloChat.Singleton.enviarMensaje(cedula, idchat, mensaje, fecha) Then
             Return True
         End If
 
@@ -45,16 +38,30 @@ Public Class ControladorChat
     End Function
 
     Public Function recargarChat() As DataTable
-        Dim chat As New ModeloChat
-        Return chat.recargarChat(Datos_Temporales.idchat)
+
+        Return ModeloChat.Singleton.recargarChat(Datos_Temporales.idchat)
+
     End Function
 
     Public Function obtenerRespuesta()
 
-        Dim chat As New ModeloChat
+        Return ModeloChat.Singleton.obtenerRespuesta(Datos_Temporales.idchat)
 
-        Return chat.obtenerRespuesta(Datos_Temporales.idchat)
+    End Function
 
+    Public Function finalizarChat()
+
+        Return ModeloChat.Singleton.finalizarChat(Datos_Temporales.idchat)
+
+    End Function
+
+    Public Function verificarCedula(idChat As String) As Boolean
+
+        If ModeloChat.Singleton.verificarCedula(Datos_Temporales.user_temp, idChat) = 0 Then
+            Return True
+        End If
+
+        Return False
     End Function
 
 

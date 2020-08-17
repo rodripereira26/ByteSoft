@@ -1,20 +1,19 @@
 ﻿Imports Logica
 Public Class frmRegistrarMedico
 
-    Dim p As New Principal
     Dim check As New Verificacion
 
     Private Sub RegistrarMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        p.roundedCorners(Me)
+        Principal.Singleton.roundedCorners(Me)
         Label1.Select()
 
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
-        If p.verificarCedula(check, txtCed.Text) Then
-            If p.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
+        If Principal.Singleton.verificarCedula(check, txtCed.Text) Then
+            If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
                 If check.verificar_string(txtEspe.Text) Then
 
                     Dim med As New ControladorMedico(
@@ -41,14 +40,15 @@ Public Class frmRegistrarMedico
     End Sub
 
     Private Sub pnlTitulo_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseDown
-        p.moverVentanaDown(Me)
+        Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub pnlTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseMove
-        p.moverVentanaMove(Me)
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Private Sub pnlTitulo_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseUp
-        p.moverVentanaUp()
+        Principal.Singleton.moverVentanaUp()
     End Sub
+
 End Class

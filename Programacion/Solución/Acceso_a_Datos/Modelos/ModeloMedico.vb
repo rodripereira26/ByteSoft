@@ -5,6 +5,17 @@
 '''</summary>
 Public Class ModeloMedico
 
+    Private Shared instancia As ModeloMedico
+
+    Public Shared Function Singleton() As ModeloMedico
+
+        If instancia Is Nothing Then
+            instancia = New ModeloMedico
+        End If
+
+        Return instancia
+    End Function
+
     '''<summary>
     '''Consulta encargada de registar a los usuarios médicos del sistema en la tabla usuarios.
     '''</summary>

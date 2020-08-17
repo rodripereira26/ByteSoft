@@ -1,14 +1,14 @@
 ﻿Imports Logica
 
 Public Class frmIngresarSintomas
-    Dim sourcedgv As String
 
+    Dim sourcedgv As String
     Dim dv As New DataView
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.MaterialRaisedButton1.AutoSize = False
-        Dim p As New Principal
-        p.roundedCorners(Me)
+        Principal.Singleton.roundedCorners(Me)
 
         Dim sintomas As New ControladorSintoma
 
@@ -21,17 +21,22 @@ Public Class frmIngresarSintomas
     End Sub
 
     Private Sub selectItem(origen As DataGridView, destino As DataGridView, e As MouseEventArgs)
+
         sourcedgv = origen.Name
         Dim SourceRow = origen.HitTest(e.X, e.Y).RowIndex 'obtiene el indice de la fila que contiene las coordenadas
 
-        If SourceRow >= 0 Then ' el usuario solo puede seleccionar una fila, no el fondo de la tabla         
+        If SourceRow >= 0 Then ' el usuario solo puede seleccionar una fila, no el fondo de la tabla  
+
             destino.BorderStyle = BorderStyle.FixedSingle
             origen.Rows(SourceRow).Selected = True
             origen.DoDragDrop(SourceRow, DragDropEffects.Move)
+
         End If
+
     End Sub
 
     Private Sub dropItem(origen As DataGridView, destino As DataGridView, e As DragEventArgs)
+
         If sourcedgv <> destino.Name Then ' evita que el usuario arrastre una row a la misma datagridview de origen
 
             destino.BorderStyle = BorderStyle.None
@@ -47,25 +52,30 @@ Public Class frmIngresarSintomas
         Else
             Exit Sub 'OPCIONAL COLOCAR MSGBOX
 
-
         End If
 
     End Sub
+
     Private Sub dgvTodos_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvTodos.MouseDown
         selectItem(dgvTodos, dgvSintomasSeleccionados, e)
     End Sub
+
     Private Sub dgvSintomasSeleccionados_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvSintomasSeleccionados.MouseDown
         selectItem(dgvSintomasSeleccionados, dgvTodos, e)
     End Sub
+
     Private Sub dgvMisSintomas_DragOver(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragOver
         e.Effect = DragDropEffects.Move
     End Sub
+
     Private Sub dgvMisSintomas_DragDrop(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragDrop
         dropItem(dgvTodos, dgvSintomasSeleccionados, e)
     End Sub
+
     Private Sub dgvTodos_DragOver(sender As Object, e As DragEventArgs) Handles dgvTodos.DragOver
         e.Effect = DragDropEffects.Move
     End Sub
+
     Private Sub dgvTodos_DragDrop(sender As Object, e As DragEventArgs) Handles dgvTodos.DragDrop
         dropItem(dgvSintomasSeleccionados, dgvTodos, e)
     End Sub

@@ -6,52 +6,66 @@ Public Class frmChat
     Private firstUpdate As Boolean = False
 
     Public Sub New()
-        InitializeComponent()
 
-        Dim a As New Principal 'UNA ATROCIDAD
-        a.roundedCorners(Button1)
-        a.roundedCorners(txtMensaje)
+        InitializeComponent()
+        Principal.Singleton.roundedCorners(Button1)
+        Principal.Singleton.roundedCorners(txtMensaje)
+
     End Sub
 
     Private Sub ReloadChat()
+
         Dim Mensajes As DataTable = contChat.recargarChat
 
         If Mensajes.Rows.Count <> Chat.Controls.Count Then
+
             Chat.SuspendLayout()
             Chat.Controls.Clear()
 
             Dim MensajesASetear As New List(Of Mensaje)
+
             For Each mensaje As DataRow In Mensajes.Rows
+
                 Dim esEmisor As Boolean = False
-                ' MsgBox(mensaje.Item(0).ToString + " " + Datos_Temporales.user_temp.ToString)
+
                 If mensaje.Item(0) = Datos_Temporales.user_temp Then
                     esEmisor = True
                 End If
+
                 MensajesASetear.Add(New Vista.Mensaje(esEmisor, mensaje.Item(1), mensaje.Item(2), Nothing))
+
             Next
 
             For Each mensaje As Mensaje In MensajesASetear
-                'cambiar esta atrocidad
 
                 mensaje.TopLevel = False
                 mensaje.Width = Chat.Width - 25
                 Chat.Controls.Add(mensaje)
                 mensaje.Show()
+
             Next
+
             Chat.ResumeLayout()
             Chat.VerticalScroll.Value = Chat.VerticalScroll.Maximum()
+
         End If
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         If txtMensaje.Text <> "" Then
+
             If contChat.enviarMensaje(Datos_Temporales.user_temp, Datos_Temporales.idchat, txtMensaje.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")) Then
+
                 ReloadChat()
                 txtMensaje.Clear()
                 Chat.VerticalScroll.Value = Chat.VerticalScroll.Maximum()
+
             Else
                 MsgBox("Error al enviar el mensaje")
             End If
+
         End If
 
     End Sub
@@ -61,13 +75,42 @@ Public Class frmChat
     End Sub
 
     Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim p As New Principal
-        p.roundedCorners(txtMensaje)
+
+        Principal.Singleton.roundedCorners(txtMensaje)
 
         Chat.AutoScroll = False
 
         Chat.HorizontalScroll.Enabled = False
 
         Chat.AutoScroll = True
+
     End Sub
+
+    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
+
+        Dim respuesta = MsgBox("¿Desea finalizar la sesión de chat?", vbQuestion + vbYesNo + vbDefaultButton2)
+
+        If respuesta = vbYes Then
+
+            If contChat.finalizarChat() Then
+
+                Chat.Controls.Clear()
+                MsgBox("Sesión finalizada")
+                Timer1.Enabled = False
+
+            Else
+                MsgBox("Error al finalizar el chat")
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+
+        frmListadoChat.Show()
+        Me.Dispose()
+
+    End Sub
+
 End Class

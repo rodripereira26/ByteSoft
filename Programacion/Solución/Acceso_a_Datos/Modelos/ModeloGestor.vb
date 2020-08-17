@@ -4,6 +4,17 @@
 '''</summary>
 Public Class ModeloGestor
 
+    Private Shared instancia As ModeloGestor
+
+    Public Shared Function Singleton() As ModeloGestor
+
+        If instancia Is Nothing Then
+            instancia = New ModeloGestor
+        End If
+
+        Return instancia
+    End Function
+
     '''<summary>
     '''Consulta encargada de registar a los usuarios administradores del sistema en la tabla usuarios.
     '''</summary>

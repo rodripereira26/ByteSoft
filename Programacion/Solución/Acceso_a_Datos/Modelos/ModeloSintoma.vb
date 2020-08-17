@@ -4,6 +4,17 @@
 '''</summary>
 Public Class ModeloSintoma
 
+    Private Shared instancia As ModeloSintoma
+
+    Public Shared Function Singleton() As ModeloSintoma
+
+        If instancia Is Nothing Then
+            instancia = New ModeloSintoma
+        End If
+
+        Return instancia
+    End Function
+
     '''<summary>
     '''Consulta encargada de registrar los síntomas.
     '''</summary>

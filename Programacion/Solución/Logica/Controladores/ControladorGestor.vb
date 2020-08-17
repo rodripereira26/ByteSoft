@@ -26,27 +26,25 @@ Public Class ControladorGestor
 
     Public Function registrar() As Boolean
 
-        Dim datos As New ModeloGestor
+        Return ModeloGestor.Singleton.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono)
 
-        Return datos.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono)
     End Function
 
     Public Function listarPacientes() As DataTable
 
-        Dim datos As New ModeloGestor
+        Return ModeloGestor.Singleton.ListarPacientes
 
-        Return datos.ListarPacientes
     End Function
+
     Public Function eliminar(cedula As String) As Boolean
 
-        Dim datos As New ModeloGestor
-        Return datos.eliminar(cedula)
+        Return ModeloGestor.Singleton.eliminar(cedula)
 
     End Function
+
     Public Function habilitar(cedula As String) As Boolean
 
-        Dim datos As New ModeloGestor
-        Return datos.habilitarPaciente(cedula)
+        Return ModeloGestor.Singleton.habilitarPaciente(cedula)
 
     End Function
 

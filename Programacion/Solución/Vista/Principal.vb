@@ -6,6 +6,17 @@ Public Class Principal
     Private drag As Boolean
     Private mousex, mousey As Integer
 
+    Private Shared instancia As Principal
+
+    Public Shared Function Singleton() As Principal
+
+        If instancia Is Nothing Then
+            instancia = New Principal
+        End If
+
+        Return instancia
+    End Function
+
     Public Sub roundedCorners(rect As Object)
 
         Dim gp As New Drawing2D.GraphicsPath()

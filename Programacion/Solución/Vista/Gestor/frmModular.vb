@@ -1,9 +1,9 @@
 ﻿Public Class frmModular
-    Dim p As New Principal
+
     Public op As Byte = 2
 
     Private Sub frmPatologiasySintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
-        p.roundedCorners(Me)
+        Principal.Singleton.roundedCorners(Me)
 
         Select Case op
             Case 0
@@ -26,34 +26,35 @@
     End Sub
 
     Private Sub pnlIngresar_MouseEnter(sender As Object, e As EventArgs) Handles pnlOpcion1.MouseEnter, lblIngresar.MouseEnter, lblSubtituloIngresar.MouseEnter
-        p.hover(pnlOpcion1)
+        Principal.Singleton.hover(pnlOpcion1)
     End Sub
 
     Private Sub pnlIngresar_MouseLeave(sender As Object, e As EventArgs) Handles pnlOpcion1.MouseLeave, lblIngresar.MouseLeave, lblSubtituloIngresar.MouseLeave
-        p.leave(pnlOpcion1)
+        Principal.Singleton.leave(pnlOpcion1)
     End Sub
 
     Private Sub pnlListado_MouseEnter(sender As Object, e As EventArgs) Handles pnlOpcion2.MouseEnter, lblListadoDe.MouseEnter, lblSubtituloListadoDe.MouseEnter
-        p.hover(pnlOpcion2)
+        Principal.Singleton.hover(pnlOpcion2)
     End Sub
 
     Private Sub pnlListado_MouseLeave(sender As Object, e As EventArgs) Handles pnlOpcion2.MouseLeave, lblSubtituloListadoDe.MouseLeave, lblListadoDe.MouseLeave
-        p.leave(pnlOpcion2)
+        Principal.Singleton.leave(pnlOpcion2)
     End Sub
 
     Private Sub pnlTopBar_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseDown
-        p.moverVentanaDown(Me)
+        Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub pnlTopBar_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseMove
-        p.moverVentanaMove(Me)
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Private Sub pnlTopBar_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseUp
-        p.moverVentanaUp()
+        Principal.Singleton.moverVentanaUp()
     End Sub
 
     Private Sub pnlOpcion1_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlOpcion1.MouseDown
+
         If op = 0 Then
             frmRegistrarPatologia.Visible = True
             Me.Visible = False
@@ -64,9 +65,11 @@
             frmRegistrarMedico.Visible = True
             Me.Visible = False
         End If
+
     End Sub
 
     Private Sub pnlOpcion2_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlOpcion2.MouseDown
+
         Select Case op
             Case 1
                 frmListadoPatologiasySintomas.op = "síntomas"
@@ -80,5 +83,7 @@
                 frmHabilitar.Visible = True
                 Me.Visible = False
         End Select
+
     End Sub
+
 End Class

@@ -6,10 +6,9 @@ Public Class frmRegistroPaciente
     Dim seg As New Encriptar
     Dim pass As String
     Dim sexo As String
-    Dim p As New Principal
 
     Private Sub frmRegistroPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        p.roundedCorners(Me)
+        Principal.Singleton.roundedCorners(Me)
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
@@ -25,12 +24,12 @@ Public Class frmRegistroPaciente
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
-        If p.verificarCedula(check, txtCed.Text) Then
-            If p.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
+        If Principal.Singleton.verificarCedula(check, txtCed.Text) Then
+            If Principal.Singleton.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
                 pass = seg.HASH256(txtPass1.Text)
-                If p.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
-                    If p.verificarEmail(check, txtMail.Text) Then
-                        If p.verificarTelefonos(dgvTelefonos, aliTel) Then
+                If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
+                    If Principal.Singleton.verificarEmail(check, txtMail.Text) Then
+                        If Principal.Singleton.verificarTelefonos(dgvTelefonos, aliTel) Then
                             If txtFecNac.Text <> "" Then
 
                                 If cbM.Checked Then
@@ -53,7 +52,7 @@ Public Class frmRegistroPaciente
                                 If pac.registrar() Then
 
                                     MsgBox("Paciente registrado, debe esperar a ser habilitiado")
-                                    p.limpiar(txtCed, txtPass1, txtPass2, txtPrimerNombre,
+                                    Principal.Singleton.limpiar(txtCed, txtPass1, txtPass2, txtPrimerNombre,
                                             txtPrimerApellido,
                                             txtSegundoApellido, txtSegundoNombre,
                                             txtMail, dgvTelefonos, aliTel)
@@ -87,6 +86,7 @@ Public Class frmRegistroPaciente
             dgvTelefonos.Rows.RemoveAt(dgvTelefonos.Rows.Count - 2)
 
         End If
+
         Panel12.Hide()
         ''add animacion
 
@@ -110,7 +110,6 @@ Public Class frmRegistroPaciente
 
         btnEliminar.Enabled = True
         ' no permite elimianr si no hay ninguna cell seleccionada
-
     End Sub
 
     Private Sub txtFecNac_Click(sender As Object, e As EventArgs) Handles txtFecNac.Click

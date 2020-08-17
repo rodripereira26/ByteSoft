@@ -8,6 +8,7 @@ Public Class ControladorPaciente
 
     Property _sexo As String
     Property _fecNac As String
+
     Public Sub New()
 
     End Sub
@@ -32,17 +33,14 @@ Public Class ControladorPaciente
 
     Public Function registrar() As Boolean
 
-        Dim datos As New ModeloPaciente
-
-        Return datos.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono, _email, _sexo, _fecNac)
+        Return ModeloPaciente.Singleton.Registrar(_ci, _contraseña, _primer_nombre, _segundo_nombre, _primer_apellido, _segundo_apellido, _telefono, _email, _sexo, _fecNac)
 
     End Function
-    ' Public Function traerPacientes() As Boolean
-    ' Return
-    '  End Function
 
-    Public Function verificar(ci as string) As Boolean
-        Dim datos As New ModeloPaciente
-        Return datos.VerificarEstado(ci)
+    Public Function verificar(ci As String) As Boolean
+
+        Return ModeloPaciente.Singleton.VerificarEstado(ci)
+
     End Function
+
 End Class

@@ -1,25 +1,33 @@
 ﻿Imports Logica
+
 Public Class frmRegistrarPatologia
+
     Dim sourcedgv As String
-    Dim p As New Principal
+
     Private Sub RegistrarPatologias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        p.roundedCorners(Me)
+
+        Principal.Singleton.roundedCorners(Me)
         traerSintomas()
 
     End Sub
 
     Private Sub selectItem(origen As DataGridView, destino As DataGridView, e As MouseEventArgs)
+
         sourcedgv = origen.Name ' obtiene el nombre del datagridview de origen
         Dim SourceRow = origen.HitTest(e.X, e.Y).RowIndex 'obtiene el indice de la fila que contiene las coordenadas
 
-        If SourceRow >= 0 Then ' el usuario solo puede seleccionar una fila, no el fondo de la tabla         
+        If SourceRow >= 0 Then ' el usuario solo puede seleccionar una fila, no el fondo de la tabla
+
             destino.BorderStyle = BorderStyle.FixedSingle
             origen.Rows(SourceRow).Selected = True
             origen.DoDragDrop(SourceRow, DragDropEffects.Move)
+
         End If
+
     End Sub
 
     Private Sub dropItem(origen As DataGridView, destino As DataGridView, e As DragEventArgs)
+
         If sourcedgv <> destino.Name Then ' evita que el usuario arrastre una row a la misma datagridview de origen
 
             destino.BorderStyle = BorderStyle.None
@@ -36,22 +44,29 @@ Public Class frmRegistrarPatologia
             Exit Sub
 
         End If
+
     End Sub
+
     Private Sub dgvTodos_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvTodos.MouseDown
         selectItem(dgvTodos, dgvSintomasSeleccionados, e)
     End Sub
+
     Private Sub dgvSintomasSeleccionados_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvSintomasSeleccionados.MouseDown
         selectItem(dgvSintomasSeleccionados, dgvTodos, e)
     End Sub
+
     Private Sub dgvMisSintomas_DragOver(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragOver
         e.Effect = DragDropEffects.Move
     End Sub
+
     Private Sub dgvMisSintomas_DragDrop(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragDrop
         dropItem(dgvTodos, dgvSintomasSeleccionados, e)
     End Sub
+
     Private Sub dgvTodos_DragOver(sender As Object, e As DragEventArgs) Handles dgvTodos.DragOver
         e.Effect = DragDropEffects.Move
     End Sub
+
     Private Sub dgvTodos_DragDrop(sender As Object, e As DragEventArgs) Handles dgvTodos.DragDrop
         dropItem(dgvSintomasSeleccionados, dgvTodos, e)
     End Sub
@@ -95,17 +110,15 @@ Public Class frmRegistrarPatologia
                     p.registrar()
 
                     MsgBox("Patología registrada con éxito")
-                        Dim s As New ControladorSintoma
-                        txtNomPat.Clear()
-                        txtDescPat.Clear()
-                        txtRecPat.Clear()
-                        dgvTodos.Rows.Clear()
-                        dgvSintomasSeleccionados.Rows.Clear()
-                        traerSintomas()
+                    Dim s As New ControladorSintoma
+                    txtNomPat.Clear()
+                    txtDescPat.Clear()
+                    txtRecPat.Clear()
+                    dgvTodos.Rows.Clear()
+                    dgvSintomasSeleccionados.Rows.Clear()
+                    traerSintomas()
 
-
-
-                    Else
+                Else
                     MsgBox("Debe ingresar una recomendación completa")
                 End If
             Else
@@ -122,14 +135,15 @@ Public Class frmRegistrarPatologia
     End Sub
 
     Private Sub pnlTituloPatologia_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTituloPatologia.MouseDown
-        p.moverVentanaDown(Me)
+        Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub pnlTituloPatologia_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTituloPatologia.MouseMove
-        p.moverVentanaMove(Me)
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Private Sub pnlTituloPatologia_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTituloPatologia.MouseUp
-        p.moverVentanaUp()
+        Principal.Singleton.moverVentanaUp()
     End Sub
+
 End Class

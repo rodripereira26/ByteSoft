@@ -3,20 +3,14 @@ Public Class frmLogin
 
     Dim drag As Boolean
     Dim mousex, mousey As Integer
-    Dim p As New Principal
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Label1.Select()
-        p.roundedCorners(Me)
+        Principal.Singleton.roundedCorners(Me)
 
     End Sub
 
-    'Private Sub timer1_tick(sender As Object, e As EventArgs) Handles ti.Tick
-    '    If Label2.Location <> New Point(60, 169) Then
-    '        Label2.Location = New Point(Label2.Location.X + 1, Label2.Location.Y)
-    '    End If
-    'End Sub
 
     Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
 
@@ -84,7 +78,6 @@ Public Class frmLogin
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
-
         frmRegistroPaciente.Show()
         Me.Hide()
 
@@ -93,21 +86,6 @@ Public Class frmLogin
     Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
         drag = False
     End Sub
-
-    'Public Sub AsignarRol(rol As Integer)
-
-    '    Select Case rol
-    '        Case 1
-    '            lbl_rol.Text = "Adminstrador"
-    '        Case 2
-    '            lbl_rol.Text = "Paciente"
-    '        Case 3
-    '            lbl_rol.Text = "Médico"
-    '    End Select
-
-    '    Me.Show()
-
-    'End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
@@ -178,16 +156,5 @@ Public Class frmLogin
         End If
 
     End Sub
-
-    'Public Sub CargarVentana(ventana As Panel, form As Form, rol As Integer)
-
-    '    form.TopLevel = False
-    '    form.Dock = DockStyle.Fill
-    '    ventana.Size = Me.Size
-    '    ventana.Controls.Add(form)
-    '    AsignarRol(rol)
-    '    form.Show()
-
-    'End Sub
 
 End Class

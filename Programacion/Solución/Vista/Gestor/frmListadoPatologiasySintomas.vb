@@ -6,8 +6,6 @@ Public Class frmListadoPatologiasySintomas
 
     Public op As String
 
-
-    Dim p As New Principal
     Dim criterio As String
     Dim textoBusqueda As String = "Buscar por " & Me.criterio
 
@@ -16,8 +14,7 @@ Public Class frmListadoPatologiasySintomas
 
         lblTitulo.Text = "LISTADO DE " & op.ToUpper
 
-        Dim principal As New Principal
-        principal.metroStyle(Me)
+        Principal.Singleton.metroStyle(Me)
 
 
         Panel1.Height = btnBuscarPor.Height
@@ -236,15 +233,15 @@ Public Class frmListadoPatologiasySintomas
     '''Movimiento de ventanas sin bordes
     '''</summary>
     Private Sub Panel3_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel3.MouseDown
-        p.moverVentanaDown(Me)
+        Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub Panel3_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel3.MouseMove
-        p.moverVentanaMove(Me)
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Public Sub Panel3_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel3.MouseUp
-        p.moverVentanaUp()
+        Principal.Singleton.moverVentanaUp()
     End Sub
 
     Private Sub btnEliminarElementos_Click_1(sender As Object, e As EventArgs) Handles btnEliminarElementos.Click

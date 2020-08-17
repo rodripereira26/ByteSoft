@@ -5,16 +5,15 @@ Public Class frmRegistroGestor
     Dim aliTel As New ArrayList
     Dim check As New Verificacion
     Dim seg As New Encriptar
-    Dim p As New Principal
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
 
-        If p.verificarCedula(check, txtCI.Text) Then
-            If p.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
+        If Principal.Singleton.verificarCedula(check, txtCI.Text) Then
+            If Principal.Singleton.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
                 pass = seg.HASH256(txtPass1.Text)
-                If p.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
-                    If p.verificarEmail(check, txtEmail.Text) Then
-                        If p.verificarTelefonos(dgvTelefonos, aliTel) Then
+                If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
+                    If Principal.Singleton.verificarEmail(check, txtEmail.Text) Then
+                        If Principal.Singleton.verificarTelefonos(dgvTelefonos, aliTel) Then
                             Dim ges As New ControladorGestor(txtCI.Text,
                                                  pass,
                                                  txtPrimerNombre.Text.ToUpper,
@@ -25,7 +24,7 @@ Public Class frmRegistroGestor
                                                  txtEmail.Text)
                             If ges.registrar() Then
                                 MsgBox("Gestor registrado con éxito")
-                                p.limpiar(txtCI, txtPass1, txtPass2, txtPrimerApellido, txtPrimerNombre, txtSegundoApellido, txtSegundoNombre, txtEmail, dgvTelefonos, aliTel)
+                                Principal.Singleton.limpiar(txtCI, txtPass1, txtPass2, txtPrimerApellido, txtPrimerNombre, txtSegundoApellido, txtSegundoNombre, txtEmail, dgvTelefonos, aliTel)
 
                             Else
                                 MsgBox("El gestor ya fue registrado")

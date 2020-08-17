@@ -2,27 +2,21 @@
 
 Public Class frmBienvenidaGestor
 
-
-    Private p As New Principal
     Dim gestor As New ControladorGestor
 
     Private Sub BienvenidaGestor_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-
-
-        p.roundedCorners(Me)
-        p.roundedCorners(pnlAjustes)
-        p.roundedCorners(pnlMiPerfil)
-        p.roundedCorners(pnlPatologias)
-        p.roundedCorners(pnlUsuarios)
-        p.roundedCorners(pnlSintomas)
-        p.roundedCorners(Panel14)
-        p.roundedCorners(pnlRegistrodeUsuarios)
-        p.roundedCorners(pnlUsuarios)
-        p.roundedCorners(pnlAyuda)
-        p.roundedCorners(Panel14)
-
-
+        Principal.Singleton.roundedCorners(Me)
+        Principal.Singleton.roundedCorners(pnlAjustes)
+        Principal.Singleton.roundedCorners(pnlMiPerfil)
+        Principal.Singleton.roundedCorners(pnlPatologias)
+        Principal.Singleton.roundedCorners(pnlUsuarios)
+        Principal.Singleton.roundedCorners(pnlSintomas)
+        Principal.Singleton.roundedCorners(Panel14)
+        Principal.Singleton.roundedCorners(pnlRegistrodeUsuarios)
+        Principal.Singleton.roundedCorners(pnlUsuarios)
+        Principal.Singleton.roundedCorners(pnlAyuda)
+        Principal.Singleton.roundedCorners(Panel14)
 
         'Me.BackColor = Color.FromArgb(236, 236, 236)
         'Dim col As Color = Color.FromArgb(52, 73, 94)
@@ -60,15 +54,15 @@ Public Class frmBienvenidaGestor
     End Sub
 
     Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseDown
-        p.moverVentanaDown(Me)
+        Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseMove
-        p.moverVentanaMove(Me)
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseUp
-        p.moverVentanaUp()
+        Principal.Singleton.moverVentanaUp()
     End Sub
 
     Private Sub pnlPatologias_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlPatologias.MouseDown
@@ -97,6 +91,7 @@ Public Class frmBienvenidaGestor
     End Sub
 
     Private Sub btnNotificacion_Click(sender As Object, e As EventArgs) Handles btnNotificacion.Click
+
         If pnlListadoPacientes.Visible = True Then
             pnlListadoPacientes.Visible = False
         Else
@@ -107,9 +102,7 @@ Public Class frmBienvenidaGestor
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
         dgvListadoPacientes.DataSource = gestor.listarPacientes
-
     End Sub
 
     Private Sub dgvListadoPacientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoPacientes.CellDoubleClick
@@ -146,4 +139,5 @@ Public Class frmBienvenidaGestor
     Private Sub btnRefrescarListadoPac_Click(sender As Object, e As EventArgs) Handles btnRefrescarListadoPac.Click
         dgvListadoPacientes.DataSource = gestor.listarPacientes
     End Sub
+
 End Class

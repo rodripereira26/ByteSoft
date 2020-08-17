@@ -2,13 +2,14 @@
 Public Class frmObtenerDiagnostico
 
     Dim pat As New ControladorPatologia
+
     Private Sub frmObtenerDiagnostico_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         ControlPaint.DrawBorder(e.Graphics, Me.ClientRectangle, Color.Black, ButtonBorderStyle.Solid)
     End Sub
+
     Private Sub frmObtenerDiagnostico_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Dim nombreDiagnostico As New ArrayList
-
 
         For i As Integer = 0 To dgvPosiblesDiagnosticos.RowCount - 1
 
@@ -19,10 +20,6 @@ Public Class frmObtenerDiagnostico
         If pat.guardarDiagnostico(Datos_Temporales.user_temp, nombreDiagnostico) = False Then
             MsgBox("Error al almacenar el diagnóstico")
         End If
-
-    End Sub
-
-    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
 
     End Sub
 

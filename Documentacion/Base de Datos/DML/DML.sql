@@ -23,9 +23,9 @@ INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("3901
 INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("39389695", "F7CDD5E13AC6DA7EF654764199CDA1BA433C93E8440876B89CC704D1AA6DAE0F", "Fernanda", "Acuña", "Pérez", "ferperez4@gmail.com");
 INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("18360276", "2F34B801CB2F8EE28525437FE45DD6E41329578F81E11904B8B35CE95DCC58AD", "Paula", "Falco", "Peralta", "paulaperelta2001@gmail.com");
 INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("24357009", "3DBE378C509A4B1900E24173EF07AAD8C466FE8BEFAE256A85B5B7DBDCDCFB46", "Pablo", "Flores", "Ramírez", "pablitoramirez@gmail.com");
-INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("11111111", "pruebapaciente", "xd", "xd", "xd", "xd");
-INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("22222222", "pruebagestor", "xd", "xd", "xd", "xdd");
-INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("33333333", "pruebamedico", "xd", "xd", "xd", "xddd");
+INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("11111111", "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b", "xd", "xd", "xd", "xd");
+INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("22222222", "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b", "xd", "xd", "xd", "xdd");
+INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("33333333", "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b", "xd", "xd", "xd", "xddd");
 
 /*
 UsuarioTel

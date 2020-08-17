@@ -7,14 +7,12 @@ Public Class frmBienvenidaPaciente
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim p As New Principal
-
-        p.roundedCorners(Panel1)
-        p.roundedCorners(Panel2)
-        p.roundedCorners(Panel3)
-        p.roundedCorners(Panel4)
-        p.roundedCorners(Panel5)
-        p.roundedCorners(Me)
+        Principal.Singleton.roundedCorners(Panel1)
+        Principal.Singleton.roundedCorners(Panel2)
+        Principal.Singleton.roundedCorners(Panel3)
+        Principal.Singleton.roundedCorners(Panel4)
+        Principal.Singleton.roundedCorners(Panel5)
+        Principal.Singleton.roundedCorners(Me)
 
         Me.BackColor = Color.FromArgb(236, 236, 236)
         Dim col As Color = Color.FromArgb(52, 73, 94)
@@ -150,12 +148,10 @@ Public Class frmBienvenidaPaciente
             respuesta = MsgBox("Ha recibido una respuesta, ¿Desea chatear?", vbQuestion + vbYesNo + vbDefaultButton2)
 
             If respuesta = vbYes Then
-
                 frmChat.Show()
                 respuesta = True
             Else
                 Me.Timer1.Enabled = True
-
             End If
 
         End If

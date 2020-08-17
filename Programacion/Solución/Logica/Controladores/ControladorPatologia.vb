@@ -11,8 +11,6 @@ Public Class ControladorPatologia
     Property _prioridad As Byte
     Property _sintomas As ArrayList
 
-    Dim p As New ModeloPatologia
-
     Public Sub New()
 
     End Sub
@@ -28,16 +26,20 @@ Public Class ControladorPatologia
     End Sub
 
     Public Function registrar() As Boolean
-        Return p.Registrar(_nombre, _descripcion, _recomendacion, _prioridad, _sintomas)
+
+        Return ModeloPatologia.Singleton.Registrar(_nombre, _descripcion, _recomendacion, _prioridad, _sintomas)
+
     End Function
 
     Public Function listarPatologias() As DataTable
-        Return p.listarPatologias
+
+        Return ModeloPatologia.Singleton.listarPatologias
+
     End Function
 
     Public Function eliminarPatologias(aliPatologias As ArrayList)
 
-        If p.eliminarPatologias(aliPatologias) Then
+        If ModeloPatologia.Singleton.eliminarPatologias(aliPatologias) Then
             Return True
         End If
 
@@ -45,17 +47,21 @@ Public Class ControladorPatologia
     End Function
 
     Public Function informacionPatologia(nombre As String) As String
-        Return p.informacionPatologia(nombre)
+
+        Return ModeloPatologia.Singleton.informacionPatologia(nombre)
+
     End Function
 
     Public Function obtenerPatologia(sintomas As ArrayList) As DataTable
 
-        Return p.obtenerDiagnostico(sintomas)
+        Return ModeloPatologia.Singleton.obtenerDiagnostico(sintomas)
 
     End Function
 
     Public Function guardarDiagnostico(usuario As String, nombreDiagnostico As ArrayList) As Boolean
-        Return p.guardarDiagnosticos(usuario, nombreDiagnostico)
+
+        Return ModeloPatologia.Singleton.guardarDiagnosticos(usuario, nombreDiagnostico)
+
     End Function
 
 End Class

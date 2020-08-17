@@ -2,6 +2,17 @@
 
 Public Class ModeloChat
 
+    Private Shared instancia As ModeloChat
+
+    Public Shared Function Singleton() As ModeloChat
+
+        If instancia Is Nothing Then
+            instancia = New ModeloChat
+        End If
+
+        Return instancia
+    End Function
+
     Public Function crearChat()
 
         Dim consulta As String = "INSERT INTO chat (finalizado) VALUES (?)"
@@ -35,7 +46,7 @@ Public Class ModeloChat
 
     Public Function listarChat() As DataTable
 
-        Dim consulta As String = "SELECT DISTINCT cedula, u.idChat 
+        Dim consulta As String = "SELECT cedula, u.idChat 
                             FROM chat c, usuario_entra_chat u, patologia p, paciente_obtiene_diagnostico up 
                             WHERE u.cedula = up.cedulaPaciente AND p.idPatologia = up.idPatologia AND c.idChat = u.idChat AND finalizado = 0
                             ORDER BY prioridad ASC "
@@ -67,6 +78,21 @@ Public Class ModeloChat
     Public Function obtenerRespuesta(idChat As Int32) As Int16
 
         Dim consulta As String = "SELECT count(*) FROM mensaje WHERE idChat =  " + idChat.ToString
+
+        Return ModeloConsultas.Singleton.ConsultaCampo(consulta)
+    End Function
+
+    Public Function finalizarChat(idChat As String) As Boolean
+
+        Dim consulta As String = "UPDATE chat SET finalizado = 1 WHERE idChat = " + idChat
+
+        Return ModeloConsultas.Singleton.InsertarSinParametros(consulta)
+    End Function
+
+    Public Function verificarCedula(cedula As String, idChat As String) As Int16
+
+        Dim consulta = "SELECT count(*) FROM usuario_entra_chat pc, medico m 
+                       WHERE m.cedula = pc.cedula AND pc.cedula = " + cedula + " AND idChat = " + idChat + " AND fechaIngreso = CURRENT_DATE"
 
         Return ModeloConsultas.Singleton.ConsultaCampo(consulta)
     End Function

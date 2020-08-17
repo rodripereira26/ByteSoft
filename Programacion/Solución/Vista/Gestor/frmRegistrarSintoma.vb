@@ -1,6 +1,6 @@
-﻿Imports logica
+﻿Imports Logica
 Public Class frmRegistrarSintoma
-    Dim p As New Principal
+
     Private Sub RegistrarSintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
         Label13.Select()
     End Sub
@@ -33,14 +33,15 @@ Public Class frmRegistrarSintoma
     End Sub
 
     Private Sub panelTitulo_MouseDown(sender As Object, e As MouseEventArgs) Handles panelTitulo.MouseDown
-        p.moverVentanaDown(Me)
+        Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub panelTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles panelTitulo.MouseMove
-        p.moverVentanaMove(Me)
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Private Sub panelTitulo_MouseUp(sender As Object, e As MouseEventArgs) Handles panelTitulo.MouseUp
-        p.moverVentanaUp()
+        Principal.Singleton.moverVentanaUp()
     End Sub
+
 End Class

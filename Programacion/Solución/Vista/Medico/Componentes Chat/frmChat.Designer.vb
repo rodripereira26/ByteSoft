@@ -29,6 +29,8 @@ Partial Class frmChat
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnFinalizar = New System.Windows.Forms.Button()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Menu
@@ -36,9 +38,9 @@ Partial Class frmChat
         Me.Menu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Menu.Location = New System.Drawing.Point(12, 12)
+        Me.Menu.Location = New System.Drawing.Point(12, 53)
         Me.Menu.Name = "Menu"
-        Me.Menu.Size = New System.Drawing.Size(252, 551)
+        Me.Menu.Size = New System.Drawing.Size(252, 510)
         Me.Menu.TabIndex = 2
         '
         'Chat
@@ -76,11 +78,31 @@ Partial Class frmChat
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
+        'btnFinalizar
+        '
+        Me.btnFinalizar.Location = New System.Drawing.Point(806, 12)
+        Me.btnFinalizar.Name = "btnFinalizar"
+        Me.btnFinalizar.Size = New System.Drawing.Size(142, 23)
+        Me.btnFinalizar.TabIndex = 6
+        Me.btnFinalizar.Text = "Finalizar chat"
+        Me.btnFinalizar.UseVisualStyleBackColor = True
+        '
+        'btnAtras
+        '
+        Me.btnAtras.Location = New System.Drawing.Point(23, 12)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(60, 23)
+        Me.btnAtras.TabIndex = 7
+        Me.btnAtras.Text = "Atrás"
+        Me.btnAtras.UseVisualStyleBackColor = True
+        '
         'frmChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(998, 575)
+        Me.Controls.Add(Me.btnAtras)
+        Me.Controls.Add(Me.btnFinalizar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtMensaje)
         Me.Controls.Add(Me.Chat)
@@ -100,4 +122,6 @@ Partial Class frmChat
     Friend WithEvents Button1 As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents btnFinalizar As Button
+    Friend WithEvents btnAtras As Button
 End Class

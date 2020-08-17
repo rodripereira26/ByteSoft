@@ -77,10 +77,10 @@ GRANT DELETE ON bytesoft_bdd.patologia_contiene_sintoma TO gestor;
 /*
 Creación de los usuarios
 */
-CREATE USER IF NOT EXISTS 'sysAux'@'%' IDENTIFIED BY '1DWbt9hj8xdk3C72';
-CREATE USER IF NOT EXISTS 'sysGest'@'%' IDENTIFIED BY 'yX4H84ZpgNp07kDy';
-CREATE USER IF NOT EXISTS 'sysMed'@'%' IDENTIFIED BY 'hF69t12lQal6hyiD';
-CREATE USER IF NOT EXISTS 'sysPac'@'%' IDENTIFIED BY 'dV23UTXFZRbinBz3';
+CREATE USER IF NOT EXISTS 'sysAux'@'%' IDENTIFIED BY 'sysAuxPass2';
+CREATE USER IF NOT EXISTS 'sysGest'@'%' IDENTIFIED BY 'sysGestPass2';
+CREATE USER IF NOT EXISTS 'sysMed'@'%' IDENTIFIED BY 'sysMedPass2';
+CREATE USER IF NOT EXISTS 'sysPac'@'%' IDENTIFIED BY 'sysPacPass2';
 
 /*
 Asignación de los usuarios a sus roles
@@ -90,15 +90,15 @@ GRANT gestor TO 'sysGest';
 GRANT medico TO 'sysMed'; 
 GRANT paciente TO 'sysPac'; 
 
-SET DEFAULT ROLE aux FOR 'sysAux'@'%';
-SET DEFAULT ROLE gestor FOR 'sysGest'@'%';
-SET DEFAULT ROLE medico FOR 'sysMed'@'%';
-SET DEFAULT ROLE paciente FOR 'sysPac'@'%';
+SET DEFAULT ROLE aux TO 'sysAux'@'%';
+SET DEFAULT ROLE gestor TO 'sysGest'@'%';
+SET DEFAULT ROLE medico TO 'sysMed'@'%';
+SET DEFAULT ROLE paciente TO 'sysPac'@'%';
 
 /*
 Usuario para backups
 */
-CREATE USER IF NOT EXISTS'sysBack'@'%' IDENTIFIED BY 'Rvu5i70pDVQqmkdh';
+CREATE USER IF NOT EXISTS 'sysBack'@'%' IDENTIFIED BY 'Rvu5i70pDVQqmkdh';
 GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER ON *.* TO 'sysBack'@'%';
 GRANT LOCK TABLES ON *.* TO 'sysBack'@'%';
 
