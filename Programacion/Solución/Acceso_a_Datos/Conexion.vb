@@ -10,7 +10,7 @@ Public Class Conexion
     Private Const dsn As String = "driverODBC"
     Private Const Port As String = "3306"
     Private Const DatabaseName As String = "bytesoft_bdd"
-    Private Host As String = "localhost"
+    Private Host As String = "192.168.1.27"
     Private dblogin(,) As String = New String(4, 2) {}
 
     Public Property Connection As New OdbcConnection
@@ -41,17 +41,17 @@ Public Class Conexion
 
     Public Sub New()
 
-        dblogin(EnumDbLogin.aux, TipoDbLogin.user) = "root"
-        dblogin(EnumDbLogin.aux, TipoDbLogin.pass) = "" '1DWbt9hj8xdk3C72
+        dblogin(EnumDbLogin.aux, TipoDbLogin.user) = "sysGest"
+        dblogin(EnumDbLogin.aux, TipoDbLogin.pass) = "123" '1DWbt9hj8xdk3C72
 
-        dblogin(EnumDbLogin.paciente, TipoDbLogin.user) = "root"
-        dblogin(EnumDbLogin.paciente, TipoDbLogin.pass) = "" 'dV23UTXFZRbinBz3
+        dblogin(EnumDbLogin.paciente, TipoDbLogin.user) = "sysGest"
+        dblogin(EnumDbLogin.paciente, TipoDbLogin.pass) = "123" 'dV23UTXFZRbinBz3
 
-        dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "root" 'sysMed
-        dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "" 'hF69t12lQal6hyiD
+        dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "sysGest" 'sysMed
+        dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "123" 'hF69t12lQal6hyiD
 
         dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "sysGest"
-        dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "yX4H84ZpgNp07kDy" 'yX4H84ZpgNp07kDy
+        dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "123" 'yX4H84ZpgNp07kDy
 
     End Sub
 

@@ -57,9 +57,8 @@ Public Class ModeloChat
         Return ModeloConsultas.Singleton.InsertParametros(consulta, parametros)
     End Function
 
-    Public Function recargarChat(idChat As Long) As DataTable
-
-        Dim consulta = "SELECT cedula, mensaje, fecha FROM mensaje WHERE idChat = " + idChat
+    Public Function recargarChat(idChat As Int32) As DataTable
+        Dim consulta = "SELECT cedula, mensaje, fechaEnvio FROM mensaje WHERE idChat = " + idChat.ToString
 
         Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
 

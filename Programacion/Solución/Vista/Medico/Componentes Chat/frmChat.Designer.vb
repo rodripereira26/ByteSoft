@@ -34,36 +34,40 @@ Partial Class frmChat
         '
         Me.Menu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Menu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Menu.Location = New System.Drawing.Point(12, 12)
         Me.Menu.Name = "Menu"
-        Me.Menu.Size = New System.Drawing.Size(252, 499)
+        Me.Menu.Size = New System.Drawing.Size(252, 551)
         Me.Menu.TabIndex = 2
         '
         'Chat
         '
         Me.Chat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Chat.Location = New System.Drawing.Point(270, 52)
+        Me.Chat.AutoScroll = True
+        Me.Chat.Location = New System.Drawing.Point(270, 53)
         Me.Chat.Name = "Chat"
-        Me.Chat.Size = New System.Drawing.Size(591, 413)
+        Me.Chat.Size = New System.Drawing.Size(723, 446)
         Me.Chat.TabIndex = 3
         '
         'txtMensaje
         '
+        Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMensaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMensaje.Location = New System.Drawing.Point(270, 472)
+        Me.txtMensaje.Location = New System.Drawing.Point(270, 516)
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
-        Me.txtMensaje.Size = New System.Drawing.Size(538, 39)
+        Me.txtMensaje.Size = New System.Drawing.Size(617, 38)
         Me.txtMensaje.TabIndex = 4
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(815, 471)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(893, 514)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(46, 40)
+        Me.Button1.Size = New System.Drawing.Size(84, 40)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Enviar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Timer1
@@ -75,7 +79,7 @@ Partial Class frmChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(873, 523)
+        Me.ClientSize = New System.Drawing.Size(998, 575)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtMensaje)
         Me.Controls.Add(Me.Chat)
