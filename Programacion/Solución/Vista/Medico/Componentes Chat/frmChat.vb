@@ -47,6 +47,7 @@ Public Class frmChat
         If txtMensaje.Text <> "" Then
             If contChat.enviarMensaje(Datos_Temporales.user_temp, Datos_Temporales.idchat, txtMensaje.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")) Then
                 ReloadChat()
+                txtMensaje.Clear()
                 Chat.VerticalScroll.Value = Chat.VerticalScroll.Maximum()
             Else
                 MsgBox("Error al enviar el mensaje")

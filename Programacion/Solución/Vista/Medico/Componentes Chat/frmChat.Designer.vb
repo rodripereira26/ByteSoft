@@ -28,13 +28,14 @@ Partial Class frmChat
         Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Menu
         '
         Me.Menu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Menu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Menu.Location = New System.Drawing.Point(12, 12)
         Me.Menu.Name = "Menu"
         Me.Menu.Size = New System.Drawing.Size(252, 551)
@@ -98,4 +99,5 @@ Partial Class frmChat
     Friend WithEvents txtMensaje As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class

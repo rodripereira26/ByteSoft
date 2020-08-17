@@ -49,5 +49,13 @@ Public Class ControladorChat
         Return chat.recargarChat(Datos_Temporales.idchat)
     End Function
 
+    Public Function obtenerRespuesta()
+
+        Dim chat As New ModeloChat
+
+        Return chat.obtenerRespuesta(Datos_Temporales.idchat)
+
+    End Function
+
 
 End Class

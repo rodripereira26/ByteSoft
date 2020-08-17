@@ -22,6 +22,7 @@ Partial Class frmBienvenidaPaciente
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -48,6 +49,7 @@ Partial Class frmBienvenidaPaciente
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -84,7 +86,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(25, 85)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(480, 24)
+        Me.Label2.Size = New System.Drawing.Size(480, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Seleccione síntomas y obtenga un diagnóstico primario"
         '
@@ -95,7 +97,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(22, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(278, 39)
+        Me.Label1.Size = New System.Drawing.Size(278, 38)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingresar Síntomas"
         '
@@ -137,7 +139,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(22, 33)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(181, 39)
+        Me.Label4.Size = New System.Drawing.Size(181, 38)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Mi Historial"
         '
@@ -179,7 +181,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(22, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 39)
+        Me.Label7.Size = New System.Drawing.Size(125, 38)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Ajustes"
         '
@@ -221,7 +223,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(3, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(136, 39)
+        Me.Label9.Size = New System.Drawing.Size(135, 38)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
@@ -263,7 +265,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 39)
+        Me.Label11.Size = New System.Drawing.Size(105, 38)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
@@ -332,6 +334,10 @@ Partial Class frmBienvenidaPaciente
         Me.Label13.Text = "X"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 4000
+        '
         'frmBienvenidaPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -392,4 +398,5 @@ Partial Class frmBienvenidaPaciente
     Friend WithEvents Button2 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -1,4 +1,5 @@
-﻿Imports System.Data.Odbc
+﻿
+Imports Logica
 Public Class frmBienvenidaPaciente
 
     Dim drag As Boolean
@@ -139,6 +140,46 @@ Public Class frmBienvenidaPaciente
         frmIngresarSintomas.Show()
         Me.Dispose()
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+        If obtenerRespuesta() Then
+
+            Me.Timer1.Enabled = False
+            Dim respuesta As Integer
+            respuesta = MsgBox("Ha recibido una respuesta, ¿Desea chatear?", vbQuestion + vbYesNo + vbDefaultButton2)
+
+            If respuesta = vbYes Then
+
+                frmChat.Show()
+                respuesta = True
+            Else
+                Me.Timer1.Enabled = True
+
+            End If
+
+        End If
+
+    End Sub
+
+
+
+
+
+
+
+
+    Public Function obtenerRespuesta() As Boolean
+
+        Dim chat As New ControladorChat
+
+        If chat.obtenerRespuesta >= 1 Then
+            Return True
+        End If
+
+        Return False
+    End Function
+
 
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
         drag = False

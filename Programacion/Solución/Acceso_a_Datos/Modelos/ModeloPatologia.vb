@@ -138,7 +138,7 @@ Public Class ModeloPatologia
 
             consulta = "
                     INSERT INTO paciente_obtiene_diagnostico (cedulaPaciente, idPatologia, fecha) 
-                    SELECT " & usuario & ", p.idPatologia, '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' 
+                    SELECT " & usuario & ", p.idPatologia, '" & DateTime.Now.ToString("yyyy-MM-dd hh:MM") & "' 
                     FROM patologia p WHERE p.nombre = '" & nom & "'"
 
             ModeloConsultas.Singleton.InsertarSinParametros(consulta)
