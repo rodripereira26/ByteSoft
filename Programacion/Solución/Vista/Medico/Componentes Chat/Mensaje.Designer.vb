@@ -77,7 +77,6 @@ Partial Class Mensaje
         Me.lbl_Recibido.Size = New System.Drawing.Size(127, 25)
         Me.lbl_Recibido.TabIndex = 8
         Me.lbl_Recibido.Text = "SAMPLE TEXT"
-        Me.lbl_Recibido.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Mensaje
         '
