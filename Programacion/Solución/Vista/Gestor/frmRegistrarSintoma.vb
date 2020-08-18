@@ -25,10 +25,7 @@ Public Class frmRegistrarSintoma
         Application.Exit()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-        Me.Hide()
-        frmModular.Show()
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -44,4 +41,18 @@ Public Class frmRegistrarSintoma
         Principal.Singleton.moverVentanaUp()
     End Sub
 
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        If Not (txtNomSintoma.Text = Nothing And txtDescripcion.Text = Nothing) Then
+            Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
+            If res = vbYes Then
+                frmModular.Show()
+                Me.Close()
+            End If
+        Else
+            frmModular.Show()
+            Me.Close()
+        End If
+        frmModular.Show()
+        Me.Hide()
+    End Sub
 End Class

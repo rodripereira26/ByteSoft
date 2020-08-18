@@ -1,4 +1,5 @@
-﻿Imports Logica
+﻿
+Imports Logica
 
 Public Class frmIngresarSintomas
 
@@ -47,7 +48,9 @@ Public Class frmIngresarSintomas
             Dim rowDestino = destino.Rows.Count - 1
 
             destino.Rows(rowDestino).Cells(0).Value = origen.Rows(SourceRow).Cells(0).Value
+            destino.Sort(destino.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
             origen.Rows.RemoveAt(SourceRow)
+
 
         Else
             Exit Sub 'OPCIONAL COLOCAR MSGBOX

@@ -23,12 +23,12 @@ Partial Class frmBienvenidaGestor
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pnlAjustes = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -64,13 +64,13 @@ Partial Class frmBienvenidaGestor
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.pnlListadoPacientes = New System.Windows.Forms.Panel()
+        Me.btnRefrescarListadoPac = New System.Windows.Forms.Button()
         Me.lblTituloLIstadoPacientes = New System.Windows.Forms.Label()
         Me.dgvListadoPacientes = New System.Windows.Forms.DataGridView()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnRefrescarListadoPac = New System.Windows.Forms.Button()
-        Me.btnNotificacion = New System.Windows.Forms.Button()
         Me.Rechazar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Aceptar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnNotificacion = New System.Windows.Forms.Button()
         Me.pnlAjustes.SuspendLayout()
         Me.pnlMiPerfil.SuspendLayout()
         Me.pnlAyuda.SuspendLayout()
@@ -132,7 +132,7 @@ Partial Class frmBienvenidaGestor
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(22, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 38)
+        Me.Label7.Size = New System.Drawing.Size(125, 39)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Ajustes"
         '
@@ -174,7 +174,7 @@ Partial Class frmBienvenidaGestor
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(17, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(136, 38)
+        Me.Label9.Size = New System.Drawing.Size(136, 39)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
@@ -216,7 +216,7 @@ Partial Class frmBienvenidaGestor
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 38)
+        Me.Label11.Size = New System.Drawing.Size(106, 39)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
@@ -239,6 +239,7 @@ Partial Class frmBienvenidaGestor
         Me.Button2.TabIndex = 24
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'Button1
         '
@@ -248,6 +249,7 @@ Partial Class frmBienvenidaGestor
         Me.Button1.TabIndex = 23
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'Label12
         '
@@ -292,7 +294,7 @@ Partial Class frmBienvenidaGestor
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(13, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(314, 38)
+        Me.Label3.Size = New System.Drawing.Size(314, 39)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Registro de Usuarios"
         '
@@ -353,7 +355,7 @@ Partial Class frmBienvenidaGestor
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(23, 27)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 38)
+        Me.Label2.Size = New System.Drawing.Size(168, 39)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Patologías"
         '
@@ -395,7 +397,7 @@ Partial Class frmBienvenidaGestor
         Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(23, 27)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(152, 38)
+        Me.Label17.Size = New System.Drawing.Size(152, 39)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Sintomas"
         '
@@ -437,7 +439,7 @@ Partial Class frmBienvenidaGestor
         Me.Label19.ForeColor = System.Drawing.Color.White
         Me.Label19.Location = New System.Drawing.Point(22, 33)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(144, 38)
+        Me.Label19.Size = New System.Drawing.Size(144, 39)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Usuarios"
         '
@@ -451,6 +453,17 @@ Partial Class frmBienvenidaGestor
         Me.pnlListadoPacientes.Size = New System.Drawing.Size(260, 451)
         Me.pnlListadoPacientes.TabIndex = 24
         Me.pnlListadoPacientes.Visible = False
+        '
+        'btnRefrescarListadoPac
+        '
+        Me.btnRefrescarListadoPac.FlatAppearance.BorderSize = 0
+        Me.btnRefrescarListadoPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRefrescarListadoPac.Image = Global.Vista.My.Resources.Resources.icons8_refresh_20px
+        Me.btnRefrescarListadoPac.Location = New System.Drawing.Point(224, 3)
+        Me.btnRefrescarListadoPac.Name = "btnRefrescarListadoPac"
+        Me.btnRefrescarListadoPac.Size = New System.Drawing.Size(28, 30)
+        Me.btnRefrescarListadoPac.TabIndex = 25
+        Me.btnRefrescarListadoPac.UseVisualStyleBackColor = True
         '
         'lblTituloLIstadoPacientes
         '
@@ -467,54 +480,54 @@ Partial Class frmBienvenidaGestor
         '
         Me.dgvListadoPacientes.AllowUserToAddRows = False
         Me.dgvListadoPacientes.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvListadoPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvListadoPacientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvListadoPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListadoPacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListadoPacientes.BackgroundColor = System.Drawing.Color.White
         Me.dgvListadoPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvListadoPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvListadoPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle14.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListadoPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoPacientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvListadoPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvListadoPacientes.ColumnHeadersVisible = False
         Me.dgvListadoPacientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Rechazar, Me.Aceptar})
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle17.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListadoPacientes.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoPacientes.DefaultCellStyle = DataGridViewCellStyle11
         Me.dgvListadoPacientes.EnableHeadersVisualStyles = False
         Me.dgvListadoPacientes.Location = New System.Drawing.Point(0, 39)
         Me.dgvListadoPacientes.MultiSelect = False
         Me.dgvListadoPacientes.Name = "dgvListadoPacientes"
         Me.dgvListadoPacientes.ReadOnly = True
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListadoPacientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoPacientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvListadoPacientes.RowHeadersVisible = False
         Me.dgvListadoPacientes.RowHeadersWidth = 51
         Me.dgvListadoPacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -522,21 +535,31 @@ Partial Class frmBienvenidaGestor
         Me.dgvListadoPacientes.Size = New System.Drawing.Size(257, 409)
         Me.dgvListadoPacientes.TabIndex = 146
         '
+        'Rechazar
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Rechazar.DefaultCellStyle = DataGridViewCellStyle9
+        Me.Rechazar.HeaderText = "Rechazar"
+        Me.Rechazar.Name = "Rechazar"
+        Me.Rechazar.ReadOnly = True
+        Me.Rechazar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Rechazar.Text = "rechazar"
+        '
+        'Aceptar
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Aceptar.DefaultCellStyle = DataGridViewCellStyle10
+        Me.Aceptar.HeaderText = "Aceptar"
+        Me.Aceptar.Name = "Aceptar"
+        Me.Aceptar.ReadOnly = True
+        Me.Aceptar.Text = "aceptar"
+        '
         'Timer1
         '
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 6000
-        '
-        'btnRefrescarListadoPac
-        '
-        Me.btnRefrescarListadoPac.FlatAppearance.BorderSize = 0
-        Me.btnRefrescarListadoPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRefrescarListadoPac.Image = Global.Vista.My.Resources.Resources.icons8_refresh_20px
-        Me.btnRefrescarListadoPac.Location = New System.Drawing.Point(224, 3)
-        Me.btnRefrescarListadoPac.Name = "btnRefrescarListadoPac"
-        Me.btnRefrescarListadoPac.Size = New System.Drawing.Size(28, 30)
-        Me.btnRefrescarListadoPac.TabIndex = 25
-        Me.btnRefrescarListadoPac.UseVisualStyleBackColor = True
         '
         'btnNotificacion
         '
@@ -549,27 +572,6 @@ Partial Class frmBienvenidaGestor
         Me.btnNotificacion.Size = New System.Drawing.Size(43, 44)
         Me.btnNotificacion.TabIndex = 23
         Me.btnNotificacion.UseVisualStyleBackColor = True
-        '
-        'Rechazar
-        '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Rechazar.DefaultCellStyle = DataGridViewCellStyle15
-        Me.Rechazar.HeaderText = "Rechazar"
-        Me.Rechazar.Name = "Rechazar"
-        Me.Rechazar.ReadOnly = True
-        Me.Rechazar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Rechazar.Text = "rechazar"
-        '
-        'Aceptar
-        '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Aceptar.DefaultCellStyle = DataGridViewCellStyle16
-        Me.Aceptar.HeaderText = "Aceptar"
-        Me.Aceptar.Name = "Aceptar"
-        Me.Aceptar.ReadOnly = True
-        Me.Aceptar.Text = "aceptar"
         '
         'frmBienvenidaGestor
         '

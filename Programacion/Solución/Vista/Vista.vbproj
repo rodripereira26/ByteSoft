@@ -234,12 +234,6 @@
     <Compile Include="Gestor\frmListadoPatologiasySintomas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestor\frmSintomasRegistrados.Designer.vb">
-      <DependentUpon>frmSintomasRegistrados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gestor\frmSintomasRegistrados.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Gestor\frmRegistroGestor.Designer.vb">
       <DependentUpon>frmRegistroGestor.vb</DependentUpon>
     </Compile>
@@ -262,12 +256,6 @@
       <DependentUpon>frmRegistrarMedico.vb</DependentUpon>
     </Compile>
     <Compile Include="Gestor\frmRegistrarMedico.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gestor\frmHabilitar.Designer.vb">
-      <DependentUpon>frmHabilitar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gestor\frmHabilitar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Medico\frmBienvenidaMedico.Designer.vb">
@@ -382,9 +370,6 @@
     <EmbeddedResource Include="Gestor\frmListadoPatologiasySintomas.resx">
       <DependentUpon>frmListadoPatologiasySintomas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmSintomasRegistrados.resx">
-      <DependentUpon>frmSintomasRegistrados.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmRegistroGestor.resx">
       <DependentUpon>frmRegistroGestor.vb</DependentUpon>
     </EmbeddedResource>
@@ -396,9 +381,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor\frmRegistrarMedico.resx">
       <DependentUpon>frmRegistrarMedico.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gestor\frmHabilitar.resx">
-      <DependentUpon>frmHabilitar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medico\frmBienvenidaMedico.resx">
       <DependentUpon>frmBienvenidaMedico.vb</DependentUpon>
@@ -736,6 +718,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-test-results-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-left-32 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />

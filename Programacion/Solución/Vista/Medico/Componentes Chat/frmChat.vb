@@ -9,7 +9,7 @@ Public Class frmChat
 
         InitializeComponent()
         Principal.Singleton.SuperRoundedCorners(txtMensaje)
-
+        Principal.Singleton.SuperRoundedCorners(txtMensaje)
     End Sub
 
     Private Sub ReloadChat()
@@ -53,7 +53,7 @@ Public Class frmChat
 
 
 
-    End Sub
+
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ReloadChat()
@@ -115,7 +115,7 @@ Public Class frmChat
         End If
     End Sub
 
-    Private Sub pbCancelar_Click_(sender As Object, e As EventArgs) Handles pbCancelar.Click
+    Private Sub btnFinalizar_Click_(sender As Object, e As EventArgs) Handles btnFinalizar.Click
 
         Dim respuesta = MsgBox("¿Desea finalizar la sesión de chat?", vbQuestion + vbYesNo + vbDefaultButton2)
 
@@ -134,5 +134,27 @@ Public Class frmChat
         End If
     End Sub
 
+    Private Sub txtMensaje_TextChanged(sender As Object, e As EventArgs) Handles txtMensaje.TextChanged
+        If Not (txtMensaje.Text = Nothing) Then
+            lblEscriba.Visible = False
+        Else
+            lblEscriba.Visible = True
+        End If
 
+    End Sub
+    Private Sub txtMensaje_GotFocus(sender As Object, e As EventArgs) Handles txtMensaje.GotFocus
+        If txtMensaje.Text = Nothing Then
+            lblEscriba.Visible = True
+        Else
+            lblEscriba.Visible = False
+        End If
+
+    End Sub
+    Private Sub txtMensaje_LostFocus(sender As Object, e As EventArgs) Handles txtMensaje.LostFocus
+
+        If txtMensaje.Text = Nothing Then
+            lblEscriba.Visible = True
+        End If
+
+    End Sub
 End Class

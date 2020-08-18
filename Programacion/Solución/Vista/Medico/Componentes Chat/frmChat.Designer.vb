@@ -30,12 +30,13 @@ Partial Class frmChat
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
-        Me.MaterialFlatButton2 = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btnFinalizar = New MaterialSkin.Controls.MaterialFlatButton()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pbCancelar = New System.Windows.Forms.PictureBox()
         Me.pbEnviar = New System.Windows.Forms.PictureBox()
         Me.btnAtras = New System.Windows.Forms.Button()
+        Me.lblEscriba = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCancelar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +58,7 @@ Partial Class frmChat
         Me.Chat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Chat.AutoScroll = True
+        Me.Chat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Chat.Location = New System.Drawing.Point(330, 102)
         Me.Chat.Name = "Chat"
         Me.Chat.Size = New System.Drawing.Size(723, 480)
@@ -66,7 +68,7 @@ Partial Class frmChat
         '
         Me.txtMensaje.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtMensaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMensaje.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMensaje.Location = New System.Drawing.Point(348, 592)
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
@@ -104,21 +106,21 @@ Partial Class frmChat
         Me.MaterialFlatButton1.Text = "Ver síntomas y diagnóstico"
         Me.MaterialFlatButton1.UseVisualStyleBackColor = True
         '
-        'MaterialFlatButton2
+        'btnFinalizar
         '
-        Me.MaterialFlatButton2.AutoSize = True
-        Me.MaterialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialFlatButton2.Depth = 0
-        Me.MaterialFlatButton2.Icon = Nothing
-        Me.MaterialFlatButton2.Location = New System.Drawing.Point(819, 57)
-        Me.MaterialFlatButton2.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialFlatButton2.Name = "MaterialFlatButton2"
-        Me.MaterialFlatButton2.Primary = False
-        Me.MaterialFlatButton2.Size = New System.Drawing.Size(128, 36)
-        Me.MaterialFlatButton2.TabIndex = 14
-        Me.MaterialFlatButton2.Text = "finalizar chat"
-        Me.MaterialFlatButton2.UseVisualStyleBackColor = True
+        Me.btnFinalizar.AutoSize = True
+        Me.btnFinalizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnFinalizar.Depth = 0
+        Me.btnFinalizar.Icon = Nothing
+        Me.btnFinalizar.Location = New System.Drawing.Point(819, 57)
+        Me.btnFinalizar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnFinalizar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnFinalizar.Name = "btnFinalizar"
+        Me.btnFinalizar.Primary = False
+        Me.btnFinalizar.Size = New System.Drawing.Size(128, 36)
+        Me.btnFinalizar.TabIndex = 14
+        Me.btnFinalizar.Text = "finalizar chat"
+        Me.btnFinalizar.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -171,14 +173,27 @@ Partial Class frmChat
         Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnAtras.UseVisualStyleBackColor = True
         '
+        'lblEscriba
+        '
+        Me.lblEscriba.AutoSize = True
+        Me.lblEscriba.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.lblEscriba.Font = New System.Drawing.Font("Roboto Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEscriba.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblEscriba.Location = New System.Drawing.Point(358, 601)
+        Me.lblEscriba.Name = "lblEscriba"
+        Me.lblEscriba.Size = New System.Drawing.Size(137, 18)
+        Me.lblEscriba.TabIndex = 16
+        Me.lblEscriba.Text = "Escriba un mensaje"
+        '
         'frmChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1076, 656)
+        Me.Controls.Add(Me.lblEscriba)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.MaterialFlatButton2)
+        Me.Controls.Add(Me.btnFinalizar)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MaterialFlatButton1)
         Me.Controls.Add(Me.lblUsuario)
@@ -190,7 +205,7 @@ Partial Class frmChat
         Me.Controls.Add(Me.Menu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmChat"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmChat"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -212,6 +227,7 @@ Partial Class frmChat
     Friend WithEvents lblUsuario As Label
     Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents MaterialFlatButton2 As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btnFinalizar As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents lblEscriba As Label
 End Class

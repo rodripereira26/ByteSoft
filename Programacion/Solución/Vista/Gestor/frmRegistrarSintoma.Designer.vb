@@ -24,7 +24,6 @@ Partial Class frmRegistrarSintoma
     Private Sub InitializeComponent()
         Me.panelTitulo = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1__ = New System.Windows.Forms.Panel()
@@ -38,15 +37,15 @@ Partial Class frmRegistrarSintoma
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.txtNomSintoma = New System.Windows.Forms.TextBox()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.panelTitulo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelTitulo
         '
         Me.panelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.panelTitulo.Controls.Add(Me.btnAtras)
         Me.panelTitulo.Controls.Add(Me.Label10)
-        Me.panelTitulo.Controls.Add(Me.PictureBox1)
         Me.panelTitulo.Controls.Add(Me.Label12)
         Me.panelTitulo.Controls.Add(Me.Label13)
         Me.panelTitulo.Location = New System.Drawing.Point(-1, 0)
@@ -65,15 +64,6 @@ Partial Class frmRegistrarSintoma
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "REGISTRAR SÍNTOMA"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.icons8_arrow_pointing_left_24px
-        Me.PictureBox1.Location = New System.Drawing.Point(28, 28)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(33, 27)
-        Me.PictureBox1.TabIndex = 26
-        Me.PictureBox1.TabStop = False
         '
         'Label12
         '
@@ -199,6 +189,19 @@ Partial Class frmRegistrarSintoma
         Me.MaterialRaisedButton1.Text = "Registrar síntoma"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
+        'btnAtras
+        '
+        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
+        Me.btnAtras.FlatAppearance.BorderSize = 0
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
+        Me.btnAtras.Location = New System.Drawing.Point(37, 27)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
+        Me.btnAtras.TabIndex = 30
+        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAtras.UseVisualStyleBackColor = True
+        '
         'frmRegistrarSintoma
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -218,7 +221,6 @@ Partial Class frmRegistrarSintoma
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.panelTitulo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -237,6 +239,6 @@ Partial Class frmRegistrarSintoma
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents btnAtras As Button
 End Class

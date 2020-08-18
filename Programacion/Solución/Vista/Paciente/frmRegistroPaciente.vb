@@ -12,13 +12,13 @@ Public Class frmRegistroPaciente
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        Application.Exit()
+        Me.Close()
+        frmLogin.Show()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
-        Me.Dispose()
-        frmLogin.Show()
+
 
     End Sub
 
@@ -116,4 +116,21 @@ Public Class frmRegistroPaciente
         txtFecNac.Select(0, 0)
     End Sub
 
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        MsgBox(txtFecNac.Text)
+        If Not (txtCed.Text = Nothing And txtPrimerNombre.Text = Nothing And txtPrimerApellido.Text = Nothing And
+            txtPrimerNombre.Text = Nothing And txtSegundoApellido.Text = Nothing And txtSegundoNombre.Text = Nothing And
+            txtPass1.Text = Nothing And txtPass2.Text = Nothing And dgvTelefonos.Rows.Count > 0) Then 'agregar txtFecnac
+            Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
+            If res = vbYes Then
+                Me.Close()
+                frmLogin.Show()
+            End If
+        Else
+
+            Me.Close()
+            frmLogin.Show()
+        End If
+
+    End Sub
 End Class

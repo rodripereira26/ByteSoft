@@ -22,9 +22,9 @@ Partial Class frmRegistroGestor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.txtCI = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -52,7 +52,7 @@ Partial Class frmRegistroGestor
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btnRegistrarGestor = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
@@ -62,6 +62,7 @@ Partial Class frmRegistroGestor
         Me.Telefonos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtPass2 = New System.Windows.Forms.TextBox()
         Me.txtPass1 = New System.Windows.Forms.TextBox()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.Panel6.SuspendLayout()
         Me.Panel12.SuspendLayout()
         CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,14 +81,15 @@ Partial Class frmRegistroGestor
         Me.txtCI.BackColor = System.Drawing.Color.White
         Me.txtCI.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCI.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCI.Location = New System.Drawing.Point(139, 143)
+        Me.txtCI.Location = New System.Drawing.Point(148, 143)
         Me.txtCI.Name = "txtCI"
-        Me.txtCI.Size = New System.Drawing.Size(181, 24)
+        Me.txtCI.Size = New System.Drawing.Size(172, 24)
         Me.txtCI.TabIndex = 109
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.btnAtras)
         Me.Panel6.Controls.Add(Me.Label12)
         Me.Panel6.Controls.Add(Me.Label13)
         Me.Panel6.Controls.Add(Me.Label4)
@@ -123,13 +125,13 @@ Partial Class frmRegistroGestor
         'Label4
         '
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Roboto Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(301, 9)
+        Me.Label4.Location = New System.Drawing.Point(307, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(413, 57)
+        Me.Label4.Size = New System.Drawing.Size(393, 57)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Crear cuenta de Gestor"
+        Me.Label4.Text = "CREAR CUENTA DE GESTOR"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
@@ -155,9 +157,9 @@ Partial Class frmRegistroGestor
         Me.txtPrimerNombre.BackColor = System.Drawing.Color.White
         Me.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrimerNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerNombre.Location = New System.Drawing.Point(3, 302)
+        Me.txtPrimerNombre.Location = New System.Drawing.Point(12, 302)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
-        Me.txtPrimerNombre.Size = New System.Drawing.Size(223, 24)
+        Me.txtPrimerNombre.Size = New System.Drawing.Size(214, 24)
         Me.txtPrimerNombre.TabIndex = 112
         '
         'Panel5
@@ -189,9 +191,9 @@ Partial Class frmRegistroGestor
         Me.txtSegundoApellido.BackColor = System.Drawing.Color.White
         Me.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSegundoApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoApellido.Location = New System.Drawing.Point(762, 299)
+        Me.txtSegundoApellido.Location = New System.Drawing.Point(771, 299)
         Me.txtSegundoApellido.Name = "txtSegundoApellido"
-        Me.txtSegundoApellido.Size = New System.Drawing.Size(223, 24)
+        Me.txtSegundoApellido.Size = New System.Drawing.Size(214, 24)
         Me.txtSegundoApellido.TabIndex = 115
         '
         'lblSegundoApellido
@@ -211,7 +213,7 @@ Partial Class frmRegistroGestor
         Me.txtPrimerApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrimerApellido.Location = New System.Drawing.Point(509, 302)
         Me.txtPrimerApellido.Name = "txtPrimerApellido"
-        Me.txtPrimerApellido.Size = New System.Drawing.Size(223, 24)
+        Me.txtPrimerApellido.Size = New System.Drawing.Size(214, 24)
         Me.txtPrimerApellido.TabIndex = 114
         '
         'lblPrimerApellido
@@ -231,7 +233,7 @@ Partial Class frmRegistroGestor
         Me.txtSegundoNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSegundoNombre.Location = New System.Drawing.Point(256, 302)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
-        Me.txtSegundoNombre.Size = New System.Drawing.Size(223, 24)
+        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 24)
         Me.txtSegundoNombre.TabIndex = 113
         '
         'lblSegundoNombre
@@ -328,20 +330,20 @@ Partial Class frmRegistroGestor
         Me.Label6.TabIndex = 114
         Me.Label6.Text = "Repetir Contraseña"
         '
-        'MaterialRaisedButton1
+        'btnRegistrarGestor
         '
-        Me.MaterialRaisedButton1.AutoSize = True
-        Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(443, 606)
-        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
-        Me.MaterialRaisedButton1.Primary = True
-        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(120, 36)
-        Me.MaterialRaisedButton1.TabIndex = 126
-        Me.MaterialRaisedButton1.Text = "Crear cuenta"
-        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
+        Me.btnRegistrarGestor.AutoSize = True
+        Me.btnRegistrarGestor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnRegistrarGestor.Depth = 0
+        Me.btnRegistrarGestor.Icon = Nothing
+        Me.btnRegistrarGestor.Location = New System.Drawing.Point(443, 606)
+        Me.btnRegistrarGestor.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnRegistrarGestor.Name = "btnRegistrarGestor"
+        Me.btnRegistrarGestor.Primary = True
+        Me.btnRegistrarGestor.Size = New System.Drawing.Size(149, 36)
+        Me.btnRegistrarGestor.TabIndex = 126
+        Me.btnRegistrarGestor.Text = "registrar gestor"
+        Me.btnRegistrarGestor.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -407,34 +409,34 @@ Partial Class frmRegistroGestor
         '
         'dgvTelefonos
         '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvTelefonos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTelefonos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTelefonos.BackgroundColor = System.Drawing.Color.White
         Me.dgvTelefonos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTelefonos.ColumnHeadersVisible = False
         Me.dgvTelefonos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Telefonos})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle9
         Me.dgvTelefonos.Location = New System.Drawing.Point(12, 3)
         Me.dgvTelefonos.MultiSelect = False
         Me.dgvTelefonos.Name = "dgvTelefonos"
@@ -465,11 +467,24 @@ Partial Class frmRegistroGestor
         Me.txtPass1.BackColor = System.Drawing.Color.White
         Me.txtPass1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPass1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass1.Location = New System.Drawing.Point(409, 143)
+        Me.txtPass1.Location = New System.Drawing.Point(418, 143)
         Me.txtPass1.Name = "txtPass1"
         Me.txtPass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass1.Size = New System.Drawing.Size(181, 24)
+        Me.txtPass1.Size = New System.Drawing.Size(176, 24)
         Me.txtPass1.TabIndex = 110
+        '
+        'btnAtras
+        '
+        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
+        Me.btnAtras.FlatAppearance.BorderSize = 0
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
+        Me.btnAtras.Location = New System.Drawing.Point(45, 26)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
+        Me.btnAtras.TabIndex = 30
+        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAtras.UseVisualStyleBackColor = True
         '
         'frmRegistroGestor
         '
@@ -481,7 +496,7 @@ Partial Class frmRegistroGestor
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel12)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.MaterialRaisedButton1)
+        Me.Controls.Add(Me.btnRegistrarGestor)
         Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.txtPass2)
         Me.Controls.Add(Me.Panel8)
@@ -547,7 +562,7 @@ Partial Class frmRegistroGestor
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents btnRegistrarGestor As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel12 As Panel
@@ -557,4 +572,5 @@ Partial Class frmRegistroGestor
     Friend WithEvents Telefonos As DataGridViewTextBoxColumn
     Friend WithEvents txtPass2 As TextBox
     Friend WithEvents txtPass1 As TextBox
+    Friend WithEvents btnAtras As Button
 End Class

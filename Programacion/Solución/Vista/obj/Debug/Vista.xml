@@ -62,6 +62,31 @@ Vista
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Vista.My.Resources.Resources.icoCancelar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icoDiagnostico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icoEnviar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icoFlechaAtras">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icoFlechaAtrasWhite">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Vista.My.Resources.Resources.icons8_arrow_pointing_left_24px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -178,6 +203,16 @@ Vista
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_single_choice_24px1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_test_results_100">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_test_results_30">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

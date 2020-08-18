@@ -22,6 +22,19 @@ Public Class ControladorMedico
         Me._especializacion = especializacion
 
     End Sub
+    Public Sub New(ci As String, contraseña As String, pNom As String, Snom As String, PApe As String, SApe As String)
+
+        MyBase.New(ci, contraseña, pNom, Snom, PApe, SApe)
+
+        Me._ci = ci
+        Me._contraseña = contraseña
+        Me._primer_nombre = pNom
+        Me._segundo_nombre = Snom
+        Me._primer_apellido = PApe
+        Me._segundo_apellido = SApe
+
+
+    End Sub
 
     Public Function registrar() As Boolean
 

@@ -6,7 +6,7 @@ Public Class frmRegistroGestor
     Dim check As New Verificacion
     Dim seg As New Encriptar
 
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles btnRegistrarGestor.Click
 
         If Principal.Singleton.verificarCedula(check, txtCI.Text) Then
             If Principal.Singleton.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
@@ -86,4 +86,20 @@ Public Class frmRegistroGestor
 
     End Sub
 
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        If Not (txtCI.Text = Nothing And txtPrimerNombre.Text = Nothing And txtPrimerApellido.Text = Nothing And
+            txtPrimerNombre.Text = Nothing And txtSegundoApellido.Text = Nothing And txtSegundoNombre.Text = Nothing And
+            txtPass1.Text = Nothing And txtPass2.Text = Nothing And txtEmail.Text = Nothing And dgvTelefonos.Rows.Count > 0) Then
+            Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
+            If res = vbYes Then
+                frmModular.Show()
+                Me.Close()
+            End If
+        Else
+            frmModular.Show()
+            Me.Close()
+        End If
+        frmModular.Show()
+        Me.Hide()
+    End Sub
 End Class

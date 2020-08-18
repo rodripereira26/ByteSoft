@@ -83,7 +83,8 @@ Public Class frmBienvenidaGestor
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        Application.Exit()
+        frmLogin.Show()
+        Me.Close()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -140,4 +141,23 @@ Public Class frmBienvenidaGestor
         dgvListadoPacientes.DataSource = gestor.listarPacientes
     End Sub
 
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+        Me.WindowState = WindowState.Minimized
+    End Sub
+
+    Private Sub pnlUsuarios_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlUsuarios.MouseClick
+        MsgBox("En construcción...")
+    End Sub
+
+    Private Sub pnlAjustes_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlAjustes.MouseClick
+        MsgBox("En construcción...")
+    End Sub
+
+    Private Sub pnlMiPerfil_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlMiPerfil.MouseClick
+        MsgBox("En construcción...")
+    End Sub
+
+    Private Sub pnlAyuda_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlAyuda.MouseClick
+        MsgBox("En construcción...")
+    End Sub
 End Class

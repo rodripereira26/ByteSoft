@@ -35,6 +35,7 @@ Partial Class frmRegistrarMedico
         Me.lblSegundoNombre = New System.Windows.Forms.Label()
         Me.lblPrimerNombre = New System.Windows.Forms.Label()
         Me.pnlTitulo = New System.Windows.Forms.Panel()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,10 +45,10 @@ Partial Class frmRegistrarMedico
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.txtCed = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.btnRegistrarMedico = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtEspe = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.pnlTitulo.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -166,6 +167,7 @@ Partial Class frmRegistrarMedico
         'pnlTitulo
         '
         Me.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnlTitulo.Controls.Add(Me.btnAtras)
         Me.pnlTitulo.Controls.Add(Me.Label10)
         Me.pnlTitulo.Controls.Add(Me.Label2)
         Me.pnlTitulo.Controls.Add(Me.Label3)
@@ -173,6 +175,19 @@ Partial Class frmRegistrarMedico
         Me.pnlTitulo.Name = "pnlTitulo"
         Me.pnlTitulo.Size = New System.Drawing.Size(701, 78)
         Me.pnlTitulo.TabIndex = 92
+        '
+        'btnAtras
+        '
+        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
+        Me.btnAtras.FlatAppearance.BorderSize = 0
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
+        Me.btnAtras.Location = New System.Drawing.Point(33, 20)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
+        Me.btnAtras.TabIndex = 28
+        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAtras.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -237,7 +252,7 @@ Partial Class frmRegistrarMedico
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.Black
-        Me.Panel9.Location = New System.Drawing.Point(143, 176)
+        Me.Panel9.Location = New System.Drawing.Point(153, 175)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(176, 2)
         Me.Panel9.TabIndex = 91
@@ -247,7 +262,7 @@ Partial Class frmRegistrarMedico
         Me.txtCed.BackColor = System.Drawing.Color.White
         Me.txtCed.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCed.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCed.Location = New System.Drawing.Point(143, 146)
+        Me.txtCed.Location = New System.Drawing.Point(153, 145)
         Me.txtCed.Name = "txtCed"
         Me.txtCed.Size = New System.Drawing.Size(176, 23)
         Me.txtCed.TabIndex = 90
@@ -256,54 +271,54 @@ Partial Class frmRegistrarMedico
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(129, 112)
+        Me.Label1.Location = New System.Drawing.Point(139, 111)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(198, 26)
         Me.Label1.TabIndex = 89
         Me.Label1.Text = "Cédula de Identidad"
         '
-        'MaterialRaisedButton1
+        'btnRegistrarMedico
         '
-        Me.MaterialRaisedButton1.AutoSize = True
-        Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(280, 494)
-        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
-        Me.MaterialRaisedButton1.Primary = True
-        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(141, 36)
-        Me.MaterialRaisedButton1.TabIndex = 126
-        Me.MaterialRaisedButton1.Text = "Ingresar médico"
-        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
+        Me.btnRegistrarMedico.AutoSize = True
+        Me.btnRegistrarMedico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnRegistrarMedico.Depth = 0
+        Me.btnRegistrarMedico.Icon = Nothing
+        Me.btnRegistrarMedico.Location = New System.Drawing.Point(280, 494)
+        Me.btnRegistrarMedico.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnRegistrarMedico.Name = "btnRegistrarMedico"
+        Me.btnRegistrarMedico.Primary = True
+        Me.btnRegistrarMedico.Size = New System.Drawing.Size(141, 36)
+        Me.btnRegistrarMedico.TabIndex = 126
+        Me.btnRegistrarMedico.Text = "Ingresar médico"
+        Me.btnRegistrarMedico.UseVisualStyleBackColor = True
         '
-        'Panel10
+        'Panel6
         '
-        Me.Panel10.BackColor = System.Drawing.Color.Black
-        Me.Panel10.Location = New System.Drawing.Point(395, 176)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(176, 2)
-        Me.Panel10.TabIndex = 94
+        Me.Panel6.BackColor = System.Drawing.Color.Black
+        Me.Panel6.Location = New System.Drawing.Point(400, 175)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(176, 2)
+        Me.Panel6.TabIndex = 128
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(410, 111)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(156, 26)
+        Me.Label4.TabIndex = 127
+        Me.Label4.Text = "Especialización"
         '
         'txtEspe
         '
         Me.txtEspe.BackColor = System.Drawing.Color.White
         Me.txtEspe.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtEspe.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspe.Location = New System.Drawing.Point(395, 146)
+        Me.txtEspe.Location = New System.Drawing.Point(400, 146)
         Me.txtEspe.Name = "txtEspe"
         Me.txtEspe.Size = New System.Drawing.Size(176, 23)
-        Me.txtEspe.TabIndex = 93
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(406, 112)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(156, 26)
-        Me.Label5.TabIndex = 92
-        Me.Label5.Text = "Especialización"
+        Me.txtEspe.TabIndex = 129
         '
         'frmRegistrarMedico
         '
@@ -311,10 +326,10 @@ Partial Class frmRegistrarMedico
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 556)
-        Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.txtEspe)
-        Me.Controls.Add(Me.MaterialRaisedButton1)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Panel6)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.btnRegistrarMedico)
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.txtCed)
         Me.Controls.Add(Me.pnlTitulo)
@@ -365,9 +380,10 @@ Partial Class frmRegistrarMedico
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents txtEspe As TextBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents btnRegistrarMedico As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Label10 As Label
+    Friend WithEvents btnAtras As Button
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtEspe As TextBox
 End Class

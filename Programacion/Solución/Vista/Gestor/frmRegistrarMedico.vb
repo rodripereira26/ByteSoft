@@ -10,7 +10,7 @@ Public Class frmRegistrarMedico
 
     End Sub
 
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles btnRegistrarMedico.Click
 
         If Principal.Singleton.verificarCedula(check, txtCed.Text) Then
             If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
@@ -51,4 +51,16 @@ Public Class frmRegistrarMedico
         Principal.Singleton.moverVentanaUp()
     End Sub
 
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        If Not (txtCed.Text = Nothing And txtEspe.Text = Nothing And txtPrimerApellido.Text = Nothing And txtPrimerNombre.Text = Nothing And txtSegundoApellido.Text = Nothing And txtSegundoNombre.Text = Nothing) Then
+            Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
+            If res = vbYes Then
+                frmModular.Show()
+                Me.Close()
+            End If
+        Else
+            frmModular.Show()
+            Me.Close()
+        End If
+    End Sub
 End Class

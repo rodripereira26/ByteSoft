@@ -102,7 +102,7 @@ Partial Class frmBienvenidaMedico
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(22, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 38)
+        Me.Label1.Size = New System.Drawing.Size(83, 39)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Chat"
         '
@@ -144,7 +144,7 @@ Partial Class frmBienvenidaMedico
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(22, 33)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(181, 38)
+        Me.Label4.Size = New System.Drawing.Size(181, 39)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Mi Historial"
         '
@@ -186,7 +186,7 @@ Partial Class frmBienvenidaMedico
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(22, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 38)
+        Me.Label7.Size = New System.Drawing.Size(125, 39)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Ajustes"
         '
@@ -228,7 +228,7 @@ Partial Class frmBienvenidaMedico
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(3, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(136, 38)
+        Me.Label9.Size = New System.Drawing.Size(136, 39)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
@@ -270,7 +270,7 @@ Partial Class frmBienvenidaMedico
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 38)
+        Me.Label11.Size = New System.Drawing.Size(106, 39)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
@@ -377,7 +377,7 @@ Partial Class frmBienvenidaMedico
         Me.Label15.ForeColor = System.Drawing.Color.White
         Me.Label15.Location = New System.Drawing.Point(11, 27)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(168, 38)
+        Me.Label15.Size = New System.Drawing.Size(168, 39)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "Patologías"
         '

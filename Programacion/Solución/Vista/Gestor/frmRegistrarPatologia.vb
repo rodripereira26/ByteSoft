@@ -38,6 +38,7 @@ Public Class frmRegistrarPatologia
             Dim rowDestino = destino.Rows.Count - 1
 
             destino.Rows(rowDestino).Cells(0).Value = origen.Rows(SourceRow).Cells(0).Value
+            destino.Sort(destino.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
             origen.Rows.RemoveAt(SourceRow)
 
         Else
@@ -146,4 +147,17 @@ Public Class frmRegistrarPatologia
         Principal.Singleton.moverVentanaUp()
     End Sub
 
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        If Not (txtDescPat.Text = Nothing And txtNomPat.Text = Nothing And txtRecPat.Text = Nothing And dgvSintomasSeleccionados.Rows.Count = 0) Then
+            Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
+            If res = vbYes Then
+                frmModular.Show()
+                Me.Close()
+            End If
+        Else
+            frmModular.Show()
+            Me.Close()
+        End If
+
+    End Sub
 End Class

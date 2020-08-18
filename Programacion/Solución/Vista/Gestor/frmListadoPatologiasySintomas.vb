@@ -14,41 +14,39 @@ Public Class frmListadoPatologiasySintomas
 
         lblTitulo.Text = "LISTADO DE " & op.ToUpper
 
-        Principal.Singleton.metroStyle(Me)
-
-
+        Principal.Singleton.metroStyle(Me) ' no definido si se va a usar o no
         Panel1.Height = btnBuscarPor.Height
 
         If op = "síntomas" Then
             Dim s As New ControladorSintoma
             dgvListado.DataSource = s.listarSintomas
 
-        Else
+        ElseIf op = "patologías" Then
             Dim p As New ControladorPatologia
             dgvListado.DataSource = p.listarPatologias
 
-            For i As Integer = 0 To dgvListado.Rows.Count - 1
+            'For i As Integer = 0 To dgvListado.Rows.Count - 1
 
-                If dgvListado.Rows(i).Cells(3).Value = 1 Then
+            '    If dgvListado.Rows(i).Cells(3).Value = 1 Then
 
-                    dgvListado.Rows(i).Cells(3).Value = "Alta"
+            '        dgvListado.Rows(i).Cells(3).Value = "Alta"
 
-                ElseIf dgvListado.Rows(i).Cells(3).Value = 2 Then
+            '    ElseIf dgvListado.Rows(i).Cells(3).Value = 2 Then
 
-                    dgvListado.Rows(i).Cells(3).Value = "Media"
+            '        dgvListado.Rows(i).Cells(3).Value = "Media"
 
-                Else
-                    dgvListado.Rows(i).Cells(3).Value = "Baja"
+            '    Else
+            '        dgvListado.Rows(i).Cells(3).Value = "Baja"
 
-                End If
+            '    End If
 
-            Next
+            'Next
         End If
 
 
     End Sub
 
-    Private Sub btnSeleccionMultiple_Click(sender As Object, e As EventArgs)
+    Private Sub btnSeleccionMultiple_Click(sender As Object, e As EventArgs) Handles btnSeleccionMultiple.Click
 
         If dgvListado.MultiSelect = True Then
 
@@ -158,20 +156,7 @@ Public Class frmListadoPatologiasySintomas
 
     End Sub
 
-    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles btnSeleccionMultiple.Click
 
-        If dgvListado.MultiSelect = True Then
-
-            dgvListado.MultiSelect = False
-            btnSeleccionMultiple.Text = "activar selección múltiple"
-
-        Else
-            dgvListado.MultiSelect = True
-            btnSeleccionMultiple.Text = "desactivar selección múltiple"
-
-        End If
-
-    End Sub
 
     Private Sub btnModificarElemento_Click(sender As Object, e As EventArgs)
 
@@ -296,4 +281,21 @@ Public Class frmListadoPatologiasySintomas
 
     End Sub
 
+    Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        frmModular.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
+        Me.Close()
+        frmLogin.Show()
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles lblMinimizar.Click
+        Me.WindowState = WindowState.Minimized
+    End Sub
+
+    Private Sub btnModificarElemento_Click_1(sender As Object, e As EventArgs) Handles btnModificarElemento.Click
+        MsgBox("En construcción...")
+    End Sub
 End Class

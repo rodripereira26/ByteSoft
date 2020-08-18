@@ -1,9 +1,6 @@
 ﻿Imports Logica
 Public Class frmLogin
 
-    Dim drag As Boolean
-    Dim mousex, mousey As Integer
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Label1.Select()
@@ -74,17 +71,18 @@ Public Class frmLogin
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         ingresarUsuario()
+
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub lblCrearCuentaPac_Click(sender As Object, e As EventArgs) Handles lblCrearCuentaPac.Click
 
         frmRegistroPaciente.Show()
         Me.Hide()
 
     End Sub
 
-    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
-        drag = False
+    Private Sub pnlTopBar_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseUp
+        Principal.Singleton.moverVentanaUp()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
@@ -99,6 +97,14 @@ Public Class frmLogin
         Label2.Visible = False
         txtUsr.Focus()
 
+    End Sub
+
+    Private Sub pnlTopBar_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseDown
+        Principal.Singleton.moverVentanaDown(Me)
+    End Sub
+
+    Private Sub pnlTopBar_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseMove
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Private Sub ingresarUsuario()
@@ -118,13 +124,17 @@ Public Class frmLogin
 
                         Case "G"
                             frmBienvenidaGestor.Show()
+                            txtPass.Clear()
+                            txtUsr.Clear()
                             Me.Hide()
 
                         Case "P"
                             Dim paciente As New ControladorPaciente
 
-                            If paciente.verificar(txtUsr.text) Then
+                            If paciente.verificar(txtUsr.Text) Then
                                 frmBienvenidaPaciente.Show()
+                                txtPass.Clear()
+                                txtUsr.Clear()
                                 Me.Hide()
                             Else
                                 MsgBox("Usted no ha sido habilitado para ingresar al sistema")
@@ -132,6 +142,8 @@ Public Class frmLogin
 
                         Case "M"
                             frmBienvenidaMedico.Show()
+                            txtPass.Clear()
+                            txtUsr.Clear()
                             Me.Hide()
 
                         Case Else

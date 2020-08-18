@@ -33,10 +33,10 @@ Partial Class frmLogin
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.pnlTopBar = New System.Windows.Forms.Panel()
+        Me.lblCerrar = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblCrearCuentaPac = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
@@ -144,9 +144,9 @@ Partial Class frmLogin
         '
         Me.Label1.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(86, 35)
+        Me.Label1.Location = New System.Drawing.Point(87, 59)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(350, 109)
+        Me.Label1.Size = New System.Drawing.Size(350, 50)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inicio de Sesión"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -161,25 +161,25 @@ Partial Class frmLogin
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
-        'Panel2
+        'pnlTopBar
         '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(477, 45)
-        Me.Panel2.TabIndex = 22
+        Me.pnlTopBar.BackColor = System.Drawing.Color.White
+        Me.pnlTopBar.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTopBar.Name = "pnlTopBar"
+        Me.pnlTopBar.Size = New System.Drawing.Size(477, 56)
+        Me.pnlTopBar.TabIndex = 22
         '
-        'Label5
+        'lblCerrar
         '
-        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(798, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(24, 35)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "_"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCerrar.ForeColor = System.Drawing.Color.White
+        Me.lblCerrar.Location = New System.Drawing.Point(798, 0)
+        Me.lblCerrar.Name = "lblCerrar"
+        Me.lblCerrar.Size = New System.Drawing.Size(24, 35)
+        Me.lblCerrar.TabIndex = 25
+        Me.lblCerrar.Text = "_"
+        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
         '
@@ -193,16 +193,16 @@ Partial Class frmLogin
         Me.Label4.Text = "X"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label7
+        'lblCrearCuentaPac
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(655, 424)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(140, 26)
-        Me.Label7.TabIndex = 28
-        Me.Label7.Text = "Crear cuenta"
+        Me.lblCrearCuentaPac.AutoSize = True
+        Me.lblCrearCuentaPac.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCuentaPac.ForeColor = System.Drawing.Color.White
+        Me.lblCrearCuentaPac.Location = New System.Drawing.Point(655, 424)
+        Me.lblCrearCuentaPac.Name = "lblCrearCuentaPac"
+        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(140, 26)
+        Me.lblCrearCuentaPac.TabIndex = 28
+        Me.lblCrearCuentaPac.Text = "Crear cuenta"
         '
         'PictureBox5
         '
@@ -230,11 +230,11 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(875, 500)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.pnlTopBar)
+        Me.Controls.Add(Me.lblCrearCuentaPac)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblCerrar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -263,10 +263,10 @@ Partial Class frmLogin
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblCerrar As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlTopBar As Panel
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblCrearCuentaPac As Label
 End Class
