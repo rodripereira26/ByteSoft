@@ -33,6 +33,7 @@ Partial Class frmListadoChat
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnMisChats = New MetroFramework.Controls.MetroButton()
         CType(Me.dgvListadoChat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTituloPatologia.SuspendLayout()
         Me.SuspendLayout()
@@ -70,8 +71,8 @@ Partial Class frmListadoChat
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(30)
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(20)
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvListadoChat.DefaultCellStyle = DataGridViewCellStyle3
@@ -92,7 +93,7 @@ Partial Class frmListadoChat
         Me.dgvListadoChat.RowHeadersWidth = 51
         Me.dgvListadoChat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvListadoChat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvListadoChat.Size = New System.Drawing.Size(1006, 541)
+        Me.dgvListadoChat.Size = New System.Drawing.Size(1006, 481)
         Me.dgvListadoChat.TabIndex = 148
         '
         'Label10
@@ -169,12 +170,22 @@ Partial Class frmListadoChat
         Me.Label13.Text = "X"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnMisChats
+        '
+        Me.btnMisChats.Location = New System.Drawing.Point(434, 564)
+        Me.btnMisChats.Name = "btnMisChats"
+        Me.btnMisChats.Size = New System.Drawing.Size(129, 42)
+        Me.btnMisChats.TabIndex = 150
+        Me.btnMisChats.Text = "Ver mis chats"
+        Me.btnMisChats.UseSelectable = True
+        '
         'frmListadoChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1006, 618)
+        Me.Controls.Add(Me.btnMisChats)
         Me.Controls.Add(Me.dgvListadoChat)
         Me.Controls.Add(Me.pnlTituloPatologia)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -194,4 +205,5 @@ Partial Class frmListadoChat
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents brnActualizar As Button
+    Friend WithEvents btnMisChats As MetroFramework.Controls.MetroButton
 End Class

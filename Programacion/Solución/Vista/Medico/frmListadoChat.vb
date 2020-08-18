@@ -4,7 +4,7 @@ Public Class frmListadoChat
 
     Dim chat As New ControladorChat
 
-    Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmListadoChat(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dgvListadoChat.DataSource = chat.listarChat
         Me.dgvListadoChat.Columns("idChat").Visible = False
@@ -28,6 +28,7 @@ Public Class frmListadoChat
 
                 chat.entrarChat(Datos_Temporales.user_temp, idChat)
                 Datos_Temporales.idchat = idChat
+                frmChat.Update()
                 frmChat.Show()
                 Me.Dispose()
 
@@ -56,4 +57,12 @@ Public Class frmListadoChat
     Private Sub dgvListadoChat_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
+
+    Private Sub btnMisChats_Click(sender As Object, e As EventArgs) Handles btnMisChats.Click
+        frmChat.Show()
+        Me.Dispose()
+    End Sub
+
+
+
 End Class

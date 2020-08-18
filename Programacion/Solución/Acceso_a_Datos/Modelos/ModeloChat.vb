@@ -96,4 +96,9 @@ Public Class ModeloChat
         Return ModeloConsultas.Singleton.ConsultaCampo(consulta)
     End Function
 
+    Public Function misChats(cedula As String)
+        Dim consulta As String = "SELECT p.cedula, c.idChat FROM paciente p, usuario_entra_chat uc, medico m, chat c WHERE uc.cedula=p.cedula AND c.idChat = uc.idChat AND finalizado = 0 AND m.cedula = " + cedula
+        Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
+    End Function
+
 End Class

@@ -5,11 +5,28 @@ Public Class frmChat
     Private contChat As New ControladorChat
     Private firstUpdate As Boolean = False
 
+    Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Principal.Singleton.roundedCorners(txtMensaje)
+
+        Chat.AutoScroll = False
+
+        Chat.HorizontalScroll.Enabled = False
+
+        Chat.AutoScroll = True
+
+        Update()
+
+    End Sub
+
     Public Sub New()
 
         InitializeComponent()
         Principal.Singleton.SuperRoundedCorners(txtMensaje)
         Principal.Singleton.SuperRoundedCorners(txtMensaje)
+        Update()
+
+
     End Sub
 
     Private Sub ReloadChat()
@@ -51,50 +68,45 @@ Public Class frmChat
 
     End Sub
 
-
-
-
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ReloadChat()
     End Sub
 
-    Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Principal.Singleton.roundedCorners(txtMensaje)
-
-        Chat.AutoScroll = False
-
-        Chat.HorizontalScroll.Enabled = False
-
-        Chat.AutoScroll = True
-
-    End Sub
-
     Private Sub btnFinalizar_Click(sender As Object, e As EventArgs)
 
-        Dim respuesta = MsgBox("¿Desea finalizar la sesión de chat?", vbQuestion + vbYesNo + vbDefaultButton2)
 
-        If respuesta = vbYes Then
-
-            If contChat.finalizarChat() Then
-
-                Chat.Controls.Clear()
-                MsgBox("Sesión finalizada")
-                Timer1.Enabled = False
-
-            Else
-                MsgBox("Error al finalizar el chat")
-            End If
-
-        End If
 
     End Sub
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-
+        Datos_Temporales.idchat = Nothing
         frmListadoChat.Show()
         Me.Dispose()
+
+    End Sub
+
+
+    Private Sub finalizar()
+
+        If Chat.Controls.Count > 0 And Datos_Temporales.idchat <> "" Then
+
+            Dim respuesta = MsgBox("¿Desea finalizar la sesión de chat?", vbQuestion + vbYesNo + vbDefaultButton2)
+
+            If respuesta = vbYes Then
+
+                If contChat.finalizarChat() Then
+
+                    Chat.Controls.Clear()
+                    MsgBox("Sesión finalizada")
+                    updateChats()
+                    Timer1.Enabled = False
+
+                Else
+                    MsgBox("Error al finalizar el chat")
+                End If
+
+            End If
+        End If
 
     End Sub
 
@@ -117,24 +129,11 @@ Public Class frmChat
 
     Private Sub btnFinalizar_Click_(sender As Object, e As EventArgs) Handles btnFinalizar.Click
 
-        Dim respuesta = MsgBox("¿Desea finalizar la sesión de chat?", vbQuestion + vbYesNo + vbDefaultButton2)
-
-        If respuesta = vbYes Then
-
-            If contChat.finalizarChat() Then
-
-                Chat.Controls.Clear()
-                MsgBox("Sesión finalizada")
-                Timer1.Enabled = False
-
-            Else
-                MsgBox("Error al finalizar el chat")
-            End If
-
-        End If
+        finalizar()
     End Sub
 
     Private Sub txtMensaje_TextChanged(sender As Object, e As EventArgs) Handles txtMensaje.TextChanged
+
         If Not (txtMensaje.Text = Nothing) Then
             lblEscriba.Visible = False
         Else
@@ -143,6 +142,7 @@ Public Class frmChat
 
     End Sub
     Private Sub txtMensaje_GotFocus(sender As Object, e As EventArgs) Handles txtMensaje.GotFocus
+
         If txtMensaje.Text = Nothing Then
             lblEscriba.Visible = True
         Else
@@ -156,5 +156,24 @@ Public Class frmChat
             lblEscriba.Visible = True
         End If
 
+    End Sub
+
+    Private Sub dgvMisChats_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles dgvMisChats.MouseDoubleClick
+
+        Chat.Controls.Clear()
+        Dim fila As Integer = dgvMisChats.CurrentCell.RowIndex
+        Datos_Temporales.idchat = dgvMisChats.Rows(fila).Cells(columnName:="idChat").Value.ToString
+        Dim controladorChat As New ControladorChat
+
+        controladorChat.recargarChat()
+    End Sub
+
+    Private Sub updateChats()
+        dgvMisChats.DataSource = contChat.listarMisChats(Datos_Temporales.user_temp)
+        dgvMisChats.Columns("idChat").Visible = False
+    End Sub
+
+    Private Sub pbCancelar_Click(sender As Object, e As EventArgs) Handles pbCancelar.Click
+        finalizar()
     End Sub
 End Class

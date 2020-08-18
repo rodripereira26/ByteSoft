@@ -23,6 +23,10 @@ Partial Class frmChat
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Chat = New System.Windows.Forms.FlowLayoutPanel()
         Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -36,12 +40,12 @@ Partial Class frmChat
         Me.pbEnviar = New System.Windows.Forms.PictureBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.lblEscriba = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvMisChats = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCancelar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEnviar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvMisChats, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Chat
@@ -50,9 +54,9 @@ Partial Class frmChat
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Chat.AutoScroll = True
         Me.Chat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Chat.Location = New System.Drawing.Point(330, 102)
+        Me.Chat.Location = New System.Drawing.Point(290, 102)
         Me.Chat.Name = "Chat"
-        Me.Chat.Size = New System.Drawing.Size(723, 480)
+        Me.Chat.Size = New System.Drawing.Size(763, 480)
         Me.Chat.TabIndex = 3
         '
         'txtMensaje
@@ -60,7 +64,7 @@ Partial Class frmChat
         Me.txtMensaje.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtMensaje.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMensaje.Location = New System.Drawing.Point(348, 592)
+        Me.txtMensaje.Location = New System.Drawing.Point(317, 592)
         Me.txtMensaje.Multiline = True
         Me.txtMensaje.Name = "txtMensaje"
         Me.txtMensaje.Size = New System.Drawing.Size(646, 38)
@@ -87,7 +91,7 @@ Partial Class frmChat
         Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialFlatButton1.Depth = 0
         Me.MaterialFlatButton1.Icon = Nothing
-        Me.MaterialFlatButton1.Location = New System.Drawing.Point(487, 57)
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(317, 61)
         Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
@@ -103,7 +107,7 @@ Partial Class frmChat
         Me.btnFinalizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnFinalizar.Depth = 0
         Me.btnFinalizar.Icon = Nothing
-        Me.btnFinalizar.Location = New System.Drawing.Point(819, 57)
+        Me.btnFinalizar.Location = New System.Drawing.Point(925, 61)
         Me.btnFinalizar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnFinalizar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnFinalizar.Name = "btnFinalizar"
@@ -116,7 +120,7 @@ Partial Class frmChat
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Vista.My.Resources.Resources.icons8_test_results_30
-        Me.PictureBox2.Location = New System.Drawing.Point(456, 61)
+        Me.PictureBox2.Location = New System.Drawing.Point(286, 65)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -134,7 +138,7 @@ Partial Class frmChat
         'pbCancelar
         '
         Me.pbCancelar.Image = Global.Vista.My.Resources.Resources.icons8_delete_48px_11
-        Me.pbCancelar.Location = New System.Drawing.Point(778, 61)
+        Me.pbCancelar.Location = New System.Drawing.Point(884, 65)
         Me.pbCancelar.Name = "pbCancelar"
         Me.pbCancelar.Size = New System.Drawing.Size(34, 28)
         Me.pbCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -146,7 +150,7 @@ Partial Class frmChat
         Me.pbEnviar.BackColor = System.Drawing.Color.White
         Me.pbEnviar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbEnviar.Image = Global.Vista.My.Resources.Resources.icoEnviar
-        Me.pbEnviar.Location = New System.Drawing.Point(1000, 588)
+        Me.pbEnviar.Location = New System.Drawing.Point(986, 594)
         Me.pbEnviar.Name = "pbEnviar"
         Me.pbEnviar.Size = New System.Drawing.Size(41, 42)
         Me.pbEnviar.TabIndex = 9
@@ -170,19 +174,68 @@ Partial Class frmChat
         Me.lblEscriba.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.lblEscriba.Font = New System.Drawing.Font("Roboto Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEscriba.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblEscriba.Location = New System.Drawing.Point(358, 601)
+        Me.lblEscriba.Location = New System.Drawing.Point(328, 603)
         Me.lblEscriba.Name = "lblEscriba"
         Me.lblEscriba.Size = New System.Drawing.Size(137, 18)
         Me.lblEscriba.TabIndex = 16
         Me.lblEscriba.Text = "Escriba un mensaje"
         '
-        'DataGridView1
+        'dgvMisChats
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(28, 102)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(256, 480)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvMisChats.AllowUserToAddRows = False
+        Me.dgvMisChats.AllowUserToDeleteRows = False
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.Padding = New System.Windows.Forms.Padding(30)
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvMisChats.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        Me.dgvMisChats.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvMisChats.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvMisChats.BackgroundColor = System.Drawing.Color.White
+        Me.dgvMisChats.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvMisChats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMisChats.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.dgvMisChats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMisChats.ColumnHeadersVisible = False
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.Padding = New System.Windows.Forms.Padding(30)
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMisChats.DefaultCellStyle = DataGridViewCellStyle15
+        Me.dgvMisChats.EnableHeadersVisualStyles = False
+        Me.dgvMisChats.Location = New System.Drawing.Point(28, 102)
+        Me.dgvMisChats.MultiSelect = False
+        Me.dgvMisChats.Name = "dgvMisChats"
+        Me.dgvMisChats.ReadOnly = True
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMisChats.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
+        Me.dgvMisChats.RowHeadersVisible = False
+        Me.dgvMisChats.RowHeadersWidth = 51
+        Me.dgvMisChats.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvMisChats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvMisChats.Size = New System.Drawing.Size(246, 480)
+        Me.dgvMisChats.TabIndex = 149
         '
         'frmChat
         '
@@ -190,7 +243,7 @@ Partial Class frmChat
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1076, 656)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvMisChats)
         Me.Controls.Add(Me.lblEscriba)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btnFinalizar)
@@ -210,7 +263,7 @@ Partial Class frmChat
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCancelar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbEnviar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMisChats, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -228,5 +281,5 @@ Partial Class frmChat
     Friend WithEvents btnFinalizar As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents lblEscriba As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvMisChats As DataGridView
 End Class

@@ -64,5 +64,11 @@ Public Class ControladorChat
         Return False
     End Function
 
+    Public Function listarMisChats(cedula As String) As DataTable
+
+        Return ModeloChat.Singleton.misChats(cedula)
+
+    End Function
+
 
 End Class
