@@ -46,9 +46,8 @@ Public Class ModeloChat
 
     Public Function listarChat() As DataTable
 
-        Dim consulta As String = "SELECT cedula, u.idChat 
-                            FROM chat c, usuario_entra_chat u, patologia p, paciente_obtiene_diagnostico up 
-                            WHERE u.cedula = up.cedulaPaciente AND p.idPatologia = up.idPatologia AND c.idChat = u.idChat AND finalizado = 0
+        Dim consulta As String = "SELECT DISTINCT u.cedula, u.idChat FROM chat c, usuario_entra_chat u, patologia p, paciente_obtiene_diagnostico up, usuario us
+                            WHERE u.cedula = up.cedulaPaciente AND p.idPatologia = up.idPatologia AND c.idChat = u.idChat AND us.cedula = u.cedula AND finalizado = 0
                             ORDER BY prioridad ASC "
 
         Return ModeloConsultas.Singleton.ConsultaTabla(consulta)

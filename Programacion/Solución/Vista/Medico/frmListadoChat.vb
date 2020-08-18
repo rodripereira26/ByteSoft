@@ -2,9 +2,9 @@
 
 Public Class frmListadoChat
 
-    Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Dim chat As New ControladorChat
 
-        Dim chat As New ControladorChat
+    Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dgvListadoChat.DataSource = chat.listarChat
         Me.dgvListadoChat.Columns("idChat").Visible = False
@@ -53,4 +53,7 @@ Public Class frmListadoChat
 
     End Sub
 
+    Private Sub dgvListadoChat_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
 End Class

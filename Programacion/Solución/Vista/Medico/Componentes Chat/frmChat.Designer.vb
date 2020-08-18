@@ -23,7 +23,6 @@ Partial Class frmChat
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Menu = New System.Windows.Forms.FlowLayoutPanel()
         Me.Chat = New System.Windows.Forms.FlowLayoutPanel()
         Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -37,21 +36,13 @@ Partial Class frmChat
         Me.pbEnviar = New System.Windows.Forms.PictureBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.lblEscriba = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCancelar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEnviar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Menu
-        '
-        Me.Menu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Menu.Location = New System.Drawing.Point(12, 102)
-        Me.Menu.Name = "Menu"
-        Me.Menu.Size = New System.Drawing.Size(252, 480)
-        Me.Menu.TabIndex = 2
         '
         'Chat
         '
@@ -166,7 +157,7 @@ Partial Class frmChat
         Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
         Me.btnAtras.FlatAppearance.BorderSize = 0
         Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAtras.Location = New System.Drawing.Point(28, 24)
+        Me.btnAtras.Location = New System.Drawing.Point(28, 30)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(34, 33)
         Me.btnAtras.TabIndex = 7
@@ -185,12 +176,21 @@ Partial Class frmChat
         Me.lblEscriba.TabIndex = 16
         Me.lblEscriba.Text = "Escriba un mensaje"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(28, 102)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(256, 480)
+        Me.DataGridView1.TabIndex = 0
+        '
         'frmChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1076, 656)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblEscriba)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btnFinalizar)
@@ -202,7 +202,6 @@ Partial Class frmChat
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.txtMensaje)
         Me.Controls.Add(Me.Chat)
-        Me.Controls.Add(Me.Menu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmChat"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -211,12 +210,11 @@ Partial Class frmChat
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCancelar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbEnviar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Menu As FlowLayoutPanel
     Friend WithEvents Chat As FlowLayoutPanel
     Friend WithEvents txtMensaje As TextBox
     Friend WithEvents Timer1 As Timer
@@ -230,4 +228,5 @@ Partial Class frmChat
     Friend WithEvents btnFinalizar As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents lblEscriba As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

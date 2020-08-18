@@ -160,3 +160,16 @@ C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Logica\obj\Debu
 C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Logica\obj\Debug\Logica.dll
 C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Logica\obj\Debug\Logica.xml
 C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Logica\obj\Debug\Logica.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\bin\Debug\Logica.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\bin\Debug\Logica.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\bin\Debug\Logica.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.CopyComplete
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\obj\Debug\Logica.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\obj\Debug\Logica.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Logica\obj\Debug\Logica.pdb

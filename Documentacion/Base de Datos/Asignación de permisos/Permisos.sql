@@ -50,6 +50,10 @@ GRANT SELECT ON bytesoft_bdd.usuario_entra_chat TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.paciente_indica_sintoma TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.patologia_contiene_sintoma TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.paciente_obtiene_diagnostico TO medico, paciente;
+/*
+Permiso para que el médico pueda ver el nombre del paciente
+*/
+GRANT SELECT (cedula,pNom,pApe,correo) ON bytesoft_bdd.usuario TO medico;
 
 /*
 Permisos de Update
