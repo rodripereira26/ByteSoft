@@ -132,4 +132,9 @@ Public Class frmIngresarSintomas
 
         'dgvTodos.DataSource = bs
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmBienvenidaPaciente.Show()
+        Me.Dispose()
+    End Sub
 End Class

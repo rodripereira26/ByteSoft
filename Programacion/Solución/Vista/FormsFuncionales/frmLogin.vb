@@ -126,7 +126,7 @@ Public Class frmLogin
                             frmBienvenidaGestor.Show()
                             txtPass.Clear()
                             txtUsr.Clear()
-                            Me.Hide()
+                            Me.hide()
 
                         Case "P"
                             Dim paciente As New ControladorPaciente

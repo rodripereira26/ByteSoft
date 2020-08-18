@@ -83,6 +83,8 @@ Public Class frmBienvenidaGestor
     End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+        frmLogin.Label2.Text = "Usuario"
+        frmLogin.Label2.Text = "Contraseña"
         frmLogin.Show()
         Me.Close()
     End Sub
@@ -160,4 +162,21 @@ Public Class frmBienvenidaGestor
     Private Sub pnlAyuda_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlAyuda.MouseClick
         MsgBox("En construcción...")
     End Sub
+
+    Private Sub Label19_MouseClick(sender As Object, e As MouseEventArgs) Handles Label19.MouseClick
+        MsgBox("En construcción...")
+    End Sub
+
+    Private Sub Label18_MouseClick(sender As Object, e As MouseEventArgs) Handles Label18.MouseClick
+        MsgBox("En construcción...")
+    End Sub
+
+    Private Sub Label7_MouseClick(sender As Object, e As MouseEventArgs) Handles Label7.MouseClick
+        MsgBox("En construcción...")
+    End Sub
+
+    Private Sub Label6_MouseClick(sender As Object, e As MouseEventArgs) Handles Label6.MouseClick
+        MsgBox("En construcción...")
+    End Sub
+
 End Class

@@ -86,7 +86,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(25, 85)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(480, 23)
+        Me.Label2.Size = New System.Drawing.Size(480, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Seleccione síntomas y obtenga un diagnóstico primario"
         '
@@ -97,7 +97,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(22, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(278, 38)
+        Me.Label1.Size = New System.Drawing.Size(278, 39)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingresar Síntomas"
         '
@@ -139,7 +139,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(22, 33)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(181, 38)
+        Me.Label4.Size = New System.Drawing.Size(181, 39)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Mi Historial"
         '
@@ -181,7 +181,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(22, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 38)
+        Me.Label7.Size = New System.Drawing.Size(125, 39)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Ajustes"
         '
@@ -223,7 +223,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(3, 33)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(135, 38)
+        Me.Label9.Size = New System.Drawing.Size(136, 39)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Mi Perfil"
         '
@@ -265,7 +265,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(105, 38)
+        Me.Label11.Size = New System.Drawing.Size(106, 39)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Ayuda"
         '
@@ -315,7 +315,7 @@ Partial Class frmBienvenidaPaciente
         Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(715, 9)
+        Me.Label12.Location = New System.Drawing.Point(720, 1)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(24, 35)
         Me.Label12.TabIndex = 22

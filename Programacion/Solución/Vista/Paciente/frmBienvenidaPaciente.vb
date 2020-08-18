@@ -131,6 +131,8 @@ Public Class frmBienvenidaPaciente
     'End Sub
 
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+        frmLogin.Label2.Text = "Usuario"
+        frmLogin.Label2.Text = "Contraseña"
         frmLogin.Show()
         Me.Close()
     End Sub

@@ -1,28 +1,19 @@
-﻿Imports System.Text
-Imports Microsoft.VisualStudio.TestTools.UnitTesting
-Imports Acceso_a_Datos
+﻿Imports Acceso_a_Datos
 Imports Logica
 
 <TestClass()> Public Class PruebasUsuario
 
-    <TestMethod()> Public Sub InsertarUsuarios()
+    <TestMethod()> Public Sub selectChat()
 
         Conexion.Singleton.SetRolConexion(Conexion.EnumDbLogin.admin)
-        Dim usuario As New ControladorUsuario
-        Dim datos As New ModeloGestor
+        Dim chat As New ControladorChat
+        Dim datos As New ModeloChat
         Dim esperado As Boolean = True
         Dim telefonos As New ArrayList
 
+        Dim cedula As String = "52645181"
 
-        usuario._ci = "52645181"
-        usuario._contraseña = "1234"
-        usuario._primer_apellido = "Rodrigo"
-        usuario._primer_apellido = "Pereira"
-        usuario._segundo_apellido = "Oseira"
-        usuario._email = "asdas@adsa.com"
-
-
-        Dim actual = datos.Registrar(usuario._ci, usuario._contraseña, usuario._primer_nombre, usuario._primer_nombre, usuario._segundo_apellido, usuario._email, telefonos)
+        Dim actual = datos.entrarChat(cedula, Datos_Temporales.idchat)
 
         Assert.AreEqual(actual, esperado)
 

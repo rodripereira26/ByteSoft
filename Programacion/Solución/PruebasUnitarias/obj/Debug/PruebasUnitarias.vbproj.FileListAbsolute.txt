@@ -24,3 +24,29 @@ C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitar
 C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.dll
 C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.xml
 C:\Users\Rodrigo\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\PruebasUnitarias.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\PruebasUnitarias.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\PruebasUnitarias.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbprojAssemblyReference.cache
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.Resources.resources
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbproj.CopyComplete
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb
