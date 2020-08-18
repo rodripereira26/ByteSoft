@@ -16,7 +16,24 @@ Public Class Principal
 
         Return instancia
     End Function
+    Public Sub SuperRoundedCorners(rect As Object)
 
+        Dim gp As New Drawing2D.GraphicsPath()
+        Dim radio As Integer = 40
+
+        gp.StartFigure()
+        gp.AddArc(New Rectangle(0, 0, radio, radio), 180, 90)
+        gp.AddLine(radio, 0, rect.Width - radio, 0)
+        gp.AddArc(New Rectangle(rect.Width - radio, 0, radio, radio), -90, 90)
+        gp.AddLine(rect.Width, radio, rect.Width, rect.Height - radio)
+        gp.AddArc(New Rectangle(rect.Width - radio, rect.Height - radio, radio, radio), 0, 90)
+        gp.AddLine(rect.Width - radio, rect.Height, radio, rect.Height)
+        gp.AddArc(New Rectangle(0, rect.Height - radio, radio, radio), 90, 90)
+        gp.CloseFigure()
+
+        rect.Region = New Region(gp)
+
+    End Sub
     Public Sub roundedCorners(rect As Object)
 
         Dim gp As New Drawing2D.GraphicsPath()

@@ -847,7 +847,6 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\bin\Debug\Sy
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\bin\Debug\Acceso_a_Datos.pdb
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\bin\Debug\Acceso_a_Datos.xml
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.vbprojAssemblyReference.cache
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.ELEGIR.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.frmAjustes.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.frmBienvenidaGestor.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.frmManualCsv.resources
@@ -1068,3 +1067,5 @@ C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Vista\obj\Debug
 C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.exe
 C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.xml
 C:\Users\Agustín Pérez\Desktop\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.Mensaje.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.frmListadoChat.resources

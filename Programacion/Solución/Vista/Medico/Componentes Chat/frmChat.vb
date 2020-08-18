@@ -8,8 +8,7 @@ Public Class frmChat
     Public Sub New()
 
         InitializeComponent()
-        Principal.Singleton.roundedCorners(Button1)
-        Principal.Singleton.roundedCorners(txtMensaje)
+        Principal.Singleton.SuperRoundedCorners(txtMensaje)
 
     End Sub
 
@@ -52,21 +51,7 @@ Public Class frmChat
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        If txtMensaje.Text <> "" Then
-
-            If contChat.enviarMensaje(Datos_Temporales.user_temp, Datos_Temporales.idchat, txtMensaje.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")) Then
-
-                ReloadChat()
-                txtMensaje.Clear()
-                Chat.VerticalScroll.Value = Chat.VerticalScroll.Maximum()
-
-            Else
-                MsgBox("Error al enviar el mensaje")
-            End If
-
-        End If
 
     End Sub
 
@@ -86,7 +71,7 @@ Public Class frmChat
 
     End Sub
 
-    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
+    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs)
 
         Dim respuesta = MsgBox("¿Desea finalizar la sesión de chat?", vbQuestion + vbYesNo + vbDefaultButton2)
 
@@ -112,5 +97,42 @@ Public Class frmChat
         Me.Dispose()
 
     End Sub
+
+    Private Sub pbEnviar_Click(sender As Object, e As EventArgs) Handles pbEnviar.Click
+
+        If txtMensaje.Text <> "" Then
+
+            If contChat.enviarMensaje(Datos_Temporales.user_temp, Datos_Temporales.idchat, txtMensaje.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")) Then
+
+                ReloadChat()
+                txtMensaje.Clear()
+                Chat.VerticalScroll.Value = Chat.VerticalScroll.Maximum()
+
+            Else
+                MsgBox("Error al enviar el mensaje")
+            End If
+
+        End If
+    End Sub
+
+    Private Sub pbCancelar_Click_(sender As Object, e As EventArgs) Handles pbCancelar.Click
+
+        Dim respuesta = MsgBox("¿Desea finalizar la sesión de chat?", vbQuestion + vbYesNo + vbDefaultButton2)
+
+        If respuesta = vbYes Then
+
+            If contChat.finalizarChat() Then
+
+                Chat.Controls.Clear()
+                MsgBox("Sesión finalizada")
+                Timer1.Enabled = False
+
+            Else
+                MsgBox("Error al finalizar el chat")
+            End If
+
+        End If
+    End Sub
+
 
 End Class
