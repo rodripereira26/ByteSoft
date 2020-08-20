@@ -1,0 +1,8 @@
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\bin\Release\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\bin\Release\Acceso_a_Datos.pdb
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\bin\Release\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.Resources.resources
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.dll
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.xml
+C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.pdb
