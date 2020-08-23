@@ -2,24 +2,13 @@
 Public Class frmObtenerDiagnostico
 
     Dim pat As New ControladorPatologia
+    dim solicitud as boolean = true
 
     Private Sub frmObtenerDiagnostico_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         ControlPaint.DrawBorder(e.Graphics, Me.ClientRectangle, Color.Black, ButtonBorderStyle.Solid)
     End Sub
 
     Private Sub frmObtenerDiagnostico_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-        Dim nombreDiagnostico As New ArrayList
-
-        For i As Integer = 0 To dgvPosiblesDiagnosticos.RowCount - 1
-
-            nombreDiagnostico.Add(dgvPosiblesDiagnosticos.Rows(i).Cells(0).Value.ToString)
-
-        Next
-
-        If pat.guardarDiagnostico(Datos_Temporales.user_temp, nombreDiagnostico) = False Then
-            MsgBox("Error al almacenar el diagnóstico")
-        End If
 
     End Sub
 
@@ -37,6 +26,7 @@ Public Class frmObtenerDiagnostico
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         frmIngresarSintomas.Visible = True
+        solicitud = true
         Me.Dispose()
     End Sub
 
@@ -44,14 +34,20 @@ Public Class frmObtenerDiagnostico
 
         Dim chat As New ControladorChat
 
+    if solicitud then
         If chat.crearChat() <> 0 Then
             If chat.entrarChat(Datos_Temporales.user_temp, Datos_Temporales.idchat) Then
+                
                 MsgBox("Se ha enviado una solicitud de chat")
                 frmBienvenidaPaciente.Timer1.Enabled = True
+                solicitud = false
             Else
                 MsgBox("Error al enviar solicitud de chat")
             End If
         End If
+    else
+    msgbox("Ya hay una solicitud en curso")
+    end if
 
     End Sub
 

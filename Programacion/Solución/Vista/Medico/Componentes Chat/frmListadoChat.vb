@@ -1,17 +1,15 @@
 ﻿Imports Logica
-
 Public Class frmListadoChat
-
     Dim chat As New ControladorChat
 
-    Private Sub frmListadoChat(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmListadoChat_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         dgvListadoChat.DataSource = chat.listarChat
         Me.dgvListadoChat.Columns("idChat").Visible = False
 
     End Sub
 
-    Private Sub dgvListadoChat_DoubleClick(sender As Object, e As EventArgs) Handles dgvListadoChat.DoubleClick
+    Private Sub dgvListadoChat_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoChat.CellDoubleClick
 
         Dim fila As Integer = dgvListadoChat.CurrentCell.RowIndex
         Dim cedula As String = dgvListadoChat.CurrentCell.Value.ToString
@@ -30,6 +28,7 @@ Public Class frmListadoChat
                 Datos_Temporales.idchat = idChat
                 frmChat.Update()
                 frmChat.Show()
+                frmChat.setNombreUsuario(cedula)
                 Me.Dispose()
 
             End If
@@ -37,9 +36,7 @@ Public Class frmListadoChat
         Else
             MsgBox("Error al ingresar al chat")
         End If
-
     End Sub
-
     Private Sub btnRefrescarListadoPac_Click(sender As Object, e As EventArgs) Handles brnActualizar.Click
 
         Dim chat As New ControladorChat
@@ -58,11 +55,13 @@ Public Class frmListadoChat
 
     End Sub
 
-    Private Sub btnMisChats_Click(sender As Object, e As EventArgs) Handles btnMisChats.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         frmChat.Show()
         Me.Dispose()
     End Sub
 
+    Private Sub dgvListadoChat_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoChat.CellEnter
 
-
+        sender.backcolor = Color.Gainsboro
+    End Sub
 End Class

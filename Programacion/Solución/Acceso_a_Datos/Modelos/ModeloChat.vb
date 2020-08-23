@@ -34,7 +34,7 @@ Public Class ModeloChat
 
         parametros.Add(New OdbcParameter("cedula", cedula))
         parametros.Add(New OdbcParameter("idChat", id))
-        parametros.Add(New OdbcParameter("fechaIngreso", DateTime.Now.ToString("yyyy-MM-dd")))
+        parametros.Add(New OdbcParameter("fechaIngreso", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")))
 
         If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
             Return True
@@ -96,9 +96,12 @@ Public Class ModeloChat
         Return ModeloConsultas.Singleton.ConsultaCampo(consulta)
     End Function
 
-    Public Function misChats(cedula As String)
-        Dim consulta As String = "SELECT p.cedula, c.idChat FROM paciente p, usuario_entra_chat uc, medico m, chat c WHERE uc.cedula=p.cedula AND c.idChat = uc.idChat AND finalizado = 0 AND m.cedula = " + cedula
+    Public Function misChats(cedula As String, finalizado As Byte)
+        Dim consulta As String = "SELECT p.cedula, c.idChat FROM paciente p, usuario_entra_chat uc, medico m, chat c WHERE uc.cedula=p.cedula AND c.idChat = uc.idChat AND finalizado = '" & finalizado & "' AND m.cedula = " + cedula
         Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
     End Function
-
+    Public Function getNombreusr(cedula As String) As DataTable
+        Dim consulta As String = "SELECT pNom, pApe FROM usuario WHERE cedula = " & cedula
+        Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
+    End Function
 End Class

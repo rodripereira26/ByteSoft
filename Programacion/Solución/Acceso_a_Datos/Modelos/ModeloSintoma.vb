@@ -49,6 +49,8 @@ Public Class ModeloSintoma
 
         Dim consulta As String
 
+try 
+
         For Each nom In nombreSintoma
 
             consulta = "
@@ -60,6 +62,10 @@ Public Class ModeloSintoma
         Next
 
         Return True
+
+catch
+return false
+end try
     End Function
 
     Public Function listarSintomas() As DataTable

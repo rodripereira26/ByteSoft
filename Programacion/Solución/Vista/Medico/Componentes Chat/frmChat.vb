@@ -9,6 +9,8 @@ Public Class frmChat
 
         Principal.Singleton.roundedCorners(txtMensaje)
 
+        updateChats()
+
         Chat.AutoScroll = False
 
         Chat.HorizontalScroll.Enabled = False
@@ -23,9 +25,7 @@ Public Class frmChat
 
         InitializeComponent()
         Principal.Singleton.SuperRoundedCorners(txtMensaje)
-        Principal.Singleton.SuperRoundedCorners(txtMensaje)
         Update()
-
 
     End Sub
 
@@ -72,16 +72,18 @@ Public Class frmChat
         ReloadChat()
     End Sub
 
-    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs)
-
-
-
-    End Sub
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+
         Datos_Temporales.idchat = Nothing
-        frmListadoChat.Show()
-        Me.Dispose()
+
+        If Datos_Temporales.rol = "P" Then
+            frmBienvenidaPaciente.Show()
+            Me.Dispose()
+        Else
+            frmListadoChat.Show()
+            Me.Dispose()
+        End If
 
     End Sub
 
@@ -117,7 +119,7 @@ Public Class frmChat
             If contChat.enviarMensaje(Datos_Temporales.user_temp, Datos_Temporales.idchat, txtMensaje.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")) Then
 
                 ReloadChat()
-                txtMensaje.Clear()
+                txtMensaje.Text = Nothing
                 Chat.VerticalScroll.Value = Chat.VerticalScroll.Maximum()
 
             Else
@@ -127,53 +129,85 @@ Public Class frmChat
         End If
     End Sub
 
-    Private Sub btnFinalizar_Click_(sender As Object, e As EventArgs) Handles btnFinalizar.Click
 
+
+
+    Private Sub txtMensaje_GotFocus(sender As Object, e As EventArgs)
+
+        If txtMensaje.Text = Nothing Then
+            lblEscriba.Visible = True
+        Else
+            lblEscriba.Visible = False
+        End If
+
+    End Sub
+    Private Sub txtMensaje_LostFocus(sender As Object, e As EventArgs)
+
+        If txtMensaje.Text = Nothing Then
+            lblEscriba.Visible = True
+        End If
+
+    End Sub
+
+    Private Sub updateChats()
+        dgvMisChats.DataSource = contChat.listarMisChats(Datos_Temporales.user_temp, 0)
+        dgvMisChats.Columns("idChat").Visible = False
+        dgvFinalizados.DataSource = contChat.listarMisChats(Datos_Temporales.user_temp, 1)
+        dgvFinalizados.Columns("idChat").Visible = False
+
+    End Sub
+
+    Private Sub pbCancelar_Click(sender As Object, e As EventArgs) Handles pbCancelar.Click
         finalizar()
     End Sub
 
-    Private Sub txtMensaje_TextChanged(sender As Object, e As EventArgs) Handles txtMensaje.TextChanged
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        updateChats()
+    End Sub
 
+    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
+        finalizar()
+    End Sub
+
+    Private Sub MetroSetTextBox1_TextChanged(sender As Object) Handles txtMensaje.TextChanged
         If Not (txtMensaje.Text = Nothing) Then
             lblEscriba.Visible = False
         Else
             lblEscriba.Visible = True
         End If
-
-    End Sub
-    Private Sub txtMensaje_GotFocus(sender As Object, e As EventArgs) Handles txtMensaje.GotFocus
-
-        If txtMensaje.Text = Nothing Then
-            lblEscriba.Visible = True
-        Else
-            lblEscriba.Visible = False
-        End If
-
-    End Sub
-    Private Sub txtMensaje_LostFocus(sender As Object, e As EventArgs) Handles txtMensaje.LostFocus
-
-        If txtMensaje.Text = Nothing Then
-            lblEscriba.Visible = True
-        End If
-
     End Sub
 
-    Private Sub dgvMisChats_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles dgvMisChats.MouseDoubleClick
-
+    Private Sub dgvMisChats_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMisChats.CellClick
         Chat.Controls.Clear()
         Dim fila As Integer = dgvMisChats.CurrentCell.RowIndex
         Datos_Temporales.idchat = dgvMisChats.Rows(fila).Cells(columnName:="idChat").Value.ToString
         Dim controladorChat As New ControladorChat
-
+        txtMensaje.Enabled = True
+        btnFinalizar.Enabled = True
+        pbCancelar.Visible = True
+        lblEscriba.Text = "Escriba un mensaje"
         controladorChat.recargarChat()
+        setNombreUsuario(dgvMisChats.CurrentCell.Value)
     End Sub
 
-    Private Sub updateChats()
-        dgvMisChats.DataSource = contChat.listarMisChats(Datos_Temporales.user_temp)
-        dgvMisChats.Columns("idChat").Visible = False
+    Private Sub dgvFinalizados_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFinalizados.CellClick
+        Chat.Controls.Clear()
+        Dim fila As Integer = dgvFinalizados.CurrentCell.RowIndex
+        Datos_Temporales.idchat = dgvFinalizados.Rows(fila).Cells(columnName:="idChat").Value.ToString
+        Dim controladorChat As New ControladorChat
+        txtMensaje.Enabled = False
+        btnFinalizar.Enabled = False
+        pbCancelar.Visible = False
+        lblEscriba.Text = "Chat finalizado, no es posible enviar un mensaje"
+        controladorChat.recargarChat()
+        setNombreUsuario(dgvMisChats.CurrentCell.Value)
     End Sub
 
-    Private Sub pbCancelar_Click(sender As Object, e As EventArgs) Handles pbCancelar.Click
-        finalizar()
+    Public Sub setNombreUsuario(cedula As String)
+        Dim controladorchat As New ControladorChat
+        Dim dt As DataTable = controladorchat.getNombreUsr(cedula)
+
+        lblUsuario.Text = dt.Rows.Item(0).Item(0) & " " & dt.Rows.Item(0).Item(1)
+
     End Sub
 End Class

@@ -9,7 +9,7 @@ Public Class Conexion
 
     Private Const dsn As String = "driverODBC"
     Private Const Port As String = "3306"
-    Private Const DatabaseName As String = "bytesoft_bdd"
+    Private Const DatabaseName As String = "bytesoft_bdd2"
     Private Host As String = "bytesoft.duckdns.org"
     Private dblogin(,) As String = New String(4, 2) {}
 
@@ -74,9 +74,13 @@ Public Class Conexion
 
     Public Sub CheckConexion()
 
-        If Connection.State = ConnectionState.Closed Then
-            Connection.Open()
-        End If
+        Try
+            If Connection.State = ConnectionState.Closed Then
+                Connection.Open()
+            End If
+        Catch
+            Throw New Exception("Error al conectarse a la base de datos")
+        End Try
 
     End Sub
 

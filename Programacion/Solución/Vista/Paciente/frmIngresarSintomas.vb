@@ -106,8 +106,23 @@ Public Class frmIngresarSintomas
                 If sin.guardarSintomas(Datos_Temporales.user_temp, misSintomas) Then
 
                     frmObtenerDiagnostico.dgvPosiblesDiagnosticos.DataSource = pat.obtenerPatologia(misSintomas)
-                    frmObtenerDiagnostico.Show()
-                    Me.Hide()
+
+                    Dim nombreDiagnostico As New ArrayList
+
+                    For i As Integer = 0 To frmObtenerDiagnostico.dgvPosiblesDiagnosticos.RowCount - 1
+
+                        nombreDiagnostico.Add(frmObtenerDiagnostico.dgvPosiblesDiagnosticos.Rows(i).Cells(0).Value.ToString)
+
+                    Next
+
+                    If pat.guardarDiagnostico(Datos_Temporales.user_temp, nombreDiagnostico) Then
+                        frmObtenerDiagnostico.Show()
+                        Me.Hide()
+                    Else
+                        MsgBox("Error al ingresar el diagnóstico")
+
+                    End If
+
 
                 Else
                     MsgBox("Error al registrar los síntomas")

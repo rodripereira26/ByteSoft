@@ -126,6 +126,7 @@ Public Class frmLogin
                             frmBienvenidaGestor.Show()
                             txtPass.Clear()
                             txtUsr.Clear()
+                            Datos_Temporales.rol = "G"
                             Me.hide()
 
                         Case "P"
@@ -135,6 +136,7 @@ Public Class frmLogin
                                 frmBienvenidaPaciente.Show()
                                 txtPass.Clear()
                                 txtUsr.Clear()
+                                Datos_Temporales.rol = "P"
                                 Me.Hide()
                             Else
                                 MsgBox("Usted no ha sido habilitado para ingresar al sistema")
@@ -144,6 +146,7 @@ Public Class frmLogin
                             frmBienvenidaMedico.Show()
                             txtPass.Clear()
                             txtUsr.Clear()
+                            Datos_Temporales.rol = "M"
                             Me.Hide()
 
                         Case Else
