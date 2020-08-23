@@ -78,7 +78,7 @@ Public Class Conexion
             If Connection.State = ConnectionState.Closed Then
                 Connection.Open()
             End If
-        Catch
+        Catch ex As Exception
             Throw New Exception("Error al conectarse a la base de datos")
         End Try
 

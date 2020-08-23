@@ -103,7 +103,7 @@ Public Class frmIngresarSintomas
 
             If pat.obtenerPatologia(misSintomas).Rows.Count > 0 Then
 
-                If sin.guardarSintomas(Datos_Temporales.user_temp, misSintomas) Then
+                If sin.guardarSintomas(Datos_Temporales.userLog, misSintomas) Then
 
                     frmObtenerDiagnostico.dgvPosiblesDiagnosticos.DataSource = pat.obtenerPatologia(misSintomas)
 
@@ -115,7 +115,7 @@ Public Class frmIngresarSintomas
 
                     Next
 
-                    If pat.guardarDiagnostico(Datos_Temporales.user_temp, nombreDiagnostico) Then
+                    If pat.guardarDiagnostico(Datos_Temporales.userLog, nombreDiagnostico) Then
                         frmObtenerDiagnostico.Show()
                         Me.Hide()
                     Else

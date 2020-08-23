@@ -104,4 +104,9 @@ Public Class ModeloChat
         Dim consulta As String = "SELECT pNom, pApe FROM usuario WHERE cedula = " & cedula
         Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
     End Function
+
+    Public Function getCorreo(cedula As String) As String
+        Dim consulta As String = "SELECT correo FROM usuario WHERE cedula = " + cedula
+        Return CType(ModeloConsultas.Singleton.ConsultaCampo(consulta), String)
+    End Function
 End Class

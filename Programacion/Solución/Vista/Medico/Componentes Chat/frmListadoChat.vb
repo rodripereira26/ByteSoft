@@ -24,8 +24,9 @@ Public Class frmListadoChat
 
             If respuesta = vbYes Then
 
-                chat.entrarChat(Datos_Temporales.user_temp, idChat)
+                chat.entrarChat(Datos_Temporales.userLog, idChat)
                 Datos_Temporales.idchat = idChat
+                Datos_Temporales.pacienteSelecionado = cedula
                 frmChat.Update()
                 frmChat.Show()
                 frmChat.setNombreUsuario(cedula)
@@ -56,6 +57,7 @@ Public Class frmListadoChat
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        frmChat.Update()
         frmChat.Show()
         Me.Dispose()
     End Sub

@@ -1,4 +1,6 @@
 ﻿Imports Acceso_a_Datos
+Imports System.Net.Mail
+Imports System.Net
 
 Public Class ControladorChat
 
@@ -57,7 +59,7 @@ Public Class ControladorChat
 
     Public Function verificarCedula(idChat As String) As Boolean
 
-        If ModeloChat.Singleton.verificarCedula(Datos_Temporales.user_temp, idChat) = 0 Then
+        If ModeloChat.Singleton.verificarCedula(Datos_Temporales.userLog, idChat) = 0 Then
             Return True
         End If
 
@@ -73,4 +75,52 @@ Public Class ControladorChat
     Public Function getNombreUsr(cedula As String) As DataTable
         Return ModeloChat.Singleton.getNombreusr(cedula)
     End Function
+
+    Public Function getCorreo(cedula As String) As String
+        Return ModeloChat.Singleton.getCorreo(cedula)
+    End Function
+
+    Public Function setFormato() As String
+
+        Dim mensaje As String
+        Dim tablaMensaje As DataTable = recargarChat()
+        Dim tablaNombre As DataTable
+        Dim fecha As Date
+
+        For Each datos As DataRow In tablaMensaje.Rows
+            fecha = datos.Item(2)
+            tablaNombre = getNombreUsr(datos.Item(0))
+            mensaje = mensaje & fecha.Year.ToString & "/" & fecha.Month.ToString & "/" & fecha.Day.ToString & ", " & fecha.Hour.ToString & ":" & fecha.Minute.ToString & ":" & fecha.Second.ToString & " - " & tablaNombre.Rows.Item(0).Item(0) & " " & tablaNombre.Rows.Item(0).Item(1) & ": " & datos.Item(1) & vbCrLf
+        Next
+
+        Return mensaje
+    End Function
+
+    Public Function enviarCorreo(paciente As String, mensaje As String) As Boolean
+
+        Dim correo As New MailMessage()
+
+        Try
+
+            Dim server As New SmtpClient
+            correo.Subject = "Historial de chat"
+            correo.To.Add(New MailAddress(paciente))
+            correo.Body = mensaje
+
+            correo.From = New MailAddress("bytesoftuy@gmail.com")
+            server.Credentials = New NetworkCredential("bytesoftuy@gmail.com", "estaeslacontrasenadelproyecto")
+
+            server.Host = "smtp.gmail.com"
+            server.Port = 587
+            server.EnableSsl = True
+            server.Send(correo)
+            Return True
+
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Return False
+    End Function
+
 End Class

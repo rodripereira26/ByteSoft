@@ -58,13 +58,13 @@ Partial Class Mensaje
         Me.lbl_Enviado.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(140, Byte), Integer))
         Me.lbl_Enviado.Dock = System.Windows.Forms.DockStyle.Right
         Me.lbl_Enviado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lbl_Enviado.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Enviado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Enviado.ForeColor = System.Drawing.Color.White
-        Me.lbl_Enviado.Location = New System.Drawing.Point(631, 0)
+        Me.lbl_Enviado.Location = New System.Drawing.Point(626, 0)
         Me.lbl_Enviado.MaximumSize = New System.Drawing.Size(400, 0)
         Me.lbl_Enviado.Name = "lbl_Enviado"
         Me.lbl_Enviado.Padding = New System.Windows.Forms.Padding(10)
-        Me.lbl_Enviado.Size = New System.Drawing.Size(133, 40)
+        Me.lbl_Enviado.Size = New System.Drawing.Size(138, 40)
         Me.lbl_Enviado.TabIndex = 7
         Me.lbl_Enviado.Text = "SAMPLE TEXT"
         '
@@ -74,13 +74,13 @@ Partial Class Mensaje
         Me.lbl_Recibido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lbl_Recibido.Dock = System.Windows.Forms.DockStyle.Left
         Me.lbl_Recibido.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lbl_Recibido.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Recibido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Recibido.ForeColor = System.Drawing.Color.White
         Me.lbl_Recibido.Location = New System.Drawing.Point(0, 0)
         Me.lbl_Recibido.MaximumSize = New System.Drawing.Size(400, 0)
         Me.lbl_Recibido.Name = "lbl_Recibido"
         Me.lbl_Recibido.Padding = New System.Windows.Forms.Padding(10)
-        Me.lbl_Recibido.Size = New System.Drawing.Size(133, 40)
+        Me.lbl_Recibido.Size = New System.Drawing.Size(138, 40)
         Me.lbl_Recibido.TabIndex = 8
         Me.lbl_Recibido.Text = "SAMPLE TEXT"
         '

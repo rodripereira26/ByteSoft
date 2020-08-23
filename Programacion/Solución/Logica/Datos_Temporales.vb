@@ -1,7 +1,9 @@
 ﻿Public Class Datos_Temporales
 
-    Public Shared Property user_temp
-    public shared Property idchat
-    public shared Property rol
+    Public Shared Property userLog
+    Public shared Property idchat
+    Public Shared Property rol
+    Public Shared Property pacienteSelecionado
+
 
 End Class

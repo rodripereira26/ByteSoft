@@ -49,23 +49,24 @@ Public Class ModeloSintoma
 
         Dim consulta As String
 
-try 
+        Try
 
-        For Each nom In nombreSintoma
+            For Each nom In nombreSintoma
 
-            consulta = "
+                consulta = "
                     INSERT INTO paciente_indica_sintoma (cedulaPaciente, idSintoma, fechaIngreso) 
                     SELECT " & usuario & ", s.idSintoma, '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") & "' 
                     FROM sintoma s WHERE s.nombre = '" & nom & "'"
-            ModeloConsultas.Singleton.InsertarSinParametros(consulta)
+                ModeloConsultas.Singleton.InsertarSinParametros(consulta)
 
-        Next
+            Next
 
-        Return True
+            Return True
 
-catch
-return false
-end try
+        Catch ex As Exception
+            Return False
+        End Try
+
     End Function
 
     Public Function listarSintomas() As DataTable

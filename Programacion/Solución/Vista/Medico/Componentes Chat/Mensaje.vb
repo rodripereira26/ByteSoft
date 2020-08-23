@@ -11,7 +11,7 @@
             horaEnviado.Visible = True
             lbl_Recibido.Visible = False
             lbl_Enviado.Visible = True
-            horaEnviado.Text = Fecha.Hour().ToString() & ":" & fecha.Minute.ToString & ":" & fecha.Second.ToString
+            horaEnviado.Text = Fecha.Hour().ToString() & ":" & Fecha.Minute.ToString & ":" & Fecha.Second.ToString
             lbl_Enviado.Size = TextRenderer.MeasureText(lbl_Enviado.Text, lbl_Enviado.Font)
             Me.Height = lbl_Enviado.Height + 15
             'Principal.Singleton.SuperRoundedCorners(lbl_Enviado)
@@ -22,7 +22,7 @@
             horaRecibido.Visible = True
             lbl_Recibido.Visible = True
             lbl_Enviado.Visible = False
-            horaRecibido.Text = Fecha.Hour().ToString()
+            horaRecibido.Text = Fecha.Hour().ToString() & ":" & Fecha.Minute.ToString & ":" & Fecha.Second.ToString
             lbl_Recibido.Size = TextRenderer.MeasureText(lbl_Recibido.Text, lbl_Recibido.Font)
             Me.Height = lbl_Recibido.Height + 15
             'Principal.Singleton.SuperRoundedCorners(lbl_Recibido)

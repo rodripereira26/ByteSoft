@@ -145,23 +145,24 @@ Public Class ModeloPatologia
 
         Dim consulta As String
 
-     try
+        Try
 
-        For Each nom In diagnosticos
+            For Each nom In diagnosticos
 
-            consulta = "
+                consulta = "
                     INSERT INTO paciente_obtiene_diagnostico (cedulaPaciente, idPatologia, fecha) 
                     SELECT " & usuario & ", p.idPatologia, '" & DateTime.Now.ToString("yyyy-MM-dd hh:mm") & "' 
                     FROM patologia p WHERE p.nombre = '" & nom & "'"
 
-            ModeloConsultas.Singleton.InsertarSinParametros(consulta)
+                ModeloConsultas.Singleton.InsertarSinParametros(consulta)
 
-        Next
+            Next
 
-        Return True
-    catch 
-return false
-end Try
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
     End Function
 
 End Class

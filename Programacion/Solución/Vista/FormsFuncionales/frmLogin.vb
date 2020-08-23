@@ -118,7 +118,7 @@ Public Class frmLogin
 
                 If log.verificarUsuario(txtUsr.Text, seg.HASH256(txtPass.Text)) Then
 
-                    Datos_Temporales.user_temp = txtUsr.Text
+                    Datos_Temporales.userLog = txtUsr.Text
 
                     Select Case log.verificarRol(txtUsr.Text)
 
