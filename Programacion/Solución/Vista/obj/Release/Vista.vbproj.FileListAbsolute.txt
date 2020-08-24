@@ -174,7 +174,6 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.frmVerPerfil.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.frmRegistroPaciente.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.UserControl1.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.UserControl2.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.vbproj.GenerateResource.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.vbproj.CoreCompileInputs.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.vbproj.CopyComplete
@@ -273,3 +272,4 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Relea
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Release\Vista.exe
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Release\Vista.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Release\Vista.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Release\Vista.UCDiagnostico.resources

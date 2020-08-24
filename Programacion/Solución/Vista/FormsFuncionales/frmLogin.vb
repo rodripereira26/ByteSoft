@@ -1,4 +1,5 @@
 ﻿Imports Logica
+Imports MaterialSkin
 Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -172,4 +173,9 @@ Public Class frmLogin
 
     End Sub
 
+    Private Sub txtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPass.KeyDown, txtUsr.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ingresarUsuario()
+        End If
+    End Sub
 End Class

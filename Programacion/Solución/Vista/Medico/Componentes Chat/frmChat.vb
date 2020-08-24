@@ -6,10 +6,25 @@ Public Class frmChat
     Private firstUpdate As Boolean = False
 
     Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Principal.Singleton.roundedCorners(txtMensaje)
-
-        updateChats()
+        If Datos_Temporales.rol = "P" Then
+            Me.CenterToScreen()
+            Me.Width = pnlWrapChat.Width
+            'pnlWrapChat.Location = New Point((Me.Width - pnlWrapChat.Width) \ 2, (Me.Height - pnlWrapChat.Height) \ 2)
+            pnlWrapChat.Location = New Point(0, 0)
+            btnFinalizar.Visible = False
+            pbFinalizar.Visible = False
+            pnlYo.Visible = False
+            dgvFinalizados.Visible = False
+            dgvMisChats.Visible = False
+            pnlAcciones.Location = New Point((pnlWrapChat.Width - pnlAcciones.Width) \ 2, pnlAcciones.Location.Y)
+            lblGeneral.Visible = False
+            lblFinalizados.Visible = False
+            'Me.BackColor = Color.WhiteSmoke
+            'pnlWrapChat.BackColor = Color.White
+            'Chat.BackColor = Color.White
+        Else
+            updateChats()
+        End If
 
         Chat.AutoScroll = False
 
@@ -24,7 +39,7 @@ Public Class frmChat
     Public Sub New()
 
         InitializeComponent()
-        Principal.Singleton.SuperRoundedCorners(txtMensaje)
+        'Principal.Singleton.SuperRoundedCorners(txtMensaje)
         Update()
 
     End Sub
@@ -74,12 +89,12 @@ Public Class frmChat
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
 
-        Datos_Temporales.idchat = Nothing
-
         If Datos_Temporales.rol = "P" Then
             frmBienvenidaPaciente.Show()
             Me.Dispose()
+
         Else
+            Datos_Temporales.idchat = Nothing
             frmListadoChat.Show()
             Me.Dispose()
         End If
@@ -96,9 +111,10 @@ Public Class frmChat
 
                 If contChat.finalizarChat() Then
 
-                    Chat.Controls.Clear()
                     MsgBox("Sesión finalizada")
                     updateChats()
+                    Chat.Controls.Clear()
+                    Datos_Temporales.idchat = Nothing
                     Timer1.Enabled = False
                     Return True
 
@@ -115,12 +131,12 @@ Public Class frmChat
 
     End Function
 
-    Private Sub pbEnviar_Click(sender As Object, e As EventArgs) Handles pbEnviar.Click
+    Private Sub enviarMensaje()
 
         If txtMensaje.Text <> "" Then
 
             If contChat.enviarMensaje(Datos_Temporales.userLog, Datos_Temporales.idchat, txtMensaje.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")) Then
-
+                lblEscriba.Focus()
                 ReloadChat()
                 txtMensaje.Text = Nothing
                 Chat.VerticalScroll.Value = Chat.VerticalScroll.Maximum()
@@ -159,7 +175,7 @@ Public Class frmChat
 
     End Sub
 
-    Private Sub pbCancelar_Click(sender As Object, e As EventArgs) Handles pbCancelar.Click
+    Private Sub pbCancelar_Click(sender As Object, e As EventArgs) Handles pbFinalizar.Click
         finalizar()
     End Sub
 
@@ -188,15 +204,7 @@ Public Class frmChat
 
     End Sub
 
-    Private Sub MetroSetTextBox1_TextChanged(sender As Object) Handles txtMensaje.TextChanged
 
-        If Not (txtMensaje.Text = Nothing) Then
-            lblEscriba.Visible = False
-        Else
-            lblEscriba.Visible = True
-        End If
-
-    End Sub
 
     Private Sub dgvMisChats_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMisChats.CellClick
 
@@ -209,7 +217,7 @@ Public Class frmChat
 
         txtMensaje.Enabled = True
         btnFinalizar.Enabled = True
-        pbCancelar.Visible = True
+        pbFinalizar.Visible = True
         lblEscriba.Text = "Escriba un mensaje"
 
         setNombreUsuario(dgvMisChats.CurrentCell.Value)
@@ -227,7 +235,7 @@ Public Class frmChat
 
         txtMensaje.Enabled = False
         btnFinalizar.Enabled = False
-        pbCancelar.Visible = False
+        pbFinalizar.Visible = False
         lblEscriba.Text = "Chat finalizado, no es posible enviar un mensaje"
 
         setNombreUsuario(dgvFinalizados.CurrentCell.Value)
@@ -244,4 +252,53 @@ Public Class frmChat
 
     End Sub
 
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+        frmLogin.Visible = True
+    End Sub
+
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = WindowState.Minimized
+    End Sub
+
+
+    Private Sub MaterialSingleLineTextField1_TextChanged(sender As Object, e As EventArgs) Handles txtMensaje.TextChanged
+        If Not (txtMensaje.Text = Nothing) Then
+            lblEscriba.Visible = False
+        Else
+            lblEscriba.Visible = True
+        End If
+    End Sub
+
+    Private Sub pbEnviar_Click(sender As Object, e As EventArgs) Handles pbEnviar.Click
+        enviarMensaje()
+    End Sub
+
+    Private Sub txtMensaje_KeyPress(sender As Object, e As KeyEventArgs) Handles txtMensaje.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            enviarMensaje()
+        End If
+
+    End Sub
+
+    Private Sub lblEscriba_Click(sender As Object, e As EventArgs) Handles lblEscriba.Click
+        txtMensaje.Focus()
+    End Sub
+
+    Private Sub pnlWrapChat_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlWrapChat.MouseDown
+        Principal.Singleton.moverVentanaDown(Me)
+    End Sub
+
+    Private Sub pnlWrapChat_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlWrapChat.MouseMove
+        Principal.Singleton.moverVentanaMove(Me)
+    End Sub
+
+    Private Sub pnlWrapChat_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlWrapChat.MouseUp
+        Principal.Singleton.moverVentanaUp()
+    End Sub
+
+    Private Sub btnVerSintomas_Click(sender As Object, e As EventArgs) Handles btnVerSintomas.Click
+        Dim uc As New UCDiagnostico
+
+    End Sub
 End Class

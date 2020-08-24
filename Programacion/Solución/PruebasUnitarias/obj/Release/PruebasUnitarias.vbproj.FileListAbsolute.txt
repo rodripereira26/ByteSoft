@@ -47,3 +47,4 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\o
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.dll
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.xml
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbprojAssemblyReference.cache

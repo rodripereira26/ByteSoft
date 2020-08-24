@@ -22,18 +22,18 @@ Partial Class frmListadoChat
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvListadoChat = New System.Windows.Forms.DataGridView()
         Me.pnlTituloPatologia = New System.Windows.Forms.Panel()
         Me.brnActualizar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnMinimizar = New System.Windows.Forms.Button()
         CType(Me.dgvListadoChat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTituloPatologia.SuspendLayout()
         Me.SuspendLayout()
@@ -42,53 +42,53 @@ Partial Class frmListadoChat
         '
         Me.dgvListadoChat.AllowUserToAddRows = False
         Me.dgvListadoChat.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Roboto", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(30)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvListadoChat.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Roboto", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.Padding = New System.Windows.Forms.Padding(30)
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvListadoChat.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.dgvListadoChat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListadoChat.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListadoChat.BackgroundColor = System.Drawing.Color.White
         Me.dgvListadoChat.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvListadoChat.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvListadoChat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListadoChat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoChat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dgvListadoChat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvListadoChat.ColumnHeadersVisible = False
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(20)
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListadoChat.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Roboto", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.Padding = New System.Windows.Forms.Padding(20)
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoChat.DefaultCellStyle = DataGridViewCellStyle15
         Me.dgvListadoChat.EnableHeadersVisualStyles = False
         Me.dgvListadoChat.Location = New System.Drawing.Point(49, 141)
         Me.dgvListadoChat.MultiSelect = False
         Me.dgvListadoChat.Name = "dgvListadoChat"
         Me.dgvListadoChat.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListadoChat.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListadoChat.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.dgvListadoChat.RowHeadersVisible = False
         Me.dgvListadoChat.RowHeadersWidth = 51
         Me.dgvListadoChat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -99,11 +99,11 @@ Partial Class frmListadoChat
         'pnlTituloPatologia
         '
         Me.pnlTituloPatologia.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnlTituloPatologia.Controls.Add(Me.btnCerrar)
+        Me.pnlTituloPatologia.Controls.Add(Me.btnMinimizar)
         Me.pnlTituloPatologia.Controls.Add(Me.brnActualizar)
         Me.pnlTituloPatologia.Controls.Add(Me.Button1)
         Me.pnlTituloPatologia.Controls.Add(Me.Label10)
-        Me.pnlTituloPatologia.Controls.Add(Me.Label12)
-        Me.pnlTituloPatologia.Controls.Add(Me.Label13)
         Me.pnlTituloPatologia.Location = New System.Drawing.Point(0, 0)
         Me.pnlTituloPatologia.Name = "pnlTituloPatologia"
         Me.pnlTituloPatologia.Size = New System.Drawing.Size(1006, 80)
@@ -146,30 +146,6 @@ Partial Class frmListadoChat
         Me.Label10.Text = "SOLICITUDES DE CHAT"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label12
-        '
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(940, -17)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 54)
-        Me.Label12.TabIndex = 24
-        Me.Label12.Text = "_"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label13
-        '
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(963, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(43, 35)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "X"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Button2
         '
         Me.Button2.FlatAppearance.BorderSize = 0
@@ -185,6 +161,34 @@ Partial Class frmListadoChat
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Location = New System.Drawing.Point(972, 0)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(34, 33)
+        Me.btnCerrar.TabIndex = 156
+        Me.btnCerrar.Text = "X"
+        Me.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.FlatAppearance.BorderSize = 0
+        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnMinimizar.ForeColor = System.Drawing.Color.White
+        Me.btnMinimizar.Location = New System.Drawing.Point(935, 0)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(34, 33)
+        Me.btnMinimizar.TabIndex = 157
+        Me.btnMinimizar.Text = "_"
+        Me.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnMinimizar.UseVisualStyleBackColor = True
+        '
         'frmListadoChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -196,6 +200,7 @@ Partial Class frmListadoChat
         Me.Controls.Add(Me.pnlTituloPatologia)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmListadoChat"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmListadoChat"
         CType(Me.dgvListadoChat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTituloPatologia.ResumeLayout(False)
@@ -209,6 +214,6 @@ Partial Class frmListadoChat
     Friend WithEvents brnActualizar As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents btnMinimizar As Button
 End Class

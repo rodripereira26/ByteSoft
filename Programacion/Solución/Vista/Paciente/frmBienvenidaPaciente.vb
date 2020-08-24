@@ -4,12 +4,13 @@ Public Class frmBienvenidaPaciente
 
     Dim drag As Boolean
     Dim mousex, mousey As Integer
-
+    Dim contChat As New ControladorChat
+    Private chatComenzo As Boolean = False
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Principal.Singleton.roundedCorners(Panel1)
         Principal.Singleton.roundedCorners(Panel2)
-        Principal.Singleton.roundedCorners(Panel3)
+        Principal.Singleton.roundedCorners(pnlReanudar)
         Principal.Singleton.roundedCorners(Panel4)
         Principal.Singleton.roundedCorners(Panel5)
         Principal.Singleton.roundedCorners(Me)
@@ -151,6 +152,7 @@ Public Class frmBienvenidaPaciente
             respuesta = MsgBox("Ha recibido una respuesta, ¿Desea chatear?", vbQuestion + vbYesNo + vbDefaultButton2)
 
             If respuesta = vbYes Then
+                chatComenzo = True
                 frmChat.Show()
                 respuesta = True
             Else
@@ -161,24 +163,22 @@ Public Class frmBienvenidaPaciente
 
     End Sub
 
-
-
-
-
-
-
-
     Public Function obtenerRespuesta() As Boolean
 
-        Dim chat As New ControladorChat
-
-        If chat.obtenerRespuesta >= 1 Then
+        If contChat.obtenerRespuesta >= 1 Then
             Return True
         End If
 
         Return False
     End Function
 
+    Private Sub pnlReanudar_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlReanudar.MouseClick
+        If chatComenzo Then
+            frmChat.Show()
+        Else
+            MsgBox("Usted no ha iniciado ningún chat aún")
+        End If
+    End Sub
 
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
         drag = False
