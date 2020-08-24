@@ -40,9 +40,10 @@ Public Class frmObtenerDiagnostico
                 
                 MsgBox("Se ha enviado una solicitud de chat")
                 frmBienvenidaPaciente.Timer1.Enabled = True
-                solicitud = false
-            Else
-                MsgBox("Error al enviar solicitud de chat")
+                    solicitud = False
+
+                Else
+                    MsgBox("Error al enviar solicitud de chat")
             End If
         End If
     else
@@ -51,4 +52,12 @@ Public Class frmObtenerDiagnostico
 
     End Sub
 
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+        frmLogin.Visible = True
+    End Sub
+
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = WindowState.Minimized
+    End Sub
 End Class

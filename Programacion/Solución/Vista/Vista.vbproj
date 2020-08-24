@@ -222,6 +222,12 @@
     <Compile Include="Medico\Componentes Chat\frmChat.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Medico\Componentes Chat\UCDiagnostico.Designer.vb">
+      <DependentUpon>UCDiagnostico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Medico\Componentes Chat\UCDiagnostico.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Paciente\frmHistorialPatologia.Designer.vb">
       <DependentUpon>frmHistorialPatologia.vb</DependentUpon>
     </Compile>
@@ -335,12 +341,6 @@
     <Compile Include="Extras\frmVerPerfil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControl2.Designer.vb">
-      <DependentUpon>UserControl2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl2.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Extras\frmAjustes.resx">
@@ -363,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Medico\Componentes Chat\Mensaje.resx">
       <DependentUpon>Mensaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medico\Componentes Chat\UCDiagnostico.resx">
+      <DependentUpon>UCDiagnostico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paciente\frmHistorialPatologia.resx">
       <DependentUpon>frmHistorialPatologia.vb</DependentUpon>
@@ -417,9 +420,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Paciente\UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
-      <DependentUpon>UserControl2.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

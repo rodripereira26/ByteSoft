@@ -23,13 +23,8 @@ Partial Class frmLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtUsr = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPass = New System.Windows.Forms.TextBox()
@@ -43,31 +38,29 @@ Partial Class frmLogin
         Me.lblCrearCuentaPac = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.dgvMisChats = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MaterialCheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvMisChats, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtUsr
         '
         Me.txtUsr.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUsr.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsr.Location = New System.Drawing.Point(163, 182)
-        Me.txtUsr.Multiline = True
+        Me.txtUsr.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsr.Location = New System.Drawing.Point(163, 183)
         Me.txtUsr.Name = "txtUsr"
-        Me.txtUsr.Size = New System.Drawing.Size(182, 20)
-        Me.txtUsr.TabIndex = 18
+        Me.txtUsr.Size = New System.Drawing.Size(182, 19)
+        Me.txtUsr.TabIndex = 1
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Controls.Add(Me.MaterialCheckBox1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtUsr)
@@ -81,23 +74,11 @@ Partial Class frmLogin
         Me.Panel1.Size = New System.Drawing.Size(480, 505)
         Me.Panel1.TabIndex = 23
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.ForeColor = System.Drawing.Color.Black
-        Me.CheckBox1.Location = New System.Drawing.Point(177, 353)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(158, 25)
-        Me.CheckBox1.TabIndex = 20
-        Me.CheckBox1.Text = "Recordar Usuario"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Label3.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label3.Location = New System.Drawing.Point(159, 289)
         Me.Label3.Name = "Label3"
@@ -109,7 +90,7 @@ Partial Class frmLogin
         '
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Label2.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label2.Location = New System.Drawing.Point(159, 182)
         Me.Label2.Name = "Label2"
@@ -120,18 +101,18 @@ Partial Class frmLogin
         'txtPass
         '
         Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.Location = New System.Drawing.Point(163, 289)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(182, 16)
-        Me.txtPass.TabIndex = 19
+        Me.txtPass.Size = New System.Drawing.Size(182, 19)
+        Me.txtPass.TabIndex = 2
         Me.txtPass.UseSystemPasswordChar = True
         '
         'PictureBox4
         '
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(191, 405)
+        Me.PictureBox4.Location = New System.Drawing.Point(191, 416)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(130, 58)
         Me.PictureBox4.TabIndex = 14
@@ -149,11 +130,11 @@ Partial Class frmLogin
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Roboto Black", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(87, 59)
+        Me.Label1.Location = New System.Drawing.Point(86, 59)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(350, 50)
+        Me.Label1.Size = New System.Drawing.Size(372, 50)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inicio de Sesión"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -203,13 +184,14 @@ Partial Class frmLogin
         'lblCrearCuentaPac
         '
         Me.lblCrearCuentaPac.AutoSize = True
-        Me.lblCrearCuentaPac.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCuentaPac.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCrearCuentaPac.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearCuentaPac.ForeColor = System.Drawing.Color.White
-        Me.lblCrearCuentaPac.Location = New System.Drawing.Point(655, 424)
+        Me.lblCrearCuentaPac.Location = New System.Drawing.Point(638, 437)
         Me.lblCrearCuentaPac.Name = "lblCrearCuentaPac"
-        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(140, 26)
+        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(161, 25)
         Me.lblCrearCuentaPac.TabIndex = 28
-        Me.lblCrearCuentaPac.Text = "Crear cuenta"
+        Me.lblCrearCuentaPac.Text = "Solicitar cuenta"
         '
         'PictureBox5
         '
@@ -231,70 +213,32 @@ Partial Class frmLogin
         Me.PictureBox3.TabIndex = 22
         Me.PictureBox3.TabStop = False
         '
-        'dgvMisChats
+        'Label5
         '
-        Me.dgvMisChats.AllowUserToAddRows = False
-        Me.dgvMisChats.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvMisChats.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvMisChats.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvMisChats.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgvMisChats.BackgroundColor = System.Drawing.Color.White
-        Me.dgvMisChats.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.dgvMisChats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMisChats.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvMisChats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMisChats.ColumnHeadersVisible = False
-        Me.dgvMisChats.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
-        Me.dgvMisChats.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMisChats.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvMisChats.EnableHeadersVisualStyles = False
-        Me.dgvMisChats.Location = New System.Drawing.Point(576, 59)
-        Me.dgvMisChats.MultiSelect = False
-        Me.dgvMisChats.Name = "dgvMisChats"
-        Me.dgvMisChats.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMisChats.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvMisChats.RowHeadersVisible = False
-        Me.dgvMisChats.RowHeadersWidth = 51
-        Me.dgvMisChats.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvMisChats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvMisChats.Size = New System.Drawing.Size(246, 303)
-        Me.dgvMisChats.TabIndex = 150
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Roboto Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(668, 402)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(100, 19)
+        Me.Label5.TabIndex = 29
+        Me.Label5.Text = "¿Es afiliado?"
         '
-        'Column1
+        'MaterialCheckBox1
         '
-        Me.Column1.HeaderText = "Column1"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
+        Me.MaterialCheckBox1.AutoSize = True
+        Me.MaterialCheckBox1.Depth = 0
+        Me.MaterialCheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialCheckBox1.Location = New System.Drawing.Point(186, 359)
+        Me.MaterialCheckBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialCheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialCheckBox1.Name = "MaterialCheckBox1"
+        Me.MaterialCheckBox1.Ripple = True
+        Me.MaterialCheckBox1.Size = New System.Drawing.Size(135, 30)
+        Me.MaterialCheckBox1.TabIndex = 21
+        Me.MaterialCheckBox1.Text = "Recordar usuario"
+        Me.MaterialCheckBox1.UseVisualStyleBackColor = True
         '
         'frmLogin
         '
@@ -302,7 +246,7 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(875, 500)
-        Me.Controls.Add(Me.dgvMisChats)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.pnlTopBar)
         Me.Controls.Add(Me.lblCrearCuentaPac)
         Me.Controls.Add(Me.PictureBox5)
@@ -321,7 +265,6 @@ Partial Class frmLogin
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvMisChats, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -329,7 +272,6 @@ Partial Class frmLogin
 
     Friend WithEvents txtUsr As TextBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPass As TextBox
@@ -343,6 +285,6 @@ Partial Class frmLogin
     Friend WithEvents pnlTopBar As Panel
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents lblCrearCuentaPac As Label
-    Friend WithEvents dgvMisChats As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Label5 As Label
+    Friend WithEvents MaterialCheckBox1 As MaterialSkin.Controls.MaterialCheckBox
 End Class

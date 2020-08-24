@@ -31,10 +31,6 @@ Partial Class frmBienvenidaPaciente
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -50,12 +46,16 @@ Partial Class frmBienvenidaPaciente
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.pnlReanudar = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
+        Me.pnlReanudar.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -80,7 +80,6 @@ Partial Class frmBienvenidaPaciente
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
@@ -142,48 +141,6 @@ Partial Class frmBienvenidaPaciente
         Me.Label4.Size = New System.Drawing.Size(181, 39)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Mi Historial"
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Panel10)
-        Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel3.Location = New System.Drawing.Point(322, 289)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(255, 193)
-        Me.Panel3.TabIndex = 3
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(187, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(0, 0)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(255, 10)
-        Me.Panel10.TabIndex = 5
-        '
-        'Label6
-        '
-        Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(25, 91)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(178, 92)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Entrar a la configuración de la aplicación"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(22, 33)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 39)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Ajustes"
         '
         'Panel4
         '
@@ -338,18 +295,60 @@ Partial Class frmBienvenidaPaciente
         '
         Me.Timer1.Interval = 4000
         '
+        'pnlReanudar
+        '
+        Me.pnlReanudar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlReanudar.Controls.Add(Me.Panel10)
+        Me.pnlReanudar.Controls.Add(Me.Label6)
+        Me.pnlReanudar.Controls.Add(Me.Label7)
+        Me.pnlReanudar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlReanudar.Location = New System.Drawing.Point(322, 289)
+        Me.pnlReanudar.Name = "pnlReanudar"
+        Me.pnlReanudar.Size = New System.Drawing.Size(255, 193)
+        Me.pnlReanudar.TabIndex = 5
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.Silver
+        Me.Panel10.Location = New System.Drawing.Point(0, 0)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(255, 10)
+        Me.Panel10.TabIndex = 4
+        '
+        'Label6
+        '
+        Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(23, 91)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(208, 55)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "Continuar chat con médico"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(22, 33)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(223, 39)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Reanudar chat"
+        '
         'frmBienvenidaPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 507)
+        Me.Controls.Add(Me.pnlReanudar)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -360,14 +359,14 @@ Partial Class frmBienvenidaPaciente
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        Me.pnlReanudar.ResumeLayout(False)
+        Me.pnlReanudar.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -378,9 +377,6 @@ Partial Class frmBienvenidaPaciente
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel5 As Panel
@@ -392,11 +388,14 @@ Partial Class frmBienvenidaPaciente
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents Panel10 As Panel
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents pnlReanudar As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class

@@ -55,11 +55,11 @@ Partial Class Mensaje
         'lbl_Enviado
         '
         Me.lbl_Enviado.AutoSize = True
-        Me.lbl_Enviado.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.lbl_Enviado.BackColor = System.Drawing.Color.WhiteSmoke
         Me.lbl_Enviado.Dock = System.Windows.Forms.DockStyle.Right
         Me.lbl_Enviado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lbl_Enviado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Enviado.ForeColor = System.Drawing.Color.White
+        Me.lbl_Enviado.ForeColor = System.Drawing.Color.Black
         Me.lbl_Enviado.Location = New System.Drawing.Point(626, 0)
         Me.lbl_Enviado.MaximumSize = New System.Drawing.Size(400, 0)
         Me.lbl_Enviado.Name = "lbl_Enviado"

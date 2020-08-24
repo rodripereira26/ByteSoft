@@ -34,7 +34,7 @@ Public Class ModeloChat
 
         parametros.Add(New OdbcParameter("cedula", cedula))
         parametros.Add(New OdbcParameter("idChat", id))
-        parametros.Add(New OdbcParameter("fechaIngreso", DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")))
+        parametros.Add(New OdbcParameter("fechaIngreso", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")))
 
         If ModeloConsultas.Singleton.InsertParametros(consulta, parametros) Then
             Return True
