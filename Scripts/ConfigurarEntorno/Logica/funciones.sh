@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#necesita root
 crontabConf() {
 
 	local respaldo="/var/bytesoft/backupsBD/.credenciales.cnf"

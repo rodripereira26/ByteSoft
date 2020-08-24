@@ -71,7 +71,7 @@ VMenuAgregarUsuario() {
 
                     if [ -n "$user" -a -n "$pw" -a ${#pw} -gt 7 -a $posEnLista -gt 4 ]; 
                     then
-                        #continuar=false# posible solucion
+                        continuar=false #solucion error continuar
                         ejecutarElegirGrupo
 
                         if [ $grupoPerteneciente ]; 
@@ -92,7 +92,7 @@ VMenuAgregarUsuario() {
                                     then
                                     VAvisoRegistrado "Ha ocurrido un problema con los permisos" 9 ##############
                                 fi
-                                continuar=false ######posible error
+                                #continuar=false ######posible error
                             fi
 
                         fi

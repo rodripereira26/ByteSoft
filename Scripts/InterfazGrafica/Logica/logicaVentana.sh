@@ -79,8 +79,7 @@ agregarUbicacion() {
     ((proxPos++))
 }   
 
-tomarDelProximoElemento() {
-
+tomarDelProximoElemento() {    
     # $1 numero del elemento
     posDeEsteElemento=$1
     tipo=${historialPos[$1,0]}

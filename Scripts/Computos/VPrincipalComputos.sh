@@ -64,7 +64,6 @@ ejecutarComputos() {
 
             "3")
                 comprobarRed
-
                 ;;
 
             "4")

@@ -13,12 +13,20 @@ MenuLogs() {
 
     dibujarBoton "HARDWARE" 11 6 80 3
     dibujarBoton "SYSLOG" 11 9 80 3
-    dibujarBoton "MENSAJES DEL SISTEMA" 11 12 80 3
-    dibujarBoton "INICIO Y SEGURIDAD" 11 15 80 3
-    dibujarBoton "ÚLTIMOS LOGINS" 11 18 80 3
-    dibujarBoton "LOGINS EXITOSOS" 11 21 80 3
-    dibujarBoton "LOGINS FALLIDOS" 11 24 80 3
-    dibujarBoton "VOLVER" 11 27 80 3
+    dibujarBoton "ÚLTIMOS LOGINS" 11 12 80 3
+    dibujarBoton "LOGINS EXITOSOS" 11 15 80 3
+
+    if [ $EUID -eq 0 ]; then #root
+
+        dibujarBoton "MENSAJES DEL SISTEMA" 11 18 80 3
+        dibujarBoton "INICIO Y SEGURIDAD" 11 21 80 3
+        dibujarBoton "LOGINS FALLIDOS" 11 24 80 3 
+        dibujarBoton "VOLVER" 11 27 80 3
+
+    else # no root
+
+        dibujarBoton "VOLVER" 11 18 80 3
+    fi
 
     local continuar=true
     while $continuar; 
@@ -32,7 +40,6 @@ MenuLogs() {
     done
 
 }
-
 ejecutarLogs() {
 
     local continuarCiclo=true
@@ -40,55 +47,52 @@ ejecutarLogs() {
     while $continuarCiclo; 
     do
         MenuLogs
-        case $posDeEsteElemento in 
-
-            "0")
+        case $codigoElemento in 
+            "BTN:HARDWARE:11:6:80:3")
                 tput sgr0
                 clear
                 dmesg | less
                 ;;
 
-            "1")
+            "BTN:SYSLOG:11:9:80:3")
                 tput sgr0
                 clear
                 journalctl -r
                 ;;
+            "BTN:ÚLTIMOS LOGINS:11:12:80:3")
+                tput sgr0
+				clear
+				lastlog | less
+				;;
 
-            "2")
+			"BTN:LOGINS EXITOSOS:11:15:80:3")
+                
+                tput sgr0
+				clear
+				last | less
+				;;
+            "BTN:MENSAJES DEL SISTEMA:11:18:80:3")
                 #necesita root
                 tput sgr0
                 clear
                 tail /var/log/messages | less
                 ;;
                 
-            "3")
+            "BTN:INICIO Y SEGURIDAD:11:21:80:3")
                 #necesita root
                 tput sgr0
                 clear
                 tail /var/log/secure | less
                 ;;
 
-            "4")
-                tput sgr0
-				clear
-				lastlog | less
-				;;
-
-			"5")
-                
-                tput sgr0
-				clear
-				last | less
-				;;
-
-			"6")
+			 "BTN:LOGINS FALLIDOS:11:24:80:3")
                 #necesita root
                 tput sgr0
 				clear
 				lastb | less
 				;;	
 
-            "7")
+            "BTN:VOLVER:11:27:80:3"|"BTN:VOLVER:11:18:80:3")
                 continuarCiclo=false
                 ;;
             *)

@@ -19,12 +19,17 @@ VMenuUsuarios() {
     dibujarTxt "5 -> ENTER " 11 8 0
     dibujarTxt "6 -> ABAJO" 11 9 0
     
-    
-    dibujarBoton "AGREGAR USUARIO" 11 10 80 3
-    dibujarBoton "MODIFICAR USUARIO" 11 13 80 3
-    dibujarBoton "ELIMINAR USUARIO" 11 16 80 3
-    dibujarBoton "LISTAR USUARIOS (Q PARA SALIR)" 11 19 80 3
-    dibujarBoton "VOLVER" 11 22 80 3
+    if [ $EUID -eq 0 ];then 
+        dibujarBoton "AGREGAR USUARIO" 11 10 80 3 #necesita root
+        dibujarBoton "ELIMINAR USUARIO" 11 13 80 3 #necesita root
+        dibujarBoton "LISTAR USUARIOS (Q PARA SALIR)" 11 16 80 3 # puede ser root como que no
+        dibujarBoton "VOLVER" 11 19 80 3    
+    else
+        dibujarBoton "MODIFICAR USUARIO" 11 10 80 3 #no root
+        dibujarBoton "LISTAR USUARIOS (Q PARA SALIR)" 11 13 80 3 # puede ser root como que no
+        dibujarBoton "VOLVER" 11 16 80 3
+    fi
+
 
     local continuar=true
 
@@ -48,27 +53,27 @@ ejecutarUsuario() {
     while $continuarCiclo; 
     do
         VMenuUsuarios
+        
+        case $codigoElemento in 
 
-        case $posDeEsteElemento in 
-
-            "0")
+            "BTN:AGREGAR USUARIO:11:10:80:3")
                 ejecutarVAgregarUsuario
                 ;;
 
-            "1")
+            "BTN:MODIFICAR USUARIO:11:10:80:3")
                 ejecutarModificarUsuario
                 ;;
 
-            "2")
+            "BTN:ELIMINAR USUARIO:11:13:80:3")
                 ejecutarEliminarUsuario
                 ;;
 
-            "3")
+            "BTN:LISTAR USUARIOS (Q PARA SALIR):11:16:80:3"|"BTN:LISTAR USUARIOS (Q PARA SALIR):11:13:80:3")
 				tput sgr0
                 clear
                 cat /etc/passwd | cut -f1 -d":" | less
                 ;;
-            "4")
+            "BTN:VOLVER:11:19:80:3"|"BTN:VOLVER:11:16:80:3")
                 continuarCiclo=false
                 ;;
             *)  

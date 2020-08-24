@@ -59,7 +59,7 @@ pantallaSSH() {
 }
 
 configurarSSH () {
-    # $1 : #root
+    # $1 : root
     root=$1
     if [ -z $usuarios ]; 
     then

@@ -17,11 +17,17 @@ VMenuPrincipalServicios(){
     dibujarTxt "6 -> ABAJO" 11 8 0
     
     dibujarBoton "VER SERVICIOS ACTIVOS (Q PARA SALIR)" 11 9 80 3
-    dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
-    dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
-    dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3 #necesita root
-    dibujarBoton "CONFIGURACIÓN" 11 21 80 3 #necesita root ?
-    dibujarBoton "VOLVER" 11 24 80 3
+    
+    if [ $EUID -eq 0 ];then
+        dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
+        dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
+        dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3 #necesita root
+        dibujarBoton "CONFIGURACIÓN" 11 21 80 3 #necesita root ?
+        dibujarBoton "VOLVER" 11 24 80 3
+    else
+        dibujarBoton "VOLVER" 11 12 80 3
+    fi
+
 
     local continuar=true
 
@@ -44,33 +50,33 @@ ejecutarMenuPrincipalServicios() {
     do
         VMenuPrincipalServicios
 
-        case $posDeEsteElemento in 
+        case $codigoElemento in 
 
-        	"0")
+        	"BTN:VER SERVICIOS ACTIVOS (Q PARA SALIR):11:9:80:3")
 				tput sgr0
 				clear
 				systemctl list-unit-files | grep "enabled" | less
 				;;
-
-			"1")
+                
+			"BTN:ACTIVAR SERVICIO:11:12:80:3")
 				colorBgDefecto=0
-            	activarServicio
+            	activarServicio 
 				;;
 
-			"2")
+			"BTN:DESACTIVAR SERVICIO:11:15:80:3")
 				colorBgDefecto=0
 				desactivarServicio
 				;;
 
-            "3")
+            "BTN:CONEXIONES (SSH, MYSQL):11:18:80:3")
                 ejecutarVConexiones
                 ;;
 
-            "4")
+            "BTN:CONFIGURACIÓN:11:21:80:3")
                 ejecutarMenuServicioConf
                 ;;
 
-            "5")
+            "BTN:VOLVER:11:24:80:3"|"BTN:VOLVER:11:12:80:3")
                 continuarCiclo=false
                 ;;
             *)

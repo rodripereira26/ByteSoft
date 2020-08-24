@@ -32,11 +32,9 @@ VConexiones(){
                 then
                     if $estadoMYSQL; 
                     then
-                        tput cup 0 0 
-                        service mysqld stop
+                        systemctl stop mysqld 
                     else
-                        tput cup 0 0
-                        service mysqld start             
+                        systemctl start mysqld              
                     fi
                     actualizarEstadoServiciosSSHyMYSQL
                 fi
@@ -45,13 +43,11 @@ VConexiones(){
             "1")
                 if [ $codigoRespuesta = "5" ]; 
                 then
-                    tput cup 0 0
-
                     if $estadoSSH; 
                     then
-                        service sshd stop 
+                        systemctl stop sshd 
                     else
-                        service sshd start
+                        systemctl start sshd
                     fi
                     actualizarEstadoServiciosSSHyMYSQL
                 fi
@@ -80,11 +76,9 @@ actualizarEstadoServiciosSSHyMYSQL() {
     estadoSSH=false
 
 
-    tput cup 0 0
     comandoMYSQL=$(service mysqld status | grep "Active" | cut -d: -f2 | cut -d" " -f2)
 
-    tput cup 0 0
-    comandoSSH=$(service sshd status | grep "Active" | cut -d: -f2 | cut -d" " -f2) 
+    comandoSSH=$(systemctl status sshd | grep "Active" | cut -d" " -f5) 
 
     if [ "$comandoMYSQL" = "active" ];
     then

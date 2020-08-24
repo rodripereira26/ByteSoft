@@ -1,10 +1,10 @@
 #!/bin/bash
 #
 #
-# Para mas privilegios ejecutar con root
+# Para acceder a OTROS privilegios, ejecutar con root
+# hay opciones que solo estan para usuarios no root
 #
 # bc es necesario instalar
-#necesita root (partes que necesariamente tienen root)
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
 
@@ -24,9 +24,17 @@ Principal() {
     dibujarTxt "6 -> ABAJO" 11 9 0
     
     dibujarBoton "CENTRO DE COMPUTOS" 11 10 80 3
-    dibujarBoton "CONFIGURACIÓN DEL ENTORNO" 11 13 80 3
-    dibujarBoton "DESINSTALAR ENTORNO" 11 16 80 3
-    dibujarBoton "SALIR" 11 19 80 3
+
+    if [ $EUID -eq 0 ];then
+
+        dibujarBoton "CONFIGURACIÓN DEL ENTORNO" 11 13 80 3 #necesita root 
+        dibujarBoton "DESINSTALAR ENTORNO" 11 16 80 3 #necesita root 
+        dibujarBoton "SALIR" 11 19 80 3
+    else
+
+        dibujarBoton "SALIR" 11 13 80 3
+    fi
+
     
     local continuar=true
 
@@ -45,26 +53,25 @@ Principal() {
 ejecutarMain() {
 
     local continuarCiclo=true
-
     while $continuarCiclo; 
     do
         Principal
-        case $posDeEsteElemento in 
+        case $codigoElemento in 
 
-            "0")
+            "BTN:CENTRO DE COMPUTOS:11:10:80:3")
                 ejecutarComputos
                 ;;
 
-            "1")
+            "BTN:CONFIGURACIÓN DEL ENTORNO:11:13:80:3")
                 preguntaInstalacion
                 colorBgDefecto=7
                 ;;
 
-            "2")
+            "BTN:DESINSTALAR ENTORNO:11:16:80:3")
                 preguntaDesinstalar
                 ;;
 
-            "3")
+            "BTN:SALIR:11:13:80:3"|"BTN:SALIR:11:19:80:3")
                 continuarCiclo=false
                 ;;
 
@@ -72,7 +79,6 @@ ejecutarMain() {
                 ;;
         esac
         cerrarPantalla
-
     done
 
 }

@@ -275,8 +275,8 @@ dibujarBoton(){
 }
 
 siguientePos() {
-
     tomarDelProximoElemento $posActual
+    codigoElemento="${tipo}:${texto}:${posX}:${posY}:${largo}:${ancho}"
 
     case  $tipo in 
 
@@ -298,6 +298,7 @@ siguientePos() {
         *)
             ;;
     esac
+
 }
 
 mensajeError() {

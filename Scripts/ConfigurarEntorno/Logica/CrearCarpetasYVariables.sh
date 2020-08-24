@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#necesita root
+
 crearCarpetasIniciales() {
 
     local carpUsuarios="/home/USUARIOS"
@@ -25,7 +27,7 @@ crearCarpetasIniciales() {
 }
 
 variablesEntorno(){
-    #necesita root
+
     if [ "$(grep PATHB /etc/environment | wc -l)" -eq "0"  ] # Verifico que las variables no hayan sido creadas
     then
         echo "export PATHB=/var/bytesoft/backupsBD/">>/etc/environment
