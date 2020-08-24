@@ -1,8 +1,8 @@
 #!/bin/bash
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
-. "/Scripts/Computos/Procesos/logica.sh"
+
+. "/Scripts/Computos/Procesos/logicaProcesos.sh"
 
 menuProcesos(){
 

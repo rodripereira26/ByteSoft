@@ -1,7 +1,6 @@
 #!/bin/bash
 
-. "InterfazGrafica/Grafica/disenoVentana.sh" 
-. "InterfazGrafica/Logica/logicaVentana.sh" 
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
 
 VMenuAgregarUsuario() {
 
@@ -72,6 +71,7 @@ VMenuAgregarUsuario() {
 
                     if [ -n "$user" -a -n "$pw" -a ${#pw} -gt 7 -a $posEnLista -gt 4 ]; 
                     then
+                        #continuar=false# posible solucion
                         ejecutarElegirGrupo
 
                         if [ $grupoPerteneciente ]; 
@@ -92,7 +92,7 @@ VMenuAgregarUsuario() {
                                     then
                                     VAvisoRegistrado "Ha ocurrido un problema con los permisos" 9 ##############
                                 fi
-                                continuar=false
+                                continuar=false ######posible error
                             fi
 
                         fi

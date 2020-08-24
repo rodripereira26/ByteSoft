@@ -1,10 +1,10 @@
 #!/bin/bash
 
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+
 . "/Scripts/Computos/Servicios/VConexiones.sh"
 . "/Scripts/Computos/Servicios/Configuracion/VMenuServicioConf.sh"
-. "/Scripts/Computos/Servicios/logica.sh"
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
+. "/Scripts/Computos/Servicios/VAccionesServicios.sh"
 
 
 VMenuPrincipalServicios(){
@@ -17,10 +17,10 @@ VMenuPrincipalServicios(){
     dibujarTxt "6 -> ABAJO" 11 8 0
     
     dibujarBoton "VER SERVICIOS ACTIVOS (Q PARA SALIR)" 11 9 80 3
-    dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3
-    dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3
-    dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3
-    dibujarBoton "CONFIGURACIÓN" 11 21 80 3
+    dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
+    dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
+    dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3 #necesita root
+    dibujarBoton "CONFIGURACIÓN" 11 21 80 3 #necesita root ?
     dibujarBoton "VOLVER" 11 24 80 3
 
     local continuar=true

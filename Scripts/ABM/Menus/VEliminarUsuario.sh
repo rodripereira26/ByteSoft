@@ -1,7 +1,6 @@
 #!/bin/bash
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
 
 VMenuEliminarUsuario() {
 
@@ -69,9 +68,10 @@ ejecutarEliminarUsuario() {
                     VAvisoRegistrado "Usuario eliminado correctamente" 10 
                 else
                     VAvisoRegistrado "Necesita permisos para borrar usuarios" 9 
-                
+                fi
             else 
                 VAvisoRegistrado "Usuario inexistente o el grupo no fue el correspondiente" 9 
+            fi
         else
             continuar=false
         fi

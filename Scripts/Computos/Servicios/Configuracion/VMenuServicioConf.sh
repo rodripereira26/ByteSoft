@@ -1,8 +1,8 @@
 #!/bin/bash
 
-. "/Scripts/Computos/Servicios/Configuracion/VConfigMySQL.sh"
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
+
+. "/Scripts/Computos/Servicios/Configuracion/VConfigMySQL.sh"
 
 VMenuServicioConf(){
 

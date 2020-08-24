@@ -1,15 +1,16 @@
 #!/bin/bash
-
 #
-# Obligatorio ejecutar con root
 #
+# Para mas privilegios ejecutar con root
+#
+# bc es necesario instalar
+#necesita root (partes que necesariamente tienen root)
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
-. "/Scripts/Computos/computos.sh"
+
+. "/Scripts/Computos/VPrincipalComputos.sh"
 . "/Scripts/ConfigurarEntorno/VPrincipalMenuConfigEntorno.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
-
 
 Principal() {
 
@@ -81,7 +82,7 @@ main() {
     tput sgr0
     clear
     tput civis
-    animacionTitulo "InterfazGrafica/tituloByteSoft.txt" 10 10
+    #animacionTitulo "InterfazGrafica/tituloByteSoft.txt" 10 10
     ejecutarMain
     clear
 

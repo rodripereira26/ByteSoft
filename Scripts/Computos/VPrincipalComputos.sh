@@ -1,15 +1,11 @@
 #!/bin/bash
 
-#
-# Obligatorio ejecutar con root
-#
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh"
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
 . "/Scripts/ABM/Menus/VPrincipalMenuUsuarios.sh"
-. "/Scripts/Computos/Respaldo/respaldos.sh"
-. "/Scripts/Computos/Logs/logs.sh"
-. "/Scripts/Computos/Procesos/procesos.sh"
+. "/Scripts/Computos/Respaldo/VPrincipalRespaldos.sh"
+. "/Scripts/Computos/Logs/VLogs.sh"
+. "/Scripts/Computos/Procesos/VAccionesProcesos.sh"
 . "/Scripts/Computos/Servicios/VPrincipalMenuServicios.sh"
 . "/Scripts/Computos/Servicios/VConexiones.sh"
 

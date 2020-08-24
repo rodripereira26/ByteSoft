@@ -1,7 +1,6 @@
 #!/bin/bash
 
-. "InterfazGrafica/Grafica/disenoVentana.sh" 
-. "InterfazGrafica/Logica/logicaVentana.sh"
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
 
 VMenuModificarUsuario() {
 
@@ -108,27 +107,34 @@ ejecutarModificarUsuario() {
             lpwN=""
             listaPalabras=()
             agregarALaLista=false
-
-            if [ -n "$user" -a -n "$pwN" -a ${#pwN} -gt 7 -a $posEnLista -gt 4 ]; 
-            then
-                if [ $(grep -E "^$user:.*::/home/USUARIOS/.*/$user" /etc/passwd) ]; 
+            
+            if [ $EUID -ne 0 ]; then # no es root
+                if [ -n "$user" -a -n "$pwN" -a ${#pwN} -gt 7 -a $posEnLista -gt 4 ]; 
                 then
-                    if [ "$pwN" = "$reppwN" ];
+                    if [ $(grep -E "^$user:.*::/home/USUARIOS/.*/$user" /etc/passwd) ]; 
                     then
-                        respCambioContrasena=$(echo -e "$pwN\n$pwN" | passwd $user)
-                        pw=""
-                        pwN=""
-                        reppwN=""
-                        VAvisoRegistrado "Modificado con éxito" 10 
-
+                        if [ "$pwN" = "$reppwN" ];
+                        then
+                            respCambioContrasena=$(echo "$pw" | su $user -c "echo -e '$pw\n$pwN\n$pwN\n' | passwd 2> /dev/null")
+                            if [ $? -eq 0 ]; then # verifica anterior comando
+                                VAvisoRegistrado "Modificado con éxito" 10 
+                            else
+                                VAvisoRegistrado "Contraseña incorrecta" 9
+                            fi
+                            pw=""
+                            pwN=""
+                            reppwN=""
+                        else
+                            VAvisoRegistrado "Contraseñas no coinciden" 9 
+                        fi
                     else
-                        VAvisoRegistrado "Contraseñas no coinciden" 9 
+                        VAvisoRegistrado "$user no pertenece a usuarios" 9 
                     fi
                 else
-                    VAvisoRegistrado "$user no pertenece a usuarios" 9 
+                    VAvisoRegistrado "Formulario no lleno o los requisitos de contraseña no coinciden" 9
                 fi
             else
-                VAvisoRegistrado "Formulario no lleno o los requisitos de contraseña no coinciden" 9
+                VAvisoRegistrado "No se puede modificar la contraseña con root" 9
             fi
         else
             ciclo=false

@@ -3,7 +3,7 @@
 declare -a gruposQueDeberianEstar=(ADMINISTRADORES MEDICOS)
 
 agregarUsuario() {
-
+    #necesita root
     # $1 : nombre del usuario
     # $2 : nombre del grupo
 
@@ -22,7 +22,7 @@ agregarUsuario() {
 }
 
 borrarUsuario() {
-
+    #necesita root
     # $1 : nombre del usuario
 
     if [ $EUID -eq 0 ]; 

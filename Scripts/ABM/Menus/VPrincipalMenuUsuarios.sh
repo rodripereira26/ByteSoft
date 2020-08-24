@@ -1,12 +1,14 @@
 #!/bin/bash
 
-. "ABM/Menus/VAvisoRegistrado.sh"
-. "ABM/Menus/VEligeGrupo.sh"
-. "ABM/Menus/VEliminarUsuario.sh"
-. "ABM/Menus/VAgregarUsuario.sh"
-. "ABM/Menus/VModificarUsuario.sh"
-. "InterfazGrafica/Grafica/disenoVentana.sh" 
-. "InterfazGrafica/Logica/logicaVentana.sh" 
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+
+. "/Scripts/ABM/Logica/Usuarios.sh"
+
+. "/Scripts/ABM/Menus/VAvisoRegistrado.sh"
+. "/Scripts/ABM/Menus/VEligeGrupo.sh"
+. "/Scripts/ABM/Menus/VEliminarUsuario.sh"
+. "/Scripts/ABM/Menus/VAgregarUsuario.sh"
+. "/Scripts/ABM/Menus/VModificarUsuario.sh"
 
 VMenuUsuarios() {
 

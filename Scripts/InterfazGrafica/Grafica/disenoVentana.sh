@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "InterfazGrafica/Logica/logicaVentana.sh"
+. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh"
 
 declare -i colorBgDefecto=7
 

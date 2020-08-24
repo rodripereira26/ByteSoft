@@ -1,8 +1,10 @@
 #!/bin/bash
 
-. "/Scripts/Computos/Logica/Respaldar.sh"
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana"
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh"
 
+. "/Scripts/Computos/Logica/Respaldar.sh"
+
+#necesita root
 
 VRespaldarBD() {
 

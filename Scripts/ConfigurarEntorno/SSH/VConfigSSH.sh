@@ -1,10 +1,12 @@
 #!/bin/bash
 
-. "InterfazGrafica/Grafica/disenoVentana.sh" 
-. "InterfazGrafica/Logica/logicaVentana.sh" 
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
 
 
 pantallaSSH() {
+    local usuarios=""
+    local root="no"
+    local continuar=true
 
     colorBgDefecto=0
     iniciarPantallaNueva
@@ -17,55 +19,48 @@ pantallaSSH() {
     dibujarEntradaTxt 36 12 31 false
 
     dibujarTxt "Permitir usuarios root" 40 16 0 7
-    dibujarSwitch 36 17 30 3 $estadoRoot
+    dibujarSwitch 36 17 30 3 $root
 
     dibujarBoton "Configurar" 27 24 50 3
 
-    local usuarios=""
-    local root="yes"
-    local continuar=true
+    while $continuar; 
+    do
+        siguientePos
 
-        while $continuar; 
-        do
-            siguientePos
+        case $posDeEsteElemento in
 
-            case $posDeEsteElemento in
+            "0")
+                usuarios=$respuestaGestor
+                ;;
 
-                "0")
-                    usuarios=$respuestaGestor
-                    ;;
-
-                "1")
-                    if [ $codigoRespuesta = "5" ]; 
-                    then
-
-                        if $estadoRoot; then
-                            root="no"
-                        else
-                            root="yes"
-                        fi
-                        
-                        actualizarEstadoServicios
+            "1")
+                if [ $codigoRespuesta = "5" ]; 
+                then                    
+                    if [[ "$root" == "yes" ]]; then
+                        root="no"
+                    else
+                        root="yes"
                     fi
+                fi
+                ;;
 
-                    ;;
+                "2") 
+                if $respuestaGestor;
+                then
+                    configurarSSH $root
+                    mensajeError "El puerto por defecto será el 2022" 2 34 33 5 5 2 2
+                    continuar=false
+                fi   
+                ;;  
 
-                 "2") 
-                    if $respuestaGestor;
-                    then
-                        configurarSSH
-                        mensajeError "El puerto por defecto será el 2022" 2 34 33 5 5 2 2
-                        continuar=false
-                    fi   
-                    ;;  
-
-            esac
-        done
+        esac
+    done
 
 }
 
 configurarSSH () {
-
+    # $1 : #root
+    root=$1
     if [ -z $usuarios ]; 
     then
         cp -a /etc/ssh/sshd_config /var/bytesoft/.sshd_config
@@ -83,15 +78,3 @@ configurarSSH () {
     fi
 
 }
-
-actualizarEstadoServicios(){
-
-    estadoRoot=false
-
-    if [ "$root" = "yes" ];
-    then
-        estadoRoot=true
-    fi
-
-}
-

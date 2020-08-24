@@ -1,7 +1,6 @@
 #!/bin/bash
 
-. "InterfazGrafica/Grafica/disenoVentana.sh" 
-. "InterfazGrafica/Logica/logicaVentana.sh" 
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
 
 VElegirGrupo(){
     iniciarPantallaNueva

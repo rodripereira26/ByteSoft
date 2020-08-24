@@ -25,7 +25,7 @@ crearCarpetasIniciales() {
 }
 
 variablesEntorno(){
-
+    #necesita root
     if [ "$(grep PATHB /etc/environment | wc -l)" -eq "0"  ] # Verifico que las variables no hayan sido creadas
     then
         echo "export PATHB=/var/bytesoft/backupsBD/">>/etc/environment
@@ -33,6 +33,8 @@ variablesEntorno(){
         echo "export PATHLOG=/var/bytesoft/backupsLog/">>/etc/environment
         echo "export CANTB=0">>/etc/environment
         echo "export instalacion=true">>/etc/environment
+     
+
         source /etc/environment # Actualizo el valor de las variables
         echo 0
     else

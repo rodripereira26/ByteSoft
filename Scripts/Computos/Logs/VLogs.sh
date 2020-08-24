@@ -1,7 +1,6 @@
 #!/bin/bash
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
 
 MenuLogs() {
 
@@ -56,12 +55,14 @@ ejecutarLogs() {
                 ;;
 
             "2")
+                #necesita root
                 tput sgr0
                 clear
                 tail /var/log/messages | less
                 ;;
                 
             "3")
+                #necesita root
                 tput sgr0
                 clear
                 tail /var/log/secure | less
@@ -74,12 +75,14 @@ ejecutarLogs() {
 				;;
 
 			"5")
+                
                 tput sgr0
 				clear
 				last | less
 				;;
 
 			"6")
+                #necesita root
                 tput sgr0
 				clear
 				lastb | less

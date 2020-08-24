@@ -1,10 +1,11 @@
 #!/bin/bash
 
 respaldarBD() {
-
+	# respalda la BD
+	#necesita root
 	# $1 : Usuario de MySQL
 	# $2 : Ruta destino
-
+	
 	local FECHA=$(date +"%d-%m-%y_%H-%M")
 	local USER=$1
 	local RUTA
@@ -31,7 +32,8 @@ respaldarBD() {
 }
 
 respaldarDirectorios() {
-	
+	#depende del caso ->
+	#necesita root
    	# $1 Ruta Destino
 
 	local FECHA=$(date +"%d-%m-%y_%H-%M")

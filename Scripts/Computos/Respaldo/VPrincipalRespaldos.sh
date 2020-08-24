@@ -1,13 +1,11 @@
 #!/bin/bash
 
-#
-# Obligatorio ejecutar con root
-#
-
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+
 . "/Scripts/Computos/Respaldo/VRespaldarBD.sh"
 . "/Scripts/Computos/Respaldo/VRespaldarDirectorios.sh"
 
+#necesita root
 PrincipalRespaldos() {
 
     iniciarPantallaNueva

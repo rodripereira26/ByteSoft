@@ -1,7 +1,10 @@
 #!/bin/bash
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-. "/Scripts/InterfazGrafica/Logica/logicaVentana.sh" 
+
+#
+# solo root
+#
 
 VConexiones(){
     iniciarPantallaNueva
@@ -19,7 +22,7 @@ VConexiones(){
 
     while $continuar; 
     do
-        actualizarEstadoServicios
+        actualizarEstadoServiciosSSHyMYSQL
         siguientePos
 
         case $posDeEsteElemento in 
@@ -35,7 +38,7 @@ VConexiones(){
                         tput cup 0 0
                         service mysqld start             
                     fi
-                    actualizarEstadoServicios
+                    actualizarEstadoServiciosSSHyMYSQL
                 fi
                 ;;
 
@@ -50,7 +53,7 @@ VConexiones(){
                     else
                         service sshd start
                     fi
-                    actualizarEstadoServicios
+                    actualizarEstadoServiciosSSHyMYSQL
                 fi
                 ;;
 
@@ -66,12 +69,12 @@ VConexiones(){
 
 ejecutarVConexiones() {
 
-    actualizarEstadoServicios
+    actualizarEstadoServiciosSSHyMYSQL
     VConexiones
 
 }
 
-actualizarEstadoServicios() {
+actualizarEstadoServiciosSSHyMYSQL() {
 
     estadoMYSQL=false
     estadoSSH=false

@@ -1,7 +1,11 @@
 #!/bin/bash
 
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh"
+
 . "/Scripts/Computos/Logica/Respaldar.sh"
 . "/Scripts/ABM/Menus/VAvisoRegistrado.sh"
+
+#necesita root depende del caso de la direccion
 
 VRespaldarDirectorios() {
 

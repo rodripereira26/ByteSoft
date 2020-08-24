@@ -12,6 +12,8 @@ crontabConf() {
 		echo "[mysqldump]">>$respaldo 	
 		echo "user=root">>$respaldo # cambiar usuario
 		echo "password=Root123;">>$respaldo # cambiar contraseña
+		
+	
 
 		chmod 600 $respaldo
 		mkdir -p /var/bytesoft/backupsLog/{$(date +%a),$(date +%a --date='+1 day'),$(date +%a --date='+2 day'),$(date +%a --date='+3 day'),$(date +%a --date='+4 day'),$(date +%a --date='+5 day'),$(date +%a --date='+6 day'),$(date +%a --date='+7 day')}
@@ -82,8 +84,8 @@ firewallConf() {
 	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
 
 	# Reinicio el servicio
-	service iptables save > /dev/null 2>&1
-	service iptables restart > /dev/null 2>&1
+	service iptables save
+	service iptables restart
 
 }
 
@@ -97,8 +99,9 @@ desinstalar() {
 	iptables -P INPUT ACCEPT
 	iptables -P OUTPUT ACCEPT
 	iptables -P FORWARD ACCEPT
-	service iptables save > /dev/null 2>&1
-	service iptables restart > /dev/null 2>&1
+	
+	service iptables save 
+	service iptables restart
 
 
 	# Restauro SSH 

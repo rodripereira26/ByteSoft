@@ -1,10 +1,15 @@
 #!/bin/bash
 
-. "ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
-. "InterfazGrafica/Grafica/disenoVentana.sh" 
-. "InterfazGrafica/Logica/logicaVentana.sh" 
-. "ConfigurarEntorno/Logica/funciones.sh" 
-. "ConfigurarEntorno/SSH/SSH_config.sh" 
+#
+#
+# root obligatorio 
+#
+#
+. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+
+. "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
+. "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
+. "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
 
 preguntaInstalacion() {
 
