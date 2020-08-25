@@ -3,8 +3,8 @@
 #
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
-#
 # bc es necesario instalar
+#
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
 

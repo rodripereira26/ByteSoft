@@ -11,11 +11,16 @@ agregarUsuario() {
 
     if [ $EUID -eq 0 ]; 
     then
-        verificarExistenciaDeGrupos
-        useradd -m -d "$dirDeTrabajo" -g "$2" -s /bin/bash $1
-        chown $1:$2 "$dirDeTrabajo"
-        chmod 755 -R "$dirDeTrabajo"
-        echo 0 # Se ejecutó
+        if [ -e "/home/USUARIOS" ];
+        then 
+            verificarExistenciaDeGrupos
+            useradd -m -d "$dirDeTrabajo" -g "$2" -s /bin/bash $1
+            chown $1:$2 "$dirDeTrabajo"
+            chmod 755 -R "$dirDeTrabajo"
+            echo 0 # Se ejecutó
+        else
+            echo 2 # no se configuro el entorno, no se pudo crear el usuario
+        fi
     else
         echo 1 # No es root
     fi

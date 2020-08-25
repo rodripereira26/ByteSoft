@@ -86,15 +86,20 @@ VMenuAgregarUsuario() {
                                 then
                                     echo -e "$pw\n$pw" | passwd $user
                                     pw=""
-                                    VAvisoRegistrado "El usuario ha sido ingresado correctamente" 10 ##############
+                                    user=""
+                                    VAvisoRegistrado "El usuario ha sido ingresado correctamente" 10
 
                                 elif [ $resp -eq 1 ]; 
-                                    then
-                                    VAvisoRegistrado "Ha ocurrido un problema con los permisos" 9 ##############
+                                then
+                                    VAvisoRegistrado "Ha ocurrido un problema con los permisos" 9 
+                                elif [ $resp -eq 2 ];
+                                then
+                                    VAvisoRegistrado "No se ha configurado el entorno, no puede agregar usuarios " 9
                                 fi
                                 #continuar=false ######posible error
                             fi
-
+                        else
+                            VAvisoRegistrado "Grupo no seleccionado" 9
                         fi
                     fi
                 fi
