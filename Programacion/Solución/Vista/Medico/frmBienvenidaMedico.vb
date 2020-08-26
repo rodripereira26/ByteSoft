@@ -1,9 +1,11 @@
-﻿Public Class frmBienvenidaMedico
+﻿Imports Logica
+Public Class frmBienvenidaMedico
 
     Dim drag As Boolean
     Dim mousex, mousey As Integer
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
         redondear(Panel1)
         redondear(Panel2)

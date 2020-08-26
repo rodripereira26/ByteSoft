@@ -4,7 +4,7 @@ Public Class frmChat
 
     Private contChat As New ControladorChat
     Private firstUpdate As Boolean = False
-
+    Private contPac As New ControladorPaciente
     Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Datos_Temporales.rol = "P" Then
             Me.CenterToScreen()
@@ -19,6 +19,8 @@ Public Class frmChat
             pnlAcciones.Location = New Point((pnlWrapChat.Width - pnlAcciones.Width) \ 2, pnlAcciones.Location.Y)
             lblGeneral.Visible = False
             lblFinalizados.Visible = False
+            btnFicha.Visible = False
+            pbFicha.Visible = False
             'Me.BackColor = Color.WhiteSmoke
             'pnlWrapChat.BackColor = Color.White
             'Chat.BackColor = Color.White
@@ -298,7 +300,43 @@ Public Class frmChat
     End Sub
 
     Private Sub btnVerSintomas_Click(sender As Object, e As EventArgs) Handles btnVerSintomas.Click
-        Dim uc As New UCDiagnostico
+
+        'UcDiagnostico1.Visible = True
+
+    End Sub
+
+    Private Sub btnFicha_Click(sender As Object, e As EventArgs) Handles btnFicha.Click
+
+        If UcFicha1.Visible = False Then
+
+            UcFicha1.Visible = True
+            Dim dt As DataTable = contPac.getDatosPaciente(Datos_Temporales.pacienteSelecionado)
+
+            For Each datarow As DataRow In dt.Rows
+                UcFicha1.lblNom.Text += " " & datarow.Item(0) & " " & datarow.Item(2) & " " & datarow.Item(3)
+                Dim fechaNacimiento As Date = datarow.Item(4)
+                Dim edad As Integer = Date.Now.Year - fechaNacimiento.Year
+                UcFicha1.lblEdad.Text += " " & edad.ToString
+                UcFicha1.lblSexo.Text += " " & datarow.Item(5)
+                UcFicha1.lblMail.Text += " " & datarow.Item(6)
+            Next
+            UcFicha1.dgvPatCron.DataSource = contPac.getPatologiasCronicas(Datos_Temporales.pacienteSelecionado)
+            UcFicha1.dgvHistorial.DataSource = contPac.getHistorialConsultas(Datos_Temporales.pacienteSelecionado)
+        Else
+            UcFicha1.Visible = False
+            UcFicha1.lblEdad.Text = "Edad:"
+            UcFicha1.lblMail.Text = "Mail:"
+            UcFicha1.lblSexo.Text = "Sexo:"
+            UcFicha1.lblNom.Text = "Nombre completo:"
+
+        End If
+
+
+
+
+    End Sub
+
+    Private Sub pnlWrapChat_Paint(sender As Object, e As PaintEventArgs) Handles pnlWrapChat.Paint
 
     End Sub
 End Class

@@ -119,4 +119,13 @@ Public Class ModeloPaciente
     Public Function traerPacientes() As DataTable
         Return ModeloConsultas.Singleton.ConsultaTabla("SELECT cedula FROM paciente WHERE verificacion= ")
     End Function
+    Public Function getDatosPaciente(cedula As String) As DataTable
+        Return ModeloConsultas.Singleton.ConsultaTabla("SELECT pNom,sNom,pApe,sApe,fecNac,sexo,correo from usuario u, paciente p WHERE u.cedula=p.cedula AND u.cedula= " & cedula)
+    End Function
+    Public Function getPatologiasCronicas(cedula As String) As DataTable
+        Return ModeloConsultas.Singleton.ConsultaTabla("SELECT patologia FROM pacientePatologia WHERE cedula = " & cedula)
+    End Function
+    Public Function getHistorialConsultas(cedula As String) As DataTable
+        Return ModeloConsultas.Singleton.ConsultaTabla("SELECT p.nombre,date_format(pod.fecha," & "'%d / %m / %y')" & "FROM paciente_obtiene_diagnostico pod,patologia p WHERE pod.idPatologia=p.idPatologia AND pod.cedulaPaciente =" & cedula)
+    End Function
 End Class

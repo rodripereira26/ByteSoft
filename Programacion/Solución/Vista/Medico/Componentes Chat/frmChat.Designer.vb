@@ -23,14 +23,15 @@ Partial Class frmChat
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmChat))
         Me.Chat = New System.Windows.Forms.FlowLayoutPanel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -44,22 +45,25 @@ Partial Class frmChat
         Me.btnFinalizar = New MaterialSkin.Controls.MaterialFlatButton()
         Me.divider = New MetroSet_UI.Controls.MetroSetDivider()
         Me.pnlWrapChat = New System.Windows.Forms.Panel()
+        Me.pbFicha = New System.Windows.Forms.PictureBox()
+        Me.btnFicha = New MaterialSkin.Controls.MaterialFlatButton()
         Me.pnlAcciones = New System.Windows.Forms.Panel()
+        Me.pbVerSintomas = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.pbFinalizar = New System.Windows.Forms.PictureBox()
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.txtMensaje = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.lblGeneral = New System.Windows.Forms.Label()
-        Me.lblFinalizados = New System.Windows.Forms.Label()
-        Me.pbVerSintomas = New System.Windows.Forms.PictureBox()
-        Me.pbFinalizar = New System.Windows.Forms.PictureBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.pbEnviar = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.UcDiagnostico1 = New Vista.UCDiagnostico()
+        Me.lblGeneral = New System.Windows.Forms.Label()
+        Me.lblFinalizados = New System.Windows.Forms.Label()
+        Me.UcFicha1 = New Vista.UCFicha()
         CType(Me.dgvMisChats, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvFinalizados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlYo.SuspendLayout()
         Me.pnlWrapChat.SuspendLayout()
+        CType(Me.pbFicha, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlAcciones.SuspendLayout()
         CType(Me.pbVerSintomas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbFinalizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,55 +133,55 @@ Partial Class frmChat
         '
         Me.dgvMisChats.AllowUserToAddRows = False
         Me.dgvMisChats.AllowUserToDeleteRows = False
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle17.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvMisChats.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvMisChats.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvMisChats.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvMisChats.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvMisChats.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.dgvMisChats.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvMisChats.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvMisChats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle18.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMisChats.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMisChats.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvMisChats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMisChats.ColumnHeadersVisible = False
         Me.dgvMisChats.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle19.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle19.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMisChats.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMisChats.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvMisChats.EnableHeadersVisualStyles = False
         Me.dgvMisChats.Location = New System.Drawing.Point(1, 100)
         Me.dgvMisChats.Margin = New System.Windows.Forms.Padding(0)
         Me.dgvMisChats.MultiSelect = False
         Me.dgvMisChats.Name = "dgvMisChats"
         Me.dgvMisChats.ReadOnly = True
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMisChats.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMisChats.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvMisChats.RowHeadersVisible = False
         Me.dgvMisChats.RowHeadersWidth = 51
         Me.dgvMisChats.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -189,55 +193,55 @@ Partial Class frmChat
         '
         Me.dgvFinalizados.AllowUserToAddRows = False
         Me.dgvFinalizados.AllowUserToDeleteRows = False
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle21.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvFinalizados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvFinalizados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvFinalizados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvFinalizados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvFinalizados.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.dgvFinalizados.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvFinalizados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvFinalizados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle22.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvFinalizados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(4, 30, 4, 20)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFinalizados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvFinalizados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvFinalizados.ColumnHeadersVisible = False
         Me.dgvFinalizados.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle23.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvFinalizados.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFinalizados.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvFinalizados.EnableHeadersVisualStyles = False
         Me.dgvFinalizados.Location = New System.Drawing.Point(1, 452)
         Me.dgvFinalizados.Margin = New System.Windows.Forms.Padding(0)
         Me.dgvFinalizados.MultiSelect = False
         Me.dgvFinalizados.Name = "dgvFinalizados"
         Me.dgvFinalizados.ReadOnly = True
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvFinalizados.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvFinalizados.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvFinalizados.RowHeadersVisible = False
         Me.dgvFinalizados.RowHeadersWidth = 51
         Me.dgvFinalizados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -271,7 +275,7 @@ Partial Class frmChat
         Me.btnFinalizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnFinalizar.Depth = 0
         Me.btnFinalizar.Icon = Nothing
-        Me.btnFinalizar.Location = New System.Drawing.Point(585, 77)
+        Me.btnFinalizar.Location = New System.Drawing.Point(616, 77)
         Me.btnFinalizar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnFinalizar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnFinalizar.Name = "btnFinalizar"
@@ -298,6 +302,8 @@ Partial Class frmChat
         'pnlWrapChat
         '
         Me.pnlWrapChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlWrapChat.Controls.Add(Me.pbFicha)
+        Me.pnlWrapChat.Controls.Add(Me.btnFicha)
         Me.pnlWrapChat.Controls.Add(Me.pnlAcciones)
         Me.pnlWrapChat.Controls.Add(Me.btnCerrar)
         Me.pnlWrapChat.Controls.Add(Me.btnFinalizar)
@@ -317,15 +323,52 @@ Partial Class frmChat
         Me.pnlWrapChat.Size = New System.Drawing.Size(766, 656)
         Me.pnlWrapChat.TabIndex = 154
         '
+        'pbFicha
+        '
+        Me.pbFicha.Image = CType(resources.GetObject("pbFicha.Image"), System.Drawing.Image)
+        Me.pbFicha.Location = New System.Drawing.Point(325, 77)
+        Me.pbFicha.Name = "pbFicha"
+        Me.pbFicha.Size = New System.Drawing.Size(30, 30)
+        Me.pbFicha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbFicha.TabIndex = 16
+        Me.pbFicha.TabStop = False
+        '
+        'btnFicha
+        '
+        Me.btnFicha.AutoSize = True
+        Me.btnFicha.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnFicha.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnFicha.Depth = 0
+        Me.btnFicha.Icon = Nothing
+        Me.btnFicha.Location = New System.Drawing.Point(362, 77)
+        Me.btnFicha.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnFicha.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnFicha.Name = "btnFicha"
+        Me.btnFicha.Primary = False
+        Me.btnFicha.Size = New System.Drawing.Size(184, 36)
+        Me.btnFicha.TabIndex = 16
+        Me.btnFicha.Text = "ver ficha del paciente"
+        Me.btnFicha.UseVisualStyleBackColor = True
+        '
         'pnlAcciones
         '
         Me.pnlAcciones.AutoSize = True
         Me.pnlAcciones.Controls.Add(Me.btnVerSintomas)
         Me.pnlAcciones.Controls.Add(Me.pbVerSintomas)
-        Me.pnlAcciones.Location = New System.Drawing.Point(67, 71)
+        Me.pnlAcciones.Location = New System.Drawing.Point(32, 71)
         Me.pnlAcciones.Name = "pnlAcciones"
         Me.pnlAcciones.Size = New System.Drawing.Size(267, 48)
         Me.pnlAcciones.TabIndex = 156
+        '
+        'pbVerSintomas
+        '
+        Me.pbVerSintomas.Image = CType(resources.GetObject("pbVerSintomas.Image"), System.Drawing.Image)
+        Me.pbVerSintomas.Location = New System.Drawing.Point(3, 9)
+        Me.pbVerSintomas.Name = "pbVerSintomas"
+        Me.pbVerSintomas.Size = New System.Drawing.Size(30, 30)
+        Me.pbVerSintomas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbVerSintomas.TabIndex = 15
+        Me.pbVerSintomas.TabStop = False
         '
         'btnCerrar
         '
@@ -339,6 +382,16 @@ Partial Class frmChat
         Me.btnCerrar.Text = "X"
         Me.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnCerrar.UseVisualStyleBackColor = True
+        '
+        'pbFinalizar
+        '
+        Me.pbFinalizar.Image = CType(resources.GetObject("pbFinalizar.Image"), System.Drawing.Image)
+        Me.pbFinalizar.Location = New System.Drawing.Point(575, 79)
+        Me.pbFinalizar.Name = "pbFinalizar"
+        Me.pbFinalizar.Size = New System.Drawing.Size(34, 28)
+        Me.pbFinalizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbFinalizar.TabIndex = 10
+        Me.pbFinalizar.TabStop = False
         '
         'btnMinimizar
         '
@@ -370,6 +423,38 @@ Partial Class frmChat
         Me.txtMensaje.TabStop = False
         Me.txtMensaje.UseSystemPasswordChar = False
         '
+        'btnAtras
+        '
+        Me.btnAtras.BackgroundImage = CType(resources.GetObject("btnAtras.BackgroundImage"), System.Drawing.Image)
+        Me.btnAtras.FlatAppearance.BorderSize = 0
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Location = New System.Drawing.Point(13, 18)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
+        Me.btnAtras.TabIndex = 7
+        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAtras.UseVisualStyleBackColor = True
+        '
+        'pbEnviar
+        '
+        Me.pbEnviar.BackColor = System.Drawing.Color.White
+        Me.pbEnviar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbEnviar.Image = CType(resources.GetObject("pbEnviar.Image"), System.Drawing.Image)
+        Me.pbEnviar.Location = New System.Drawing.Point(658, 602)
+        Me.pbEnviar.Name = "pbEnviar"
+        Me.pbEnviar.Size = New System.Drawing.Size(41, 42)
+        Me.pbEnviar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbEnviar.TabIndex = 9
+        Me.pbEnviar.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(90, 13)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 42)
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
         'lblGeneral
         '
         Me.lblGeneral.BackColor = System.Drawing.Color.WhiteSmoke
@@ -395,64 +480,15 @@ Partial Class frmChat
         Me.lblFinalizados.Text = "FINALIZADOS"
         Me.lblFinalizados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'pbVerSintomas
+        'UcFicha1
         '
-        Me.pbVerSintomas.Image = Global.Vista.My.Resources.Resources.icons8_test_results_30
-        Me.pbVerSintomas.Location = New System.Drawing.Point(3, 9)
-        Me.pbVerSintomas.Name = "pbVerSintomas"
-        Me.pbVerSintomas.Size = New System.Drawing.Size(30, 30)
-        Me.pbVerSintomas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.pbVerSintomas.TabIndex = 15
-        Me.pbVerSintomas.TabStop = False
-        '
-        'pbFinalizar
-        '
-        Me.pbFinalizar.Image = Global.Vista.My.Resources.Resources.icons8_delete_48px_11
-        Me.pbFinalizar.Location = New System.Drawing.Point(544, 80)
-        Me.pbFinalizar.Name = "pbFinalizar"
-        Me.pbFinalizar.Size = New System.Drawing.Size(34, 28)
-        Me.pbFinalizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbFinalizar.TabIndex = 10
-        Me.pbFinalizar.TabStop = False
-        '
-        'btnAtras
-        '
-        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
-        Me.btnAtras.FlatAppearance.BorderSize = 0
-        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAtras.Location = New System.Drawing.Point(13, 18)
-        Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
-        Me.btnAtras.TabIndex = 7
-        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnAtras.UseVisualStyleBackColor = True
-        '
-        'pbEnviar
-        '
-        Me.pbEnviar.BackColor = System.Drawing.Color.White
-        Me.pbEnviar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pbEnviar.Image = Global.Vista.My.Resources.Resources.icons8_email_send_48
-        Me.pbEnviar.Location = New System.Drawing.Point(658, 602)
-        Me.pbEnviar.Name = "pbEnviar"
-        Me.pbEnviar.Size = New System.Drawing.Size(41, 42)
-        Me.pbEnviar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbEnviar.TabIndex = 9
-        Me.pbEnviar.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(90, 13)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 42)
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
-        '
-        'UcDiagnostico1
-        '
-        Me.UcDiagnostico1.Location = New System.Drawing.Point(315, 117)
-        Me.UcDiagnostico1.Name = "UcDiagnostico1"
-        Me.UcDiagnostico1.Size = New System.Drawing.Size(417, 516)
-        Me.UcDiagnostico1.TabIndex = 157
+        Me.UcFicha1.BackColor = System.Drawing.Color.White
+        Me.UcFicha1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UcFicha1.Location = New System.Drawing.Point(35, 116)
+        Me.UcFicha1.Name = "UcFicha1"
+        Me.UcFicha1.Size = New System.Drawing.Size(942, 386)
+        Me.UcFicha1.TabIndex = 1
+        Me.UcFicha1.Visible = False
         '
         'frmChat
         '
@@ -460,7 +496,7 @@ Partial Class frmChat
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1014, 656)
-        Me.Controls.Add(Me.UcDiagnostico1)
+        Me.Controls.Add(Me.UcFicha1)
         Me.Controls.Add(Me.lblFinalizados)
         Me.Controls.Add(Me.lblGeneral)
         Me.Controls.Add(Me.pnlYo)
@@ -476,6 +512,7 @@ Partial Class frmChat
         Me.pnlYo.ResumeLayout(False)
         Me.pnlWrapChat.ResumeLayout(False)
         Me.pnlWrapChat.PerformLayout()
+        CType(Me.pbFicha, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlAcciones.ResumeLayout(False)
         Me.pnlAcciones.PerformLayout()
         CType(Me.pbVerSintomas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -509,5 +546,7 @@ Partial Class frmChat
     Friend WithEvents pnlAcciones As Panel
     Friend WithEvents lblGeneral As Label
     Friend WithEvents lblFinalizados As Label
-    Friend WithEvents UcDiagnostico1 As UCDiagnostico
+    Friend WithEvents btnFicha As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents pbFicha As PictureBox
+    Friend WithEvents UcFicha1 As UCFicha
 End Class

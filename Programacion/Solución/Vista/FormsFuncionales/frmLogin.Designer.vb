@@ -25,26 +25,26 @@ Partial Class frmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.txtUsr = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MaterialCheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.pnlTopBar = New System.Windows.Forms.Panel()
         Me.lblCerrar = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblCrearCuentaPac = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.MaterialCheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,6 +73,22 @@ Partial Class frmLogin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(480, 505)
         Me.Panel1.TabIndex = 23
+        '
+        'MaterialCheckBox1
+        '
+        Me.MaterialCheckBox1.AutoSize = True
+        Me.MaterialCheckBox1.Depth = 0
+        Me.MaterialCheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialCheckBox1.Location = New System.Drawing.Point(186, 359)
+        Me.MaterialCheckBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialCheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialCheckBox1.Name = "MaterialCheckBox1"
+        Me.MaterialCheckBox1.Ripple = True
+        Me.MaterialCheckBox1.Size = New System.Drawing.Size(135, 30)
+        Me.MaterialCheckBox1.TabIndex = 21
+        Me.MaterialCheckBox1.Text = "Recordar usuario"
+        Me.MaterialCheckBox1.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -108,26 +124,6 @@ Partial Class frmLogin
         Me.txtPass.TabIndex = 2
         Me.txtPass.UseSystemPasswordChar = True
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(191, 416)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(130, 58)
-        Me.PictureBox4.TabIndex = 14
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.medd
-        Me.PictureBox1.Location = New System.Drawing.Point(139, 157)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(234, 73)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Roboto Black", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -138,16 +134,6 @@ Partial Class frmLogin
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inicio de Sesión"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PictureBox2.Image = Global.Vista.My.Resources.Resources.medd
-        Me.PictureBox2.Location = New System.Drawing.Point(139, 264)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(234, 73)
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
         '
         'pnlTopBar
         '
@@ -193,26 +179,6 @@ Partial Class frmLogin
         Me.lblCrearCuentaPac.TabIndex = 28
         Me.lblCrearCuentaPac.Text = "Solicitar cuenta"
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Vista.My.Resources.Resources.logo_byw_v3
-        Me.PictureBox5.Location = New System.Drawing.Point(587, 120)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(260, 260)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 27
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(389, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(195, 502)
-        Me.PictureBox3.TabIndex = 22
-        Me.PictureBox3.TabStop = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -224,21 +190,55 @@ Partial Class frmLogin
         Me.Label5.TabIndex = 29
         Me.Label5.Text = "¿Es afiliado?"
         '
-        'MaterialCheckBox1
+        'PictureBox5
         '
-        Me.MaterialCheckBox1.AutoSize = True
-        Me.MaterialCheckBox1.Depth = 0
-        Me.MaterialCheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialCheckBox1.Location = New System.Drawing.Point(186, 359)
-        Me.MaterialCheckBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialCheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialCheckBox1.Name = "MaterialCheckBox1"
-        Me.MaterialCheckBox1.Ripple = True
-        Me.MaterialCheckBox1.Size = New System.Drawing.Size(135, 30)
-        Me.MaterialCheckBox1.TabIndex = 21
-        Me.MaterialCheckBox1.Text = "Recordar usuario"
-        Me.MaterialCheckBox1.UseVisualStyleBackColor = True
+        Me.PictureBox5.Image = Global.Vista.My.Resources.Resources.logo_byw_v3
+        Me.PictureBox5.Location = New System.Drawing.Point(587, 120)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(260, 260)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 27
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(191, 416)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(130, 58)
+        Me.PictureBox4.TabIndex = 14
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.medd
+        Me.PictureBox1.Location = New System.Drawing.Point(139, 157)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(234, 73)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PictureBox2.Image = Global.Vista.My.Resources.Resources.medd
+        Me.PictureBox2.Location = New System.Drawing.Point(139, 264)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(234, 73)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(389, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(195, 502)
+        Me.PictureBox3.TabIndex = 22
+        Me.PictureBox3.TabStop = False
         '
         'frmLogin
         '
@@ -260,10 +260,10 @@ Partial Class frmLogin
         Me.Text = "|"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

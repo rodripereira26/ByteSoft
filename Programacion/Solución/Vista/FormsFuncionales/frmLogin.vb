@@ -4,6 +4,7 @@ Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+
         Label1.Select()
         Principal.Singleton.roundedCorners(Me)
 

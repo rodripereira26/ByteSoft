@@ -60,4 +60,6 @@ Public Class frmObtenerDiagnostico
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
         Me.WindowState = WindowState.Minimized
     End Sub
+
+
 End Class

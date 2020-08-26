@@ -40,6 +40,7 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\b
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Release\Logica.xml
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbprojAssemblyReference.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.Resources.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbproj.GenerateResource.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbproj.CoreCompileInputs.cache
@@ -47,4 +48,3 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\o
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.dll
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.xml
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.pdb
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbprojAssemblyReference.cache

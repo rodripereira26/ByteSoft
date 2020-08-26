@@ -11,20 +11,6 @@ C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solució
 C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Logica\obj\Release\Logica.dll
 C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Logica\obj\Release\Logica.xml
 C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\Logica\obj\Release\Logica.pdb
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Logica.dll
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Logica.pdb
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Logica.xml
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Acceso_a_Datos.dll
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Acceso_a_Datos.pdb
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Acceso_a_Datos.xml
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbprojAssemblyReference.cache
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.Resources.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbproj.GenerateResource.cache
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbproj.CoreCompileInputs.cache
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbproj.CopyComplete
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.dll
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.xml
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.pdb
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\bin\Release\Logica.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\bin\Release\Logica.pdb
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\bin\Release\Logica.xml
@@ -39,3 +25,17 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Rele
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Release\Logica.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Release\Logica.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Release\Logica.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Logica.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Logica.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Logica.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Acceso_a_Datos.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Acceso_a_Datos.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\bin\Release\Acceso_a_Datos.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbprojAssemblyReference.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.Resources.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbproj.GenerateResource.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbproj.CoreCompileInputs.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.vbproj.CopyComplete
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Logica\obj\Release\Logica.pdb
