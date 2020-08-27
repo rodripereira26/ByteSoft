@@ -23,9 +23,10 @@ Partial Class frmRegistrarSintoma
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.panelTitulo = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnAtras = New System.Windows.Forms.Button()
+        Me.lblRegistrarSintoma = New System.Windows.Forms.Label()
+        Me.lblMinimizar = New System.Windows.Forms.Label()
+        Me.lblCerrar = New System.Windows.Forms.Label()
         Me.Panel1__ = New System.Windows.Forms.Panel()
         Me.Label1__ = New System.Windows.Forms.Label()
         Me.Panel9__ = New System.Windows.Forms.Panel()
@@ -36,8 +37,7 @@ Partial Class frmRegistrarSintoma
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.txtNomSintoma = New System.Windows.Forms.TextBox()
-        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.btnAtras = New System.Windows.Forms.Button()
+        Me.mrbtnRegistrarSintoma = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.panelTitulo.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,49 +45,67 @@ Partial Class frmRegistrarSintoma
         '
         Me.panelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.panelTitulo.Controls.Add(Me.btnAtras)
-        Me.panelTitulo.Controls.Add(Me.Label10)
-        Me.panelTitulo.Controls.Add(Me.Label12)
-        Me.panelTitulo.Controls.Add(Me.Label13)
-        Me.panelTitulo.Location = New System.Drawing.Point(-1, 0)
+        Me.panelTitulo.Controls.Add(Me.lblRegistrarSintoma)
+        Me.panelTitulo.Controls.Add(Me.lblMinimizar)
+        Me.panelTitulo.Controls.Add(Me.lblCerrar)
+        Me.panelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.panelTitulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelTitulo.Name = "panelTitulo"
-        Me.panelTitulo.Size = New System.Drawing.Size(701, 77)
+        Me.panelTitulo.Size = New System.Drawing.Size(935, 95)
         Me.panelTitulo.TabIndex = 92
         '
-        'Label10
+        'btnAtras
         '
-        Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label10.Font = New System.Drawing.Font("Roboto Light", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(186, 16)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(341, 45)
-        Me.Label10.TabIndex = 27
-        Me.Label10.Text = "REGISTRAR SÍNTOMA"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
+        Me.btnAtras.FlatAppearance.BorderSize = 0
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
+        Me.btnAtras.Location = New System.Drawing.Point(49, 33)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(45, 41)
+        Me.btnAtras.TabIndex = 30
+        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAtras.UseVisualStyleBackColor = True
         '
-        'Label12
+        'lblRegistrarSintoma
         '
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(628, -6)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 35)
-        Me.Label12.TabIndex = 24
-        Me.Label12.Text = "_"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblRegistrarSintoma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblRegistrarSintoma.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegistrarSintoma.ForeColor = System.Drawing.Color.White
+        Me.lblRegistrarSintoma.Location = New System.Drawing.Point(248, 20)
+        Me.lblRegistrarSintoma.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRegistrarSintoma.Name = "lblRegistrarSintoma"
+        Me.lblRegistrarSintoma.Size = New System.Drawing.Size(455, 55)
+        Me.lblRegistrarSintoma.TabIndex = 27
+        Me.lblRegistrarSintoma.Text = "REGISTRAR SÍNTOMA"
+        Me.lblRegistrarSintoma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label13
+        'lblMinimizar
         '
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(658, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(43, 35)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "X"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMinimizar.ForeColor = System.Drawing.Color.White
+        Me.lblMinimizar.Location = New System.Drawing.Point(837, -7)
+        Me.lblMinimizar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMinimizar.Name = "lblMinimizar"
+        Me.lblMinimizar.Size = New System.Drawing.Size(32, 43)
+        Me.lblMinimizar.TabIndex = 24
+        Me.lblMinimizar.Text = "_"
+        Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblCerrar
+        '
+        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCerrar.ForeColor = System.Drawing.Color.White
+        Me.lblCerrar.Location = New System.Drawing.Point(877, 0)
+        Me.lblCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCerrar.Name = "lblCerrar"
+        Me.lblCerrar.Size = New System.Drawing.Size(57, 43)
+        Me.lblCerrar.TabIndex = 23
+        Me.lblCerrar.Text = "X"
+        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1__
         '
@@ -114,53 +132,58 @@ Partial Class frmRegistrarSintoma
         '
         Me.TextBox1__.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1__.Name = "TextBox1__"
-        Me.TextBox1__.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1__.Size = New System.Drawing.Size(100, 22)
         Me.TextBox1__.TabIndex = 0
         '
         'pnlTxtDescripcion
         '
         Me.pnlTxtDescripcion.BackColor = System.Drawing.Color.Black
-        Me.pnlTxtDescripcion.Location = New System.Drawing.Point(128, 357)
+        Me.pnlTxtDescripcion.Location = New System.Drawing.Point(171, 439)
+        Me.pnlTxtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTxtDescripcion.Name = "pnlTxtDescripcion"
-        Me.pnlTxtDescripcion.Size = New System.Drawing.Size(459, 2)
+        Me.pnlTxtDescripcion.Size = New System.Drawing.Size(612, 2)
         Me.pnlTxtDescripcion.TabIndex = 114
         '
         'lblNomSintoma
         '
         Me.lblNomSintoma.AutoSize = True
-        Me.lblNomSintoma.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNomSintoma.Location = New System.Drawing.Point(260, 133)
+        Me.lblNomSintoma.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNomSintoma.Location = New System.Drawing.Point(347, 164)
+        Me.lblNomSintoma.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNomSintoma.Name = "lblNomSintoma"
-        Me.lblNomSintoma.Size = New System.Drawing.Size(201, 26)
+        Me.lblNomSintoma.Size = New System.Drawing.Size(255, 31)
         Me.lblNomSintoma.TabIndex = 110
         Me.lblNomSintoma.Text = "Nombre del sintoma"
         '
         'pnlTxtNomSintoma
         '
         Me.pnlTxtNomSintoma.BackColor = System.Drawing.Color.Black
-        Me.pnlTxtNomSintoma.Location = New System.Drawing.Point(274, 200)
+        Me.pnlTxtNomSintoma.Location = New System.Drawing.Point(365, 246)
+        Me.pnlTxtNomSintoma.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTxtNomSintoma.Name = "pnlTxtNomSintoma"
-        Me.pnlTxtNomSintoma.Size = New System.Drawing.Size(176, 2)
+        Me.pnlTxtNomSintoma.Size = New System.Drawing.Size(235, 2)
         Me.pnlTxtNomSintoma.TabIndex = 111
         '
         'txtDescripcion
         '
         Me.txtDescripcion.BackColor = System.Drawing.Color.White
         Me.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDescripcion.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(128, 259)
+        Me.txtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Location = New System.Drawing.Point(171, 319)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(459, 92)
+        Me.txtDescripcion.Size = New System.Drawing.Size(612, 113)
         Me.txtDescripcion.TabIndex = 113
         '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescripcion.Location = New System.Drawing.Point(113, 230)
+        Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.Location = New System.Drawing.Point(151, 283)
+        Me.lblDescripcion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(123, 26)
+        Me.lblDescripcion.Size = New System.Drawing.Size(157, 31)
         Me.lblDescripcion.TabIndex = 112
         Me.lblDescripcion.Text = "Descripcion"
         '
@@ -168,55 +191,45 @@ Partial Class frmRegistrarSintoma
         '
         Me.txtNomSintoma.BackColor = System.Drawing.Color.White
         Me.txtNomSintoma.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNomSintoma.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNomSintoma.Location = New System.Drawing.Point(274, 171)
+        Me.txtNomSintoma.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNomSintoma.Location = New System.Drawing.Point(365, 210)
+        Me.txtNomSintoma.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNomSintoma.Name = "txtNomSintoma"
-        Me.txtNomSintoma.Size = New System.Drawing.Size(176, 23)
+        Me.txtNomSintoma.Size = New System.Drawing.Size(235, 27)
         Me.txtNomSintoma.TabIndex = 115
         '
-        'MaterialRaisedButton1
+        'mrbtnRegistrarSintoma
         '
-        Me.MaterialRaisedButton1.AutoSize = True
-        Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(274, 421)
-        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
-        Me.MaterialRaisedButton1.Primary = True
-        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(158, 36)
-        Me.MaterialRaisedButton1.TabIndex = 127
-        Me.MaterialRaisedButton1.Text = "Registrar síntoma"
-        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
-        '
-        'btnAtras
-        '
-        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
-        Me.btnAtras.FlatAppearance.BorderSize = 0
-        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
-        Me.btnAtras.Location = New System.Drawing.Point(37, 27)
-        Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
-        Me.btnAtras.TabIndex = 30
-        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnAtras.UseVisualStyleBackColor = True
+        Me.mrbtnRegistrarSintoma.AutoSize = True
+        Me.mrbtnRegistrarSintoma.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.mrbtnRegistrarSintoma.Depth = 0
+        Me.mrbtnRegistrarSintoma.Icon = Nothing
+        Me.mrbtnRegistrarSintoma.Location = New System.Drawing.Point(365, 518)
+        Me.mrbtnRegistrarSintoma.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mrbtnRegistrarSintoma.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnRegistrarSintoma.Name = "mrbtnRegistrarSintoma"
+        Me.mrbtnRegistrarSintoma.Primary = True
+        Me.mrbtnRegistrarSintoma.Size = New System.Drawing.Size(193, 36)
+        Me.mrbtnRegistrarSintoma.TabIndex = 127
+        Me.mrbtnRegistrarSintoma.Text = "Registrar síntoma"
+        Me.mrbtnRegistrarSintoma.UseVisualStyleBackColor = True
         '
         'frmRegistrarSintoma
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(700, 499)
-        Me.Controls.Add(Me.MaterialRaisedButton1)
-        Me.Controls.Add(Me.txtNomSintoma)
-        Me.Controls.Add(Me.pnlTxtDescripcion)
-        Me.Controls.Add(Me.lblNomSintoma)
-        Me.Controls.Add(Me.pnlTxtNomSintoma)
-        Me.Controls.Add(Me.txtDescripcion)
-        Me.Controls.Add(Me.lblDescripcion)
+        Me.ClientSize = New System.Drawing.Size(933, 614)
         Me.Controls.Add(Me.panelTitulo)
+        Me.Controls.Add(Me.lblNomSintoma)
+        Me.Controls.Add(Me.txtNomSintoma)
+        Me.Controls.Add(Me.pnlTxtNomSintoma)
+        Me.Controls.Add(Me.lblDescripcion)
+        Me.Controls.Add(Me.txtDescripcion)
+        Me.Controls.Add(Me.pnlTxtDescripcion)
+        Me.Controls.Add(Me.mrbtnRegistrarSintoma)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmRegistrarSintoma"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
@@ -236,9 +249,9 @@ Partial Class frmRegistrarSintoma
     Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents lblDescripcion As Label
     Friend WithEvents txtNomSintoma As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents Label10 As Label
+    Friend WithEvents lblMinimizar As Label
+    Friend WithEvents lblCerrar As Label
+    Friend WithEvents mrbtnRegistrarSintoma As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents lblRegistrarSintoma As Label
     Friend WithEvents btnAtras As Button
 End Class

@@ -2,7 +2,7 @@
 
     Private Sub ListadoGestor_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        ComboBox1.SelectedIndex = 0
+        cbbCriterioBusqueda.SelectedIndex = 0
         dgvEmp.Rows.Add("", "", "")
         dgvEmp.Rows.Add("", "", "")
         dgvEmp.Rows.Add("", "", "")

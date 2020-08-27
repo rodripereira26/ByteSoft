@@ -45,7 +45,7 @@ Public Class frmListadoChat
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
 
         frmBienvenidaMedico.Show()
         Me.Dispose()
@@ -56,7 +56,7 @@ Public Class frmListadoChat
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnVerMisChat.Click
         frmChat.Update()
         frmChat.Show()
         Me.Dispose()

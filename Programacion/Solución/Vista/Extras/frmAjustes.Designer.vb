@@ -22,250 +22,261 @@ Partial Class frmAjustes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MaterialRadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton1 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.MetroSetDivider1 = New MetroSet_UI.Controls.MetroSetDivider()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.MaterialRadioButton4 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton3 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.Panel6.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.pnlTitulo = New System.Windows.Forms.Panel()
+        Me.lblMinimizar = New System.Windows.Forms.Label()
+        Me.lblCerrar = New System.Windows.Forms.Label()
+        Me.lblAjustes = New System.Windows.Forms.Label()
+        Me.pnlTema = New System.Windows.Forms.Panel()
+        Me.mrbtnOscuro = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnClaro = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.lblTema = New System.Windows.Forms.Label()
+        Me.msdDivisor = New MetroSet_UI.Controls.MetroSetDivider()
+        Me.lblIdioma = New System.Windows.Forms.Label()
+        Me.pnl_Idioma = New System.Windows.Forms.Panel()
+        Me.mrbtnIngles = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnEspañol = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnAplicarCambios = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.pnlTitulo.SuspendLayout()
+        Me.pnlTema.SuspendLayout()
+        Me.pnl_Idioma.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel6
+        'pnlTitulo
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Label12)
-        Me.Panel6.Controls.Add(Me.Label13)
-        Me.Panel6.Controls.Add(Me.Label4)
-        Me.Panel6.Location = New System.Drawing.Point(0, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(594, 77)
-        Me.Panel6.TabIndex = 12
+        Me.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.pnlTitulo.Controls.Add(Me.lblAjustes)
+        Me.pnlTitulo.Controls.Add(Me.lblMinimizar)
+        Me.pnlTitulo.Controls.Add(Me.lblCerrar)
+        Me.pnlTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTitulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlTitulo.Name = "pnlTitulo"
+        Me.pnlTitulo.Size = New System.Drawing.Size(792, 95)
+        Me.pnlTitulo.TabIndex = 12
         '
-        'Label12
+        'lblMinimizar
         '
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(521, -6)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 35)
-        Me.Label12.TabIndex = 24
-        Me.Label12.Text = "_"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMinimizar.ForeColor = System.Drawing.Color.White
+        Me.lblMinimizar.Location = New System.Drawing.Point(695, -7)
+        Me.lblMinimizar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMinimizar.Name = "lblMinimizar"
+        Me.lblMinimizar.Size = New System.Drawing.Size(32, 43)
+        Me.lblMinimizar.TabIndex = 24
+        Me.lblMinimizar.Text = "_"
+        Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label13
+        'lblCerrar
         '
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(551, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(43, 35)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "X"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCerrar.ForeColor = System.Drawing.Color.White
+        Me.lblCerrar.Location = New System.Drawing.Point(735, 0)
+        Me.lblCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCerrar.Name = "lblCerrar"
+        Me.lblCerrar.Size = New System.Drawing.Size(57, 43)
+        Me.lblCerrar.TabIndex = 23
+        Me.lblCerrar.Text = "X"
+        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
+        'lblAjustes
         '
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(151, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(294, 57)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Ajustes"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblAjustes.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAjustes.ForeColor = System.Drawing.Color.White
+        Me.lblAjustes.Location = New System.Drawing.Point(201, 11)
+        Me.lblAjustes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAjustes.Name = "lblAjustes"
+        Me.lblAjustes.Size = New System.Drawing.Size(392, 70)
+        Me.lblAjustes.TabIndex = 4
+        Me.lblAjustes.Text = "Ajustes"
+        Me.lblAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel1
+        'pnlTema
         '
-        Me.Panel1.Controls.Add(Me.MaterialRadioButton2)
-        Me.Panel1.Controls.Add(Me.MaterialRadioButton1)
-        Me.Panel1.Location = New System.Drawing.Point(93, 171)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(116, 100)
-        Me.Panel1.TabIndex = 20
+        Me.pnlTema.Controls.Add(Me.mrbtnOscuro)
+        Me.pnlTema.Controls.Add(Me.mrbtnClaro)
+        Me.pnlTema.Location = New System.Drawing.Point(124, 210)
+        Me.pnlTema.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlTema.Name = "pnlTema"
+        Me.pnlTema.Size = New System.Drawing.Size(155, 123)
+        Me.pnlTema.TabIndex = 20
         '
-        'MaterialRadioButton2
+        'mrbtnOscuro
         '
-        Me.MaterialRadioButton2.AutoSize = True
-        Me.MaterialRadioButton2.Depth = 0
-        Me.MaterialRadioButton2.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton2.Location = New System.Drawing.Point(20, 62)
-        Me.MaterialRadioButton2.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton2.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton2.Name = "MaterialRadioButton2"
-        Me.MaterialRadioButton2.Ripple = True
-        Me.MaterialRadioButton2.Size = New System.Drawing.Size(73, 30)
-        Me.MaterialRadioButton2.TabIndex = 31
-        Me.MaterialRadioButton2.TabStop = True
-        Me.MaterialRadioButton2.Text = "Oscuro"
-        Me.MaterialRadioButton2.UseVisualStyleBackColor = True
+        Me.mrbtnOscuro.AutoSize = True
+        Me.mrbtnOscuro.Depth = 0
+        Me.mrbtnOscuro.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnOscuro.Location = New System.Drawing.Point(27, 76)
+        Me.mrbtnOscuro.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnOscuro.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnOscuro.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnOscuro.Name = "mrbtnOscuro"
+        Me.mrbtnOscuro.Ripple = True
+        Me.mrbtnOscuro.Size = New System.Drawing.Size(85, 30)
+        Me.mrbtnOscuro.TabIndex = 31
+        Me.mrbtnOscuro.TabStop = True
+        Me.mrbtnOscuro.Text = "Oscuro"
+        Me.mrbtnOscuro.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton1
+        'mrbtnClaro
         '
-        Me.MaterialRadioButton1.AutoSize = True
-        Me.MaterialRadioButton1.Depth = 0
-        Me.MaterialRadioButton1.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton1.Location = New System.Drawing.Point(20, 22)
-        Me.MaterialRadioButton1.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton1.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton1.Name = "MaterialRadioButton1"
-        Me.MaterialRadioButton1.Ripple = True
-        Me.MaterialRadioButton1.Size = New System.Drawing.Size(61, 30)
-        Me.MaterialRadioButton1.TabIndex = 30
-        Me.MaterialRadioButton1.TabStop = True
-        Me.MaterialRadioButton1.Text = "Claro"
-        Me.MaterialRadioButton1.UseVisualStyleBackColor = True
+        Me.mrbtnClaro.AutoSize = True
+        Me.mrbtnClaro.Depth = 0
+        Me.mrbtnClaro.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnClaro.Location = New System.Drawing.Point(27, 27)
+        Me.mrbtnClaro.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnClaro.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnClaro.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnClaro.Name = "mrbtnClaro"
+        Me.mrbtnClaro.Ripple = True
+        Me.mrbtnClaro.Size = New System.Drawing.Size(71, 30)
+        Me.mrbtnClaro.TabIndex = 30
+        Me.mrbtnClaro.TabStop = True
+        Me.mrbtnClaro.Text = "Claro"
+        Me.mrbtnClaro.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lblTema
         '
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(115, 117)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 29)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Tema"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTema.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblTema.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTema.ForeColor = System.Drawing.Color.Black
+        Me.lblTema.Location = New System.Drawing.Point(153, 144)
+        Me.lblTema.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTema.Name = "lblTema"
+        Me.lblTema.Size = New System.Drawing.Size(96, 36)
+        Me.lblTema.TabIndex = 23
+        Me.lblTema.Text = "Tema"
+        Me.lblTema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'MetroSetDivider1
+        'msdDivisor
         '
-        Me.MetroSetDivider1.Location = New System.Drawing.Point(93, 344)
-        Me.MetroSetDivider1.Name = "MetroSetDivider1"
-        Me.MetroSetDivider1.Orientation = MetroSet_UI.Enums.DividerStyle.Horizontal
-        Me.MetroSetDivider1.Size = New System.Drawing.Size(410, 4)
-        Me.MetroSetDivider1.Style = MetroSet_UI.Design.Style.Light
-        Me.MetroSetDivider1.StyleManager = Nothing
-        Me.MetroSetDivider1.TabIndex = 25
-        Me.MetroSetDivider1.Text = "MetroSetDivider1"
-        Me.MetroSetDivider1.ThemeAuthor = "Narwin"
-        Me.MetroSetDivider1.ThemeName = "MetroLite"
-        Me.MetroSetDivider1.Thickness = 1
+        Me.msdDivisor.Location = New System.Drawing.Point(124, 423)
+        Me.msdDivisor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.msdDivisor.Name = "msdDivisor"
+        Me.msdDivisor.Orientation = MetroSet_UI.Enums.DividerStyle.Horizontal
+        Me.msdDivisor.Size = New System.Drawing.Size(547, 4)
+        Me.msdDivisor.Style = MetroSet_UI.Design.Style.Light
+        Me.msdDivisor.StyleManager = Nothing
+        Me.msdDivisor.TabIndex = 25
+        Me.msdDivisor.Text = "MetroSetDivider1"
+        Me.msdDivisor.ThemeAuthor = "Narwin"
+        Me.msdDivisor.ThemeName = "MetroLite"
+        Me.msdDivisor.Thickness = 1
         '
-        'Label3
+        'lblIdioma
         '
-        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(365, 117)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 29)
-        Me.Label3.TabIndex = 26
-        Me.Label3.Text = "Idioma"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblIdioma.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdioma.ForeColor = System.Drawing.Color.Black
+        Me.lblIdioma.Location = New System.Drawing.Point(487, 144)
+        Me.lblIdioma.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblIdioma.Name = "lblIdioma"
+        Me.lblIdioma.Size = New System.Drawing.Size(128, 36)
+        Me.lblIdioma.TabIndex = 26
+        Me.lblIdioma.Text = "Idioma"
+        Me.lblIdioma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel3
+        'pnl_Idioma
         '
-        Me.Panel3.Controls.Add(Me.MaterialRadioButton4)
-        Me.Panel3.Controls.Add(Me.MaterialRadioButton3)
-        Me.Panel3.Location = New System.Drawing.Point(337, 171)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(152, 100)
-        Me.Panel3.TabIndex = 22
+        Me.pnl_Idioma.Controls.Add(Me.mrbtnIngles)
+        Me.pnl_Idioma.Controls.Add(Me.mrbtnEspañol)
+        Me.pnl_Idioma.Location = New System.Drawing.Point(449, 210)
+        Me.pnl_Idioma.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnl_Idioma.Name = "pnl_Idioma"
+        Me.pnl_Idioma.Size = New System.Drawing.Size(203, 123)
+        Me.pnl_Idioma.TabIndex = 22
         '
-        'MaterialRadioButton4
+        'mrbtnIngles
         '
-        Me.MaterialRadioButton4.AutoSize = True
-        Me.MaterialRadioButton4.Depth = 0
-        Me.MaterialRadioButton4.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton4.Location = New System.Drawing.Point(29, 62)
-        Me.MaterialRadioButton4.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton4.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton4.Name = "MaterialRadioButton4"
-        Me.MaterialRadioButton4.Ripple = True
-        Me.MaterialRadioButton4.Size = New System.Drawing.Size(66, 30)
-        Me.MaterialRadioButton4.TabIndex = 32
-        Me.MaterialRadioButton4.TabStop = True
-        Me.MaterialRadioButton4.Text = "Inglés"
-        Me.MaterialRadioButton4.UseVisualStyleBackColor = True
+        Me.mrbtnIngles.AutoSize = True
+        Me.mrbtnIngles.Depth = 0
+        Me.mrbtnIngles.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnIngles.Location = New System.Drawing.Point(39, 76)
+        Me.mrbtnIngles.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnIngles.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnIngles.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnIngles.Name = "mrbtnIngles"
+        Me.mrbtnIngles.Ripple = True
+        Me.mrbtnIngles.Size = New System.Drawing.Size(77, 30)
+        Me.mrbtnIngles.TabIndex = 32
+        Me.mrbtnIngles.TabStop = True
+        Me.mrbtnIngles.Text = "Inglés"
+        Me.mrbtnIngles.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton3
+        'mrbtnEspañol
         '
-        Me.MaterialRadioButton3.AutoSize = True
-        Me.MaterialRadioButton3.Depth = 0
-        Me.MaterialRadioButton3.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton3.Location = New System.Drawing.Point(29, 22)
-        Me.MaterialRadioButton3.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton3.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton3.Name = "MaterialRadioButton3"
-        Me.MaterialRadioButton3.Ripple = True
-        Me.MaterialRadioButton3.Size = New System.Drawing.Size(78, 30)
-        Me.MaterialRadioButton3.TabIndex = 31
-        Me.MaterialRadioButton3.TabStop = True
-        Me.MaterialRadioButton3.Text = "Español"
-        Me.MaterialRadioButton3.UseVisualStyleBackColor = True
+        Me.mrbtnEspañol.AutoSize = True
+        Me.mrbtnEspañol.Depth = 0
+        Me.mrbtnEspañol.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnEspañol.Location = New System.Drawing.Point(39, 27)
+        Me.mrbtnEspañol.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnEspañol.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnEspañol.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnEspañol.Name = "mrbtnEspañol"
+        Me.mrbtnEspañol.Ripple = True
+        Me.mrbtnEspañol.Size = New System.Drawing.Size(91, 30)
+        Me.mrbtnEspañol.TabIndex = 31
+        Me.mrbtnEspañol.TabStop = True
+        Me.mrbtnEspañol.Text = "Español"
+        Me.mrbtnEspañol.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton1
+        'mrbtnAplicarCambios
         '
-        Me.MaterialRaisedButton1.AutoSize = True
-        Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(226, 399)
-        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
-        Me.MaterialRaisedButton1.Primary = True
-        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(141, 36)
-        Me.MaterialRaisedButton1.TabIndex = 126
-        Me.MaterialRaisedButton1.Text = "Aplicar cambios"
-        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
+        Me.mrbtnAplicarCambios.AutoSize = True
+        Me.mrbtnAplicarCambios.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.mrbtnAplicarCambios.Depth = 0
+        Me.mrbtnAplicarCambios.Icon = Nothing
+        Me.mrbtnAplicarCambios.Location = New System.Drawing.Point(301, 491)
+        Me.mrbtnAplicarCambios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mrbtnAplicarCambios.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnAplicarCambios.Name = "mrbtnAplicarCambios"
+        Me.mrbtnAplicarCambios.Primary = True
+        Me.mrbtnAplicarCambios.Size = New System.Drawing.Size(172, 36)
+        Me.mrbtnAplicarCambios.TabIndex = 126
+        Me.mrbtnAplicarCambios.Text = "Aplicar cambios"
+        Me.mrbtnAplicarCambios.UseVisualStyleBackColor = True
         '
         'frmAjustes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(593, 461)
-        Me.Controls.Add(Me.MaterialRaisedButton1)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.MetroSetDivider1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel6)
+        Me.ClientSize = New System.Drawing.Size(791, 567)
+        Me.Controls.Add(Me.pnlTitulo)
+        Me.Controls.Add(Me.lblTema)
+        Me.Controls.Add(Me.pnlTema)
+        Me.Controls.Add(Me.lblIdioma)
+        Me.Controls.Add(Me.pnl_Idioma)
+        Me.Controls.Add(Me.msdDivisor)
+        Me.Controls.Add(Me.mrbtnAplicarCambios)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmAjustes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.pnlTitulo.ResumeLayout(False)
+        Me.pnlTema.ResumeLayout(False)
+        Me.pnlTema.PerformLayout()
+        Me.pnl_Idioma.ResumeLayout(False)
+        Me.pnl_Idioma.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents MetroSetDivider1 As MetroSet_UI.Controls.MetroSetDivider
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents MaterialRadioButton1 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton2 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton4 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton3 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents pnlTitulo As Panel
+    Friend WithEvents lblMinimizar As Label
+    Friend WithEvents lblCerrar As Label
+    Friend WithEvents lblAjustes As Label
+    Friend WithEvents pnlTema As Panel
+    Friend WithEvents lblTema As Label
+    Friend WithEvents msdDivisor As MetroSet_UI.Controls.MetroSetDivider
+    Friend WithEvents lblIdioma As Label
+    Friend WithEvents pnl_Idioma As Panel
+    Friend WithEvents mrbtnClaro As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnOscuro As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnIngles As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnEspañol As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnAplicarCambios As MaterialSkin.Controls.MaterialRaisedButton
 End Class

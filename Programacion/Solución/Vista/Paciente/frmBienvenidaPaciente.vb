@@ -8,11 +8,11 @@ Public Class frmBienvenidaPaciente
     Private chatComenzo As Boolean = False
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Principal.Singleton.roundedCorners(Panel1)
-        Principal.Singleton.roundedCorners(Panel2)
+        Principal.Singleton.roundedCorners(pnlIngresarSintomas)
+        Principal.Singleton.roundedCorners(pnlHistorial)
         Principal.Singleton.roundedCorners(pnlReanudar)
-        Principal.Singleton.roundedCorners(Panel4)
-        Principal.Singleton.roundedCorners(Panel5)
+        Principal.Singleton.roundedCorners(pnlPerfil)
+        Principal.Singleton.roundedCorners(pnlAyuda)
         Principal.Singleton.roundedCorners(Me)
 
         'Me.BackColor = Color.FromArgb(236, 236, 236)
@@ -39,7 +39,7 @@ Public Class frmBienvenidaPaciente
 
     End Sub
 
-    Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel6.MouseDown
+    Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseDown
 
         drag = True
         mousex = Cursor.Position.X - Me.Left
@@ -47,7 +47,7 @@ Public Class frmBienvenidaPaciente
 
     End Sub
 
-    Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel6.MouseMove
+    Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseMove
 
         If drag Then
 
@@ -131,14 +131,14 @@ Public Class frmBienvenidaPaciente
     '    hover(Panel5)
     'End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        frmLogin.Label2.Text = "Usuario"
-        frmLogin.Label2.Text = "Contraseña"
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
+        frmLogin.lblUsuario.Text = "Usuario"
+        frmLogin.lblUsuario.Text = "Contraseña"
         frmLogin.Show()
         Me.Close()
     End Sub
 
-    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
+    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles pnlIngresarSintomas.Click
         frmIngresarSintomas.Show()
         Me.Dispose()
     End Sub
@@ -180,7 +180,7 @@ Public Class frmBienvenidaPaciente
         End If
     End Sub
 
-    Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
+    Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseUp
         drag = False
     End Sub
 

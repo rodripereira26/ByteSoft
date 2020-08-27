@@ -29,53 +29,53 @@ Partial Class frmBienvenidaGestor
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblBienvenidoGestor = New System.Windows.Forms.Label()
         Me.pnlAjustes = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.pnlDecoracionAjustes = New System.Windows.Forms.Panel()
+        Me.lblDescripcionAjustes = New System.Windows.Forms.Label()
+        Me.lblAjustes = New System.Windows.Forms.Label()
         Me.pnlMiPerfil = New System.Windows.Forms.Panel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.pnlDecoracionMiPerfil = New System.Windows.Forms.Panel()
+        Me.lblDescripcionMiPerfil = New System.Windows.Forms.Label()
+        Me.lblMiPerfil = New System.Windows.Forms.Label()
         Me.pnlAyuda = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.pnlDecoracionAyuda = New System.Windows.Forms.Panel()
+        Me.lblDescripcionAyuda = New System.Windows.Forms.Label()
+        Me.lblAyuda = New System.Windows.Forms.Label()
         Me.pnlTopBar = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.pnlRegistrodeUsuarios = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.btn1 = New System.Windows.Forms.Button()
+        Me.btn2 = New System.Windows.Forms.Button()
+        Me.lblMinimizar = New System.Windows.Forms.Label()
+        Me.lblCerrar = New System.Windows.Forms.Label()
+        Me.pnlRegistroDeUsuarios = New System.Windows.Forms.Panel()
+        Me.lblDescripcionRegistroDeUsuarios = New System.Windows.Forms.Label()
+        Me.pnlDecoracionRegistroDeUsuarios = New System.Windows.Forms.Panel()
+        Me.lblRegistroDeUsuarios = New System.Windows.Forms.Label()
         Me.pnlPatologias = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.lblDescripcionPatologias = New System.Windows.Forms.Label()
+        Me.pnlDecoracionPatologias = New System.Windows.Forms.Panel()
+        Me.lblPatologias = New System.Windows.Forms.Label()
+        Me.pnlDecoracionSintomas = New System.Windows.Forms.Panel()
         Me.pnlSintomas = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.lblDescripcionSintomas = New System.Windows.Forms.Label()
+        Me.lblSintomas = New System.Windows.Forms.Label()
         Me.pnlUsuarios = New System.Windows.Forms.Panel()
-        Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.pnlDecoracionUsuarios = New System.Windows.Forms.Panel()
+        Me.lblDescripcionUsuarios = New System.Windows.Forms.Label()
+        Me.lblUsuarios = New System.Windows.Forms.Label()
         Me.pnlListadoPacientes = New System.Windows.Forms.Panel()
         Me.btnRefrescarListadoPac = New System.Windows.Forms.Button()
         Me.lblTituloLIstadoPacientes = New System.Windows.Forms.Label()
         Me.dgvListadoPacientes = New System.Windows.Forms.DataGridView()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnNotificacion = New System.Windows.Forms.Button()
         Me.Rechazar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Aceptar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.tempListaPacientes = New System.Windows.Forms.Timer(Me.components)
+        Me.btnNotificacion = New System.Windows.Forms.Button()
         Me.pnlAjustes.SuspendLayout()
         Me.pnlMiPerfil.SuspendLayout()
         Me.pnlAyuda.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
-        Me.pnlRegistrodeUsuarios.SuspendLayout()
+        Me.pnlRegistroDeUsuarios.SuspendLayout()
         Me.pnlPatologias.SuspendLayout()
         Me.pnlSintomas.SuspendLayout()
         Me.pnlUsuarios.SuspendLayout()
@@ -83,374 +83,409 @@ Partial Class frmBienvenidaGestor
         CType(Me.dgvListadoPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label5
+        'lblBienvenidoGestor
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(69, 38)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(220, 29)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Bienvenido, Gestor "
+        Me.lblBienvenidoGestor.AutoSize = True
+        Me.lblBienvenidoGestor.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBienvenidoGestor.ForeColor = System.Drawing.Color.White
+        Me.lblBienvenidoGestor.Location = New System.Drawing.Point(92, 47)
+        Me.lblBienvenidoGestor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblBienvenidoGestor.Name = "lblBienvenidoGestor"
+        Me.lblBienvenidoGestor.Size = New System.Drawing.Size(277, 36)
+        Me.lblBienvenidoGestor.TabIndex = 4
+        Me.lblBienvenidoGestor.Text = "Bienvenido, Gestor "
         '
         'pnlAjustes
         '
         Me.pnlAjustes.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlAjustes.Controls.Add(Me.Panel10)
-        Me.pnlAjustes.Controls.Add(Me.Label6)
-        Me.pnlAjustes.Controls.Add(Me.Label7)
+        Me.pnlAjustes.Controls.Add(Me.pnlDecoracionAjustes)
+        Me.pnlAjustes.Controls.Add(Me.lblDescripcionAjustes)
+        Me.pnlAjustes.Controls.Add(Me.lblAjustes)
         Me.pnlAjustes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlAjustes.Location = New System.Drawing.Point(31, 320)
+        Me.pnlAjustes.Location = New System.Drawing.Point(41, 394)
+        Me.pnlAjustes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlAjustes.Name = "pnlAjustes"
-        Me.pnlAjustes.Size = New System.Drawing.Size(225, 193)
+        Me.pnlAjustes.Size = New System.Drawing.Size(300, 238)
         Me.pnlAjustes.TabIndex = 3
         '
-        'Panel10
+        'pnlDecoracionAjustes
         '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(0, 0)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(226, 10)
-        Me.Panel10.TabIndex = 5
+        Me.pnlDecoracionAjustes.BackColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.pnlDecoracionAjustes.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDecoracionAjustes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlDecoracionAjustes.Name = "pnlDecoracionAjustes"
+        Me.pnlDecoracionAjustes.Size = New System.Drawing.Size(301, 12)
+        Me.pnlDecoracionAjustes.TabIndex = 5
         '
-        'Label6
+        'lblDescripcionAjustes
         '
-        Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(25, 91)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(178, 76)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Entrar a la configuración de la aplicación"
+        Me.lblDescripcionAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDescripcionAjustes.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcionAjustes.ForeColor = System.Drawing.Color.White
+        Me.lblDescripcionAjustes.Location = New System.Drawing.Point(33, 112)
+        Me.lblDescripcionAjustes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionAjustes.Name = "lblDescripcionAjustes"
+        Me.lblDescripcionAjustes.Size = New System.Drawing.Size(237, 94)
+        Me.lblDescripcionAjustes.TabIndex = 1
+        Me.lblDescripcionAjustes.Text = "Entrar a la configuración de la aplicación"
         '
-        'Label7
+        'lblAjustes
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(22, 33)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 39)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Ajustes"
+        Me.lblAjustes.AutoSize = True
+        Me.lblAjustes.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAjustes.ForeColor = System.Drawing.Color.White
+        Me.lblAjustes.Location = New System.Drawing.Point(29, 41)
+        Me.lblAjustes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAjustes.Name = "lblAjustes"
+        Me.lblAjustes.Size = New System.Drawing.Size(152, 46)
+        Me.lblAjustes.TabIndex = 0
+        Me.lblAjustes.Text = "Ajustes"
         '
         'pnlMiPerfil
         '
         Me.pnlMiPerfil.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlMiPerfil.Controls.Add(Me.Panel11)
-        Me.pnlMiPerfil.Controls.Add(Me.Label8)
-        Me.pnlMiPerfil.Controls.Add(Me.Label9)
+        Me.pnlMiPerfil.Controls.Add(Me.pnlDecoracionMiPerfil)
+        Me.pnlMiPerfil.Controls.Add(Me.lblDescripcionMiPerfil)
+        Me.pnlMiPerfil.Controls.Add(Me.lblMiPerfil)
         Me.pnlMiPerfil.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlMiPerfil.Location = New System.Drawing.Point(595, 320)
+        Me.pnlMiPerfil.Location = New System.Drawing.Point(793, 394)
+        Me.pnlMiPerfil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlMiPerfil.Name = "pnlMiPerfil"
-        Me.pnlMiPerfil.Size = New System.Drawing.Size(175, 193)
+        Me.pnlMiPerfil.Size = New System.Drawing.Size(233, 238)
         Me.pnlMiPerfil.TabIndex = 4
         '
-        'Panel11
+        'pnlDecoracionMiPerfil
         '
-        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Panel11.Location = New System.Drawing.Point(0, 0)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(175, 10)
-        Me.Panel11.TabIndex = 6
+        Me.pnlDecoracionMiPerfil.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(119, Byte), Integer))
+        Me.pnlDecoracionMiPerfil.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDecoracionMiPerfil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlDecoracionMiPerfil.Name = "pnlDecoracionMiPerfil"
+        Me.pnlDecoracionMiPerfil.Size = New System.Drawing.Size(233, 12)
+        Me.pnlDecoracionMiPerfil.TabIndex = 6
         '
-        'Label8
+        'lblDescripcionMiPerfil
         '
-        Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label8.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(20, 91)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(141, 57)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Ver y configurar Perfil"
+        Me.lblDescripcionMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDescripcionMiPerfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcionMiPerfil.ForeColor = System.Drawing.Color.White
+        Me.lblDescripcionMiPerfil.Location = New System.Drawing.Point(27, 112)
+        Me.lblDescripcionMiPerfil.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionMiPerfil.Name = "lblDescripcionMiPerfil"
+        Me.lblDescripcionMiPerfil.Size = New System.Drawing.Size(188, 70)
+        Me.lblDescripcionMiPerfil.TabIndex = 1
+        Me.lblDescripcionMiPerfil.Text = "Ver y configurar Perfil"
         '
-        'Label9
+        'lblMiPerfil
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(17, 33)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(136, 39)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Mi Perfil"
+        Me.lblMiPerfil.AutoSize = True
+        Me.lblMiPerfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMiPerfil.ForeColor = System.Drawing.Color.White
+        Me.lblMiPerfil.Location = New System.Drawing.Point(23, 41)
+        Me.lblMiPerfil.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMiPerfil.Name = "lblMiPerfil"
+        Me.lblMiPerfil.Size = New System.Drawing.Size(164, 46)
+        Me.lblMiPerfil.TabIndex = 0
+        Me.lblMiPerfil.Text = "Mi Perfil"
         '
         'pnlAyuda
         '
         Me.pnlAyuda.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlAyuda.Controls.Add(Me.Panel8)
-        Me.pnlAyuda.Controls.Add(Me.Label10)
-        Me.pnlAyuda.Controls.Add(Me.Label11)
+        Me.pnlAyuda.Controls.Add(Me.pnlDecoracionAyuda)
+        Me.pnlAyuda.Controls.Add(Me.lblDescripcionAyuda)
+        Me.pnlAyuda.Controls.Add(Me.lblAyuda)
         Me.pnlAyuda.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlAyuda.Location = New System.Drawing.Point(783, 320)
+        Me.pnlAyuda.Location = New System.Drawing.Point(1044, 394)
+        Me.pnlAyuda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlAyuda.Name = "pnlAyuda"
-        Me.pnlAyuda.Size = New System.Drawing.Size(162, 193)
+        Me.pnlAyuda.Size = New System.Drawing.Size(216, 238)
         Me.pnlAyuda.TabIndex = 5
         '
-        'Panel8
+        'pnlDecoracionAyuda
         '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(0, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(162, 10)
-        Me.Panel8.TabIndex = 3
+        Me.pnlDecoracionAyuda.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(103, Byte), Integer))
+        Me.pnlDecoracionAyuda.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDecoracionAyuda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlDecoracionAyuda.Name = "pnlDecoracionAyuda"
+        Me.pnlDecoracionAyuda.Size = New System.Drawing.Size(216, 12)
+        Me.pnlDecoracionAyuda.TabIndex = 3
         '
-        'Label10
+        'lblDescripcionAyuda
         '
-        Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label10.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(14, 83)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(137, 72)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Cómo usar la aplicación de Gestión"
+        Me.lblDescripcionAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDescripcionAyuda.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcionAyuda.ForeColor = System.Drawing.Color.White
+        Me.lblDescripcionAyuda.Location = New System.Drawing.Point(19, 102)
+        Me.lblDescripcionAyuda.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionAyuda.Name = "lblDescripcionAyuda"
+        Me.lblDescripcionAyuda.Size = New System.Drawing.Size(183, 89)
+        Me.lblDescripcionAyuda.TabIndex = 1
+        Me.lblDescripcionAyuda.Text = "Cómo usar la aplicación de Gestión"
         '
-        'Label11
+        'lblAyuda
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(11, 27)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 39)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Ayuda"
+        Me.lblAyuda.AutoSize = True
+        Me.lblAyuda.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAyuda.ForeColor = System.Drawing.Color.White
+        Me.lblAyuda.Location = New System.Drawing.Point(15, 33)
+        Me.lblAyuda.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAyuda.Name = "lblAyuda"
+        Me.lblAyuda.Size = New System.Drawing.Size(133, 46)
+        Me.lblAyuda.TabIndex = 0
+        Me.lblAyuda.Text = "Ayuda"
         '
         'pnlTopBar
         '
         Me.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
-        Me.pnlTopBar.Controls.Add(Me.Label5)
-        Me.pnlTopBar.Controls.Add(Me.Button2)
-        Me.pnlTopBar.Controls.Add(Me.Button1)
-        Me.pnlTopBar.Location = New System.Drawing.Point(12, 3)
+        Me.pnlTopBar.Controls.Add(Me.lblBienvenidoGestor)
+        Me.pnlTopBar.Controls.Add(Me.btn1)
+        Me.pnlTopBar.Controls.Add(Me.btn2)
+        Me.pnlTopBar.Location = New System.Drawing.Point(16, 4)
+        Me.pnlTopBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTopBar.Name = "pnlTopBar"
-        Me.pnlTopBar.Size = New System.Drawing.Size(743, 80)
+        Me.pnlTopBar.Size = New System.Drawing.Size(991, 98)
         Me.pnlTopBar.TabIndex = 6
         '
-        'Button2
+        'btn1
         '
-        Me.Button2.Location = New System.Drawing.Point(583, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(70, 55)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        Me.Button2.Visible = False
+        Me.btn1.Location = New System.Drawing.Point(777, 15)
+        Me.btn1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn1.Name = "btn1"
+        Me.btn1.Size = New System.Drawing.Size(93, 68)
+        Me.btn1.TabIndex = 24
+        Me.btn1.Text = "Button2"
+        Me.btn1.UseVisualStyleBackColor = True
+        Me.btn1.Visible = False
         '
-        'Button1
+        'btn2
         '
-        Me.Button1.Location = New System.Drawing.Point(658, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(70, 55)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        Me.Button1.Visible = False
+        Me.btn2.Location = New System.Drawing.Point(877, 15)
+        Me.btn2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn2.Name = "btn2"
+        Me.btn2.Size = New System.Drawing.Size(93, 68)
+        Me.btn2.TabIndex = 23
+        Me.btn2.Text = "Button1"
+        Me.btn2.UseVisualStyleBackColor = True
+        Me.btn2.Visible = False
         '
-        'Label12
+        'lblMinimizar
         '
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(907, -3)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 35)
-        Me.Label12.TabIndex = 22
-        Me.Label12.Text = "_"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMinimizar.ForeColor = System.Drawing.Color.White
+        Me.lblMinimizar.Location = New System.Drawing.Point(1209, -4)
+        Me.lblMinimizar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMinimizar.Name = "lblMinimizar"
+        Me.lblMinimizar.Size = New System.Drawing.Size(32, 43)
+        Me.lblMinimizar.TabIndex = 22
+        Me.lblMinimizar.Text = "_"
+        Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label13
+        'lblCerrar
         '
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(937, 3)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(43, 35)
-        Me.Label13.TabIndex = 21
-        Me.Label13.Text = "X"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCerrar.ForeColor = System.Drawing.Color.White
+        Me.lblCerrar.Location = New System.Drawing.Point(1249, 4)
+        Me.lblCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCerrar.Name = "lblCerrar"
+        Me.lblCerrar.Size = New System.Drawing.Size(57, 43)
+        Me.lblCerrar.TabIndex = 21
+        Me.lblCerrar.Text = "X"
+        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'pnlRegistrodeUsuarios
+        'pnlRegistroDeUsuarios
         '
-        Me.pnlRegistrodeUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlRegistrodeUsuarios.Controls.Add(Me.Label3)
-        Me.pnlRegistrodeUsuarios.Controls.Add(Me.Panel7)
-        Me.pnlRegistrodeUsuarios.Controls.Add(Me.Label14)
-        Me.pnlRegistrodeUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlRegistrodeUsuarios.Location = New System.Drawing.Point(595, 120)
-        Me.pnlRegistrodeUsuarios.Name = "pnlRegistrodeUsuarios"
-        Me.pnlRegistrodeUsuarios.Size = New System.Drawing.Size(349, 180)
-        Me.pnlRegistrodeUsuarios.TabIndex = 6
+        Me.pnlRegistroDeUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlRegistroDeUsuarios.Controls.Add(Me.pnlDecoracionRegistroDeUsuarios)
+        Me.pnlRegistroDeUsuarios.Controls.Add(Me.lblDescripcionRegistroDeUsuarios)
+        Me.pnlRegistroDeUsuarios.Controls.Add(Me.lblRegistroDeUsuarios)
+        Me.pnlRegistroDeUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pnlRegistroDeUsuarios.Location = New System.Drawing.Point(793, 148)
+        Me.pnlRegistroDeUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlRegistroDeUsuarios.Name = "pnlRegistroDeUsuarios"
+        Me.pnlRegistroDeUsuarios.Size = New System.Drawing.Size(465, 222)
+        Me.pnlRegistroDeUsuarios.TabIndex = 6
         '
-        'Label3
+        'lblDescripcionRegistroDeUsuarios
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(13, 27)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(314, 39)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Registro de Usuarios"
+        Me.lblDescripcionRegistroDeUsuarios.AutoSize = True
+        Me.lblDescripcionRegistroDeUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcionRegistroDeUsuarios.ForeColor = System.Drawing.Color.White
+        Me.lblDescripcionRegistroDeUsuarios.Location = New System.Drawing.Point(17, 33)
+        Me.lblDescripcionRegistroDeUsuarios.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionRegistroDeUsuarios.Name = "lblDescripcionRegistroDeUsuarios"
+        Me.lblDescripcionRegistroDeUsuarios.Size = New System.Drawing.Size(393, 46)
+        Me.lblDescripcionRegistroDeUsuarios.TabIndex = 8
+        Me.lblDescripcionRegistroDeUsuarios.Text = "Registro de Usuarios"
         '
-        'Panel7
+        'pnlDecoracionRegistroDeUsuarios
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(0, 0)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(350, 10)
-        Me.Panel7.TabIndex = 4
+        Me.pnlDecoracionRegistroDeUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.pnlDecoracionRegistroDeUsuarios.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDecoracionRegistroDeUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlDecoracionRegistroDeUsuarios.Name = "pnlDecoracionRegistroDeUsuarios"
+        Me.pnlDecoracionRegistroDeUsuarios.Size = New System.Drawing.Size(467, 12)
+        Me.pnlDecoracionRegistroDeUsuarios.TabIndex = 4
         '
-        'Label14
+        'lblRegistroDeUsuarios
         '
-        Me.Label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label14.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(20, 81)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(247, 57)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Registrar médicos y gestores en la aplicación"
+        Me.lblRegistroDeUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblRegistroDeUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegistroDeUsuarios.ForeColor = System.Drawing.Color.White
+        Me.lblRegistroDeUsuarios.Location = New System.Drawing.Point(27, 100)
+        Me.lblRegistroDeUsuarios.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRegistroDeUsuarios.Name = "lblRegistroDeUsuarios"
+        Me.lblRegistroDeUsuarios.Size = New System.Drawing.Size(329, 70)
+        Me.lblRegistroDeUsuarios.TabIndex = 1
+        Me.lblRegistroDeUsuarios.Text = "Registrar médicos y gestores en la aplicación"
         '
         'pnlPatologias
         '
         Me.pnlPatologias.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlPatologias.Controls.Add(Me.Label1)
-        Me.pnlPatologias.Controls.Add(Me.Panel13)
-        Me.pnlPatologias.Controls.Add(Me.Label2)
+        Me.pnlPatologias.Controls.Add(Me.pnlDecoracionPatologias)
+        Me.pnlPatologias.Controls.Add(Me.lblDescripcionPatologias)
+        Me.pnlPatologias.Controls.Add(Me.lblPatologias)
         Me.pnlPatologias.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlPatologias.Location = New System.Drawing.Point(31, 120)
+        Me.pnlPatologias.Location = New System.Drawing.Point(41, 148)
+        Me.pnlPatologias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlPatologias.Name = "pnlPatologias"
-        Me.pnlPatologias.Size = New System.Drawing.Size(255, 180)
+        Me.pnlPatologias.Size = New System.Drawing.Size(340, 222)
         Me.pnlPatologias.TabIndex = 3
         '
-        'Label1
+        'lblDescripcionPatologias
         '
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(30, 81)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 74)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Registrar, modificar, eliminar y  buscar patologías"
+        Me.lblDescripcionPatologias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDescripcionPatologias.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcionPatologias.ForeColor = System.Drawing.Color.White
+        Me.lblDescripcionPatologias.Location = New System.Drawing.Point(40, 100)
+        Me.lblDescripcionPatologias.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionPatologias.Name = "lblDescripcionPatologias"
+        Me.lblDescripcionPatologias.Size = New System.Drawing.Size(261, 91)
+        Me.lblDescripcionPatologias.TabIndex = 8
+        Me.lblDescripcionPatologias.Text = "Registrar, modificar, eliminar y  buscar patologías"
         '
-        'Panel13
+        'pnlDecoracionPatologias
         '
-        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.Panel13.Location = New System.Drawing.Point(0, 0)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(253, 10)
-        Me.Panel13.TabIndex = 4
+        Me.pnlDecoracionPatologias.BackColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.pnlDecoracionPatologias.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDecoracionPatologias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlDecoracionPatologias.Name = "pnlDecoracionPatologias"
+        Me.pnlDecoracionPatologias.Size = New System.Drawing.Size(337, 12)
+        Me.pnlDecoracionPatologias.TabIndex = 4
         '
-        'Label2
+        'lblPatologias
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(23, 27)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 39)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Patologías"
+        Me.lblPatologias.AutoSize = True
+        Me.lblPatologias.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPatologias.ForeColor = System.Drawing.Color.White
+        Me.lblPatologias.Location = New System.Drawing.Point(31, 33)
+        Me.lblPatologias.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPatologias.Name = "lblPatologias"
+        Me.lblPatologias.Size = New System.Drawing.Size(208, 46)
+        Me.lblPatologias.TabIndex = 0
+        Me.lblPatologias.Text = "Patologías"
         '
-        'Panel14
+        'pnlDecoracionSintomas
         '
-        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.Panel14.Location = New System.Drawing.Point(0, 0)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(274, 10)
-        Me.Panel14.TabIndex = 7
+        Me.pnlDecoracionSintomas.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.pnlDecoracionSintomas.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDecoracionSintomas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlDecoracionSintomas.Name = "pnlDecoracionSintomas"
+        Me.pnlDecoracionSintomas.Size = New System.Drawing.Size(365, 12)
+        Me.pnlDecoracionSintomas.TabIndex = 7
         '
         'pnlSintomas
         '
         Me.pnlSintomas.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlSintomas.Controls.Add(Me.Label4)
-        Me.pnlSintomas.Controls.Add(Me.Panel14)
-        Me.pnlSintomas.Controls.Add(Me.Label17)
+        Me.pnlSintomas.Controls.Add(Me.pnlDecoracionSintomas)
+        Me.pnlSintomas.Controls.Add(Me.lblDescripcionSintomas)
+        Me.pnlSintomas.Controls.Add(Me.lblSintomas)
         Me.pnlSintomas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlSintomas.Location = New System.Drawing.Point(304, 120)
+        Me.pnlSintomas.Location = New System.Drawing.Point(405, 148)
+        Me.pnlSintomas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlSintomas.Name = "pnlSintomas"
-        Me.pnlSintomas.Size = New System.Drawing.Size(273, 180)
+        Me.pnlSintomas.Size = New System.Drawing.Size(364, 222)
         Me.pnlSintomas.TabIndex = 8
         '
-        'Label4
+        'lblDescripcionSintomas
         '
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(26, 81)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(196, 74)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Registrar, modificar, eliminar y  buscar síntomas"
+        Me.lblDescripcionSintomas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDescripcionSintomas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcionSintomas.ForeColor = System.Drawing.Color.White
+        Me.lblDescripcionSintomas.Location = New System.Drawing.Point(35, 100)
+        Me.lblDescripcionSintomas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionSintomas.Name = "lblDescripcionSintomas"
+        Me.lblDescripcionSintomas.Size = New System.Drawing.Size(261, 91)
+        Me.lblDescripcionSintomas.TabIndex = 9
+        Me.lblDescripcionSintomas.Text = "Registrar, modificar, eliminar y  buscar síntomas"
         '
-        'Label17
+        'lblSintomas
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(23, 27)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(152, 39)
-        Me.Label17.TabIndex = 0
-        Me.Label17.Text = "Sintomas"
+        Me.lblSintomas.AutoSize = True
+        Me.lblSintomas.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSintomas.ForeColor = System.Drawing.Color.White
+        Me.lblSintomas.Location = New System.Drawing.Point(31, 33)
+        Me.lblSintomas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSintomas.Name = "lblSintomas"
+        Me.lblSintomas.Size = New System.Drawing.Size(187, 46)
+        Me.lblSintomas.TabIndex = 0
+        Me.lblSintomas.Text = "Sintomas"
         '
         'pnlUsuarios
         '
         Me.pnlUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlUsuarios.Controls.Add(Me.Panel17)
-        Me.pnlUsuarios.Controls.Add(Me.Label18)
-        Me.pnlUsuarios.Controls.Add(Me.Label19)
+        Me.pnlUsuarios.Controls.Add(Me.pnlDecoracionUsuarios)
+        Me.pnlUsuarios.Controls.Add(Me.lblDescripcionUsuarios)
+        Me.pnlUsuarios.Controls.Add(Me.lblUsuarios)
         Me.pnlUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pnlUsuarios.Location = New System.Drawing.Point(275, 320)
+        Me.pnlUsuarios.Location = New System.Drawing.Point(367, 394)
+        Me.pnlUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlUsuarios.Name = "pnlUsuarios"
-        Me.pnlUsuarios.Size = New System.Drawing.Size(302, 193)
+        Me.pnlUsuarios.Size = New System.Drawing.Size(403, 238)
         Me.pnlUsuarios.TabIndex = 6
         '
-        'Panel17
+        'pnlDecoracionUsuarios
         '
-        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(187, Byte), Integer))
-        Me.Panel17.Location = New System.Drawing.Point(0, 0)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(301, 10)
-        Me.Panel17.TabIndex = 5
+        Me.pnlDecoracionUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.pnlDecoracionUsuarios.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDecoracionUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlDecoracionUsuarios.Name = "pnlDecoracionUsuarios"
+        Me.pnlDecoracionUsuarios.Size = New System.Drawing.Size(401, 12)
+        Me.pnlDecoracionUsuarios.TabIndex = 5
         '
-        'Label18
+        'lblDescripcionUsuarios
         '
-        Me.Label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label18.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(25, 90)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(253, 77)
-        Me.Label18.TabIndex = 1
-        Me.Label18.Text = "Buscar, modificar o eliminar usuarios registrados en la aplicación"
+        Me.lblDescripcionUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDescripcionUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcionUsuarios.ForeColor = System.Drawing.Color.White
+        Me.lblDescripcionUsuarios.Location = New System.Drawing.Point(33, 111)
+        Me.lblDescripcionUsuarios.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcionUsuarios.Name = "lblDescripcionUsuarios"
+        Me.lblDescripcionUsuarios.Size = New System.Drawing.Size(337, 95)
+        Me.lblDescripcionUsuarios.TabIndex = 1
+        Me.lblDescripcionUsuarios.Text = "Buscar, modificar o eliminar usuarios registrados en la aplicación"
         '
-        'Label19
+        'lblUsuarios
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(22, 33)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(144, 39)
-        Me.Label19.TabIndex = 0
-        Me.Label19.Text = "Usuarios"
+        Me.lblUsuarios.AutoSize = True
+        Me.lblUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuarios.ForeColor = System.Drawing.Color.White
+        Me.lblUsuarios.Location = New System.Drawing.Point(29, 41)
+        Me.lblUsuarios.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblUsuarios.Name = "lblUsuarios"
+        Me.lblUsuarios.Size = New System.Drawing.Size(178, 46)
+        Me.lblUsuarios.TabIndex = 0
+        Me.lblUsuarios.Text = "Usuarios"
         '
         'pnlListadoPacientes
         '
         Me.pnlListadoPacientes.Controls.Add(Me.btnRefrescarListadoPac)
         Me.pnlListadoPacientes.Controls.Add(Me.lblTituloLIstadoPacientes)
         Me.pnlListadoPacientes.Controls.Add(Me.dgvListadoPacientes)
-        Me.pnlListadoPacientes.Location = New System.Drawing.Point(701, 62)
+        Me.pnlListadoPacientes.Location = New System.Drawing.Point(935, 76)
+        Me.pnlListadoPacientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlListadoPacientes.Name = "pnlListadoPacientes"
-        Me.pnlListadoPacientes.Size = New System.Drawing.Size(260, 451)
+        Me.pnlListadoPacientes.Size = New System.Drawing.Size(347, 555)
         Me.pnlListadoPacientes.TabIndex = 24
         Me.pnlListadoPacientes.Visible = False
         '
@@ -459,20 +494,22 @@ Partial Class frmBienvenidaGestor
         Me.btnRefrescarListadoPac.FlatAppearance.BorderSize = 0
         Me.btnRefrescarListadoPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRefrescarListadoPac.Image = Global.Vista.My.Resources.Resources.icons8_refresh_20px
-        Me.btnRefrescarListadoPac.Location = New System.Drawing.Point(224, 3)
+        Me.btnRefrescarListadoPac.Location = New System.Drawing.Point(299, 4)
+        Me.btnRefrescarListadoPac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnRefrescarListadoPac.Name = "btnRefrescarListadoPac"
-        Me.btnRefrescarListadoPac.Size = New System.Drawing.Size(28, 30)
+        Me.btnRefrescarListadoPac.Size = New System.Drawing.Size(37, 37)
         Me.btnRefrescarListadoPac.TabIndex = 25
         Me.btnRefrescarListadoPac.UseVisualStyleBackColor = True
         '
         'lblTituloLIstadoPacientes
         '
         Me.lblTituloLIstadoPacientes.AutoSize = True
-        Me.lblTituloLIstadoPacientes.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTituloLIstadoPacientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTituloLIstadoPacientes.ForeColor = System.Drawing.Color.White
-        Me.lblTituloLIstadoPacientes.Location = New System.Drawing.Point(63, 8)
+        Me.lblTituloLIstadoPacientes.Location = New System.Drawing.Point(84, 10)
+        Me.lblTituloLIstadoPacientes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTituloLIstadoPacientes.Name = "lblTituloLIstadoPacientes"
-        Me.lblTituloLIstadoPacientes.Size = New System.Drawing.Size(135, 19)
+        Me.lblTituloLIstadoPacientes.Size = New System.Drawing.Size(163, 24)
         Me.lblTituloLIstadoPacientes.TabIndex = 147
         Me.lblTituloLIstadoPacientes.Text = "Habilitar pacientes"
         '
@@ -482,7 +519,7 @@ Partial Class frmBienvenidaGestor
         Me.dgvListadoPacientes.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -496,7 +533,7 @@ Partial Class frmBienvenidaGestor
         Me.dgvListadoPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
@@ -508,7 +545,7 @@ Partial Class frmBienvenidaGestor
         Me.dgvListadoPacientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Rechazar, Me.Aceptar})
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(5, 10, 5, 10)
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -516,7 +553,8 @@ Partial Class frmBienvenidaGestor
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvListadoPacientes.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgvListadoPacientes.EnableHeadersVisualStyles = False
-        Me.dgvListadoPacientes.Location = New System.Drawing.Point(0, 39)
+        Me.dgvListadoPacientes.Location = New System.Drawing.Point(0, 48)
+        Me.dgvListadoPacientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvListadoPacientes.MultiSelect = False
         Me.dgvListadoPacientes.Name = "dgvListadoPacientes"
         Me.dgvListadoPacientes.ReadOnly = True
@@ -532,25 +570,8 @@ Partial Class frmBienvenidaGestor
         Me.dgvListadoPacientes.RowHeadersWidth = 51
         Me.dgvListadoPacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvListadoPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvListadoPacientes.Size = New System.Drawing.Size(257, 409)
+        Me.dgvListadoPacientes.Size = New System.Drawing.Size(343, 503)
         Me.dgvListadoPacientes.TabIndex = 146
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 6000
-        '
-        'btnNotificacion
-        '
-        Me.btnNotificacion.FlatAppearance.BorderSize = 0
-        Me.btnNotificacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnNotificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNotificacion.Image = Global.Vista.My.Resources.Resources.icons8_bell_35px
-        Me.btnNotificacion.Location = New System.Drawing.Point(838, 3)
-        Me.btnNotificacion.Name = "btnNotificacion"
-        Me.btnNotificacion.Size = New System.Drawing.Size(43, 44)
-        Me.btnNotificacion.TabIndex = 23
-        Me.btnNotificacion.UseVisualStyleBackColor = True
         '
         'Rechazar
         '
@@ -558,6 +579,7 @@ Partial Class frmBienvenidaGestor
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.Green
         Me.Rechazar.DefaultCellStyle = DataGridViewCellStyle3
         Me.Rechazar.HeaderText = "Rechazar"
+        Me.Rechazar.MinimumWidth = 6
         Me.Rechazar.Name = "Rechazar"
         Me.Rechazar.ReadOnly = True
         Me.Rechazar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
@@ -569,29 +591,49 @@ Partial Class frmBienvenidaGestor
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.Red
         Me.Aceptar.DefaultCellStyle = DataGridViewCellStyle4
         Me.Aceptar.HeaderText = "Aceptar"
+        Me.Aceptar.MinimumWidth = 6
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.ReadOnly = True
         Me.Aceptar.Text = "aceptar"
         '
+        'tempListaPacientes
+        '
+        Me.tempListaPacientes.Enabled = True
+        Me.tempListaPacientes.Interval = 6000
+        '
+        'btnNotificacion
+        '
+        Me.btnNotificacion.FlatAppearance.BorderSize = 0
+        Me.btnNotificacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnNotificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNotificacion.Image = Global.Vista.My.Resources.Resources.icons8_bell_35px
+        Me.btnNotificacion.Location = New System.Drawing.Point(1117, 4)
+        Me.btnNotificacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNotificacion.Name = "btnNotificacion"
+        Me.btnNotificacion.Size = New System.Drawing.Size(57, 54)
+        Me.btnNotificacion.TabIndex = 23
+        Me.btnNotificacion.UseVisualStyleBackColor = True
+        '
         'frmBienvenidaGestor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(981, 551)
+        Me.ClientSize = New System.Drawing.Size(1308, 678)
         Me.Controls.Add(Me.pnlListadoPacientes)
         Me.Controls.Add(Me.btnNotificacion)
         Me.Controls.Add(Me.pnlUsuarios)
         Me.Controls.Add(Me.pnlSintomas)
         Me.Controls.Add(Me.pnlPatologias)
-        Me.Controls.Add(Me.pnlRegistrodeUsuarios)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.pnlRegistroDeUsuarios)
+        Me.Controls.Add(Me.lblMinimizar)
+        Me.Controls.Add(Me.lblCerrar)
         Me.Controls.Add(Me.pnlTopBar)
         Me.Controls.Add(Me.pnlAyuda)
         Me.Controls.Add(Me.pnlMiPerfil)
         Me.Controls.Add(Me.pnlAjustes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmBienvenidaGestor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
@@ -603,8 +645,8 @@ Partial Class frmBienvenidaGestor
         Me.pnlAyuda.PerformLayout()
         Me.pnlTopBar.ResumeLayout(False)
         Me.pnlTopBar.PerformLayout()
-        Me.pnlRegistrodeUsuarios.ResumeLayout(False)
-        Me.pnlRegistrodeUsuarios.PerformLayout()
+        Me.pnlRegistroDeUsuarios.ResumeLayout(False)
+        Me.pnlRegistroDeUsuarios.PerformLayout()
         Me.pnlPatologias.ResumeLayout(False)
         Me.pnlPatologias.PerformLayout()
         Me.pnlSintomas.ResumeLayout(False)
@@ -617,46 +659,46 @@ Partial Class frmBienvenidaGestor
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblBienvenidoGestor As Label
     Friend WithEvents pnlAjustes As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblDescripcionAjustes As Label
+    Friend WithEvents lblAjustes As Label
     Friend WithEvents pnlMiPerfil As Panel
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lblMiPerfil As Label
     Friend WithEvents pnlAyuda As Panel
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents lblDescripcionAyuda As Label
+    Friend WithEvents lblAyuda As Label
     Friend WithEvents pnlTopBar As Panel
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents pnlRegistrodeUsuarios As Panel
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Panel7 As Panel
+    Friend WithEvents lblMinimizar As Label
+    Friend WithEvents lblCerrar As Label
+    Friend WithEvents pnlDecoracionAyuda As Panel
+    Friend WithEvents pnlDecoracionMiPerfil As Panel
+    Friend WithEvents btn2 As Button
+    Friend WithEvents btn1 As Button
+    Friend WithEvents lblDescripcionMiPerfil As Label
+    Friend WithEvents pnlDecoracionAjustes As Panel
+    Friend WithEvents pnlRegistroDeUsuarios As Panel
+    Friend WithEvents lblRegistroDeUsuarios As Label
+    Friend WithEvents pnlDecoracionRegistroDeUsuarios As Panel
     Friend WithEvents pnlPatologias As Panel
-    Friend WithEvents Panel13 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Panel14 As Panel
+    Friend WithEvents pnlDecoracionPatologias As Panel
+    Friend WithEvents lblPatologias As Label
+    Friend WithEvents pnlDecoracionSintomas As Panel
     Friend WithEvents pnlSintomas As Panel
-    Friend WithEvents Label17 As Label
+    Friend WithEvents lblSintomas As Label
     Friend WithEvents pnlUsuarios As Panel
-    Friend WithEvents Panel17 As Panel
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents pnlDecoracionUsuarios As Panel
+    Friend WithEvents lblDescripcionUsuarios As Label
+    Friend WithEvents lblUsuarios As Label
+    Friend WithEvents lblDescripcionRegistroDeUsuarios As Label
+    Friend WithEvents lblDescripcionPatologias As Label
+    Friend WithEvents lblDescripcionSintomas As Label
     Friend WithEvents btnNotificacion As Button
     Friend WithEvents pnlListadoPacientes As Panel
     Friend WithEvents lblTituloLIstadoPacientes As Label
     Friend WithEvents dgvListadoPacientes As DataGridView
     Friend WithEvents btnRefrescarListadoPac As Button
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents tempListaPacientes As Timer
     Friend WithEvents Rechazar As DataGridViewButtonColumn
     Friend WithEvents Aceptar As DataGridViewButtonColumn
 End Class

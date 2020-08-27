@@ -22,313 +22,354 @@ Partial Class frmRegistroGestor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Panel9 = New System.Windows.Forms.Panel()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.pnlDecCI = New System.Windows.Forms.Panel()
         Me.txtCI = New System.Windows.Forms.TextBox()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.txtPrimerNombre = New System.Windows.Forms.TextBox()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtSegundoApellido = New System.Windows.Forms.TextBox()
-        Me.lblSegundoApellido = New System.Windows.Forms.Label()
-        Me.txtPrimerApellido = New System.Windows.Forms.TextBox()
-        Me.lblPrimerApellido = New System.Windows.Forms.Label()
-        Me.txtSegundoNombre = New System.Windows.Forms.TextBox()
-        Me.lblSegundoNombre = New System.Windows.Forms.Label()
-        Me.lblPrimerNombre = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.pnlTitulo = New System.Windows.Forms.Panel()
+        Me.btnAtras = New System.Windows.Forms.Button()
+        Me.lblMinimizar = New System.Windows.Forms.Label()
+        Me.lblCerrar = New System.Windows.Forms.Label()
+        Me.lblCrearCuentaDe = New System.Windows.Forms.Label()
+        Me.lblCI = New System.Windows.Forms.Label()
+        Me.pnlDecPNom = New System.Windows.Forms.Panel()
+        Me.txtPNom = New System.Windows.Forms.TextBox()
+        Me.pnlDecSApe = New System.Windows.Forms.Panel()
+        Me.pnlDecPApe = New System.Windows.Forms.Panel()
+        Me.pnlDecSNom = New System.Windows.Forms.Panel()
+        Me.txtSApe = New System.Windows.Forms.TextBox()
+        Me.lblSApe = New System.Windows.Forms.Label()
+        Me.txtPApe = New System.Windows.Forms.TextBox()
+        Me.lblPApe = New System.Windows.Forms.Label()
+        Me.txtSNom = New System.Windows.Forms.TextBox()
+        Me.lblSNom = New System.Windows.Forms.Label()
+        Me.lblPNom = New System.Windows.Forms.Label()
+        Me.pnlDecMail = New System.Windows.Forms.Panel()
+        Me.txtMail = New System.Windows.Forms.TextBox()
+        Me.lblMail = New System.Windows.Forms.Label()
+        Me.lblTelefonos = New System.Windows.Forms.Label()
+        Me.pnlDecCon = New System.Windows.Forms.Panel()
+        Me.lblCon = New System.Windows.Forms.Label()
+        Me.pnlDecRepCon = New System.Windows.Forms.Panel()
+        Me.lblRepCon = New System.Windows.Forms.Label()
         Me.btnRegistrarGestor = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.pnlDecTelefonos = New System.Windows.Forms.Panel()
+        Me.lblTxtAgregarTelefonos = New System.Windows.Forms.Label()
+        Me.pnlTelefonos = New System.Windows.Forms.Panel()
+        Me.btnAceptar = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.btnEliminar = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.dgvTelefonos = New System.Windows.Forms.DataGridView()
         Me.Telefonos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txtPass2 = New System.Windows.Forms.TextBox()
-        Me.txtPass1 = New System.Windows.Forms.TextBox()
-        Me.btnAtras = New System.Windows.Forms.Button()
-        Me.Panel6.SuspendLayout()
-        Me.Panel12.SuspendLayout()
+        Me.txtRepCon = New System.Windows.Forms.TextBox()
+        Me.txtCon = New System.Windows.Forms.TextBox()
+        Me.pnlTitulo.SuspendLayout()
+        Me.pnlTelefonos.SuspendLayout()
         CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel9
+        'pnlDecCI
         '
-        Me.Panel9.BackColor = System.Drawing.Color.Black
-        Me.Panel9.Location = New System.Drawing.Point(148, 173)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(176, 2)
-        Me.Panel9.TabIndex = 110
+        Me.pnlDecCI.BackColor = System.Drawing.Color.Black
+        Me.pnlDecCI.Location = New System.Drawing.Point(197, 213)
+        Me.pnlDecCI.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecCI.Name = "pnlDecCI"
+        Me.pnlDecCI.Size = New System.Drawing.Size(235, 2)
+        Me.pnlDecCI.TabIndex = 110
         '
         'txtCI
         '
         Me.txtCI.BackColor = System.Drawing.Color.White
         Me.txtCI.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCI.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCI.Location = New System.Drawing.Point(148, 143)
+        Me.txtCI.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCI.Location = New System.Drawing.Point(197, 176)
+        Me.txtCI.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCI.Name = "txtCI"
-        Me.txtCI.Size = New System.Drawing.Size(172, 24)
+        Me.txtCI.Size = New System.Drawing.Size(229, 27)
         Me.txtCI.TabIndex = 109
         '
-        'Panel6
+        'pnlTitulo
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.btnAtras)
-        Me.Panel6.Controls.Add(Me.Label12)
-        Me.Panel6.Controls.Add(Me.Label13)
-        Me.Panel6.Controls.Add(Me.Label4)
-        Me.Panel6.Location = New System.Drawing.Point(0, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1019, 77)
-        Me.Panel6.TabIndex = 111
+        Me.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnlTitulo.Controls.Add(Me.btnAtras)
+        Me.pnlTitulo.Controls.Add(Me.lblCrearCuentaDe)
+        Me.pnlTitulo.Controls.Add(Me.lblMinimizar)
+        Me.pnlTitulo.Controls.Add(Me.lblCerrar)
+        Me.pnlTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTitulo.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlTitulo.Name = "pnlTitulo"
+        Me.pnlTitulo.Size = New System.Drawing.Size(1359, 95)
+        Me.pnlTitulo.TabIndex = 111
         '
-        'Label12
+        'btnAtras
         '
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(938, -6)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 35)
-        Me.Label12.TabIndex = 24
-        Me.Label12.Text = "_"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
+        Me.btnAtras.FlatAppearance.BorderSize = 0
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
+        Me.btnAtras.Location = New System.Drawing.Point(60, 32)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(45, 41)
+        Me.btnAtras.TabIndex = 30
+        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAtras.UseVisualStyleBackColor = True
         '
-        'Label13
+        'lblMinimizar
         '
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(968, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(43, 35)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "X"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMinimizar.ForeColor = System.Drawing.Color.White
+        Me.lblMinimizar.Location = New System.Drawing.Point(1251, 0)
+        Me.lblMinimizar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMinimizar.Name = "lblMinimizar"
+        Me.lblMinimizar.Size = New System.Drawing.Size(32, 43)
+        Me.lblMinimizar.TabIndex = 24
+        Me.lblMinimizar.Text = "_"
+        Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
+        'lblCerrar
         '
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Roboto Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(307, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(393, 57)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "CREAR CUENTA DE GESTOR"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCerrar.ForeColor = System.Drawing.Color.White
+        Me.lblCerrar.Location = New System.Drawing.Point(1291, 0)
+        Me.lblCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCerrar.Name = "lblCerrar"
+        Me.lblCerrar.Size = New System.Drawing.Size(57, 43)
+        Me.lblCerrar.TabIndex = 23
+        Me.lblCerrar.Text = "X"
+        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
+        'lblCrearCuentaDe
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(125, 109)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 26)
-        Me.Label1.TabIndex = 108
-        Me.Label1.Text = "Cédula de Identidad"
+        Me.lblCrearCuentaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblCrearCuentaDe.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCuentaDe.ForeColor = System.Drawing.Color.White
+        Me.lblCrearCuentaDe.Location = New System.Drawing.Point(409, 11)
+        Me.lblCrearCuentaDe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCrearCuentaDe.Name = "lblCrearCuentaDe"
+        Me.lblCrearCuentaDe.Size = New System.Drawing.Size(524, 70)
+        Me.lblCrearCuentaDe.TabIndex = 4
+        Me.lblCrearCuentaDe.Text = "CREAR CUENTA DE GESTOR"
+        Me.lblCrearCuentaDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel3
+        'lblCI
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Black
-        Me.Panel3.Location = New System.Drawing.Point(12, 332)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(218, 2)
-        Me.Panel3.TabIndex = 107
+        Me.lblCI.AutoSize = True
+        Me.lblCI.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCI.Location = New System.Drawing.Point(167, 134)
+        Me.lblCI.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCI.Name = "lblCI"
+        Me.lblCI.Size = New System.Drawing.Size(256, 31)
+        Me.lblCI.TabIndex = 108
+        Me.lblCI.Text = "Cédula de Identidad"
         '
-        'txtPrimerNombre
+        'pnlDecPNom
         '
-        Me.txtPrimerNombre.BackColor = System.Drawing.Color.White
-        Me.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerNombre.Location = New System.Drawing.Point(12, 302)
-        Me.txtPrimerNombre.Name = "txtPrimerNombre"
-        Me.txtPrimerNombre.Size = New System.Drawing.Size(214, 24)
-        Me.txtPrimerNombre.TabIndex = 112
+        Me.pnlDecPNom.BackColor = System.Drawing.Color.Black
+        Me.pnlDecPNom.Location = New System.Drawing.Point(16, 409)
+        Me.pnlDecPNom.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecPNom.Name = "pnlDecPNom"
+        Me.pnlDecPNom.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecPNom.TabIndex = 107
         '
-        'Panel5
+        'txtPNom
         '
-        Me.Panel5.BackColor = System.Drawing.Color.Black
-        Me.Panel5.Location = New System.Drawing.Point(771, 329)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(218, 2)
-        Me.Panel5.TabIndex = 105
+        Me.txtPNom.BackColor = System.Drawing.Color.White
+        Me.txtPNom.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPNom.Location = New System.Drawing.Point(16, 374)
+        Me.txtPNom.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPNom.Name = "txtPNom"
+        Me.txtPNom.Size = New System.Drawing.Size(285, 27)
+        Me.txtPNom.TabIndex = 112
         '
-        'Panel4
+        'pnlDecSApe
         '
-        Me.Panel4.BackColor = System.Drawing.Color.Black
-        Me.Panel4.Location = New System.Drawing.Point(505, 332)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(218, 2)
-        Me.Panel4.TabIndex = 104
+        Me.pnlDecSApe.BackColor = System.Drawing.Color.Black
+        Me.pnlDecSApe.Location = New System.Drawing.Point(1028, 405)
+        Me.pnlDecSApe.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecSApe.Name = "pnlDecSApe"
+        Me.pnlDecSApe.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecSApe.TabIndex = 105
         '
-        'Panel2
+        'pnlDecPApe
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Black
-        Me.Panel2.Location = New System.Drawing.Point(256, 332)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(218, 2)
-        Me.Panel2.TabIndex = 103
+        Me.pnlDecPApe.BackColor = System.Drawing.Color.Black
+        Me.pnlDecPApe.Location = New System.Drawing.Point(673, 409)
+        Me.pnlDecPApe.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecPApe.Name = "pnlDecPApe"
+        Me.pnlDecPApe.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecPApe.TabIndex = 104
         '
-        'txtSegundoApellido
+        'pnlDecSNom
         '
-        Me.txtSegundoApellido.BackColor = System.Drawing.Color.White
-        Me.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoApellido.Location = New System.Drawing.Point(771, 299)
-        Me.txtSegundoApellido.Name = "txtSegundoApellido"
-        Me.txtSegundoApellido.Size = New System.Drawing.Size(214, 24)
-        Me.txtSegundoApellido.TabIndex = 115
+        Me.pnlDecSNom.BackColor = System.Drawing.Color.Black
+        Me.pnlDecSNom.Location = New System.Drawing.Point(341, 409)
+        Me.pnlDecSNom.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecSNom.Name = "pnlDecSNom"
+        Me.pnlDecSNom.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecSNom.TabIndex = 103
         '
-        'lblSegundoApellido
+        'txtSApe
         '
-        Me.lblSegundoApellido.AutoSize = True
-        Me.lblSegundoApellido.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSegundoApellido.Location = New System.Drawing.Point(785, 259)
-        Me.lblSegundoApellido.Name = "lblSegundoApellido"
-        Me.lblSegundoApellido.Size = New System.Drawing.Size(176, 26)
-        Me.lblSegundoApellido.TabIndex = 102
-        Me.lblSegundoApellido.Text = "Segundo Apellido"
+        Me.txtSApe.BackColor = System.Drawing.Color.White
+        Me.txtSApe.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtSApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSApe.Location = New System.Drawing.Point(1028, 368)
+        Me.txtSApe.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSApe.Name = "txtSApe"
+        Me.txtSApe.Size = New System.Drawing.Size(285, 27)
+        Me.txtSApe.TabIndex = 115
         '
-        'txtPrimerApellido
+        'lblSApe
         '
-        Me.txtPrimerApellido.BackColor = System.Drawing.Color.White
-        Me.txtPrimerApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerApellido.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerApellido.Location = New System.Drawing.Point(509, 302)
-        Me.txtPrimerApellido.Name = "txtPrimerApellido"
-        Me.txtPrimerApellido.Size = New System.Drawing.Size(214, 24)
-        Me.txtPrimerApellido.TabIndex = 114
+        Me.lblSApe.AutoSize = True
+        Me.lblSApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSApe.Location = New System.Drawing.Point(1047, 319)
+        Me.lblSApe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSApe.Name = "lblSApe"
+        Me.lblSApe.Size = New System.Drawing.Size(225, 31)
+        Me.lblSApe.TabIndex = 102
+        Me.lblSApe.Text = "Segundo Apellido"
         '
-        'lblPrimerApellido
+        'txtPApe
         '
-        Me.lblPrimerApellido.AutoSize = True
-        Me.lblPrimerApellido.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrimerApellido.Location = New System.Drawing.Point(546, 266)
-        Me.lblPrimerApellido.Name = "lblPrimerApellido"
-        Me.lblPrimerApellido.Size = New System.Drawing.Size(154, 26)
-        Me.lblPrimerApellido.TabIndex = 101
-        Me.lblPrimerApellido.Text = "Primer Apellido"
+        Me.txtPApe.BackColor = System.Drawing.Color.White
+        Me.txtPApe.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPApe.Location = New System.Drawing.Point(679, 372)
+        Me.txtPApe.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPApe.Name = "txtPApe"
+        Me.txtPApe.Size = New System.Drawing.Size(285, 27)
+        Me.txtPApe.TabIndex = 114
         '
-        'txtSegundoNombre
+        'lblPApe
         '
-        Me.txtSegundoNombre.BackColor = System.Drawing.Color.White
-        Me.txtSegundoNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoNombre.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoNombre.Location = New System.Drawing.Point(256, 302)
-        Me.txtSegundoNombre.Name = "txtSegundoNombre"
-        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 24)
-        Me.txtSegundoNombre.TabIndex = 113
+        Me.lblPApe.AutoSize = True
+        Me.lblPApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPApe.Location = New System.Drawing.Point(728, 327)
+        Me.lblPApe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPApe.Name = "lblPApe"
+        Me.lblPApe.Size = New System.Drawing.Size(196, 31)
+        Me.lblPApe.TabIndex = 101
+        Me.lblPApe.Text = "Primer Apellido"
         '
-        'lblSegundoNombre
+        'txtSNom
         '
-        Me.lblSegundoNombre.AutoSize = True
-        Me.lblSegundoNombre.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSegundoNombre.Location = New System.Drawing.Point(279, 261)
-        Me.lblSegundoNombre.Name = "lblSegundoNombre"
-        Me.lblSegundoNombre.Size = New System.Drawing.Size(175, 26)
-        Me.lblSegundoNombre.TabIndex = 99
-        Me.lblSegundoNombre.Text = "Segundo Nombre"
+        Me.txtSNom.BackColor = System.Drawing.Color.White
+        Me.txtSNom.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtSNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSNom.Location = New System.Drawing.Point(341, 372)
+        Me.txtSNom.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSNom.Name = "txtSNom"
+        Me.txtSNom.Size = New System.Drawing.Size(291, 27)
+        Me.txtSNom.TabIndex = 113
         '
-        'lblPrimerNombre
+        'lblSNom
         '
-        Me.lblPrimerNombre.AutoSize = True
-        Me.lblPrimerNombre.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrimerNombre.Location = New System.Drawing.Point(40, 262)
-        Me.lblPrimerNombre.Name = "lblPrimerNombre"
-        Me.lblPrimerNombre.Size = New System.Drawing.Size(153, 26)
-        Me.lblPrimerNombre.TabIndex = 96
-        Me.lblPrimerNombre.Text = "Primer Nombre"
+        Me.lblSNom.AutoSize = True
+        Me.lblSNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSNom.Location = New System.Drawing.Point(372, 321)
+        Me.lblSNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSNom.Name = "lblSNom"
+        Me.lblSNom.Size = New System.Drawing.Size(225, 31)
+        Me.lblSNom.TabIndex = 99
+        Me.lblSNom.Text = "Segundo Nombre"
         '
-        'Panel7
+        'lblPNom
         '
-        Me.Panel7.BackColor = System.Drawing.Color.Black
-        Me.Panel7.Location = New System.Drawing.Point(577, 449)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(218, 2)
-        Me.Panel7.TabIndex = 121
+        Me.lblPNom.AutoSize = True
+        Me.lblPNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPNom.Location = New System.Drawing.Point(53, 322)
+        Me.lblPNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPNom.Name = "lblPNom"
+        Me.lblPNom.Size = New System.Drawing.Size(196, 31)
+        Me.lblPNom.TabIndex = 96
+        Me.lblPNom.Text = "Primer Nombre"
         '
-        'txtEmail
+        'pnlDecMail
         '
-        Me.txtEmail.BackColor = System.Drawing.Color.White
-        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEmail.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(574, 419)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(223, 24)
-        Me.txtEmail.TabIndex = 116
+        Me.pnlDecMail.BackColor = System.Drawing.Color.Black
+        Me.pnlDecMail.Location = New System.Drawing.Point(769, 553)
+        Me.pnlDecMail.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecMail.Name = "pnlDecMail"
+        Me.pnlDecMail.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecMail.TabIndex = 121
         '
-        'Label2
+        'txtMail
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(651, 378)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 26)
-        Me.Label2.TabIndex = 120
-        Me.Label2.Text = "e-mail"
+        Me.txtMail.BackColor = System.Drawing.Color.White
+        Me.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtMail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMail.Location = New System.Drawing.Point(765, 516)
+        Me.txtMail.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMail.Name = "txtMail"
+        Me.txtMail.Size = New System.Drawing.Size(297, 27)
+        Me.txtMail.TabIndex = 116
         '
-        'Label3
+        'lblMail
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(323, 373)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 26)
-        Me.Label3.TabIndex = 118
-        Me.Label3.Text = "Teléfonos"
+        Me.lblMail.AutoSize = True
+        Me.lblMail.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMail.Location = New System.Drawing.Point(868, 465)
+        Me.lblMail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMail.Name = "lblMail"
+        Me.lblMail.Size = New System.Drawing.Size(87, 31)
+        Me.lblMail.TabIndex = 120
+        Me.lblMail.Text = "e-mail"
         '
-        'Panel8
+        'lblTelefonos
         '
-        Me.Panel8.BackColor = System.Drawing.Color.Black
-        Me.Panel8.Location = New System.Drawing.Point(418, 173)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(176, 2)
-        Me.Panel8.TabIndex = 113
+        Me.lblTelefonos.AutoSize = True
+        Me.lblTelefonos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefonos.Location = New System.Drawing.Point(431, 459)
+        Me.lblTelefonos.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTelefonos.Name = "lblTelefonos"
+        Me.lblTelefonos.Size = New System.Drawing.Size(134, 31)
+        Me.lblTelefonos.TabIndex = 118
+        Me.lblTelefonos.Text = "Teléfonos"
         '
-        'Label5
+        'pnlDecCon
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(438, 109)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(120, 26)
-        Me.Label5.TabIndex = 111
-        Me.Label5.Text = "Contraseña"
+        Me.pnlDecCon.BackColor = System.Drawing.Color.Black
+        Me.pnlDecCon.Location = New System.Drawing.Point(557, 213)
+        Me.pnlDecCon.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecCon.Name = "pnlDecCon"
+        Me.pnlDecCon.Size = New System.Drawing.Size(235, 2)
+        Me.pnlDecCon.TabIndex = 113
         '
-        'Panel10
+        'lblCon
         '
-        Me.Panel10.BackColor = System.Drawing.Color.Black
-        Me.Panel10.Location = New System.Drawing.Point(665, 173)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(176, 2)
-        Me.Panel10.TabIndex = 116
+        Me.lblCon.AutoSize = True
+        Me.lblCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCon.Location = New System.Drawing.Point(584, 134)
+        Me.lblCon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCon.Name = "lblCon"
+        Me.lblCon.Size = New System.Drawing.Size(155, 31)
+        Me.lblCon.TabIndex = 111
+        Me.lblCon.Text = "Contraseña"
         '
-        'Label6
+        'pnlDecRepCon
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(652, 109)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(191, 26)
-        Me.Label6.TabIndex = 114
-        Me.Label6.Text = "Repetir Contraseña"
+        Me.pnlDecRepCon.BackColor = System.Drawing.Color.Black
+        Me.pnlDecRepCon.Location = New System.Drawing.Point(887, 213)
+        Me.pnlDecRepCon.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecRepCon.Name = "pnlDecRepCon"
+        Me.pnlDecRepCon.Size = New System.Drawing.Size(235, 2)
+        Me.pnlDecRepCon.TabIndex = 116
+        '
+        'lblRepCon
+        '
+        Me.lblRepCon.AutoSize = True
+        Me.lblRepCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRepCon.Location = New System.Drawing.Point(869, 134)
+        Me.lblRepCon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRepCon.Name = "lblRepCon"
+        Me.lblRepCon.Size = New System.Drawing.Size(250, 31)
+        Me.lblRepCon.TabIndex = 114
+        Me.lblRepCon.Text = "Repetir Contraseña"
         '
         'btnRegistrarGestor
         '
@@ -336,60 +377,65 @@ Partial Class frmRegistroGestor
         Me.btnRegistrarGestor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnRegistrarGestor.Depth = 0
         Me.btnRegistrarGestor.Icon = Nothing
-        Me.btnRegistrarGestor.Location = New System.Drawing.Point(443, 606)
+        Me.btnRegistrarGestor.Location = New System.Drawing.Point(591, 746)
+        Me.btnRegistrarGestor.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRegistrarGestor.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnRegistrarGestor.Name = "btnRegistrarGestor"
         Me.btnRegistrarGestor.Primary = True
-        Me.btnRegistrarGestor.Size = New System.Drawing.Size(149, 36)
+        Me.btnRegistrarGestor.Size = New System.Drawing.Size(182, 36)
         Me.btnRegistrarGestor.TabIndex = 126
         Me.btnRegistrarGestor.Text = "registrar gestor"
         Me.btnRegistrarGestor.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'pnlDecTelefonos
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Location = New System.Drawing.Point(256, 454)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(230, 2)
-        Me.Panel1.TabIndex = 131
+        Me.pnlDecTelefonos.BackColor = System.Drawing.Color.Black
+        Me.pnlDecTelefonos.Location = New System.Drawing.Point(341, 559)
+        Me.pnlDecTelefonos.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecTelefonos.Name = "pnlDecTelefonos"
+        Me.pnlDecTelefonos.Size = New System.Drawing.Size(307, 2)
+        Me.pnlDecTelefonos.TabIndex = 131
         '
-        'Label10
+        'lblTxtAgregarTelefonos
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label10.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(288, 419)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(177, 25)
-        Me.Label10.TabIndex = 164
-        Me.Label10.Text = "Agregar teléfonos"
+        Me.lblTxtAgregarTelefonos.AutoSize = True
+        Me.lblTxtAgregarTelefonos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblTxtAgregarTelefonos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTxtAgregarTelefonos.Location = New System.Drawing.Point(384, 516)
+        Me.lblTxtAgregarTelefonos.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTxtAgregarTelefonos.Name = "lblTxtAgregarTelefonos"
+        Me.lblTxtAgregarTelefonos.Size = New System.Drawing.Size(228, 31)
+        Me.lblTxtAgregarTelefonos.TabIndex = 164
+        Me.lblTxtAgregarTelefonos.Text = "Agregar teléfonos"
         '
-        'Panel12
+        'pnlTelefonos
         '
-        Me.Panel12.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel12.Controls.Add(Me.MaterialRaisedButton2)
-        Me.Panel12.Controls.Add(Me.btnEliminar)
-        Me.Panel12.Controls.Add(Me.dgvTelefonos)
-        Me.Panel12.Location = New System.Drawing.Point(223, 462)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(300, 128)
-        Me.Panel12.TabIndex = 163
-        Me.Panel12.Visible = False
+        Me.pnlTelefonos.BackColor = System.Drawing.SystemColors.Window
+        Me.pnlTelefonos.Controls.Add(Me.btnAceptar)
+        Me.pnlTelefonos.Controls.Add(Me.btnEliminar)
+        Me.pnlTelefonos.Controls.Add(Me.dgvTelefonos)
+        Me.pnlTelefonos.Location = New System.Drawing.Point(297, 569)
+        Me.pnlTelefonos.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlTelefonos.Name = "pnlTelefonos"
+        Me.pnlTelefonos.Size = New System.Drawing.Size(400, 158)
+        Me.pnlTelefonos.TabIndex = 163
+        Me.pnlTelefonos.Visible = False
         '
-        'MaterialRaisedButton2
+        'btnAceptar
         '
-        Me.MaterialRaisedButton2.AutoSize = True
-        Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton2.Depth = 0
-        Me.MaterialRaisedButton2.Icon = Nothing
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(212, 62)
-        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
-        Me.MaterialRaisedButton2.Primary = True
-        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(82, 36)
-        Me.MaterialRaisedButton2.TabIndex = 162
-        Me.MaterialRaisedButton2.Text = "aceptar"
-        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
+        Me.btnAceptar.AutoSize = True
+        Me.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnAceptar.Depth = 0
+        Me.btnAceptar.Icon = Nothing
+        Me.btnAceptar.Location = New System.Drawing.Point(283, 76)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Primary = True
+        Me.btnAceptar.Size = New System.Drawing.Size(98, 36)
+        Me.btnAceptar.TabIndex = 162
+        Me.btnAceptar.Text = "aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
@@ -398,179 +444,172 @@ Partial Class frmRegistroGestor
         Me.btnEliminar.Depth = 0
         Me.btnEliminar.Enabled = False
         Me.btnEliminar.Icon = Nothing
-        Me.btnEliminar.Location = New System.Drawing.Point(212, 20)
+        Me.btnEliminar.Location = New System.Drawing.Point(283, 25)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Primary = True
-        Me.btnEliminar.Size = New System.Drawing.Size(83, 36)
+        Me.btnEliminar.Size = New System.Drawing.Size(100, 36)
         Me.btnEliminar.TabIndex = 161
         Me.btnEliminar.Text = "eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'dgvTelefonos
         '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.dgvTelefonos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvTelefonos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTelefonos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTelefonos.BackgroundColor = System.Drawing.Color.White
         Me.dgvTelefonos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTelefonos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTelefonos.ColumnHeadersVisible = False
         Me.dgvTelefonos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Telefonos})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle9
-        Me.dgvTelefonos.Location = New System.Drawing.Point(12, 3)
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(84, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTelefonos.DefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvTelefonos.Location = New System.Drawing.Point(16, 4)
+        Me.dgvTelefonos.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvTelefonos.MultiSelect = False
         Me.dgvTelefonos.Name = "dgvTelefonos"
         Me.dgvTelefonos.RowHeadersVisible = False
         Me.dgvTelefonos.RowHeadersWidth = 51
         Me.dgvTelefonos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTelefonos.Size = New System.Drawing.Size(194, 111)
+        Me.dgvTelefonos.Size = New System.Drawing.Size(259, 137)
         Me.dgvTelefonos.TabIndex = 159
         '
         'Telefonos
         '
         Me.Telefonos.HeaderText = "Telefonos"
+        Me.Telefonos.MinimumWidth = 6
         Me.Telefonos.Name = "Telefonos"
         '
-        'txtPass2
+        'txtRepCon
         '
-        Me.txtPass2.BackColor = System.Drawing.Color.White
-        Me.txtPass2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass2.Location = New System.Drawing.Point(656, 143)
-        Me.txtPass2.Name = "txtPass2"
-        Me.txtPass2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass2.Size = New System.Drawing.Size(181, 24)
-        Me.txtPass2.TabIndex = 111
+        Me.txtRepCon.BackColor = System.Drawing.Color.White
+        Me.txtRepCon.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtRepCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRepCon.Location = New System.Drawing.Point(875, 176)
+        Me.txtRepCon.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtRepCon.Name = "txtRepCon"
+        Me.txtRepCon.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtRepCon.Size = New System.Drawing.Size(241, 27)
+        Me.txtRepCon.TabIndex = 111
         '
-        'txtPass1
+        'txtCon
         '
-        Me.txtPass1.BackColor = System.Drawing.Color.White
-        Me.txtPass1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass1.Location = New System.Drawing.Point(418, 143)
-        Me.txtPass1.Name = "txtPass1"
-        Me.txtPass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass1.Size = New System.Drawing.Size(176, 24)
-        Me.txtPass1.TabIndex = 110
-        '
-        'btnAtras
-        '
-        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icoFlechaAtras
-        Me.btnAtras.FlatAppearance.BorderSize = 0
-        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
-        Me.btnAtras.Location = New System.Drawing.Point(45, 26)
-        Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
-        Me.btnAtras.TabIndex = 30
-        Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnAtras.UseVisualStyleBackColor = True
+        Me.txtCon.BackColor = System.Drawing.Color.White
+        Me.txtCon.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCon.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCon.Location = New System.Drawing.Point(557, 176)
+        Me.txtCon.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCon.Name = "txtCon"
+        Me.txtCon.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtCon.Size = New System.Drawing.Size(235, 27)
+        Me.txtCon.TabIndex = 110
         '
         'frmRegistroGestor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1012, 669)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Panel12)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnRegistrarGestor)
-        Me.Controls.Add(Me.Panel10)
-        Me.Controls.Add(Me.txtPass2)
-        Me.Controls.Add(Me.Panel8)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtPass1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.txtEmail)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Panel9)
+        Me.ClientSize = New System.Drawing.Size(1349, 823)
+        Me.Controls.Add(Me.pnlTitulo)
+        Me.Controls.Add(Me.lblCI)
         Me.Controls.Add(Me.txtCI)
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.txtPrimerNombre)
-        Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.txtSegundoApellido)
-        Me.Controls.Add(Me.lblSegundoApellido)
-        Me.Controls.Add(Me.txtPrimerApellido)
-        Me.Controls.Add(Me.lblPrimerApellido)
-        Me.Controls.Add(Me.txtSegundoNombre)
-        Me.Controls.Add(Me.lblSegundoNombre)
-        Me.Controls.Add(Me.lblPrimerNombre)
+        Me.Controls.Add(Me.pnlDecCI)
+        Me.Controls.Add(Me.lblCon)
+        Me.Controls.Add(Me.txtCon)
+        Me.Controls.Add(Me.pnlDecCon)
+        Me.Controls.Add(Me.lblRepCon)
+        Me.Controls.Add(Me.txtRepCon)
+        Me.Controls.Add(Me.pnlDecRepCon)
+        Me.Controls.Add(Me.lblPNom)
+        Me.Controls.Add(Me.txtPNom)
+        Me.Controls.Add(Me.pnlDecPNom)
+        Me.Controls.Add(Me.lblSNom)
+        Me.Controls.Add(Me.txtSNom)
+        Me.Controls.Add(Me.pnlDecSNom)
+        Me.Controls.Add(Me.lblPApe)
+        Me.Controls.Add(Me.txtPApe)
+        Me.Controls.Add(Me.pnlDecPApe)
+        Me.Controls.Add(Me.lblSApe)
+        Me.Controls.Add(Me.txtSApe)
+        Me.Controls.Add(Me.pnlDecSApe)
+        Me.Controls.Add(Me.lblTelefonos)
+        Me.Controls.Add(Me.lblTxtAgregarTelefonos)
+        Me.Controls.Add(Me.pnlDecTelefonos)
+        Me.Controls.Add(Me.pnlTelefonos)
+        Me.Controls.Add(Me.lblMail)
+        Me.Controls.Add(Me.txtMail)
+        Me.Controls.Add(Me.pnlDecMail)
+        Me.Controls.Add(Me.btnRegistrarGestor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmRegistroGestor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistrarGestor"
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
+        Me.pnlTitulo.ResumeLayout(False)
+        Me.pnlTelefonos.ResumeLayout(False)
+        Me.pnlTelefonos.PerformLayout()
         CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel9 As Panel
+    Friend WithEvents pnlDecCI As Panel
     Friend WithEvents txtCI As TextBox
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents txtPrimerNombre As TextBox
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents txtSegundoApellido As TextBox
-    Friend WithEvents lblSegundoApellido As Label
-    Friend WithEvents txtPrimerApellido As TextBox
-    Friend WithEvents lblPrimerApellido As Label
-    Friend WithEvents txtSegundoNombre As TextBox
-    Friend WithEvents lblSegundoNombre As Label
-    Friend WithEvents lblPrimerNombre As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents txtEmail As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label6 As Label
+    Friend WithEvents pnlTitulo As Panel
+    Friend WithEvents lblCrearCuentaDe As Label
+    Friend WithEvents lblCI As Label
+    Friend WithEvents pnlDecPNom As Panel
+    Friend WithEvents txtPNom As TextBox
+    Friend WithEvents pnlDecSApe As Panel
+    Friend WithEvents pnlDecPApe As Panel
+    Friend WithEvents pnlDecSNom As Panel
+    Friend WithEvents txtSApe As TextBox
+    Friend WithEvents lblSApe As Label
+    Friend WithEvents txtPApe As TextBox
+    Friend WithEvents lblPApe As Label
+    Friend WithEvents txtSNom As TextBox
+    Friend WithEvents lblSNom As Label
+    Friend WithEvents lblPNom As Label
+    Friend WithEvents lblMinimizar As Label
+    Friend WithEvents lblCerrar As Label
+    Friend WithEvents pnlDecMail As Panel
+    Friend WithEvents txtMail As TextBox
+    Friend WithEvents lblMail As Label
+    Friend WithEvents lblTelefonos As Label
+    Friend WithEvents pnlDecCon As Panel
+    Friend WithEvents lblCon As Label
+    Friend WithEvents pnlDecRepCon As Panel
+    Friend WithEvents lblRepCon As Label
     Friend WithEvents btnRegistrarGestor As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Panel12 As Panel
-    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents pnlDecTelefonos As Panel
+    Friend WithEvents lblTxtAgregarTelefonos As Label
+    Friend WithEvents pnlTelefonos As Panel
+    Friend WithEvents btnAceptar As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents dgvTelefonos As DataGridView
     Friend WithEvents Telefonos As DataGridViewTextBoxColumn
-    Friend WithEvents txtPass2 As TextBox
-    Friend WithEvents txtPass1 As TextBox
+    Friend WithEvents txtRepCon As TextBox
+    Friend WithEvents txtCon As TextBox
     Friend WithEvents btnAtras As Button
 End Class

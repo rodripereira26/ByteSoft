@@ -2,10 +2,10 @@
 Public Class frmRegistrarSintoma
 
     Private Sub RegistrarSintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Label13.Select()
+        lblCerrar.Select()
     End Sub
 
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles mrbtnRegistrarSintoma.Click
 
         If txtDescripcion.Text.Length > 10 Then
             Dim sintoma As New ControladorSintoma(txtNomSintoma.Text, txtDescripcion.Text)
@@ -21,7 +21,7 @@ Public Class frmRegistrarSintoma
 
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
         Application.Exit()
     End Sub
 

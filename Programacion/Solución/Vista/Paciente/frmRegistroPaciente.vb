@@ -11,7 +11,7 @@ Public Class frmRegistroPaciente
         Principal.Singleton.roundedCorners(Me)
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
         Me.Close()
         frmLogin.Show()
     End Sub
@@ -22,12 +22,12 @@ Public Class frmRegistroPaciente
 
     End Sub
 
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles mrbtnSolicitarCuenta.Click
 
-        If Principal.Singleton.verificarCedula(check, txtCed.Text) Then
-            If Principal.Singleton.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
-                pass = seg.HASH256(txtPass1.Text)
-                If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
+        If Principal.Singleton.verificarCedula(check, txtCI.Text) Then
+            If Principal.Singleton.verificarContraseña(seg, txtPass.Text, txtRepPass.Text) Then
+                pass = seg.HASH256(txtPass.Text)
+                If Principal.Singleton.verificarString(check, txtPNom.Text, txtPApe.Text, txtSNom.Text, txtSApe.Text) Then
                     If Principal.Singleton.verificarEmail(check, txtMail.Text) Then
                         If Principal.Singleton.verificarTelefonos(dgvTelefonos, aliTel) Then
                             If txtFecNac.Text <> "" Then
@@ -38,12 +38,12 @@ Public Class frmRegistroPaciente
                                     sexo = "F"
                                 End If
 
-                                Dim pac As New ControladorPaciente(txtCed.Text,
+                                Dim pac As New ControladorPaciente(txtCI.Text,
                                            pass,
-                                           txtPrimerNombre.Text.ToUpper,
-                                           txtSegundoNombre.Text.ToUpper,
-                                           txtPrimerApellido.Text.ToUpper,
-                                           txtSegundoApellido.Text.ToUpper,
+                                           txtPNom.Text.ToUpper,
+                                           txtSNom.Text.ToUpper,
+                                           txtPApe.Text.ToUpper,
+                                           txtSApe.Text.ToUpper,
                                            aliTel,
                                            txtMail.Text,
                                            sexo,
@@ -52,9 +52,9 @@ Public Class frmRegistroPaciente
                                 If pac.registrar() Then
 
                                     MsgBox("Paciente registrado, debe esperar a ser habilitiado")
-                                    Principal.Singleton.limpiar(txtCed, txtPass1, txtPass2, txtPrimerNombre,
-                                            txtPrimerApellido,
-                                            txtSegundoApellido, txtSegundoNombre,
+                                    Principal.Singleton.limpiar(txtCI, txtPass, txtRepPass, txtPNom,
+                                            txtPApe,
+                                            txtSApe, txtSNom,
                                             txtMail, dgvTelefonos, aliTel)
                                     txtFecNac.Clear()
                                     cbM.Checked = True
@@ -78,7 +78,7 @@ Public Class frmRegistroPaciente
 
     End Sub
 
-    Private Sub MaterialRaisedButton2_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
+    Private Sub MaterialRaisedButton2_Click_1(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
         If check.verificar_int(dgvTelefonos.Rows(dgvTelefonos.Rows.Count - 2).Cells(0).Value.ToString) = False Then
 
@@ -87,16 +87,16 @@ Public Class frmRegistroPaciente
 
         End If
 
-        Panel12.Hide()
+        pnlAgregarTelefonos1.Hide()
         ''add animacion
 
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles lblAgregarTelefonos.Click
 
-        If Panel12.Visible = False Then
+        If pnlAgregarTelefonos1.Visible = False Then
 
-            Panel12.Visible = True
+            pnlAgregarTelefonos1.Visible = True
 
         End If
 
@@ -118,9 +118,9 @@ Public Class frmRegistroPaciente
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         MsgBox(txtFecNac.Text)
-        If Not (txtCed.Text = Nothing And txtPrimerNombre.Text = Nothing And txtPrimerApellido.Text = Nothing And
-            txtPrimerNombre.Text = Nothing And txtSegundoApellido.Text = Nothing And txtSegundoNombre.Text = Nothing And
-            txtPass1.Text = Nothing And txtPass2.Text = Nothing And dgvTelefonos.Rows.Count > 0) Then 'agregar txtFecnac
+        If Not (txtCI.Text = Nothing And txtPNom.Text = Nothing And txtPApe.Text = Nothing And
+            txtPNom.Text = Nothing And txtSApe.Text = Nothing And txtSNom.Text = Nothing And
+            txtPass.Text = Nothing And txtRepPass.Text = Nothing And dgvTelefonos.Rows.Count > 0) Then 'agregar txtFecnac
             Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
             If res = vbYes Then
                 Me.Close()

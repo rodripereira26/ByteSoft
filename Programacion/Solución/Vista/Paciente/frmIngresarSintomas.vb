@@ -8,7 +8,7 @@ Public Class frmIngresarSintomas
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Me.MaterialRaisedButton1.AutoSize = False
+        Me.btnObtenerDiagnostico.AutoSize = False
         Principal.Singleton.roundedCorners(Me)
 
         Dim sintomas As New ControladorSintoma
@@ -83,7 +83,7 @@ Public Class frmIngresarSintomas
         dropItem(dgvSintomasSeleccionados, dgvTodos, e)
     End Sub
 
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles btnObtenerDiagnostico.Click
 
         Dim misSintomas As New ArrayList
         Dim pat As New ControladorPatologia
@@ -148,7 +148,7 @@ Public Class frmIngresarSintomas
         'dgvTodos.DataSource = bs
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         frmBienvenidaPaciente.Show()
         Me.Dispose()
     End Sub

@@ -22,130 +22,139 @@ Partial Class frmVerPerfil
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.lblMail = New System.Windows.Forms.Label()
+        Me.lblTelefonos = New System.Windows.Forms.Label()
+        Me.lblPatologiasCronicas = New System.Windows.Forms.Label()
+        Me.lblMinimizar = New System.Windows.Forms.Label()
+        Me.lblCerrar = New System.Windows.Forms.Label()
+        Me.picEditar = New System.Windows.Forms.PictureBox()
+        Me.picImagenPerfil = New System.Windows.Forms.PictureBox()
+        CType(Me.picEditar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picImagenPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblNombre
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(23, 248)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(345, 26)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Nombre:  xxxxxxxxxxxxxxxxxxxxxxxx"
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(31, 305)
+        Me.lblNombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(383, 29)
+        Me.lblNombre.TabIndex = 1
+        Me.lblNombre.Text = "Nombre:  xxxxxxxxxxxxxxxxxxxxxxxx"
         '
-        'Label2
+        'lblMail
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(23, 322)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(270, 26)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "e-mail: xxxxxxxxxxxxxxxxxxx"
+        Me.lblMail.AutoSize = True
+        Me.lblMail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMail.Location = New System.Drawing.Point(31, 396)
+        Me.lblMail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMail.Name = "lblMail"
+        Me.lblMail.Size = New System.Drawing.Size(301, 29)
+        Me.lblMail.TabIndex = 2
+        Me.lblMail.Text = "e-mail: xxxxxxxxxxxxxxxxxxx"
         '
-        'Label3
+        'lblTelefonos
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(23, 396)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(220, 26)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Teléfonos: xxxxxxxxxxx"
+        Me.lblTelefonos.AutoSize = True
+        Me.lblTelefonos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefonos.Location = New System.Drawing.Point(31, 487)
+        Me.lblTelefonos.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTelefonos.Name = "lblTelefonos"
+        Me.lblTelefonos.Size = New System.Drawing.Size(255, 29)
+        Me.lblTelefonos.TabIndex = 3
+        Me.lblTelefonos.Text = "Teléfonos: xxxxxxxxxxx"
         '
-        'Label4
+        'lblPatologiasCronicas
         '
-        Me.Label4.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(23, 470)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(391, 58)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Patologías crónicas: xxxxxxxxx,xxxxxxxxxxxx,xxxxxxxx"
+        Me.lblPatologiasCronicas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPatologiasCronicas.Location = New System.Drawing.Point(31, 578)
+        Me.lblPatologiasCronicas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPatologiasCronicas.Name = "lblPatologiasCronicas"
+        Me.lblPatologiasCronicas.Size = New System.Drawing.Size(521, 71)
+        Me.lblPatologiasCronicas.TabIndex = 4
+        Me.lblPatologiasCronicas.Text = "Patologías crónicas: xxxxxxxxx,xxxxxxxxxxxx,xxxxxxxx"
         '
-        'Label12
+        'lblMinimizar
         '
-        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(355, -6)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 35)
-        Me.Label12.TabIndex = 24
-        Me.Label12.Text = "_"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMinimizar.ForeColor = System.Drawing.Color.Black
+        Me.lblMinimizar.Location = New System.Drawing.Point(0, 0)
+        Me.lblMinimizar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMinimizar.Name = "lblMinimizar"
+        Me.lblMinimizar.Size = New System.Drawing.Size(32, 43)
+        Me.lblMinimizar.TabIndex = 24
+        Me.lblMinimizar.Text = "_"
+        Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label13
+        'lblCerrar
         '
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(385, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(43, 35)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "X"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCerrar.ForeColor = System.Drawing.Color.Black
+        Me.lblCerrar.Location = New System.Drawing.Point(0, 0)
+        Me.lblCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCerrar.Name = "lblCerrar"
+        Me.lblCerrar.Size = New System.Drawing.Size(57, 43)
+        Me.lblCerrar.TabIndex = 23
+        Me.lblCerrar.Text = "X"
+        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PictureBox2
+        'picEditar
         '
-        Me.PictureBox2.Image = Global.Vista.My.Resources.Resources.icons8_edit_32px_1
-        Me.PictureBox2.Location = New System.Drawing.Point(380, 39)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(34, 36)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
+        Me.picEditar.Image = Global.Vista.My.Resources.Resources.icons8_edit_32px_1
+        Me.picEditar.Location = New System.Drawing.Point(507, 48)
+        Me.picEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.picEditar.Name = "picEditar"
+        Me.picEditar.Size = New System.Drawing.Size(45, 44)
+        Me.picEditar.TabIndex = 5
+        Me.picEditar.TabStop = False
         '
-        'PictureBox1
+        'picImagenPerfil
         '
-        Me.PictureBox1.Image = Global.Vista.My.Resources.Resources.icons8_user_80px_1
-        Me.PictureBox1.Location = New System.Drawing.Point(163, 85)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(101, 95)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.picImagenPerfil.Image = Global.Vista.My.Resources.Resources.icons8_user_80px_1
+        Me.picImagenPerfil.Location = New System.Drawing.Point(217, 105)
+        Me.picImagenPerfil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.picImagenPerfil.Name = "picImagenPerfil"
+        Me.picImagenPerfil.Size = New System.Drawing.Size(135, 117)
+        Me.picImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picImagenPerfil.TabIndex = 0
+        Me.picImagenPerfil.TabStop = False
         '
-        'VerPerfil
+        'frmVerPerfil
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(426, 623)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(568, 767)
+        Me.Controls.Add(Me.lblCerrar)
+        Me.Controls.Add(Me.lblMinimizar)
+        Me.Controls.Add(Me.picEditar)
+        Me.Controls.Add(Me.picImagenPerfil)
+        Me.Controls.Add(Me.lblNombre)
+        Me.Controls.Add(Me.lblMail)
+        Me.Controls.Add(Me.lblTelefonos)
+        Me.Controls.Add(Me.lblPatologiasCronicas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "VerPerfil"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "frmVerPerfil"
         Me.Text = "VerPerfil"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picEditar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picImagenPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents picImagenPerfil As PictureBox
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents lblMail As Label
+    Friend WithEvents lblTelefonos As Label
+    Friend WithEvents lblPatologiasCronicas As Label
+    Friend WithEvents picEditar As PictureBox
+    Friend WithEvents lblMinimizar As Label
+    Friend WithEvents lblCerrar As Label
 End Class

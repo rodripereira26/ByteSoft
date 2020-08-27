@@ -6,7 +6,7 @@ Public Class frmRegistrarMedico
     Private Sub RegistrarMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Principal.Singleton.roundedCorners(Me)
-        Label1.Select()
+        lblCed.Select()
 
     End Sub
 
@@ -14,7 +14,7 @@ Public Class frmRegistrarMedico
 
         If Principal.Singleton.verificarCedula(check, txtCed.Text) Then
             If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
-                If check.verificar_string(txtEspe.Text) Then
+                If check.verificar_string(txtEspec.Text) Then
 
                     Dim med As New ControladorMedico(
                             txtCed.Text,
@@ -23,7 +23,7 @@ Public Class frmRegistrarMedico
                             txtSegundoNombre.Text,
                             txtPrimerApellido.Text,
                             txtSegundoApellido.Text,
-                            txtEspe.Text)
+                            txtEspec.Text)
 
                     If med.registrar() Then
                         MsgBox("Médico registrado con éxito")
@@ -52,7 +52,7 @@ Public Class frmRegistrarMedico
     End Sub
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        If Not (txtCed.Text = Nothing And txtEspe.Text = Nothing And txtPrimerApellido.Text = Nothing And txtPrimerNombre.Text = Nothing And txtSegundoApellido.Text = Nothing And txtSegundoNombre.Text = Nothing) Then
+        If Not (txtCed.Text = Nothing And txtEspec.Text = Nothing And txtPrimerApellido.Text = Nothing And txtPrimerNombre.Text = Nothing And txtSegundoApellido.Text = Nothing And txtSegundoNombre.Text = Nothing) Then
             Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
             If res = vbYes Then
                 frmModular.Show()
@@ -63,4 +63,5 @@ Public Class frmRegistrarMedico
             Me.Close()
         End If
     End Sub
+
 End Class

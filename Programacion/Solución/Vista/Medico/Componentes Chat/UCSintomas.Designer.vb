@@ -22,74 +22,78 @@ Partial Class UCSintomas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
-        Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
-        Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
-        Me.MetroTabControl1.SuspendLayout()
+        Me.mpcSintomas = New MetroFramework.Controls.MetroTabControl()
+        Me.mtpSintomas = New MetroFramework.Controls.MetroTabPage()
+        Me.mtpDiagnosticos = New MetroFramework.Controls.MetroTabPage()
+        Me.mpcSintomas.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MetroTabControl1
+        'mpcSintomas
         '
-        Me.MetroTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
-        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
-        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
-        Me.MetroTabControl1.HotTrack = True
-        Me.MetroTabControl1.Location = New System.Drawing.Point(20, 24)
-        Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 1
-        Me.MetroTabControl1.Size = New System.Drawing.Size(269, 320)
-        Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Black
-        Me.MetroTabControl1.TabIndex = 4
-        Me.MetroTabControl1.UseCustomBackColor = True
-        Me.MetroTabControl1.UseCustomForeColor = True
-        Me.MetroTabControl1.UseSelectable = True
-        Me.MetroTabControl1.UseStyleColors = True
+        Me.mpcSintomas.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
+        Me.mpcSintomas.Controls.Add(Me.mtpSintomas)
+        Me.mpcSintomas.Controls.Add(Me.mtpDiagnosticos)
+        Me.mpcSintomas.HotTrack = True
+        Me.mpcSintomas.Location = New System.Drawing.Point(27, 30)
+        Me.mpcSintomas.Margin = New System.Windows.Forms.Padding(4)
+        Me.mpcSintomas.Name = "mpcSintomas"
+        Me.mpcSintomas.SelectedIndex = 0
+        Me.mpcSintomas.Size = New System.Drawing.Size(359, 394)
+        Me.mpcSintomas.Style = MetroFramework.MetroColorStyle.Black
+        Me.mpcSintomas.TabIndex = 4
+        Me.mpcSintomas.UseCustomBackColor = True
+        Me.mpcSintomas.UseCustomForeColor = True
+        Me.mpcSintomas.UseSelectable = True
+        Me.mpcSintomas.UseStyleColors = True
         '
-        'MetroTabPage1
+        'mtpSintomas
         '
-        Me.MetroTabPage1.BackColor = System.Drawing.Color.White
-        Me.MetroTabPage1.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MetroTabPage1.HorizontalScrollbarBarColor = True
-        Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.HorizontalScrollbarSize = 10
-        Me.MetroTabPage1.Location = New System.Drawing.Point(4, 41)
-        Me.MetroTabPage1.Name = "MetroTabPage1"
-        Me.MetroTabPage1.Size = New System.Drawing.Size(261, 275)
-        Me.MetroTabPage1.TabIndex = 0
-        Me.MetroTabPage1.Text = "SINTOMAS"
-        Me.MetroTabPage1.VerticalScrollbarBarColor = True
-        Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.VerticalScrollbarSize = 10
+        Me.mtpSintomas.BackColor = System.Drawing.Color.White
+        Me.mtpSintomas.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtpSintomas.HorizontalScrollbarBarColor = True
+        Me.mtpSintomas.HorizontalScrollbarHighlightOnWheel = False
+        Me.mtpSintomas.HorizontalScrollbarSize = 12
+        Me.mtpSintomas.Location = New System.Drawing.Point(4, 41)
+        Me.mtpSintomas.Margin = New System.Windows.Forms.Padding(4)
+        Me.mtpSintomas.Name = "mtpSintomas"
+        Me.mtpSintomas.Size = New System.Drawing.Size(351, 349)
+        Me.mtpSintomas.TabIndex = 0
+        Me.mtpSintomas.Text = "SINTOMAS"
+        Me.mtpSintomas.VerticalScrollbarBarColor = True
+        Me.mtpSintomas.VerticalScrollbarHighlightOnWheel = False
+        Me.mtpSintomas.VerticalScrollbarSize = 13
         '
-        'MetroTabPage2
+        'mtpDiagnosticos
         '
-        Me.MetroTabPage2.BackColor = System.Drawing.Color.White
-        Me.MetroTabPage2.HorizontalScrollbarBarColor = True
-        Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.HorizontalScrollbarSize = 10
-        Me.MetroTabPage2.Location = New System.Drawing.Point(4, 41)
-        Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.Size = New System.Drawing.Size(261, 275)
-        Me.MetroTabPage2.TabIndex = 1
-        Me.MetroTabPage2.Text = "DIAGNOSTICOS"
-        Me.MetroTabPage2.VerticalScrollbarBarColor = True
-        Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.VerticalScrollbarSize = 10
+        Me.mtpDiagnosticos.BackColor = System.Drawing.Color.White
+        Me.mtpDiagnosticos.HorizontalScrollbarBarColor = True
+        Me.mtpDiagnosticos.HorizontalScrollbarHighlightOnWheel = False
+        Me.mtpDiagnosticos.HorizontalScrollbarSize = 12
+        Me.mtpDiagnosticos.Location = New System.Drawing.Point(4, 41)
+        Me.mtpDiagnosticos.Margin = New System.Windows.Forms.Padding(4)
+        Me.mtpDiagnosticos.Name = "mtpDiagnosticos"
+        Me.mtpDiagnosticos.Size = New System.Drawing.Size(351, 349)
+        Me.mtpDiagnosticos.TabIndex = 1
+        Me.mtpDiagnosticos.Text = "DIAGNOSTICOS"
+        Me.mtpDiagnosticos.VerticalScrollbarBarColor = True
+        Me.mtpDiagnosticos.VerticalScrollbarHighlightOnWheel = False
+        Me.mtpDiagnosticos.VerticalScrollbarSize = 13
         '
         'UCSintomas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.MetroTabControl1)
+        Me.Controls.Add(Me.mpcSintomas)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "UCSintomas"
-        Me.Size = New System.Drawing.Size(499, 417)
-        Me.MetroTabControl1.ResumeLayout(False)
+        Me.Size = New System.Drawing.Size(665, 513)
+        Me.mpcSintomas.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents MetroTabControl1 As MetroFramework.Controls.MetroTabControl
-    Friend WithEvents MetroTabPage1 As MetroFramework.Controls.MetroTabPage
-    Friend WithEvents MetroTabPage2 As MetroFramework.Controls.MetroTabPage
+    Friend WithEvents mpcSintomas As MetroFramework.Controls.MetroTabControl
+    Friend WithEvents mtpSintomas As MetroFramework.Controls.MetroTabPage
+    Friend WithEvents mtpDiagnosticos As MetroFramework.Controls.MetroTabPage
 End Class

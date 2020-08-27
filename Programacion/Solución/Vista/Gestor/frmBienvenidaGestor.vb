@@ -12,11 +12,11 @@ Public Class frmBienvenidaGestor
         Principal.Singleton.roundedCorners(pnlPatologias)
         Principal.Singleton.roundedCorners(pnlUsuarios)
         Principal.Singleton.roundedCorners(pnlSintomas)
-        Principal.Singleton.roundedCorners(Panel14)
-        Principal.Singleton.roundedCorners(pnlRegistrodeUsuarios)
+        Principal.Singleton.roundedCorners(pnlDecoracionSintomas)
+        Principal.Singleton.roundedCorners(pnlRegistroDeUsuarios)
         Principal.Singleton.roundedCorners(pnlUsuarios)
         Principal.Singleton.roundedCorners(pnlAyuda)
-        Principal.Singleton.roundedCorners(Panel14)
+        Principal.Singleton.roundedCorners(pnlDecoracionSintomas)
 
         'Me.BackColor = Color.FromArgb(236, 236, 236)
         'Dim col As Color = Color.FromArgb(52, 73, 94)
@@ -76,20 +76,20 @@ Public Class frmBienvenidaGestor
         frmModular.Visible = True
         Me.Hide()
     End Sub
-    Private Sub pnlRegistrodeUsuarios_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlRegistrodeUsuarios.MouseDown
+    Private Sub pnlRegistrodeUsuarios_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlRegistroDeUsuarios.MouseDown
         frmModular.op = 2
         frmModular.Visible = True
         Me.Hide()
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        frmLogin.Label2.Text = "Usuario"
-        frmLogin.Label2.Text = "Contraseña"
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
+        frmLogin.lblUsuario.Text = "Usuario"
+        frmLogin.lblUsuario.Text = "Contraseña"
         frmLogin.Show()
         Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btn1.Click
         frmRegistroGestor.Show()
     End Sub
 
@@ -104,7 +104,7 @@ Public Class frmBienvenidaGestor
 
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles tempListaPacientes.Tick
         dgvListadoPacientes.DataSource = gestor.listarPacientes
     End Sub
 
@@ -143,7 +143,7 @@ Public Class frmBienvenidaGestor
         dgvListadoPacientes.DataSource = gestor.listarPacientes
     End Sub
 
-    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles lblMinimizar.Click
         Me.WindowState = WindowState.Minimized
     End Sub
 
@@ -163,19 +163,19 @@ Public Class frmBienvenidaGestor
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Label19_MouseClick(sender As Object, e As MouseEventArgs) Handles Label19.MouseClick
+    Private Sub Label19_MouseClick(sender As Object, e As MouseEventArgs) Handles lblUsuarios.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Label18_MouseClick(sender As Object, e As MouseEventArgs) Handles Label18.MouseClick
+    Private Sub Label18_MouseClick(sender As Object, e As MouseEventArgs) Handles lblDescripcionUsuarios.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Label7_MouseClick(sender As Object, e As MouseEventArgs) Handles Label7.MouseClick
+    Private Sub Label7_MouseClick(sender As Object, e As MouseEventArgs) Handles lblAjustes.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Label6_MouseClick(sender As Object, e As MouseEventArgs) Handles Label6.MouseClick
+    Private Sub Label6_MouseClick(sender As Object, e As MouseEventArgs) Handles lblDescripcionAjustes.MouseClick
         MsgBox("En construcción...")
     End Sub
 

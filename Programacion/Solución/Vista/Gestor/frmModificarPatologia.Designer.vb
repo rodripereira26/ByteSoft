@@ -22,468 +22,495 @@ Partial Class frmModificarPatologia
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
-        Me.MaterialRadioButton3 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton1 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton4 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton6 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialRadioButton5 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.MaterialDivider7 = New MaterialSkin.Controls.MaterialDivider()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MaterialDivider8 = New MaterialSkin.Controls.MaterialDivider()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.MaterialDivider3 = New MaterialSkin.Controls.MaterialDivider()
-        Me.MaterialDivider4 = New MaterialSkin.Controls.MaterialDivider()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblNueva = New System.Windows.Forms.Label()
+        Me.txtNombreVieja = New System.Windows.Forms.TextBox()
+        Me.txtNombreNueva = New System.Windows.Forms.TextBox()
+        Me.mdTxtNombreNueva = New MaterialSkin.Controls.MaterialDivider()
+        Me.grpNombre = New System.Windows.Forms.GroupBox()
+        Me.mdTxtNombreVieja = New MaterialSkin.Controls.MaterialDivider()
+        Me.mrbtnBajaV = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnMediaV = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnAltaV = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnBajaN = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnAltaN = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.mrbtnMediaN = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.txtDescripcionVieja = New System.Windows.Forms.TextBox()
+        Me.txtDescripcionNueva = New System.Windows.Forms.TextBox()
+        Me.mdTxtDescripcionNueva = New MaterialSkin.Controls.MaterialDivider()
+        Me.pnlNueva = New System.Windows.Forms.Panel()
+        Me.mxTtxtDescripcionVieja = New MaterialSkin.Controls.MaterialDivider()
+        Me.grpDescripcion = New System.Windows.Forms.GroupBox()
+        Me.grpRecomendaciones = New System.Windows.Forms.GroupBox()
+        Me.txtRecomendacionVieja = New System.Windows.Forms.TextBox()
+        Me.txtRecomendacionNueva = New System.Windows.Forms.TextBox()
+        Me.mdTxtRecomendacionNueva = New MaterialSkin.Controls.MaterialDivider()
+        Me.mdTxtRecomendacionVieja = New MaterialSkin.Controls.MaterialDivider()
+        Me.lblActual = New System.Windows.Forms.Label()
+        Me.lblVerYModifcar = New System.Windows.Forms.Label()
         Me.lblCantSelecc = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.GroupBox4.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.lblModiciarPatologia = New System.Windows.Forms.Label()
+        Me.grpPrioridad = New System.Windows.Forms.GroupBox()
+        Me.pnlModificarPatologia = New System.Windows.Forms.Panel()
+        Me.grpNombre.SuspendLayout()
+        Me.pnlNueva.SuspendLayout()
+        Me.grpDescripcion.SuspendLayout()
+        Me.grpRecomendaciones.SuspendLayout()
+        Me.grpPrioridad.SuspendLayout()
+        Me.pnlModificarPatologia.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblNueva
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(572, 90)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 29)
-        Me.Label1.TabIndex = 151
-        Me.Label1.Text = "Nueva"
+        Me.lblNueva.AutoSize = True
+        Me.lblNueva.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNueva.Location = New System.Drawing.Point(763, 111)
+        Me.lblNueva.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblNueva.Name = "lblNueva"
+        Me.lblNueva.Size = New System.Drawing.Size(101, 36)
+        Me.lblNueva.TabIndex = 151
+        Me.lblNueva.Text = "Nueva"
         '
-        'TextBox4
+        'txtNombreVieja
         '
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.TextBox4.Location = New System.Drawing.Point(116, 28)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(200, 23)
-        Me.TextBox4.TabIndex = 133
+        Me.txtNombreVieja.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombreVieja.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreVieja.ForeColor = System.Drawing.Color.Black
+        Me.txtNombreVieja.Location = New System.Drawing.Point(155, 34)
+        Me.txtNombreVieja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombreVieja.Name = "txtNombreVieja"
+        Me.txtNombreVieja.Size = New System.Drawing.Size(267, 27)
+        Me.txtNombreVieja.TabIndex = 133
         '
-        'TextBox1
+        'txtNombreNueva
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(443, 29)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 23)
-        Me.TextBox1.TabIndex = 132
+        Me.txtNombreNueva.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombreNueva.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreNueva.ForeColor = System.Drawing.Color.Black
+        Me.txtNombreNueva.Location = New System.Drawing.Point(591, 36)
+        Me.txtNombreNueva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombreNueva.Name = "txtNombreNueva"
+        Me.txtNombreNueva.Size = New System.Drawing.Size(267, 27)
+        Me.txtNombreNueva.TabIndex = 132
         '
-        'MaterialDivider2
+        'mdTxtNombreNueva
         '
-        Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.MaterialDivider2.Depth = 0
-        Me.MaterialDivider2.Location = New System.Drawing.Point(443, 58)
-        Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialDivider2.Name = "MaterialDivider2"
-        Me.MaterialDivider2.Size = New System.Drawing.Size(200, 1)
-        Me.MaterialDivider2.TabIndex = 131
-        Me.MaterialDivider2.Text = "MaterialDivider2"
+        Me.mdTxtNombreNueva.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.mdTxtNombreNueva.Depth = 0
+        Me.mdTxtNombreNueva.Location = New System.Drawing.Point(591, 71)
+        Me.mdTxtNombreNueva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mdTxtNombreNueva.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mdTxtNombreNueva.Name = "mdTxtNombreNueva"
+        Me.mdTxtNombreNueva.Size = New System.Drawing.Size(267, 1)
+        Me.mdTxtNombreNueva.TabIndex = 131
+        Me.mdTxtNombreNueva.Text = "MaterialDivider2"
         '
-        'GroupBox4
+        'grpNombre
         '
-        Me.GroupBox4.Controls.Add(Me.TextBox4)
-        Me.GroupBox4.Controls.Add(Me.TextBox1)
-        Me.GroupBox4.Controls.Add(Me.MaterialDivider2)
-        Me.GroupBox4.Controls.Add(Me.MaterialDivider1)
-        Me.GroupBox4.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(70, 138)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(755, 75)
-        Me.GroupBox4.TabIndex = 150
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Nombre"
+        Me.grpNombre.Controls.Add(Me.txtNombreVieja)
+        Me.grpNombre.Controls.Add(Me.txtNombreNueva)
+        Me.grpNombre.Controls.Add(Me.mdTxtNombreNueva)
+        Me.grpNombre.Controls.Add(Me.mdTxtNombreVieja)
+        Me.grpNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpNombre.Location = New System.Drawing.Point(93, 170)
+        Me.grpNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpNombre.Name = "grpNombre"
+        Me.grpNombre.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpNombre.Size = New System.Drawing.Size(1007, 92)
+        Me.grpNombre.TabIndex = 150
+        Me.grpNombre.TabStop = False
+        Me.grpNombre.Text = "Nombre"
         '
-        'MaterialDivider1
+        'mdTxtNombreVieja
         '
-        Me.MaterialDivider1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.MaterialDivider1.Depth = 0
-        Me.MaterialDivider1.Location = New System.Drawing.Point(116, 57)
-        Me.MaterialDivider1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialDivider1.Name = "MaterialDivider1"
-        Me.MaterialDivider1.Size = New System.Drawing.Size(200, 1)
-        Me.MaterialDivider1.TabIndex = 130
-        Me.MaterialDivider1.Text = "MaterialDivider1"
+        Me.mdTxtNombreVieja.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.mdTxtNombreVieja.Depth = 0
+        Me.mdTxtNombreVieja.Location = New System.Drawing.Point(155, 70)
+        Me.mdTxtNombreVieja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mdTxtNombreVieja.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mdTxtNombreVieja.Name = "mdTxtNombreVieja"
+        Me.mdTxtNombreVieja.Size = New System.Drawing.Size(267, 1)
+        Me.mdTxtNombreVieja.TabIndex = 130
+        Me.mdTxtNombreVieja.Text = "MaterialDivider1"
         '
-        'MaterialRadioButton3
+        'mrbtnBajaV
         '
-        Me.MaterialRadioButton3.AutoSize = True
-        Me.MaterialRadioButton3.Depth = 0
-        Me.MaterialRadioButton3.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton3.Location = New System.Drawing.Point(156, 93)
-        Me.MaterialRadioButton3.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton3.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton3.Name = "MaterialRadioButton3"
-        Me.MaterialRadioButton3.Ripple = True
-        Me.MaterialRadioButton3.Size = New System.Drawing.Size(56, 30)
-        Me.MaterialRadioButton3.TabIndex = 141
-        Me.MaterialRadioButton3.TabStop = True
-        Me.MaterialRadioButton3.Text = "Baja"
-        Me.MaterialRadioButton3.UseVisualStyleBackColor = True
+        Me.mrbtnBajaV.AutoSize = True
+        Me.mrbtnBajaV.Depth = 0
+        Me.mrbtnBajaV.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnBajaV.Location = New System.Drawing.Point(208, 114)
+        Me.mrbtnBajaV.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnBajaV.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnBajaV.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnBajaV.Name = "mrbtnBajaV"
+        Me.mrbtnBajaV.Ripple = True
+        Me.mrbtnBajaV.Size = New System.Drawing.Size(64, 30)
+        Me.mrbtnBajaV.TabIndex = 141
+        Me.mrbtnBajaV.TabStop = True
+        Me.mrbtnBajaV.Text = "Baja"
+        Me.mrbtnBajaV.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton2
+        'mrbtnMediaV
         '
-        Me.MaterialRadioButton2.AutoSize = True
-        Me.MaterialRadioButton2.Depth = 0
-        Me.MaterialRadioButton2.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton2.Location = New System.Drawing.Point(156, 63)
-        Me.MaterialRadioButton2.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton2.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton2.Name = "MaterialRadioButton2"
-        Me.MaterialRadioButton2.Ripple = True
-        Me.MaterialRadioButton2.Size = New System.Drawing.Size(67, 30)
-        Me.MaterialRadioButton2.TabIndex = 140
-        Me.MaterialRadioButton2.TabStop = True
-        Me.MaterialRadioButton2.Text = "Media"
-        Me.MaterialRadioButton2.UseVisualStyleBackColor = True
+        Me.mrbtnMediaV.AutoSize = True
+        Me.mrbtnMediaV.Depth = 0
+        Me.mrbtnMediaV.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnMediaV.Location = New System.Drawing.Point(208, 78)
+        Me.mrbtnMediaV.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnMediaV.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnMediaV.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnMediaV.Name = "mrbtnMediaV"
+        Me.mrbtnMediaV.Ripple = True
+        Me.mrbtnMediaV.Size = New System.Drawing.Size(78, 30)
+        Me.mrbtnMediaV.TabIndex = 140
+        Me.mrbtnMediaV.TabStop = True
+        Me.mrbtnMediaV.Text = "Media"
+        Me.mrbtnMediaV.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton1
+        'mrbtnAltaV
         '
-        Me.MaterialRadioButton1.AutoSize = True
-        Me.MaterialRadioButton1.Depth = 0
-        Me.MaterialRadioButton1.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton1.Location = New System.Drawing.Point(156, 33)
-        Me.MaterialRadioButton1.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton1.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton1.Name = "MaterialRadioButton1"
-        Me.MaterialRadioButton1.Ripple = True
-        Me.MaterialRadioButton1.Size = New System.Drawing.Size(54, 30)
-        Me.MaterialRadioButton1.TabIndex = 139
-        Me.MaterialRadioButton1.TabStop = True
-        Me.MaterialRadioButton1.Text = "Alta"
-        Me.MaterialRadioButton1.UseVisualStyleBackColor = True
+        Me.mrbtnAltaV.AutoSize = True
+        Me.mrbtnAltaV.Depth = 0
+        Me.mrbtnAltaV.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnAltaV.Location = New System.Drawing.Point(208, 41)
+        Me.mrbtnAltaV.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnAltaV.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnAltaV.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnAltaV.Name = "mrbtnAltaV"
+        Me.mrbtnAltaV.Ripple = True
+        Me.mrbtnAltaV.Size = New System.Drawing.Size(61, 30)
+        Me.mrbtnAltaV.TabIndex = 139
+        Me.mrbtnAltaV.TabStop = True
+        Me.mrbtnAltaV.Text = "Alta"
+        Me.mrbtnAltaV.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton4
+        'mrbtnBajaN
         '
-        Me.MaterialRadioButton4.AutoSize = True
-        Me.MaterialRadioButton4.Depth = 0
-        Me.MaterialRadioButton4.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton4.Location = New System.Drawing.Point(0, 70)
-        Me.MaterialRadioButton4.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton4.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton4.Name = "MaterialRadioButton4"
-        Me.MaterialRadioButton4.Ripple = True
-        Me.MaterialRadioButton4.Size = New System.Drawing.Size(56, 30)
-        Me.MaterialRadioButton4.TabIndex = 127
-        Me.MaterialRadioButton4.TabStop = True
-        Me.MaterialRadioButton4.Text = "Baja"
-        Me.MaterialRadioButton4.UseVisualStyleBackColor = True
+        Me.mrbtnBajaN.AutoSize = True
+        Me.mrbtnBajaN.Depth = 0
+        Me.mrbtnBajaN.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnBajaN.Location = New System.Drawing.Point(0, 86)
+        Me.mrbtnBajaN.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnBajaN.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnBajaN.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnBajaN.Name = "mrbtnBajaN"
+        Me.mrbtnBajaN.Ripple = True
+        Me.mrbtnBajaN.Size = New System.Drawing.Size(64, 30)
+        Me.mrbtnBajaN.TabIndex = 127
+        Me.mrbtnBajaN.TabStop = True
+        Me.mrbtnBajaN.Text = "Baja"
+        Me.mrbtnBajaN.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton6
+        'mrbtnAltaN
         '
-        Me.MaterialRadioButton6.AutoSize = True
-        Me.MaterialRadioButton6.Depth = 0
-        Me.MaterialRadioButton6.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton6.Location = New System.Drawing.Point(0, 10)
-        Me.MaterialRadioButton6.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton6.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton6.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton6.Name = "MaterialRadioButton6"
-        Me.MaterialRadioButton6.Ripple = True
-        Me.MaterialRadioButton6.Size = New System.Drawing.Size(54, 30)
-        Me.MaterialRadioButton6.TabIndex = 125
-        Me.MaterialRadioButton6.TabStop = True
-        Me.MaterialRadioButton6.Text = "Alta"
-        Me.MaterialRadioButton6.UseVisualStyleBackColor = True
+        Me.mrbtnAltaN.AutoSize = True
+        Me.mrbtnAltaN.Depth = 0
+        Me.mrbtnAltaN.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnAltaN.Location = New System.Drawing.Point(0, 12)
+        Me.mrbtnAltaN.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnAltaN.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnAltaN.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnAltaN.Name = "mrbtnAltaN"
+        Me.mrbtnAltaN.Ripple = True
+        Me.mrbtnAltaN.Size = New System.Drawing.Size(61, 30)
+        Me.mrbtnAltaN.TabIndex = 125
+        Me.mrbtnAltaN.TabStop = True
+        Me.mrbtnAltaN.Text = "Alta"
+        Me.mrbtnAltaN.UseVisualStyleBackColor = True
         '
-        'MaterialRadioButton5
+        'mrbtnMediaN
         '
-        Me.MaterialRadioButton5.AutoSize = True
-        Me.MaterialRadioButton5.Depth = 0
-        Me.MaterialRadioButton5.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton5.Location = New System.Drawing.Point(0, 40)
-        Me.MaterialRadioButton5.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton5.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton5.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton5.Name = "MaterialRadioButton5"
-        Me.MaterialRadioButton5.Ripple = True
-        Me.MaterialRadioButton5.Size = New System.Drawing.Size(67, 30)
-        Me.MaterialRadioButton5.TabIndex = 126
-        Me.MaterialRadioButton5.TabStop = True
-        Me.MaterialRadioButton5.Text = "Media"
-        Me.MaterialRadioButton5.UseVisualStyleBackColor = True
+        Me.mrbtnMediaN.AutoSize = True
+        Me.mrbtnMediaN.Depth = 0
+        Me.mrbtnMediaN.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.mrbtnMediaN.Location = New System.Drawing.Point(0, 49)
+        Me.mrbtnMediaN.Margin = New System.Windows.Forms.Padding(0)
+        Me.mrbtnMediaN.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.mrbtnMediaN.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mrbtnMediaN.Name = "mrbtnMediaN"
+        Me.mrbtnMediaN.Ripple = True
+        Me.mrbtnMediaN.Size = New System.Drawing.Size(78, 30)
+        Me.mrbtnMediaN.TabIndex = 126
+        Me.mrbtnMediaN.TabStop = True
+        Me.mrbtnMediaN.Text = "Media"
+        Me.mrbtnMediaN.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txtDescripcionVieja
         '
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.ForeColor = System.Drawing.Color.Black
-        Me.TextBox6.Location = New System.Drawing.Point(17, 62)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(263, 84)
-        Me.TextBox6.TabIndex = 132
+        Me.txtDescripcionVieja.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDescripcionVieja.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcionVieja.ForeColor = System.Drawing.Color.Black
+        Me.txtDescripcionVieja.Location = New System.Drawing.Point(23, 76)
+        Me.txtDescripcionVieja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescripcionVieja.Multiline = True
+        Me.txtDescripcionVieja.Name = "txtDescripcionVieja"
+        Me.txtDescripcionVieja.Size = New System.Drawing.Size(351, 103)
+        Me.txtDescripcionVieja.TabIndex = 132
         '
-        'TextBox7
+        'txtDescripcionNueva
         '
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox7.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.ForeColor = System.Drawing.Color.Black
-        Me.TextBox7.Location = New System.Drawing.Point(434, 62)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(263, 84)
-        Me.TextBox7.TabIndex = 130
+        Me.txtDescripcionNueva.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDescripcionNueva.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcionNueva.ForeColor = System.Drawing.Color.Black
+        Me.txtDescripcionNueva.Location = New System.Drawing.Point(591, 76)
+        Me.txtDescripcionNueva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescripcionNueva.Multiline = True
+        Me.txtDescripcionNueva.Name = "txtDescripcionNueva"
+        Me.txtDescripcionNueva.Size = New System.Drawing.Size(351, 103)
+        Me.txtDescripcionNueva.TabIndex = 130
         '
-        'MaterialDivider7
+        'mdTxtDescripcionNueva
         '
-        Me.MaterialDivider7.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.MaterialDivider7.Depth = 0
-        Me.MaterialDivider7.Location = New System.Drawing.Point(434, 152)
-        Me.MaterialDivider7.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialDivider7.Name = "MaterialDivider7"
-        Me.MaterialDivider7.Size = New System.Drawing.Size(263, 1)
-        Me.MaterialDivider7.TabIndex = 131
-        Me.MaterialDivider7.Text = "MaterialDivider7"
+        Me.mdTxtDescripcionNueva.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.mdTxtDescripcionNueva.Depth = 0
+        Me.mdTxtDescripcionNueva.Location = New System.Drawing.Point(579, 187)
+        Me.mdTxtDescripcionNueva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mdTxtDescripcionNueva.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mdTxtDescripcionNueva.Name = "mdTxtDescripcionNueva"
+        Me.mdTxtDescripcionNueva.Size = New System.Drawing.Size(351, 1)
+        Me.mdTxtDescripcionNueva.TabIndex = 131
+        Me.mdTxtDescripcionNueva.Text = "MaterialDivider7"
         '
-        'Panel1
+        'pnlNueva
         '
-        Me.Panel1.Controls.Add(Me.MaterialRadioButton4)
-        Me.Panel1.Controls.Add(Me.MaterialRadioButton6)
-        Me.Panel1.Controls.Add(Me.MaterialRadioButton5)
-        Me.Panel1.Location = New System.Drawing.Point(486, 33)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(113, 100)
-        Me.Panel1.TabIndex = 142
+        Me.pnlNueva.Controls.Add(Me.mrbtnBajaN)
+        Me.pnlNueva.Controls.Add(Me.mrbtnAltaN)
+        Me.pnlNueva.Controls.Add(Me.mrbtnMediaN)
+        Me.pnlNueva.Location = New System.Drawing.Point(648, 41)
+        Me.pnlNueva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlNueva.Name = "pnlNueva"
+        Me.pnlNueva.Size = New System.Drawing.Size(151, 123)
+        Me.pnlNueva.TabIndex = 142
         '
-        'MaterialDivider8
+        'mxTtxtDescripcionVieja
         '
-        Me.MaterialDivider8.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.MaterialDivider8.Depth = 0
-        Me.MaterialDivider8.Location = New System.Drawing.Point(17, 152)
-        Me.MaterialDivider8.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialDivider8.Name = "MaterialDivider8"
-        Me.MaterialDivider8.Size = New System.Drawing.Size(263, 1)
-        Me.MaterialDivider8.TabIndex = 133
-        Me.MaterialDivider8.Text = "MaterialDivider8"
+        Me.mxTtxtDescripcionVieja.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.mxTtxtDescripcionVieja.Depth = 0
+        Me.mxTtxtDescripcionVieja.Location = New System.Drawing.Point(23, 187)
+        Me.mxTtxtDescripcionVieja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mxTtxtDescripcionVieja.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mxTtxtDescripcionVieja.Name = "mxTtxtDescripcionVieja"
+        Me.mxTtxtDescripcionVieja.Size = New System.Drawing.Size(351, 1)
+        Me.mxTtxtDescripcionVieja.TabIndex = 133
+        Me.mxTtxtDescripcionVieja.Text = "MaterialDivider8"
         '
-        'GroupBox2
+        'grpDescripcion
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
-        Me.GroupBox2.Controls.Add(Me.MaterialDivider7)
-        Me.GroupBox2.Controls.Add(Me.MaterialDivider8)
-        Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(70, 359)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(755, 166)
-        Me.GroupBox2.TabIndex = 148
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Descripción"
+        Me.grpDescripcion.Controls.Add(Me.txtDescripcionVieja)
+        Me.grpDescripcion.Controls.Add(Me.txtDescripcionNueva)
+        Me.grpDescripcion.Controls.Add(Me.mdTxtDescripcionNueva)
+        Me.grpDescripcion.Controls.Add(Me.mxTtxtDescripcionVieja)
+        Me.grpDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpDescripcion.Location = New System.Drawing.Point(93, 442)
+        Me.grpDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpDescripcion.Name = "grpDescripcion"
+        Me.grpDescripcion.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpDescripcion.Size = New System.Drawing.Size(1007, 204)
+        Me.grpDescripcion.TabIndex = 148
+        Me.grpDescripcion.TabStop = False
+        Me.grpDescripcion.Text = "Descripción"
         '
-        'GroupBox1
+        'grpRecomendaciones
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.MaterialDivider3)
-        Me.GroupBox1.Controls.Add(Me.MaterialDivider4)
-        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(70, 531)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(755, 166)
-        Me.GroupBox1.TabIndex = 147
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Recomendaciones"
+        Me.grpRecomendaciones.Controls.Add(Me.txtRecomendacionVieja)
+        Me.grpRecomendaciones.Controls.Add(Me.txtRecomendacionNueva)
+        Me.grpRecomendaciones.Controls.Add(Me.mdTxtRecomendacionNueva)
+        Me.grpRecomendaciones.Controls.Add(Me.mdTxtRecomendacionVieja)
+        Me.grpRecomendaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpRecomendaciones.Location = New System.Drawing.Point(93, 654)
+        Me.grpRecomendaciones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpRecomendaciones.Name = "grpRecomendaciones"
+        Me.grpRecomendaciones.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpRecomendaciones.Size = New System.Drawing.Size(1007, 204)
+        Me.grpRecomendaciones.TabIndex = 147
+        Me.grpRecomendaciones.TabStop = False
+        Me.grpRecomendaciones.Text = "Recomendaciones"
         '
-        'TextBox3
+        'txtRecomendacionVieja
         '
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(23, 59)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(263, 84)
-        Me.TextBox3.TabIndex = 132
+        Me.txtRecomendacionVieja.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtRecomendacionVieja.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRecomendacionVieja.ForeColor = System.Drawing.Color.Black
+        Me.txtRecomendacionVieja.Location = New System.Drawing.Point(31, 73)
+        Me.txtRecomendacionVieja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtRecomendacionVieja.Multiline = True
+        Me.txtRecomendacionVieja.Name = "txtRecomendacionVieja"
+        Me.txtRecomendacionVieja.Size = New System.Drawing.Size(351, 103)
+        Me.txtRecomendacionVieja.TabIndex = 132
         '
-        'TextBox2
+        'txtRecomendacionNueva
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(440, 59)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(263, 84)
-        Me.TextBox2.TabIndex = 130
+        Me.txtRecomendacionNueva.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtRecomendacionNueva.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRecomendacionNueva.ForeColor = System.Drawing.Color.Black
+        Me.txtRecomendacionNueva.Location = New System.Drawing.Point(587, 73)
+        Me.txtRecomendacionNueva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtRecomendacionNueva.Multiline = True
+        Me.txtRecomendacionNueva.Name = "txtRecomendacionNueva"
+        Me.txtRecomendacionNueva.Size = New System.Drawing.Size(351, 103)
+        Me.txtRecomendacionNueva.TabIndex = 130
         '
-        'MaterialDivider3
+        'mdTxtRecomendacionNueva
         '
-        Me.MaterialDivider3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.MaterialDivider3.Depth = 0
-        Me.MaterialDivider3.Location = New System.Drawing.Point(440, 149)
-        Me.MaterialDivider3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialDivider3.Name = "MaterialDivider3"
-        Me.MaterialDivider3.Size = New System.Drawing.Size(263, 1)
-        Me.MaterialDivider3.TabIndex = 131
-        Me.MaterialDivider3.Text = "MaterialDivider3"
+        Me.mdTxtRecomendacionNueva.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.mdTxtRecomendacionNueva.Depth = 0
+        Me.mdTxtRecomendacionNueva.Location = New System.Drawing.Point(587, 183)
+        Me.mdTxtRecomendacionNueva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mdTxtRecomendacionNueva.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mdTxtRecomendacionNueva.Name = "mdTxtRecomendacionNueva"
+        Me.mdTxtRecomendacionNueva.Size = New System.Drawing.Size(351, 1)
+        Me.mdTxtRecomendacionNueva.TabIndex = 131
+        Me.mdTxtRecomendacionNueva.Text = "MaterialDivider3"
         '
-        'MaterialDivider4
+        'mdTxtRecomendacionVieja
         '
-        Me.MaterialDivider4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.MaterialDivider4.Depth = 0
-        Me.MaterialDivider4.Location = New System.Drawing.Point(23, 149)
-        Me.MaterialDivider4.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialDivider4.Name = "MaterialDivider4"
-        Me.MaterialDivider4.Size = New System.Drawing.Size(263, 1)
-        Me.MaterialDivider4.TabIndex = 133
-        Me.MaterialDivider4.Text = "MaterialDivider4"
+        Me.mdTxtRecomendacionVieja.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.mdTxtRecomendacionVieja.Depth = 0
+        Me.mdTxtRecomendacionVieja.Location = New System.Drawing.Point(31, 183)
+        Me.mdTxtRecomendacionVieja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mdTxtRecomendacionVieja.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mdTxtRecomendacionVieja.Name = "mdTxtRecomendacionVieja"
+        Me.mdTxtRecomendacionVieja.Size = New System.Drawing.Size(351, 1)
+        Me.mdTxtRecomendacionVieja.TabIndex = 133
+        Me.mdTxtRecomendacionVieja.Text = "MaterialDivider4"
         '
-        'Label6
+        'lblActual
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(238, 90)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(112, 29)
-        Me.Label6.TabIndex = 146
-        Me.Label6.Text = "Actual     "
+        Me.lblActual.AutoSize = True
+        Me.lblActual.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblActual.Location = New System.Drawing.Point(317, 111)
+        Me.lblActual.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblActual.Name = "lblActual"
+        Me.lblActual.Size = New System.Drawing.Size(139, 36)
+        Me.lblActual.TabIndex = 146
+        Me.lblActual.Text = "Actual     "
         '
-        'Label5
+        'lblVerYModifcar
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(70, 720)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(280, 29)
-        Me.Label5.TabIndex = 145
-        Me.Label5.Text = "Ver y modificar síntomas"
+        Me.lblVerYModifcar.AutoSize = True
+        Me.lblVerYModifcar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVerYModifcar.Location = New System.Drawing.Point(93, 886)
+        Me.lblVerYModifcar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblVerYModifcar.Name = "lblVerYModifcar"
+        Me.lblVerYModifcar.Size = New System.Drawing.Size(339, 36)
+        Me.lblVerYModifcar.TabIndex = 145
+        Me.lblVerYModifcar.Text = "Ver y modificar síntomas"
         '
         'lblCantSelecc
         '
         Me.lblCantSelecc.AutoSize = True
         Me.lblCantSelecc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblCantSelecc.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCantSelecc.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCantSelecc.ForeColor = System.Drawing.Color.White
-        Me.lblCantSelecc.Location = New System.Drawing.Point(49, 17)
-        Me.lblCantSelecc.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.lblCantSelecc.Location = New System.Drawing.Point(65, 21)
+        Me.lblCantSelecc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCantSelecc.MaximumSize = New System.Drawing.Size(267, 0)
         Me.lblCantSelecc.Name = "lblCantSelecc"
-        Me.lblCantSelecc.Size = New System.Drawing.Size(0, 39)
+        Me.lblCantSelecc.Size = New System.Drawing.Size(0, 46)
         Me.lblCantSelecc.TabIndex = 25
         Me.lblCantSelecc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label10
+        'lblModiciarPatologia
         '
-        Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label10.Font = New System.Drawing.Font("Roboto Light", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(281, 11)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(362, 45)
-        Me.Label10.TabIndex = 4
-        Me.Label10.Text = "MODIFICAR PATOLOGIA"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblModiciarPatologia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblModiciarPatologia.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblModiciarPatologia.ForeColor = System.Drawing.Color.White
+        Me.lblModiciarPatologia.Location = New System.Drawing.Point(375, 14)
+        Me.lblModiciarPatologia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblModiciarPatologia.Name = "lblModiciarPatologia"
+        Me.lblModiciarPatologia.Size = New System.Drawing.Size(483, 55)
+        Me.lblModiciarPatologia.TabIndex = 4
+        Me.lblModiciarPatologia.Text = "MODIFICAR PATOLOGIA"
+        Me.lblModiciarPatologia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'GroupBox3
+        'grpPrioridad
         '
-        Me.GroupBox3.Controls.Add(Me.Panel1)
-        Me.GroupBox3.Controls.Add(Me.MaterialRadioButton3)
-        Me.GroupBox3.Controls.Add(Me.MaterialRadioButton2)
-        Me.GroupBox3.Controls.Add(Me.MaterialRadioButton1)
-        Me.GroupBox3.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(70, 219)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(755, 139)
-        Me.GroupBox3.TabIndex = 149
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Prioridad"
+        Me.grpPrioridad.Controls.Add(Me.pnlNueva)
+        Me.grpPrioridad.Controls.Add(Me.mrbtnBajaV)
+        Me.grpPrioridad.Controls.Add(Me.mrbtnMediaV)
+        Me.grpPrioridad.Controls.Add(Me.mrbtnAltaV)
+        Me.grpPrioridad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpPrioridad.Location = New System.Drawing.Point(93, 270)
+        Me.grpPrioridad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpPrioridad.Name = "grpPrioridad"
+        Me.grpPrioridad.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpPrioridad.Size = New System.Drawing.Size(1007, 171)
+        Me.grpPrioridad.TabIndex = 149
+        Me.grpPrioridad.TabStop = False
+        Me.grpPrioridad.Text = "Prioridad"
         '
-        'Panel3
+        'pnlModificarPatologia
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.lblCantSelecc)
-        Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Location = New System.Drawing.Point(0, -2)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(907, 69)
-        Me.Panel3.TabIndex = 144
+        Me.pnlModificarPatologia.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnlModificarPatologia.Controls.Add(Me.lblCantSelecc)
+        Me.pnlModificarPatologia.Controls.Add(Me.lblModiciarPatologia)
+        Me.pnlModificarPatologia.Location = New System.Drawing.Point(0, -2)
+        Me.pnlModificarPatologia.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlModificarPatologia.Name = "pnlModificarPatologia"
+        Me.pnlModificarPatologia.Size = New System.Drawing.Size(1209, 85)
+        Me.pnlModificarPatologia.TabIndex = 144
         '
         'frmModificarPatologia
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(907, 758)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.Panel3)
+        Me.ClientSize = New System.Drawing.Size(1209, 933)
+        Me.Controls.Add(Me.lblNueva)
+        Me.Controls.Add(Me.grpNombre)
+        Me.Controls.Add(Me.grpDescripcion)
+        Me.Controls.Add(Me.grpRecomendaciones)
+        Me.Controls.Add(Me.lblActual)
+        Me.Controls.Add(Me.lblVerYModifcar)
+        Me.Controls.Add(Me.grpPrioridad)
+        Me.Controls.Add(Me.pnlModificarPatologia)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmModificarPatologia"
         Me.Text = "frmModificarPatologia"
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.grpNombre.ResumeLayout(False)
+        Me.grpNombre.PerformLayout()
+        Me.pnlNueva.ResumeLayout(False)
+        Me.pnlNueva.PerformLayout()
+        Me.grpDescripcion.ResumeLayout(False)
+        Me.grpDescripcion.PerformLayout()
+        Me.grpRecomendaciones.ResumeLayout(False)
+        Me.grpRecomendaciones.PerformLayout()
+        Me.grpPrioridad.ResumeLayout(False)
+        Me.grpPrioridad.PerformLayout()
+        Me.pnlModificarPatologia.ResumeLayout(False)
+        Me.pnlModificarPatologia.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents MaterialDivider2 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents MaterialRadioButton3 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton2 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton1 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton4 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton6 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialRadioButton5 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents MaterialDivider7 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents MaterialDivider8 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents MaterialDivider3 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents MaterialDivider4 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblNueva As Label
+    Friend WithEvents txtNombreVieja As TextBox
+    Friend WithEvents txtNombreNueva As TextBox
+    Friend WithEvents mdTxtNombreNueva As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents grpNombre As GroupBox
+    Friend WithEvents mdTxtNombreVieja As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents mrbtnBajaV As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnMediaV As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnAltaV As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnBajaN As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnAltaN As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents mrbtnMediaN As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents txtDescripcionVieja As TextBox
+    Friend WithEvents txtDescripcionNueva As TextBox
+    Friend WithEvents mdTxtDescripcionNueva As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents pnlNueva As Panel
+    Friend WithEvents mxTtxtDescripcionVieja As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents grpDescripcion As GroupBox
+    Friend WithEvents grpRecomendaciones As GroupBox
+    Friend WithEvents txtRecomendacionVieja As TextBox
+    Friend WithEvents txtRecomendacionNueva As TextBox
+    Friend WithEvents mdTxtRecomendacionNueva As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents mdTxtRecomendacionVieja As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents lblActual As Label
+    Friend WithEvents lblVerYModifcar As Label
     Friend WithEvents lblCantSelecc As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents lblModiciarPatologia As Label
+    Friend WithEvents grpPrioridad As GroupBox
+    Friend WithEvents pnlModificarPatologia As Panel
 End Class

@@ -7,12 +7,12 @@ Public Class frmBienvenidaMedico
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        redondear(Panel1)
-        redondear(Panel2)
-        redondear(Panel3)
-        redondear(Panel4)
-        redondear(Panel5)
-        redondear(Panel6)
+        redondear(pnlChat)
+        redondear(pnlMiHistorial)
+        redondear(pnlAjustes)
+        redondear(pnlMiPerfil)
+        redondear(pnlAyuda)
+        redondear(pnlTitulo)
         redondear(Me)
 
     End Sub
@@ -60,7 +60,7 @@ Public Class frmBienvenidaMedico
 
     End Sub
 
-    Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel6.MouseDown
+    Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseDown
 
         drag = True
         mousex = Cursor.Position.X - Me.Left
@@ -68,7 +68,7 @@ Public Class frmBienvenidaMedico
 
     End Sub
 
-    Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel6.MouseMove
+    Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseMove
 
         If drag Then
 
@@ -78,7 +78,7 @@ Public Class frmBienvenidaMedico
         End If
 
     End Sub
-    Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel6.MouseUp
+    Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseUp
         drag = False
     End Sub
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -154,38 +154,38 @@ Public Class frmBienvenidaMedico
     '    hover(Panel5)
     'End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
-        frmLogin.Label2.Text = "Usuario"
-        frmLogin.Label2.Text = "Contraseña"
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
+        frmLogin.lblUsuario.Text = "Usuario"
+        frmLogin.lblUsuario.Text = "Contraseña"
         frmLogin.Show()
         Me.Close()
     End Sub
 
-    Private Sub Panel12_Paint(sender As Object, e As PaintEventArgs) Handles Panel12.Paint
+    Private Sub Panel12_Paint(sender As Object, e As PaintEventArgs) Handles pnlPatologias.Paint
 
     End Sub
 
-    Private Sub Panel3_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel3.MouseClick
+    Private Sub Panel3_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlAjustes.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel2.MouseClick
+    Private Sub Panel2_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlMiHistorial.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Panel4_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel4.MouseClick
+    Private Sub Panel4_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlMiPerfil.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Panel5_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel5.MouseClick
+    Private Sub Panel5_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlAyuda.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Panel12_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel12.MouseClick
+    Private Sub Panel12_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlPatologias.MouseClick
         MsgBox("En construcción...")
     End Sub
 
-    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
+    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles pnlChat.Click
         frmListadoChat.Show()
         Me.Dispose()
     End Sub

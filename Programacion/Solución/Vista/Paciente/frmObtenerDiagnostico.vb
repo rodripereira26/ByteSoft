@@ -17,14 +17,14 @@ Public Class frmObtenerDiagnostico
         If pat.informacionPatologia(dgvPosiblesDiagnosticos.CurrentCell.Value.ToString) Is Nothing Then
             MsgBox("Error al obtener la descripción")
         Else
-            UserControl11.lblNom.Text = dgvPosiblesDiagnosticos.CurrentCell.Value.ToString
-            UserControl11.lblDesc.Text = pat.informacionPatologia(dgvPosiblesDiagnosticos.CurrentCell.Value.ToString)
-            UserControl11.Visible = True
+            ucRespuesta.lblNom.Text = dgvPosiblesDiagnosticos.CurrentCell.Value.ToString
+            ucRespuesta.lblDesc.Text = pat.informacionPatologia(dgvPosiblesDiagnosticos.CurrentCell.Value.ToString)
+            ucRespuesta.Visible = True
         End If
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         frmIngresarSintomas.Visible = True
         solicitud = true
         Me.Dispose()

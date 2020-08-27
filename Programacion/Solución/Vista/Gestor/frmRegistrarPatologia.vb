@@ -48,12 +48,12 @@ Public Class frmRegistrarPatologia
 
     End Sub
 
-    Private Sub dgvTodos_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvTodos.MouseDown
-        selectItem(dgvTodos, dgvSintomasSeleccionados, e)
+    Private Sub dgvTodos_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvTodosLosSintomas.MouseDown
+        selectItem(dgvTodosLosSintomas, dgvSintomasSeleccionados, e)
     End Sub
 
     Private Sub dgvSintomasSeleccionados_MouseDown(sender As Object, e As MouseEventArgs) Handles dgvSintomasSeleccionados.MouseDown
-        selectItem(dgvSintomasSeleccionados, dgvTodos, e)
+        selectItem(dgvSintomasSeleccionados, dgvTodosLosSintomas, e)
     End Sub
 
     Private Sub dgvMisSintomas_DragOver(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragOver
@@ -61,15 +61,15 @@ Public Class frmRegistrarPatologia
     End Sub
 
     Private Sub dgvMisSintomas_DragDrop(sender As Object, e As DragEventArgs) Handles dgvSintomasSeleccionados.DragDrop
-        dropItem(dgvTodos, dgvSintomasSeleccionados, e)
+        dropItem(dgvTodosLosSintomas, dgvSintomasSeleccionados, e)
     End Sub
 
-    Private Sub dgvTodos_DragOver(sender As Object, e As DragEventArgs) Handles dgvTodos.DragOver
+    Private Sub dgvTodos_DragOver(sender As Object, e As DragEventArgs) Handles dgvTodosLosSintomas.DragOver
         e.Effect = DragDropEffects.Move
     End Sub
 
-    Private Sub dgvTodos_DragDrop(sender As Object, e As DragEventArgs) Handles dgvTodos.DragDrop
-        dropItem(dgvSintomasSeleccionados, dgvTodos, e)
+    Private Sub dgvTodos_DragDrop(sender As Object, e As DragEventArgs) Handles dgvTodosLosSintomas.DragDrop
+        dropItem(dgvSintomasSeleccionados, dgvTodosLosSintomas, e)
     End Sub
 
     Private Sub traerSintomas()
@@ -78,13 +78,13 @@ Public Class frmRegistrarPatologia
         Dim arraySintomas = s.traerSintomas
 
         For i = 0 To arraySintomas.Count - 1
-            dgvTodos.Rows.Add(arraySintomas(i))
+            dgvTodosLosSintomas.Rows.Add(arraySintomas(i))
         Next
 
     End Sub
 
 
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles mrbtnRegistrarPat.Click
 
         Dim prioridad As Byte
         Dim ali As New ArrayList
@@ -94,11 +94,11 @@ Public Class frmRegistrarPatologia
             If txtDescPat.Text.Length > 10 Then
                 If txtRecPat.Text.Length > 10 Then
 
-                    If cb1.Checked Then
+                    If mrbPAlta.Checked Then
                         prioridad = 1
-                    ElseIf cb2.Checked Then
+                    ElseIf mrbPMedia.Checked Then
                         prioridad = 2
-                    ElseIf cb3.Checked Then
+                    ElseIf mrbPBaja.Checked Then
                         prioridad = 3
                     End If
 
@@ -115,7 +115,7 @@ Public Class frmRegistrarPatologia
                     txtNomPat.Clear()
                     txtDescPat.Clear()
                     txtRecPat.Clear()
-                    dgvTodos.Rows.Clear()
+                    dgvTodosLosSintomas.Rows.Clear()
                     dgvSintomasSeleccionados.Rows.Clear()
                     traerSintomas()
 
@@ -131,7 +131,7 @@ Public Class frmRegistrarPatologia
 
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
         Me.Close()
     End Sub
 

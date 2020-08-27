@@ -22,11 +22,11 @@ Partial Class frmRegistrarMedico
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pnlDecPrimerNombre = New System.Windows.Forms.Panel()
         Me.txtPrimerNombre = New System.Windows.Forms.TextBox()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlDecoSegundoApellido = New System.Windows.Forms.Panel()
+        Me.pnlDecoPrimerApellido = New System.Windows.Forms.Panel()
+        Me.pnlDecoSegundoNombre = New System.Windows.Forms.Panel()
         Me.txtSegundoApellido = New System.Windows.Forms.TextBox()
         Me.lblSegundoApellido = New System.Windows.Forms.Label()
         Me.txtPrimerApellido = New System.Windows.Forms.TextBox()
@@ -36,81 +36,88 @@ Partial Class frmRegistrarMedico
         Me.lblPrimerNombre = New System.Windows.Forms.Label()
         Me.pnlTitulo = New System.Windows.Forms.Panel()
         Me.btnAtras = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.lblRegistrar = New System.Windows.Forms.Label()
+        Me.lblMinimizar = New System.Windows.Forms.Label()
+        Me.lblCerrar = New System.Windows.Forms.Label()
+        Me.pnlSuperior1 = New System.Windows.Forms.Panel()
+        Me.pnlSuperior2 = New System.Windows.Forms.Panel()
+        Me.pnlSuperior3 = New System.Windows.Forms.Panel()
+        Me.pnlDecoCed = New System.Windows.Forms.Panel()
         Me.txtCed = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCed = New System.Windows.Forms.Label()
         Me.btnRegistrarMedico = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtEspe = New System.Windows.Forms.TextBox()
+        Me.pnlDecoEspec = New System.Windows.Forms.Panel()
+        Me.lblEspec = New System.Windows.Forms.Label()
+        Me.txtEspec = New System.Windows.Forms.TextBox()
         Me.pnlTitulo.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel3
+        'pnlDecPrimerNombre
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Black
-        Me.Panel3.Location = New System.Drawing.Point(119, 293)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(218, 2)
-        Me.Panel3.TabIndex = 88
+        Me.pnlDecPrimerNombre.BackColor = System.Drawing.Color.Black
+        Me.pnlDecPrimerNombre.Location = New System.Drawing.Point(159, 361)
+        Me.pnlDecPrimerNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecPrimerNombre.Name = "pnlDecPrimerNombre"
+        Me.pnlDecPrimerNombre.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecPrimerNombre.TabIndex = 88
         '
         'txtPrimerNombre
         '
         Me.txtPrimerNombre.BackColor = System.Drawing.Color.White
         Me.txtPrimerNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerNombre.Location = New System.Drawing.Point(119, 263)
+        Me.txtPrimerNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrimerNombre.Location = New System.Drawing.Point(159, 324)
+        Me.txtPrimerNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
-        Me.txtPrimerNombre.Size = New System.Drawing.Size(218, 23)
+        Me.txtPrimerNombre.Size = New System.Drawing.Size(291, 27)
         Me.txtPrimerNombre.TabIndex = 87
         '
-        'Panel5
+        'pnlDecoSegundoApellido
         '
-        Me.Panel5.BackColor = System.Drawing.Color.Black
-        Me.Panel5.Location = New System.Drawing.Point(367, 442)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(218, 2)
-        Me.Panel5.TabIndex = 86
+        Me.pnlDecoSegundoApellido.BackColor = System.Drawing.Color.Black
+        Me.pnlDecoSegundoApellido.Location = New System.Drawing.Point(489, 544)
+        Me.pnlDecoSegundoApellido.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecoSegundoApellido.Name = "pnlDecoSegundoApellido"
+        Me.pnlDecoSegundoApellido.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecoSegundoApellido.TabIndex = 86
         '
-        'Panel4
+        'pnlDecoPrimerApellido
         '
-        Me.Panel4.BackColor = System.Drawing.Color.Black
-        Me.Panel4.Location = New System.Drawing.Point(119, 442)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(218, 2)
-        Me.Panel4.TabIndex = 85
+        Me.pnlDecoPrimerApellido.BackColor = System.Drawing.Color.Black
+        Me.pnlDecoPrimerApellido.Location = New System.Drawing.Point(159, 544)
+        Me.pnlDecoPrimerApellido.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecoPrimerApellido.Name = "pnlDecoPrimerApellido"
+        Me.pnlDecoPrimerApellido.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecoPrimerApellido.TabIndex = 85
         '
-        'Panel2
+        'pnlDecoSegundoNombre
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Black
-        Me.Panel2.Location = New System.Drawing.Point(367, 290)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(218, 2)
-        Me.Panel2.TabIndex = 84
+        Me.pnlDecoSegundoNombre.BackColor = System.Drawing.Color.Black
+        Me.pnlDecoSegundoNombre.Location = New System.Drawing.Point(489, 357)
+        Me.pnlDecoSegundoNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecoSegundoNombre.Name = "pnlDecoSegundoNombre"
+        Me.pnlDecoSegundoNombre.Size = New System.Drawing.Size(291, 2)
+        Me.pnlDecoSegundoNombre.TabIndex = 84
         '
         'txtSegundoApellido
         '
         Me.txtSegundoApellido.BackColor = System.Drawing.Color.White
         Me.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoApellido.Location = New System.Drawing.Point(367, 412)
+        Me.txtSegundoApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegundoApellido.Location = New System.Drawing.Point(489, 507)
+        Me.txtSegundoApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSegundoApellido.Name = "txtSegundoApellido"
-        Me.txtSegundoApellido.Size = New System.Drawing.Size(218, 23)
+        Me.txtSegundoApellido.Size = New System.Drawing.Size(291, 27)
         Me.txtSegundoApellido.TabIndex = 81
         '
         'lblSegundoApellido
         '
         Me.lblSegundoApellido.AutoSize = True
-        Me.lblSegundoApellido.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSegundoApellido.Location = New System.Drawing.Point(390, 372)
+        Me.lblSegundoApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSegundoApellido.Location = New System.Drawing.Point(520, 458)
+        Me.lblSegundoApellido.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSegundoApellido.Name = "lblSegundoApellido"
-        Me.lblSegundoApellido.Size = New System.Drawing.Size(176, 26)
+        Me.lblSegundoApellido.Size = New System.Drawing.Size(225, 31)
         Me.lblSegundoApellido.TabIndex = 83
         Me.lblSegundoApellido.Text = "Segundo Apellido"
         '
@@ -118,19 +125,21 @@ Partial Class frmRegistrarMedico
         '
         Me.txtPrimerApellido.BackColor = System.Drawing.Color.White
         Me.txtPrimerApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrimerApellido.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerApellido.Location = New System.Drawing.Point(119, 412)
+        Me.txtPrimerApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrimerApellido.Location = New System.Drawing.Point(159, 507)
+        Me.txtPrimerApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrimerApellido.Name = "txtPrimerApellido"
-        Me.txtPrimerApellido.Size = New System.Drawing.Size(218, 23)
+        Me.txtPrimerApellido.Size = New System.Drawing.Size(291, 27)
         Me.txtPrimerApellido.TabIndex = 79
         '
         'lblPrimerApellido
         '
         Me.lblPrimerApellido.AutoSize = True
-        Me.lblPrimerApellido.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrimerApellido.Location = New System.Drawing.Point(156, 376)
+        Me.lblPrimerApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrimerApellido.Location = New System.Drawing.Point(208, 463)
+        Me.lblPrimerApellido.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrimerApellido.Name = "lblPrimerApellido"
-        Me.lblPrimerApellido.Size = New System.Drawing.Size(154, 26)
+        Me.lblPrimerApellido.Size = New System.Drawing.Size(196, 31)
         Me.lblPrimerApellido.TabIndex = 82
         Me.lblPrimerApellido.Text = "Primer Apellido"
         '
@@ -138,29 +147,32 @@ Partial Class frmRegistrarMedico
         '
         Me.txtSegundoNombre.BackColor = System.Drawing.Color.White
         Me.txtSegundoNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSegundoNombre.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoNombre.Location = New System.Drawing.Point(367, 260)
+        Me.txtSegundoNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSegundoNombre.Location = New System.Drawing.Point(489, 320)
+        Me.txtSegundoNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
-        Me.txtSegundoNombre.Size = New System.Drawing.Size(218, 23)
+        Me.txtSegundoNombre.Size = New System.Drawing.Size(291, 27)
         Me.txtSegundoNombre.TabIndex = 78
         '
         'lblSegundoNombre
         '
         Me.lblSegundoNombre.AutoSize = True
-        Me.lblSegundoNombre.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSegundoNombre.Location = New System.Drawing.Point(390, 219)
+        Me.lblSegundoNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSegundoNombre.Location = New System.Drawing.Point(520, 270)
+        Me.lblSegundoNombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSegundoNombre.Name = "lblSegundoNombre"
-        Me.lblSegundoNombre.Size = New System.Drawing.Size(175, 26)
+        Me.lblSegundoNombre.Size = New System.Drawing.Size(225, 31)
         Me.lblSegundoNombre.TabIndex = 80
         Me.lblSegundoNombre.Text = "Segundo Nombre"
         '
         'lblPrimerNombre
         '
         Me.lblPrimerNombre.AutoSize = True
-        Me.lblPrimerNombre.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrimerNombre.Location = New System.Drawing.Point(156, 223)
+        Me.lblPrimerNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrimerNombre.Location = New System.Drawing.Point(208, 274)
+        Me.lblPrimerNombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrimerNombre.Name = "lblPrimerNombre"
-        Me.lblPrimerNombre.Size = New System.Drawing.Size(153, 26)
+        Me.lblPrimerNombre.Size = New System.Drawing.Size(196, 31)
         Me.lblPrimerNombre.TabIndex = 77
         Me.lblPrimerNombre.Text = "Primer Nombre"
         '
@@ -168,12 +180,13 @@ Partial Class frmRegistrarMedico
         '
         Me.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.pnlTitulo.Controls.Add(Me.btnAtras)
-        Me.pnlTitulo.Controls.Add(Me.Label10)
-        Me.pnlTitulo.Controls.Add(Me.Label2)
-        Me.pnlTitulo.Controls.Add(Me.Label3)
-        Me.pnlTitulo.Location = New System.Drawing.Point(-1, 0)
+        Me.pnlTitulo.Controls.Add(Me.lblRegistrar)
+        Me.pnlTitulo.Controls.Add(Me.lblMinimizar)
+        Me.pnlTitulo.Controls.Add(Me.lblCerrar)
+        Me.pnlTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTitulo.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlTitulo.Name = "pnlTitulo"
-        Me.pnlTitulo.Size = New System.Drawing.Size(701, 78)
+        Me.pnlTitulo.Size = New System.Drawing.Size(935, 96)
         Me.pnlTitulo.TabIndex = 92
         '
         'btnAtras
@@ -182,100 +195,110 @@ Partial Class frmRegistrarMedico
         Me.btnAtras.FlatAppearance.BorderSize = 0
         Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAtras.Image = Global.Vista.My.Resources.Resources.icoFlechaAtrasWhite
-        Me.btnAtras.Location = New System.Drawing.Point(33, 20)
+        Me.btnAtras.Location = New System.Drawing.Point(44, 25)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(34, 33)
+        Me.btnAtras.Size = New System.Drawing.Size(45, 41)
         Me.btnAtras.TabIndex = 28
         Me.btnAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnAtras.UseVisualStyleBackColor = True
         '
-        'Label10
+        'lblRegistrar
         '
-        Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label10.Font = New System.Drawing.Font("Roboto Light", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(194, 17)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(313, 45)
-        Me.Label10.TabIndex = 27
-        Me.Label10.Text = "REGISTRAR MÉDICO"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegistrar.ForeColor = System.Drawing.Color.White
+        Me.lblRegistrar.Location = New System.Drawing.Point(259, 21)
+        Me.lblRegistrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRegistrar.Name = "lblRegistrar"
+        Me.lblRegistrar.Size = New System.Drawing.Size(417, 55)
+        Me.lblRegistrar.TabIndex = 27
+        Me.lblRegistrar.Text = "REGISTRAR MÉDICO"
+        Me.lblRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'lblMinimizar
         '
-        Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(625, -6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(24, 35)
-        Me.Label2.TabIndex = 26
-        Me.Label2.Text = "_"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMinimizar.ForeColor = System.Drawing.Color.White
+        Me.lblMinimizar.Location = New System.Drawing.Point(833, -7)
+        Me.lblMinimizar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMinimizar.Name = "lblMinimizar"
+        Me.lblMinimizar.Size = New System.Drawing.Size(32, 43)
+        Me.lblMinimizar.TabIndex = 26
+        Me.lblMinimizar.Text = "_"
+        Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label3
+        'lblCerrar
         '
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(655, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 35)
-        Me.Label3.TabIndex = 25
-        Me.Label3.Text = "X"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCerrar.ForeColor = System.Drawing.Color.White
+        Me.lblCerrar.Location = New System.Drawing.Point(873, 0)
+        Me.lblCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCerrar.Name = "lblCerrar"
+        Me.lblCerrar.Size = New System.Drawing.Size(57, 43)
+        Me.lblCerrar.TabIndex = 25
+        Me.lblCerrar.Text = "X"
+        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel7
+        'pnlSuperior1
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(12, 0)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(534, 14)
-        Me.Panel7.TabIndex = 89
+        Me.pnlSuperior1.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.pnlSuperior1.Location = New System.Drawing.Point(16, 0)
+        Me.pnlSuperior1.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlSuperior1.Name = "pnlSuperior1"
+        Me.pnlSuperior1.Size = New System.Drawing.Size(712, 17)
+        Me.pnlSuperior1.TabIndex = 89
         '
-        'Panel1
+        'pnlSuperior2
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(12, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(529, 12)
-        Me.Panel1.TabIndex = 90
+        Me.pnlSuperior2.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.pnlSuperior2.Location = New System.Drawing.Point(16, 0)
+        Me.pnlSuperior2.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlSuperior2.Name = "pnlSuperior2"
+        Me.pnlSuperior2.Size = New System.Drawing.Size(705, 15)
+        Me.pnlSuperior2.TabIndex = 90
         '
-        'Panel8
+        'pnlSuperior3
         '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(12, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(529, 12)
-        Me.Panel8.TabIndex = 91
+        Me.pnlSuperior3.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.pnlSuperior3.Location = New System.Drawing.Point(16, 0)
+        Me.pnlSuperior3.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlSuperior3.Name = "pnlSuperior3"
+        Me.pnlSuperior3.Size = New System.Drawing.Size(705, 15)
+        Me.pnlSuperior3.TabIndex = 91
         '
-        'Panel9
+        'pnlDecoCed
         '
-        Me.Panel9.BackColor = System.Drawing.Color.Black
-        Me.Panel9.Location = New System.Drawing.Point(153, 175)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(176, 2)
-        Me.Panel9.TabIndex = 91
+        Me.pnlDecoCed.BackColor = System.Drawing.Color.Black
+        Me.pnlDecoCed.Location = New System.Drawing.Point(204, 215)
+        Me.pnlDecoCed.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecoCed.Name = "pnlDecoCed"
+        Me.pnlDecoCed.Size = New System.Drawing.Size(235, 2)
+        Me.pnlDecoCed.TabIndex = 91
         '
         'txtCed
         '
         Me.txtCed.BackColor = System.Drawing.Color.White
         Me.txtCed.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCed.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCed.Location = New System.Drawing.Point(153, 145)
+        Me.txtCed.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCed.Location = New System.Drawing.Point(204, 178)
+        Me.txtCed.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCed.Name = "txtCed"
-        Me.txtCed.Size = New System.Drawing.Size(176, 23)
+        Me.txtCed.Size = New System.Drawing.Size(235, 27)
         Me.txtCed.TabIndex = 90
         '
-        'Label1
+        'lblCed
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(139, 111)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 26)
-        Me.Label1.TabIndex = 89
-        Me.Label1.Text = "Cédula de Identidad"
+        Me.lblCed.AutoSize = True
+        Me.lblCed.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCed.Location = New System.Drawing.Point(185, 137)
+        Me.lblCed.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCed.Name = "lblCed"
+        Me.lblCed.Size = New System.Drawing.Size(256, 31)
+        Me.lblCed.TabIndex = 89
+        Me.lblCed.Text = "Cédula de Identidad"
         '
         'btnRegistrarMedico
         '
@@ -283,73 +306,78 @@ Partial Class frmRegistrarMedico
         Me.btnRegistrarMedico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnRegistrarMedico.Depth = 0
         Me.btnRegistrarMedico.Icon = Nothing
-        Me.btnRegistrarMedico.Location = New System.Drawing.Point(280, 494)
+        Me.btnRegistrarMedico.Location = New System.Drawing.Point(373, 608)
+        Me.btnRegistrarMedico.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRegistrarMedico.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnRegistrarMedico.Name = "btnRegistrarMedico"
         Me.btnRegistrarMedico.Primary = True
-        Me.btnRegistrarMedico.Size = New System.Drawing.Size(141, 36)
+        Me.btnRegistrarMedico.Size = New System.Drawing.Size(172, 36)
         Me.btnRegistrarMedico.TabIndex = 126
         Me.btnRegistrarMedico.Text = "Ingresar médico"
         Me.btnRegistrarMedico.UseVisualStyleBackColor = True
         '
-        'Panel6
+        'pnlDecoEspec
         '
-        Me.Panel6.BackColor = System.Drawing.Color.Black
-        Me.Panel6.Location = New System.Drawing.Point(400, 175)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(176, 2)
-        Me.Panel6.TabIndex = 128
+        Me.pnlDecoEspec.BackColor = System.Drawing.Color.Black
+        Me.pnlDecoEspec.Location = New System.Drawing.Point(533, 215)
+        Me.pnlDecoEspec.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlDecoEspec.Name = "pnlDecoEspec"
+        Me.pnlDecoEspec.Size = New System.Drawing.Size(235, 2)
+        Me.pnlDecoEspec.TabIndex = 128
         '
-        'Label4
+        'lblEspec
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(410, 111)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(156, 26)
-        Me.Label4.TabIndex = 127
-        Me.Label4.Text = "Especialización"
+        Me.lblEspec.AutoSize = True
+        Me.lblEspec.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEspec.Location = New System.Drawing.Point(547, 137)
+        Me.lblEspec.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEspec.Name = "lblEspec"
+        Me.lblEspec.Size = New System.Drawing.Size(202, 31)
+        Me.lblEspec.TabIndex = 127
+        Me.lblEspec.Text = "Especialización"
         '
-        'txtEspe
+        'txtEspec
         '
-        Me.txtEspe.BackColor = System.Drawing.Color.White
-        Me.txtEspe.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEspe.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspe.Location = New System.Drawing.Point(400, 146)
-        Me.txtEspe.Name = "txtEspe"
-        Me.txtEspe.Size = New System.Drawing.Size(176, 23)
-        Me.txtEspe.TabIndex = 129
+        Me.txtEspec.BackColor = System.Drawing.Color.White
+        Me.txtEspec.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtEspec.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEspec.Location = New System.Drawing.Point(533, 180)
+        Me.txtEspec.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtEspec.Name = "txtEspec"
+        Me.txtEspec.Size = New System.Drawing.Size(235, 27)
+        Me.txtEspec.TabIndex = 129
         '
         'frmRegistrarMedico
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(700, 556)
-        Me.Controls.Add(Me.txtEspe)
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.btnRegistrarMedico)
-        Me.Controls.Add(Me.Panel9)
-        Me.Controls.Add(Me.txtCed)
+        Me.ClientSize = New System.Drawing.Size(933, 684)
         Me.Controls.Add(Me.pnlTitulo)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel8)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.txtPrimerNombre)
-        Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.txtSegundoApellido)
-        Me.Controls.Add(Me.lblSegundoApellido)
-        Me.Controls.Add(Me.txtPrimerApellido)
-        Me.Controls.Add(Me.lblPrimerApellido)
-        Me.Controls.Add(Me.txtSegundoNombre)
-        Me.Controls.Add(Me.lblSegundoNombre)
+        Me.Controls.Add(Me.lblCed)
+        Me.Controls.Add(Me.txtCed)
+        Me.Controls.Add(Me.pnlDecoCed)
+        Me.Controls.Add(Me.lblEspec)
+        Me.Controls.Add(Me.txtEspec)
+        Me.Controls.Add(Me.pnlDecoEspec)
         Me.Controls.Add(Me.lblPrimerNombre)
+        Me.Controls.Add(Me.txtPrimerNombre)
+        Me.Controls.Add(Me.pnlDecPrimerNombre)
+        Me.Controls.Add(Me.lblSegundoNombre)
+        Me.Controls.Add(Me.txtSegundoNombre)
+        Me.Controls.Add(Me.pnlDecoSegundoNombre)
+        Me.Controls.Add(Me.lblPrimerApellido)
+        Me.Controls.Add(Me.txtPrimerApellido)
+        Me.Controls.Add(Me.pnlDecoPrimerApellido)
+        Me.Controls.Add(Me.lblSegundoApellido)
+        Me.Controls.Add(Me.txtSegundoApellido)
+        Me.Controls.Add(Me.pnlDecoSegundoApellido)
+        Me.Controls.Add(Me.btnRegistrarMedico)
+        Me.Controls.Add(Me.pnlSuperior1)
+        Me.Controls.Add(Me.pnlSuperior2)
+        Me.Controls.Add(Me.pnlSuperior3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmRegistrarMedico"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
@@ -359,11 +387,11 @@ Partial Class frmRegistrarMedico
 
     End Sub
 
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlDecPrimerNombre As Panel
     Friend WithEvents txtPrimerNombre As TextBox
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlDecoSegundoApellido As Panel
+    Friend WithEvents pnlDecoPrimerApellido As Panel
+    Friend WithEvents pnlDecoSegundoNombre As Panel
     Friend WithEvents txtSegundoApellido As TextBox
     Friend WithEvents lblSegundoApellido As Label
     Friend WithEvents txtPrimerApellido As TextBox
@@ -372,18 +400,18 @@ Partial Class frmRegistrarMedico
     Friend WithEvents lblSegundoNombre As Label
     Friend WithEvents lblPrimerNombre As Label
     Friend WithEvents pnlTitulo As Panel
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Panel9 As Panel
+    Friend WithEvents pnlSuperior1 As Panel
+    Friend WithEvents pnlSuperior2 As Panel
+    Friend WithEvents pnlSuperior3 As Panel
+    Friend WithEvents pnlDecoCed As Panel
     Friend WithEvents txtCed As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblCed As Label
+    Friend WithEvents lblMinimizar As Label
+    Friend WithEvents lblCerrar As Label
     Friend WithEvents btnRegistrarMedico As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents Label10 As Label
+    Friend WithEvents lblRegistrar As Label
     Friend WithEvents btnAtras As Button
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtEspe As TextBox
+    Friend WithEvents pnlDecoEspec As Panel
+    Friend WithEvents lblEspec As Label
+    Friend WithEvents txtEspec As TextBox
 End Class

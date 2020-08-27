@@ -22,139 +22,148 @@ Partial Class UserControl1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.MetroSetDivider1 = New MetroSet_UI.Controls.MetroSetDivider()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblDescripcion = New System.Windows.Forms.Label()
+        Me.lblRecomendaciones = New System.Windows.Forms.Label()
+        Me.msdDec = New MetroSet_UI.Controls.MetroSetDivider()
+        Me.lblVerSintomas = New System.Windows.Forms.Label()
         Me.lblNom = New System.Windows.Forms.Label()
         Me.pnlTituloPatologia = New System.Windows.Forms.Panel()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.lblDesc = New System.Windows.Forms.Label()
         Me.lblRec = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlTituloPatologia.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblDescripcion
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(237, 153)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(152, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Descripción: "
+        Me.lblDescripcion.AutoSize = True
+        Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.Location = New System.Drawing.Point(316, 188)
+        Me.lblDescripcion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcion.Name = "lblDescripcion"
+        Me.lblDescripcion.Size = New System.Drawing.Size(188, 36)
+        Me.lblDescripcion.TabIndex = 0
+        Me.lblDescripcion.Text = "Descripción: "
         '
-        'Label2
+        'lblRecomendaciones
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(208, 271)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(219, 29)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Recomendaciones:"
+        Me.lblRecomendaciones.AutoSize = True
+        Me.lblRecomendaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRecomendaciones.Location = New System.Drawing.Point(277, 334)
+        Me.lblRecomendaciones.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRecomendaciones.Name = "lblRecomendaciones"
+        Me.lblRecomendaciones.Size = New System.Drawing.Size(269, 36)
+        Me.lblRecomendaciones.TabIndex = 1
+        Me.lblRecomendaciones.Text = "Recomendaciones:"
         '
-        'MetroSetDivider1
+        'msdDec
         '
-        Me.MetroSetDivider1.Location = New System.Drawing.Point(153, 118)
-        Me.MetroSetDivider1.Name = "MetroSetDivider1"
-        Me.MetroSetDivider1.Orientation = MetroSet_UI.Enums.DividerStyle.Horizontal
-        Me.MetroSetDivider1.Size = New System.Drawing.Size(301, 4)
-        Me.MetroSetDivider1.Style = MetroSet_UI.Design.Style.Light
-        Me.MetroSetDivider1.StyleManager = Nothing
-        Me.MetroSetDivider1.TabIndex = 2
-        Me.MetroSetDivider1.Text = "MetroSetDivider1"
-        Me.MetroSetDivider1.ThemeAuthor = "Narwin"
-        Me.MetroSetDivider1.ThemeName = "MetroLite"
-        Me.MetroSetDivider1.Thickness = 1
+        Me.msdDec.Location = New System.Drawing.Point(204, 145)
+        Me.msdDec.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.msdDec.Name = "msdDec"
+        Me.msdDec.Orientation = MetroSet_UI.Enums.DividerStyle.Horizontal
+        Me.msdDec.Size = New System.Drawing.Size(401, 4)
+        Me.msdDec.Style = MetroSet_UI.Design.Style.Light
+        Me.msdDec.StyleManager = Nothing
+        Me.msdDec.TabIndex = 2
+        Me.msdDec.Text = "MetroSetDivider1"
+        Me.msdDec.ThemeAuthor = "Narwin"
+        Me.msdDec.ThemeName = "MetroLite"
+        Me.msdDec.Thickness = 1
         '
-        'Label3
+        'lblVerSintomas
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(236, 376)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(154, 29)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Ver síntomas"
+        Me.lblVerSintomas.AutoSize = True
+        Me.lblVerSintomas.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVerSintomas.Location = New System.Drawing.Point(315, 463)
+        Me.lblVerSintomas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblVerSintomas.Name = "lblVerSintomas"
+        Me.lblVerSintomas.Size = New System.Drawing.Size(188, 36)
+        Me.lblVerSintomas.TabIndex = 3
+        Me.lblVerSintomas.Text = "Ver síntomas"
         '
         'lblNom
         '
-        Me.lblNom.Font = New System.Drawing.Font("Roboto", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNom.Location = New System.Drawing.Point(153, 58)
+        Me.lblNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNom.Location = New System.Drawing.Point(204, 71)
+        Me.lblNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNom.Name = "lblNom"
-        Me.lblNom.Size = New System.Drawing.Size(301, 38)
+        Me.lblNom.Size = New System.Drawing.Size(401, 47)
         Me.lblNom.TabIndex = 4
         Me.lblNom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlTituloPatologia
         '
         Me.pnlTituloPatologia.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.pnlTituloPatologia.Controls.Add(Me.Button1)
+        Me.pnlTituloPatologia.Controls.Add(Me.btnAtras)
         Me.pnlTituloPatologia.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTituloPatologia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTituloPatologia.Name = "pnlTituloPatologia"
-        Me.pnlTituloPatologia.Size = New System.Drawing.Size(607, 36)
+        Me.pnlTituloPatologia.Size = New System.Drawing.Size(809, 44)
         Me.pnlTituloPatologia.TabIndex = 148
+        '
+        'btnAtras
+        '
+        Me.btnAtras.BackgroundImage = Global.Vista.My.Resources.Resources.icons8_left_32px
+        Me.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnAtras.FlatAppearance.BorderSize = 0
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Location = New System.Drawing.Point(0, 0)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAtras.Size = New System.Drawing.Size(65, 39)
+        Me.btnAtras.TabIndex = 152
+        Me.btnAtras.UseVisualStyleBackColor = True
         '
         'lblDesc
         '
-        Me.lblDesc.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDesc.Location = New System.Drawing.Point(150, 190)
+        Me.lblDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDesc.Location = New System.Drawing.Point(200, 234)
+        Me.lblDesc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDesc.Name = "lblDesc"
-        Me.lblDesc.Size = New System.Drawing.Size(306, 59)
+        Me.lblDesc.Size = New System.Drawing.Size(408, 73)
         Me.lblDesc.TabIndex = 149
         '
         'lblRec
         '
-        Me.lblRec.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRec.Location = New System.Drawing.Point(150, 307)
+        Me.lblRec.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRec.Location = New System.Drawing.Point(200, 378)
+        Me.lblRec.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRec.Name = "lblRec"
-        Me.lblRec.Size = New System.Drawing.Size(306, 47)
+        Me.lblRec.Size = New System.Drawing.Size(408, 58)
         Me.lblRec.TabIndex = 151
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = Global.Vista.My.Resources.Resources.icons8_left_32px
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Button1.Size = New System.Drawing.Size(49, 32)
-        Me.Button1.TabIndex = 152
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'UserControl1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Controls.Add(Me.lblRec)
-        Me.Controls.Add(Me.lblDesc)
         Me.Controls.Add(Me.pnlTituloPatologia)
         Me.Controls.Add(Me.lblNom)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.MetroSetDivider1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.msdDec)
+        Me.Controls.Add(Me.lblDescripcion)
+        Me.Controls.Add(Me.lblDesc)
+        Me.Controls.Add(Me.lblRecomendaciones)
+        Me.Controls.Add(Me.lblRec)
+        Me.Controls.Add(Me.lblVerSintomas)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "UserControl1"
-        Me.Size = New System.Drawing.Size(605, 539)
+        Me.Size = New System.Drawing.Size(807, 663)
         Me.pnlTituloPatologia.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents MetroSetDivider1 As MetroSet_UI.Controls.MetroSetDivider
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblDescripcion As Label
+    Friend WithEvents lblRecomendaciones As Label
+    Friend WithEvents msdDec As MetroSet_UI.Controls.MetroSetDivider
+    Friend WithEvents lblVerSintomas As Label
     Friend WithEvents lblNom As Label
     Friend WithEvents pnlTituloPatologia As Panel
     Friend WithEvents lblDesc As Label
     Friend WithEvents lblRec As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAtras As Button
 End Class

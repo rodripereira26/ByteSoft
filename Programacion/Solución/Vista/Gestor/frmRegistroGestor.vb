@@ -9,22 +9,22 @@ Public Class frmRegistroGestor
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles btnRegistrarGestor.Click
 
         If Principal.Singleton.verificarCedula(check, txtCI.Text) Then
-            If Principal.Singleton.verificarContraseña(seg, txtPass1.Text, txtPass2.Text) Then
-                pass = seg.HASH256(txtPass1.Text)
-                If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
-                    If Principal.Singleton.verificarEmail(check, txtEmail.Text) Then
+            If Principal.Singleton.verificarContraseña(seg, txtCon.Text, txtRepCon.Text) Then
+                pass = seg.HASH256(txtCon.Text)
+                If Principal.Singleton.verificarString(check, txtPNom.Text, txtPApe.Text, txtSNom.Text, txtSApe.Text) Then
+                    If Principal.Singleton.verificarEmail(check, txtMail.Text) Then
                         If Principal.Singleton.verificarTelefonos(dgvTelefonos, aliTel) Then
                             Dim ges As New ControladorGestor(txtCI.Text,
                                                  pass,
-                                                 txtPrimerNombre.Text.ToUpper,
-                                                 txtSegundoNombre.Text.ToUpper,
-                                                 txtPrimerApellido.Text.ToUpper,
-                                                 txtSegundoApellido.Text.ToUpper,
+                                                 txtPNom.Text.ToUpper,
+                                                 txtSNom.Text.ToUpper,
+                                                 txtPApe.Text.ToUpper,
+                                                 txtSApe.Text.ToUpper,
                                                  aliTel,
-                                                 txtEmail.Text)
+                                                 txtMail.Text)
                             If ges.registrar() Then
                                 MsgBox("Gestor registrado con éxito")
-                                Principal.Singleton.limpiar(txtCI, txtPass1, txtPass2, txtPrimerApellido, txtPrimerNombre, txtSegundoApellido, txtSegundoNombre, txtEmail, dgvTelefonos, aliTel)
+                                Principal.Singleton.limpiar(txtCI, txtCon, txtRepCon, txtPApe, txtPNom, txtSApe, txtSNom, txtMail, dgvTelefonos, aliTel)
 
                             Else
                                 MsgBox("El gestor ya fue registrado")
@@ -43,10 +43,10 @@ Public Class frmRegistroGestor
     End Sub
 
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles lblTxtAgregarTelefonos.Click
 
-        If Panel12.Visible = False Then
-            Panel12.Visible = True
+        If pnlTelefonos.Visible = False Then
+            pnlTelefonos.Visible = True
         End If
 
     End Sub
@@ -55,7 +55,7 @@ Public Class frmRegistroGestor
         dgvTelefonos.Rows.RemoveAt(dgvTelefonos.SelectedRows(0).Index)
     End Sub
 
-    Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
+    Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
         If check.verificar_int(dgvTelefonos.Rows(dgvTelefonos.Rows.Count - 2).Cells(0).Value.ToString) = False Then
 
@@ -64,7 +64,7 @@ Public Class frmRegistroGestor
 
         End If
 
-        Panel12.Hide()
+        pnlTelefonos.Hide()
         ''add animacion
 
     End Sub
@@ -87,9 +87,9 @@ Public Class frmRegistroGestor
     End Sub
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        If Not (txtCI.Text = Nothing And txtPrimerNombre.Text = Nothing And txtPrimerApellido.Text = Nothing And
-            txtPrimerNombre.Text = Nothing And txtSegundoApellido.Text = Nothing And txtSegundoNombre.Text = Nothing And
-            txtPass1.Text = Nothing And txtPass2.Text = Nothing And txtEmail.Text = Nothing And dgvTelefonos.Rows.Count > 0) Then
+        If Not (txtCI.Text = Nothing And txtPNom.Text = Nothing And txtPApe.Text = Nothing And
+            txtPNom.Text = Nothing And txtSApe.Text = Nothing And txtSNom.Text = Nothing And
+            txtCon.Text = Nothing And txtRepCon.Text = Nothing And txtMail.Text = Nothing And dgvTelefonos.Rows.Count > 0) Then
             Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
             If res = vbYes Then
                 frmModular.Show()
@@ -102,4 +102,5 @@ Public Class frmRegistroGestor
         frmModular.Show()
         Me.Hide()
     End Sub
+
 End Class

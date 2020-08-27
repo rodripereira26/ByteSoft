@@ -5,73 +5,73 @@ Public Class frmLogin
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
 
-        Label1.Select()
+        lblIniciarSesion.Select()
         Principal.Singleton.roundedCorners(Me)
 
     End Sub
 
 
-    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
+    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
 
-        If txtPass.Text <> "" Then
-            Label3.Visible = False
+        If txtPassword.Text <> "" Then
+            lblContraseña.Visible = False
         End If
 
     End Sub
 
-    Private Sub txtUsr_TextChanged(sender As Object, e As EventArgs) Handles txtUsr.TextChanged
+    Private Sub txtUsr_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
 
-        If txtUsr.Text <> "" Then
-            Label2.Visible = False
+        If txtUsuario.Text <> "" Then
+            lblUsuario.Visible = False
         End If
 
     End Sub
 
-    Private Sub txtUsr_GotFocus(sender As Object, e As EventArgs) Handles txtUsr.GotFocus
-        Label2.Visible = False
+    Private Sub txtUsr_GotFocus(sender As Object, e As EventArgs) Handles txtUsuario.GotFocus
+        lblUsuario.Visible = False
     End Sub
 
-    Private Sub txtPass_GotFocus(sender As Object, e As EventArgs) Handles txtPass.GotFocus
-        Label3.Visible = False
+    Private Sub txtPass_GotFocus(sender As Object, e As EventArgs) Handles txtPassword.GotFocus
+        lblContraseña.Visible = False
     End Sub
 
-    Private Sub txtUsr_LostFocus(sender As Object, e As EventArgs) Handles txtUsr.LostFocus
+    Private Sub txtUsr_LostFocus(sender As Object, e As EventArgs) Handles txtUsuario.LostFocus
 
-        If txtUsr.Text = "" Then
-            Label2.Visible = True
+        If txtUsuario.Text = "" Then
+            lblUsuario.Visible = True
         End If
 
     End Sub
 
-    Private Sub txtPass_LostFocus(sender As Object, e As EventArgs) Handles txtPass.LostFocus
+    Private Sub txtPass_LostFocus(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
 
-        If txtPass.Text = "" Then
-            Label3.Visible = True
+        If txtPassword.Text = "" Then
+            lblContraseña.Visible = True
         End If
 
     End Sub
 
-    Private Sub Label4_MouseEnter(sender As Object, e As EventArgs) Handles Label4.MouseEnter
-        Label4.ForeColor = Color.Red
+    Private Sub Label4_MouseEnter(sender As Object, e As EventArgs) Handles lblCerrar.MouseEnter
+        lblCerrar.ForeColor = Color.Red
     End Sub
 
-    Private Sub Label4_MouseLeave(sender As Object, e As EventArgs) Handles Label4.MouseLeave
-        Label4.ForeColor = Color.White
+    Private Sub Label4_MouseLeave(sender As Object, e As EventArgs) Handles lblCerrar.MouseLeave
+        lblCerrar.ForeColor = Color.White
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
         Application.Exit()
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        txtPass.Select()
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles picContraseña.Click
+        txtPassword.Select()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        txtUsr.Select()
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles picUsuario.Click
+        txtUsuario.Select()
     End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles picIngresar.Click
         ingresarUsuario()
 
     End Sub
@@ -87,17 +87,17 @@ Public Class frmLogin
         Principal.Singleton.moverVentanaUp()
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles lblContraseña.Click
 
-        Label3.Visible = False
-        txtPass.Focus()
+        lblContraseña.Visible = False
+        txtPassword.Focus()
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lblUsuario.Click
 
-        Label2.Visible = False
-        txtUsr.Focus()
+        lblUsuario.Visible = False
+        txtUsuario.Focus()
 
     End Sub
 
@@ -114,30 +114,30 @@ Public Class frmLogin
         Dim seg As New Encriptar
         Dim log As New ControladorUsuario
 
-        If txtUsr.Text <> "" And txtPass.Text <> "" Then
+        If txtUsuario.Text <> "" And txtPassword.Text <> "" Then
 
-            If IsNumeric(txtUsr.Text) Then
+            If IsNumeric(txtUsuario.Text) Then
 
-                If log.verificarUsuario(txtUsr.Text, seg.HASH256(txtPass.Text)) Then
+                If log.verificarUsuario(txtUsuario.Text, seg.HASH256(txtPassword.Text)) Then
 
-                    Datos_Temporales.userLog = txtUsr.Text
+                    Datos_Temporales.userLog = txtUsuario.Text
 
-                    Select Case log.verificarRol(txtUsr.Text)
+                    Select Case log.verificarRol(txtUsuario.Text)
 
                         Case "G"
                             frmBienvenidaGestor.Show()
-                            txtPass.Clear()
-                            txtUsr.Clear()
+                            txtPassword.Clear()
+                            txtUsuario.Clear()
                             Datos_Temporales.rol = "G"
                             Me.hide()
 
                         Case "P"
                             Dim paciente As New ControladorPaciente
 
-                            If paciente.verificar(txtUsr.Text) Then
+                            If paciente.verificar(txtUsuario.Text) Then
                                 frmBienvenidaPaciente.Show()
-                                txtPass.Clear()
-                                txtUsr.Clear()
+                                txtPassword.Clear()
+                                txtUsuario.Clear()
                                 Datos_Temporales.rol = "P"
                                 Me.Hide()
                             Else
@@ -146,8 +146,8 @@ Public Class frmLogin
 
                         Case "M"
                             frmBienvenidaMedico.Show()
-                            txtPass.Clear()
-                            txtUsr.Clear()
+                            txtPassword.Clear()
+                            txtUsuario.Clear()
                             Datos_Temporales.rol = "M"
                             Me.Hide()
 
@@ -174,7 +174,7 @@ Public Class frmLogin
 
     End Sub
 
-    Private Sub txtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPass.KeyDown, txtUsr.KeyDown
+    Private Sub txtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown, txtUsuario.KeyDown
         If e.KeyCode = Keys.Enter Then
             ingresarUsuario()
         End If
