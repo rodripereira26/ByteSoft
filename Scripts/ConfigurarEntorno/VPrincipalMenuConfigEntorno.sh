@@ -5,13 +5,14 @@
 # root obligatorio 
 #
 #
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
 
 preguntaInstalacion() {
+    local continuar=true
 
 
     buscar=$(grep instalacion=true /etc/environment | cut -f2 -d"=")
@@ -21,7 +22,6 @@ preguntaInstalacion() {
         
         pregunta "¿Desea iniciar la configuración del entorno?" 7 28 15 21 2 7
     
-        local continuar=true
 
         while $continuar; 
         do
@@ -57,8 +57,7 @@ preguntaInstalacion() {
 }
 
 pantallaInstalacion() {
-
-    cerrarPantalla
+    
     colorBgDefecto=7
     iniciarPantallaNueva
     dibujarRectangulo 11 4 80 30 7 7 
@@ -124,15 +123,15 @@ pantallaInstalacion() {
             colorBgDefecto=0
             pantallaSSH
             continuar=false
+
             
-
         fi
-
     done
 }
 
 preguntaDesinstalar() {
-
+    local continuar=true
+    
     buscar=$(grep instalacion=true /etc/environment | cut -f2 -d"=")
 
     if [ -z $buscar ];
@@ -142,7 +141,7 @@ preguntaDesinstalar() {
         
         pregunta "¿Desea desinstalar el entorno?" 7 36 15 21 2 7
     
-        local continuar=true
+
 
         while $continuar; 
         do

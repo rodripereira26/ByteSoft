@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh"
+. "/Scripts/InterfazGrafica/Control/inicio.sh"
 
 . "/Scripts/Computos/Logica/Respaldar.sh"
 

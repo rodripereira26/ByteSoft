@@ -1,5 +1,5 @@
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VAvisoRegistrado(){
     # $1 : texto de aviso

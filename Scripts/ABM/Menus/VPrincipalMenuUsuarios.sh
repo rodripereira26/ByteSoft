@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/ABM/Logica/Usuarios.sh"
 
@@ -11,6 +11,7 @@
 . "/Scripts/ABM/Menus/VModificarUsuario.sh"
 
 VMenuUsuarios() {
+    local continuar=true
 
     iniciarPantallaNueva
 
@@ -31,7 +32,6 @@ VMenuUsuarios() {
     fi
 
 
-    local continuar=true
 
     while $continuar; 
     do

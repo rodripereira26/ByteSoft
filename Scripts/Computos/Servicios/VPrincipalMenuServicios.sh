@@ -1,13 +1,14 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/Servicios/VConexiones.sh"
-. "/Scripts/Computos/Servicios/Configuracion/VMenuServicioConf.sh"
+. "/Scripts/Computos/Servicios/Configuracion/VCrearUsuarioMYSQL.sh"
 . "/Scripts/Computos/Servicios/VAccionesServicios.sh"
 
 
 VMenuPrincipalServicios(){
+    local continuar=true
 
     iniciarPantallaNueva
     dibujarTxt "SERVICIOS" 46 3 0
@@ -22,14 +23,13 @@ VMenuPrincipalServicios(){
         dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
         dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
         dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3 #necesita root
-        dibujarBoton "CONFIGURACIÓN" 11 21 80 3 #necesita root ?
+        dibujarBoton "CREAR USUARIO MYSQL" 11 21 80 3 #necesita root ?
         dibujarBoton "VOLVER" 11 24 80 3
     else
         dibujarBoton "VOLVER" 11 12 80 3
     fi
 
 
-    local continuar=true
 
     while $continuar; 
     do
@@ -59,12 +59,10 @@ ejecutarMenuPrincipalServicios() {
 				;;
                 
 			"BTN:ACTIVAR SERVICIO:11:12:80:3")
-				colorBgDefecto=0
             	activarServicio 
 				;;
 
 			"BTN:DESACTIVAR SERVICIO:11:15:80:3")
-				colorBgDefecto=0
 				desactivarServicio
 				;;
 
@@ -72,8 +70,8 @@ ejecutarMenuPrincipalServicios() {
                 ejecutarVConexiones
                 ;;
 
-            "BTN:CONFIGURACIÓN:11:21:80:3")
-                ejecutarMenuServicioConf
+            "BTN:CREAR USUARIO MYSQL:11:21:80:3")
+                crearUsuarioMYSQL
                 ;;
 
             "BTN:VOLVER:11:24:80:3"|"BTN:VOLVER:11:12:80:3")

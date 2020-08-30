@@ -1,9 +1,13 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuEliminarUsuario() {
-
+    
+    local continuar=true
+    usuarioAEliminar=""
+    abrirSeleccionarGrupo=false
+    
     iniciarPantallaNueva
     dibujarTxt "ELIMINAR USUARIO" 43 3 0
 
@@ -13,10 +17,7 @@ VMenuEliminarUsuario() {
     dibujarBoton "SIGUIENTE" 14 18 40 3 ##############
     dibujarBoton "VOLVER" 53 18 40 3 ##############
 
-    local continuar=true
-    usuarioAEliminar=""
-    abrirSeleccionarGrupo=false
-    
+
     while $continuar; 
     do
         siguientePos

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh"
+. "/Scripts/InterfazGrafica/Control/inicio.sh"
 
 . "/Scripts/ABM/Menus/VPrincipalMenuUsuarios.sh"
 . "/Scripts/Computos/Respaldo/VPrincipalRespaldos.sh"
@@ -11,6 +11,8 @@
 
 PrincipalComputos() {
 
+    local continuar=true
+    
     iniciarPantallaNueva
     dibujarTxt "CENTRO DE COMPUTOS" 43 3 0
 
@@ -26,7 +28,6 @@ PrincipalComputos() {
     dibujarBoton "RESPALDOS" 11 21 80 3
     dibujarBoton "VOLVER" 11 24 80 3
 
-    local continuar=true
 
     while $continuar; 
     do

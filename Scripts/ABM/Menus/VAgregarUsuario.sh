@@ -1,8 +1,12 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuAgregarUsuario() {
+
+    local continuar=true
+    local user=""
+    local pw=""
 
     iniciarPantallaNueva
     dibujarTxt "INGRESAR USUARIO" 41 6 0
@@ -20,9 +24,6 @@ VMenuAgregarUsuario() {
     dibujarBoton "SIGUIENTE" 11 20 40 3
     dibujarBoton "VOLVER" 50 20 40 3
 
-    local continuar=true
-    local user=""
-    local pw=""
 
     while $continuar; 
     do
@@ -96,10 +97,10 @@ VMenuAgregarUsuario() {
                                 then
                                     VAvisoRegistrado "No se ha configurado el entorno, no puede agregar usuarios " 9
                                 fi
-                                #continuar=false ######posible error
                             fi
                         else
                             VAvisoRegistrado "Grupo no seleccionado" 9
+
                         fi
                     fi
                 fi

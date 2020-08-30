@@ -1,8 +1,16 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuModificarUsuario() {
+    
+    local continuar=true
+
+    user=""
+    pw=""
+    pwN=""
+    reppwN=""
+    intentoRegistrar=false
 
     iniciarPantallaNueva
 
@@ -23,13 +31,6 @@ VMenuModificarUsuario() {
     dibujarBoton "SIGUIENTE" 14 20 40 3
     dibujarBoton "VOLVER" 53 20 40 3
 
-    local continuar=true
-
-    user=""
-    pw=""
-    pwN=""
-    reppwN=""
-    intentoRegistrar=false
 
    while $continuar; 
    do

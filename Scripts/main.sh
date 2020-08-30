@@ -4,17 +4,14 @@
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
 # bc es necesario instalar
-#
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/VPrincipalComputos.sh"
 . "/Scripts/ConfigurarEntorno/VPrincipalMenuConfigEntorno.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 
 Principal() {
-
-    colorBgDefecto=7
     iniciarPantallaNueva
 
     dibujarTxt "MENU PRINCIPAL" 43 5 0
@@ -49,7 +46,6 @@ Principal() {
     done
 
 }
-
 ejecutarMain() {
 
     local continuarCiclo=true
@@ -88,7 +84,7 @@ main() {
     tput sgr0
     clear
     tput civis
-    #animacionTitulo "InterfazGrafica/tituloByteSoft.txt" 10 10
+    #animacionTitulo "/Scripts/InterfazGrafica2/Vista/ElementosExtra/tituloByteSoft.txt" 10 10
     ejecutarMain
     clear
 

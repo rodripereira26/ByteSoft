@@ -1,12 +1,13 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
-
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 #
 # solo root
 #
 
 VConexiones(){
+    local continuar=true
+    
     iniciarPantallaNueva
     dibujarTxt "CONEXIONES" 42 6 0
 
@@ -18,7 +19,7 @@ VConexiones(){
 
     dibujarBoton "VOLVER" 11 22 80 3
 
-    local continuar=true
+
 
     while $continuar; 
     do
@@ -32,9 +33,9 @@ VConexiones(){
                 then
                     if $estadoMYSQL; 
                     then
-                        systemctl stop mysqld 
-                    else
-                        systemctl start mysqld              
+                        systemctl stop mysqld 2> /dev/null
+                    else 
+                        systemctl start mysqld 2> /dev/null              
                     fi
                     actualizarEstadoServiciosSSHyMYSQL
                 fi
@@ -45,9 +46,9 @@ VConexiones(){
                 then
                     if $estadoSSH; 
                     then
-                        systemctl stop sshd 
+                        systemctl stop sshd 2> /dev/null
                     else
-                        systemctl start sshd
+                        systemctl start sshd 2> /dev/null
                     fi
                     actualizarEstadoServiciosSSHyMYSQL
                 fi
@@ -76,9 +77,8 @@ actualizarEstadoServiciosSSHyMYSQL() {
     estadoSSH=false
 
 
-    comandoMYSQL=$(service mysqld status | grep "Active" | cut -d: -f2 | cut -d" " -f2)
-
-    comandoSSH=$(systemctl status sshd | grep "Active" | cut -d" " -f5) 
+    comandoMYSQL=$(service mysqld status 2> /dev/null | grep "Active" | cut -d: -f2 | cut -d" " -f2)
+    comandoSSH=$(systemctl status sshd 2> /dev/null | grep "Active" | cut -d" " -f5) 
 
     if [ "$comandoMYSQL" = "active" ];
     then

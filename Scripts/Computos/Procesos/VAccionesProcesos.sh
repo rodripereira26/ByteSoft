@@ -1,10 +1,11 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/Procesos/logicaProcesos.sh"
 
 menuProcesos(){
+    local continuar=true
 
     iniciarPantallaNueva
     dibujarTxt "PROCESOS" 46 3 0
@@ -18,7 +19,6 @@ menuProcesos(){
     dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 15 80 3
     dibujarBoton "VOLVER" 11 18 80 3
 
-    local continuar=true
 
     while $continuar; 
     do
@@ -49,12 +49,10 @@ ejecutarProcesos(){
 				;;
 
 			"1")
-				colorBgDefecto=0
             	matarProcesoPID
 				;;
 
 			"2")
-				colorBgDefecto=0
 				matarProcesoNombre
 				;;
 

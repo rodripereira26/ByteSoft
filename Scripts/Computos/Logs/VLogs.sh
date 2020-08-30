@@ -1,8 +1,10 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 MenuLogs() {
+    
+    local continuar=true
 
     iniciarPantallaNueva
     dibujarTxt "LOGS DEL SISTEMA (Q PARA SALIR)" 37 2 0
@@ -28,7 +30,6 @@ MenuLogs() {
         dibujarBoton "VOLVER" 11 18 80 3
     fi
 
-    local continuar=true
     while $continuar; 
     do
         siguientePos

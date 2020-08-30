@@ -1,14 +1,15 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 matarProcesoPID() {
+    local pid=""
+    local continuar=true
 
 	colorBgDefecto=0
     iniciarPantallaNueva
-    
 
-    dibujarRectangulo 11 4 80 31 7
+    dibujarRectangulo 11 4 80 31 7 0
     dibujarTxt "MATAR PROCESO POR PID" 42 7 0 7
 
     dibujarTxt "PID del proceso" 36 11 0 7
@@ -17,55 +18,53 @@ matarProcesoPID() {
     dibujarBoton "MATAR" 28 20 25 3
     dibujarBoton "VOLVER" 52 20 25 3
 
-    local pid=""
-    local continuar=true
 
-        while $continuar; 
-        do
-            siguientePos
 
-            case $posDeEsteElemento in
+    while $continuar; 
+    do
+        siguientePos
 
-                "0")
-                    pid=$respuestaGestor
-                    ;;
+        case $posDeEsteElemento in
 
-                "1")
-					if [ $codigoRespuesta = "5" ]; 
+            "0")
+                pid=$respuestaGestor
+                ;;
+
+            "1")
+                if [ $codigoRespuesta = "5" ]; 
+                then
+                    if [ -n "$pid" ]; 
                     then
-                    	if [ -n "$pid" ]; 
-                    	then
-                    		kill -9 $pid
-                    		colorBgDefecto=7
-                    		continuar=false
-                    	else 
-                    		mensajeError "NO INGRESÓ NINGÚN PID" 1 37 33 2 3 1 1
-                    		colorBgDefecto=7
-                    		continuar=false
-                    	fi                  
-                    fi 
-                    ;;
+                        kill -9 $pid
+                    else 
+                        mensajeError "NO INGRESÓ NINGÚN PID" 1 37 33 2 3 1 1
+                    fi     
+                    continuar=false             
+                fi 
+                ;;
 
-                 "2") 
-                    if $respuestaGestor;
-                    then
-                    	colorBgDefecto=7
-                        continuar=false
-                    fi   
-                    ;;  
+                "2") 
+                if $respuestaGestor;
+                then
+                    continuar=false
+                fi   
+                ;;  
 
-            esac
-        done
+        esac
+    done
+    colorBgDefecto=7
 
 }
 
 matarProcesoNombre() {
+    local nombre=""
+    local continuar=true
 
 	colorBgDefecto=0
     iniciarPantallaNueva
     
 
-    dibujarRectangulo 11 4 80 31 7
+    dibujarRectangulo 11 4 80 31 7 0
     dibujarTxt "MATAR PROCESO POR NOMBRE" 44 7 0 7
 
     dibujarTxt "Nombre del proceso" 36 11 0 7
@@ -74,44 +73,38 @@ matarProcesoNombre() {
     dibujarBoton "MATAR" 28 20 25 3
     dibujarBoton "VOLVER" 52 20 25 3
 
-    local nombre=""
-    local continuar=true
+    while $continuar; 
+    do
+        siguientePos
 
-        while $continuar; 
-        do
-            siguientePos
+        case $posDeEsteElemento in
 
-            case $posDeEsteElemento in
+            "0")
+                nombre=$respuestaGestor
+                ;;
 
-                "0")
-                    nombre=$respuestaGestor
-                    ;;
-
-                "1")
-					if [ $codigoRespuesta = "5" ]; 
+            "1")
+                if [ $codigoRespuesta = "5" ]; 
+                then
+                    if [ -n "$nombre" ]; 
                     then
-                    	if [ -n "$nombre" ]; 
-                    	then
-                    		killall $nombre
-                    		colorBgDefecto=7
-                    		continuar=false
-                    	else 
-                    		mensajeError "NO INGRESÓ NINGÚN NOMBRE" 1 37 33 2 3 1 1
-                    		colorBgDefecto=7
-                    		continuar=false
-                    	fi                  
-                    fi 
-                    ;;
+                        killall $nombre
+                    else 
+                        mensajeError "NO INGRESÓ NINGÚN NOMBRE" 1 37 33 2 3 1 1
+                    fi
+                    continuar=false
+                fi 
+                ;;
 
-                 "2") 
-                    if $respuestaGestor;
-                    then
-                    	colorBgDefecto=7
-                        continuar=false
-                    fi   
-                    ;;  
+                "2") 
+                if $respuestaGestor;
+                then
+                    continuar=false
+                fi   
+                ;;  
 
-            esac
-        done
+        esac
+    done
+    colorBgDefecto=7
 
 }
