@@ -114,7 +114,7 @@ pantallaInstalacion() {
         
         let PUERTO=$(grep "#Port 22" /etc/ssh/sshd_config | cut -f2 -d" ")
 
-        if [ $PUERTO -eq 22 ]; 
+        if [ $PUERTO -eq 2 ]; 
         then
             continuar=false
             colorBgDefecto=7

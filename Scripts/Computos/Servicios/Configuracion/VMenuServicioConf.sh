@@ -1,6 +1,7 @@
 #!/bin/bash
 
-. "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
+
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/Servicios/Configuracion/MYSQL/VMenuMySQL.sh"
 
