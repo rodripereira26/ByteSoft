@@ -3,7 +3,7 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/Servicios/VConexiones.sh"
-. "/Scripts/Computos/Servicios/Configuracion/VCrearUsuarioMYSQL.sh"
+. "/Scripts/Computos/Servicios/Configuracion/VMenuServicioConf.sh"
 . "/Scripts/Computos/Servicios/VAccionesServicios.sh"
 
 
@@ -23,7 +23,7 @@ VMenuPrincipalServicios(){
         dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
         dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
         dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3 #necesita root
-        dibujarBoton "CREAR USUARIO MYSQL" 11 21 80 3 #necesita root ?
+        dibujarBoton "CONFIGURACION" 11 21 80 3 #necesita root ?
         dibujarBoton "VOLVER" 11 24 80 3
     else
         dibujarBoton "VOLVER" 11 12 80 3
@@ -70,8 +70,8 @@ ejecutarMenuPrincipalServicios() {
                 ejecutarVConexiones
                 ;;
 
-            "BTN:CREAR USUARIO MYSQL:11:21:80:3")
-                crearUsuarioMYSQL
+            "BTN:CONFIGURACION:11:21:80:3")
+                ejecutarMenuServicioConf
                 ;;
 
             "BTN:VOLVER:11:24:80:3"|"BTN:VOLVER:11:12:80:3")

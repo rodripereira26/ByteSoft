@@ -35,7 +35,7 @@ VConexiones(){
                     then
                         systemctl stop mysqld 2> /dev/null
                     else 
-                        systemctl start mysqld 2> /dev/null              
+                        systemctl start mysqld 2> /dev/null
                     fi
                     actualizarEstadoServiciosSSHyMYSQL
                 fi

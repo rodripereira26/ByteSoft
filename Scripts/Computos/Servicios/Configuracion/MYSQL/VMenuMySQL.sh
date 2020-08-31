@@ -2,19 +2,19 @@
 
 . "/Scripts/InterfazGrafica/Grafica/disenoVentana.sh" 
 
-. "/Scripts/Computos/Servicios/Configuracion/MYSQL/VMenuMySQL.sh"
+. "/Scripts/Computos/Servicios/Configuracion/MYSQL/VLogearMYSQL.sh"
 
-VMenuServicioConf(){
+VMenuMySQL(){
 
     iniciarPantallaNueva
-    dibujarTxt "CONFIGURACIÓN DE SERVICIOS (EN CONSTRUCCIÓN)" 42 3 0
+    dibujarTxt "MYSQL (EN CONSTRUCCIÓN)" 42 3 0
 
     dibujarTxt "4 -> ARRIBA" 11 6 0
     dibujarTxt "5 -> ENTER " 11 7 0
     dibujarTxt "6 -> ABAJO" 11 8 0
 
-    dibujarBoton "SSH" 11 9 80 3
-    dibujarBoton "MYSQL" 11 12 80 3
+    dibujarBoton "LOGEAR" 11 9 80 3
+    dibujarBoton "-----" 11 12 80 3
     dibujarBoton "Volver" 11 15 80 3
 
     local continuar=true
@@ -30,22 +30,22 @@ VMenuServicioConf(){
     done
 }
 
-ejecutarMenuServicioConf() {
+ejercutarMenuMySQL() {
 
     local continuarCiclo=true
 
     while $continuarCiclo; 
     do
-        VMenuServicioConf
+        VMenuMySQL
 
         case $posDeEsteElemento in 
             
             "0")
-                mensajeError "Seccion en construccion" 1 37 33 2 3 1 1
+                logearMySQL
                 ;;
 
             "1")
-                ejercutarMenuMySQL
+                mensajeError "Seccion en construccion" 1 37 33 2 3 1 1
                 ;;
 
             "2")
