@@ -18,8 +18,8 @@ configurarMYSQL(){
 instalarMYSQL(){
     local destinoDescargas="/mysqlRPM"
     tput cup 0 0 
-    yum update -q -y
-    yum install -q -y libaio wget 
+    yum update -y
+    yum install -y libaio wget 
     mkdir $destinoDescargas 
     wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm -O "$destinoDescargas/mysql.rpm" 2> /dev/null
 
@@ -30,5 +30,3 @@ instalarMYSQL(){
     mv /var/lib/mysql /var/lib/old_backup_mysql 
     yum install -y mysql mysql-server
 }
-#instalarMYSQL
-configurarMYSQL 

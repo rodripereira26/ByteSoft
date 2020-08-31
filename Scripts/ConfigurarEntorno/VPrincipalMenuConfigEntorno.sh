@@ -10,6 +10,7 @@
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
+. "/Scripts/ConfigurarEntorno/MySQL/configMySQL.sh"
 
 preguntaInstalacion() {
     local continuar=true
@@ -83,7 +84,7 @@ pantallaInstalacion() {
 
             "0")
                 dibujarTxt "Creando Carpetas..." 40 12 1    
-               sleep 2
+                sleep 2
                ;;
                             
             "1")
@@ -113,7 +114,7 @@ pantallaInstalacion() {
         
         let PUERTO=$(grep "#Port 22" /etc/ssh/sshd_config | cut -f2 -d" ")
 
-        if [ $PUERTO -eq 2 ];
+        if [ $PUERTO -eq 22 ]; 
         then
             continuar=false
             colorBgDefecto=7
@@ -123,9 +124,10 @@ pantallaInstalacion() {
             colorBgDefecto=0
             pantallaSSH
             continuar=false
-
-            
         fi
+        instalarMYSQL
+        configurarMYSQL
+        
     done
 }
 
