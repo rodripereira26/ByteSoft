@@ -48,52 +48,52 @@ ejecutarLogs() {
     while $continuarCiclo; 
     do
         MenuLogs
-        case $codigoElemento in 
-            "BTN:HARDWARE:11:6:80:3")
+        case $texto in 
+            "HARDWARE")
                 tput sgr0
                 clear
                 dmesg | less
                 ;;
 
-            "BTN:SYSLOG:11:9:80:3")
+            "SYSLOG")
                 tput sgr0
                 clear
                 journalctl -r
                 ;;
-            "BTN:ÚLTIMOS LOGINS:11:12:80:3")
+            "ÚLTIMOS LOGINS")
                 tput sgr0
 				clear
 				lastlog | less
 				;;
 
-			"BTN:LOGINS EXITOSOS:11:15:80:3")
+			"LOGINS EXITOSOS")
                 
                 tput sgr0
 				clear
 				last | less
 				;;
-            "BTN:MENSAJES DEL SISTEMA:11:18:80:3")
+            "MENSAJES DEL SISTEMA")
                 #necesita root
                 tput sgr0
                 clear
                 tail /var/log/messages | less
                 ;;
                 
-            "BTN:INICIO Y SEGURIDAD:11:21:80:3")
+            "INICIO Y SEGURIDAD")
                 #necesita root
                 tput sgr0
                 clear
                 tail /var/log/secure | less
                 ;;
 
-			 "BTN:LOGINS FALLIDOS:11:24:80:3")
+			"LOGINS FALLIDOS")
                 #necesita root
                 tput sgr0
 				clear
 				lastb | less
 				;;	
 
-            "BTN:VOLVER:11:27:80:3"|"BTN:VOLVER:11:18:80:3")
+            "VOLVER")
                 continuarCiclo=false
                 ;;
             *)

@@ -12,7 +12,7 @@ agregarUbicacion() {
     # $6 ancho
     # $7 color Bg
     # $8 color Fg
-    
+
     historialPos[$proxPos,0]=$1
     historialPos[$proxPos,1]=$2
     historialPos[$proxPos,2]=$3
@@ -26,7 +26,9 @@ agregarUbicacion() {
 
 
 tomarDelProximoElemento() {    
+
     # $1 numero del elemento
+
     posDeEsteElemento=$1
     tipo=${historialPos[$1,0]}
     texto=${historialPos[$1,1]}

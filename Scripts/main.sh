@@ -52,22 +52,22 @@ ejecutarMain() {
     while $continuarCiclo; 
     do
         Principal
-        case $codigoElemento in 
+        case $texto in 
 
-            "BTN:CENTRO DE COMPUTOS:11:10:80:3")
+            "CENTRO DE COMPUTOS")
                 ejecutarComputos
                 ;;
 
-            "BTN:CONFIGURACIÓN DEL ENTORNO:11:13:80:3")
+            "CONFIGURACIÓN DEL ENTORNO")
                 preguntaInstalacion
                 colorBgDefecto=7
                 ;;
 
-            "BTN:DESINSTALAR ENTORNO:11:16:80:3")
+            "DESINSTALAR ENTORNO")
                 preguntaDesinstalar
                 ;;
 
-            "BTN:SALIR:11:13:80:3"|"BTN:SALIR:11:19:80:3")
+            "SALIR")
                 continuarCiclo=false
                 ;;
 

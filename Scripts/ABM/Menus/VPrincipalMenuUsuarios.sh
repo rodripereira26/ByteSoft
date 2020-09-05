@@ -54,26 +54,26 @@ ejecutarUsuario() {
     do
         VMenuUsuarios
         
-        case $codigoElemento in 
+        case $texto in 
 
-            "BTN:AGREGAR USUARIO:11:10:80:3")
+            "AGREGAR USUARIO")
                 ejecutarVAgregarUsuario
                 ;;
 
-            "BTN:MODIFICAR USUARIO:11:10:80:3")
+            "MODIFICAR USUARIO")
                 ejecutarModificarUsuario
                 ;;
 
-            "BTN:ELIMINAR USUARIO:11:13:80:3")
+            "ELIMINAR USUARIO")
                 ejecutarEliminarUsuario
                 ;;
 
-            "BTN:LISTAR USUARIOS (Q PARA SALIR):11:16:80:3"|"BTN:LISTAR USUARIOS (Q PARA SALIR):11:13:80:3")
+            "LISTAR USUARIOS (Q PARA SALIR)")
 				tput sgr0
                 clear
                 cat /etc/passwd | cut -f1 -d":" | less
                 ;;
-            "BTN:VOLVER:11:19:80:3"|"BTN:VOLVER:11:16:80:3")
+            "VOLVER")
                 continuarCiclo=false
                 ;;
             *)  
