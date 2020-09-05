@@ -5,6 +5,7 @@
 VMenuEliminarUsuario() {
     
     local continuar=true
+    
     usuarioAEliminar=""
     abrirSeleccionarGrupo=false
     

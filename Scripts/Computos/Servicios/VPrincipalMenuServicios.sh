@@ -23,10 +23,11 @@ VMenuPrincipalServicios(){
         dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
         dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
         dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3 #necesita root
-        dibujarBoton "CONFIGURACION" 11 21 80 3 #necesita root ?
+        dibujarBoton "CONFIGURACION" 11 21 80 3
         dibujarBoton "VOLVER" 11 24 80 3
     else
-        dibujarBoton "VOLVER" 11 12 80 3
+        dibujarBoton "CONFIGURACION" 11 12 80 3
+        dibujarBoton "VOLVER" 11 15 80 3
     fi
 
 
@@ -70,11 +71,11 @@ ejecutarMenuPrincipalServicios() {
                 ejecutarVConexiones
                 ;;
 
-            "BTN:CONFIGURACION:11:21:80:3")
+            "BTN:CONFIGURACION:11:21:80:3"|"BTN:CONFIGURACION:11:12:80:3")
                 ejecutarMenuServicioConf
                 ;;
 
-            "BTN:VOLVER:11:24:80:3"|"BTN:VOLVER:11:12:80:3")
+            "BTN:VOLVER:11:24:80:3"|"BTN:VOLVER:11:15:80:3")
                 continuarCiclo=false
                 ;;
             *)

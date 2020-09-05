@@ -41,7 +41,7 @@ activarServicio() {
                         if [ "$respuestaComando" = "Failed to start $nombre.service: Unit not found." ]; then
                                 mensajeError "SERVICIO NO INSTALADO EN CENTOS" 1 37 33 2 2 1 1 
                         else
-                            activo=$(systemctl status $nombre | grep Active | cut -f5 -d " ")
+                            activo=$(systemctl is-active $nombre)
                             if [ "$activo" = "active" ]; then
                                 mensajeError "SERVICIO ACTIVADO" 2 42 33 2 2 2 2
                             else
@@ -106,7 +106,7 @@ desactivarServicio() {
                         if [ "$respuestaComando" = "Failed to stop $nombre.service: Unit mysqld.service not loaded." ]; then
                                 mensajeError "SERVICIO NO INSTALADO EN CENTOS" 1 37 33 2 2 1 1 
                         else
-                            activo=$(systemctl status $nombre | grep Active | cut -f5 -d " ")
+                            activo=$(systemctl is-active $nombre)
                             if [ "$activo" = "inactive" ]; then
                                 mensajeError "SERVICIO DESACTIVADO" 2 42 33 2 2 2 2
                             else

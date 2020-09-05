@@ -77,8 +77,8 @@ actualizarEstadoServiciosSSHyMYSQL() {
     estadoSSH=false
 
 
-    comandoMYSQL=$(service mysqld status 2> /dev/null | grep "Active" | cut -d: -f2 | cut -d" " -f2)
-    comandoSSH=$(systemctl status sshd 2> /dev/null | grep "Active" | cut -d" " -f5) 
+    comandoMYSQL=$(systemctl is-active mysqld)
+    comandoSSH=$(systemctl is-active sshd)
 
     if [ "$comandoMYSQL" = "active" ];
     then
@@ -92,15 +92,4 @@ actualizarEstadoServiciosSSHyMYSQL() {
     
     historialPos[0,1]=$estadoMYSQL
     historialPos[1,1]=$estadoSSH
-}
-
-comprobarRed () {
-
-    if ping -c1 8.8.8.8 &>/dev/null;
-    then
-        mensajeError "Se detectó conexión a internet" 2 37 33 2 2 2
-    else
-        mensajeError "No Se detectó conexión a internet" 1 37 33 2 1 2
-    fi
-
 }
