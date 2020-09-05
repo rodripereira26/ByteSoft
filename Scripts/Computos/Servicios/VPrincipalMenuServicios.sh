@@ -51,31 +51,31 @@ ejecutarMenuPrincipalServicios() {
     do
         VMenuPrincipalServicios
 
-        case $codigoElemento in 
+        case $texto in 
 
-        	"BTN:VER SERVICIOS ACTIVOS (Q PARA SALIR):11:9:80:3")
+        	"VER SERVICIOS ACTIVOS (Q PARA SALIR)")
 				tput sgr0
 				clear
 				systemctl list-unit-files | grep "enabled" | less
 				;;
                 
-			"BTN:ACTIVAR SERVICIO:11:12:80:3")
+			"ACTIVAR SERVICIO")
             	activarServicio 
 				;;
 
-			"BTN:DESACTIVAR SERVICIO:11:15:80:3")
+			"DESACTIVAR SERVICIO")
 				desactivarServicio
 				;;
 
-            "BTN:CONEXIONES (SSH, MYSQL):11:18:80:3")
+            "CONEXIONES (SSH, MYSQL)")
                 ejecutarVConexiones
                 ;;
 
-            "BTN:CONFIGURACION:11:21:80:3"|"BTN:CONFIGURACION:11:12:80:3")
+            "CONFIGURACION")
                 ejecutarMenuServicioConf
                 ;;
 
-            "BTN:VOLVER:11:24:80:3"|"BTN:VOLVER:11:15:80:3")
+            "VOLVER")
                 continuarCiclo=false
                 ;;
             *)

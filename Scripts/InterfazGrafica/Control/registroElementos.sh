@@ -45,6 +45,7 @@ dibujarBoton(){
     # $6 : color background 
     # $7 : color foreground
     
+    # $# : nombreVar
     let colorBg=4      
     let colorFg=7   
 

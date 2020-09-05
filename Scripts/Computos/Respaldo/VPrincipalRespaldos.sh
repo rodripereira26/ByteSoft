@@ -50,27 +50,27 @@ ejecutarRespaldos() {
     do
         PrincipalRespaldos
         
-        case $codigoElemento in 
+        case $texto in 
 
-            "BTN:BASE DE DATOS:11:8:80:3")
+            "BASE DE DATOS")
                 ejecutarRespaldarBD
                 ;;
 
-            "BTN:DIRECTORIOS:11:11:80:3")
+            "DIRECTORIOS")
                 ejecutarRespaldarDirectorio
                 ;;
 
-            "BTN:RESTAURAR BD:11:14:80:3"|"BTN:RESTAURAR BD:11:8:80:3")
+            "RESTAURAR BD")
                 # En construcción
                 mensajeError "SECCION RESTAURAR BD EN CONSTRUCCION" 1 37 33 2 3 1 1
                 ;;
 
-            "BTN:RESTAURAR DIRECTORIOS:11:17:80:3"|"BTN:RESTAURAR DIRECTORIOS:11:11:80:3")
+            "RESTAURAR DIRECTORIOS")
                 # En construcción
                 mensajeError "SECCION RESTAURAR DIRECTORIOS EN CONSTRUCCION" 1 37 33 2 3 1 1
                 ;;
                 
-            "BTN:VOLVER:11:20:80:3"|"BTN:VOLVER:11:14:80:3")
+            "VOLVER")
                 continuarCiclo=false
                 ;;
 
