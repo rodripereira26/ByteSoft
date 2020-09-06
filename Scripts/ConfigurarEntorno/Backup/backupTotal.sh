@@ -1,4 +1,5 @@
 #!/bin/bash
+. "/Scripts/ConfigurarEntorno/ips.sh" # archivo con las variables $ipServidorRespaldo
 
 BACKUP="/var/bytesoft/backupsTotales/BD/backupBD"
 
@@ -14,4 +15,4 @@ tar -czf "/var/bytesoft/backupsTotales/Logs/backupLog.tar.gz" /var/log
 tar -czf "/var/bytesoft/backupsTotales/DIR/backupDIR.tar.gz" /home/USUARIOS
 
 # Envío los datos al servidor remoto
-rsync -az -e ssh "/var/bytesoft" root@192.168.1.8:/var # IP de prueba
+rsync -az -e ssh "/var/bytesoft" root@$ipServidorRespaldo:/var # IP de prueba

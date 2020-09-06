@@ -1,6 +1,9 @@
 #!/bin/bash
 
 #necesita root
+
+. "/Scripts/ConfigurarEntorno/ips.sh" # archivo con las variables $ipLinuxServer y $ipSubredAdministradores
+
 crontabConf() {
 
 	local respaldo="/var/bytesoft/backupsBD/.credenciales.cnf"
@@ -38,7 +41,10 @@ crontabConf() {
 		echo 0
 	fi
 }
+configurarIP(){
 
+
+}
 firewallConf() {
 
 	#Flush de las reglas
@@ -52,7 +58,7 @@ firewallConf() {
 	iptables -P FORWARD DROP
 
 	# INPUT
-	iptables -A INPUT -s 192.168.1.9 -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A INPUT -s $ipLinuxServer -j ACCEPT #IP de la OVA, cambiar por la del servidor
 	iptables -A INPUT -i lo -j ACCEPT # LOCALHOST
 	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A INPUT -p tcp --dport 20:21 -j ACCEPT # FTP
@@ -66,10 +72,10 @@ firewallConf() {
 	iptables -A INPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
 	iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -A INPUT -p tcp --dport 9418 -j ACCEPT # GIT
-	iptables -A INPUT -s 192.168.100.97/24 -j ACCEPT #IP de la subred de administradores
+	iptables -A INPUT -s $ipSubredAdministradores -j ACCEPT #IP de la subred de administradores
 
 	# OUTPUT
-	iptables -A OUTPUT -s 192.168.1.9 -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A OUTPUT -s $ipLinuxServer -j ACCEPT #IP de la OVA, cambiar por la del servidor
 	iptables -A OUTPUT -p tcp --dport 20:21 -j ACCEPT # FTP
 	iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT # SMTP
 	iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
@@ -81,7 +87,7 @@ firewallConf() {
 	iptables -A OUTPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
 	iptables -A OUTPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT # GIT
-	iptables -A OUTPUT -s 192.168.100.97/24 -j ACCEPT #IP de la subred de administradores
+	iptables -A OUTPUT -s $ipSubredAdministradores -j ACCEPT #IP de la subred de administradores
 	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
 
 	# Reinicio el servicio
