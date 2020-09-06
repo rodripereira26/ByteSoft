@@ -11,7 +11,7 @@
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
 . "/Scripts/ConfigurarEntorno/MySQL/configMySQL.sh"
-
+. "/Scripts/ConfigurarEntorno/RED/configRED.sh"
 preguntaInstalacion() {
     local continuar=true
 
@@ -93,7 +93,7 @@ pantallaInstalacion() {
                 continuar=false
                 ;;
         esac
-
+        VConfigRed
         case $(crontabConf) in
 
             "0")
@@ -107,7 +107,7 @@ pantallaInstalacion() {
                 continuar=false
                 ;;
         esac
-
+        
         dibujarTxt "Configurando firewall..." 38 20 1
         firewallConf
         sleep 2
