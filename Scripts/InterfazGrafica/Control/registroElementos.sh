@@ -3,7 +3,6 @@
 
 . "/Scripts/InterfazGrafica/Vista/ElementosPredeterminados/ventana.sh"
 
-
 iniciarPantallaNueva() {
     cerrarPantalla
     tput civis
@@ -45,7 +44,6 @@ dibujarBoton(){
     # $6 : color background 
     # $7 : color foreground
     
-    # $# : nombreVar
     let colorBg=4      
     let colorFg=7   
 

@@ -4,9 +4,9 @@
 declare -i proxPos=0
 declare -i posActual=0
 
+
 . "/Scripts/InterfazGrafica/Control/registroElementos.sh"
 . "/Scripts/InterfazGrafica/datosElementos.sh"
-
 reiniciarDatos() {
     
     posActual=0
@@ -47,14 +47,8 @@ actualizarPosActual() {
     fi
 }
 
-tomarPosActual() {
-
-    echo -n $posActual
-}
-
 siguientePos() {
     tomarDelProximoElemento $posActual
-    codigoElemento="${tipo}:${texto}:${posX}:${posY}:${largo}:${ancho}"
 
     case  $tipo in 
 

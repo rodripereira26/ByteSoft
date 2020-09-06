@@ -17,13 +17,19 @@ dibujarRectangulo() {
     
     tput setab $5
     tput setaf $6
-
-    for ((y=0;y<$4;y++)); 
-    do
-        let yPos=$2+$y
-        tput cup $yPos $1 1>&2
-        printf "%-$3s" " " 1>&2
-    done
-
+    cargarRectangulo $1 $2 $3 $4
     tput cup $2 $1
+}
+
+cargarRectangulo(){
+    # $1 posicion en x
+    # $2 posicion en y
+    # $3 largo
+    # $4 ancho
+
+    tput cup $2 $1 1>&2
+    printf "%-$3s" " " 1>&2
+    if (( $4 > 1 )); then
+        cargarRectangulo $1 $(($2 + 1)) $3 $(($4 - 1))
+    fi
 }

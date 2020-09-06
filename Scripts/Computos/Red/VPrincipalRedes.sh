@@ -61,9 +61,7 @@ ejecutarPrincipalRed() {
                 ejecutarEliminarRegla
                 ;;
             "LISTAR REGLAS")
-                (iptables -L INPUT -n && \
-                    echo -e "\n" && iptables -L OUTPUT -n && \
-                    echo -e "\n" && iptables -L FORWARD -n)  | less
+                iptables -nL | less
                 ;;
 
             "VOLVER") 

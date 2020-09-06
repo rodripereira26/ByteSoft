@@ -3,7 +3,7 @@
 #
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
-# bc es necesario instalar
+#
 
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
@@ -12,8 +12,7 @@
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 
 Principal() {
-    iniciarPantallaNueva
-
+    iniciarPantallaNueva 
     dibujarTxt "MENU PRINCIPAL" 43 5 0
 
     dibujarTxt "4 -> ARRIBA" 11 7 0

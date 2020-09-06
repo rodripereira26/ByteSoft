@@ -15,10 +15,16 @@ menuProcesos(){
     dibujarTxt "6 -> ABAJO" 11 8 0
     
     dibujarBoton "VER PROCESOS ACTIVOS (Q PARA SALIR)" 11 9 80 3
-    dibujarBoton "MATAR PROCESO USANDO EL PID" 11 12 80 3
-    dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 15 80 3
-    dibujarBoton "VOLVER" 11 18 80 3
-
+    if [ $EUID -eq 0 ];then
+        dibujarBoton "INSTALAR HTOP(VER PROCESOS MEJORADO)" 11 12 80 3 #solo root
+        dibujarBoton "MATAR PROCESO USANDO EL PID" 11 15 80 3
+        dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 18 80 3
+        dibujarBoton "VOLVER" 11 21 80 3
+    else
+        dibujarBoton "MATAR PROCESO USANDO EL PID" 11 12 80 3
+        dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 15 80 3
+        dibujarBoton "VOLVER" 11 18 80 3
+    fi
 
     while $continuar; 
     do
@@ -40,23 +46,31 @@ ejecutarProcesos(){
     do
         menuProcesos
 
-        case $posDeEsteElemento in 
+        case $texto in 
 
-        	"0")
+        	"VER PROCESOS ACTIVOS (Q PARA SALIR)")
 				tput sgr0
-				clear
-				top
+                tput cup 0 0
+                htop
+                if [ $? -ne 0 ]; then
+                    top
+                fi
 				;;
-
-			"1")
+		    "INSTALAR HTOP(VER PROCESOS MEJORADO)")
+                clear 
+                tput cup 0 0 
+            	yum install -y htop
+                sleep 3
+				;;
+			"MATAR PROCESO USANDO EL PID")
             	matarProcesoPID
 				;;
 
-			"2")
+			"MATAR PROCESO USANDO EL NOMBRE")
 				matarProcesoNombre
 				;;
 
-            "3")
+            "VOLVER")
                 continuarCiclo=false
                 ;;
         esac

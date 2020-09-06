@@ -3,7 +3,7 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/Servicios/VConexiones.sh"
-. "/Scripts/Computos/Servicios/Configuracion/VMenuServicioConf.sh"
+. "/Scripts/Computos/Servicios/Login/VMenuServicioLog.sh"
 . "/Scripts/Computos/Servicios/VAccionesServicios.sh"
 
 
@@ -22,11 +22,11 @@ VMenuPrincipalServicios(){
     if [ $EUID -eq 0 ];then
         dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
         dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
-        dibujarBoton "CONEXIONES (SSH, MYSQL)" 11 18 80 3 #necesita root
-        dibujarBoton "CONFIGURACION" 11 21 80 3
+        dibujarBoton "CONEXIONES (SSH, MYSQL, DHCP)" 11 18 80 3 #necesita root
+        dibujarBoton "LOGIN SERVICIOS" 11 21 80 3
         dibujarBoton "VOLVER" 11 24 80 3
     else
-        dibujarBoton "CONFIGURACION" 11 12 80 3
+        dibujarBoton "LOGIN SERVICIOS" 11 12 80 3
         dibujarBoton "VOLVER" 11 15 80 3
     fi
 
@@ -67,11 +67,11 @@ ejecutarMenuPrincipalServicios() {
 				desactivarServicio
 				;;
 
-            "CONEXIONES (SSH, MYSQL)")
+            "CONEXIONES (SSH, MYSQL, DHCP)")
                 ejecutarVConexiones
                 ;;
 
-            "CONFIGURACION")
+            "LOGIN SERVICIOS")
                 ejecutarMenuServicioConf
                 ;;
 

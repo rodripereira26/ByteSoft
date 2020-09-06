@@ -40,12 +40,12 @@ gestorDeSwitch() {
 
     if [ "$codigoRespuesta" = "5" ]; 
     then
-        if [ "${historialPos[$posDeEsteElemento,1]}" = "true" ]; 
+        if [ "$(tomarElemento $posDeEsteElemento 1)" = "true" ];
         then
-            historialPos[$posDeEsteElemento,1]="false"
+            modificarElemento $posDeEsteElemento 1 "false"
             texto=false
         else
-            historialPos[$posDeEsteElemento,1]="true"
+            modificarElemento $posDeEsteElemento 1 "true"
             texto=true
         fi
 

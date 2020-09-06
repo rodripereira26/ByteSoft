@@ -1,21 +1,28 @@
 #!/bin/bash
 
+
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
-. "/Scripts/Computos/Servicios/Configuracion/MYSQL/VLogearMYSQL.sh"
+. "/Scripts/Computos/Servicios/Login/VLogearMYSQL.sh"
+. "/Scripts/Computos/Servicios/Login/VLogearSSH.sh"
 
-VMenuMySQL(){
+VMenuServicioConf(){
 
     iniciarPantallaNueva
-    dibujarTxt "MYSQL (EN CONSTRUCCIÓN)" 42 3 0
+    dibujarTxt "LOGIN SERVICIOS" 42 3 0
 
     dibujarTxt "4 -> ARRIBA" 11 6 0
     dibujarTxt "5 -> ENTER " 11 7 0
     dibujarTxt "6 -> ABAJO" 11 8 0
 
-    dibujarBoton "LOGEAR" 11 9 80 3
-    dibujarBoton "-----" 11 12 80 3
-    dibujarBoton "Volver" 11 15 80 3
+
+    dibujarBoton "LOGUEAR MYSQL" 11 9 80 3
+    if [ $EUID -ne 0 ];then 
+        dibujarBoton "LOGUEAR SSH" 11 12 80 3 #solo no root
+        dibujarBoton "VOLVER" 11 15 80 3
+    else
+        dibujarBoton "VOLVER" 11 12 80 3
+    fi
 
     local continuar=true
 
@@ -30,25 +37,25 @@ VMenuMySQL(){
     done
 }
 
-ejercutarMenuMySQL() {
+ejecutarMenuServicioConf() {
 
     local continuarCiclo=true
 
     while $continuarCiclo; 
     do
-        VMenuMySQL
+        VMenuServicioConf
 
-        case $posDeEsteElemento in 
+        case $texto in 
             
-            "0")
+            "LOGUEAR MYSQL")
                 logearMySQL
                 ;;
 
-            "1")
-                mensajeError "Seccion en construccion" 1 37 33 2 3 1 1
+            "LOGUEAR SSH")
+                logearSSH
                 ;;
 
-            "2")
+            "VOLVER")
                 continuarCiclo=false
                 ;;
             *)

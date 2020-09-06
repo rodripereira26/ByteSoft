@@ -16,6 +16,9 @@ VConexiones(){
 
     dibujarTxt "SSH" 25 16 0
     dibujarSwitch 40 15 50 3 $estadoSSH
+    
+    dibujarTxt "DHCP" 25 19 0
+    dibujarSwitch 40 18 50 3 $estadoDHCP
 
     dibujarBoton "VOLVER" 11 22 80 3
 
@@ -53,8 +56,20 @@ VConexiones(){
                     actualizarEstadoServiciosSSHyMYSQL
                 fi
                 ;;
+            "3")
+                if [ $codigoRespuesta = "5" ]; 
+                then
+                    if $estadoSSH; 
+                    then
+                        systemctl stop dhcpd 2> /dev/null
+                    else
+                        systemctl start dhcpd 2> /dev/null
+                    fi
+                    actualizarEstadoServiciosSSHyMYSQL
+                fi
 
-            "2")
+                ;;
+            "4")
                 if $respuestaGestor; 
                 then
                     continuar=false
@@ -75,10 +90,11 @@ actualizarEstadoServiciosSSHyMYSQL() {
 
     estadoMYSQL=false
     estadoSSH=false
-
+    estadoDHCP=false
 
     comandoMYSQL=$(systemctl is-active mysqld)
     comandoSSH=$(systemctl is-active sshd)
+    comandoDHCP=$(systemctl is-active dhcpd)
 
     if [ "$comandoMYSQL" = "active" ];
     then
@@ -89,7 +105,13 @@ actualizarEstadoServiciosSSHyMYSQL() {
     then
         estadoSSH=true
     fi
+    if [ "$comandoDHCP" = "active" ];
+    then
+        estadoDHCP=true
+    fi
     
-    historialPos[0,1]=$estadoMYSQL
-    historialPos[1,1]=$estadoSSH
+    modificarElemento 0 1 $estadoMYSQL
+    modificarElemento 1 1 $estadoSSH
+    modificarElemento 2 1 $estadoDHCP
+    
 }

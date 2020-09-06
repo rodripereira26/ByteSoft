@@ -2,8 +2,7 @@
 
 declare -A historialPos
 
-agregarUbicacion() {
-
+agregarUbicacion(){
     # $1 tipo de elemento 
     # $2 texto
     # $3 inicio en x
@@ -21,14 +20,10 @@ agregarUbicacion() {
     historialPos[$proxPos,5]=$6
     historialPos[$proxPos,6]=$7
     historialPos[$proxPos,7]=$8
+    
     ((proxPos++))
 }
-
-
-tomarDelProximoElemento() {    
-
-    # $1 numero del elemento
-
+tomarDelProximoElemento(){
     posDeEsteElemento=$1
     tipo=${historialPos[$1,0]}
     texto=${historialPos[$1,1]}
@@ -38,4 +33,17 @@ tomarDelProximoElemento() {
     ancho=${historialPos[$1,5]}
     colorBg=${historialPos[$1,6]}
     colorFg=${historialPos[$1,7]}
+}
+modificarElemento(){
+    # $1 : posElemento 
+    # $2 : caracteristicaPos
+    # $3 : valor a modificar
+
+    historialPos[$1,$2]=$3
+}
+tomarElemento(){
+    # $1 : posElemento
+    # $2 : caracteristica
+
+    echo -n ${historialPos[$1,$2]}
 }

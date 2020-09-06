@@ -14,7 +14,7 @@ cargarEntradaTxt() {
 
     if [ $7 ]; 
     then
-        echo -n ${historialPos[$7,1]} 1>&2
+        echo -n $(tomarElemento $7 1) 1>&2
     fi
 }
 
@@ -49,11 +49,10 @@ gestorDeEntradaTexto() {
         cargarEntradaTxtYPassword 1
         tomarDatoEntradaTxt $1
         respuestaGestor=$inputTXT
-        historialPos[$posDeEsteElemento,1]=$inputTXT
-
+        modificarElemento $posDeEsteElemento 1 $inputTXT
         if [ $datoTomado ]; 
         then
-            historialPos[$posDeEsteElemento,1]=$datoTomado # guarda la entrada en la lista
+            modificarElemento $posDeEsteElemento 1 $datoTomado
         fi
 
         moverAdelante
