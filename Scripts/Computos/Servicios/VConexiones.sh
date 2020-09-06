@@ -56,7 +56,7 @@ VConexiones(){
                     actualizarEstadoServiciosSSHyMYSQL
                 fi
                 ;;
-            "3")
+            "2")
                 if [ $codigoRespuesta = "5" ]; 
                 then
                     if $estadoSSH; 
@@ -69,7 +69,7 @@ VConexiones(){
                 fi
 
                 ;;
-            "4")
+            "3")
                 if $respuestaGestor; 
                 then
                     continuar=false
