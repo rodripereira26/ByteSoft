@@ -15,7 +15,7 @@ logearMySQL() {
     dibujarTxt "CONTRASEÑA:" 36 14 0 7
     dibujarEntradaTxt 36 15 31 true
 
-    dibujarBoton "LOGUEARSE" 11 20 40 3
+    dibujarBoton "INGRESAR" 11 20 40 3
     dibujarBoton "VOLVER" 50 20 40 3
 
     while $continuar; 

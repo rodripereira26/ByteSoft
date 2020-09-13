@@ -1,20 +1,19 @@
 #!/bin/bash
 
 #
-#
 # root obligatorio 
 #
-#
-. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
 . "/Scripts/ConfigurarEntorno/MySQL/configMySQL.sh"
-. "/Scripts/ConfigurarEntorno/RED/configRED.sh"
-preguntaInstalacion() {
-    local continuar=true
+#. "/Scripts/ConfigurarEntorno/RED/configRED.sh"
 
+preguntaInstalacion() {
+
+    local continuar=true
 
     buscar=$(grep instalacion=true /etc/environment | cut -f2 -d"=")
 
@@ -23,7 +22,6 @@ preguntaInstalacion() {
         
         pregunta "¿Desea iniciar la configuración del entorno?" 7 28 15 21 2 7
     
-
         while $continuar; 
         do
             siguientePos
@@ -93,7 +91,7 @@ pantallaInstalacion() {
                 continuar=false
                 ;;
         esac
-        VConfigRed
+
         case $(crontabConf) in
 
             "0")
@@ -112,9 +110,9 @@ pantallaInstalacion() {
         firewallConf
         sleep 2
         
-        let PUERTO=$(grep "#Port 22" /etc/ssh/sshd_config | cut -f2 -d" ")
+        let PUERTO=$(grep "#Port" /etc/ssh/sshd_config | cut -f2 -d" ")
 
-        if [ $PUERTO -eq 2 ]; 
+        if [ $PUERTO -eq 2 ]; #revisar el -eq 2
         then
             continuar=false
             colorBgDefecto=7
@@ -125,13 +123,15 @@ pantallaInstalacion() {
             pantallaSSH
             continuar=false
         fi
-        instalarMYSQL
-        configurarMYSQL
+ 
+        #dibujarTxt "Configurando Red..." 40 32 1 
+        #VConfigRed
         
     done
 }
 
 preguntaDesinstalar() {
+
     local continuar=true
     
     buscar=$(grep instalacion=true /etc/environment | cut -f2 -d"=")
@@ -143,8 +143,6 @@ preguntaDesinstalar() {
         
         pregunta "¿Desea desinstalar el entorno?" 7 36 15 21 2 7
     
-
-
         while $continuar; 
         do
             siguientePos

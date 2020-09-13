@@ -120,7 +120,6 @@ VConfigRed() {
 
 }
 
-
 configurarRed(){
     # $1 : ip mi maquina
     # $2 : prefix

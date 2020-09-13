@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 . "/Scripts/InterfazGrafica/Vista/ElementosPredeterminados/ventana.sh"
 
 iniciarPantallaNueva() {

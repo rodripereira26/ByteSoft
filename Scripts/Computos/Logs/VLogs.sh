@@ -19,14 +19,11 @@ MenuLogs() {
     dibujarBoton "LOGINS EXITOSOS" 11 15 80 3
 
     if [ $EUID -eq 0 ]; then #root
-
         dibujarBoton "MENSAJES DEL SISTEMA" 11 18 80 3
         dibujarBoton "INICIO Y SEGURIDAD" 11 21 80 3
         dibujarBoton "LOGINS FALLIDOS" 11 24 80 3 
         dibujarBoton "VOLVER" 11 27 80 3
-
     else # no root
-
         dibujarBoton "VOLVER" 11 18 80 3
     fi
 
@@ -49,6 +46,7 @@ ejecutarLogs() {
     do
         MenuLogs
         case $texto in 
+
             "HARDWARE")
                 tput sgr0
                 clear
@@ -60,6 +58,7 @@ ejecutarLogs() {
                 clear
                 journalctl -r
                 ;;
+
             "ÚLTIMOS LOGINS")
                 tput sgr0
 				clear
@@ -72,6 +71,7 @@ ejecutarLogs() {
 				clear
 				last | less
 				;;
+
             "MENSAJES DEL SISTEMA")
                 #necesita root
                 tput sgr0
@@ -96,9 +96,11 @@ ejecutarLogs() {
             "VOLVER")
                 continuarCiclo=false
                 ;;
+
             *)
                 ;;
         esac
+        
         cerrarPantalla
     done
 
