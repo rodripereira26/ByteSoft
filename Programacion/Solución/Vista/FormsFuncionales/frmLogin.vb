@@ -4,9 +4,12 @@ Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-
         lblIniciarSesion.Select()
         Principal.Singleton.roundedCorners(Me)
+        Configuracion.Singleton.CargarConfiguracion()
+        CargarIdioma()
+        CargarUsuario()
+
 
     End Sub
 
@@ -42,7 +45,19 @@ Public Class frmLogin
         End If
 
     End Sub
+    Private Sub CargarIdioma()
+        If Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES Then
+            'My.Resources.Resource1.ResourceManager. = Configuracion.Singleton.RecorrerTablaIdioma("1")
+        ElseIf Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US Then
 
+        End If
+    End Sub
+    Private Sub CargarUsuario()
+        If Configuracion.Singleton.usuario <> Nothing Then
+            txtUsuario.Text = Configuracion.Singleton.usuario
+            mcbRecordarUsuario.Checked = True
+        End If
+    End Sub
     Private Sub txtPass_LostFocus(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
 
         If txtPassword.Text = "" Then
@@ -73,7 +88,6 @@ Public Class frmLogin
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles picIngresar.Click
         ingresarUsuario()
-
     End Sub
 
     Private Sub lblCrearCuentaPac_Click(sender As Object, e As EventArgs) Handles lblCrearCuentaPac.Click
@@ -119,6 +133,14 @@ Public Class frmLogin
             If IsNumeric(txtUsuario.Text) Then
 
                 If log.verificarUsuario(txtUsuario.Text, seg.HASH256(txtPassword.Text)) Then
+
+                    If mcbRecordarUsuario.Checked Then
+                        Configuracion.Singleton.usuario = txtUsuario.Text
+                        Configuracion.Singleton.GuardarConfiguracion()
+                    Else
+                        Configuracion.Singleton.usuario = Nothing
+                        Configuracion.Singleton.GuardarConfiguracion()
+                    End If
 
                     Datos_Temporales.userLog = txtUsuario.Text
 
@@ -178,5 +200,14 @@ Public Class frmLogin
         If e.KeyCode = Keys.Enter Then
             ingresarUsuario()
         End If
+    End Sub
+
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+        Configuracion.Singleton.RecorrerTablaIdioma("1")
+        Dim tablas As New DataTable
+        Dim rm As Resources.ResourceManager
+        rm = New Resources.ResourceManager("")
+
+        MsgBox(My.Resources.Resource1.ResourceManager.GetString("String1"))
     End Sub
 End Class

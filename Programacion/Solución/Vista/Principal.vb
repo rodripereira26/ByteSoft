@@ -16,6 +16,7 @@ Public Class Principal
 
         Return instancia
     End Function
+
     Public Sub SuperRoundedCorners(rect As Object)
 
         Dim gp As New Drawing2D.GraphicsPath()

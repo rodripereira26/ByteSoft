@@ -25,6 +25,7 @@ Partial Class frmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.pnlIniciarSesion = New System.Windows.Forms.Panel()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.lblIniciarSesion = New System.Windows.Forms.Label()
         Me.mcbRecordarUsuario = New MaterialSkin.Controls.MaterialCheckBox()
         Me.lblContraseña = New System.Windows.Forms.Label()
@@ -40,27 +41,30 @@ Partial Class frmLogin
         Me.lblEsAfiliado = New System.Windows.Forms.Label()
         Me.picBytesoft = New System.Windows.Forms.PictureBox()
         Me.picDiseño = New System.Windows.Forms.PictureBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.pnlIniciarSesion.SuspendLayout()
         CType(Me.picIngresar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picContraseña, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBytesoft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picDiseño, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtUsuario
         '
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuario.Location = New System.Drawing.Point(217, 225)
-        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUsuario.Location = New System.Drawing.Point(163, 183)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(243, 22)
+        Me.txtUsuario.Size = New System.Drawing.Size(182, 17)
         Me.txtUsuario.TabIndex = 1
         '
         'pnlIniciarSesion
         '
         Me.pnlIniciarSesion.BackColor = System.Drawing.Color.White
+        Me.pnlIniciarSesion.Controls.Add(Me.DataGridView1)
+        Me.pnlIniciarSesion.Controls.Add(Me.MetroButton1)
         Me.pnlIniciarSesion.Controls.Add(Me.lblIniciarSesion)
         Me.pnlIniciarSesion.Controls.Add(Me.mcbRecordarUsuario)
         Me.pnlIniciarSesion.Controls.Add(Me.lblContraseña)
@@ -71,21 +75,28 @@ Partial Class frmLogin
         Me.pnlIniciarSesion.Controls.Add(Me.picUsuario)
         Me.pnlIniciarSesion.Controls.Add(Me.picContraseña)
         Me.pnlIniciarSesion.Location = New System.Drawing.Point(0, 0)
-        Me.pnlIniciarSesion.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlIniciarSesion.Name = "pnlIniciarSesion"
-        Me.pnlIniciarSesion.Size = New System.Drawing.Size(640, 622)
+        Me.pnlIniciarSesion.Size = New System.Drawing.Size(480, 505)
         Me.pnlIniciarSesion.TabIndex = 23
+        '
+        'MetroButton1
+        '
+        Me.MetroButton1.Location = New System.Drawing.Point(42, 286)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(75, 23)
+        Me.MetroButton1.TabIndex = 22
+        Me.MetroButton1.Text = "MetroButton1"
+        Me.MetroButton1.UseSelectable = True
         '
         'lblIniciarSesion
         '
         Me.lblIniciarSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIniciarSesion.ForeColor = System.Drawing.Color.Black
-        Me.lblIniciarSesion.Location = New System.Drawing.Point(115, 73)
-        Me.lblIniciarSesion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblIniciarSesion.Location = New System.Drawing.Point(86, 59)
         Me.lblIniciarSesion.Name = "lblIniciarSesion"
-        Me.lblIniciarSesion.Size = New System.Drawing.Size(496, 62)
+        Me.lblIniciarSesion.Size = New System.Drawing.Size(372, 50)
         Me.lblIniciarSesion.TabIndex = 0
-        Me.lblIniciarSesion.Text = "Inicio de Sesión"
+        Me.lblIniciarSesion.Text = "tu vieja"
         Me.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'mcbRecordarUsuario
@@ -93,13 +104,13 @@ Partial Class frmLogin
         Me.mcbRecordarUsuario.AutoSize = True
         Me.mcbRecordarUsuario.Depth = 0
         Me.mcbRecordarUsuario.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.mcbRecordarUsuario.Location = New System.Drawing.Point(248, 442)
+        Me.mcbRecordarUsuario.Location = New System.Drawing.Point(186, 359)
         Me.mcbRecordarUsuario.Margin = New System.Windows.Forms.Padding(0)
         Me.mcbRecordarUsuario.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.mcbRecordarUsuario.MouseState = MaterialSkin.MouseState.HOVER
         Me.mcbRecordarUsuario.Name = "mcbRecordarUsuario"
         Me.mcbRecordarUsuario.Ripple = True
-        Me.mcbRecordarUsuario.Size = New System.Drawing.Size(162, 30)
+        Me.mcbRecordarUsuario.Size = New System.Drawing.Size(135, 30)
         Me.mcbRecordarUsuario.TabIndex = 21
         Me.mcbRecordarUsuario.Text = "Recordar usuario"
         Me.mcbRecordarUsuario.UseVisualStyleBackColor = True
@@ -110,10 +121,9 @@ Partial Class frmLogin
         Me.lblContraseña.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblContraseña.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblContraseña.Location = New System.Drawing.Point(212, 356)
-        Me.lblContraseña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblContraseña.Location = New System.Drawing.Point(159, 289)
         Me.lblContraseña.Name = "lblContraseña"
-        Me.lblContraseña.Size = New System.Drawing.Size(148, 26)
+        Me.lblContraseña.Size = New System.Drawing.Size(111, 21)
         Me.lblContraseña.TabIndex = 13
         Me.lblContraseña.Text = "Constraseña"
         '
@@ -123,10 +133,9 @@ Partial Class frmLogin
         Me.lblUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsuario.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblUsuario.Location = New System.Drawing.Point(212, 224)
-        Me.lblUsuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblUsuario.Location = New System.Drawing.Point(159, 182)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(95, 28)
+        Me.lblUsuario.Size = New System.Drawing.Size(71, 23)
         Me.lblUsuario.TabIndex = 12
         Me.lblUsuario.Text = "Usuario"
         '
@@ -134,10 +143,9 @@ Partial Class frmLogin
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(217, 356)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPassword.Location = New System.Drawing.Point(163, 289)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(243, 22)
+        Me.txtPassword.Size = New System.Drawing.Size(182, 17)
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.UseSystemPasswordChar = True
         '
@@ -145,10 +153,9 @@ Partial Class frmLogin
         '
         Me.picIngresar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.picIngresar.Image = CType(resources.GetObject("picIngresar.Image"), System.Drawing.Image)
-        Me.picIngresar.Location = New System.Drawing.Point(255, 512)
-        Me.picIngresar.Margin = New System.Windows.Forms.Padding(4)
+        Me.picIngresar.Location = New System.Drawing.Point(191, 416)
         Me.picIngresar.Name = "picIngresar"
-        Me.picIngresar.Size = New System.Drawing.Size(173, 71)
+        Me.picIngresar.Size = New System.Drawing.Size(130, 58)
         Me.picIngresar.TabIndex = 14
         Me.picIngresar.TabStop = False
         '
@@ -156,10 +163,9 @@ Partial Class frmLogin
         '
         Me.picUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.picUsuario.Image = Global.Vista.My.Resources.Resources.medd
-        Me.picUsuario.Location = New System.Drawing.Point(185, 193)
-        Me.picUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.picUsuario.Location = New System.Drawing.Point(139, 157)
         Me.picUsuario.Name = "picUsuario"
-        Me.picUsuario.Size = New System.Drawing.Size(312, 90)
+        Me.picUsuario.Size = New System.Drawing.Size(234, 73)
         Me.picUsuario.TabIndex = 1
         Me.picUsuario.TabStop = False
         '
@@ -167,10 +173,9 @@ Partial Class frmLogin
         '
         Me.picContraseña.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.picContraseña.Image = Global.Vista.My.Resources.Resources.medd
-        Me.picContraseña.Location = New System.Drawing.Point(185, 325)
-        Me.picContraseña.Margin = New System.Windows.Forms.Padding(4)
+        Me.picContraseña.Location = New System.Drawing.Point(139, 264)
         Me.picContraseña.Name = "picContraseña"
-        Me.picContraseña.Size = New System.Drawing.Size(312, 90)
+        Me.picContraseña.Size = New System.Drawing.Size(234, 73)
         Me.picContraseña.TabIndex = 3
         Me.picContraseña.TabStop = False
         '
@@ -178,9 +183,8 @@ Partial Class frmLogin
         '
         Me.pnlTopBar.BackColor = System.Drawing.Color.White
         Me.pnlTopBar.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTopBar.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlTopBar.Name = "pnlTopBar"
-        Me.pnlTopBar.Size = New System.Drawing.Size(636, 69)
+        Me.pnlTopBar.Size = New System.Drawing.Size(477, 56)
         Me.pnlTopBar.TabIndex = 22
         '
         'lblMinimizar
@@ -188,10 +192,9 @@ Partial Class frmLogin
         Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMinimizar.ForeColor = System.Drawing.Color.White
-        Me.lblMinimizar.Location = New System.Drawing.Point(1064, 0)
-        Me.lblMinimizar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMinimizar.Location = New System.Drawing.Point(798, 0)
         Me.lblMinimizar.Name = "lblMinimizar"
-        Me.lblMinimizar.Size = New System.Drawing.Size(32, 43)
+        Me.lblMinimizar.Size = New System.Drawing.Size(24, 35)
         Me.lblMinimizar.TabIndex = 25
         Me.lblMinimizar.Text = "_"
         Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -201,10 +204,9 @@ Partial Class frmLogin
         Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCerrar.ForeColor = System.Drawing.Color.White
-        Me.lblCerrar.Location = New System.Drawing.Point(1104, 11)
-        Me.lblCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCerrar.Location = New System.Drawing.Point(828, 9)
         Me.lblCerrar.Name = "lblCerrar"
-        Me.lblCerrar.Size = New System.Drawing.Size(57, 43)
+        Me.lblCerrar.Size = New System.Drawing.Size(43, 35)
         Me.lblCerrar.TabIndex = 24
         Me.lblCerrar.Text = "X"
         Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -215,10 +217,9 @@ Partial Class frmLogin
         Me.lblCrearCuentaPac.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblCrearCuentaPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearCuentaPac.ForeColor = System.Drawing.Color.White
-        Me.lblCrearCuentaPac.Location = New System.Drawing.Point(851, 538)
-        Me.lblCrearCuentaPac.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCrearCuentaPac.Location = New System.Drawing.Point(638, 437)
         Me.lblCrearCuentaPac.Name = "lblCrearCuentaPac"
-        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(216, 31)
+        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(176, 25)
         Me.lblCrearCuentaPac.TabIndex = 28
         Me.lblCrearCuentaPac.Text = "Solicitar cuenta"
         '
@@ -227,20 +228,18 @@ Partial Class frmLogin
         Me.lblEsAfiliado.AutoSize = True
         Me.lblEsAfiliado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEsAfiliado.ForeColor = System.Drawing.Color.White
-        Me.lblEsAfiliado.Location = New System.Drawing.Point(891, 495)
-        Me.lblEsAfiliado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEsAfiliado.Location = New System.Drawing.Point(668, 402)
         Me.lblEsAfiliado.Name = "lblEsAfiliado"
-        Me.lblEsAfiliado.Size = New System.Drawing.Size(137, 25)
+        Me.lblEsAfiliado.Size = New System.Drawing.Size(113, 20)
         Me.lblEsAfiliado.TabIndex = 29
         Me.lblEsAfiliado.Text = "¿Es afiliado?"
         '
         'picBytesoft
         '
         Me.picBytesoft.Image = Global.Vista.My.Resources.Resources.logo_byw_v3
-        Me.picBytesoft.Location = New System.Drawing.Point(783, 148)
-        Me.picBytesoft.Margin = New System.Windows.Forms.Padding(4)
+        Me.picBytesoft.Location = New System.Drawing.Point(587, 120)
         Me.picBytesoft.Name = "picBytesoft"
-        Me.picBytesoft.Size = New System.Drawing.Size(347, 320)
+        Me.picBytesoft.Size = New System.Drawing.Size(260, 260)
         Me.picBytesoft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picBytesoft.TabIndex = 27
         Me.picBytesoft.TabStop = False
@@ -248,19 +247,27 @@ Partial Class frmLogin
         'picDiseño
         '
         Me.picDiseño.Image = CType(resources.GetObject("picDiseño.Image"), System.Drawing.Image)
-        Me.picDiseño.Location = New System.Drawing.Point(543, -2)
+        Me.picDiseño.Location = New System.Drawing.Point(407, -2)
         Me.picDiseño.Margin = New System.Windows.Forms.Padding(0)
         Me.picDiseño.Name = "picDiseño"
-        Me.picDiseño.Size = New System.Drawing.Size(211, 618)
+        Me.picDiseño.Size = New System.Drawing.Size(158, 502)
         Me.picDiseño.TabIndex = 22
         Me.picDiseño.TabStop = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(42, 301)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.TabIndex = 23
+        '
         'frmLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1167, 615)
+        Me.ClientSize = New System.Drawing.Size(875, 500)
         Me.Controls.Add(Me.lblEsAfiliado)
         Me.Controls.Add(Me.pnlTopBar)
         Me.Controls.Add(Me.lblCrearCuentaPac)
@@ -270,7 +277,6 @@ Partial Class frmLogin
         Me.Controls.Add(Me.lblCerrar)
         Me.Controls.Add(Me.picDiseño)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "|"
@@ -281,6 +287,7 @@ Partial Class frmLogin
         CType(Me.picContraseña, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBytesoft, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picDiseño, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -303,4 +310,6 @@ Partial Class frmLogin
     Friend WithEvents lblCrearCuentaPac As Label
     Friend WithEvents lblEsAfiliado As Label
     Friend WithEvents mcbRecordarUsuario As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
