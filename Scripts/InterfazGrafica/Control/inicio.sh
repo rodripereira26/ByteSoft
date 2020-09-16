@@ -7,10 +7,11 @@ declare -i posActual=0
 
 . "/Scripts/InterfazGrafica/Control/registroElementos.sh"
 . "/Scripts/InterfazGrafica/datosElementos.sh"
+
 reiniciarDatos() {
-    
     posActual=0
     proxPos=0
+    historialPos=()
 }
 
 moverAdelante() {
@@ -71,19 +72,6 @@ siguientePos() {
             ;;
     esac
 
-}
-
-borrarLinea() {
-
-    # $1 : nro de linea
-
-    nroCols=$(tput cols)
-    tput cup $1 0
-
-    for ((n=0;n<$nroCols;n++)); 
-    do
-        echo -n " "
-    done
 }
 
 cerrarPantalla() {

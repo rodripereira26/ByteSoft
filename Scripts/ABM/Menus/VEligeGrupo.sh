@@ -12,7 +12,6 @@ VElegirGrupo(){
     dibujarBoton "Medico" 20 10 80 3 
     
 
-
     while $continuar;
     do
         siguientePos

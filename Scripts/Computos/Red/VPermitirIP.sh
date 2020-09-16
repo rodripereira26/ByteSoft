@@ -30,11 +30,15 @@ VPermitirIP(){
         case $posDeEsteElemento in
 
             "0")
-                tipoRegla=$respuestaGestor
+                if $modificado; then 
+                    tipoRegla=$respuestaGestor
+                fi 
                 ;;
                 
             "1")
-                ip=$respuestaGestor
+                if $modificado; then 
+                    ip=$respuestaGestor
+                fi 
                 ;;
 
             "2")

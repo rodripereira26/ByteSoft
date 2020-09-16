@@ -28,7 +28,9 @@ activarServicio() {
         case $posDeEsteElemento in
 
             "0")
-                nombre=$respuestaGestor
+                if $modificado; then 
+                    nombre=$respuestaGestor
+                fi 
                 ;;
 
             "1")
@@ -94,7 +96,9 @@ desactivarServicio() {
         case $posDeEsteElemento in
 
             "0")
-                nombre=$respuestaGestor
+                if $modificado; then 
+                    nombre=$respuestaGestor
+                fi 
                 ;;
 
             "1")

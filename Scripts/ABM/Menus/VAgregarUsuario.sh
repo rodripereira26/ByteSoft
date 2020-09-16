@@ -32,11 +32,15 @@ VMenuAgregarUsuario() {
         case $posDeEsteElemento in
 
             "0")
-                user=$respuestaGestor
+                if $modificado; then             
+                    user=$respuestaGestor
+                fi
                 ;;
 
             "1")
-                pw=$respuestaGestor
+                if $modificado; then 
+                    pw=$respuestaGestor
+                fi                
                 ;;
 
             "2")

@@ -25,10 +25,14 @@ logearMySQL() {
         case $posDeEsteElemento in
 
             "0")
-                usuario=$respuestaGestor
+                if $modificado; then 
+                    usuario=$respuestaGestor
+                fi 
                 ;;
             "1")
-                contrasena=$respuestaGestor
+                if $modificado; then 
+                    contrasena=$respuestaGestor
+                fi 
                 ;;
 
             "2")

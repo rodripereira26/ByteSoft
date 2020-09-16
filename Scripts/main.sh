@@ -81,13 +81,9 @@ ejecutarMain() {
 main() {
 
     tput sgr0
-    clear
-    tput civis
-    #animacionTitulo "/Scripts/InterfazGrafica2/Vista/ElementosExtra/tituloByteSoft.txt" 10 10
+    tput civis 
+    #animacionTitulo "/Scripts/InterfazGrafica/Vista/ElementosExtra/tituloByteSoft.txt" 10 10
     ejecutarMain
-    clear
-
 }
-
 
 main

@@ -27,12 +27,12 @@ animacionTitulo() {
             tput setaf 5
         fi
         
-        borrarLinea $lugarTPUT
+        cargarRectangulo 0 $lugarTPUT $(tput cols) 1
         tput cup $lugarTPUT $nroRandomEjeX
         head -$nroRandomLinea  $1 | tail -1
         sleep $tiempoRandom
 
-        borrarLinea $lugarTPUT
+        cargarRectangulo 0 $lugarTPUT $(tput cols) 1
         tput cup $lugarTPUT $2
         head -$nroRandomLinea  $1 | tail -1
     done

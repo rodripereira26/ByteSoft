@@ -3,7 +3,6 @@
 #necesita root
 
 crearCarpetasIniciales() {
-
     local carpUsuarios="/home/USUARIOS"
     local carpAdministradores="/home/USUARIOS/ADMINISTRADORES"
     local carpMedicos="/home/USUARIOS/MEDICOS"

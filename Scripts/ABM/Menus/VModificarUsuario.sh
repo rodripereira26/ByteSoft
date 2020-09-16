@@ -39,17 +39,25 @@ VMenuModificarUsuario() {
         case $posDeEsteElemento in
 
             "0")
-                user=$respuestaGestor
+                if $modificado; then         
+                    user=$respuestaGestor 
+                fi
                 ;;
             "1")
-                pw=$respuestaGestor
+                if $modificado; then 
+                    pw=$respuestaGestor
+                fi
                 ;;
             "2")
-                pwN=$respuestaGestor
+                if $modificado; then             
+                    pwN=$respuestaGestor
+                fi
                 ;;
 
             "3")
-                reppwN=$respuestaGestor
+                if $modificado; then             
+                    reppwN=$respuestaGestor
+                fi
                 ;;
             "4")
                 if $respuestaGestor; 

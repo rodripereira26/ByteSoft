@@ -81,10 +81,10 @@ dibujarTxt() {
     then
         colorBg=$5
     fi
-
     tput cup $3 $2
     tput setaf $colorFg
     tput setab $colorBg
+
     echo -n $1
 
 }

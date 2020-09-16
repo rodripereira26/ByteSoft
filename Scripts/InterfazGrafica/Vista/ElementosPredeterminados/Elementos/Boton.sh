@@ -10,6 +10,7 @@ gestorDeBoton() {
 
     cargarBoton "$texto" $posX $posY $largo $ancho $BGplus $FGplus
     codigoRespuesta=$(hizoClick "4 5 6")
+
     actualizarPosActual $codigoRespuesta
     cargarBoton "$texto" $posX $posY $largo $ancho $colorBg $colorFg
 

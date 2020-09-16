@@ -23,7 +23,9 @@ logearSSH() {
         case $posDeEsteElemento in
 
             "0")
-                usuario=$respuestaGestor
+                if $modificado; then 
+                    usuario=$respuestaGestor
+                fi 
                 ;;
             "1")
                 if $respuestaGestor;

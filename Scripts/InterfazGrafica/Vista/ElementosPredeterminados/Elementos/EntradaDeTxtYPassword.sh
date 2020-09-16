@@ -33,7 +33,7 @@ cargarEntradaTxtYPassword() {
 gestorDeEntradaTexto() {
 
     # $1 int es password
-
+    modificado=false
     respuestaGestor=""
     codigoRespuesta=""
 
@@ -42,20 +42,16 @@ gestorDeEntradaTexto() {
     codigoRespuesta=$(hizoClick "4 5 6")
     actualizarPosActual $codigoRespuesta
 
-    cargarEntradaTxtYPassword $1 1>&2
-    
     if [ "$codigoRespuesta" = "5" ]; 
     then
         cargarEntradaTxtYPassword 1
         tomarDatoEntradaTxt $1
         respuestaGestor=$inputTXT
         modificarElemento $posDeEsteElemento 1 $inputTXT
-        if [ $datoTomado ]; 
-        then
-            modificarElemento $posDeEsteElemento 1 $datoTomado
-        fi
-
         moverAdelante
+        modificado=true
+    else 
+        cargarEntradaTxtYPassword $1 1>&2
     fi
 }
 
@@ -74,7 +70,6 @@ invertirColoresEntradaTxt() {
 tomarDatoEntradaTxt() {
 
     # $1 int mostrarTextoAnterior
-
     continuarLeyendo=true
     inputTXT=""
 
@@ -82,24 +77,22 @@ tomarDatoEntradaTxt() {
     do
         read -rn1 press
 
-        if [ "$press" = "5" ]; 
-        then
+        if [ "$press" = "5" ]; then
             continuarLeyendo=false
 
-        elif [ "$press" = $'\177' ]; 
-            then
-            if [ $inputTXT ]; 
-            then
+        elif [ "$press" = $'\177' ]; then
+            if [ "$inputTXT" ]; then
                 inputTXT=${inputTXT::-1}
             fi
         else
             inputTXT="$inputTXT$press"
         fi
 
-        cargarEntradaTxtYPassword 1
+        tput cup $posY $posX
+        printf "%${largo}s"
 
-        if [ $1 -eq 0 ]; 
-        then
+        if [ $1 -eq 0 ]; then
+            tput cup $posY $posX
             echo -n $inputTXT
         fi
     done

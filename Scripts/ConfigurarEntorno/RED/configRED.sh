@@ -3,25 +3,24 @@
 
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
-VConfigRed() {
+VConfigRedParaLocal() {
+    # $1 : tipo (SERVIDOR, RESPALDO, SUBRED_ADMIN)
 
     local continuar=true
-    local IP=""
-    local PREFIX=""
-    local GATEWAY=""
-    local DNS=""
-    local IP_RESPALDO=""
-    local IP_SUBRED_ADMIN=""
-    #prueba
-
+    local _IP_SERVIDOR=""
+    local _PREFIX=""
+    local _GATEWAY=""
+    local _DNS=""
+    local _IP_RESPALDO=""
+    local _IP_SUBRED_ADMIN=""
     local patronIP_RESPALDO="(?<=export IP_RESPALDO=)\d+.\d+.\d+.\d+"
-    local patronIP_SUBRED_ADMIN="(?<=export IP_SUBRED_ADMIN=)\d+.\d+.\d+.\d+"
-
+    local patronIP_SUBRED_ADMIN="(?<=export IP_SUBRED_ADMIN=)\d+.\d+.\d+.\d+:\d+"
+    local patronIP_SERVIDOR="(?<=export IP_SERVIDOR=)\d+.\d+.\d+.\d+"
 
     iniciarPantallaNueva
     dibujarTxt "CONFIGURACION DE RED" 41 6 0
 
-    dibujarTxt "IP" 11 11 0
+    dibujarTxt "IP SERVIDOR" 11 11 0
     dibujarEntradaTxt 11 12 20 false
 
     dibujarTxt "PREFIX" 11 14 0
@@ -39,64 +38,95 @@ VConfigRed() {
     dibujarTxt "IP PARA ADMINISTRADORES(IP/PREFIX)" 65 14 0
     dibujarEntradaTxt 65 15 20 false
 
-    dibujarBoton "SIGUIENTE" 11 20 40 3
-    dibujarBoton "VOLVER" 50 20 40 3
+    dibujarBoton "SIGUIENTE" 11 20 80 3
 
     while $continuar; 
     do
 
         siguientePos
-#: '
-#al descomentar estas lineas solo se insertan las variables
-        IP="192.168.1.9"
+: '
+al comentar este comentario se puede ir a SIGUIENTE sin insertar las variables (para pruebas)
+        IP_SERVIDOR="192.168.1.9"
         PREFIX="24"
         GATEWAY="192.168.1.1"
         DNS="8.8.8.8"
         IP_RESPALDO="192.168.1.10"
         IP_SUBRED_ADMIN="192.168.100.97/24"
-#'       
+        #192.168.1.9 24 192.168.1.1 8.8.8.8 192.168.1.10 192.168.100.97/24 
+'       
         case $posDeEsteElemento in
             "0")
-                IP=$respuestaGestor
+                if $modificado; then 
+                    _IP_SERVIDOR=$respuestaGestor
+                fi
                 ;;
             "1")
-                PREFIX=$respuestaGestor
+                if $modificado; then 
+                    _PREFIX=$respuestaGestor
+                fi
                 ;;
             "2")
-                GATEWAY=$respuestaGestor
+                if $modificado; then                    
+                    _GATEWAY=$respuestaGestor
+                fi              
                 ;;
             "3")
-                DNS=$respuestaGestor
+                if $modificado; then 
+                    _DNS=$respuestaGestor
+                fi
                 ;;
             "4")
-                IP_RESPALDO=$respuestaGestor
+                if $modificado; then 
+                    _IP_RESPALDO=$respuestaGestor
+                fi
                 ;;
             "5")
-                IP_SUBRED_ADMIN=$respuestaGestor
+                if $modificado; then 
+                    _IP_SUBRED_ADMIN=$respuestaGestor
+                fi
                 ;;
+            
             "6")
                 if $respuestaGestor; then
-                    if [ $IP -a $PREFIX -a $GATEWAY -a $DNS ] && \
-                        [ $IP_RESPALDO -a $IP_SUBRED_ADMIN ]; then
+                    if [ "$_IP_SERVIDOR" -a "$_PREFIX" -a "$_GATEWAY" -a "$_DNS" ] && \
+                        [ "$_IP_RESPALDO" -a "$_IP_SUBRED_ADMIN" ]; then
                     
-                        ping -c1 $IP &> /dev/null
-                        if [ $? -eq 0 ] && [ $(hostname -I) != $IP ];then 
+                        ping -c1 "$_IP_SERVIDOR" &> /dev/null
+                        if [ $? -eq 0 ] && [ $(hostname -I) != "$_IP_SERVIDOR" ];then 
                             mensajeError "Ya hay una ip en la red" 1 37 33 2 1 2
                         else
                             mensajeError "Configurando..." 2 37 33 0 2 2
-                            configurarRed $IP $PREFIX $GATEWAY $DNS
+                            case $1 in
+                                "SERVIDOR")
+                                    configurarRed $_IP_SERVIDOR $_PREFIX $_GATEWAY $_DNS
+                                    ;;
+                                "RESPALDO")
+                                    configurarRed $_IP_RESPALDO $_PREFIX $_GATEWAY $_DNS
+                                    ;;
+                                "SUBRED_ADMIN")
+                                    configurarRed ${_IP_SUBRED_ADMIN%%:*} ${_IP_SUBRED_ADMIN##*:} $_GATEWAY $_DNS
+                                    ;;
+                            esac
+
 
                             if [ "$(grep IP_RESPALDO /etc/environment | wc -l)" -eq "0" ]; then
-                                echo "export IP_RESPALDO=$IP_RESPALDO" >> /etc/environment
+                                echo "export IP_RESPALDO=$_IP_RESPALDO" >> /etc/environment
                             else
-                                perl -pe "s/$patronIP_RESPALDO/$IP_RESPALDO/g" -i /etc/environment
+                                perl -pe "s/$patronIP_RESPALDO/$_IP_RESPALDO/g" -i /etc/environment
                             fi
 
                             if [ "$(grep IP_SUBRED_ADMIN /etc/environment | wc -l)" -eq "0" ]; then
-                                echo "export IP_SUBRED_ADMIN=$IP_SUBRED_ADMIN" >> /etc/environment
+                                echo "export IP_SUBRED_ADMIN=${_IP_SUBRED_ADMIN/"/"/:}" >> /etc/environment
                             else
-                                perl -pe "s/$patronIP_SUBRED_ADMIN/$IP_SUBRED_ADMIN/g" -i /etc/environment
+                                perl -pe "s/$patronIP_SUBRED_ADMIN/${_IP_SUBRED_ADMIN/"/"/:}/g" -i /etc/environment
                             fi
+
+                            if [ "$(grep IP_SERVIDOR /etc/environment | wc -l)" -eq "0" ]; then
+                                echo "export IP_SERVIDOR="$_IP_SERVIDOR"" >> /etc/environment
+                            else
+                                perl -pe "s/$patronIP_SERVIDOR/$"$_IP_SERVIDOR"/g" -i /etc/environment
+                            fi
+                            
                             . "/etc/environment"
                             
                             continuar=false
@@ -107,17 +137,9 @@ VConfigRed() {
                     fi
                 fi
                 ;;
-            "7")
-                if $respuestaGestor; then
-                    continuar=false
-                fi
-                ;;
-
         esac
-
     done
-
-
+    cerrarPantalla
 }
 
 
@@ -129,16 +151,16 @@ configurarRed(){
 
     local ifcfg_auxiliar="/Scripts/ConfigurarEntorno/RED/ifcfg-enp0s3nuevo"
     local ifcfg_viejo="/Scripts/ConfigurarEntorno/RED/ifcfg-enp0s3viejo"
-    local ifcfg_a_remplazar="/etc/sysconfig/network-scripts/ifcfg-enp0s3"
+    local ifcfg_local="/etc/sysconfig/network-scripts/ifcfg-enp0s3"
 
-    cp $ifcfg_auxiliar $ifcfg_a_remplazar
+    cp $ifcfg_auxiliar $ifcfg_local
 
-    sed -i "s/IPADDR=ip/IPADDR=$1/g" $ifcfg_a_remplazar
-    sed -i "s/PREFIX=prefix/PREFIX=$2/g" $ifcfg_a_remplazar
-    sed -i "s/GATEWAY=gateway/GATEWAY=$3/g" $ifcfg_a_remplazar
-    sed -i "s/DNS1=dns/DNS1=$4/g" $ifcfg_a_remplazar
+    sed -i "s/IPADDR=ip/IPADDR=$1/g" $ifcfg_local
+    sed -i "s/PREFIX=prefix/PREFIX=$2/g" $ifcfg_local
+    sed -i "s/GATEWAY=gateway/GATEWAY=$3/g" $ifcfg_local
+    sed -i "s/DNS1=dns/DNS1=$4/g" $ifcfg_local
 
-    systemctl restart network
+    systemctl restart network 2> /dev/null
 }
 #configurarRed 192.168.1.9 24 192.168.1.1 8.8.8.8
-VConfigRed
+#VConfigRedParaLocal "SERVIDOR"

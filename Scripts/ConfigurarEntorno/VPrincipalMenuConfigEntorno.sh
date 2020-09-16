@@ -12,6 +12,7 @@
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
 . "/Scripts/ConfigurarEntorno/MySQL/configMySQL.sh"
 . "/Scripts/ConfigurarEntorno/RED/configRED.sh"
+
 preguntaInstalacion() {
     local continuar=true
 
@@ -33,7 +34,7 @@ preguntaInstalacion() {
                 "0") 
                     if $respuestaGestor;
                     then
-                        pantallaInstalacion
+                        pantallaEleccionMaquina
                     fi
                     ;;
 
@@ -50,85 +51,171 @@ preguntaInstalacion() {
 
             esac
         done
-
+        cerrarPantalla
     else
          mensajeError "LA INSTALACIÓN YA FUE REALIZADA" 1 36 33 2 3 1 1  
     fi
-    
+
 }
 
-pantallaInstalacion() {
+pantallaEleccionMaquina(){
+    local continuar=true
+
+    iniciarPantallaNueva
+    dibujarTxt "Ingresa funcion maquina actual" 80 2
+    dibujarBoton "SERVIDOR PRINCIPAL" 20 7 80 3
+    dibujarBoton "RESPALDOS" 20 10 80 3 
+    dibujarBoton "SUBRED ADMIN" 20 13 80 3 
+
+    while $continuar;
+    do
+        siguientePos
+
+        case $posDeEsteElemento in
+
+            "0")
+                if $respuestaGestor; 
+                then
+                    pantallaInstalacionServidor
+                    continuar=false
+                fi
+                ;;
+
+            "1")
+                if $respuestaGestor; 
+                then
+                    pantallaInstalacionServidorRespaldos
+                    continuar=false
+                fi
+                ;;
+            "2")
+                if $respuestaGestor; 
+                then
+                    pantallaInstalacionServidorSubredAdmin
+                    continuar=false
+                fi
+                ;;
+            *)
+                continuar=false
+                ;;
+        esac
+    done
+    cerrarPantalla
+}
+
+pantallaInstalacionServidor() {
+    
+    colorBgDefecto=7
+    iniciarPantallaNueva
+    dibujarRectangulo 11 4 80 30 7 7 
+    dibujarTxt "CONFIGURANDO ENTORNO" 41 5 8
+
+    case $(variablesEntorno) in
+
+        "0") 
+            dibujarTxt "Configurando variables..." 37 8 1
+            sleep 0.5
+            ;;
+
+        "1")
+            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 2 3 1 1
+
+            ;;
+    esac
+
+    case $(crearCarpetasIniciales) in 
+
+        "0")
+            dibujarTxt "Creando Carpetas..." 40 12 1    
+            sleep 0.5   
+            ;;
+                        
+        "1")
+            mensajeError "LAS CARPETAS YA FUERON CREADAS" 1 37 33 2 3 1 1
+            ;;
+    esac
+    VConfigRedParaLocal "SERVIDOR"
+    case $(crontabConf) in
+
+        "0")
+            dibujarTxt "Configurando crontab..." 38 16 1
+            sleep 0.5
+            ;;
+                        
+        "1")
+            mensajeError "EL CRONTAB YA FUE CONFIGURADO" 1 37 33 2 3 1 1
+            ;;
+    esac
+    
+    dibujarTxt "Configurando firewall..." 38 20 1
+    firewallConf
+    sleep 0.5
+    
+    let PUERTO=$(grep "#Port 22" /etc/ssh/sshd_config | cut -f2 -d" ")
+
+    if [ $PUERTO -eq 22 ]; 
+    then
+        dibujarTxt "Configurando SSH..." 40 24 1 
+        sleep 0.5
+        colorBgDefecto=0
+        pantallaSSH
+    else 
+        colorBgDefecto=7
+    fi
+    cerrarPantalla
+}
+
+pantallaInstalacionServidorRespaldos() {
     
     colorBgDefecto=7
     iniciarPantallaNueva
     dibujarRectangulo 11 4 80 30 7 7 
     dibujarTxt "CONFIGURANDO ENTORNO" 41 5 7
 
-    while $continuar
-    do
-        case $(variablesEntorno) in
 
-            "0") 
-                dibujarTxt "Configurando variables..." 37 8 1
-                sleep 2
-                ;;
+    case $(variablesEntorno) in
 
-            "1")
-                mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 2 3 1 1
-                desinstalar
-                continuar=false
-                ;;
-        esac
+        "0") 
+            dibujarTxt "Configurando variables..." 37 8 1
+            sleep 0.5
+            ;;
 
-        case $(crearCarpetasIniciales) in 
+        "1")
+            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 2 3 1 1
+            ;;
+    esac
+    VConfigRedParaLocal "RESPALDO"
+    dibujarTxt "Configurando firewall..." 38 20 1
+    firewallConf
+    dibujarTxt "Configuracion terminada" 38 20 1
+    sleep 0.5  
+}
 
-            "0")
-                dibujarTxt "Creando Carpetas..." 40 12 1    
-                sleep 2
-               ;;
-                            
-            "1")
-                mensajeError "LAS CARPETAS YA FUERON CREADAS" 1 37 33 2 3 1 1
-                desinstalar
-                continuar=false
-                ;;
-        esac
-        VConfigRed
-        case $(crontabConf) in
+pantallaInstalacionServidorSubredAdmin() {
+    
+    colorBgDefecto=7
+    iniciarPantallaNueva
+    dibujarRectangulo 11 4 80 30 7 7 
+    dibujarTxt "CONFIGURANDO ENTORNO" 41 5 7
 
-            "0")
-                dibujarTxt "Configurando crontab..." 38 16 1
-                sleep 2
-                ;;
-                            
-            "1")
-                mensajeError "EL CRONTAB YA FUE CONFIGURADO" 1 37 33 2 3 1 1
-                desinstalar
-                continuar=false
-                ;;
-        esac
-        
-        dibujarTxt "Configurando firewall..." 38 20 1
-        firewallConf
-        sleep 2
-        
-        let PUERTO=$(grep "#Port 22" /etc/ssh/sshd_config | cut -f2 -d" ")
 
-        if [ $PUERTO -eq 2 ]; 
-        then
-            continuar=false
-            colorBgDefecto=7
-        else 
-            dibujarTxt "Configurando SSH..." 40 24 1 
-            sleep 2
-            colorBgDefecto=0
-            pantallaSSH
-            continuar=false
-        fi
-        instalarMYSQL
-        configurarMYSQL
-        
-    done
+    case $(variablesEntorno) in
+
+        "0") 
+            dibujarTxt "Configurando variables..." 37 8 1
+            sleep 0.5
+            ;;
+
+        "1")
+            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 2 3 1 1
+            ;;
+    esac
+    VConfigRedParaLocal "SUBRED_ADMIN"
+    
+    dibujarTxt "Configurando firewall..." 38 20 1
+    firewallConf
+    dibujarTxt "Configuracion terminada" 38 20 1
+    sleep 0.5
 }
 
 preguntaDesinstalar() {
@@ -159,15 +246,15 @@ preguntaDesinstalar() {
 					    iniciarPantallaNueva
 					    dibujarRectangulo 11 4 80 30 7 7 
 					    dibujarTxt "Desinstalando firewall..." 37 8 1
-					    sleep 2
+					    sleep 0.5
 					    dibujarTxt "Desinstalando SSH..." 39 12 1
-					    sleep 2
+					    sleep 0.5
 					    dibujarTxt "Desinstalando crontab..." 38 16 1
-					    sleep 2
+					    sleep 0.5
 					    dibujarTxt "Eliminando carpetas..." 39 20 1
-					    sleep 2
+					    sleep 0.5
 					    dibujarTxt "Borrando variables..." 40 24 1
-					    sleep 2
+					    sleep 0.5
 					    desinstalar
                         continuar=false
                     fi

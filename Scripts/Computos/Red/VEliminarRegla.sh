@@ -31,7 +31,7 @@ VEliminarRegla(){
 
         case $posDeEsteElemento in
             "0")
-                if [ $respuestaGestor ] && [ "$tipoRegla" != "$respuestaGestor" ]; then
+                if [ $respuestaGestor ] && [ "$tipoRegla" != "$respuestaGestor" -a $modificado]; then 
                     tipoRegla=$respuestaGestor
                     maximaReglas=$(iptables -L $tipoRegla -n --line-numbers 2> /dev/null | tail -1 | cut -d" " -f1)
                     dibujarRectangulo 50 8 101 10 7 8
@@ -49,7 +49,9 @@ VEliminarRegla(){
                 fi
                 ;;          
             "1")
-                reglaEspecifica=$respuestaGestor
+                if $modificado; then 
+                    reglaEspecifica=$respuestaGestor
+                fi             
                 ;;
 
             "2")
