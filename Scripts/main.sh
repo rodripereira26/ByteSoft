@@ -1,12 +1,11 @@
 #!/bin/bash
-#
+
 #
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
 #
 
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
-
 . "/Scripts/Computos/VPrincipalComputos.sh"
 . "/Scripts/ConfigurarEntorno/VPrincipalMenuConfigEntorno.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
@@ -21,8 +20,8 @@ Principal() {
     
     dibujarBoton "CENTRO DE COMPUTOS" 11 10 80 3
 
-    if [ $EUID -eq 0 ];then
-
+    if [ $EUID -eq 0 ];
+    then
         dibujarBoton "CONFIGURACIÓN DEL ENTORNO" 11 13 80 3 #necesita root 
         dibujarBoton "DESINSTALAR ENTORNO" 11 16 80 3 #necesita root 
         dibujarBoton "SALIR" 11 19 80 3
@@ -79,9 +78,9 @@ ejecutarMain() {
 }
 
 main() {
-
+    
     tput sgr0
-    tput civis 
+    tput civis
     #animacionTitulo "/Scripts/InterfazGrafica/Vista/ElementosExtra/tituloByteSoft.txt" 10 10
     ejecutarMain
 }

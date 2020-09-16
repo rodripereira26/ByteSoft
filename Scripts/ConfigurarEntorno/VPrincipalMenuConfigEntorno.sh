@@ -1,21 +1,23 @@
 #!/bin/bash
 
 #
-#
 # root obligatorio 
 #
-#
-. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
+. "/Scripts/InterfazGrafica/Control/inicio.sh" 
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
 . "/Scripts/ConfigurarEntorno/MySQL/configMySQL.sh"
+<<<<<<< HEAD
 . "/Scripts/ConfigurarEntorno/RED/configRED.sh"
+=======
+#. "/Scripts/ConfigurarEntorno/RED/configRED.sh"
+>>>>>>> 4db6940506a599fd8670bdc3f7def7fdb4d5e656
 
 preguntaInstalacion() {
-    local continuar=true
 
+    local continuar=true
 
     buscar=$(grep instalacion=true /etc/environment | cut -f2 -d"=")
 
@@ -24,7 +26,6 @@ preguntaInstalacion() {
         
         pregunta "¿Desea iniciar la configuración del entorno?" 7 28 15 21 2 7
     
-
         while $continuar; 
         do
             siguientePos
@@ -102,7 +103,6 @@ pantallaEleccionMaquina(){
     done
     cerrarPantalla
 }
-
 pantallaInstalacionServidor() {
     
     colorBgDefecto=7
@@ -219,6 +219,7 @@ pantallaInstalacionServidorSubredAdmin() {
 }
 
 preguntaDesinstalar() {
+
     local continuar=true
     
     buscar=$(grep instalacion=true /etc/environment | cut -f2 -d"=")
@@ -230,8 +231,6 @@ preguntaDesinstalar() {
         
         pregunta "¿Desea desinstalar el entorno?" 7 36 15 21 2 7
     
-
-
         while $continuar; 
         do
             siguientePos

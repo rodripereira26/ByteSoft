@@ -24,7 +24,6 @@ VMenuAgregarUsuario() {
     dibujarBoton "SIGUIENTE" 11 20 40 3
     dibujarBoton "VOLVER" 50 20 40 3
 
-
     while $continuar; 
     do
         siguientePos

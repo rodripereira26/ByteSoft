@@ -9,6 +9,7 @@
 . "/Scripts/Computos/Servicios/VPrincipalMenuServicios.sh"
 . "/Scripts/Computos/Servicios/VConexiones.sh"
 . "/Scripts/Computos/Red/VPrincipalRedes.sh"
+. "/Scripts/Computos/MySQL/configMySQL.sh"
 
 PrincipalComputos() {
 
@@ -28,7 +29,8 @@ PrincipalComputos() {
     dibujarBoton "COMPROBAR RED" 11 18 80 3
     dibujarBoton "LOGS" 11 21 80 3
     dibujarBoton "RESPALDOS" 11 24 80 3
-    dibujarBoton "VOLVER" 11 27 80 3
+    dibujarBoton "MYSQL" 11 27 80 3
+    dibujarBoton "VOLVER" 11 30 80 3
 
 
     while $continuar; 
@@ -77,11 +79,16 @@ ejecutarComputos() {
             "5") 
                 ejecutarLogs                
                 ;;
+
             "6") 
                 ejecutarRespaldos
                 ;;
 
             "7")
+                ejecutarMysql
+                ;;
+
+            "8")
                 continuarCiclo=false
                 ;;
                   

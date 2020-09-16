@@ -11,7 +11,6 @@ pantallaSSH() {
     colorBgDefecto=0
     iniciarPantallaNueva
     
-
     dibujarRectangulo 11 4 80 40 7 0
     dibujarTxt "CONFIGURANDO SSH" 44 7 0 7
 
@@ -21,7 +20,7 @@ pantallaSSH() {
     dibujarTxt "Permitir usuarios root" 40 16 0 7
     dibujarSwitch 36 17 30 3 $root
 
-    dibujarBoton "Configurar" 27 24 50 3
+    dibujarBoton "CONFIGURAR" 27 24 50 3
 
     while $continuar; 
     do

@@ -142,7 +142,6 @@ al comentar este comentario se puede ir a SIGUIENTE sin insertar las variables (
     cerrarPantalla
 }
 
-
 configurarRed(){
     # $1 : ip mi maquina
     # $2 : prefix

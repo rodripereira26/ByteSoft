@@ -61,6 +61,8 @@ ejecutarPrincipalRed() {
                 ejecutarEliminarRegla
                 ;;
             "LISTAR REGLAS")
+                tput sgr0
+                clear
                 iptables -nL | less
                 ;;
 
