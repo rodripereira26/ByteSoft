@@ -1,4 +1,5 @@
 ﻿Imports Acceso_a_Datos
+Imports System.Resources.ResXResourceWriter
 
 <Serializable>
 Public Class Configuracion
@@ -33,10 +34,7 @@ Public Class Configuracion
     End Enum
 
     Public Function RecorrerTablaIdioma(archivo As String) As DataTable
-        Dim tabla As DataTable = Serializacion.Singleton.LeerCSV(archivo)
-
-        'MsgBox(tabla.Rows.Item(0).)
-
+        Return Serializacion.Singleton.LeerCSV(archivo)
     End Function
 
 End Class

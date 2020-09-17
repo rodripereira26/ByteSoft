@@ -147,6 +147,16 @@ Vista
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Vista.My.Resources.Resources.icons8_email_send_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_email_send_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Vista.My.Resources.Resources.icons8_filter_30px_11">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -197,12 +207,27 @@ Vista
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Vista.My.Resources.Resources.icons8_right_arrow_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_right_arrow_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Vista.My.Resources.Resources.icons8_search_30px1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_single_choice_24px1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_summary_list_24px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -301,6 +326,9 @@ Vista
 <summary>
 Movimiento de ventanas sin bordes
 </summary>
+</member>
+<member name="M:Vista.Principal.Idioma(System.String)">
+
 </member>
 </members>
 </doc>

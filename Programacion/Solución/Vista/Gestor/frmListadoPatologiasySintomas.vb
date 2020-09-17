@@ -1,5 +1,4 @@
 ﻿Imports Logica
-Imports MaterialSkin
 ''https://github.com/IgnaceMaes/MaterialSkin
 
 Public Class frmListadoPatologiasySintomas

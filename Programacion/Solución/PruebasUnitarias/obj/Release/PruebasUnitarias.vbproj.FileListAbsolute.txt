@@ -48,3 +48,30 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\o
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.dll
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.xml
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\PruebasUnitarias.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\PruebasUnitarias.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\PruebasUnitarias.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Logica.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Logica.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Logica.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.Resources.resources
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.vbproj.CopyComplete
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Release\PruebasUnitarias.pdb

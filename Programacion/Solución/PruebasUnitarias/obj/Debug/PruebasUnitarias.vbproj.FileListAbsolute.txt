@@ -76,3 +76,19 @@ C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solució
 C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.dll
 C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.xml
 C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.Resources.resources
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb

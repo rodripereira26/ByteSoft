@@ -112,3 +112,13 @@ C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Soluci�
 C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
 C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
 C:\Users\Rodrigo\OneDrive\Escritorio\Nueva carpeta\bytesoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb

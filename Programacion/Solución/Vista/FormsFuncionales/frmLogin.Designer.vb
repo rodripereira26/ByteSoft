@@ -25,6 +25,8 @@ Partial Class frmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.pnlIniciarSesion = New System.Windows.Forms.Panel()
+        Me.ing = New System.Windows.Forms.RadioButton()
+        Me.esp = New System.Windows.Forms.RadioButton()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.lblIniciarSesion = New System.Windows.Forms.Label()
         Me.mcbRecordarUsuario = New MaterialSkin.Controls.MaterialCheckBox()
@@ -41,14 +43,12 @@ Partial Class frmLogin
         Me.lblEsAfiliado = New System.Windows.Forms.Label()
         Me.picBytesoft = New System.Windows.Forms.PictureBox()
         Me.picDiseño = New System.Windows.Forms.PictureBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.pnlIniciarSesion.SuspendLayout()
         CType(Me.picIngresar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picContraseña, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBytesoft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picDiseño, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtUsuario
@@ -63,7 +63,8 @@ Partial Class frmLogin
         'pnlIniciarSesion
         '
         Me.pnlIniciarSesion.BackColor = System.Drawing.Color.White
-        Me.pnlIniciarSesion.Controls.Add(Me.DataGridView1)
+        Me.pnlIniciarSesion.Controls.Add(Me.ing)
+        Me.pnlIniciarSesion.Controls.Add(Me.esp)
         Me.pnlIniciarSesion.Controls.Add(Me.MetroButton1)
         Me.pnlIniciarSesion.Controls.Add(Me.lblIniciarSesion)
         Me.pnlIniciarSesion.Controls.Add(Me.mcbRecordarUsuario)
@@ -78,6 +79,28 @@ Partial Class frmLogin
         Me.pnlIniciarSesion.Name = "pnlIniciarSesion"
         Me.pnlIniciarSesion.Size = New System.Drawing.Size(480, 505)
         Me.pnlIniciarSesion.TabIndex = 23
+        '
+        'ing
+        '
+        Me.ing.AutoSize = True
+        Me.ing.Location = New System.Drawing.Point(66, 236)
+        Me.ing.Name = "ing"
+        Me.ing.Size = New System.Drawing.Size(52, 17)
+        Me.ing.TabIndex = 24
+        Me.ing.TabStop = True
+        Me.ing.Text = "ingles"
+        Me.ing.UseVisualStyleBackColor = True
+        '
+        'esp
+        '
+        Me.esp.AutoSize = True
+        Me.esp.Location = New System.Drawing.Point(66, 182)
+        Me.esp.Name = "esp"
+        Me.esp.Size = New System.Drawing.Size(58, 17)
+        Me.esp.TabIndex = 23
+        Me.esp.TabStop = True
+        Me.esp.Text = "espalol"
+        Me.esp.UseVisualStyleBackColor = True
         '
         'MetroButton1
         '
@@ -96,7 +119,7 @@ Partial Class frmLogin
         Me.lblIniciarSesion.Name = "lblIniciarSesion"
         Me.lblIniciarSesion.Size = New System.Drawing.Size(372, 50)
         Me.lblIniciarSesion.TabIndex = 0
-        Me.lblIniciarSesion.Text = "tu vieja"
+        Me.lblIniciarSesion.Text = Principal.Singleton.Idioma("lblIniciarSesion").ToString
         Me.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'mcbRecordarUsuario
@@ -254,14 +277,6 @@ Partial Class frmLogin
         Me.picDiseño.TabIndex = 22
         Me.picDiseño.TabStop = False
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(42, 301)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
-        Me.DataGridView1.TabIndex = 23
-        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -287,7 +302,6 @@ Partial Class frmLogin
         CType(Me.picContraseña, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBytesoft, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picDiseño, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -311,5 +325,6 @@ Partial Class frmLogin
     Friend WithEvents lblEsAfiliado As Label
     Friend WithEvents mcbRecordarUsuario As MaterialSkin.Controls.MaterialCheckBox
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ing As RadioButton
+    Friend WithEvents esp As RadioButton
 End Class

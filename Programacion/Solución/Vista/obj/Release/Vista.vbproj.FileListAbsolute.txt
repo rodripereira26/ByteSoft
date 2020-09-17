@@ -367,4 +367,3 @@ C:\Users\Alexis M\OneDrive\ByteSoft\Programacion\Solución\Vista\obj\Release\Vis
 C:\Users\Alexis M\OneDrive\ByteSoft\Programacion\Solución\Vista\obj\Release\Vista.pdb
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Release\Vista.UCFicha.resources
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Release\Vista.UCSintomas.resources
-C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Release\Vista.Resource1.resources

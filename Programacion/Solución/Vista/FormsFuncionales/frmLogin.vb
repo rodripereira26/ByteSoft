@@ -1,15 +1,14 @@
 ﻿Imports Logica
-Imports MaterialSkin
+
 Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+
         lblIniciarSesion.Select()
         Principal.Singleton.roundedCorners(Me)
         Configuracion.Singleton.CargarConfiguracion()
-        CargarIdioma()
         CargarUsuario()
-
 
     End Sub
 
@@ -47,8 +46,9 @@ Public Class frmLogin
     End Sub
     Private Sub CargarIdioma()
         If Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES Then
-            'My.Resources.Resource1.ResourceManager. = Configuracion.Singleton.RecorrerTablaIdioma("1")
+            Me.CambiarTabla("0")
         ElseIf Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US Then
+            Me.CambiarTabla("1")
 
         End If
     End Sub
@@ -151,7 +151,7 @@ Public Class frmLogin
                             txtPassword.Clear()
                             txtUsuario.Clear()
                             Datos_Temporales.rol = "G"
-                            Me.hide()
+                            Me.Hide()
 
                         Case "P"
                             Dim paciente As New ControladorPaciente
@@ -202,12 +202,53 @@ Public Class frmLogin
         End If
     End Sub
 
-    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
-        Configuracion.Singleton.RecorrerTablaIdioma("1")
-        Dim tablas As New DataTable
-        Dim rm As Resources.ResourceManager
-        rm = New Resources.ResourceManager("")
 
-        MsgBox(My.Resources.Resource1.ResourceManager.GetString("String1"))
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+
+        If ing.Checked Then
+            Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US
+            Configuracion.Singleton.GuardarConfiguracion()
+            'Application.Restart()
+        ElseIf esp.Checked Then
+            Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
+            Configuracion.Singleton.GuardarConfiguracion()
+            'Application.Restart()
+        End If
+        CargarIdioma()
+        MsgBox(Principal.Singleton.Idioma("lblIniciarSesion").ToString)
+
+    End Sub
+
+    Public Sub CambiarTabla(archivo As String)
+
+        Dim componentes As DataTable = Configuracion.Singleton.RecorrerTablaIdioma(archivo)
+        Dim obj As New Resources.ResXResourceWriter(".\Idioma.resx")
+
+
+        For i As Integer = 0 To componentes.Rows.Count - 1
+
+            obj.AddResource(componentes.Rows.Item(i).Item(0).ToString, componentes.Rows.Item(i).Item(1).ToString)
+
+        Next
+
+        obj.Close()
+
+        'Dim obtener As New Resources.ResXResourceReader(".\Idioma.resx")
+        'Dim autos As New ArrayList
+        'For Each dc As DictionaryEntry In obtener
+        '    autos.Add(dc.Value)
+        'Next
+        'For i As Integer = 0 To autos.Count - 1
+
+        '    Me.lblIniciarSesion.Text = autos.Item(i)
+        '    MsgBox(autos.Item(i))
+        'Next
+        'Dim hola As New Resources.ResXResourceSet(".\Idioma.resx")
+        'Me.lblIniciarSesion.Text = hola.GetString("lblIniciarSesion")
+        '' MsgBox(hola.GetString("Hola5"))
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles esp.CheckedChanged
+
     End Sub
 End Class

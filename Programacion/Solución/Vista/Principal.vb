@@ -1,5 +1,6 @@
 ﻿Imports Logica
 Imports MaterialSkin
+Imports System.IO
 
 Public Class Principal
 
@@ -35,6 +36,44 @@ Public Class Principal
         rect.Region = New Region(gp)
 
     End Sub
+
+
+
+
+    '''
+    Public Function Idioma(name As String) As String
+
+        Dim valor As String
+        'If File.Exists(Path.Combine(Application.StartupPath, "lang", "Idioma.resx")) Then
+
+
+
+        Dim archivo As New Resources.ResXResourceSet(".\Idioma.resx")
+            valor = archivo.GetString(name)
+
+            archivo.Close()
+        'Else
+        'valor = "tu javi"
+        ' End If
+
+
+        Return valor
+    End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Public Sub roundedCorners(rect As Object)
 
         Dim gp As New Drawing2D.GraphicsPath()
