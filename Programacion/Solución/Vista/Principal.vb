@@ -43,18 +43,15 @@ Public Class Principal
     '''
     Public Function Idioma(name As String) As String
 
-        Dim valor As String
-        'If File.Exists(Path.Combine(Application.StartupPath, "lang", "Idioma.resx")) Then
+        Dim valor As String = "tu vieja"
+        If File.Exists(".\Idioma.resx") Then
 
-
-
-        Dim archivo As New Resources.ResXResourceSet(".\Idioma.resx") ' cambiar ruta
-        valor = archivo.GetString(name)
+            Dim archivo As New Resources.ResXResourceSet(".\Idioma.resx") ' cambiar ruta
+            valor = archivo.GetString(name)
 
             archivo.Close()
-        'Else
-        'valor = "tu javi"
-        ' End If
+
+        End If
 
 
         Return valor

@@ -38,11 +38,10 @@ Partial Class BsMsgbox
         '
         Me.btnSi.BackColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.btnSi.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSi.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnSi.FlatAppearance.BorderSize = 0
         Me.btnSi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSi.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSi.Location = New System.Drawing.Point(211, 0)
+        Me.btnSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSi.Location = New System.Drawing.Point(211, 169)
         Me.btnSi.Margin = New System.Windows.Forms.Padding(0)
         Me.btnSi.Name = "btnSi"
         Me.btnSi.Size = New System.Drawing.Size(195, 46)
@@ -55,10 +54,9 @@ Partial Class BsMsgbox
         '
         Me.btnNo.BackColor = System.Drawing.Color.LightGray
         Me.btnNo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNo.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnNo.FlatAppearance.BorderSize = 0
         Me.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNo.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNo.Location = New System.Drawing.Point(0, 0)
         Me.btnNo.Margin = New System.Windows.Forms.Padding(0)
         Me.btnNo.Name = "btnNo"
@@ -70,7 +68,7 @@ Partial Class BsMsgbox
         '
         'lblMensaje
         '
-        Me.lblMensaje.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMensaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMensaje.Location = New System.Drawing.Point(108, 20)
         Me.lblMensaje.Name = "lblMensaje"
         Me.lblMensaje.Size = New System.Drawing.Size(210, 54)
@@ -102,20 +100,19 @@ Partial Class BsMsgbox
         'lblTitulo
         '
         Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.Location = New System.Drawing.Point(177, 18)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(53, 19)
+        Me.lblTitulo.Size = New System.Drawing.Size(51, 18)
         Me.lblTitulo.TabIndex = 5
         Me.lblTitulo.Text = "Label2"
         '
         'pnlWrap
         '
-        Me.pnlWrap.Controls.Add(Me.btnSi)
         Me.pnlWrap.Controls.Add(Me.btnNo)
         Me.pnlWrap.Location = New System.Drawing.Point(0, 169)
         Me.pnlWrap.Name = "pnlWrap"
-        Me.pnlWrap.Size = New System.Drawing.Size(406, 46)
+        Me.pnlWrap.Size = New System.Drawing.Size(178, 46)
         Me.pnlWrap.TabIndex = 6
         '
         'BsMsgbox
@@ -124,6 +121,7 @@ Partial Class BsMsgbox
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(406, 215)
+        Me.Controls.Add(Me.btnSi)
         Me.Controls.Add(Me.pnlWrap)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.Panel1)

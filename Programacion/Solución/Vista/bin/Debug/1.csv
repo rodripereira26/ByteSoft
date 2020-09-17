@@ -1,7 +1,23 @@
-lblIniciarSesion;Login
 msgPreguntaIdioma;You must restart the program to apply changes
+lblIniciarSesion;Login
+mcbRecordarUsuario;Remember user
 lblContraseña;Password
 lblUsuario;User
+lblCrearCuentaPac;Sign In
+lblEsAfiliado;Are you affiliate?
+
+
+
+
+
+
+
+
+
+
+
+
+
 msgPacienteHabilitado;You have not been enabled to enter the system
 msgErrorLogin;Login failed
 msgLoginIncorrecto;Incorrect username or password

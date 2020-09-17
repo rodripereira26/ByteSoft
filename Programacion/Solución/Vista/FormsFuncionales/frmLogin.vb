@@ -1,13 +1,22 @@
 ﻿Imports Logica
-
+Imports System.IO
 Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+        Configuracion.Singleton.CargarConfiguracion()
         lblIniciarSesion.Select()
         Principal.Singleton.roundedCorners(Me)
-        Configuracion.Singleton.CargarConfiguracion()
         CargarUsuario()
+
+
+    End Sub
+
+    Sub New()
+
+        Configuracion.Singleton.CargarConfiguracion()
+        VerificarArchivo()
+        InitializeComponent()
 
     End Sub
 
@@ -125,6 +134,7 @@ Public Class frmLogin
 
         Dim seg As New Encriptar
         Dim log As New ControladorUsuario
+        Dim msgbox1 As New BsMsgbox
 
         If txtUsuario.Text <> "" And txtPassword.Text <> "" Then
 
@@ -135,11 +145,11 @@ Public Class frmLogin
                     If mcbRecordarUsuario.Checked Then
                         Configuracion.Singleton.usuario = txtUsuario.Text
                         Configuracion.Singleton.GuardarConfiguracion()
-                        Configuracion.Singleton.CargarConfiguracion()
+                        'Configuracion.Singleton.CargarConfiguracion()
                     Else
                         Configuracion.Singleton.usuario = Nothing
                         Configuracion.Singleton.GuardarConfiguracion()
-                        Configuracion.Singleton.CargarConfiguracion()
+                        'Configuracion.Singleton.CargarConfiguracion()
                     End If
 
                     Datos_Temporales.userLog = txtUsuario.Text
@@ -163,7 +173,8 @@ Public Class frmLogin
                                 Datos_Temporales.rol = "P"
                                 Me.Hide()
                             Else
-                                MsgBox(Principal.Singleton.Idioma("msgPacienteHabilitado"))
+                                msgbox1.OnlyText("msgPacienteHabilitado") 'MsgBox(Principal.Singleton.Idioma("msgPacienteHabilitado"))
+                                msgbox1.Dispose()
                             End If
 
                         Case "M"
@@ -174,24 +185,24 @@ Public Class frmLogin
                             Me.Hide()
 
                         Case Else
-                            MsgBox(Principal.Singleton.Idioma("msgErrorLogin"))
-
+                            msgbox1.OnlyText("msgErrorLogin") 'MsgBox(Principal.Singleton.Idioma("msgErrorLogin"))
+                            msgbox1.Dispose()
                     End Select
 
                 Else
 
-                    MsgBox(Principal.Singleton.Idioma("msgLoginIncorrecto"))
-
+                    msgbox1.OnlyText("msgLoginIncorrecto") 'MsgBox(Principal.Singleton.Idioma("msgLoginIncorrecto"))
+                    msgbox1.Dispose()
                 End If
 
             Else
-                MsgBox(Principal.Singleton.Idioma("msgCedulaInvalida"),)
-
+                msgbox1.OnlyText("msgCedulaInvalida") 'MsgBox(Principal.Singleton.Idioma("msgCedulaInvalida"),)
+                msgbox1.Dispose()
             End If
 
         Else
-            MsgBox("No completó los campos")
-
+            msgbox1.OnlyText(Principal.Singleton.Idioma("msgCamposIncompletos")) 'MsgBox("No completó los campos")
+            msgbox1.Dispose()
         End If
 
     End Sub
@@ -210,20 +221,27 @@ Public Class frmLogin
         'Dim objeto As New BsMsgbox
         'respuesta = objeto.YesNo()
         'MsgBox(respuesta)
+        Dim bool As Boolean = False
 
         If ing.Checked Then
-            If PreguntaIdioma() Then
-                Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US
-                Configuracion.Singleton.GuardarConfiguracion()
+            If Configuracion.Singleton.lenguaje <> Configuracion.Idioma.en_US Then
+                If PreguntaIdioma() Then
+                    bool = True
+                    Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US
+                    Configuracion.Singleton.GuardarConfiguracion()
+                End If
             End If
         ElseIf esp.Checked Then
-            If PreguntaIdioma() Then
-                Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
-                Configuracion.Singleton.GuardarConfiguracion()
+            If Configuracion.Singleton.lenguaje <> Configuracion.Idioma.es_ES Then
+                If PreguntaIdioma() Then
+                    bool = True
+                    Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
+                    Configuracion.Singleton.GuardarConfiguracion()
+                End If
             End If
         End If
 
-        If ing.Checked Or esp.Checked Then
+        If (ing.Checked Or esp.Checked) And bool = True Then
             CargarIdioma()
             Application.Restart()
         End If
@@ -242,6 +260,14 @@ Public Class frmLogin
         End If
 
     End Function
+
+    Public Sub VerificarArchivo()
+        If File.Exists(".\Idioma.resx") = False Then
+            Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
+            Configuracion.Singleton.GuardarConfiguracion()
+            CambiarTabla("0")
+        End If
+    End Sub
 
     Public Sub CambiarTabla(archivo As String)
 

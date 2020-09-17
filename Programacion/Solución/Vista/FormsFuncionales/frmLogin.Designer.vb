@@ -39,7 +39,7 @@ Partial Class frmLogin
         Me.pnlTopBar = New System.Windows.Forms.Panel()
         Me.lblMinimizar = New System.Windows.Forms.Label()
         Me.lblCerrar = New System.Windows.Forms.Label()
-        Me.lblCrearCuentaPac = New System.Windows.Forms.Label()
+        Me.lblCrearCuentaPac = New System.Windows.Forms.Button()
         Me.lblEsAfiliado = New System.Windows.Forms.Label()
         Me.picBytesoft = New System.Windows.Forms.PictureBox()
         Me.picDiseño = New System.Windows.Forms.PictureBox()
@@ -133,10 +133,10 @@ Partial Class frmLogin
         Me.mcbRecordarUsuario.MouseState = MaterialSkin.MouseState.HOVER
         Me.mcbRecordarUsuario.Name = "mcbRecordarUsuario"
         Me.mcbRecordarUsuario.Ripple = True
-        Me.mcbRecordarUsuario.Size = New System.Drawing.Size(135, 30)
+        Me.mcbRecordarUsuario.Size = New System.Drawing.Size(26, 30)
         Me.mcbRecordarUsuario.TabIndex = 21
-        Me.mcbRecordarUsuario.Text = "Recordar usuario"
         Me.mcbRecordarUsuario.UseVisualStyleBackColor = True
+        Me.mcbRecordarUsuario.Text = Principal.Singleton.Idioma("mcbRecordarUsuario").ToString
         '
         'lblContraseña
         '
@@ -148,6 +148,7 @@ Partial Class frmLogin
         Me.lblContraseña.Name = "lblContraseña"
         Me.lblContraseña.Size = New System.Drawing.Size(111, 21)
         Me.lblContraseña.TabIndex = 13
+        Me.lblContraseña.Text = Principal.Singleton.Idioma("lblContraseña").ToString
         '
         'lblUsuario
         '
@@ -159,6 +160,7 @@ Partial Class frmLogin
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(71, 23)
         Me.lblUsuario.TabIndex = 12
+        Me.lblUsuario.Text = Principal.Singleton.Idioma("lblUsuario").ToString
         '
         'txtPassword
         '
@@ -234,15 +236,18 @@ Partial Class frmLogin
         '
         'lblCrearCuentaPac
         '
-        Me.lblCrearCuentaPac.AutoSize = True
-        Me.lblCrearCuentaPac.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblCrearCuentaPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCuentaPac.BackColor = System.Drawing.Color.Transparent
+        Me.lblCrearCuentaPac.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblCrearCuentaPac.FlatAppearance.BorderSize = 0
+        Me.lblCrearCuentaPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblCrearCuentaPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold)
         Me.lblCrearCuentaPac.ForeColor = System.Drawing.Color.White
-        Me.lblCrearCuentaPac.Location = New System.Drawing.Point(638, 437)
+        Me.lblCrearCuentaPac.Location = New System.Drawing.Point(650, 430)
         Me.lblCrearCuentaPac.Name = "lblCrearCuentaPac"
-        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(0, 25)
-        Me.lblCrearCuentaPac.TabIndex = 28
-
+        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(160, 52)
+        Me.lblCrearCuentaPac.TabIndex = 31
+        Me.lblCrearCuentaPac.Text = Principal.Singleton.Idioma("lblCrearCuentaPac").ToString
+        Me.lblCrearCuentaPac.UseVisualStyleBackColor = False
         '
         'lblEsAfiliado
         '
@@ -253,7 +258,7 @@ Partial Class frmLogin
         Me.lblEsAfiliado.Name = "lblEsAfiliado"
         Me.lblEsAfiliado.Size = New System.Drawing.Size(113, 20)
         Me.lblEsAfiliado.TabIndex = 29
-        Me.lblEsAfiliado.Text = "¿Es afiliado?"
+        Me.lblEsAfiliado.Text = Principal.Singleton.Idioma("lblEsAfiliado").ToString
         '
         'picBytesoft
         '
@@ -319,7 +324,7 @@ Partial Class frmLogin
     Friend WithEvents picDiseño As PictureBox
     Friend WithEvents pnlTopBar As Panel
     Friend WithEvents picBytesoft As PictureBox
-    Friend WithEvents lblCrearCuentaPac As Label
+    Friend WithEvents lblCrearCuentaPac As Button
     Friend WithEvents lblEsAfiliado As Label
     Friend WithEvents mcbRecordarUsuario As MaterialSkin.Controls.MaterialCheckBox
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton

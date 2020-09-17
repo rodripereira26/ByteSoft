@@ -1345,3 +1345,5 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vi
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.UCSintomas.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.BsMsgbox.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.BsMsgbox.resources

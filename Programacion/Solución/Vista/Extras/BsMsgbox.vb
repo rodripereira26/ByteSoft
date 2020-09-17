@@ -1,5 +1,7 @@
 ﻿Public Class BsMsgbox
 
+    Public Shared instancia As BsMsgbox
+    Property estado As Opcion
 
     Private Sub BsMsgbox_Load(sender As Object, e As EventArgs) Handles Me.Load
 
@@ -14,24 +16,6 @@
 
     End Sub
 
-
-    Public Shared instancia As BsMsgbox
-    Property estado As Opcion
-
-    Public Enum Opcion
-
-        no = 0
-        yes = 1
-    End Enum
-    'Private estado As Int16 = Nothing
-
-
-    'Public Sub instanciar(instancia1 As BsMsgbox)
-
-    '    instancia = instancia1
-
-    'End Sub
-
     Public Function YesNo() As Integer
 
         Me.ShowDialog()
@@ -39,6 +23,19 @@
 
     End Function
 
+    Public Sub OnlyText(texto As String)
+        lblMensaje.Text = texto
+        Me.ShowDialog()
+
+    End Sub
+
+
+
+    Public Enum Opcion
+
+        no = 0
+        yes = 1
+    End Enum
 
     Public Shared Function Singleton() As BsMsgbox
 
@@ -53,13 +50,13 @@
     Private Sub btnSi_Click(sender As Object, e As EventArgs) Handles btnSi.Click
 
         estado = Opcion.yes
-        Me.Dispose()
+        Me.Close()
 
     End Sub
 
     Private Sub btnNo_Click(sender As Object, e As EventArgs) Handles btnNo.Click
         estado = Opcion.no
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub BsMsgbox_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown, lblTitulo.MouseDown
