@@ -117,25 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblIniciarSesion" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="msgPreguntaIdioma" xml:space="preserve">
-    <value>You must restart the program to apply changes</value>
-  </data>
-  <data name="lblContraseña" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="lblUsuario" xml:space="preserve">
-    <value>User</value>
-  </data>
-  <data name="msgPacienteHabilitado" xml:space="preserve">
-    <value>You have not been enabled to enter the system</value>
-  </data>
-  <data name="msgErrorLogin" xml:space="preserve">
-    <value>Login failed</value>
-  </data>
-  <data name="msgLoginIncorrecto" xml:space="preserve">
-    <value>Incorrect username or password</value>
-  </data>
 </root>

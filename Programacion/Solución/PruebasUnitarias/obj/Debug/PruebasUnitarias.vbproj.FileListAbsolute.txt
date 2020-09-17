@@ -92,3 +92,27 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitaria
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\PruebasUnitarias.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\PruebasUnitarias.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\PruebasUnitarias.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Logica.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbprojAssemblyReference.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.Resources.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbproj.GenerateResource.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbproj.CoreCompileInputs.cache
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.vbproj.CopyComplete
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.dll
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.xml
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb

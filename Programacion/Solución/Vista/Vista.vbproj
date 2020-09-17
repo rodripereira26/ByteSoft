@@ -66,6 +66,9 @@
     <Reference Include="DynamicData, Version=6.15.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamicData.6.15.1\lib\net461\DynamicData.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.14.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.2.0.0\lib\net47\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -180,6 +183,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animaciones.vb" />
+    <Compile Include="Extras\BsMsgbox.Designer.vb">
+      <DependentUpon>BsMsgbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\BsMsgbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Extras\frmAjustes.Designer.vb">
       <DependentUpon>frmAjustes.vb</DependentUpon>
     </Compile>
@@ -349,6 +358,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Extras\BsMsgbox.resx">
+      <DependentUpon>BsMsgbox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Extras\frmAjustes.resx">
       <DependentUpon>frmAjustes.vb</DependentUpon>
     </EmbeddedResource>

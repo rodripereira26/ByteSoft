@@ -1,85 +1,28 @@
 ﻿Imports Logica
 Public Class frmBienvenidaMedico
 
-    Dim drag As Boolean
-    Dim mousex, mousey As Integer
-
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        redondear(pnlChat)
-        redondear(pnlMiHistorial)
-        redondear(pnlAjustes)
-        redondear(pnlMiPerfil)
-        redondear(pnlAyuda)
-        redondear(pnlTitulo)
-        redondear(Me)
-
-    End Sub
-
-    Private Sub redondear(panel As Object)
-
-        Dim gp As New Drawing2D.GraphicsPath()
-        Dim radio As Integer = 10
-
-        gp.StartFigure()
-        gp.AddArc(New Rectangle(0, 0, radio, radio), 180, 90)
-        gp.AddLine(radio, 0, panel.Width - radio, 0)
-        gp.AddArc(New Rectangle(panel.Width - radio, 0, radio, radio), -90, 90)
-        gp.AddLine(panel.Width, radio, panel.Width, panel.Height - radio)
-        gp.AddArc(New Rectangle(panel.Width - radio, panel.Height - radio, radio, radio), 0, 90)
-        gp.AddLine(panel.Width - radio, panel.Height, radio, panel.Height)
-        gp.AddArc(New Rectangle(0, panel.Height - radio, radio, radio), 90, 90)
-        gp.CloseFigure()
-
-        panel.Region = New Region(gp)
-        'Me.BackColor = Color.FromArgb(236, 236, 236)
-        'Dim col As Color = Color.FromArgb(52, 73, 94)
-
-        'Panel1.BackColor = Color.WhiteSmoke
-        'Panel2.BackColor = Color.WhiteSmoke
-        'Panel3.BackColor = Color.WhiteSmoke
-        'Panel4.BackColor = Color.WhiteSmoke
-        'Panel5.BackColor = Color.WhiteSmoke
-        'Panel12.BackColor = Color.WhiteSmoke
-        'Label1.ForeColor = col
-        'Label2.ForeColor = col
-        'Label3.ForeColor = col
-        'Label4.ForeColor = col
-        'Label5.ForeColor = col
-        'Label6.ForeColor = col
-        'Label7.ForeColor = col
-        'Label8.ForeColor = col
-        'Label9.ForeColor = col
-        'Label10.ForeColor = col
-        'Label11.ForeColor = col
-        'Label12.ForeColor = col
-        'Label13.ForeColor = col
-        'Label14.ForeColor = col
-        'Label15.ForeColor = col
+        Principal.Singleton.roundedCorners(pnlChat)
+        Principal.Singleton.roundedCorners(pnlMiHistorial)
+        Principal.Singleton.roundedCorners(pnlAjustes)
+        Principal.Singleton.roundedCorners(pnlMiPerfil)
+        Principal.Singleton.roundedCorners(pnlAyuda)
+        Principal.Singleton.roundedCorners(pnlTitulo)
+        Principal.Singleton.roundedCorners(Me)
 
     End Sub
 
     Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseDown
-
-        drag = True
-        mousex = Cursor.Position.X - Me.Left
-        mousey = Cursor.Position.Y - Me.Top
-
+        Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseMove
-
-        If drag Then
-
-            Me.Top = Cursor.Position.Y - mousey
-            Me.Left = Cursor.Position.X - mousex
-
-        End If
-
+        Principal.Singleton.moverVentanaMove(Me)
     End Sub
     Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseUp
-        drag = False
+        Principal.Singleton.moverVentanaUp()
     End Sub
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
@@ -159,10 +102,6 @@ Public Class frmBienvenidaMedico
         frmLogin.lblUsuario.Text = "Contraseña"
         frmLogin.Show()
         Me.Close()
-    End Sub
-
-    Private Sub Panel12_Paint(sender As Object, e As PaintEventArgs) Handles pnlPatologias.Paint
-
     End Sub
 
     Private Sub Panel3_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlAjustes.MouseClick

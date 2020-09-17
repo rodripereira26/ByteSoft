@@ -60,20 +60,6 @@ Public Class Principal
         Return valor
     End Function
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Public Sub roundedCorners(rect As Object)
 
         Dim gp As New Drawing2D.GraphicsPath()

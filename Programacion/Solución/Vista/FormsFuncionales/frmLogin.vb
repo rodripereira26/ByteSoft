@@ -4,14 +4,12 @@ Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-
         lblIniciarSesion.Select()
         Principal.Singleton.roundedCorners(Me)
         Configuracion.Singleton.CargarConfiguracion()
         CargarUsuario()
 
     End Sub
-
 
     Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
 
@@ -137,9 +135,11 @@ Public Class frmLogin
                     If mcbRecordarUsuario.Checked Then
                         Configuracion.Singleton.usuario = txtUsuario.Text
                         Configuracion.Singleton.GuardarConfiguracion()
+                        Configuracion.Singleton.CargarConfiguracion()
                     Else
                         Configuracion.Singleton.usuario = Nothing
                         Configuracion.Singleton.GuardarConfiguracion()
+                        Configuracion.Singleton.CargarConfiguracion()
                     End If
 
                     Datos_Temporales.userLog = txtUsuario.Text
@@ -163,7 +163,7 @@ Public Class frmLogin
                                 Datos_Temporales.rol = "P"
                                 Me.Hide()
                             Else
-                                MsgBox("Usted no ha sido habilitado para ingresar al sistema")
+                                MsgBox(Principal.Singleton.Idioma("msgPacienteHabilitado"))
                             End If
 
                         Case "M"
@@ -174,18 +174,18 @@ Public Class frmLogin
                             Me.Hide()
 
                         Case Else
-                            MsgBox("Error al ingresar")
+                            MsgBox(Principal.Singleton.Idioma("msgErrorLogin"))
 
                     End Select
 
                 Else
 
-                    MsgBox("Usuario o contraseña incorrectos")
+                    MsgBox(Principal.Singleton.Idioma("msgLoginIncorrecto"))
 
                 End If
 
             Else
-                MsgBox("Debe ingresar una cédula válida")
+                MsgBox(Principal.Singleton.Idioma("msgCedulaInvalida"),)
 
             End If
 
@@ -205,22 +205,31 @@ Public Class frmLogin
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
 
+
+        'Dim respuesta As Integer
+        'Dim objeto As New BsMsgbox
+        'respuesta = objeto.YesNo()
+        'MsgBox(respuesta)
+
         If ing.Checked Then
             If PreguntaIdioma() Then
                 Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US
                 Configuracion.Singleton.GuardarConfiguracion()
-                Application.Restart()
             End If
         ElseIf esp.Checked Then
             If PreguntaIdioma() Then
                 Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
                 Configuracion.Singleton.GuardarConfiguracion()
-                Application.Restart()
             End If
         End If
-        CargarIdioma()
+
+        If ing.Checked Or esp.Checked Then
+            CargarIdioma()
+            Application.Restart()
+        End If
 
     End Sub
+
     Public Function PreguntaIdioma() As Boolean
         Dim respuesta As Integer
 
@@ -233,6 +242,7 @@ Public Class frmLogin
         End If
 
     End Function
+
     Public Sub CambiarTabla(archivo As String)
 
         Dim componentes As DataTable = Configuracion.Singleton.RecorrerTablaIdioma(archivo)

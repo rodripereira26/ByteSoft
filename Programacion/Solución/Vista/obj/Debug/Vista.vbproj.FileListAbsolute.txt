@@ -869,7 +869,6 @@ C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vi
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.frmVerPerfil.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.frmRegistroPaciente.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.UserControl1.resources
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.UserControl2.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.vbproj.GenerateResource.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.vbproj.CoreCompileInputs.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.vbproj.CopyComplete
@@ -1342,3 +1341,7 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.exe
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Vista\obj\Debug\Vista.pdb
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.UCFicha.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.UCSintomas.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\obj\Debug\Vista.BsMsgbox.resources
+C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Vista\bin\Debug\FontAwesome.Sharp.dll

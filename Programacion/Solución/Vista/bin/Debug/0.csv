@@ -1,4 +1,8 @@
-lblIniciarSesion;Inciar Sesión
+lblIniciarSesion;Iniciar Sesión
 msgPreguntaIdioma;Debe reiniciar para guardar los cambios
 lblContraseña;Contraseña
 lblUsuario;Usuario
+msgPacienteHabilitado;Usted no ha sido habilitado para ingresar al sistema
+msgErrorLogin;Error al ingresar al sistema
+msgLoginIncorrecto;Usuario o contraseña incorrectos
+msgCedulaInvalida;Debe ingresar una cédula válida

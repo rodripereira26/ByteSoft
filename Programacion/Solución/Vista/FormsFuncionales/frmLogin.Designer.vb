@@ -117,7 +117,7 @@ Partial Class frmLogin
         Me.lblIniciarSesion.ForeColor = System.Drawing.Color.Black
         Me.lblIniciarSesion.Location = New System.Drawing.Point(86, 59)
         Me.lblIniciarSesion.Name = "lblIniciarSesion"
-        Me.lblIniciarSesion.Size = New System.Drawing.Size(372, 50)
+        Me.lblIniciarSesion.Size = New System.Drawing.Size(372, 72)
         Me.lblIniciarSesion.TabIndex = 0
         Me.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblIniciarSesion.Text = Principal.Singleton.Idioma("lblIniciarSesion").ToString
@@ -148,7 +148,6 @@ Partial Class frmLogin
         Me.lblContraseña.Name = "lblContraseña"
         Me.lblContraseña.Size = New System.Drawing.Size(111, 21)
         Me.lblContraseña.TabIndex = 13
-        Me.lblContraseña.Text = Principal.Singleton.Idioma("lblContraseña")
         '
         'lblUsuario
         '
@@ -160,7 +159,6 @@ Partial Class frmLogin
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(71, 23)
         Me.lblUsuario.TabIndex = 12
-        Me.lblUsuario.Text = Principal.Singleton.Idioma("lblUsuario")
         '
         'txtPassword
         '
@@ -242,9 +240,9 @@ Partial Class frmLogin
         Me.lblCrearCuentaPac.ForeColor = System.Drawing.Color.White
         Me.lblCrearCuentaPac.Location = New System.Drawing.Point(638, 437)
         Me.lblCrearCuentaPac.Name = "lblCrearCuentaPac"
-        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(176, 25)
+        Me.lblCrearCuentaPac.Size = New System.Drawing.Size(0, 25)
         Me.lblCrearCuentaPac.TabIndex = 28
-        Me.lblCrearCuentaPac.Text = "Solicitar cuenta"
+
         '
         'lblEsAfiliado
         '

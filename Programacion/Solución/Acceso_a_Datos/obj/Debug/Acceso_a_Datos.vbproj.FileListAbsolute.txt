@@ -77,7 +77,6 @@ C:\Users\Rodrigo\OneDrive\Trabajos\Proyecto\ByteSoft\Documentacion\Programacion\
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
-C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
 C:\Users\Mati\Desktop\SOLAMENTE MASTER\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.CoreCompileInputs.cache
