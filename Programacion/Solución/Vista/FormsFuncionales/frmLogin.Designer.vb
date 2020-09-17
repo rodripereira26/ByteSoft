@@ -119,8 +119,8 @@ Partial Class frmLogin
         Me.lblIniciarSesion.Name = "lblIniciarSesion"
         Me.lblIniciarSesion.Size = New System.Drawing.Size(372, 50)
         Me.lblIniciarSesion.TabIndex = 0
-        Me.lblIniciarSesion.Text = Principal.Singleton.Idioma("lblIniciarSesion").ToString
         Me.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblIniciarSesion.Text = Principal.Singleton.Idioma("lblIniciarSesion").ToString
         '
         'mcbRecordarUsuario
         '
@@ -148,7 +148,7 @@ Partial Class frmLogin
         Me.lblContraseña.Name = "lblContraseña"
         Me.lblContraseña.Size = New System.Drawing.Size(111, 21)
         Me.lblContraseña.TabIndex = 13
-        Me.lblContraseña.Text = "Constraseña"
+        Me.lblContraseña.Text = Principal.Singleton.Idioma("lblContraseña")
         '
         'lblUsuario
         '
@@ -160,7 +160,7 @@ Partial Class frmLogin
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(71, 23)
         Me.lblUsuario.TabIndex = 12
-        Me.lblUsuario.Text = "Usuario"
+        Me.lblUsuario.Text = Principal.Singleton.Idioma("lblUsuario")
         '
         'txtPassword
         '

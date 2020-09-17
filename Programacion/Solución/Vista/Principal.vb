@@ -48,8 +48,8 @@ Public Class Principal
 
 
 
-        Dim archivo As New Resources.ResXResourceSet(".\Idioma.resx")
-            valor = archivo.GetString(name)
+        Dim archivo As New Resources.ResXResourceSet(".\Idioma.resx") ' cambiar ruta
+        valor = archivo.GetString(name)
 
             archivo.Close()
         'Else

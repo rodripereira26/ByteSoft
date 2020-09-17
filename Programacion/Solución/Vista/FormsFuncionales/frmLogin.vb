@@ -206,23 +206,37 @@ Public Class frmLogin
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
 
         If ing.Checked Then
-            Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US
-            Configuracion.Singleton.GuardarConfiguracion()
-            'Application.Restart()
+            If PreguntaIdioma() Then
+                Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US
+                Configuracion.Singleton.GuardarConfiguracion()
+                Application.Restart()
+            End If
         ElseIf esp.Checked Then
-            Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
-            Configuracion.Singleton.GuardarConfiguracion()
-            'Application.Restart()
+            If PreguntaIdioma() Then
+                Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
+                Configuracion.Singleton.GuardarConfiguracion()
+                Application.Restart()
+            End If
         End If
         CargarIdioma()
-        MsgBox(Principal.Singleton.Idioma("lblIniciarSesion").ToString)
 
     End Sub
+    Public Function PreguntaIdioma() As Boolean
+        Dim respuesta As Integer
 
+        respuesta = MsgBox(Principal.Singleton.Idioma("msgPreguntaIdioma"), vbQuestion + vbYesNo + vbDefaultButton2, "")
+
+        If respuesta = vbYes Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
     Public Sub CambiarTabla(archivo As String)
 
         Dim componentes As DataTable = Configuracion.Singleton.RecorrerTablaIdioma(archivo)
-        Dim obj As New Resources.ResXResourceWriter(".\Idioma.resx")
+        Dim obj As New Resources.ResXResourceWriter(".\Idioma.resx") ' cambiar ruta
 
 
         For i As Integer = 0 To componentes.Rows.Count - 1
