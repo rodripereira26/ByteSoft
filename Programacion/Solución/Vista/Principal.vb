@@ -44,16 +44,13 @@ Public Class Principal
 
     End Sub
 
-
-
-
     '''
     Public Function Idioma(name As String) As String
 
         Dim valor As String = "mensaje bonito <3<3<3"
-        If File.Exists("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") Then
+        If File.Exists(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) Then
 
-            Dim archivo As New Resources.ResXResourceSet("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") ' cambiar ruta
+            Dim archivo As New Resources.ResXResourceSet(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) ' cambiar ruta
             valor = archivo.GetString(name)
 
             archivo.Close()

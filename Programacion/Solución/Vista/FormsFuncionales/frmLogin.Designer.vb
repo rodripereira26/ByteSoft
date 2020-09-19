@@ -120,6 +120,7 @@ Partial Class frmLogin
         Me.lblIniciarSesion.Size = New System.Drawing.Size(372, 72)
         Me.lblIniciarSesion.TabIndex = 0
         Me.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblIniciarSesion.Text = Principal.Singleton.Idioma("lblIniciarSesion").ToString
         '
         'mcbRecordarUsuario
         '

@@ -1,22 +1,51 @@
 ﻿Imports Logica
 Imports System.IO
+
 Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Configuracion.Singleton.CargarConfiguracion()
         lblIniciarSesion.Select()
-        Principal.Singleton.roundedCorners(Me)
+        'Principal.Singleton.roundedCorners(Me)
         CargarUsuario()
+
 
 
     End Sub
 
     Sub New()
 
+        ObtenerRuta()
         Configuracion.Singleton.CargarConfiguracion()
         VerificarArchivo()
         InitializeComponent()
+
+    End Sub
+
+    Public Sub ObtenerRuta()
+
+        Dim array As New ArrayList
+        Dim matriz() As String = Split(Application.StartupPath, "\")
+        Dim sec As String
+
+        For i As Int16 = 0 To matriz.Length - 1
+            array.Add(matriz.GetValue(i))
+        Next
+
+        For i As Int16 = 0 To array.Count - 4
+            sec = sec + array.Item(i) + "\"
+        Next
+
+        If Directory.Exists(Path.Combine(sec, "Vista\bin\Debug\")) Then
+            Datos_Temporales.ruta = Path.Combine(sec, "Vista\bin\Debug\")
+        Else
+            sec = Nothing
+            For i As Int16 = 0 To array.Count - 5
+                sec = sec + array.Item(i) + "\"
+            Next
+            Datos_Temporales.ruta = Path.Combine(sec, "Vista\bin\Debug\")
+        End If
 
     End Sub
 
@@ -53,9 +82,9 @@ Public Class frmLogin
     End Sub
     Private Sub CargarIdioma()
         If Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES Then
-            Me.CambiarTabla("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\0")
+            Me.CambiarTabla(Path.Combine(Datos_Temporales.ruta, "0"))
         ElseIf Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US Then
-            Me.CambiarTabla("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\1")
+            Me.CambiarTabla(Path.Combine(Datos_Temporales.ruta, "1"))
 
         End If
     End Sub
@@ -105,7 +134,7 @@ Public Class frmLogin
     End Sub
 
     Private Sub pnlTopBar_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseUp
-        Principal.Singleton.moverVentanaUp()
+        'Principal.Singleton.moverVentanaUp()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles lblContraseña.Click
@@ -123,11 +152,11 @@ Public Class frmLogin
     End Sub
 
     Private Sub pnlTopBar_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseDown
-        Principal.Singleton.moverVentanaDown(Me)
+        'Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
     Private Sub pnlTopBar_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseMove
-        Principal.Singleton.moverVentanaMove(Me)
+        'Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
     Private Sub ingresarUsuario()
@@ -262,17 +291,18 @@ Public Class frmLogin
     End Function
 
     Public Sub VerificarArchivo()
-        If File.Exists("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") = False Then
+
+        If File.Exists(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) = False Then
             Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
             Configuracion.Singleton.GuardarConfiguracion()
-            CambiarTabla("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\0")
+            CambiarTabla(Path.Combine(Datos_Temporales.ruta, "0"))
         End If
     End Sub
 
     Public Sub CambiarTabla(archivo As String)
 
         Dim componentes As DataTable = Configuracion.Singleton.RecorrerTablaIdioma(archivo)
-        Dim obj As New Resources.ResXResourceWriter("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") ' cambiar ruta
+        Dim obj As New Resources.ResXResourceWriter(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) ' cambiar ruta
 
 
         For i As Integer = 0 To componentes.Rows.Count - 1
@@ -283,22 +313,6 @@ Public Class frmLogin
 
         obj.Close()
 
-        'Dim obtener As New Resources.ResXResourceReader(".\Idioma.resx")
-        'Dim autos As New ArrayList
-        'For Each dc As DictionaryEntry In obtener
-        '    autos.Add(dc.Value)
-        'Next
-        'For i As Integer = 0 To autos.Count - 1
-
-        '    Me.lblIniciarSesion.Text = autos.Item(i)
-        '    MsgBox(autos.Item(i))
-        'Next
-        'Dim hola As New Resources.ResXResourceSet(".\Idioma.resx")
-        'Me.lblIniciarSesion.Text = hola.GetString("lblIniciarSesion")
-        '' MsgBox(hola.GetString("Hola5"))
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles esp.CheckedChanged
-
-    End Sub
 End Class

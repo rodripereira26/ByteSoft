@@ -14,10 +14,10 @@ Public Class Serializacion
         Return instancia
     End Function
 
-    Public Function Serializar(objeto As Object) As Boolean
+    Public Function Serializar(objeto As Object, archivo As String) As Boolean
 
         Try
-            Dim stream As New FileStream("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\config.cfg", FileMode.Create, FileAccess.Write, FileShare.None)
+            Dim stream As New FileStream(archivo, FileMode.Create, FileAccess.Write, FileShare.None)
             Dim formatter As New BinaryFormatter
             formatter.Serialize(stream, objeto)
             stream.Close()
@@ -28,9 +28,9 @@ Public Class Serializacion
 
     End Function
 
-    Public Function Deserializar() As Object
+    Public Function Deserializar(archivo As String) As Object
 
-        Dim stream As New FileStream("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\config.cfg", FileMode.Open, FileAccess.Read, FileShare.None)
+        Dim stream As New FileStream(archivo, FileMode.Open, FileAccess.Read, FileShare.None)
         Dim decodificar As New BinaryFormatter
         Dim clase As Object = Nothing
         clase = CType(decodificar.Deserialize(stream), Object)

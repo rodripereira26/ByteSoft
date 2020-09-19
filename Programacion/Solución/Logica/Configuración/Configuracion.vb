@@ -1,5 +1,5 @@
 ﻿Imports Acceso_a_Datos
-Imports System.Resources.ResXResourceWriter
+Imports System.IO
 
 <Serializable>
 Public Class Configuracion
@@ -21,11 +21,11 @@ Public Class Configuracion
     End Sub
 
     Public Sub GuardarConfiguracion()
-        Serializacion.Singleton.Serializar(Configuracion.Singleton)
+        Serializacion.Singleton.Serializar(Configuracion.Singleton, Path.Combine(Datos_Temporales.ruta, "config.cfg"))
     End Sub
 
     Public Sub CargarConfiguracion()
-        Configuracion.Singleton.Instanciar(Serializacion.Singleton.Deserializar())
+        Configuracion.Singleton.Instanciar(Serializacion.Singleton.Deserializar(Path.Combine(Datos_Temporales.ruta, "config.cfg")))
     End Sub
 
     Public Enum Idioma
