@@ -1,25 +1,24 @@
 #!/bin/bash
 
 cargarEntradaTxt() {
-
+    #region args
     # $1 posicion en x
     # $2 posicion en y
     # $3 largo
-    # $4 ancho
-    # $5 BG
-    # $6 FG
-    # $7 posActual # si se pasa por argumento se imprime el texto
+    # $4 BG
+    # $5 FG
+    # $6 posActual # si se pasa por argumento se imprime el texto
+    #endregion
 
-    dibujarRectangulo $1 $2 $3 $4 $5 $6
+    dibujarRectangulo $1 $2 $3 1 $4 $5
 
-    if [ $7 ]; 
+    if [ $6 ]; 
     then
-        echo -n $(tomarElemento $7 1) 1>&2
+        echo -n $(tomarElemento $6 1) 1>&2
     fi
 }
 
 cargarEntradaTxtYPassword() {
-
     # $1 int imprimir texto
 
     if [ $1 -eq 0 ]; 
@@ -31,8 +30,8 @@ cargarEntradaTxtYPassword() {
 }
 
 gestorDeEntradaTexto() {
-
     # $1 int es password
+
     modificado=false
     respuestaGestor=""
     codigoRespuesta=""
@@ -56,7 +55,6 @@ gestorDeEntradaTexto() {
 }
 
 invertirColoresEntradaTxt() {
-
     # $1 int imprimir texto
 
     if [ $1 -eq 0 ] ; 
@@ -68,8 +66,8 @@ invertirColoresEntradaTxt() {
 } 
 
 tomarDatoEntradaTxt() {
-
     # $1 int mostrarTextoAnterior
+
     continuarLeyendo=true
     inputTXT=""
 

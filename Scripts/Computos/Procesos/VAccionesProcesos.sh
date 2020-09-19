@@ -6,7 +6,8 @@
 
 menuProcesos(){
     local continuar=true
-
+    
+    #region tui
     iniciarPantallaNueva
     dibujarTxt "PROCESOS" 46 3 0
 
@@ -25,6 +26,7 @@ menuProcesos(){
         dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 15 80 3
         dibujarBoton "VOLVER" 11 18 80 3
     fi
+    #endregion
 
     while $continuar; 
     do

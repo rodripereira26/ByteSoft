@@ -72,12 +72,12 @@ configurarSSH () {
         semanage port -a -t ssh_port_t -p tcp 2022 2> /dev/null                                      
         systemctl restart sshd 2> /dev/null
     else
-       cp -a /etc/ssh/sshd_config /var/bytesoft/.sshd_config
-       sed -i 's/#Port 22/Port 2022/' /etc/ssh/sshd_config # Cambio el puerto por defecto al 7222
-       echo "AllowUsers ${usuarios/,/ }">>/etc/ssh/sshd_config
-       sed -i "s/#PermitRootLogin yes/PermitRootLogin "$root"/" /etc/ssh/sshd_config
-       semanage port -a -t ssh_port_t -p tcp 2022 2> /dev/null
-       systemctl restart sshd 2> /dev/null
+        cp -a /etc/ssh/sshd_config /var/bytesoft/.sshd_config
+        sed -i 's/#Port 22/Port 2022/' /etc/ssh/sshd_config # Cambio el puerto por defecto al 7222
+        echo "AllowUsers ${usuarios/,/ }">>/etc/ssh/sshd_config
+        sed -i "s/#PermitRootLogin yes/PermitRootLogin "$root"/" /etc/ssh/sshd_config
+        semanage port -a -t ssh_port_t -p tcp 2022 2> /dev/null
+        systemctl restart sshd 2> /dev/null
     fi
 
 }

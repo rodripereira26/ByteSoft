@@ -1,10 +1,10 @@
 #!/bin/bash
-
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh"
 
 . "/Scripts/Computos/Red/VPermitirIP.sh"
 . "/Scripts/Computos/Red/VBloquearIP.sh"
-
+#endregion
 VEliminarRegla(){
     local continuar=true
     local tipoRegla=""

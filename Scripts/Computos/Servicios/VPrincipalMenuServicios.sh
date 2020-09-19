@@ -1,15 +1,15 @@
 #!/bin/bash
-
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/Servicios/VConexiones.sh"
 . "/Scripts/Computos/Servicios/Login/VMenuServicioLog.sh"
 . "/Scripts/Computos/Servicios/VAccionesServicios.sh"
-
+#endregion
 
 VMenuPrincipalServicios(){
     local continuar=true
-
+    #region tui
     iniciarPantallaNueva
     dibujarTxt "SERVICIOS" 46 3 0
 
@@ -22,15 +22,14 @@ VMenuPrincipalServicios(){
     if [ $EUID -eq 0 ];then
         dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
         dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
-        dibujarBoton "CONEXIONES (SSH, MYSQL, DHCP)" 11 18 80 3 #necesita root
+        dibujarBoton "CONEXIONES (SSH, MYSQL, FTP)" 11 18 80 3 #necesita root
         dibujarBoton "LOGIN SERVICIOS" 11 21 80 3
         dibujarBoton "VOLVER" 11 24 80 3
     else
         dibujarBoton "LOGIN SERVICIOS" 11 12 80 3
         dibujarBoton "VOLVER" 11 15 80 3
     fi
-
-
+    #endregion
 
     while $continuar; 
     do
@@ -67,7 +66,7 @@ ejecutarMenuPrincipalServicios() {
 				desactivarServicio
 				;;
 
-            "CONEXIONES (SSH, MYSQL, DHCP)")
+            "CONEXIONES (SSH, MYSQL, FTP)")
                 ejecutarVConexiones
                 ;;
 

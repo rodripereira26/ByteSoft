@@ -7,7 +7,14 @@
 #necesita root
 
 VRespaldarBD() {
-
+    #region variables
+    local continuar=true
+    user=""
+    guardarRespaldo=false
+    usarPredeterminada=true
+    ruta=""
+    #endregion
+    
     iniciarPantallaNueva
     dibujarTxt "RESPALDAR BASE DE DATOS" 42 3 0
 
@@ -26,11 +33,6 @@ VRespaldarBD() {
     dibujarBoton "GUARDAR" 11 23 40 3
     dibujarBoton "VOLVER" 50 23 40 3
 
-    user=""
-    guardarRespaldo=false
-    usarPredeterminada=true
-    continuar=true
-    ruta=""
 
     while $continuar; 
     do

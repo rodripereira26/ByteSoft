@@ -1,15 +1,18 @@
 #!/bin/bash
 
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh"
 
 . "/Scripts/Computos/Red/VPermitirIP.sh"
 . "/Scripts/Computos/Red/VBloquearIP.sh"
 . "/Scripts/Computos/Red/VEliminarRegla.sh"
+#endregion
+
 #solo root
 VPrincipalRed() {
-
     local continuar=true
     
+    #region tui
     iniciarPantallaNueva
     dibujarTxt "RED" 43 3 0
 
@@ -26,6 +29,7 @@ VPrincipalRed() {
     else
         dibujarBoton "VOLVER" 11 9 80 3 
     fi
+    #endregion
 
     while $continuar; 
     do

@@ -65,7 +65,6 @@ matarProcesoNombre() {
 	colorBgDefecto=0
     iniciarPantallaNueva
     
-
     dibujarRectangulo 11 4 80 31 7 0
     dibujarTxt "MATAR PROCESO POR NOMBRE" 44 7 0 7
 

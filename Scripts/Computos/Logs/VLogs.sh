@@ -3,8 +3,9 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 MenuLogs() {
-    
     local continuar=true
+
+    #region tui
 
     iniciarPantallaNueva
     dibujarTxt "LOGS DEL SISTEMA (Q PARA SALIR)" 37 2 0
@@ -26,6 +27,7 @@ MenuLogs() {
     else # no root
         dibujarBoton "VOLVER" 11 18 80 3
     fi
+    #endregion
 
     while $continuar; 
     do

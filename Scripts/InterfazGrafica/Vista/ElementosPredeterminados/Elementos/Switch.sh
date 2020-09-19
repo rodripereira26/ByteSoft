@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cargarSwitch() {
+    #region args
     # $1 : es el inicio de la entrada de texto en x
     # $2 : es el inicio de la entrada de texto en y
     # $3 : largo del switch
@@ -8,6 +9,7 @@ cargarSwitch() {
     # $5 : color parte encendido 
     # $6 : color parte apagada 
     # $7 : estado de switch (true o false)
+    #endregion
 
     let mitadLargoSwitch=$3/2
     let posXSegundoRectangulo=$1+$mitadLargoSwitch

@@ -3,15 +3,19 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuModificarUsuario() {
-    
-    local continuar=true
+    #region variables
 
+    local continuar=true
     user=""
     pw=""
     pwN=""
     reppwN=""
     intentoRegistrar=false
 
+    #endregion
+    
+    #region tui
+    
     iniciarPantallaNueva
 
     dibujarTxt "MODIFICAR CONTRASEÑA" 41 6 0
@@ -31,9 +35,10 @@ VMenuModificarUsuario() {
     dibujarBoton "SIGUIENTE" 14 20 40 3
     dibujarBoton "VOLVER" 53 20 40 3
 
-
-   while $continuar; 
-   do
+    #endregion
+   
+    while $continuar; 
+    do
         siguientePos
 
         case $posDeEsteElemento in

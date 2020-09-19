@@ -7,7 +7,7 @@
 
 VConexiones(){
     local continuar=true
-    
+    #region tui
     iniciarPantallaNueva
     dibujarTxt "CONEXIONES" 42 6 0
 
@@ -17,9 +17,12 @@ VConexiones(){
     dibujarTxt "SSH" 25 16 0
     dibujarSwitch 40 15 50 3 $estadoSSH
 
+    dibujarTxt "FTP" 25 19 0
+    dibujarSwitch 40 18 50 3 $estadoFTP
+
     dibujarBoton "VOLVER" 11 22 80 3
 
-
+    #endregion
 
     while $continuar; 
     do
@@ -54,6 +57,18 @@ VConexiones(){
                 fi
                 ;;
             "2")
+                if [ $codigoRespuesta = "5" ]; 
+                then
+                    if $estadoFTP; 
+                    then
+                        systemctl stop vsftpd 2> /dev/null
+                    else
+                        systemctl start vsftpd 2> /dev/null &
+                    fi
+                    actualizarEstadoServiciosSSHyMYSQL
+                fi
+                ;;
+            "3")
                 if $respuestaGestor; 
                 then
                     continuar=false
@@ -74,9 +89,11 @@ actualizarEstadoServiciosSSHyMYSQL() {
 
     estadoMYSQL=false
     estadoSSH=false
+    estadoFTP=false
 
     comandoMYSQL=$(systemctl is-active mysqld)
     comandoSSH=$(systemctl is-active sshd)
+    comandoFTP=$(systemctl is-active vsftpd)
 
     if [ "$comandoMYSQL" = "active" ] || [ "$comandoMYSQL" = "activating" ];
     then
@@ -87,9 +104,14 @@ actualizarEstadoServiciosSSHyMYSQL() {
     then
         estadoSSH=true
     fi
+    if [ "$comandoFTP" = "active" ] || [ "$comandoFTP" = "activating" ];
+    then
+        estadoFTP=true
+    fi
 
     
     modificarElemento 0 1 $estadoMYSQL
     modificarElemento 1 1 $estadoSSH
+    modificarElemento 2 1 $estadoFTP
     
 }

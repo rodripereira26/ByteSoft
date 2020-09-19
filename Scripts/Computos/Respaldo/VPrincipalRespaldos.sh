@@ -1,15 +1,16 @@
 #!/bin/bash
-
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/Computos/Respaldo/VRespaldarBD.sh"
 . "/Scripts/Computos/Respaldo/VRespaldarDirectorios.sh"
+#endregion
 
 #necesita root
 PrincipalRespaldos() {
-
     local continuar=true
-
+    
+    #region tui
     iniciarPantallaNueva
     dibujarTxt "RESPALDOS" 46 3 0
 
@@ -28,6 +29,7 @@ PrincipalRespaldos() {
         dibujarBoton "RESTAURAR DIRECTORIOS" 11 11 80 3 #????
         dibujarBoton "VOLVER" 11 14 80 3
     fi
+    #endregion
 
     while $continuar; 
     do

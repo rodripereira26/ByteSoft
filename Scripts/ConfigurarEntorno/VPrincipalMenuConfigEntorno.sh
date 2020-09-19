@@ -3,17 +3,16 @@
 #
 # root obligatorio 
 #
-
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
-. "/Scripts/ConfigurarEntorno/MySQL/configMySQL.sh"
+#. "/Scripts/Computos/MySQL/configMySQL.sh"
 . "/Scripts/ConfigurarEntorno/RED/configRED.sh"
-
+#endregion
 
 preguntaInstalacion() {
-
     local continuar=true
 
     buscar=$(grep instalacion=true /etc/environment | cut -f2 -d"=")
@@ -22,11 +21,10 @@ preguntaInstalacion() {
     then
         
         pregunta "¿Desea iniciar la configuración del entorno?" 7 28 15 21 2 7
-    
+
         while $continuar; 
         do
             siguientePos
-
             case $posDeEsteElemento in
 
                 "0") 
@@ -100,6 +98,7 @@ pantallaEleccionMaquina(){
     done
     cerrarPantalla
 }
+#region instalacions
 pantallaInstalacionServidor() {
     
     colorBgDefecto=7
@@ -214,6 +213,7 @@ pantallaInstalacionServidorSubredAdmin() {
     dibujarTxt "Configuracion terminada" 38 20 1
     sleep 0.5
 }
+#endregion
 
 preguntaDesinstalar() {
 

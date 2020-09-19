@@ -3,10 +3,12 @@
 #necesita root
 
 crearCarpetasIniciales() {
+    #region variables
     local carpUsuarios="/home/USUARIOS"
     local carpAdministradores="/home/USUARIOS/ADMINISTRADORES"
     local carpMedicos="/home/USUARIOS/MEDICOS"
     local carpByteSoft="/var/bytesoft"
+    #endregion
     
     if [[ -d $carpUsuarios && -d $carpByteSoft ]]; # Si los directorios ya existen se muestra un error, de lo contrario se crean
     then

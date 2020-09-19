@@ -1,13 +1,21 @@
 #!/bin/bash
 
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh"
 
 . "/Scripts/Computos/Logica/Respaldar.sh"
 . "/Scripts/ABM/Menus/VAvisoRegistrado.sh"
+#endregion
 
 #necesita root depende del caso de la direccion
 
 VRespaldarDirectorios() {
+    #region variables
+    local continuar=true
+    usarPredeterminada=true
+    guardarRespaldo=false
+    ruta=""
+    #endregion
 
     iniciarPantallaNueva
     dibujarTxt "RESPALDAR DIRECTORIOS" 41 4 0
@@ -20,14 +28,10 @@ VRespaldarDirectorios() {
     dibujarEntradaTxt 20 17 50 false
     dibujarTxt "" 20 18
 
-
     dibujarBoton "GUARDAR" 11 21 40 3
     dibujarBoton "VOLVER" 50 21 40 3
 
-    continuar=true
-    usarPredeterminada=true
-    guardarRespaldo=false
-    ruta=""
+ 
     
     while $continuar; 
     do

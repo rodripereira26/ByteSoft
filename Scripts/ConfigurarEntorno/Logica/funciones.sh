@@ -60,7 +60,7 @@ firewallConf() {
 	iptables -A INPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
 	iptables -A INPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
 	iptables -A INPUT -p tcp --dport 2022 -j ACCEPT # SSH
-	iptables -A INPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
+	iptables -A INPUT -p tcp --dport 3306 -j ACCEPT # MYSQL	
 	iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -A INPUT -p tcp --dport 9418 -j ACCEPT # GIT
 	iptables -A INPUT -s $IP_RESPALDO -j ACCEPT #IP de respaldos

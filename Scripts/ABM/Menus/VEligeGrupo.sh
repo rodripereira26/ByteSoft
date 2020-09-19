@@ -3,7 +3,6 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VElegirGrupo(){
-    local continuar=true
     grupoPerteneciente=""
     
     iniciarPantallaNueva
@@ -12,7 +11,7 @@ VElegirGrupo(){
     dibujarBoton "Medico" 20 10 80 3 
     
 
-    while $continuar;
+    while [ -z "$grupoPerteneciente" ];
     do
         siguientePos
 
@@ -22,7 +21,6 @@ VElegirGrupo(){
                 if $respuestaGestor; 
                 then
                     grupoPerteneciente="ADMINISTRADORES"
-                    continuar=false
                 fi
                 ;;
 
@@ -30,7 +28,6 @@ VElegirGrupo(){
                 if $respuestaGestor; 
                 then
                     grupoPerteneciente="MEDICOS"
-                    continuar=false
                 fi
                 ;;
         esac

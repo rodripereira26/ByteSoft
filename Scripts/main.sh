@@ -4,13 +4,17 @@
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
 #
-
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 . "/Scripts/Computos/VPrincipalComputos.sh"
 . "/Scripts/ConfigurarEntorno/VPrincipalMenuConfigEntorno.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
+#endregion
 
 Principal() {
+    local continuar=true
+    #region tui
+    
     iniciarPantallaNueva 
     dibujarTxt "MENU PRINCIPAL" 43 5 0
 
@@ -29,10 +33,8 @@ Principal() {
 
         dibujarBoton "SALIR" 11 13 80 3
     fi
-
-    
-    local continuar=true
-
+    #endregion
+   
     while $continuar; 
     do
         siguientePos
@@ -84,5 +86,4 @@ main() {
     #animacionTitulo "/Scripts/InterfazGrafica/Vista/ElementosExtra/tituloByteSoft.txt" 10 10
     ejecutarMain
 }
-
 main

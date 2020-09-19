@@ -7,6 +7,7 @@
 . "/Scripts/Computos/Servicios/Login/VLogearSSH.sh"
 
 VMenuServicioConf(){
+    local continuar=true
 
     iniciarPantallaNueva
     dibujarTxt "LOGIN SERVICIOS" 42 3 0
@@ -23,8 +24,6 @@ VMenuServicioConf(){
     else
         dibujarBoton "VOLVER" 11 12 80 3
     fi
-
-    local continuar=true
 
     while $continuar; 
     do

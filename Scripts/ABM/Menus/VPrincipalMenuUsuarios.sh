@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 . "/Scripts/ABM/Logica/Usuarios.sh"
@@ -9,10 +9,12 @@
 . "/Scripts/ABM/Menus/VEliminarUsuario.sh"
 . "/Scripts/ABM/Menus/VAgregarUsuario.sh"
 . "/Scripts/ABM/Menus/VModificarUsuario.sh"
+#endregion
 
 VMenuUsuarios() {
     local continuar=true
-
+    
+    #region tui
     iniciarPantallaNueva
 
     dibujarTxt "¿QUÉ DESEA HACER?" 42 5 0
@@ -31,7 +33,7 @@ VMenuUsuarios() {
         dibujarBoton "VOLVER" 11 16 80 3
     fi
 
-
+    #endregion
 
     while $continuar; 
     do

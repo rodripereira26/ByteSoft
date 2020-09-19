@@ -11,6 +11,7 @@ PrincipalMysql() {
 
     local continuar=true
     
+    #region tui
     iniciarPantallaNueva
     dibujarTxt "MYSQL" 43 3 0
 
@@ -20,17 +21,18 @@ PrincipalMysql() {
     
     instalado=$(grep mysql /etc/environment | cut -f2 -d"=")
 
-    if [ -z $instalado ];
+    if [ "$instalado" ];
     then
-        dibujarBoton "INSTALAR" 11 6 80 3
-    else 
         dibujarBoton "DESINSTALAR" 11 6 80 3
+    else 
+        dibujarBoton "INSTALAR" 11 6 80 3
     fi
     
     dibujarBoton "EXPORTAR BASE DE DATOS" 11 9 80 3
     dibujarBoton "IMPORTAR BASE DE DATOS" 11 12 80 3
     dibujarBoton "VOLVER" 11 15 80 3
-    
+    #endregion
+
     while $continuar; 
     do
         siguientePos
@@ -56,11 +58,11 @@ ejecutarMysql() {
         case $posDeEsteElemento in 
 
             "0")
-                if [ -z $instalado ];
+                if [ "$instalado" ];
                 then
-                    preguntaInstalacionMySQL
+                    preguntaDesinstalarMySQL
                 else
-                    preguntaDesinstalarMySQL  
+                    preguntaInstalacionMySQL
                 fi
                 ;;
 
@@ -75,6 +77,7 @@ ejecutarMysql() {
                 ;;
                 
             *)
+                continuarCiclo=false
                 ;;
         esac
         cerrarPantalla
@@ -83,9 +86,10 @@ ejecutarMysql() {
 
 }
 
+#region preguntar instalar-desinstalar mysql
 preguntaInstalacionMySQL() {
 
-    continuar=true
+    local continuar=true
 
     pregunta "¿Desea instalar MySQL?" 7 28 15 21 2 7
 
@@ -121,7 +125,7 @@ preguntaInstalacionMySQL() {
 
 preguntaDesinstalarMySQL() {
 
-    continuar=true
+    local continuar=true
 
     pregunta "¿Desea desinstalar MySQL?" 7 28 15 21 2 7
                   
@@ -156,7 +160,9 @@ preguntaDesinstalarMySQL() {
                     done
 
 }
+#endregion
 
+#region instalar-desinstalar mysql
 instalarMySQL() {
 
     # Instalación
@@ -227,13 +233,15 @@ desinstalarMySQL() {
    clear
    
 }
+#endregion
 
+#region acciones con SQL
 exportarBD() {
 
     local nombre=""
     local ruta=""
     local continuarExport=true
-    
+
     colorBgDefecto=7
     iniciarPantallaNueva
     dibujarRectangulo 11 4 80 30 7 7 
@@ -262,7 +270,8 @@ exportarBD() {
             "2")
                 tput sgr0
                 clear
-                if [ $codigoRespuesta -eq "5" ];
+                if [ $codigoRespuesta -eq "5" ]; 
+                then
                     if [ -d $ruta ];
                     then
                         #mysqldump -u root -p $nombre | gzip > "$ruta"/$nombre.sql.gz
@@ -298,3 +307,4 @@ exportarBD() {
     done
 
 }
+#endregion
