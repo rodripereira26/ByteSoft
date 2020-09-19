@@ -17,7 +17,14 @@ Public Class Principal
 
         Return instancia
     End Function
-
+    Public Sub CargarVentana(ventana As Panel, formInterno As Form)
+        ventana.Controls.Clear() 'Borra todo el contenido de la lista de controles del panel.
+        formInterno.TopLevel = False 'Evita que la ventana se muestre como control de nivel superior, ya que no es soportado por un panel.
+        formInterno.Dock = DockStyle.Fill 'Ancla el form interno al panel para que cuando se cambie el tamaño de la ventana, éste cambie dinámicamente junto al nuevo tamaño.
+        formInterno.Size = ventana.Size 'Setea el tamaño de la ventana que se va a cargar, al tamaño del panel.
+        ventana.Controls.Add(formInterno) 'Luego de que el form cumple con los requisitos del panel, se agrega el mismo al panel.
+        formInterno.Show() 'Muestra el control interno.
+    End Sub
     Public Sub SuperRoundedCorners(rect As Object)
 
         Dim gp As New Drawing2D.GraphicsPath()
@@ -43,10 +50,10 @@ Public Class Principal
     '''
     Public Function Idioma(name As String) As String
 
-        Dim valor As String = "tu vieja"
-        If File.Exists(".\Idioma.resx") Then
+        Dim valor As String = "mensaje bonito <3<3<3"
+        If File.Exists("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") Then
 
-            Dim archivo As New Resources.ResXResourceSet(".\Idioma.resx") ' cambiar ruta
+            Dim archivo As New Resources.ResXResourceSet("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") ' cambiar ruta
             valor = archivo.GetString(name)
 
             archivo.Close()

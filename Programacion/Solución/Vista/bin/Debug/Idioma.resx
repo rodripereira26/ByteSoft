@@ -118,58 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="msgPreguntaIdioma" xml:space="preserve">
-    <value>You must restart the program to apply changes</value>
+    <value>Debe reiniciar para guardar los cambios</value>
   </data>
   <data name="lblIniciarSesion" xml:space="preserve">
-    <value>Login</value>
+    <value>Iniciar Sesión</value>
   </data>
   <data name="mcbRecordarUsuario" xml:space="preserve">
-    <value>Remember user</value>
+    <value>Recordar Usuario</value>
   </data>
   <data name="lblContraseña" xml:space="preserve">
-    <value>Password</value>
+    <value>Contraseña</value>
   </data>
   <data name="lblUsuario" xml:space="preserve">
-    <value>User</value>
+    <value>Usuario</value>
+  </data>
+  <data name="picIngresar" xml:space="preserve">
+    <value>?????????????</value>
   </data>
   <data name="lblCrearCuentaPac" xml:space="preserve">
-    <value>Sign In</value>
+    <value>Crear Cuenta</value>
   </data>
   <data name="lblEsAfiliado" xml:space="preserve">
-    <value>Are you affiliate?</value>
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
-  </data>
-  <data name="" xml:space="preserve">
-    <value />
+    <value>¿Es afiliado?</value>
   </data>
   <data name="" xml:space="preserve">
     <value />
@@ -178,12 +148,18 @@
     <value />
   </data>
   <data name="msgPacienteHabilitado" xml:space="preserve">
-    <value>You have not been enabled to enter the system</value>
+    <value>Usted no ha sido habilitado para ingresar al sistema</value>
   </data>
   <data name="msgErrorLogin" xml:space="preserve">
-    <value>Login failed</value>
+    <value>Error al ingresar al sistema</value>
   </data>
   <data name="msgLoginIncorrecto" xml:space="preserve">
-    <value>Incorrect username or password</value>
+    <value>Usuario o contraseña incorrectos</value>
+  </data>
+  <data name="msgCedulaInvalida" xml:space="preserve">
+    <value>Debe ingresar una cédula válida</value>
+  </data>
+  <data name="msgCamposIncompletos" xml:space="preserve">
+    <value>No completó los campos</value>
   </data>
 </root>

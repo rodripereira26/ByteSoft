@@ -120,7 +120,6 @@ Partial Class frmLogin
         Me.lblIniciarSesion.Size = New System.Drawing.Size(372, 72)
         Me.lblIniciarSesion.TabIndex = 0
         Me.lblIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblIniciarSesion.Text = Principal.Singleton.Idioma("lblIniciarSesion").ToString
         '
         'mcbRecordarUsuario
         '
@@ -136,7 +135,6 @@ Partial Class frmLogin
         Me.mcbRecordarUsuario.Size = New System.Drawing.Size(26, 30)
         Me.mcbRecordarUsuario.TabIndex = 21
         Me.mcbRecordarUsuario.UseVisualStyleBackColor = True
-        Me.mcbRecordarUsuario.Text = Principal.Singleton.Idioma("mcbRecordarUsuario").ToString
         '
         'lblContraseña
         '
@@ -148,7 +146,6 @@ Partial Class frmLogin
         Me.lblContraseña.Name = "lblContraseña"
         Me.lblContraseña.Size = New System.Drawing.Size(111, 21)
         Me.lblContraseña.TabIndex = 13
-        Me.lblContraseña.Text = Principal.Singleton.Idioma("lblContraseña").ToString
         '
         'lblUsuario
         '
@@ -160,7 +157,6 @@ Partial Class frmLogin
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(71, 23)
         Me.lblUsuario.TabIndex = 12
-        Me.lblUsuario.Text = Principal.Singleton.Idioma("lblUsuario").ToString
         '
         'txtPassword
         '
@@ -246,7 +242,6 @@ Partial Class frmLogin
         Me.lblCrearCuentaPac.Name = "lblCrearCuentaPac"
         Me.lblCrearCuentaPac.Size = New System.Drawing.Size(160, 52)
         Me.lblCrearCuentaPac.TabIndex = 31
-        Me.lblCrearCuentaPac.Text = Principal.Singleton.Idioma("lblCrearCuentaPac").ToString
         Me.lblCrearCuentaPac.UseVisualStyleBackColor = False
         '
         'lblEsAfiliado
@@ -256,9 +251,8 @@ Partial Class frmLogin
         Me.lblEsAfiliado.ForeColor = System.Drawing.Color.White
         Me.lblEsAfiliado.Location = New System.Drawing.Point(668, 402)
         Me.lblEsAfiliado.Name = "lblEsAfiliado"
-        Me.lblEsAfiliado.Size = New System.Drawing.Size(113, 20)
+        Me.lblEsAfiliado.Size = New System.Drawing.Size(0, 20)
         Me.lblEsAfiliado.TabIndex = 29
-        Me.lblEsAfiliado.Text = Principal.Singleton.Idioma("lblEsAfiliado").ToString
         '
         'picBytesoft
         '
@@ -326,8 +320,8 @@ Partial Class frmLogin
     Friend WithEvents picBytesoft As PictureBox
     Friend WithEvents lblCrearCuentaPac As Button
     Friend WithEvents lblEsAfiliado As Label
-    Friend WithEvents mcbRecordarUsuario As MaterialSkin.Controls.MaterialCheckBox
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents ing As RadioButton
     Friend WithEvents esp As RadioButton
+    Public WithEvents mcbRecordarUsuario As MaterialSkin.Controls.MaterialCheckBox
 End Class

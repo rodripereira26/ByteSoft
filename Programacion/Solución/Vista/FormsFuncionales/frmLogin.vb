@@ -53,9 +53,9 @@ Public Class frmLogin
     End Sub
     Private Sub CargarIdioma()
         If Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES Then
-            Me.CambiarTabla("0")
+            Me.CambiarTabla("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\0")
         ElseIf Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US Then
-            Me.CambiarTabla("1")
+            Me.CambiarTabla("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\1")
 
         End If
     End Sub
@@ -262,17 +262,17 @@ Public Class frmLogin
     End Function
 
     Public Sub VerificarArchivo()
-        If File.Exists(".\Idioma.resx") = False Then
+        If File.Exists("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") = False Then
             Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
             Configuracion.Singleton.GuardarConfiguracion()
-            CambiarTabla("0")
+            CambiarTabla("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\0")
         End If
     End Sub
 
     Public Sub CambiarTabla(archivo As String)
 
         Dim componentes As DataTable = Configuracion.Singleton.RecorrerTablaIdioma(archivo)
-        Dim obj As New Resources.ResXResourceWriter(".\Idioma.resx") ' cambiar ruta
+        Dim obj As New Resources.ResXResourceWriter("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\Idioma.resx") ' cambiar ruta
 
 
         For i As Integer = 0 To componentes.Rows.Count - 1

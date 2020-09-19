@@ -120,3 +120,12 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.Resources.resources
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.GenerateResource.cache
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbproj.CoreCompileInputs.cache
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb

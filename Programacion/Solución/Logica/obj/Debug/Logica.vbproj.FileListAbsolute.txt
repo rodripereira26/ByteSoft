@@ -187,3 +187,17 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Debu
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Debug\Logica.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Debug\Logica.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Logica\obj\Debug\Logica.pdb
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\bin\Debug\Logica.dll
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\bin\Debug\Logica.pdb
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\bin\Debug\Logica.xml
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.CoreCompileInputs.cache
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.vbproj.CopyComplete
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.dll
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.xml
+C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Logica\obj\Debug\Logica.pdb

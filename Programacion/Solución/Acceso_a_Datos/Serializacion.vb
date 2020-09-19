@@ -17,7 +17,7 @@ Public Class Serializacion
     Public Function Serializar(objeto As Object) As Boolean
 
         Try
-            Dim stream As New FileStream("config.cfg", FileMode.Create, FileAccess.Write, FileShare.None)
+            Dim stream As New FileStream("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\config.cfg", FileMode.Create, FileAccess.Write, FileShare.None)
             Dim formatter As New BinaryFormatter
             formatter.Serialize(stream, objeto)
             stream.Close()
@@ -30,7 +30,7 @@ Public Class Serializacion
 
     Public Function Deserializar() As Object
 
-        Dim stream As New FileStream("config.cfg", FileMode.Open, FileAccess.Read, FileShare.None)
+        Dim stream As New FileStream("C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Vista\bin\Debug\config.cfg", FileMode.Open, FileAccess.Read, FileShare.None)
         Dim decodificar As New BinaryFormatter
         Dim clase As Object = Nothing
         clase = CType(decodificar.Deserialize(stream), Object)
