@@ -129,3 +129,4 @@ C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos
 C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.dll
 C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.xml
 C:\Users\Mat\Desktop\Proyecto programacion\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Debug\Acceso_a_Datos.vbprojAssemblyReference.cache

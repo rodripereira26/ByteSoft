@@ -51,7 +51,7 @@ Public Class ControladorUsuario
 
     Public Function verificarRol(usuario As String)
 
-        Return ModeloUsuario.Singleton.verificarRol(usuario)
+        Return ModeloUsuario.Singleton.verificarRol(usuario, Datos_Temporales.rol)
 
     End Function
 

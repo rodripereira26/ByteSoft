@@ -19,7 +19,7 @@ Public Class main
         Dim frm As New frmLogin
         frm.lblApp.Text = "Médico"
         Principal.Singleton.CargarVentana(ventana, frm)
-        Datos_Temporales.rol = "M"
+        Datos_Temporales.rol = Datos_Temporales.enumRol.Medico
         cambiarTamaño()
     End Sub
     Public Sub cambiarTamaño()

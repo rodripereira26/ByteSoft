@@ -6,7 +6,7 @@ Public Class frmChat
     Private firstUpdate As Boolean = False
     Private contPac As New ControladorPaciente
     Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Datos_Temporales.rol = "P" Then
+        If Datos_Temporales.rol = Datos_Temporales.enumRol.Paciente Then
             Me.CenterToScreen()
             Me.Width = pnlWrapChat.Width
             'pnlWrapChat.Location = New Point((Me.Width - pnlWrapChat.Width) \ 2, (Me.Height - pnlWrapChat.Height) \ 2)
@@ -91,7 +91,7 @@ Public Class frmChat
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
 
-        If Datos_Temporales.rol = "P" Then
+        If Datos_Temporales.rol = Datos_Temporales.enumRol.Paciente Then
             frmBienvenidaPaciente.Show()
             Me.Dispose()
 

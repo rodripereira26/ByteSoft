@@ -144,7 +144,6 @@ Public Class frmLogin
         pnlInstancia.Show()
         Me.ResumeLayout()
     End Sub
-
     Private Sub Finalizar() Handles pnlInstancia.ControlRemoved
         Me.pnlContenedor.Show()
     End Sub
@@ -174,10 +173,8 @@ Public Class frmLogin
         Dim msgbox1 As New BsMsgbox
 
         If txtUsuario.Text <> "" And txtPassword.Text <> "" Then
-
             If IsNumeric(txtUsuario.Text) Then
-
-                If log.verificarUsuario(txtUsuario.Text, seg.HASH256(txtPassword.Text)) Then
+                If log.verificarUsuario(txtUsuario.Text, seg.HASH256(txtPassword.Text)) And log.verificarRol(txtUsuario.Text) Then
 
                     If mcbRecordarUsuario.Checked Then
                         Configuracion.Singleton.usuario = txtUsuario.Text
@@ -189,55 +186,99 @@ Public Class frmLogin
 
                     Datos_Temporales.userLog = txtUsuario.Text
 
-                    Select Case log.verificarRol(txtUsuario.Text)
 
-                        Case "G"
-                            frmBienvenidaGestor.Show()
-                            txtPassword.Clear()
-                            txtUsuario.Clear()
-                            Datos_Temporales.rol = "G"
-                            Me.Hide()
+                    Select Case Datos_Temporales.rol
 
-                        Case "P"
+                        Case Datos_Temporales.enumRol.Paciente
                             Dim paciente As New ControladorPaciente
 
                             If paciente.verificar(txtUsuario.Text) Then
-                                frmBienvenidaPaciente.Show()
-                                txtPassword.Clear()
-                                txtUsuario.Clear()
-                                Datos_Temporales.rol = "P"
-                                Me.Hide()
+                                Dim frm As New frmBienvenidaPaciente
+                                Configuracion.Singleton.setConnection()
+                                Me.SuspendLayout()
+                                Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+                                Principal.Singleton.cambiarTamaño(frmBienvenidaPaciente)
+                                frm.Show()
+                                pnlContenedor.Hide()
+                                pnlInstancia.Show()
+                                Me.ResumeLayout()
                             Else
-                                msgbox1.OnlyText("msgPacienteHabilitado") 'MsgBox(Principal.Singleton.Idioma("msgPacienteHabilitado"))
-                                msgbox1.Dispose()
+                                MsgBox(Principal.Singleton.Idioma("msgPacienteHabilitado"))
                             End If
 
-                        Case "M"
-                            frmBienvenidaMedico.Show()
-                            txtPassword.Clear()
-                            txtUsuario.Clear()
-                            Datos_Temporales.rol = "M"
-                            Me.Hide()
+                        Case Datos_Temporales.enumRol.Gestor
+                            Dim frm As New frmBienvenidaGestor
+                            Configuracion.Singleton.setConnection()
+                            Me.SuspendLayout()
+                            Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+                            Principal.Singleton.cambiarTamaño(frmBienvenidaGestor)
+                            frm.Show()
+                            pnlContenedor.Hide()
+                            pnlInstancia.Show()
+                            Me.ResumeLayout()
 
-                        Case Else
-                            msgbox1.OnlyText("msgErrorLogin") 'MsgBox(Principal.Singleton.Idioma("msgErrorLogin"))
-                            msgbox1.Dispose()
+                        Case Datos_Temporales.enumRol.Medico
+                            Dim frm As New frmBienvenidaMedico
+                            Configuracion.Singleton.setConnection()
+                            Me.SuspendLayout()
+                            Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+                            Principal.Singleton.cambiarTamaño(frmBienvenidaMedico)
+                            frm.Show()
+                            pnlContenedor.Hide()
+                            pnlInstancia.Show()
+                            Me.ResumeLayout()
+
                     End Select
+
+
+                    'Select Case log.verificarRol(txtUsuario.Text)
+
+                    '    Case "G"
+                    '        frmBienvenidaGestor.Show()
+                    '        txtPassword.Clear()
+                    '        txtUsuario.Clear()
+                    '        Datos_Temporales.rol = "G"
+                    '        Me.Hide()
+
+                    '    Case "P"
+                    '        Dim paciente As New ControladorPaciente
+
+                    '        If paciente.verificar(txtUsuario.Text) Then
+                    '            frmBienvenidaPaciente.Show()
+                    '            txtPassword.Clear()
+                    '            txtUsuario.Clear()
+                    '            Datos_Temporales.rol = "P"
+                    '            Me.Hide()
+                    '        Else
+                    '            msgbox1.OnlyText("msgPacienteHabilitado") 'MsgBox(Principal.Singleton.Idioma("msgPacienteHabilitado"))
+                    '            msgbox1.Dispose()
+                    '        End If
+
+                    '    Case "M"
+                    '        frmBienvenidaMedico.Show()
+                    '        txtPassword.Clear()
+                    '        txtUsuario.Clear()
+                    '        Datos_Temporales.rol = "M"
+                    '        Me.Hide()
+
+                    '    Case Else
+                    '        msgbox1.OnlyText("msgErrorLogin") 'MsgBox(Principal.Singleton.Idioma("msgErrorLogin"))
+                    '        msgbox1.Dispose()
+                    'End Select
 
                 Else
 
-                    msgbox1.OnlyText("msgLoginIncorrecto") 'MsgBox(Principal.Singleton.Idioma("msgLoginIncorrecto"))
-                    msgbox1.Dispose()
+                    MsgBox(Principal.Singleton.Idioma("msgLoginIncorrecto"))
+
                 End If
 
             Else
-                msgbox1.OnlyText("msgCedulaInvalida") 'MsgBox(Principal.Singleton.Idioma("msgCedulaInvalida"),)
-                msgbox1.Dispose()
+                MsgBox(Principal.Singleton.Idioma("msgCedulaInvalida"))
             End If
 
         Else
-            msgbox1.OnlyText(Principal.Singleton.Idioma("msgCamposIncompletos")) 'MsgBox("No completó los campos")
-            msgbox1.Dispose()
+            MsgBox(Principal.Singleton.Idioma("msgCamposIncompletos"))
+
         End If
 
     End Sub

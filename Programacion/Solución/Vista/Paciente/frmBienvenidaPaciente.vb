@@ -13,7 +13,7 @@ Public Class frmBienvenidaPaciente
         Principal.Singleton.roundedCorners(pnlReanudar)
         Principal.Singleton.roundedCorners(pnlPerfil)
         Principal.Singleton.roundedCorners(pnlAyuda)
-        Principal.Singleton.roundedCorners(Me)
+        'Principal.Singleton.roundedCorners(Me)
 
         'Me.BackColor = Color.FromArgb(236, 236, 236)
         'Dim col As Color = Color.FromArgb(52, 73, 94)
@@ -39,23 +39,15 @@ Public Class frmBienvenidaPaciente
 
     End Sub
 
-    Private Sub Panel6_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseDown
-
-        drag = True
-        mousex = Cursor.Position.X - Me.Left
-        mousey = Cursor.Position.Y - Me.Top
-
+    Public Sub New()
+        InitializeComponent()
+        Datos_Temporales.horizontal = Me.Width
+        Datos_Temporales.vertical = Me.Height
+        Timer1.Enabled = True
     End Sub
 
-    Private Sub Panel6_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseMove
-
-        If drag Then
-
-            Me.Top = Cursor.Position.Y - mousey
-            Me.Left = Cursor.Position.X - mousex
-
-        End If
-
+    Private Sub Finalizar() Handles pnlInstancia.ControlRemoved
+        Me.pnlContenedor.Show()
     End Sub
 
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -131,16 +123,16 @@ Public Class frmBienvenidaPaciente
     '    hover(Panel5)
     'End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
-        frmLogin.lblUsuario.Text = "Usuario"
-        frmLogin.lblUsuario.Text = "Contraseña"
-        frmLogin.Show()
-        Me.Close()
-    End Sub
-
     Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles pnlIngresarSintomas.Click
-        frmIngresarSintomas.Show()
-        Me.Dispose()
+        Dim frm As New frmIngresarSintomas
+        Configuracion.Singleton.setConnection()
+        Me.SuspendLayout()
+        Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+        Principal.Singleton.cambiarTamaño(frmIngresarSintomas)
+        frm.Show()
+        pnlContenedor.Hide()
+        pnlInstancia.Show()
+        Me.ResumeLayout()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -153,7 +145,15 @@ Public Class frmBienvenidaPaciente
 
             If respuesta = vbYes Then
                 chatComenzo = True
-                frmChat.Show()
+                Dim frm As New frmChat
+                Configuracion.Singleton.setConnection()
+                Me.SuspendLayout()
+                Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+                Principal.Singleton.cambiarTamaño(frmChat)
+                frm.Show()
+                pnlContenedor.Hide()
+                pnlInstancia.Show()
+                Me.ResumeLayout()
                 respuesta = True
             Else
                 Me.Timer1.Enabled = True
@@ -171,17 +171,20 @@ Public Class frmBienvenidaPaciente
 
         Return False
     End Function
-
     Private Sub pnlReanudar_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlReanudar.MouseClick
         If chatComenzo Then
-            frmChat.Show()
+            Dim frm As New frmChat
+            Configuracion.Singleton.setConnection()
+            Me.SuspendLayout()
+            Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+            Principal.Singleton.cambiarTamaño(frmChat)
+            frm.Show()
+            pnlContenedor.Hide()
+            pnlInstancia.Show()
+            Me.ResumeLayout()
         Else
-            MsgBox("Usted no ha iniciado ningún chat aún")
+            MsgBox("Usted aún no ha iniciado ningún chat")
         End If
-    End Sub
-
-    Private Sub Panel6_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitulo.MouseUp
-        drag = False
     End Sub
 
 End Class

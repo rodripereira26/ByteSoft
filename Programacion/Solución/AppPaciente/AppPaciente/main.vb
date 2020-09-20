@@ -21,7 +21,7 @@ Public Class main
         frm.lblCrearCuentaPac.Visible = True
         frm.lblApp.Text = "Paciente"
         Principal.Singleton.CargarVentana(ventana, frm)
-        Datos_Temporales.rol = "P"
+        Datos_Temporales.rol = Datos_Temporales.enumRol.Paciente
         cambiarTamaño()
     End Sub
     Public Sub cambiarTamaño()
@@ -29,7 +29,7 @@ Public Class main
         Me.Size = New Size(Datos_Temporales.horizontal, Datos_Temporales.vertical + 38)
         Me.MinimumSize = New Size(Datos_Temporales.horizontal, Datos_Temporales.vertical + 38)
         Me.MaximumSize = New Size(Datos_Temporales.horizontal, Datos_Temporales.vertical + 38)
-        'Me.CenterToScreen()
+        Me.CenterToScreen()
         Me.ResumeLayout()
     End Sub
 

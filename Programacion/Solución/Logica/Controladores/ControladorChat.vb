@@ -26,7 +26,7 @@ Public Class ControladorChat
 
     Public Function listarChat() As DataTable
 
-        Return ModeloChat.Singleton.listarChat
+        Return ModeloChat.Singleton.listarChat(Datos_Temporales.userLog)
 
     End Function
 
@@ -47,7 +47,7 @@ Public Class ControladorChat
 
     Public Function obtenerRespuesta()
 
-        Return ModeloChat.Singleton.obtenerRespuesta(Datos_Temporales.idchat)
+        Return ModeloChat.Singleton.obtenerRespuesta(Datos_Temporales.userLog)
 
     End Function
 

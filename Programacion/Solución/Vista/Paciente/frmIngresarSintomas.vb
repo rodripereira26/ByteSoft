@@ -9,7 +9,7 @@ Public Class frmIngresarSintomas
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.btnObtenerDiagnostico.AutoSize = False
-        Principal.Singleton.roundedCorners(Me)
+        'Principal.Singleton.roundedCorners(Me)
 
         Dim sintomas As New ControladorSintoma
 
@@ -19,6 +19,20 @@ Public Class frmIngresarSintomas
 
         Next
 
+    End Sub
+
+    Public Sub New()
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        Datos_Temporales.horizontal = Me.Width
+        Datos_Temporales.vertical = Me.Height
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
+
+    Private Sub Finalizar() Handles pnlInstancia.ControlRemoved
+        Me.pnlContenedor.Show()
     End Sub
 
     Private Sub selectItem(origen As DataGridView, destino As DataGridView, e As MouseEventArgs)
@@ -149,7 +163,7 @@ Public Class frmIngresarSintomas
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        frmBienvenidaPaciente.Show()
+        Principal.Singleton.cambiarTamaño(frmBienvenidaPaciente)
         Me.Dispose()
     End Sub
 End Class

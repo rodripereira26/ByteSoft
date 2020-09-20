@@ -25,6 +25,15 @@ Public Class Principal
         ventana.Controls.Add(formInterno) 'Luego de que el form cumple con los requisitos del panel, se agrega el mismo al panel.
         formInterno.Show() 'Muestra el control interno.
     End Sub
+    Public Sub crearInstancia(frmPrincipal As Form, frmInstancia As Form, pnlContenedor As Panel, pnlInstancia As Panel)
+        frmPrincipal.SuspendLayout()
+        CargarVentana(pnlInstancia, frmInstancia)
+        cambiarTamaño(frmInstancia)
+        frmInstancia.Show()
+        pnlContenedor.Hide()
+        pnlInstancia.Show()
+        frmPrincipal.ResumeLayout()
+    End Sub
     Public Sub cambiarTamaño(form As Form)
         Datos_Temporales.vertical = form.Height
         Datos_Temporales.horizontal = form.Width

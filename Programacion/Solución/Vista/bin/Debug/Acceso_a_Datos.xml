@@ -147,7 +147,7 @@ Consulta encargada de guardar en la base de datos los síntomas seleccionados po
 Consulta encargada de verificar si el usuario y contraseña ingresados coinciden en la base de datos.
 </summary>
 </member>
-<member name="M:Acceso_a_Datos.ModeloUsuario.verificarRol(System.Object)">
+<member name="M:Acceso_a_Datos.ModeloUsuario.setConnection(System.Int16)">
 <summary>
 Consulta encargada de verificar a qué tabla pertenece el usuario.
 </summary>

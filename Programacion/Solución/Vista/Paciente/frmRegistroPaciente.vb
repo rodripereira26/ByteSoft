@@ -7,24 +7,10 @@ Public Class frmRegistroPaciente
     Dim pass As String
     Dim sexo As String
 
-    Private Sub frmRegistroPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Public Sub New()
-
-        ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
         Datos_Temporales.horizontal = Me.Width
         Datos_Temporales.vertical = Me.Height
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
-    End Sub
-
-
-    Private Sub Label13_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        frmLogin.Show()
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles mrbtnSolicitarCuenta.Click
@@ -141,4 +127,5 @@ Public Class frmRegistroPaciente
         End If
 
     End Sub
+
 End Class

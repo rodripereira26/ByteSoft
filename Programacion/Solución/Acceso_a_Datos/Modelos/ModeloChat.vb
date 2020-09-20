@@ -16,7 +16,7 @@ Public Class ModeloChat
     Public Function crearChat()
 
         Dim consulta As String = "INSERT INTO chat (finalizado) VALUES (?)"
-        Dim id As String = "SELECT idChat FROM chat ORDER BY idChat DESC LIMIT 1"
+        Dim id As String = "SELECT idChat FROM chat ORDER BY idChat DESC LIMIT 1" ''cambiar esto
         Dim parametros As New List(Of OdbcParameter)
 
         parametros.Add(New OdbcParameter("finalizado", 0))
@@ -44,11 +44,11 @@ Public Class ModeloChat
         Return False
     End Function
 
-    Public Function listarChat() As DataTable
+    Public Function listarChat(usuario As String) As DataTable
 
-        Dim consulta As String = "SELECT DISTINCT u.cedula, u.idChat FROM chat c, usuario_entra_chat u, patologia p, paciente_obtiene_diagnostico up, usuario us
-                            WHERE u.cedula = up.cedulaPaciente AND p.idPatologia = up.idPatologia AND c.idChat = u.idChat AND us.cedula = u.cedula AND finalizado = 0
-                            ORDER BY prioridad ASC "
+        Dim consulta As String = "SELECT DISTINCT u.cedula, u.idChat FROM chat c, usuario_entra_chat u, patologia p, paciente_obtiene_diagnostico up, usuario us                      
+                                  WHERE u.cedula = up.cedulaPaciente AND p.idPatologia = up.idPatologia AND c.idChat = u.idChat AND us.cedula = u.cedula AND finalizado = 0 AND u.idChat NOT IN
+                                  (SELECT idChat FROM usuario_entra_chat where cedula = " + usuario + ")" + "ORDER BY prioridad ASC "
 
         Return ModeloConsultas.Singleton.ConsultaTabla(consulta)
 
@@ -74,10 +74,10 @@ Public Class ModeloChat
 
     End Function
 
-    Public Function obtenerRespuesta(idChat As Int32) As Int16
+    Public Function obtenerRespuesta(usuario As String) As Int16
 
-        Dim consulta As String = "SELECT count(*) FROM mensaje WHERE idChat =  " + idChat.ToString
-
+        'Dim consulta As String = "SELECT count(*) FROM mensaje WHERE idChat =  " + idChat.ToString
+        Dim consulta As String = "SELECT count(*) FROM mensaje where idChat IN (SELECT MAX(idChat) FROM usuario_entra_chat WHERE cedula = " + usuario + ")"
         Return ModeloConsultas.Singleton.ConsultaCampo(consulta)
     End Function
 
@@ -91,7 +91,7 @@ Public Class ModeloChat
     Public Function verificarCedula(cedula As String, idChat As String) As Int16
 
         Dim consulta = "SELECT count(*) FROM usuario_entra_chat pc, medico m 
-                       WHERE m.cedula = pc.cedula AND pc.cedula = " + cedula + " AND idChat = " + idChat + " AND fechaIngreso = CURRENT_DATE"
+                       WHERE m.cedula = pc.cedula AND pc.cedula = " + cedula + " AND idChat = " + idChat
 
         Return ModeloConsultas.Singleton.ConsultaCampo(consulta)
     End Function

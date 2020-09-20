@@ -27,6 +27,10 @@ Public Class Configuracion
     Public Sub CargarConfiguracion()
         Configuracion.Singleton.Instanciar(Serializacion.Singleton.Deserializar(Path.Combine(Datos_Temporales.ruta, "config.cfg")))
     End Sub
+    Public Sub setConnection()
+        ModeloUsuario.Singleton.setConnection(Datos_Temporales.rol)
+    End Sub
+
 
     Public Enum Idioma
         es_ES = 0

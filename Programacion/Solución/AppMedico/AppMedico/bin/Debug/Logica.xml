@@ -42,6 +42,12 @@ Clase encargada de los datos de los médicos.
 Clase encargada de los datos de los síntomas.
 </summary>
 </member>
+<member name="P:Logica.Datos_Temporales.userLog">
+ <summary>
+ Cédula del usuario logeado
+ </summary>
+ <returns></returns>
+</member>
 <member name="T:Logica.ControladorPatologia">
 <summary>
 Clase encargada de los datos de las patologías.
