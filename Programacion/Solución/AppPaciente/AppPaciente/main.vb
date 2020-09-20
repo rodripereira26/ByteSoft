@@ -1,24 +1,36 @@
-﻿Imports Logica
-Imports Vista
+﻿Imports Vista
+Imports Logica
 Public Class main
-    Private Sub main_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+    Public Shared instancia As main
+    Public Shared Function Singleton() As main
+        If instancia Is Nothing Then
+            instancia = New main
+        End If
+
+        Return instancia
+    End Function
+    Public Function GetInstancia() As main
+        Return instancia
+    End Function
+    Public Sub New()
+        InitializeComponent()
+        instancia = Me
         Dim frm As New frmLogin
         frm.mcbRecordarUsuario.Visible = False
-        Principal.Singleton.CargarVentana(Me.Panel1, frm)
-        Principal.Singleton.roundedCorners(Me)
-
+        frm.lblCrearCuentaPac.Visible = True
+        frm.lblApp.Text = "Paciente"
+        Principal.Singleton.CargarVentana(ventana, frm)
+        Datos_Temporales.rol = "P"
+        cambiarTamaño()
+    End Sub
+    Public Sub cambiarTamaño()
+        Me.SuspendLayout()
+        Me.Size = New Size(Datos_Temporales.horizontal, Datos_Temporales.vertical + 38)
+        Me.MinimumSize = New Size(Datos_Temporales.horizontal, Datos_Temporales.vertical + 38)
+        Me.MaximumSize = New Size(Datos_Temporales.horizontal, Datos_Temporales.vertical + 38)
+        'Me.CenterToScreen()
+        Me.ResumeLayout()
     End Sub
 
-    Private Sub pnlTopBar_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseDown
-        Principal.Singleton.moverVentanaDown(Me)
-    End Sub
-
-    Private Sub pnlTopBar_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseMove
-        Principal.Singleton.moverVentanaMove(Me)
-    End Sub
-
-    Private Sub pnlTopBar_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseUp
-        Principal.Singleton.moverVentanaUp()
-    End Sub
 End Class

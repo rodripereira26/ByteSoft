@@ -60,6 +60,15 @@
     <Reference Include="Appccelerate.StateMachine, Version=2.12.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
       <HintPath>..\packages\Appccelerate.StateMachine.2.12.0\lib\portable-windows8+net45\Appccelerate.StateMachine.dll</HintPath>
     </Reference>
+    <Reference Include="AppGestion">
+      <HintPath>..\AppGestion\AppGestion\bin\Debug\AppGestion.exe</HintPath>
+    </Reference>
+    <Reference Include="AppMedico">
+      <HintPath>..\AppMedico\AppMedico\bin\Debug\AppMedico.exe</HintPath>
+    </Reference>
+    <Reference Include="AppPaciente">
+      <HintPath>..\AppPaciente\AppPaciente\bin\Debug\AppPaciente.exe</HintPath>
+    </Reference>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.4.3.0\lib\net462\ControlzEx.dll</HintPath>
     </Reference>
@@ -757,6 +766,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_summary_list_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />

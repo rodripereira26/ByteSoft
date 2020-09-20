@@ -44,8 +44,6 @@ Partial Class frmRegistroPaciente
         Me.pnlTitulo = New System.Windows.Forms.Panel()
         Me.lblSolicitarCuenta = New System.Windows.Forms.Label()
         Me.btnAtras = New System.Windows.Forms.Button()
-        Me.lblMinimizar = New System.Windows.Forms.Label()
-        Me.lblCerrar = New System.Windows.Forms.Label()
         Me.lblCI = New System.Windows.Forms.Label()
         Me.pnlPNom = New System.Windows.Forms.Panel()
         Me.txtPNom = New System.Windows.Forms.TextBox()
@@ -71,9 +69,11 @@ Partial Class frmRegistroPaciente
         Me.lblAgregarTelefonos = New System.Windows.Forms.Label()
         Me.txtFecNac = New System.Windows.Forms.MaskedTextBox()
         Me.lblFormatoFecNac = New System.Windows.Forms.Label()
+        Me.pnlContenedor = New System.Windows.Forms.Panel()
         Me.pnlTitulo.SuspendLayout()
         CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlAgregarTelefonos1.SuspendLayout()
+        Me.pnlContenedor.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblSexo
@@ -248,8 +248,6 @@ Partial Class frmRegistroPaciente
         Me.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.pnlTitulo.Controls.Add(Me.lblSolicitarCuenta)
         Me.pnlTitulo.Controls.Add(Me.btnAtras)
-        Me.pnlTitulo.Controls.Add(Me.lblMinimizar)
-        Me.pnlTitulo.Controls.Add(Me.lblCerrar)
         Me.pnlTitulo.Location = New System.Drawing.Point(0, 0)
         Me.pnlTitulo.Name = "pnlTitulo"
         Me.pnlTitulo.Size = New System.Drawing.Size(1014, 77)
@@ -276,34 +274,10 @@ Partial Class frmRegistroPaciente
         Me.btnAtras.Location = New System.Drawing.Point(31, 28)
         Me.btnAtras.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.btnAtras.Padding = New System.Windows.Forms.Padding(3)
         Me.btnAtras.Size = New System.Drawing.Size(49, 32)
         Me.btnAtras.TabIndex = 154
         Me.btnAtras.UseVisualStyleBackColor = True
-        '
-        'lblMinimizar
-        '
-        Me.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMinimizar.ForeColor = System.Drawing.Color.White
-        Me.lblMinimizar.Location = New System.Drawing.Point(938, -6)
-        Me.lblMinimizar.Name = "lblMinimizar"
-        Me.lblMinimizar.Size = New System.Drawing.Size(24, 35)
-        Me.lblMinimizar.TabIndex = 24
-        Me.lblMinimizar.Text = "_"
-        Me.lblMinimizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblCerrar
-        '
-        Me.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCerrar.ForeColor = System.Drawing.Color.White
-        Me.lblCerrar.Location = New System.Drawing.Point(968, 0)
-        Me.lblCerrar.Name = "lblCerrar"
-        Me.lblCerrar.Size = New System.Drawing.Size(43, 35)
-        Me.lblCerrar.TabIndex = 23
-        Me.lblCerrar.Text = "X"
-        Me.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblCI
         '
@@ -588,50 +562,59 @@ Partial Class frmRegistroPaciente
         Me.lblFormatoFecNac.TabIndex = 163
         Me.lblFormatoFecNac.Text = "yyyy-mm-dd"
         '
+        'pnlContenedor
+        '
+        Me.pnlContenedor.Controls.Add(Me.lblCI)
+        Me.pnlContenedor.Controls.Add(Me.lblPass)
+        Me.pnlContenedor.Controls.Add(Me.pnlPNom)
+        Me.pnlContenedor.Controls.Add(Me.lblMail)
+        Me.pnlContenedor.Controls.Add(Me.txtPNom)
+        Me.pnlContenedor.Controls.Add(Me.lblPNom)
+        Me.pnlContenedor.Controls.Add(Me.pnlSNom)
+        Me.pnlContenedor.Controls.Add(Me.lblRepPass)
+        Me.pnlContenedor.Controls.Add(Me.txtCI)
+        Me.pnlContenedor.Controls.Add(Me.pnlMail)
+        Me.pnlContenedor.Controls.Add(Me.txtPass)
+        Me.pnlContenedor.Controls.Add(Me.lblSApe)
+        Me.pnlContenedor.Controls.Add(Me.txtSApe)
+        Me.pnlContenedor.Controls.Add(Me.pnlPApe)
+        Me.pnlContenedor.Controls.Add(Me.txtPApe)
+        Me.pnlContenedor.Controls.Add(Me.pnlRepPass)
+        Me.pnlContenedor.Controls.Add(Me.txtRepPass)
+        Me.pnlContenedor.Controls.Add(Me.lblPApe)
+        Me.pnlContenedor.Controls.Add(Me.pnlPass)
+        Me.pnlContenedor.Controls.Add(Me.txtMail)
+        Me.pnlContenedor.Controls.Add(Me.pnlSApe)
+        Me.pnlContenedor.Controls.Add(Me.txtSNom)
+        Me.pnlContenedor.Controls.Add(Me.lblTelefonos)
+        Me.pnlContenedor.Controls.Add(Me.cbF)
+        Me.pnlContenedor.Controls.Add(Me.lblSegundoNombre)
+        Me.pnlContenedor.Controls.Add(Me.pnlDecFecNac)
+        Me.pnlContenedor.Controls.Add(Me.lblSexo)
+        Me.pnlContenedor.Controls.Add(Me.mrbtnSolicitarCuenta)
+        Me.pnlContenedor.Controls.Add(Me.lblFecNac)
+        Me.pnlContenedor.Controls.Add(Me.txtFecNac)
+        Me.pnlContenedor.Controls.Add(Me.lblFormatoFecNac)
+        Me.pnlContenedor.Controls.Add(Me.cbM)
+        Me.pnlContenedor.Controls.Add(Me.lbl1)
+        Me.pnlContenedor.Controls.Add(Me.pnlDecAgregarTelefonos)
+        Me.pnlContenedor.Controls.Add(Me.lblAgregarTelefonos)
+        Me.pnlContenedor.Controls.Add(Me.pnlAgregarTelefonos1)
+        Me.pnlContenedor.Controls.Add(Me.pnlCI)
+        Me.pnlContenedor.Controls.Add(Me.pnlTitulo)
+        Me.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlContenedor.Location = New System.Drawing.Point(0, 0)
+        Me.pnlContenedor.Name = "pnlContenedor"
+        Me.pnlContenedor.Size = New System.Drawing.Size(1011, 632)
+        Me.pnlContenedor.TabIndex = 164
+        '
         'frmRegistroPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1011, 632)
-        Me.Controls.Add(Me.pnlTitulo)
-        Me.Controls.Add(Me.lblCI)
-        Me.Controls.Add(Me.txtCI)
-        Me.Controls.Add(Me.pnlCI)
-        Me.Controls.Add(Me.lblPass)
-        Me.Controls.Add(Me.txtPass)
-        Me.Controls.Add(Me.pnlPass)
-        Me.Controls.Add(Me.lblRepPass)
-        Me.Controls.Add(Me.txtRepPass)
-        Me.Controls.Add(Me.pnlRepPass)
-        Me.Controls.Add(Me.lblMail)
-        Me.Controls.Add(Me.txtMail)
-        Me.Controls.Add(Me.pnlMail)
-        Me.Controls.Add(Me.lblPNom)
-        Me.Controls.Add(Me.txtPNom)
-        Me.Controls.Add(Me.pnlPNom)
-        Me.Controls.Add(Me.txtSNom)
-        Me.Controls.Add(Me.pnlSNom)
-        Me.Controls.Add(Me.lblPApe)
-        Me.Controls.Add(Me.txtPApe)
-        Me.Controls.Add(Me.pnlPApe)
-        Me.Controls.Add(Me.lblSApe)
-        Me.Controls.Add(Me.txtSApe)
-        Me.Controls.Add(Me.pnlSApe)
-        Me.Controls.Add(Me.lblTelefonos)
-        Me.Controls.Add(Me.lblAgregarTelefonos)
-        Me.Controls.Add(Me.pnlDecAgregarTelefonos)
-        Me.Controls.Add(Me.pnlAgregarTelefonos1)
-        Me.Controls.Add(Me.lblSexo)
-        Me.Controls.Add(Me.cbM)
-        Me.Controls.Add(Me.cbF)
-        Me.Controls.Add(Me.lblFecNac)
-        Me.Controls.Add(Me.lblFormatoFecNac)
-        Me.Controls.Add(Me.txtFecNac)
-        Me.Controls.Add(Me.pnlDecFecNac)
-        Me.Controls.Add(Me.mrbtnSolicitarCuenta)
-        Me.Controls.Add(Me.lbl1)
-        Me.Controls.Add(Me.lblSegundoNombre)
+        Me.Controls.Add(Me.pnlContenedor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmRegistroPaciente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -640,8 +623,9 @@ Partial Class frmRegistroPaciente
         CType(Me.dgvTelefonos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlAgregarTelefonos1.ResumeLayout(False)
         Me.pnlAgregarTelefonos1.PerformLayout()
+        Me.pnlContenedor.ResumeLayout(False)
+        Me.pnlContenedor.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -661,8 +645,6 @@ Partial Class frmRegistroPaciente
     Friend WithEvents pnlCI As Panel
     Friend WithEvents txtCI As TextBox
     Friend WithEvents pnlTitulo As Panel
-    Friend WithEvents lblMinimizar As Label
-    Friend WithEvents lblCerrar As Label
     Friend WithEvents lblCI As Label
     Friend WithEvents pnlPNom As Panel
     Friend WithEvents txtPNom As TextBox
@@ -691,4 +673,5 @@ Partial Class frmRegistroPaciente
     Friend WithEvents lblFormatoFecNac As Label
     Friend WithEvents btnAtras As Button
     Friend WithEvents lblSolicitarCuenta As Label
+    Friend WithEvents pnlContenedor As Panel
 End Class

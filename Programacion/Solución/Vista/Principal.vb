@@ -1,16 +1,16 @@
 ﻿Imports Logica
 Imports MaterialSkin
 Imports System.IO
+Imports AppPaciente
+Imports AppMedico
+Imports AppGestion
 
 Public Class Principal
 
+    Private Shared instancia As Principal
     Private drag As Boolean
     Private mousex, mousey As Integer
-
-    Private Shared instancia As Principal
-
     Public Shared Function Singleton() As Principal
-
         If instancia Is Nothing Then
             instancia = New Principal
         End If
@@ -25,44 +25,30 @@ Public Class Principal
         ventana.Controls.Add(formInterno) 'Luego de que el form cumple con los requisitos del panel, se agrega el mismo al panel.
         formInterno.Show() 'Muestra el control interno.
     End Sub
-    Public Sub SuperRoundedCorners(rect As Object)
+    Public Sub cambiarTamaño(form As Form)
+        Datos_Temporales.vertical = form.Height
+        Datos_Temporales.horizontal = form.Width
 
-        Dim gp As New Drawing2D.GraphicsPath()
-        Dim radio As Integer = 40
-
-        gp.StartFigure()
-        gp.AddArc(New Rectangle(0, 0, radio, radio), 180, 90)
-        gp.AddLine(radio, 0, rect.Width - radio, 0)
-        gp.AddArc(New Rectangle(rect.Width - radio, 0, radio, radio), -90, 90)
-        gp.AddLine(rect.Width, radio, rect.Width, rect.Height - radio)
-        gp.AddArc(New Rectangle(rect.Width - radio, rect.Height - radio, radio, radio), 0, 90)
-        gp.AddLine(rect.Width - radio, rect.Height, radio, rect.Height)
-        gp.AddArc(New Rectangle(0, rect.Height - radio, radio, radio), 90, 90)
-        gp.CloseFigure()
-
-        rect.Region = New Region(gp)
-
+        If AppPaciente.main.instancia IsNot Nothing Then
+            AppPaciente.main.Singleton.cambiarTamaño()
+        ElseIf AppMedico.main.instancia IsNot Nothing Then
+            AppMedico.main.Singleton.cambiarTamaño()
+        ElseIf AppGestion.main.Singleton.GetInstancia IsNot Nothing Then
+            AppGestion.main.Singleton.cambiarTamaño()
+        End If
     End Sub
-
-    '''
     Public Function Idioma(name As String) As String
-
         Dim valor As String = "mensaje bonito <3<3<3"
-        If File.Exists(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) Then
 
+        If File.Exists(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) Then
             Dim archivo As New Resources.ResXResourceSet(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) ' cambiar ruta
             valor = archivo.GetString(name)
-
             archivo.Close()
-
         End If
-
 
         Return valor
     End Function
-
     Public Sub roundedCorners(rect As Object)
-
         Dim gp As New Drawing2D.GraphicsPath()
         Dim radio As Integer = 10
 
@@ -77,9 +63,23 @@ Public Class Principal
         gp.CloseFigure()
 
         rect.Region = New Region(gp)
-
     End Sub
+    Public Sub SuperRoundedCorners(rect As Object)
+        Dim gp As New Drawing2D.GraphicsPath()
+        Dim radio As Integer = 40
 
+        gp.StartFigure()
+        gp.AddArc(New Rectangle(0, 0, radio, radio), 180, 90)
+        gp.AddLine(radio, 0, rect.Width - radio, 0)
+        gp.AddArc(New Rectangle(rect.Width - radio, 0, radio, radio), -90, 90)
+        gp.AddLine(rect.Width, radio, rect.Width, rect.Height - radio)
+        gp.AddArc(New Rectangle(rect.Width - radio, rect.Height - radio, radio, radio), 0, 90)
+        gp.AddLine(rect.Width - radio, rect.Height, radio, rect.Height)
+        gp.AddArc(New Rectangle(0, rect.Height - radio, radio, radio), 90, 90)
+        gp.CloseFigure()
+
+        rect.Region = New Region(gp)
+    End Sub
     Public Function verificarCedula(check As Verificacion, cedula As String) As Boolean
 
         If check.verificar_cedula(cedula) Then

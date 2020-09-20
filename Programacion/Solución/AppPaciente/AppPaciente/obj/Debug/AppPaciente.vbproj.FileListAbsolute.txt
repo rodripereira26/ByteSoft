@@ -16,7 +16,6 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\App
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\Vista.exe.config
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\Acceso_a_Datos.pdb
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\Acceso_a_Datos.xml
-C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.vbprojAssemblyReference.cache
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.main.resources
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.Resources.resources
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.vbproj.GenerateResource.cache
@@ -25,3 +24,12 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\App
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.exe
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\obj\Debug\AppPaciente.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppMedico.exe
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppMedico.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppMedico.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppMedico.exe.config
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppGestion.exe.config

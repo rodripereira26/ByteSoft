@@ -1,5 +1,8 @@
 ﻿Imports Logica
 Imports System.IO
+Imports AppPaciente
+Imports AppMedico
+Imports AppGestion
 
 Public Class frmLogin
 
@@ -12,6 +15,7 @@ Public Class frmLogin
 
 
 
+
     End Sub
 
     Sub New()
@@ -20,6 +24,9 @@ Public Class frmLogin
         Configuracion.Singleton.CargarConfiguracion()
         VerificarArchivo()
         InitializeComponent()
+        Datos_Temporales.horizontal = Me.Width
+        Datos_Temporales.vertical = Me.Height
+        Principal.Singleton.cambiarTamaño(Me)
 
     End Sub
 
@@ -42,6 +49,15 @@ Public Class frmLogin
         Else
             sec = Nothing
             For i As Int16 = 0 To array.Count - 5
+                sec = sec + array.Item(i) + "\"
+            Next
+        End If
+
+        If Directory.Exists(Path.Combine(sec, "Vista\bin\Debug\")) Then
+            Datos_Temporales.ruta = Path.Combine(sec, "Vista\bin\Debug\")
+        Else
+            sec = Nothing
+            For i As Int16 = 0 To array.Count - 6
                 sec = sec + array.Item(i) + "\"
             Next
             Datos_Temporales.ruta = Path.Combine(sec, "Vista\bin\Debug\")
@@ -102,15 +118,7 @@ Public Class frmLogin
 
     End Sub
 
-    Private Sub Label4_MouseEnter(sender As Object, e As EventArgs) Handles lblCerrar.MouseEnter
-        lblCerrar.ForeColor = Color.Red
-    End Sub
-
-    Private Sub Label4_MouseLeave(sender As Object, e As EventArgs) Handles lblCerrar.MouseLeave
-        lblCerrar.ForeColor = Color.White
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles lblCerrar.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
         Application.Exit()
     End Sub
 
@@ -127,35 +135,35 @@ Public Class frmLogin
     End Sub
 
     Private Sub lblCrearCuentaPac_Click(sender As Object, e As EventArgs) Handles lblCrearCuentaPac.Click
-
-        frmRegistroPaciente.Show()
-        Me.Hide()
-
+        Dim frm As New frmRegistroPaciente
+        Me.SuspendLayout()
+        Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+        Principal.Singleton.cambiarTamaño(frmRegistroPaciente)
+        frm.Show()
+        pnlContenedor.Hide()
+        pnlInstancia.Show()
+        Me.ResumeLayout()
     End Sub
 
-    Private Sub pnlTopBar_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseUp
-        'Principal.Singleton.moverVentanaUp()
+    Private Sub Finalizar() Handles pnlInstancia.ControlRemoved
+        Me.pnlContenedor.Show()
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles lblContraseña.Click
-
         lblContraseña.Visible = False
         txtPassword.Focus()
-
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lblUsuario.Click
-
         lblUsuario.Visible = False
         txtUsuario.Focus()
-
     End Sub
 
-    Private Sub pnlTopBar_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseDown
+    Private Sub pnlTopBar_MouseDown(sender As Object, e As MouseEventArgs)
         'Principal.Singleton.moverVentanaDown(Me)
     End Sub
 
-    Private Sub pnlTopBar_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTopBar.MouseMove
+    Private Sub pnlTopBar_MouseMove(sender As Object, e As MouseEventArgs)
         'Principal.Singleton.moverVentanaMove(Me)
     End Sub
 
@@ -174,11 +182,9 @@ Public Class frmLogin
                     If mcbRecordarUsuario.Checked Then
                         Configuracion.Singleton.usuario = txtUsuario.Text
                         Configuracion.Singleton.GuardarConfiguracion()
-                        'Configuracion.Singleton.CargarConfiguracion()
                     Else
                         Configuracion.Singleton.usuario = Nothing
                         Configuracion.Singleton.GuardarConfiguracion()
-                        'Configuracion.Singleton.CargarConfiguracion()
                     End If
 
                     Datos_Temporales.userLog = txtUsuario.Text
