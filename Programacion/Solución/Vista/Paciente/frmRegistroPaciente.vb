@@ -16,12 +16,12 @@ Public Class frmRegistroPaciente
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles mrbtnSolicitarCuenta.Click
 
         If txtCI.Text <> "" And txtPass.Text <> "" And txtRepPass.Text <> "" And txtPNom.Text <> "" And txtPApe.Text <> "" And txtSNom.Text <> "" And txtSApe.Text <> "" And txtMail.Text <> "" And txtFecNac.Text <> "" Then
-            If Principal.Singleton.verificarCedula(check, txtCI.Text) Then
-                If Principal.Singleton.verificarContraseña(seg, txtPass.Text, txtRepPass.Text) Then
+            If Principal.Singleton.VerificarCedula(check, txtCI.Text) Then
+                If Principal.Singleton.VerificarContraseña(seg, txtPass.Text, txtRepPass.Text) Then
                     pass = seg.HASH256(txtPass.Text)
-                    If Principal.Singleton.verificarString(check, txtPNom.Text, txtPApe.Text, txtSNom.Text, txtSApe.Text) Then
-                        If Principal.Singleton.verificarEmail(check, txtMail.Text) Then
-                            If Principal.Singleton.verificarTelefonos(dgvTelefonos, aliTel) Then
+                    If Principal.Singleton.VerificarString(check, txtPNom.Text, txtPApe.Text, txtSNom.Text, txtSApe.Text) Then
+                        If Principal.Singleton.VerificarEmail(check, txtMail.Text) Then
+                            If Principal.Singleton.VerificarTelefonos(dgvTelefonos, aliTel) Then
                                 If txtFecNac.Text <> "" Then
 
                                     If cbM.Checked Then
@@ -75,7 +75,7 @@ Public Class frmRegistroPaciente
 
     Private Sub MaterialRaisedButton2_Click_1(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
-        If check.verificar_int(dgvTelefonos.Rows(dgvTelefonos.Rows.Count - 2).Cells(0).Value.ToString) = False Then
+        If check.Verificar_Int(dgvTelefonos.Rows(dgvTelefonos.Rows.Count - 2).Cells(0).Value.ToString) = False Then
 
             MsgBox("Ingresó un teléfono incorrecto")
             dgvTelefonos.Rows.RemoveAt(dgvTelefonos.Rows.Count - 2)
@@ -118,11 +118,11 @@ Public Class frmRegistroPaciente
             txtPass.Text = Nothing And txtRepPass.Text = Nothing And dgvTelefonos.Rows.Count > 0) Then 'agregar txtFecnac
             Dim res = MsgBox("Hay información sin guardar, ¿seguro desea salir?", vbYesNo)
             If res = vbYes Then
-                Principal.Singleton.cambiarTamaño(frmLogin)
+                Principal.Singleton.CambiarTamaño(frmLogin)
                 Me.Dispose()
             End If
         Else
-            Principal.Singleton.cambiarTamaño(frmLogin)
+            Principal.Singleton.CambiarTamaño(frmLogin)
             Me.Dispose()
         End If
 

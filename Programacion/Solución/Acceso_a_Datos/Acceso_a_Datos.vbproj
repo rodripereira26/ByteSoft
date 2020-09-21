@@ -65,7 +65,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.vb" />
+    <Compile Include="Conexión\Conexion.vb" />
     <Compile Include="Modelos\ModeloChat.vb" />
     <Compile Include="Modelos\ModeloConsultas.vb" />
     <Compile Include="Modelos\ModeloGestor.vb" />
@@ -89,7 +89,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Serializacion.vb" />
+    <Compile Include="EntradaSalida.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

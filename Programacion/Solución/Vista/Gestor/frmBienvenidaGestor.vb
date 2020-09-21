@@ -6,17 +6,17 @@ Public Class frmBienvenidaGestor
 
     Private Sub BienvenidaGestor_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Principal.Singleton.roundedCorners(Me)
-        Principal.Singleton.roundedCorners(pnlAjustes)
-        Principal.Singleton.roundedCorners(pnlMiPerfil)
-        Principal.Singleton.roundedCorners(pnlPatologias)
-        Principal.Singleton.roundedCorners(pnlUsuarios)
-        Principal.Singleton.roundedCorners(pnlSintomas)
-        Principal.Singleton.roundedCorners(pnlDecoracionSintomas)
-        Principal.Singleton.roundedCorners(pnlRegistroDeUsuarios)
-        Principal.Singleton.roundedCorners(pnlUsuarios)
-        Principal.Singleton.roundedCorners(pnlAyuda)
-        Principal.Singleton.roundedCorners(pnlDecoracionSintomas)
+        Principal.Singleton.RoundedCorners(Me)
+        Principal.Singleton.RoundedCorners(pnlAjustes)
+        Principal.Singleton.RoundedCorners(pnlMiPerfil)
+        Principal.Singleton.RoundedCorners(pnlPatologias)
+        Principal.Singleton.RoundedCorners(pnlUsuarios)
+        Principal.Singleton.RoundedCorners(pnlSintomas)
+        Principal.Singleton.RoundedCorners(pnlDecoracionSintomas)
+        Principal.Singleton.RoundedCorners(pnlRegistroDeUsuarios)
+        Principal.Singleton.RoundedCorners(pnlUsuarios)
+        Principal.Singleton.RoundedCorners(pnlAyuda)
+        Principal.Singleton.RoundedCorners(pnlDecoracionSintomas)
 
         'Me.BackColor = Color.FromArgb(236, 236, 236)
         'Dim col As Color = Color.FromArgb(52, 73, 94)
@@ -126,7 +126,7 @@ Public Class frmBienvenidaGestor
                 End If
 
             Else
-                Dim respuesta As Integer = MsgBox("¿Desea eliminar a este paciente?", vbQuestion + vbYesNo + vbDefaultButton2)
+                Dim respuesta As Integer = MsgBox("¿Desea dar de baja a este paciente?", vbQuestion + vbYesNo + vbDefaultButton2)
 
                 If respuesta = vbYes Then
 

@@ -6,18 +6,25 @@
 Public Class Conexion
 
     Private Shared instance As Conexion
+    Private dblogin(,) As String = New String(4, 2) {}
 
+#Region "String de Conexión"
     Private Const dsn As String = "driverODBC"
     Private Const Port As String = "3306"
     Private Const DatabaseName As String = "bytesoft_bdd2"
     Private Host As String = "bytesoft.duckdns.org"
-    Private dblogin(,) As String = New String(4, 2) {}
+#End Region
 
+    ''' <summary>
+    ''' Objeto encargado de realizar la conexión a la base de datos.
+    ''' </summary>
+    ''' <returns>La conexión de tipo OdbcConnection.</returns>
     Public Property Connection As New OdbcConnection
-    Public Command As New OdbcCommand
-    Public Property Reader As OdbcDataReader
-    Dim Adapter As OdbcDataAdapter
 
+    ''' <summary>
+    ''' Función encargada de devolver una instancia singleton de la clase.
+    ''' </summary>
+    ''' <returns>La instancia creada de la clase.</returns>
     Public Shared Function Singleton() As Conexion
 
         If (instance Is Nothing) Then
@@ -27,36 +34,29 @@ Public Class Conexion
         Return instance
     End Function
 
-    Public Enum EnumDbLogin
-        aux
-        paciente
-        medico
-        admin
-    End Enum
-
-    Public Enum TipoDbLogin
-        user
-        pass
-    End Enum
-
+    ''' <summary>
+    ''' Constructor por defecto de la clase.
+    ''' </summary>
     Public Sub New()
-
+        ''Auxiliar
         dblogin(EnumDbLogin.aux, TipoDbLogin.user) = "sysAux"
         dblogin(EnumDbLogin.aux, TipoDbLogin.pass) = "sysAuxPass2"
-
+        ''Paciente
         dblogin(EnumDbLogin.paciente, TipoDbLogin.user) = "sysPac"
         dblogin(EnumDbLogin.paciente, TipoDbLogin.pass) = "sysPacPass2"
-
+        ''Médico
         dblogin(EnumDbLogin.medico, TipoDbLogin.user) = "sysMed"
         dblogin(EnumDbLogin.medico, TipoDbLogin.pass) = "sysMedPass2"
-
+        ''Gestor
         dblogin(EnumDbLogin.admin, TipoDbLogin.user) = "sysGest"
         dblogin(EnumDbLogin.admin, TipoDbLogin.pass) = "sysGestPass2"
-
     End Sub
 
+    ''' <summary>
+    ''' Subrutina encargada de setear una conexión a la base de datos dependiendo del usuario logeado.
+    ''' </summary>
+    ''' <param name="RolBD"></param>
     Public Sub SetRolConexion(RolBD As EnumDbLogin)
-
         Connection = New OdbcConnection(
             "dsn=" + Me.dsn +
             ";UID=" + dblogin(RolBD, TipoDbLogin.user) +
@@ -64,16 +64,26 @@ Public Class Conexion
             ";PORT=" + Me.Port +
             ";DATABASE=" + Me.DatabaseName +
             ";SERVER=" + Me.Host
-        )
-
+            )
     End Sub
 
+    ''' <summary>
+    ''' Subrutina encargada de cerrar la conexión con la base de datos.
+    ''' </summary>
     Public Sub cerrarConexion()
-        Me.Connection.Close()
+        Try
+            If Connection.State = ConnectionState.Open Then
+                Me.Connection.Close()
+            End If
+        Catch ex As Exception
+            Throw New Exception("Error al conectarse a la base de datos")
+        End Try
     End Sub
 
-    Public Sub CheckConexion()
-
+    ''' <summary>
+    ''' Subrutina encargada de abrir la conexión con la base de datos.
+    ''' </summary>
+    Public Sub abrirConexion()
         Try
             If Connection.State = ConnectionState.Closed Then
                 Connection.Open()
@@ -81,7 +91,19 @@ Public Class Conexion
         Catch ex As Exception
             Throw New Exception("Error al conectarse a la base de datos")
         End Try
-
     End Sub
+
+#Region "Enum de acceso"
+    Public Enum EnumDbLogin
+        aux
+        paciente
+        medico
+        admin
+    End Enum
+    Public Enum TipoDbLogin
+        user
+        pass
+    End Enum
+#End Region
 
 End Class

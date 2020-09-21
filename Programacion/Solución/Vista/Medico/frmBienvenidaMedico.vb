@@ -4,13 +4,13 @@ Public Class frmBienvenidaMedico
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        Principal.Singleton.roundedCorners(pnlChat)
-        Principal.Singleton.roundedCorners(pnlMiHistorial)
-        Principal.Singleton.roundedCorners(pnlAjustes)
-        Principal.Singleton.roundedCorners(pnlMiPerfil)
-        Principal.Singleton.roundedCorners(pnlAyuda)
-        Principal.Singleton.roundedCorners(pnlTitulo)
-        Principal.Singleton.roundedCorners(Me)
+        Principal.Singleton.RoundedCorners(pnlChat)
+        Principal.Singleton.RoundedCorners(pnlMiHistorial)
+        Principal.Singleton.RoundedCorners(pnlAjustes)
+        Principal.Singleton.RoundedCorners(pnlMiPerfil)
+        Principal.Singleton.RoundedCorners(pnlAyuda)
+        Principal.Singleton.RoundedCorners(pnlTitulo)
+        Principal.Singleton.RoundedCorners(Me)
 
     End Sub
 

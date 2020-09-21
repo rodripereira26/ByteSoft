@@ -45,7 +45,7 @@ Public Class ControladorUsuario
 
     Public Function verificarUsuario(usuario As String, pass As String) As Boolean
 
-        Return ModeloUsuario.Singleton.verificarUsuario(usuario, pass)
+        Return ModeloUsuario.Singleton.VerificarUsuario(usuario, pass)
 
     End Function
 

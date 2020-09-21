@@ -8,11 +8,11 @@ Public Class frmBienvenidaPaciente
     Private chatComenzo As Boolean = False
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Principal.Singleton.roundedCorners(pnlIngresarSintomas)
-        Principal.Singleton.roundedCorners(pnlHistorial)
-        Principal.Singleton.roundedCorners(pnlReanudar)
-        Principal.Singleton.roundedCorners(pnlPerfil)
-        Principal.Singleton.roundedCorners(pnlAyuda)
+        Principal.Singleton.RoundedCorners(pnlIngresarSintomas)
+        Principal.Singleton.RoundedCorners(pnlHistorial)
+        Principal.Singleton.RoundedCorners(pnlReanudar)
+        Principal.Singleton.RoundedCorners(pnlPerfil)
+        Principal.Singleton.RoundedCorners(pnlAyuda)
         'Principal.Singleton.roundedCorners(Me)
 
         'Me.BackColor = Color.FromArgb(236, 236, 236)
@@ -125,10 +125,10 @@ Public Class frmBienvenidaPaciente
 
     Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles pnlIngresarSintomas.Click
         Dim frm As New frmIngresarSintomas
-        Configuracion.Singleton.setConnection()
+        Configuracion.Singleton.SetConnection()
         Me.SuspendLayout()
         Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
-        Principal.Singleton.cambiarTamaño(frmIngresarSintomas)
+        Principal.Singleton.CambiarTamaño(frmIngresarSintomas)
         frm.Show()
         pnlContenedor.Hide()
         pnlInstancia.Show()
@@ -146,10 +146,10 @@ Public Class frmBienvenidaPaciente
             If respuesta = vbYes Then
                 chatComenzo = True
                 Dim frm As New frmChat
-                Configuracion.Singleton.setConnection()
+                Configuracion.Singleton.SetConnection()
                 Me.SuspendLayout()
                 Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
-                Principal.Singleton.cambiarTamaño(frmChat)
+                Principal.Singleton.CambiarTamaño(frmChat)
                 frm.Show()
                 pnlContenedor.Hide()
                 pnlInstancia.Show()
@@ -174,10 +174,10 @@ Public Class frmBienvenidaPaciente
     Private Sub pnlReanudar_MouseClick(sender As Object, e As MouseEventArgs) Handles pnlReanudar.MouseClick
         If chatComenzo Then
             Dim frm As New frmChat
-            Configuracion.Singleton.setConnection()
+            Configuracion.Singleton.SetConnection()
             Me.SuspendLayout()
             Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
-            Principal.Singleton.cambiarTamaño(frmChat)
+            Principal.Singleton.CambiarTamaño(frmChat)
             frm.Show()
             pnlContenedor.Hide()
             pnlInstancia.Show()

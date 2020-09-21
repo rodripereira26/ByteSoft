@@ -191,7 +191,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animaciones.vb" />
     <Compile Include="Extras\BsMsgbox.Designer.vb">
       <DependentUpon>BsMsgbox.vb</DependentUpon>
     </Compile>

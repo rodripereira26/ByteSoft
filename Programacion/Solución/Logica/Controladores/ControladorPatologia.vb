@@ -33,13 +33,13 @@ Public Class ControladorPatologia
 
     Public Function listarPatologias() As DataTable
 
-        Return ModeloPatologia.Singleton.listarPatologias
+        Return ModeloPatologia.Singleton.ListarPatologias
 
     End Function
 
     Public Function eliminarPatologias(aliPatologias As ArrayList)
 
-        If ModeloPatologia.Singleton.eliminarPatologias(aliPatologias) Then
+        If ModeloPatologia.Singleton.EliminarPatologias(aliPatologias) Then
             Return True
         End If
 
@@ -48,7 +48,7 @@ Public Class ControladorPatologia
 
     Public Function informacionPatologia(nombre As String) As String
 
-        Return ModeloPatologia.Singleton.informacionPatologia(nombre)
+        Return ModeloPatologia.Singleton.DescripcionPatologia(nombre)
 
     End Function
 
@@ -60,7 +60,7 @@ Public Class ControladorPatologia
 
     Public Function guardarDiagnostico(usuario As String, nombreDiagnostico As ArrayList) As Boolean
 
-        Return ModeloPatologia.Singleton.guardarDiagnosticos(usuario, nombreDiagnostico)
+        Return ModeloPatologia.Singleton.GuardarDiagnostico(usuario, nombreDiagnostico)
 
     End Function
 

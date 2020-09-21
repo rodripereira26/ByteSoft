@@ -1,8 +1,5 @@
 ﻿Imports Logica
 Imports System.IO
-Imports AppPaciente
-Imports AppMedico
-Imports AppGestion
 
 Public Class frmLogin
 
@@ -10,14 +7,9 @@ Public Class frmLogin
 
         Configuracion.Singleton.CargarConfiguracion()
         lblIniciarSesion.Select()
-        'Principal.Singleton.roundedCorners(Me)
         CargarUsuario()
 
-
-
-
     End Sub
-
     Sub New()
 
         ObtenerRuta()
@@ -26,7 +18,8 @@ Public Class frmLogin
         InitializeComponent()
         Datos_Temporales.horizontal = Me.Width
         Datos_Temporales.vertical = Me.Height
-        Principal.Singleton.cambiarTamaño(Me)
+        Principal.Singleton.CambiarTamaño(Me)
+
 
     End Sub
 
@@ -45,7 +38,7 @@ Public Class frmLogin
         Next
 
         If Directory.Exists(Path.Combine(sec, "Vista\bin\Debug\")) Then
-            Datos_Temporales.ruta = Path.Combine(sec, "Vista\bin\Debug\")
+            Datos_Temporales.pathConf = Path.Combine(sec, "Vista\bin\Debug\")
         Else
             sec = Nothing
             For i As Int16 = 0 To array.Count - 5
@@ -54,13 +47,13 @@ Public Class frmLogin
         End If
 
         If Directory.Exists(Path.Combine(sec, "Vista\bin\Debug\")) Then
-            Datos_Temporales.ruta = Path.Combine(sec, "Vista\bin\Debug\")
+            Datos_Temporales.pathConf = Path.Combine(sec, "Vista\bin\Debug\")
         Else
             sec = Nothing
             For i As Int16 = 0 To array.Count - 6
                 sec = sec + array.Item(i) + "\"
             Next
-            Datos_Temporales.ruta = Path.Combine(sec, "Vista\bin\Debug\")
+            Datos_Temporales.pathConf = Path.Combine(sec, "Vista\bin\Debug\")
         End If
 
     End Sub
@@ -98,9 +91,9 @@ Public Class frmLogin
     End Sub
     Private Sub CargarIdioma()
         If Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES Then
-            Me.CambiarTabla(Path.Combine(Datos_Temporales.ruta, "0"))
+            Me.CambiarTabla(Path.Combine(Datos_Temporales.pathConf, "0"))
         ElseIf Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US Then
-            Me.CambiarTabla(Path.Combine(Datos_Temporales.ruta, "1"))
+            Me.CambiarTabla(Path.Combine(Datos_Temporales.pathConf, "1"))
 
         End If
     End Sub
@@ -138,7 +131,7 @@ Public Class frmLogin
         Dim frm As New frmRegistroPaciente
         Me.SuspendLayout()
         Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
-        Principal.Singleton.cambiarTamaño(frmRegistroPaciente)
+        Principal.Singleton.CambiarTamaño(frmRegistroPaciente)
         frm.Show()
         pnlContenedor.Hide()
         pnlInstancia.Show()
@@ -194,10 +187,10 @@ Public Class frmLogin
 
                             If paciente.verificar(txtUsuario.Text) Then
                                 Dim frm As New frmBienvenidaPaciente
-                                Configuracion.Singleton.setConnection()
+                                Configuracion.Singleton.SetConnection()
                                 Me.SuspendLayout()
                                 Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
-                                Principal.Singleton.cambiarTamaño(frmBienvenidaPaciente)
+                                Principal.Singleton.CambiarTamaño(frmBienvenidaPaciente)
                                 frm.Show()
                                 pnlContenedor.Hide()
                                 pnlInstancia.Show()
@@ -208,10 +201,10 @@ Public Class frmLogin
 
                         Case Datos_Temporales.enumRol.Gestor
                             Dim frm As New frmBienvenidaGestor
-                            Configuracion.Singleton.setConnection()
+                            Configuracion.Singleton.SetConnection()
                             Me.SuspendLayout()
                             Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
-                            Principal.Singleton.cambiarTamaño(frmBienvenidaGestor)
+                            Principal.Singleton.CambiarTamaño(frmBienvenidaGestor)
                             frm.Show()
                             pnlContenedor.Hide()
                             pnlInstancia.Show()
@@ -219,52 +212,16 @@ Public Class frmLogin
 
                         Case Datos_Temporales.enumRol.Medico
                             Dim frm As New frmBienvenidaMedico
-                            Configuracion.Singleton.setConnection()
+                            Configuracion.Singleton.SetConnection()
                             Me.SuspendLayout()
                             Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
-                            Principal.Singleton.cambiarTamaño(frmBienvenidaMedico)
+                            Principal.Singleton.CambiarTamaño(frmBienvenidaMedico)
                             frm.Show()
                             pnlContenedor.Hide()
                             pnlInstancia.Show()
                             Me.ResumeLayout()
 
                     End Select
-
-
-                    'Select Case log.verificarRol(txtUsuario.Text)
-
-                    '    Case "G"
-                    '        frmBienvenidaGestor.Show()
-                    '        txtPassword.Clear()
-                    '        txtUsuario.Clear()
-                    '        Datos_Temporales.rol = "G"
-                    '        Me.Hide()
-
-                    '    Case "P"
-                    '        Dim paciente As New ControladorPaciente
-
-                    '        If paciente.verificar(txtUsuario.Text) Then
-                    '            frmBienvenidaPaciente.Show()
-                    '            txtPassword.Clear()
-                    '            txtUsuario.Clear()
-                    '            Datos_Temporales.rol = "P"
-                    '            Me.Hide()
-                    '        Else
-                    '            msgbox1.OnlyText("msgPacienteHabilitado") 'MsgBox(Principal.Singleton.Idioma("msgPacienteHabilitado"))
-                    '            msgbox1.Dispose()
-                    '        End If
-
-                    '    Case "M"
-                    '        frmBienvenidaMedico.Show()
-                    '        txtPassword.Clear()
-                    '        txtUsuario.Clear()
-                    '        Datos_Temporales.rol = "M"
-                    '        Me.Hide()
-
-                    '    Case Else
-                    '        msgbox1.OnlyText("msgErrorLogin") 'MsgBox(Principal.Singleton.Idioma("msgErrorLogin"))
-                    '        msgbox1.Dispose()
-                    'End Select
 
                 Else
 
@@ -336,20 +293,22 @@ Public Class frmLogin
         End If
 
     End Function
-
+    Public Sub mostrarhola()
+        MsgBox("asdjasikdnjasokjdnasodnaskd")
+    End Sub
     Public Sub VerificarArchivo()
 
-        If File.Exists(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) = False Then
+        If File.Exists(Path.Combine(Datos_Temporales.pathConf, "Idioma.resx")) = False Then
             Configuracion.Singleton.lenguaje = Configuracion.Idioma.es_ES
             Configuracion.Singleton.GuardarConfiguracion()
-            CambiarTabla(Path.Combine(Datos_Temporales.ruta, "0"))
+            CambiarTabla(Path.Combine(Datos_Temporales.pathConf, "0"))
         End If
     End Sub
 
     Public Sub CambiarTabla(archivo As String)
 
         Dim componentes As DataTable = Configuracion.Singleton.RecorrerTablaIdioma(archivo)
-        Dim obj As New Resources.ResXResourceWriter(Path.Combine(Datos_Temporales.ruta, "Idioma.resx")) ' cambiar ruta
+        Dim obj As New Resources.ResXResourceWriter(Path.Combine(Datos_Temporales.pathConf, "Idioma.resx")) ' cambiar ruta
 
 
         For i As Integer = 0 To componentes.Rows.Count - 1

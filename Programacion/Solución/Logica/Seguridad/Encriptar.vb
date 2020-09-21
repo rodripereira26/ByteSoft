@@ -1,13 +1,16 @@
 ﻿Imports System.Text
 Imports System.Security.Cryptography
-'''<summary>
-'''Clase encargada de la seguridad del sistema.
-'''</summary>
+
+''' <summary>
+''' Clase encargada de realizar las encriptaciones.
+''' </summary>
 Public Class Encriptar
 
-    '''<summary>
-    '''Función encargada de encriptar las contraseñas mediante el algoritmo SHA25.
-    '''</summary>
+    ''' <summary>
+    ''' Función encargada de hashear una contraseña utilizando SHA256.
+    ''' </summary>
+    ''' <param name="texto"></param>
+    ''' <returns>Contraseña hasheada del usuario.</returns>
     Public Function HASH256(ByVal texto) As String
 
         Dim sha256 As SHA256 = SHA256Managed.Create()

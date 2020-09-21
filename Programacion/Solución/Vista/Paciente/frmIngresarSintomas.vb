@@ -163,7 +163,7 @@ Public Class frmIngresarSintomas
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        Principal.Singleton.cambiarTamaño(frmBienvenidaPaciente)
+        Principal.Singleton.CambiarTamaño(frmBienvenidaPaciente)
         Me.Dispose()
     End Sub
 End Class

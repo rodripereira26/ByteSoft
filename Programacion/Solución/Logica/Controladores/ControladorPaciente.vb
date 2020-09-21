@@ -44,15 +44,15 @@ Public Class ControladorPaciente
     End Function
     Public Function getDatosPaciente(ci As String) As DataTable
 
-        Return ModeloPaciente.Singleton.getDatosPaciente(ci)
+        Return ModeloPaciente.Singleton.GetDatosPaciente(ci)
 
     End Function
     Public Function getPatologiasCronicas(ci As String) As DataTable
 
-        Return ModeloPaciente.Singleton.getPatologiasCronicas(ci)
+        Return ModeloPaciente.Singleton.GetPatologiasCronicas(ci)
     End Function
     Public Function getHistorialConsultas(ci As String) As DataTable
 
-        Return ModeloPaciente.Singleton.getHistorialConsultas(ci)
+        Return ModeloPaciente.Singleton.GetHistorialConsultas(ci)
     End Function
 End Class

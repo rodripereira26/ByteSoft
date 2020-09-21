@@ -59,7 +59,7 @@ Public Class ControladorChat
 
     Public Function verificarCedula(idChat As String) As Boolean
 
-        If ModeloChat.Singleton.verificarCedula(Datos_Temporales.userLog, idChat) = 0 Then
+        If ModeloChat.Singleton.VerificarCedula(Datos_Temporales.userLog, idChat) = 0 Then
             Return True
         End If
 
@@ -68,16 +68,16 @@ Public Class ControladorChat
 
     Public Function listarMisChats(cedula As String, finalizado As Byte) As DataTable
 
-        Return ModeloChat.Singleton.misChats(cedula, finalizado)
+        Return ModeloChat.Singleton.MisChats(cedula, finalizado)
 
     End Function
 
     Public Function getNombreUsr(cedula As String) As DataTable
-        Return ModeloChat.Singleton.getNombreusr(cedula)
+        Return ModeloChat.Singleton.GetNombre(cedula)
     End Function
 
     Public Function getCorreo(cedula As String) As String
-        Return ModeloChat.Singleton.getCorreo(cedula)
+        Return ModeloChat.Singleton.GetCorreo(cedula)
     End Function
 
     Public Function setFormato() As String
