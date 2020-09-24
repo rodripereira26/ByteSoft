@@ -24,7 +24,7 @@ Public Class ModeloChat
     ''' Función encargada de crear un nuevo chat en la base de datos.
     ''' </summary>
     ''' <returns>Identificador del chat creado</returns>
-    Public Function crearChat()
+    Public Function CrearChat()
 
         Dim consulta As String = "INSERT INTO chat (finalizado) VALUES (?)"
         Dim id As String = "SELECT idChat FROM chat ORDER BY idChat DESC LIMIT 1" ''cambiar esto
@@ -44,7 +44,7 @@ Public Class ModeloChat
     ''' <param name="cedula"></param>
     ''' <param name="id"></param>
     ''' <returns>True si se ingresó al chat.</returns>
-    Public Function entrarChat(cedula As String, id As Int32) As Boolean
+    Public Function EntrarChat(cedula As String, id As Int32) As Boolean
 
         Dim consulta As String = "INSERT INTO usuario_entra_chat (cedula, idChat, fechaIngreso) VALUES (?,?,?)"
         Dim parametros As New List(Of OdbcParameter)
@@ -65,7 +65,7 @@ Public Class ModeloChat
     ''' </summary>
     ''' <param name="usuario"></param>
     ''' <returns>DataTable cargado con los valores obtenidos.</returns>
-    Public Function listarChat(usuario As String) As DataTable
+    Public Function ListarChat(usuario As String) As DataTable
 
         Dim consulta As String = "SELECT DISTINCT u.cedula, u.idChat FROM chat c, usuario_entra_chat u, patologia p, paciente_obtiene_diagnostico up, usuario us                      
                                   WHERE u.cedula = up.cedulaPaciente AND p.idPatologia = up.idPatologia AND c.idChat = u.idChat AND us.cedula = u.cedula AND finalizado = 0 AND u.idChat NOT IN
@@ -82,7 +82,7 @@ Public Class ModeloChat
     ''' <param name="mensaje"></param>
     ''' <param name="fechaEnvio"></param>
     ''' <returns>True si el mensaje fue enviado.</returns>
-    Public Function enviarMensaje(cedula As String, idChat As Long, mensaje As String, fechaEnvio As Date)
+    Public Function EnviarMensaje(cedula As String, idChat As Long, mensaje As String, fechaEnvio As Date)
 
         Dim consulta As String = "INSERT INTO mensaje (cedula, idChat, mensaje, fechaEnvio) VALUES (?,?,?,?)"
         Dim parametros As New List(Of OdbcParameter)
@@ -100,7 +100,7 @@ Public Class ModeloChat
     ''' </summary>
     ''' <param name="idChat"></param>
     ''' <returns>DataTable cargado con los valores obtenidos.</returns>
-    Public Function recargarChat(idChat As Int32) As DataTable
+    Public Function RecargarChat(idChat As Int32) As DataTable
 
         Dim consulta As String = "SELECT cedula, mensaje, fechaEnvio FROM mensaje WHERE idChat = " + idChat.ToString
 
@@ -112,7 +112,7 @@ Public Class ModeloChat
     ''' </summary>
     ''' <param name="usuario"></param>
     ''' <returns>Cantidad de mensajes existentes en una sala de chat.</returns>
-    Public Function obtenerRespuesta(usuario As String) As Int16
+    Public Function ObtenerRespuesta(usuario As String) As Int16
         'Dim consulta As String = "SELECT count(*) FROM mensaje WHERE idChat =  " + idChat.ToString
         Dim consulta As String = "SELECT count(*) FROM mensaje where idChat IN (SELECT MAX(idChat) FROM usuario_entra_chat WHERE cedula = " + usuario + ")"
 
@@ -124,7 +124,7 @@ Public Class ModeloChat
     ''' </summary>
     ''' <param name="idChat"></param>
     ''' <returns>True si la sesión fue finalizada.</returns>
-    Public Function finalizarChat(idChat As String) As Boolean
+    Public Function FinalizarChat(idChat As String) As Boolean
 
         Dim consulta As String = "UPDATE chat SET finalizado = 1 WHERE idChat = " + idChat
 

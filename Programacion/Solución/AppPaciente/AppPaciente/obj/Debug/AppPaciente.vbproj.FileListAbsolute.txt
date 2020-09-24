@@ -3,7 +3,6 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\App
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppPaciente.pdb
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppPaciente.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\Logica.dll
-C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\MaterialSkin.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\Acceso_a_Datos.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\MetroSet UI.dll

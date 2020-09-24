@@ -43,7 +43,7 @@ Public Class frmBienvenidaPaciente
         InitializeComponent()
         Datos_Temporales.horizontal = Me.Width
         Datos_Temporales.vertical = Me.Height
-        Timer1.Enabled = True
+        Timer1.Enabled = False
     End Sub
 
     Private Sub Finalizar() Handles pnlInstancia.ControlRemoved

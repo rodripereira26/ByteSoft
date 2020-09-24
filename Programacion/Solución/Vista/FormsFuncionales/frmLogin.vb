@@ -4,14 +4,11 @@ Imports System.IO
 Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-
         Configuracion.Singleton.CargarConfiguracion()
         lblIniciarSesion.Select()
         CargarUsuario()
-
     End Sub
     Sub New()
-
         ObtenerRuta()
         Configuracion.Singleton.CargarConfiguracion()
         VerificarArchivo()
@@ -19,12 +16,9 @@ Public Class frmLogin
         Datos_Temporales.horizontal = Me.Width
         Datos_Temporales.vertical = Me.Height
         Principal.Singleton.CambiarTamaño(Me)
-
-
     End Sub
 
     Public Sub ObtenerRuta()
-
         Dim array As New ArrayList
         Dim matriz() As String = Split(Application.StartupPath, "\")
         Dim sec As String
@@ -55,7 +49,6 @@ Public Class frmLogin
             Next
             Datos_Temporales.pathConf = Path.Combine(sec, "Vista\bin\Debug\")
         End If
-
     End Sub
 
     Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged

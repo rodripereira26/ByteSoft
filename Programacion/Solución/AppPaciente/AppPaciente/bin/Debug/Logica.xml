@@ -110,7 +110,7 @@ Clase encargada de los datos de los síntomas.
  </summary>
  <returns></returns>
 </member>
-<member name="P:Logica.Datos_Temporales.ruta">
+<member name="P:Logica.Datos_Temporales.pathConf">
  <summary>
  Ruta en la que se encuentran los archivos de configuración del sistema.
  </summary>

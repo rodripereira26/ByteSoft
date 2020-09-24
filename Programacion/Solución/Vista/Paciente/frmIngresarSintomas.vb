@@ -30,11 +30,6 @@ Public Class frmIngresarSintomas
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
-
-    Private Sub Finalizar() Handles pnlInstancia.ControlRemoved
-        Me.pnlContenedor.Show()
-    End Sub
-
     Private Sub selectItem(origen As DataGridView, destino As DataGridView, e As MouseEventArgs)
 
         sourcedgv = origen.Name
@@ -130,8 +125,14 @@ Public Class frmIngresarSintomas
                     Next
 
                     If pat.guardarDiagnostico(Datos_Temporales.userLog, nombreDiagnostico) Then
-                        frmObtenerDiagnostico.Show()
-                        Me.Hide()
+                        Dim frm As New frmObtenerDiagnostico
+                        Me.SuspendLayout()
+                        Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+                        Principal.Singleton.CambiarTamaño(frmObtenerDiagnostico)
+                        frm.Show()
+                        pnlContenedor.Hide()
+                        pnlInstancia.Show()
+                        Me.ResumeLayout()
                     Else
                         MsgBox("Error al ingresar el diagnóstico")
 
@@ -151,6 +152,10 @@ Public Class frmIngresarSintomas
             MsgBox("No seleccionó ningún síntoma")
         End If
 
+    End Sub
+
+    Private Sub Finalizar() Handles pnlInstancia.ControlRemoved
+        Me.pnlContenedor.Show()
     End Sub
 
     Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged

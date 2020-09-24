@@ -2,13 +2,25 @@
 Public Class frmObtenerDiagnostico
 
     Dim pat As New ControladorPatologia
-    dim solicitud as boolean = true
+    dim solicitud as boolean = True
+
+
 
     Private Sub frmObtenerDiagnostico_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         ControlPaint.DrawBorder(e.Graphics, Me.ClientRectangle, Color.Black, ButtonBorderStyle.Solid)
     End Sub
 
     Private Sub frmObtenerDiagnostico_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+    End Sub
+
+    Public Sub New()
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        Datos_Temporales.horizontal = Me.Width
+        Datos_Temporales.vertical = Me.Height
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
 
@@ -25,8 +37,8 @@ Public Class frmObtenerDiagnostico
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        frmIngresarSintomas.Visible = True
-        solicitud = true
+        Principal.Singleton.CambiarTamaño(frmIngresarSintomas)
+        solicitud = True
         Me.Dispose()
     End Sub
 
@@ -52,14 +64,16 @@ Public Class frmObtenerDiagnostico
 
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Me.Close()
         frmLogin.Visible = True
     End Sub
 
-    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs)
         Me.WindowState = WindowState.Minimized
     End Sub
 
+    Private Sub dgvPosiblesDiagnosticos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPosiblesDiagnosticos.CellContentClick
 
+    End Sub
 End Class

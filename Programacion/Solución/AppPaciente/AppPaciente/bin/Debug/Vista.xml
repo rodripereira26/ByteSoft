@@ -376,7 +376,7 @@ Movimiento de ventanas sin bordes
  Función encargada de asignarle un texto a los componentes gráficos en función del idioma seleccionado.
  </summary>
  <param name="name"></param>
- <returns>Texto del componente traducido al idioma seleccionado.</returns>
+ <returns>Texto traducido al idioma seleccionado.</returns>
 </member>
 <member name="M:Vista.Principal.RoundedCorners(System.Object)">
  <summary>
