@@ -8,12 +8,12 @@ Public Class frmRegistroGestor
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles btnRegistrarGestor.Click
 
-        If Principal.Singleton.verificarCedula(check, txtCI.Text) Then
-            If Principal.Singleton.verificarContraseña(seg, txtCon.Text, txtRepCon.Text) Then
+        If Principal.Singleton.VerificarCedula(check, txtCI.Text) Then
+            If Principal.Singleton.VerificarContraseña(seg, txtCon.Text, txtRepCon.Text) Then
                 pass = seg.HASH256(txtCon.Text)
-                If Principal.Singleton.verificarString(check, txtPNom.Text, txtPApe.Text, txtSNom.Text, txtSApe.Text) Then
-                    If Principal.Singleton.verificarEmail(check, txtMail.Text) Then
-                        If Principal.Singleton.verificarTelefonos(dgvTelefonos, aliTel) Then
+                If Principal.Singleton.VerificarString(check, txtPNom.Text, txtPApe.Text, txtSNom.Text, txtSApe.Text) Then
+                    If Principal.Singleton.VerificarEmail(check, txtMail.Text) Then
+                        If Principal.Singleton.VerificarTelefonos(dgvTelefonos, aliTel) Then
                             Dim ges As New ControladorGestor(txtCI.Text,
                                                  pass,
                                                  txtPNom.Text.ToUpper,
@@ -57,7 +57,7 @@ Public Class frmRegistroGestor
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
-        If check.verificar_int(dgvTelefonos.Rows(dgvTelefonos.Rows.Count - 2).Cells(0).Value.ToString) = False Then
+        If check.Verificar_Int(dgvTelefonos.Rows(dgvTelefonos.Rows.Count - 2).Cells(0).Value.ToString) = False Then
 
             MsgBox("Ingresó un teléfono incorrecto")
             dgvTelefonos.Rows.RemoveAt(dgvTelefonos.Rows.Count - 2)

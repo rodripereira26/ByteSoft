@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmObtenerDiagnostico
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,22 +20,22 @@ Partial Class frmObtenerDiagnostico
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlTituloPatologia = New System.Windows.Forms.Panel()
-        Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.lblPosibles = New System.Windows.Forms.Label()
         Me.dgvPosiblesDiagnosticos = New System.Windows.Forms.DataGridView()
         Me.btnSolicitarChat = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.pnlContenedor = New System.Windows.Forms.Panel()
         Me.ucRespuesta = New Vista.UserControl1()
         Me.pnlTituloPatologia.SuspendLayout()
         CType(Me.dgvPosiblesDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlContenedor.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlTituloPatologia
@@ -43,43 +43,10 @@ Partial Class frmObtenerDiagnostico
         Me.pnlTituloPatologia.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.pnlTituloPatologia.Controls.Add(Me.btnAtras)
         Me.pnlTituloPatologia.Controls.Add(Me.lblPosibles)
-        Me.pnlTituloPatologia.Controls.Add(Me.btnMinimizar)
-        Me.pnlTituloPatologia.Controls.Add(Me.btnCerrar)
         Me.pnlTituloPatologia.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTituloPatologia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTituloPatologia.Name = "pnlTituloPatologia"
-        Me.pnlTituloPatologia.Size = New System.Drawing.Size(1336, 95)
+        Me.pnlTituloPatologia.Size = New System.Drawing.Size(1004, 77)
         Me.pnlTituloPatologia.TabIndex = 147
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Location = New System.Drawing.Point(1292, 0)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(45, 41)
-        Me.btnCerrar.TabIndex = 158
-        Me.btnCerrar.Text = "X"
-        Me.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnCerrar.UseVisualStyleBackColor = True
-        '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnMinimizar.ForeColor = System.Drawing.Color.White
-        Me.btnMinimizar.Location = New System.Drawing.Point(1243, 0)
-        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(45, 41)
-        Me.btnMinimizar.TabIndex = 159
-        Me.btnMinimizar.Text = "_"
-        Me.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnMinimizar.UseVisualStyleBackColor = True
         '
         'btnAtras
         '
@@ -87,11 +54,11 @@ Partial Class frmObtenerDiagnostico
         Me.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnAtras.FlatAppearance.BorderSize = 0
         Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAtras.Location = New System.Drawing.Point(12, 23)
+        Me.btnAtras.Location = New System.Drawing.Point(9, 19)
         Me.btnAtras.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnAtras.Size = New System.Drawing.Size(65, 39)
+        Me.btnAtras.Padding = New System.Windows.Forms.Padding(3)
+        Me.btnAtras.Size = New System.Drawing.Size(49, 32)
         Me.btnAtras.TabIndex = 153
         Me.btnAtras.UseVisualStyleBackColor = True
         '
@@ -100,10 +67,9 @@ Partial Class frmObtenerDiagnostico
         Me.lblPosibles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblPosibles.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPosibles.ForeColor = System.Drawing.Color.White
-        Me.lblPosibles.Location = New System.Drawing.Point(407, 20)
-        Me.lblPosibles.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPosibles.Location = New System.Drawing.Point(305, 16)
         Me.lblPosibles.Name = "lblPosibles"
-        Me.lblPosibles.Size = New System.Drawing.Size(528, 55)
+        Me.lblPosibles.Size = New System.Drawing.Size(396, 45)
         Me.lblPosibles.TabIndex = 26
         Me.lblPosibles.Text = "POSIBLES DIAGNÓSTICOS"
         Me.lblPosibles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -147,8 +113,7 @@ Partial Class frmObtenerDiagnostico
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvPosiblesDiagnosticos.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvPosiblesDiagnosticos.EnableHeadersVisualStyles = False
-        Me.dgvPosiblesDiagnosticos.Location = New System.Drawing.Point(4, 95)
-        Me.dgvPosiblesDiagnosticos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvPosiblesDiagnosticos.Location = New System.Drawing.Point(3, 77)
         Me.dgvPosiblesDiagnosticos.MultiSelect = False
         Me.dgvPosiblesDiagnosticos.Name = "dgvPosiblesDiagnosticos"
         Me.dgvPosiblesDiagnosticos.ReadOnly = True
@@ -164,7 +129,7 @@ Partial Class frmObtenerDiagnostico
         Me.dgvPosiblesDiagnosticos.RowHeadersWidth = 51
         Me.dgvPosiblesDiagnosticos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvPosiblesDiagnosticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPosiblesDiagnosticos.Size = New System.Drawing.Size(1331, 666)
+        Me.dgvPosiblesDiagnosticos.Size = New System.Drawing.Size(998, 541)
         Me.dgvPosiblesDiagnosticos.TabIndex = 146
         '
         'btnSolicitarChat
@@ -173,46 +138,55 @@ Partial Class frmObtenerDiagnostico
         Me.btnSolicitarChat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnSolicitarChat.Depth = 0
         Me.btnSolicitarChat.Icon = Nothing
-        Me.btnSolicitarChat.Location = New System.Drawing.Point(524, 783)
-        Me.btnSolicitarChat.Margin = New System.Windows.Forms.Padding(5, 7, 5, 7)
+        Me.btnSolicitarChat.Location = New System.Drawing.Point(393, 636)
+        Me.btnSolicitarChat.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnSolicitarChat.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnSolicitarChat.Name = "btnSolicitarChat"
         Me.btnSolicitarChat.Primary = False
-        Me.btnSolicitarChat.Size = New System.Drawing.Size(264, 36)
+        Me.btnSolicitarChat.Size = New System.Drawing.Size(215, 36)
         Me.btnSolicitarChat.TabIndex = 149
         Me.btnSolicitarChat.Text = "solicitar chat con médico"
         Me.btnSolicitarChat.UseVisualStyleBackColor = True
+        '
+        'pnlContenedor
+        '
+        Me.pnlContenedor.Controls.Add(Me.pnlTituloPatologia)
+        Me.pnlContenedor.Controls.Add(Me.dgvPosiblesDiagnosticos)
+        Me.pnlContenedor.Controls.Add(Me.btnSolicitarChat)
+        Me.pnlContenedor.Controls.Add(Me.ucRespuesta)
+        Me.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlContenedor.Location = New System.Drawing.Point(0, 0)
+        Me.pnlContenedor.Name = "pnlContenedor"
+        Me.pnlContenedor.Size = New System.Drawing.Size(1004, 677)
+        Me.pnlContenedor.TabIndex = 150
         '
         'ucRespuesta
         '
         Me.ucRespuesta.BackColor = System.Drawing.Color.White
         Me.ucRespuesta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ucRespuesta.Location = New System.Drawing.Point(267, 95)
-        Me.ucRespuesta.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ucRespuesta.Location = New System.Drawing.Point(200, 77)
+        Me.ucRespuesta.Margin = New System.Windows.Forms.Padding(4)
         Me.ucRespuesta.Name = "ucRespuesta"
-        Me.ucRespuesta.Size = New System.Drawing.Size(809, 665)
+        Me.ucRespuesta.Size = New System.Drawing.Size(607, 541)
         Me.ucRespuesta.TabIndex = 148
         Me.ucRespuesta.Visible = False
         '
         'frmObtenerDiagnostico
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1339, 833)
-        Me.Controls.Add(Me.pnlTituloPatologia)
-        Me.Controls.Add(Me.ucRespuesta)
-        Me.Controls.Add(Me.btnSolicitarChat)
-        Me.Controls.Add(Me.dgvPosiblesDiagnosticos)
+        Me.ClientSize = New System.Drawing.Size(1004, 677)
+        Me.Controls.Add(Me.pnlContenedor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmObtenerDiagnostico"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ObtenerDiagnóstico"
         Me.pnlTituloPatologia.ResumeLayout(False)
         CType(Me.dgvPosiblesDiagnosticos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlContenedor.ResumeLayout(False)
+        Me.pnlContenedor.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents pnlTituloPatologia As Panel
@@ -221,6 +195,5 @@ Partial Class frmObtenerDiagnostico
     Friend WithEvents ucRespuesta As UserControl1
     Friend WithEvents btnAtras As Button
     Friend WithEvents btnSolicitarChat As MaterialSkin.Controls.MaterialFlatButton
-    Friend WithEvents btnCerrar As Button
-    Friend WithEvents btnMinimizar As Button
+    Friend WithEvents pnlContenedor As Panel
 End Class

@@ -45,13 +45,13 @@ Public Class ControladorUsuario
 
     Public Function verificarUsuario(usuario As String, pass As String) As Boolean
 
-        Return ModeloUsuario.Singleton.verificarUsuario(usuario, pass)
+        Return ModeloUsuario.Singleton.VerificarUsuario(usuario, pass)
 
     End Function
 
     Public Function verificarRol(usuario As String)
 
-        Return ModeloUsuario.Singleton.verificarRol(usuario)
+        Return ModeloUsuario.Singleton.verificarRol(usuario, Datos_Temporales.rol)
 
     End Function
 

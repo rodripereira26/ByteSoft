@@ -1,0 +1,15 @@
+msgPreguntaIdioma;Debe reiniciar para guardar los cambios
+lblIniciarSesion;Iniciar Sesión
+mcbRecordarUsuario;Recordar Usuario
+lblContraseña;Contraseña
+lblUsuario;Usuario
+picIngresar;?????????????
+lblCrearCuentaPac;Crear Cuenta
+lblEsAfiliado;¿Es afiliado?
+
+
+msgPacienteHabilitado;Usted no ha sido habilitado para ingresar al sistema
+msgErrorLogin;Error al ingresar al sistema
+msgLoginIncorrecto;Usuario o contraseña incorrectos
+msgCedulaInvalida;Debe ingresar una cédula válida
+msgCamposIncompletos;No completó los campos

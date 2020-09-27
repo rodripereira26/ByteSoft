@@ -6,7 +6,7 @@ Public Class frmRegistrarPatologia
 
     Private Sub RegistrarPatologias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Principal.Singleton.roundedCorners(Me)
+        Principal.Singleton.RoundedCorners(Me)
         traerSintomas()
 
     End Sub

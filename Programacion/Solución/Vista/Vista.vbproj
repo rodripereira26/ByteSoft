@@ -19,7 +19,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -29,7 +29,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -60,11 +60,23 @@
     <Reference Include="Appccelerate.StateMachine, Version=2.12.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
       <HintPath>..\packages\Appccelerate.StateMachine.2.12.0\lib\portable-windows8+net45\Appccelerate.StateMachine.dll</HintPath>
     </Reference>
+    <Reference Include="AppGestion">
+      <HintPath>..\AppGestion\AppGestion\bin\Debug\AppGestion.exe</HintPath>
+    </Reference>
+    <Reference Include="AppMedico">
+      <HintPath>..\AppMedico\AppMedico\bin\Debug\AppMedico.exe</HintPath>
+    </Reference>
+    <Reference Include="AppPaciente">
+      <HintPath>..\AppPaciente\AppPaciente\bin\Debug\AppPaciente.exe</HintPath>
+    </Reference>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.4.3.0\lib\net462\ControlzEx.dll</HintPath>
     </Reference>
     <Reference Include="DynamicData, Version=6.15.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamicData.6.15.1\lib\net461\DynamicData.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.14.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.2.0.0\lib\net47\MahApps.Metro.dll</HintPath>
@@ -179,7 +191,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animaciones.vb" />
+    <Compile Include="Extras\BsMsgbox.Designer.vb">
+      <DependentUpon>BsMsgbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\BsMsgbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Extras\frmAjustes.Designer.vb">
       <DependentUpon>frmAjustes.vb</DependentUpon>
     </Compile>
@@ -349,6 +366,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Extras\BsMsgbox.resx">
+      <DependentUpon>BsMsgbox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Extras\frmAjustes.resx">
       <DependentUpon>frmAjustes.vb</DependentUpon>
     </EmbeddedResource>
@@ -745,6 +765,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_summary_list_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />

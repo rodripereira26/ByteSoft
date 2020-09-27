@@ -9,7 +9,7 @@ Public Class frmIngresarSintomas
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.btnObtenerDiagnostico.AutoSize = False
-        Principal.Singleton.roundedCorners(Me)
+        'Principal.Singleton.roundedCorners(Me)
 
         Dim sintomas As New ControladorSintoma
 
@@ -21,6 +21,15 @@ Public Class frmIngresarSintomas
 
     End Sub
 
+    Public Sub New()
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        Datos_Temporales.horizontal = Me.Width
+        Datos_Temporales.vertical = Me.Height
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
     Private Sub selectItem(origen As DataGridView, destino As DataGridView, e As MouseEventArgs)
 
         sourcedgv = origen.Name
@@ -116,8 +125,14 @@ Public Class frmIngresarSintomas
                     Next
 
                     If pat.guardarDiagnostico(Datos_Temporales.userLog, nombreDiagnostico) Then
-                        frmObtenerDiagnostico.Show()
-                        Me.Hide()
+                        Dim frm As New frmObtenerDiagnostico
+                        Me.SuspendLayout()
+                        Principal.Singleton.CargarVentana(Me.pnlInstancia, frm)
+                        Principal.Singleton.CambiarTamaño(frmObtenerDiagnostico)
+                        frm.Show()
+                        pnlContenedor.Hide()
+                        pnlInstancia.Show()
+                        Me.ResumeLayout()
                     Else
                         MsgBox("Error al ingresar el diagnóstico")
 
@@ -139,6 +154,10 @@ Public Class frmIngresarSintomas
 
     End Sub
 
+    Private Sub Finalizar() Handles pnlInstancia.ControlRemoved
+        Me.pnlContenedor.Show()
+    End Sub
+
     Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
         'dv.RowFilter = String.Format("Name Like '%{0}%'", txtBuscar.Text)
         'bs.DataSource = dgvTodos.DataSource
@@ -149,7 +168,7 @@ Public Class frmIngresarSintomas
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        frmBienvenidaPaciente.Show()
+        Principal.Singleton.CambiarTamaño(frmBienvenidaPaciente)
         Me.Dispose()
     End Sub
 End Class

@@ -8,299 +8,440 @@ Vista
 <members>
 <member name="T:Vista.My.Resources.Resources">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.apcambios">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.cfzxczxczxcccccccc">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.FIEL">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.FIELD">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.fsdfds">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.hgh">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.hvoersolcmedico">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.HYUYUI">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icoCancelar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icoDiagnostico">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icoEnviar">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icoFlechaAtras">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icoFlechaAtrasWhite">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_arrow_pointing_left_24px">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_bell_24px">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_bell_35px">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_bell_48px_1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_csv_64">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_delete_48px_11">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_delete_64px1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_edit_16px_1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_edit_16px_12">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_edit_24px1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_edit_32px_1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_edit_32px_12">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_email_send_24">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_email_send_48">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_filter_30px_11">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_filter_48px1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_form_64">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_form_64_1_">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_left_32px">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_long_arrow_left_32px">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_refresh_10px">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_refresh_20px">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_refresh_20px_1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_refresh_35px_1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_right_arrow_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_right_arrow_64">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_search_30px1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_single_choice_24px1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.icons8_summary_list_24px">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_test_results_100">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_test_results_30">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.icons8_user_80px_1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.ingmed">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.log_byw">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.login">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.Logincurva">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.Logo">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.logo_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.logo_1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.logo_2">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Vista.My.Resources.Resources.logo_3">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.logo_byw">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.logo_byw_v3">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.med">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.medd">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.obt1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.obt2">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.op1">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.regpat">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.regsintoma">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Vista.My.Resources.Resources.solcmedico">
 <summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="M:Vista.frmListadoPatologiasySintomas.Panel3_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
 <summary>
 Movimiento de ventanas sin bordes
 </summary>
+</member>
+<member name="T:Vista.Principal">
+ <summary>
+ Clase principal de la libreria gráfica.
+ </summary>
+</member>
+<member name="M:Vista.Principal.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Vista.Principal.CargarVentana(System.Windows.Forms.Panel,System.Windows.Forms.Form)">
+ <summary>
+ Subrutina encargada de instanciar un formulario dentro de un panel.
+ </summary>
+ <param name="ventana"></param>
+ <param name="formInterno"></param>
+</member>
+<member name="M:Vista.Principal.CambiarTamaño(System.Windows.Forms.Form)">
+ <summary>
+ Subrutina encargada de adaptar el tamaño de la aplicación en función del formulario instanciado.
+ </summary>
+ <param name="form"></param>
+</member>
+<member name="M:Vista.Principal.Idioma(System.String)">
+ <summary>
+ Función encargada de asignarle un texto a los componentes gráficos en función del idioma seleccionado.
+ </summary>
+ <param name="name"></param>
+ <returns>Texto traducido al idioma seleccionado.</returns>
+</member>
+<member name="M:Vista.Principal.RoundedCorners(System.Object)">
+ <summary>
+ Subrutina encargada de redondear los bordes del formulario.
+ </summary>
+ <param name="rect"></param>
+</member>
+<member name="M:Vista.Principal.VerificarCedula(Logica.Verificacion,System.String)">
+ <summary>
+ Función encargada de verificar la cédula ingresada.
+ </summary>
+ <param name="check"></param>
+ <param name="cedula"></param>
+ <returns>True si la cédula es correcta.</returns>
+</member>
+<member name="M:Vista.Principal.VerificarString(Logica.Verificacion,System.String,System.String,System.String,System.String)">
+ <summary>
+ Función encargada de verificar si los string ingresados son correctos.
+ </summary>
+ <param name="check"></param>
+ <param name="pNom"></param>
+ <param name="pApe"></param>
+ <param name="sNom"></param>
+ <param name="sApe"></param>
+ <returns>True si los string son correctos.</returns>
+</member>
+<member name="M:Vista.Principal.VerificarEmail(Logica.Verificacion,System.String)">
+ <summary>
+ Función encargada de verificar si el e-mail ingresado es correcto.
+ </summary>
+ <param name="check"></param>
+ <param name="mail"></param>
+ <returns>True si el e-mail es correcto.</returns>
+</member>
+<member name="M:Vista.Principal.VerificarContraseña(Logica.Encriptar,System.String,System.String)">
+ <summary>
+ Función encargada de verificar si las contraseñas ingresadas coinciden.
+ </summary>
+ <param name="seg"></param>
+ <param name="pass1"></param>
+ <param name="pass2"></param>
+ <returns>True si las contraseñas coinciden</returns>
+</member>
+<member name="M:Vista.Principal.VerificarTelefonos(System.Windows.Forms.DataGridView,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de verificar si los teléfonos ingresados son correctos.
+ </summary>
+ <param name="dgv"></param>
+ <param name="telefonos"></param>
+ <returns>True si los teléfonos son correctos.</returns>
+</member>
+<member name="M:Vista.Principal.limpiar(System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.DataGridView,System.Collections.ArrayList)">
+ <summary>
+ Subrutina encargada de limpiar los componentes de la pantalla.
+ </summary>
+ <param name="a"></param>
+ <param name="b"></param>
+ <param name="c"></param>
+ <param name="d"></param>
+ <param name="e"></param>
+ <param name="f"></param>
+ <param name="g"></param>
+ <param name="h"></param>
+ <param name="j"></param>
+ <param name="k"></param>
 </member>
 </members>
 </doc>

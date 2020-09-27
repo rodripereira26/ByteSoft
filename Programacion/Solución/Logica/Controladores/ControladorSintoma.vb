@@ -27,25 +27,25 @@ Public Class ControladorSintoma
 
     Public Function traerSintomas() As ArrayList
 
-        Return ModeloSintoma.Singleton.traerSintomas
+        Return ModeloSintoma.Singleton.TraerSintomas
 
     End Function
 
     Public Function guardarSintomas(usuario As String, nombreSintoma As ArrayList) As Boolean
 
-        Return ModeloSintoma.Singleton.guardarSintomas(usuario, nombreSintoma)
+        Return ModeloSintoma.Singleton.GuardarSintomas(usuario, nombreSintoma)
 
     End Function
 
     Public Function listarSintomas() As DataTable
 
-        Return ModeloSintoma.Singleton.listarSintomas
+        Return ModeloSintoma.Singleton.ListarSintomas
 
     End Function
 
     Public Function eliminarSintomas(aliSintomas As ArrayList)
 
-        If ModeloSintoma.Singleton.eliminarSintomas(aliSintomas) Then
+        If ModeloSintoma.Singleton.EliminarSintomas(aliSintomas) Then
             Return True
         End If
 

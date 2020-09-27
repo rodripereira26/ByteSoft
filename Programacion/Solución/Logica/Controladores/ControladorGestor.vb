@@ -38,13 +38,13 @@ Public Class ControladorGestor
 
     Public Function eliminar(cedula As String) As Boolean
 
-        Return ModeloGestor.Singleton.eliminar(cedula)
+        Return ModeloGestor.Singleton.Eliminar(cedula)
 
     End Function
 
     Public Function habilitar(cedula As String) As Boolean
 
-        Return ModeloGestor.Singleton.habilitarPaciente(cedula)
+        Return ModeloGestor.Singleton.HabilitarPaciente(cedula)
 
     End Function
 

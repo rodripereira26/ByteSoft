@@ -47,9 +47,9 @@ firewallConf() {
 	iptables -P INPUT DROP
 	iptables -P OUTPUT DROP
 	iptables -P FORWARD DROP
-	
+
 	# INPUT
-	iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	#iptables -A INPUT -s $ip -j ACCEPT #IP de la OVA, cambiar por la del servidor
 	iptables -A INPUT -i lo -j ACCEPT # LOCALHOST
 	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A INPUT -p tcp --dport 20:21 -j ACCEPT # FTP
@@ -57,42 +57,40 @@ firewallConf() {
 	iptables -A INPUT -p udp --dport 53 -j ACCEPT
 	iptables -A INPUT -p tcp --dport 80 -j ACCEPT # HTTP
 	iptables -A INPUT -p tcp --dport 443 -j ACCEPT # HTTPs
+	iptables -A INPUT -p tcp --dport 445 -j ACCEPT # SAMBA
 	iptables -A INPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
 	iptables -A INPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
-	iptables -A INPUT -p tcp --dport 2022 -j ACCEPT # SSH
-	iptables -A INPUT -p tcp --dport 3306 -j ACCEPT # MYSQL	
+	iptables -A INPUT -p tcp --dport 2022 -j ACCEPT # SSH #cambiar por el 2022
+	iptables -A INPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
+	iptables -A INPUT -p tcp --dport 3128 -j ACCEPT # SQUID
 	iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+	iptables -I INPUT -i enp0s3 -p udp --dport 67:68 --sport \67:68 -j ACCEPT #DHCP
 	iptables -A INPUT -p tcp --dport 9418 -j ACCEPT # GIT
-	iptables -A INPUT -s $IP_RESPALDO -j ACCEPT #IP de respaldos
-	iptables -A INPUT -s ${IP_SUBRED_ADMIN%%:*} -j ACCEPT #IP de la subred de administradores
+	#iptables -A INPUT -s $IP_SUBRED_ADMIN -j ACCEPT # IP de la subred de administradores
 
 	# OUTPUT
-	iptables -A OUTPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	#iptables -A OUTPUT -s $ip -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 20:21 -j ACCEPT # FTP
 	iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT # SMTP
 	iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT # HTTP
 	iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT # HTTPS
+	iptables -A OUTPUT -p tcp --dport 445 -j ACCEPT # SAMBA
 	iptables -A OUTPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
 	iptables -A OUTPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
 	iptables -A OUTPUT -p tcp --dport 2022 -j ACCEPT # SSH
 	iptables -A OUTPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
 	iptables -A OUTPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT # GIT
-	iptables -A OUTPUT -s $IP_RESPALDO -j ACCEPT #IP de respaldos
-	iptables -A OUTPUT -s ${IP_SUBRED_ADMIN%%:*} -j ACCEPT #IP de la subred de administradores 
+	iptables -A OUTPUT -p tcp --dport 3128 -j ACCEPT # SQUID
 	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
-
-
-	# pruebas
-	iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT # SSH anterior
-	iptables -A OUTPUT -p tcp --dport 5200:55000 -j ACCEPT # pruebas puerto
-	iptables -A INPUT -p tcp --dport 22 -j ACCEPT # SSH anterior
-	iptables -A INPUT -p tcp --dport 5200:55000 -j ACCEPT # pruebas puerto
 
 	# Reinicio el servicio
 	service iptables save > /dev/null 2>&1
 	service iptables restart > /dev/null 2>&1
+
+
 
 }
 

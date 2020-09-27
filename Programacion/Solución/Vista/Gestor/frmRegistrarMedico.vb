@@ -5,16 +5,16 @@ Public Class frmRegistrarMedico
 
     Private Sub RegistrarMedico_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Principal.Singleton.roundedCorners(Me)
+        Principal.Singleton.RoundedCorners(Me)
         lblCed.Select()
 
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles btnRegistrarMedico.Click
 
-        If Principal.Singleton.verificarCedula(check, txtCed.Text) Then
-            If Principal.Singleton.verificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
-                If check.verificar_string(txtEspec.Text) Then
+        If Principal.Singleton.VerificarCedula(check, txtCed.Text) Then
+            If Principal.Singleton.VerificarString(check, txtPrimerNombre.Text, txtPrimerApellido.Text, txtSegundoNombre.Text, txtSegundoApellido.Text) Then
+                If check.Verificar_String(txtEspec.Text) Then
 
                     Dim med As New ControladorMedico(
                             txtCed.Text,

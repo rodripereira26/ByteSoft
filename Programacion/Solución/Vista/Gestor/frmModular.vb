@@ -3,7 +3,7 @@
     Public op As Byte
 
     Private Sub frmPatologiasySintomas_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Principal.Singleton.roundedCorners(Me)
+        Principal.Singleton.RoundedCorners(Me)
 
         Select Case op
             Case 0

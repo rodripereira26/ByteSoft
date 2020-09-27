@@ -9,7 +9,6 @@ C:\Users\Rodrigo\OneDrive\Escritorio\ULTIMO CLONE\bytesoft\Programacion\Solució
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\bin\Release\Acceso_a_Datos.dll
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\bin\Release\Acceso_a_Datos.pdb
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\bin\Release\Acceso_a_Datos.xml
-C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.vbprojAssemblyReference.cache
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.Resources.resources
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.vbproj.GenerateResource.cache
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\Acceso_a_Datos\obj\Release\Acceso_a_Datos.vbproj.CoreCompileInputs.cache

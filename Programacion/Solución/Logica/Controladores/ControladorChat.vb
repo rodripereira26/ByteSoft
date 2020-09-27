@@ -6,7 +6,7 @@ Public Class ControladorChat
 
     Public Function crearChat()
 
-        Dim id As Int16 = ModeloChat.Singleton.crearChat
+        Dim id As Int16 = ModeloChat.Singleton.CrearChat
 
         If id <> 0 Then
 
@@ -20,19 +20,19 @@ Public Class ControladorChat
 
     Public Function entrarChat(cedula As String, id As Int32)
 
-        Return ModeloChat.Singleton.entrarChat(cedula, id)
+        Return ModeloChat.Singleton.EntrarChat(cedula, id)
 
     End Function
 
     Public Function listarChat() As DataTable
 
-        Return ModeloChat.Singleton.listarChat
+        Return ModeloChat.Singleton.ListarChat(Datos_Temporales.userLog)
 
     End Function
 
     Public Function enviarMensaje(cedula As String, idchat As Long, mensaje As String, fecha As Date) As Boolean
 
-        If ModeloChat.Singleton.enviarMensaje(cedula, idchat, mensaje, fecha) Then
+        If ModeloChat.Singleton.EnviarMensaje(cedula, idchat, mensaje, fecha) Then
             Return True
         End If
 
@@ -41,25 +41,25 @@ Public Class ControladorChat
 
     Public Function recargarChat() As DataTable
 
-        Return ModeloChat.Singleton.recargarChat(Datos_Temporales.idchat)
+        Return ModeloChat.Singleton.RecargarChat(Datos_Temporales.idchat)
 
     End Function
 
     Public Function obtenerRespuesta()
 
-        Return ModeloChat.Singleton.obtenerRespuesta(Datos_Temporales.idchat)
+        Return ModeloChat.Singleton.ObtenerRespuesta(Datos_Temporales.userLog)
 
     End Function
 
     Public Function finalizarChat()
 
-        Return ModeloChat.Singleton.finalizarChat(Datos_Temporales.idchat)
+        Return ModeloChat.Singleton.FinalizarChat(Datos_Temporales.idchat)
 
     End Function
 
     Public Function verificarCedula(idChat As String) As Boolean
 
-        If ModeloChat.Singleton.verificarCedula(Datos_Temporales.userLog, idChat) = 0 Then
+        If ModeloChat.Singleton.VerificarCedula(Datos_Temporales.userLog, idChat) = 0 Then
             Return True
         End If
 
@@ -68,16 +68,16 @@ Public Class ControladorChat
 
     Public Function listarMisChats(cedula As String, finalizado As Byte) As DataTable
 
-        Return ModeloChat.Singleton.misChats(cedula, finalizado)
+        Return ModeloChat.Singleton.MisChats(cedula, finalizado)
 
     End Function
 
     Public Function getNombreUsr(cedula As String) As DataTable
-        Return ModeloChat.Singleton.getNombreusr(cedula)
+        Return ModeloChat.Singleton.GetNombre(cedula)
     End Function
 
     Public Function getCorreo(cedula As String) As String
-        Return ModeloChat.Singleton.getCorreo(cedula)
+        Return ModeloChat.Singleton.GetCorreo(cedula)
     End Function
 
     Public Function setFormato() As String
