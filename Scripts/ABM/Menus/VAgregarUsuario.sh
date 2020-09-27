@@ -3,7 +3,7 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuAgregarUsuario() {
-    #region variables
+    #region [rgba(170, 160, 26, 0.10)] variables 
 
     local continuar=true
     local user=""
@@ -11,7 +11,7 @@ VMenuAgregarUsuario() {
 
     #endregion
 
-    #region tui 
+    #region [rgba(27, 173, 192, 0.10)] tui  
     
     iniciarPantallaNueva
     dibujarTxt "INGRESAR USUARIO" 41 6 0

@@ -4,7 +4,7 @@
 
 
 dibujarSwitch() {   
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # -Carga switch y guarda los datos en una lista-
     # $1 : es el inicio de la entrada de texto en x
     # $2 : es el inicio de la entrada de texto en y
@@ -33,7 +33,7 @@ dibujarSwitch() {
 }
 
 dibujarBoton(){
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # -Carga boton en pantalla y guarda los datos en una lista--
     # $1 : el texto del boton
     # $2 : es el inicio de la entrada de texto en x
@@ -61,13 +61,14 @@ dibujarBoton(){
 }
 
 dibujarTxt() {
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # -Muestra un texto en pantalla y guarda los datos en una lista-
     # $1 el texto a imprimir
     # $2 es el inicio de la entrada de texto en x
     # $3 es el inicio de la entrada de texto en y 
-    # $4 color foreground (opcional)
-    # $5 color background (opcional)
+    # $4 color foreground {opcional}
+    # $5 color background {opcional}
+
     #endregion
     let colorFg=7
     let colorBg=$colorBgDefecto
@@ -85,28 +86,30 @@ dibujarTxt() {
     tput setaf $colorFg
     tput setab $colorBg
 
-    echo -n $1
+    echo -n "$1"
 
 }
 
 dibujarEntradaTxt() { 
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # -Muestra una entrada de texto y guarda los datos en una lista-
     # $1 : es el inicio de la entrada de texto en x 
     # $2 : es el inicio de la entrada de texto en y 
     # $3 : es el largo de la entrada 
     # $4 : int es password
     # $5 : texto por defecto {opcional}
+
     #endregion
 
     let colorBg=0 
     let colorFg=5
             
-    cargarEntradaTxt $1 $2 $3 $colorBg $colorFG
     if $4; 
     then
         agregarUbicacion "PWTXT" "$5" $1 $2 $3 1 $colorBg $colorFg 
     else
         agregarUbicacion "INPTXT" "$5" $1 $2 $3 1 $colorBg $colorFg 
     fi
+    cargarEntradaTxt $1 $2 $3 1 $colorBg $colorFg "$5"
+
 }

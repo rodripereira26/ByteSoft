@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cargarSwitch() {
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 : es el inicio de la entrada de texto en x
     # $2 : es el inicio de la entrada de texto en y
     # $3 : largo del switch
@@ -25,36 +25,36 @@ cargarSwitch() {
 }
 
 gestorDeSwitch() {
+    # $1 : anterior
+    # $2 : enter
+    # $3 : siguiente
 
     let BGplus=5 # 18
     let FGplus=5 # 254
-
     codigoRespuesta=""
     respuestaGestor=false
-
+    modificado=false
 
     cargarSwitch $posX $posY $largo $ancho $BGplus $FGplus $texto
 
-    codigoRespuesta=$(hizoClick "4 5 6")
-    actualizarPosActual $codigoRespuesta
+    codigoRespuesta=$(hizoClick "$1 $2 $3")
+    actualizarPosActual $codigoRespuesta $1 $3
     
     cargarSwitch $posX $posY $largo $ancho $colorBg $colorFg $texto
 
-    if [ "$codigoRespuesta" = "5" ]; 
+    if [ "$codigoRespuesta" = "$2" ]; 
     then
         if [ "$(tomarElemento $posDeEsteElemento 1)" = "true" ];
         then
-            modificarElemento $posDeEsteElemento 1 "false"
             texto=false
         else
-            modificarElemento $posDeEsteElemento 1 "true"
             texto=true
         fi
-
+        modificarElemento $posDeEsteElemento 1 "$texto"
+        modificado=true
         cargarSwitch $posX $posY $largo $ancho $colorBg $colorFg $texto
 
     fi
-
     if [ "$texto" = "true" ]; 
     then
         respuestaGestor=true

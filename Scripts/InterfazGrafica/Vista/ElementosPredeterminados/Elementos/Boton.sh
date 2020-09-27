@@ -1,6 +1,9 @@
 #!/bin/bash
 
 gestorDeBoton() {
+    # $1 : anterior
+    # $2 : enter
+    # $3 : siguiente
 
     respuestaGestor=false
     codigoRespuesta=""
@@ -9,20 +12,20 @@ gestorDeBoton() {
     let FGplus=$colorFg
 
     cargarBoton "$texto" $posX $posY $largo $ancho $BGplus $FGplus
-    codigoRespuesta=$(hizoClick "4 5 6")
+    codigoRespuesta=$(hizoClick "$1 $2 $3")
 
-    actualizarPosActual $codigoRespuesta
+    actualizarPosActual $codigoRespuesta $1 $3
     cargarBoton "$texto" $posX $posY $largo $ancho $colorBg $colorFg
 
 
-    if [ "$codigoRespuesta" = "5" ]; 
+    if [ "$codigoRespuesta" = "$2" ]; 
     then
         respuestaGestor=true
     fi
 }
 
 cargarBoton() {
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 el texto del boton
     # $2 es el inicio de la entrada de texto en x
     # $3 es el inicio de la entrada de texto en y

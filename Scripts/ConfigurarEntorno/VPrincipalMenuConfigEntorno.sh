@@ -58,7 +58,7 @@ pantallaEleccionMaquina(){
     local continuar=true
 
     iniciarPantallaNueva
-    dibujarTxt "Ingresa funcion maquina actual" 80 2
+    dibujarTxt "INGRESA FUNCION MAQUINA ACTUAL" 80 2
     dibujarBoton "SERVIDOR PRINCIPAL" 20 7 80 3
     dibujarBoton "RESPALDOS" 20 10 80 3 
     dibujarBoton "SUBRED ADMIN" 20 13 80 3 
@@ -92,7 +92,6 @@ pantallaEleccionMaquina(){
                 fi
                 ;;
             *)
-                continuar=false
                 ;;
         esac
     done
@@ -109,7 +108,7 @@ pantallaInstalacionServidor() {
     case $(variablesEntorno) in
 
         "0") 
-            dibujarTxt "Configurando variables..." 37 8 1
+            dibujarTxt "CONFIGURANDO VARIABLES..." 37 8 1
             sleep 0.5
             ;;
 
@@ -122,7 +121,7 @@ pantallaInstalacionServidor() {
     case $(crearCarpetasIniciales) in 
 
         "0")
-            dibujarTxt "Creando Carpetas..." 40 12 1    
+            dibujarTxt "CREANDO CARPETAS..." 40 12 1    
             sleep 0.5   
             ;;
                         
@@ -134,7 +133,7 @@ pantallaInstalacionServidor() {
     case $(crontabConf) in
 
         "0")
-            dibujarTxt "Configurando crontab..." 38 16 1
+            dibujarTxt "CONFIGURANDO CRONTAB..." 38 16 1
             sleep 0.5
             ;;
                         
@@ -143,7 +142,7 @@ pantallaInstalacionServidor() {
             ;;
     esac
     
-    dibujarTxt "Configurando firewall..." 38 20 1
+    dibujarTxt "CONFIGURANDO FIREWALL..." 38 20 1
     firewallConf
     sleep 0.5
     
@@ -151,7 +150,7 @@ pantallaInstalacionServidor() {
 
     if [ $PUERTO -eq 22 ]; 
     then
-        dibujarTxt "Configurando SSH..." 40 24 1 
+        dibujarTxt "CONFIGURANDO SSH..." 40 24 1 
         sleep 0.5
         colorBgDefecto=0
         pantallaSSH
@@ -172,7 +171,7 @@ pantallaInstalacionServidorRespaldos() {
     case $(variablesEntorno) in
 
         "0") 
-            dibujarTxt "Configurando variables..." 37 8 1
+            dibujarTxt "CONFIGURANDO VARIABLES..." 37 8 1
             sleep 0.5
             ;;
 
@@ -181,9 +180,9 @@ pantallaInstalacionServidorRespaldos() {
             ;;
     esac
     VConfigRedParaLocal "RESPALDO"
-    dibujarTxt "Configurando firewall..." 38 20 1
+    dibujarTxt "CONFIGURANDO FIREWALL..." 38 20 1
     firewallConf
-    dibujarTxt "Configuracion terminada" 38 20 1
+    dibujarTxt "CONFIGURACION TERMINADA" 38 20 1
     sleep 0.5  
 }
 
@@ -198,7 +197,7 @@ pantallaInstalacionServidorSubredAdmin() {
     case $(variablesEntorno) in
 
         "0") 
-            dibujarTxt "Configurando variables..." 37 8 1
+            dibujarTxt "CONFIGURANDO VARIABLES..." 37 8 1
             sleep 0.5
             ;;
 
@@ -208,9 +207,9 @@ pantallaInstalacionServidorSubredAdmin() {
     esac
     VConfigRedParaLocal "SUBRED_ADMIN"
     
-    dibujarTxt "Configurando firewall..." 38 20 1
+    dibujarTxt "CONFIGURANDO FIREWALL..." 38 20 1
     firewallConf
-    dibujarTxt "Configuracion terminada" 38 20 1
+    dibujarTxt "CONFIGURACION TERMINADA" 38 20 1
     sleep 0.5
 }
 #endregion
@@ -241,15 +240,15 @@ preguntaDesinstalar() {
 					    colorBgDefecto=7
 					    iniciarPantallaNueva
 					    dibujarRectangulo 11 4 80 30 7 7 
-					    dibujarTxt "Desinstalando firewall..." 37 8 1
+					    dibujarTxt "DESINSTALANDO FIREWALL..." 37 8 1
 					    sleep 0.5
-					    dibujarTxt "Desinstalando SSH..." 39 12 1
+					    dibujarTxt "DESINSTALANDO SSH..." 39 12 1
 					    sleep 0.5
-					    dibujarTxt "Desinstalando crontab..." 38 16 1
+					    dibujarTxt "DESINSTALANDO CRONTAB..." 38 16 1
 					    sleep 0.5
-					    dibujarTxt "Eliminando carpetas..." 39 20 1
+					    dibujarTxt "ELIMINANDO CARPETAS..." 39 20 1
 					    sleep 0.5
-					    dibujarTxt "Borrando variables..." 40 24 1
+					    dibujarTxt "BORRANDO VARIABLES..." 40 24 1
 					    sleep 0.5
 					    desinstalar
                         continuar=false

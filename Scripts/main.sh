@@ -13,7 +13,7 @@
 
 Principal() {
     local continuar=true
-    #region tui
+    #region [rgba(27, 173, 192, 0.10)] tui 
     
     iniciarPantallaNueva 
     dibujarTxt "MENU PRINCIPAL" 43 5 0
@@ -21,17 +21,18 @@ Principal() {
     dibujarTxt "4 -> ARRIBA" 11 7 0
     dibujarTxt "5 -> ENTER " 11 8 0
     dibujarTxt "6 -> ABAJO" 11 9 0
+    dibujarTxt "ESC -> SALIR DE INPUT" 11 10 0
     
-    dibujarBoton "CENTRO DE COMPUTOS" 11 10 80 3
+    dibujarBoton "CENTRO DE COMPUTOS" 11 11 80 3
 
     if [ $EUID -eq 0 ];
     then
-        dibujarBoton "CONFIGURACIÓN DEL ENTORNO" 11 13 80 3 #necesita root 
-        dibujarBoton "DESINSTALAR ENTORNO" 11 16 80 3 #necesita root 
-        dibujarBoton "SALIR" 11 19 80 3
+        dibujarBoton "CONFIGURACIÓN DEL ENTORNO" 11 14 80 3 #necesita root 
+        dibujarBoton "DESINSTALAR ENTORNO" 11 17 80 3 #necesita root 
+        dibujarBoton "SALIR" 11 20 80 3
     else
 
-        dibujarBoton "SALIR" 11 13 80 3
+        dibujarBoton "SALIR" 11 14 80 3
     fi
     #endregion
    

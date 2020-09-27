@@ -33,7 +33,7 @@ crontabConf() {
 		echo "* */12 * * * root /etc/backupIncremental.sh">>/etc/crontab
 		echo "0 3 * * 0 root /etc/backupTotal.sh">>/etc/crontab
 		source /etc/ejecutarCrontab.sh 
-		systemctl restart crond.service 2> /dev/null
+		systemctl restart crond.service > /dev/null 2>&1
 		echo 0
 	fi
 }
@@ -75,7 +75,7 @@ firewallConf() {
 	iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT # HTTPS
 	iptables -A OUTPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
 	iptables -A OUTPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
-	iptables -A OUTPUT -p tcp --sport 2022 -j ACCEPT # SSH
+	iptables -A OUTPUT -p tcp --dport 2022 -j ACCEPT # SSH
 	iptables -A OUTPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
 	iptables -A OUTPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT # GIT
@@ -83,9 +83,16 @@ firewallConf() {
 	iptables -A OUTPUT -s ${IP_SUBRED_ADMIN%%:*} -j ACCEPT #IP de la subred de administradores 
 	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
 
+
+	# pruebas
+	iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT # SSH anterior
+	iptables -A OUTPUT -p tcp --dport 5200:55000 -j ACCEPT # pruebas puerto
+	iptables -A INPUT -p tcp --dport 22 -j ACCEPT # SSH anterior
+	iptables -A INPUT -p tcp --dport 5200:55000 -j ACCEPT # pruebas puerto
+
 	# Reinicio el servicio
-	service iptables save 2> /dev/null
-	service iptables restart 2> /dev/null
+	service iptables save > /dev/null 2>&1
+	service iptables restart > /dev/null 2>&1
 
 }
 
@@ -100,14 +107,14 @@ desinstalar() {
 	iptables -P OUTPUT ACCEPT
 	iptables -P FORWARD ACCEPT
 
-	service iptables save 2> /dev/null
-	service iptables restart 2> /dev/null
+	service iptables save > /dev/null 2>&1
+	service iptables restart > /dev/null 2>&1
 
 
 	# Restauro SSH 
 	mv -f /var/bytesoft/.sshd_config /etc/ssh/sshd_config
 	semanage port -d -t ssh_port_t -p tcp 2022 
-	systemctl restart sshd 2> /dev/null
+	systemctl restart sshd > /dev/null 2>&1
 
 	# Restauro crontab
 	mv -f /var/bytesoft/.crontab /etc/crontab
@@ -116,7 +123,7 @@ desinstalar() {
 	rm -f /etc/backupTotal.sh
 	rm -f /etc/ejecutarCrontab.sh
 	sh /Scripts/ConfigurarEntorno/Backup/ejecutarCrontab.sh
-	systemctl restart crond.service 2> /dev/null
+	systemctl restart crond.service > /dev/null 2>&1
 
 	# Borro las carpetas
 	rm -rf /var/bytesoft 
@@ -127,4 +134,3 @@ desinstalar() {
 	touch /etc/environment
 
 }
-

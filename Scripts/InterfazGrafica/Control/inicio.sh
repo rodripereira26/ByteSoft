@@ -36,13 +36,14 @@ moverAtras() {
 }
 
 actualizarPosActual() {
-
     # $1 : tecla presionada
+    # $2 : anterior 
+    # $3 : siguiente
 
-    if [ "$1" = "4" ]; 
+    if [ "$1" = "$2" ]; 
     then # ir atras
         moverAtras
-    elif [ "$1" = "6" ]; 
+    elif [ "$1" = "$3" ]; 
     then # ir adelante
         moverAdelante
     fi
@@ -71,22 +72,39 @@ siguientePos() {
     case $tipo in 
 
         "BTN")
-            gestorDeBoton
+            gestorDeBoton "4" "5" "6"
             ;;
 
         "INPTXT")
-            gestorDeEntradaTexto 0
+            gestorDeEntradaTexto "4" "5" "6" 0
             ;;
 
         "PWTXT")
-            gestorDeEntradaTexto 1
+            gestorDeEntradaTexto "4" "5" "6" 1
             ;;
 
         "SWITCH")
-            gestorDeSwitch
+            gestorDeSwitch "4" "5" "6"
             ;;
         *)
             ;;
     esac
-
+}
+probarFuncionEjecucionLocal(){
+    #region descripcion
+    # cada vez que se ejecuta un archivo 
+    # en terminal o en vscode lo ejecuta
+    # solo a ese archivo ignorando las otras 
+    # $1 : nombre de la funcion
+    # $2 : nombre del archivo actual
+    #endregion
+    
+    if [ "$1" ]; then
+        if [ -z "$BASH_ARGV0" ]; then 
+            BASH_ARGV0=$0
+        fi
+        if [ $(basename "$BASH_ARGV0") = "$2" ]; then # para ejecutar script actual se pasa por parametro ejecutar
+            $1
+        fi
+    fi
 }

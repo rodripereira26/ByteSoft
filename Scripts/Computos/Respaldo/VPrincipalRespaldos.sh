@@ -10,7 +10,7 @@
 PrincipalRespaldos() {
     local continuar=true
     
-    #region tui
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "RESPALDOS" 46 3 0
 

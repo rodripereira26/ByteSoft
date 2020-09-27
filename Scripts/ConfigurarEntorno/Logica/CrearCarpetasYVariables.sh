@@ -3,7 +3,7 @@
 #necesita root
 
 crearCarpetasIniciales() {
-    #region variables
+    #region [rgba(170, 160, 26, 0.10)] variables 
     local carpUsuarios="/home/USUARIOS"
     local carpAdministradores="/home/USUARIOS/ADMINISTRADORES"
     local carpMedicos="/home/USUARIOS/MEDICOS"

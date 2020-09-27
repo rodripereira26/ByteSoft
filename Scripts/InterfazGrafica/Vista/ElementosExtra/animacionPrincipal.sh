@@ -1,12 +1,12 @@
 #!/bin/bash
 
 animacionTitulo() {
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 : archivo de texto
     # $2 : posX
     # #3 : posY
     #endregion
-    #region variables
+    #region [rgba(170, 160, 26, 0.10)] variables 
     numeroDeLineas=$(cat $1 | wc -l)
     let numeroDeLineas=$numeroDeLineas+1
     let limiteSuperior=$numeroDeLineas-3
@@ -43,9 +43,10 @@ animacionTitulo() {
 
     sleep 1
 }
+# REVIEW - decidir si borrar
 #region deprecated
 animacionTitulo1() { 
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 : archivo de texto
     # $2 : posX
     # #3 : posY
@@ -97,7 +98,7 @@ animacionTitulo1() {
 }
 
 animacionTitulo2() {   
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
 
     # $1 : archivo de texto
     # $2 : posX

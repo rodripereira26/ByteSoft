@@ -7,7 +7,7 @@
 
 VConexiones(){
     local continuar=true
-    #region tui
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "CONEXIONES" 42 6 0
 
@@ -17,7 +17,7 @@ VConexiones(){
     dibujarTxt "SSH" 25 16 0
     dibujarSwitch 40 15 50 3 $estadoSSH
 
-    dibujarTxt "FTP" 25 19 0
+    dibujarTxt "VSFTP" 25 19 0
     dibujarSwitch 40 18 50 3 $estadoFTP
 
     dibujarBoton "VOLVER" 11 22 80 3
@@ -32,40 +32,37 @@ VConexiones(){
         case $posDeEsteElemento in 
 
             "0")
-                if [ $codigoRespuesta = "5" ]; 
+                if $modificado; 
                 then
                     if $estadoMYSQL; 
                     then
-                        systemctl stop mysqld 2> /dev/null
+                        systemctl stop mysqld
                     else 
-                        systemctl start mysqld 2> /dev/null & 
+                        systemctl start mysqld
                     fi
-                    actualizarEstadoServiciosSSHyMYSQL
                 fi
                 ;;
 
             "1")
-                if [ $codigoRespuesta = "5" ]; 
+                if $modificado; 
                 then
                     if $estadoSSH; 
                     then
-                        systemctl stop sshd 2> /dev/null
+                        systemctl stop sshd
                     else
-                        systemctl start sshd 2> /dev/null &
+                        systemctl start sshd
                     fi
-                    actualizarEstadoServiciosSSHyMYSQL
                 fi
                 ;;
             "2")
-                if [ $codigoRespuesta = "5" ]; 
+                if $modificado; 
                 then
                     if $estadoFTP; 
                     then
-                        systemctl stop vsftpd 2> /dev/null
+                        systemctl stop vsftpd
                     else
-                        systemctl start vsftpd 2> /dev/null &
+                        systemctl start vsftpd
                     fi
-                    actualizarEstadoServiciosSSHyMYSQL
                 fi
                 ;;
             "3")
@@ -82,7 +79,7 @@ ejecutarVConexiones() {
 
     actualizarEstadoServiciosSSHyMYSQL
     VConexiones
-
+    cerrarPantalla
 }
 
 actualizarEstadoServiciosSSHyMYSQL() {

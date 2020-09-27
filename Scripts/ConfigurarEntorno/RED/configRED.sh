@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
+
 #necesita root 
 
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
@@ -6,7 +7,7 @@
 VConfigRedParaLocal() {
     # $1 : tipo (SERVIDOR, RESPALDO, SUBRED_ADMIN)
 
-    #region variables locales
+    #region [rgba(170, 160, 26, 0.10)] variables  locales
     local continuar=true
     local _IP_SERVIDOR=""
     local _PREFIX=""
@@ -18,7 +19,7 @@ VConfigRedParaLocal() {
     local patronIP_SUBRED_ADMIN="(?<=export IP_SUBRED_ADMIN=)\d+.\d+.\d+.\d+:\d+"
     local patronIP_SERVIDOR="(?<=export IP_SERVIDOR=)\d+.\d+.\d+.\d+"
     #endregion
-    #region tui
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "CONFIGURACION DE RED" 41 6 0
 
@@ -93,7 +94,7 @@ VConfigRedParaLocal() {
                         [ "$_IP_RESPALDO" -a "$_IP_SUBRED_ADMIN" ]; then
                     
                         ping -c1 "$_IP_SERVIDOR" &> /dev/null
-                        if [ $? -eq 0 ] && [ $(hostname -I) != "$_IP_SERVIDOR" ];then 
+                        if [ $? -eq 0 ] && [ $(hostname -I) != "$_IP_SERVIDOR" ]; then 
                             mensajeError "Ya hay una ip en la red" 1 37 33 2 1 2
                         else
                             mensajeError "Configurando..." 2 37 33 0 2 2
@@ -162,7 +163,7 @@ configurarRed(){
     sed -i "s/GATEWAY=gateway/GATEWAY=$3/g" $ifcfg_local
     sed -i "s/DNS1=dns/DNS1=$4/g" $ifcfg_local
 
-    systemctl restart network 2> /dev/null
+    systemctl restart network > /dev/null 2>&1
 }
 #configurarRed 192.168.1.9 24 192.168.1.1 8.8.8.8
 #VConfigRedParaLocal "SERVIDOR"

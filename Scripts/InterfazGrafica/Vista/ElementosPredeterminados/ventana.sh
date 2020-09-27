@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -i colorBgDefecto=7
+
 #region imports
 . "/Scripts/InterfazGrafica/Vista/ElementosPredeterminados/elementosImports.sh"
 . "/Scripts/InterfazGrafica/Vista/ElementosExtra/elementosExtraImports.sh"
@@ -8,7 +9,7 @@ declare -i colorBgDefecto=7
 #endregion
 
 dibujarRectangulo() {
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 posicion en x
     # $2 posicion en y
     # $3 largo
@@ -16,15 +17,16 @@ dibujarRectangulo() {
     # $5 BG
     # $6 FG
     #endregion
-    
+
     tput setab $5
     tput setaf $6
+
     cargarRectangulo $1 $2 $3 $4
     tput cup $2 $1
 }
 
 cargarRectangulo(){
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 posicion en x
     # $2 posicion en y
     # $3 largo

@@ -33,11 +33,11 @@ matarProcesoPID() {
                 ;;
 
             "1")
-                if [ $codigoRespuesta = "5" ]; 
+                if $respuestaGestor; 
                 then
                     if [ -n "$pid" ]; 
                     then
-                        kill -9 $pid
+                        kill -9 $pid  > /dev/null 2>&1
                     else 
                         mensajeError "NO INGRESÓ NINGÚN PID" 1 37 33 2 3 1 1
                     fi     
@@ -68,7 +68,7 @@ matarProcesoNombre() {
     dibujarRectangulo 11 4 80 31 7 0
     dibujarTxt "MATAR PROCESO POR NOMBRE" 44 7 0 7
 
-    dibujarTxt "Nombre del proceso" 36 11 0 7
+    dibujarTxt "NOMBRE DEL PROCESO" 36 11 0 7
     dibujarEntradaTxt 36 12 31 false
 
     dibujarBoton "MATAR" 28 20 25 3
@@ -87,7 +87,7 @@ matarProcesoNombre() {
                 ;;
 
             "1")
-                if [ $codigoRespuesta = "5" ]; 
+                if $respuestaGestor; 
                 then
                     if [ -n "$nombre" ]; 
                     then

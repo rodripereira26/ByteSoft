@@ -9,7 +9,7 @@
 
 VMenuPrincipalServicios(){
     local continuar=true
-    #region tui
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "SERVICIOS" 46 3 0
 
@@ -19,7 +19,7 @@ VMenuPrincipalServicios(){
     
     dibujarBoton "VER SERVICIOS ACTIVOS (Q PARA SALIR)" 11 9 80 3
     
-    if [ $EUID -eq 0 ];then
+    if [ $EUID -eq 0 ]; then
         dibujarBoton "ACTIVAR SERVICIO" 11 12 80 3 #necesita root
         dibujarBoton "DESACTIVAR SERVICIO" 11 15 80 3 #necesita root
         dibujarBoton "CONEXIONES (SSH, MYSQL, FTP)" 11 18 80 3 #necesita root

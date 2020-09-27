@@ -13,7 +13,7 @@ activarServicio() {
     dibujarRectangulo 11 4 80 31 7 0
     dibujarTxt "ACTIVAR SERVICIO" 44 7 0 7
 
-    dibujarTxt "Nombre del servicio" 36 11 0 7
+    dibujarTxt "NOMBRE DEL SERVICIO" 36 11 0 7
     dibujarEntradaTxt 36 12 31 false
 
     dibujarBoton "ACTIVAR" 28 20 25 3
@@ -34,7 +34,7 @@ activarServicio() {
                 ;;
 
             "1")
-                if [ $codigoRespuesta = "5" ]; 
+                if $respuestaGestor; 
                 then
                     if [ -n "$nombre" ]; 
                     then
@@ -57,12 +57,12 @@ activarServicio() {
                 fi 
                 ;;
 
-                "2") 
+            "2") 
                 if $respuestaGestor;
                 then
                     continuar=false
                 fi   
-                ;;  
+            ;;  
 
         esac
     done
@@ -81,7 +81,7 @@ desactivarServicio() {
     dibujarRectangulo 11 4 80 31 7 0
     dibujarTxt "DESACTIVAR SERVICIO" 44 7 0 7
 
-    dibujarTxt "Nombre del servicio" 36 11 0 7
+    dibujarTxt "NOMBRE DEL SERVICIO" 36 11 0 7
     dibujarEntradaTxt 36 12 31 false
 
     dibujarBoton "DESACTIVAR" 28 20 25 3
@@ -102,7 +102,7 @@ desactivarServicio() {
                 ;;
 
             "1")
-                if [ $codigoRespuesta = "5" ]; 
+                if $respuestaGestor; 
                 then
                     if [ -n "$nombre" ]; 
                     then

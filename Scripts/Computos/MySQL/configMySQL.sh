@@ -11,7 +11,7 @@ PrincipalMysql() {
 
     local continuar=true
     
-    #region tui
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "MYSQL" 43 3 0
 
@@ -77,7 +77,6 @@ ejecutarMysql() {
                 ;;
                 
             *)
-                continuarCiclo=false
                 ;;
         esac
         cerrarPantalla
@@ -177,7 +176,7 @@ instalarMySQL() {
     yum update
     yum install wget
     mkdir $paquetes
-    wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm -O "$paquetes/repo.rpm" 2> /dev/null
+    wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm -O "$paquetes/repo.rpm"  > /dev/null 2>&1
     rpm -ivh mysql-community-release-el7-5.noarch.rpm
     yum update
     yum install mysql-community-server
@@ -270,7 +269,7 @@ exportarBD() {
             "2")
                 tput sgr0
                 clear
-                if [ $codigoRespuesta -eq "5" ]; 
+                if $respuestaGestor; 
                 then
                     if [ -d $ruta ];
                     then
@@ -296,7 +295,7 @@ exportarBD() {
                 ;;
 
             "3")
-                if [ $codigoRespuesta -eq "5" ]; 
+                if $respuestaGestor; 
                 then
                     continuarExport=false
                 fi

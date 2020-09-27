@@ -1,20 +1,21 @@
 #!/bin/bash
 
 cargarEntradaTxt() {
-    #region args
-    # $1 posicion en x
-    # $2 posicion en y
-    # $3 largo
-    # $4 BG
-    # $5 FG
-    # $6 posActual # si se pasa por argumento se imprime el texto
+    #region [rgba(47, 0, 255, 0.10)] args
+    # $1 : posicion en x
+    # $2 : posicion en y
+    # $3 : largo
+    # $4 : ancho
+    # $5 : BG
+    # $6 : FG
+    # $7 : texto
+
     #endregion
+    dibujarRectangulo $1 $2 $3 $4 $5 $6
 
-    dibujarRectangulo $1 $2 $3 1 $4 $5
-
-    if [ $6 ]; 
+    if [ "$7" ]; 
     then
-        echo -n $(tomarElemento $6 1) 1>&2
+        echo -n "$7" 1>&2
     fi
 }
 
@@ -23,34 +24,36 @@ cargarEntradaTxtYPassword() {
 
     if [ $1 -eq 0 ]; 
     then
-        cargarEntradaTxt $posX $posY $largo $ancho $colorBg $colorFg $posDeEsteElemento
+        cargarEntradaTxt $posX $posY $largo $ancho $colorBg $colorFg $texto
     else
         cargarEntradaTxt $posX $posY $largo $ancho $colorBg $colorFg 
     fi  
 }
 
 gestorDeEntradaTexto() {
-    # $1 int es password
+    # $1 : anterior
+    # $2 : enter
+    # $3 : siguiente
+    # $4 :  int es password
 
     modificado=false
     respuestaGestor=""
     codigoRespuesta=""
 
-    invertirColoresEntradaTxt $1 1>&2
+    invertirColoresEntradaTxt $4 1>&2
 
-    codigoRespuesta=$(hizoClick "4 5 6")
-    actualizarPosActual $codigoRespuesta
+    codigoRespuesta=$(hizoClick "$1 $2 $3")
+    actualizarPosActual $codigoRespuesta $1 $3
 
-    if [ "$codigoRespuesta" = "5" ]; 
+    if [ "$codigoRespuesta" = "$2" ]; 
     then
         cargarEntradaTxtYPassword 1
-        tomarDatoEntradaTxt $1
-        respuestaGestor=$inputTXT
-        modificarElemento $posDeEsteElemento 1 $inputTXT
+        respuestaGestor=$(tomarDatoEntradaTxt $4)
+        modificarElemento $posDeEsteElemento 1 $respuestaGestor
         moverAdelante
         modificado=true
     else 
-        cargarEntradaTxtYPassword $1 1>&2
+        cargarEntradaTxtYPassword $4 1>&2
     fi
 }
 
@@ -59,39 +62,39 @@ invertirColoresEntradaTxt() {
 
     if [ $1 -eq 0 ] ; 
     then
-        cargarEntradaTxt $posX $posY $largo $ancho 5 0 $posDeEsteElemento
+        cargarEntradaTxt $posX $posY $largo $ancho $colorFg $colorBg $texto
     else
-        cargarEntradaTxt $posX $posY $largo $ancho 5 0 
+        cargarEntradaTxt $posX $posY $largo $ancho $colorFg $colorBg
     fi  
 } 
 
 tomarDatoEntradaTxt() {
-    # $1 int mostrarTextoAnterior
-
-    continuarLeyendo=true
-    inputTXT=""
+    # $1 : int mostrarTextoAnterior
+    local continuarLeyendo=true
+    local entradaTXT=""
 
     while $continuarLeyendo ; 
     do
-        read -rn1 press
+        read -rsn1 press
 
-        if [ "$press" = "5" ]; then
+        if [ "$press" = $'\e' ]; then
             continuarLeyendo=false
 
         elif [ "$press" = $'\177' ]; then
-            if [ "$inputTXT" ]; then
-                inputTXT=${inputTXT::-1}
+            if [ "$entradaTXT" ]; then
+                entradaTXT=${entradaTXT::-1}
             fi
         else
-            inputTXT="$inputTXT$press"
+            entradaTXT="$entradaTXT$press"
         fi
 
-        tput cup $posY $posX
-        printf "%${largo}s"
+        tput cup $posY $posX 1>&2
+        printf "%${largo}s" 1>&2
 
-        if [ $1 -eq 0 ]; then
-            tput cup $posY $posX
-            echo -n $inputTXT
+        if [ "$1" = 0 ]; then
+            tput cup $posY $posX 1>&2
+            echo -n "$entradaTXT" 1>&2
         fi
     done
+    echo -n $(echo -n "$entradaTXT") 
 }

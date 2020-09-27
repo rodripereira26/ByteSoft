@@ -10,7 +10,7 @@
 #necesita root depende del caso de la direccion
 
 VRespaldarDirectorios() {
-    #region variables
+    #region [rgba(170, 160, 26, 0.10)] variables 
     local continuar=true
     usarPredeterminada=true
     guardarRespaldo=false

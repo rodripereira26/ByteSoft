@@ -6,9 +6,9 @@ VElegirGrupo(){
     grupoPerteneciente=""
     
     iniciarPantallaNueva
-    dibujarTxt "Ingresar cargo" 80 2
-    dibujarBoton "Administracion" 20 7 80 3
-    dibujarBoton "Medico" 20 10 80 3 
+    dibujarTxt "INGRESAR CARGO" 80 2
+    dibujarBoton "ADMINISTRACION" 20 7 80 3
+    dibujarBoton "MEDICO" 20 10 80 3 
     
 
     while [ -z "$grupoPerteneciente" ];

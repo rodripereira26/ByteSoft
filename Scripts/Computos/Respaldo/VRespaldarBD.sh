@@ -7,7 +7,7 @@
 #necesita root
 
 VRespaldarBD() {
-    #region variables
+    #region [rgba(170, 160, 26, 0.10)] variables 
     local continuar=true
     user=""
     guardarRespaldo=false

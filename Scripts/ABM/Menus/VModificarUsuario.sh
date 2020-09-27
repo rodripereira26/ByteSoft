@@ -3,7 +3,7 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuModificarUsuario() {
-    #region variables
+    #region [rgba(170, 160, 26, 0.10)] variables 
 
     local continuar=true
     user=""
@@ -14,7 +14,7 @@ VMenuModificarUsuario() {
 
     #endregion
     
-    #region tui
+    #region [rgba(27, 173, 192, 0.10)] tui 
     
     iniciarPantallaNueva
 

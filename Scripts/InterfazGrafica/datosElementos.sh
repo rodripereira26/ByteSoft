@@ -3,7 +3,7 @@
 declare -A historialPos
 
 agregarUbicacion(){
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 tipo de elemento 
     # $2 texto
     # $3 inicio en x
@@ -36,7 +36,7 @@ tomarDelProximoElemento(){
     colorFg=${historialPos[$1,7]}
 }
 modificarElemento(){
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 : posElemento 
     # $2 : caracteristicaPos
     # $3 : valor a modificar
@@ -44,7 +44,7 @@ modificarElemento(){
     historialPos[$1,$2]=$3
 }
 tomarElemento(){
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # $1 : posElemento
     # $2 : caracteristica
     #endregion

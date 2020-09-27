@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pregunta() {
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # -Hace una pregunta y da por respueta si-no-
     # $1: Texto
     # $2: ColorBG
@@ -22,7 +22,7 @@ pregunta() {
 }
 
 mensajeError() {
-    #region args
+    #region [rgba(47, 0, 255, 0.10)] args
     # -Muestra un mensaje de error por x tiempo-
     # $1: Texto
     # $2: ColorBG
