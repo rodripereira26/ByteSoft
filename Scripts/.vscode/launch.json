@@ -10,10 +10,24 @@
             "name": "Bash-Debug (select script from list of sh files)",
             "cwd": "${workspaceFolder}",
             "program": "${command:SelectScriptName}",
-            "args": [],
+            "args": [ 
+                
+             ],
             "terminalKind": "integrated"
 
         },
+        {
+            "type": "bashdb",
+            "request": "launch",
+            "name": "Bash-Debug (This file)",
+            "cwd": "${workspaceFolder}",
+            "program": "${file}",
+            "args": [
 
+             ],
+            "terminalKind": "integrated",
+            "showDebugOutput": true
+
+        }
     ]
 }

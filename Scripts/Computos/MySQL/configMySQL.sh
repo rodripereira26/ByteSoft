@@ -11,6 +11,7 @@ PrincipalMysql() {
 
     local continuar=true
     
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "MYSQL" 43 3 0
 
@@ -20,17 +21,18 @@ PrincipalMysql() {
     
     instalado=$(grep mysql /etc/environment | cut -f2 -d"=")
 
-    if [ -z $instalado ];
+    if [ "$instalado" ];
     then
-        dibujarBoton "INSTALAR" 11 6 80 3
-    else 
         dibujarBoton "DESINSTALAR" 11 6 80 3
+    else 
+        dibujarBoton "INSTALAR" 11 6 80 3
     fi
     
     dibujarBoton "EXPORTAR BASE DE DATOS" 11 9 80 3
     dibujarBoton "IMPORTAR BASE DE DATOS" 11 12 80 3
     dibujarBoton "VOLVER" 11 15 80 3
-    
+    #endregion
+
     while $continuar; 
     do
         siguientePos
@@ -56,11 +58,11 @@ ejecutarMysql() {
         case $posDeEsteElemento in 
 
             "0")
-                if [ -z $instalado ];
+                if [ "$instalado" ];
                 then
-                    preguntaInstalacionMySQL
+                    preguntaDesinstalarMySQL
                 else
-                    preguntaDesinstalarMySQL  
+                    preguntaInstalacionMySQL
                 fi
                 ;;
 
@@ -83,9 +85,10 @@ ejecutarMysql() {
 
 }
 
+#region preguntar instalar-desinstalar mysql
 preguntaInstalacionMySQL() {
 
-    continuar=true
+    local continuar=true
 
     pregunta "¿Desea instalar MySQL?" 7 28 15 21 2 7
 
@@ -121,7 +124,7 @@ preguntaInstalacionMySQL() {
 
 preguntaDesinstalarMySQL() {
 
-    continuar=true
+    local continuar=true
 
     pregunta "¿Desea desinstalar MySQL?" 7 28 15 21 2 7
                   
@@ -156,7 +159,9 @@ preguntaDesinstalarMySQL() {
                     done
 
 }
+#endregion
 
+#region instalar-desinstalar mysql
 instalarMySQL() {
 
     # Instalación
@@ -171,7 +176,7 @@ instalarMySQL() {
     yum update
     yum install wget
     mkdir $paquetes
-    wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm -O "$paquetes/repo.rpm" 2> /dev/null
+    wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm -O "$paquetes/repo.rpm"  > /dev/null 2>&1
     rpm -ivh mysql-community-release-el7-5.noarch.rpm
     yum update
     yum install mysql-community-server
@@ -227,13 +232,15 @@ desinstalarMySQL() {
    clear
    
 }
+#endregion
 
+#region acciones con SQL
 exportarBD() {
 
     local nombre=""
     local ruta=""
     local continuarExport=true
-    
+
     colorBgDefecto=7
     iniciarPantallaNueva
     dibujarRectangulo 11 4 80 30 7 7 
@@ -262,7 +269,8 @@ exportarBD() {
             "2")
                 tput sgr0
                 clear
-                if [ $codigoRespuesta -eq "5" ];
+                if $respuestaGestor; 
+                then
                     if [ -d $ruta ];
                     then
                         #mysqldump -u root -p $nombre | gzip > "$ruta"/$nombre.sql.gz
@@ -287,7 +295,7 @@ exportarBD() {
                 ;;
 
             "3")
-                if [ $codigoRespuesta -eq "5" ]; 
+                if $respuestaGestor; 
                 then
                     continuarExport=false
                 fi
@@ -298,3 +306,4 @@ exportarBD() {
     done
 
 }
+#endregion

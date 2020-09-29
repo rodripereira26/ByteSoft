@@ -2,21 +2,19 @@
 
 . "/Scripts/InterfazGrafica/Vista/ElementosPredeterminados/ventana.sh"
 
-iniciarPantallaNueva() {
-    cerrarPantalla
-    tput civis
-}
 
 dibujarSwitch() {   
-
+    #region [rgba(47, 0, 255, 0.10)] args
+    # -Carga switch y guarda los datos en una lista-
     # $1 : es el inicio de la entrada de texto en x
     # $2 : es el inicio de la entrada de texto en y
     # $3 : largo del switch
     # $4 : ancho del switch
-    # $5 : estado inicial (true o false)
-    # $6 : color encendido (opcional)
-    # $7 : color apagada  (opcional)
-    
+    # $5 : estado inicial {true o false}
+    # $6 : color encendido {opcional}
+    # $7 : color apagada  {opcional}
+    #endregion
+
     let colorEncendido=2
     let colorApagado=1
 
@@ -35,6 +33,8 @@ dibujarSwitch() {
 }
 
 dibujarBoton(){
+    #region [rgba(47, 0, 255, 0.10)] args
+    # -Carga boton en pantalla y guarda los datos en una lista--
     # $1 : el texto del boton
     # $2 : es el inicio de la entrada de texto en x
     # $3 : es el inicio de la entrada de texto en y
@@ -42,7 +42,7 @@ dibujarBoton(){
     # $5 : ancho del boton
     # $6 : color background 
     # $7 : color foreground
-    
+    #endregion
     let colorBg=4      
     let colorFg=7   
 
@@ -61,13 +61,15 @@ dibujarBoton(){
 }
 
 dibujarTxt() {
-
+    #region [rgba(47, 0, 255, 0.10)] args
+    # -Muestra un texto en pantalla y guarda los datos en una lista-
     # $1 el texto a imprimir
     # $2 es el inicio de la entrada de texto en x
     # $3 es el inicio de la entrada de texto en y 
-    # $4 color foreground (opcional)
-    # $5 color background (opcional)
+    # $4 color foreground {opcional}
+    # $5 color background {opcional}
 
+    #endregion
     let colorFg=7
     let colorBg=$colorBgDefecto
 
@@ -84,26 +86,30 @@ dibujarTxt() {
     tput setaf $colorFg
     tput setab $colorBg
 
-    echo -n $1
+    echo -n "$1"
 
 }
 
 dibujarEntradaTxt() { 
-
+    #region [rgba(47, 0, 255, 0.10)] args
+    # -Muestra una entrada de texto y guarda los datos en una lista-
     # $1 : es el inicio de la entrada de texto en x 
     # $2 : es el inicio de la entrada de texto en y 
     # $3 : es el largo de la entrada 
     # $4 : int es password
+    # $5 : texto por defecto {opcional}
+
+    #endregion
 
     let colorBg=0 
     let colorFg=5
             
-    dibujarRectangulo $1 $2 $3 1 $colorBg $colorFg
-
     if $4; 
     then
-        agregarUbicacion "PWTXT" "" $1 $2 $3 1 $colorBg $colorFg 
+        agregarUbicacion "PWTXT" "$5" $1 $2 $3 1 $colorBg $colorFg 
     else
-        agregarUbicacion "INPTXT" "" $1 $2 $3 1 $colorBg $colorFg 
+        agregarUbicacion "INPTXT" "$5" $1 $2 $3 1 $colorBg $colorFg 
     fi
+    cargarEntradaTxt $1 $2 $3 1 $colorBg $colorFg "$5"
+
 }

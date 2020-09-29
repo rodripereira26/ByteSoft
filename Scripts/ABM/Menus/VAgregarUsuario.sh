@@ -3,11 +3,16 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuAgregarUsuario() {
+    #region [rgba(170, 160, 26, 0.10)] variables 
 
     local continuar=true
     local user=""
     local pw=""
 
+    #endregion
+
+    #region [rgba(27, 173, 192, 0.10)] tui  
+    
     iniciarPantallaNueva
     dibujarTxt "INGRESAR USUARIO" 41 6 0
     dibujarTxt "| EN LA CONTRASEÑA:" 48 12 0
@@ -23,7 +28,8 @@ VMenuAgregarUsuario() {
 
     dibujarBoton "SIGUIENTE" 11 20 40 3
     dibujarBoton "VOLVER" 50 20 40 3
-
+    #endregion
+    
     while $continuar; 
     do
         siguientePos

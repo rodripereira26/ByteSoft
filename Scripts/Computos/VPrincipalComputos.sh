@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh"
 
 . "/Scripts/ABM/Menus/VPrincipalMenuUsuarios.sh"
@@ -8,13 +9,17 @@
 . "/Scripts/Computos/Procesos/VAccionesProcesos.sh"
 . "/Scripts/Computos/Servicios/VPrincipalMenuServicios.sh"
 . "/Scripts/Computos/Servicios/VConexiones.sh"
-. "/Scripts/Computos/Red/VPrincipalRedes.sh"
+. "/Scripts/Computos/Iptables/VPrincipalRedes.sh"
 . "/Scripts/Computos/MySQL/configMySQL.sh"
+. "/Scripts/Computos/FTP/MPrincipalFTP.sh"
+#endregion
 
 PrincipalComputos() {
 
     local continuar=true
     
+    #region [rgba(27, 173, 192, 0.10)] tui 
+
     iniciarPantallaNueva
     dibujarTxt "CENTRO DE COMPUTOS" 43 3 0
 
@@ -30,8 +35,10 @@ PrincipalComputos() {
     dibujarBoton "LOGS" 11 21 80 3
     dibujarBoton "RESPALDOS" 11 24 80 3
     dibujarBoton "MYSQL" 11 27 80 3
-    dibujarBoton "VOLVER" 11 30 80 3
+    dibujarBoton "FTP" 11 30 80 3 # solo root
+    dibujarBoton "VOLVER" 11 33 80 3
 
+    #endregion
 
     while $continuar; 
     do
@@ -89,6 +96,9 @@ ejecutarComputos() {
                 ;;
 
             "8")
+                ejecutarFTP
+                ;;
+            "9")
                 continuarCiclo=false
                 ;;
                   
@@ -106,7 +116,7 @@ comprobarRed () {
     then
         mensajeError "Se detectó conexión a internet" 2 37 33 2 2 2
     else
-        mensajeError "No Se detectó conexión a internet" 1 37 33 2 1 2
+        mensajeError "No se detectó conexión a internet" 1 37 33 2 1 2
     fi
 
 }

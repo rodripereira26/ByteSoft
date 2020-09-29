@@ -6,7 +6,8 @@
 
 menuProcesos(){
     local continuar=true
-
+    
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "PROCESOS" 46 3 0
 
@@ -15,7 +16,7 @@ menuProcesos(){
     dibujarTxt "6 -> ABAJO" 11 8 0
     
     dibujarBoton "VER PROCESOS ACTIVOS (Q PARA SALIR)" 11 9 80 3
-    if [ $EUID -eq 0 ];then
+    if [ $EUID -eq 0 ]; then
         dibujarBoton "INSTALAR HTOP(VER PROCESOS MEJORADO)" 11 12 80 3 #solo root
         dibujarBoton "MATAR PROCESO USANDO EL PID" 11 15 80 3
         dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 18 80 3
@@ -25,6 +26,7 @@ menuProcesos(){
         dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 15 80 3
         dibujarBoton "VOLVER" 11 18 80 3
     fi
+    #endregion
 
     while $continuar; 
     do

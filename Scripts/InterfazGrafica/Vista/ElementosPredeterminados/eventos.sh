@@ -13,9 +13,9 @@ hizoClick(){
             seguirLeyendo=false
         fi
     
-        codigoRespuesta=$press
+        codigoRespuesta="$press"
 
     done
 
-    echo $codigoRespuesta
+    echo "$codigoRespuesta"
 }

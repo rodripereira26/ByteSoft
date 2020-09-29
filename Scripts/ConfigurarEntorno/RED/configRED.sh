@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
+
 #necesita root 
 
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
@@ -6,6 +7,7 @@
 VConfigRedParaLocal() {
     # $1 : tipo (SERVIDOR, RESPALDO, SUBRED_ADMIN)
 
+    #region [rgba(170, 160, 26, 0.10)] variables  locales
     local continuar=true
     local _IP_SERVIDOR=""
     local _PREFIX=""
@@ -16,7 +18,8 @@ VConfigRedParaLocal() {
     local patronIP_RESPALDO="(?<=export IP_RESPALDO=)\d+.\d+.\d+.\d+"
     local patronIP_SUBRED_ADMIN="(?<=export IP_SUBRED_ADMIN=)\d+.\d+.\d+.\d+:\d+"
     local patronIP_SERVIDOR="(?<=export IP_SERVIDOR=)\d+.\d+.\d+.\d+"
-
+    #endregion
+    #region [rgba(27, 173, 192, 0.10)] tui 
     iniciarPantallaNueva
     dibujarTxt "CONFIGURACION DE RED" 41 6 0
 
@@ -39,20 +42,19 @@ VConfigRedParaLocal() {
     dibujarEntradaTxt 65 15 20 false
 
     dibujarBoton "SIGUIENTE" 11 20 80 3
+    #endregion
 
     while $continuar; 
     do
 
         siguientePos
-: '
-al comentar este comentario se puede ir a SIGUIENTE sin insertar las variables (para pruebas)
+: ' al comentar este comentario se puede ir a SIGUIENTE sin insertar las variables (para pruebas)
         IP_SERVIDOR="192.168.1.9"
         PREFIX="24"
         GATEWAY="192.168.1.1"
         DNS="8.8.8.8"
         IP_RESPALDO="192.168.1.10"
         IP_SUBRED_ADMIN="192.168.100.97/24"
-        #192.168.1.9 24 192.168.1.1 8.8.8.8 192.168.1.10 192.168.100.97/24 
 '       
         case $posDeEsteElemento in
             "0")
@@ -92,7 +94,7 @@ al comentar este comentario se puede ir a SIGUIENTE sin insertar las variables (
                         [ "$_IP_RESPALDO" -a "$_IP_SUBRED_ADMIN" ]; then
                     
                         ping -c1 "$_IP_SERVIDOR" &> /dev/null
-                        if [ $? -eq 0 ] && [ $(hostname -I) != "$_IP_SERVIDOR" ];then 
+                        if [ $? -eq 0 ] && [ $(hostname -I) != "$_IP_SERVIDOR" ]; then 
                             mensajeError "Ya hay una ip en la red" 1 37 33 2 1 2
                         else
                             mensajeError "Configurando..." 2 37 33 0 2 2
@@ -108,7 +110,7 @@ al comentar este comentario se puede ir a SIGUIENTE sin insertar las variables (
                                     ;;
                             esac
 
-
+                            
                             if [ "$(grep IP_RESPALDO /etc/environment | wc -l)" -eq "0" ]; then
                                 echo "export IP_RESPALDO=$_IP_RESPALDO" >> /etc/environment
                             else
@@ -143,11 +145,13 @@ al comentar este comentario se puede ir a SIGUIENTE sin insertar las variables (
 }
 
 configurarRed(){
+    #region argumentos
     # $1 : ip mi maquina
     # $2 : prefix
     # $3 : puerta de enlace
     # $4 : dns (8.8.8.8)
-
+    #endregion
+   
     local ifcfg_auxiliar="/Scripts/ConfigurarEntorno/RED/ifcfg-enp0s3nuevo"
     local ifcfg_viejo="/Scripts/ConfigurarEntorno/RED/ifcfg-enp0s3viejo"
     local ifcfg_local="/etc/sysconfig/network-scripts/ifcfg-enp0s3"
@@ -159,7 +163,7 @@ configurarRed(){
     sed -i "s/GATEWAY=gateway/GATEWAY=$3/g" $ifcfg_local
     sed -i "s/DNS1=dns/DNS1=$4/g" $ifcfg_local
 
-    systemctl restart network 2> /dev/null
+    systemctl restart network > /dev/null 2>&1
 }
 #configurarRed 192.168.1.9 24 192.168.1.1 8.8.8.8
 #VConfigRedParaLocal "SERVIDOR"

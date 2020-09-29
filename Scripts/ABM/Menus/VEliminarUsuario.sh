@@ -3,21 +3,24 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 
 VMenuEliminarUsuario() {
-    
+    #region [rgba(170, 160, 26, 0.10)] variables 
     local continuar=true
-    
     usuarioAEliminar=""
     abrirSeleccionarGrupo=false
+    #endregion
     
+    #region [rgba(27, 173, 192, 0.10)] tui 
+
     iniciarPantallaNueva
     dibujarTxt "ELIMINAR USUARIO" 43 3 0
 
-    dibujarTxt "Ingresa el usuario" 38 11 0 ##############
+    dibujarTxt "INGRESA EL USUARIO" 38 11 0 ##############
     dibujarEntradaTxt 38 12 20 false
 
     dibujarBoton "SIGUIENTE" 14 18 40 3 ##############
     dibujarBoton "VOLVER" 53 18 40 3 ##############
-
+    
+    #endregion
 
     while $continuar; 
     do
