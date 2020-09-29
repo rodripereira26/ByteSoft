@@ -18,11 +18,11 @@ Permisos de Insert
 */
 GRANT INSERT ON bytesoft_bdd.usuario TO gestor, aux;
 GRANT INSERT ON bytesoft_bdd.usuarioTel TO gestor, medico, paciente, aux;
-GRANT INSERT ON bytesoft_bdd.chat TO paciente;
+GRANT INSERT ON bytesoft_bdd.salachat TO paciente;
 GRANT INSERT ON bytesoft_bdd.mensaje TO medico, paciente;
 GRANT INSERT ON bytesoft_bdd.gestor TO gestor;
 GRANT INSERT ON bytesoft_bdd.paciente TO gestor, aux;
-GRANT INSERT ON bytesoft_bdd.pacientePatologia TO paciente;
+GRANT INSERT ON bytesoft_bdd.paciente_selecciona_patologia TO paciente;
 GRANT INSERT ON bytesoft_bdd.sintoma TO gestor;
 GRANT INSERT ON bytesoft_bdd.patologia TO gestor;
 GRANT INSERT ON bytesoft_bdd.medico TO gestor, medico;
@@ -37,11 +37,11 @@ Permisos de Select
 */
 GRANT SELECT ON bytesoft_bdd.usuario TO gestor, aux;
 GRANT SELECT ON bytesoft_bdd.usuarioTel TO gestor, medico, paciente;
-GRANT SELECT ON bytesoft_bdd.chat TO medico, paciente;
+GRANT SELECT ON bytesoft_bdd.salachat TO medico, paciente;
 GRANT SELECT ON bytesoft_bdd.mensaje TO medico, paciente;
 GRANT SELECT ON bytesoft_bdd.gestor TO gestor, aux;
 GRANT SELECT ON bytesoft_bdd.paciente TO gestor, medico, paciente, aux;
-GRANT SELECT ON bytesoft_bdd.pacientePatologia TO medico, paciente;
+GRANT SELECT ON bytesoft_bdd.paciente_selecciona_patologia TO medico, paciente;
 GRANT SELECT ON bytesoft_bdd.sintoma TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.patologia TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.medico TO gestor, medico, paciente, aux;
@@ -50,6 +50,7 @@ GRANT SELECT ON bytesoft_bdd.usuario_entra_chat TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.paciente_indica_sintoma TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.patologia_contiene_sintoma TO gestor, medico, paciente;
 GRANT SELECT ON bytesoft_bdd.paciente_obtiene_diagnostico TO medico, paciente;
+
 /*
 Permiso para que el médico pueda ver el nombre del paciente
 */
@@ -60,11 +61,11 @@ Permisos de Update
 */
 GRANT UPDATE ON bytesoft_bdd.usuario TO gestor, medico, paciente;
 GRANT UPDATE ON bytesoft_bdd.usuarioTel TO gestor, medico, paciente;
-GRANT UPDATE ON bytesoft_bdd.chat TO medico, paciente;
+GRANT UPDATE ON bytesoft_bdd.salachat TO medico, paciente;
 GRANT UPDATE ON bytesoft_bdd.mensaje TO medico, paciente;
 GRANT UPDATE ON bytesoft_bdd.gestor to gestor;
 GRANT UPDATE ON bytesoft_bdd.paciente TO gestor, paciente;
-GRANT UPDATE ON bytesoft_bdd.pacientePatologia TO paciente;
+GRANT UPDATE ON bytesoft_bdd.paciente_selecciona_patologia TO paciente;
 GRANT UPDATE ON bytesoft_bdd.sintoma TO gestor;
 GRANT UPDATE ON bytesoft_bdd.patologia TO gestor;
 GRANT UPDATE ON bytesoft_bdd.medico to gestor, medico;
@@ -73,10 +74,15 @@ GRANT UPDATE ON bytesoft_bdd.paciente_indica_sintoma TO paciente;
 GRANT UPDATE ON bytesoft_bdd.patologia_contiene_sintoma TO gestor;
 
 /*
-Permiso de Delete
+Permisos de Delete
 */
 GRANT DELETE ON bytesoft_bdd.usuarioTel TO gestor, medico, paciente;
 GRANT DELETE ON bytesoft_bdd.patologia_contiene_sintoma TO gestor;
+
+/*
+Permisos de procedimientos almacenados
+*/
+GRANT EXECUTE ON PROCEDURE bytesoft_bdd2.CrearChat TO paciente
 
 /*
 Creación de los usuarios

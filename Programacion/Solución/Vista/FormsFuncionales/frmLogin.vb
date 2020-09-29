@@ -87,7 +87,6 @@ Public Class frmLogin
             Me.CambiarTabla(Path.Combine(Datos_Temporales.pathConf, "0"))
         ElseIf Configuracion.Singleton.lenguaje = Configuracion.Idioma.en_US Then
             Me.CambiarTabla(Path.Combine(Datos_Temporales.pathConf, "1"))
-
         End If
     End Sub
     Private Sub CargarUsuario()
@@ -102,10 +101,6 @@ Public Class frmLogin
             lblContraseña.Visible = True
         End If
 
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-        Application.Exit()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles picContraseña.Click

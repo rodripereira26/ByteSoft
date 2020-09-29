@@ -63,7 +63,7 @@ Partial Class frmLogin
         '
         'pnlIniciarSesion
         '
-        Me.pnlIniciarSesion.BackColor = System.Drawing.Color.White
+        Me.pnlIniciarSesion.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.pnlIniciarSesion.Controls.Add(Me.ing)
         Me.pnlIniciarSesion.Controls.Add(Me.esp)
         Me.pnlIniciarSesion.Controls.Add(Me.MetroButton1)
@@ -262,6 +262,7 @@ Partial Class frmLogin
         '
         'picDiseño
         '
+        Me.picDiseño.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.picDiseño.Image = CType(resources.GetObject("picDiseño.Image"), System.Drawing.Image)
         Me.picDiseño.Location = New System.Drawing.Point(375, 0)
         Me.picDiseño.Margin = New System.Windows.Forms.Padding(0)
