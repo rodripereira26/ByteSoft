@@ -31,7 +31,7 @@ DDL - Creación de tablas
     CONSTRAINT fk_telefonos FOREIGN KEY (cedula) REFERENCES usuario (cedula)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
     
-    CREATE TABLE chat (
+    CREATE TABLE salachat (
     idChat INT NOT NULL AUTO_INCREMENT,
 	finalizado BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (idChat)
@@ -45,7 +45,7 @@ DDL - Creación de tablas
     mensaje VARCHAR(300) NOT NULL,
     PRIMARY KEY (idMensaje, fechaEnvio),
     CONSTRAINT fk_chat_cedula FOREIGN KEY (cedula) REFERENCES usuario (cedula),
-    CONSTRAINT fk_chat_idChat FOREIGN KEY (idChat) REFERENCES chat (idChat)
+    CONSTRAINT fk_chat_idChat FOREIGN KEY (idChat) REFERENCES salachat (idChat)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
     
     CREATE TABLE gestor (
@@ -64,13 +64,14 @@ DDL - Creación de tablas
     CONSTRAINT fk_paciente_cedula FOREIGN KEY (cedula) REFERENCES usuario (cedula)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
     
-    CREATE TABLE pacientePatologia (
+    CREATE TABLE paciente_selecciona_patologia (
     cedula INT (9) NOT NULL,
     patologia VARCHAR (25) NOT NULL,
     PRIMARY KEY (cedula, patologia),
-    CONSTRAINT fk_pacientePatologia_cedula FOREIGN KEY (cedula) REFERENCES usuario (cedula)
+    CONSTRAINT fk_paciente_selecciona_patologia_cedula FOREIGN KEY (cedula) REFERENCES usuario (cedula),
+	CONSTRAINT fk_Paciente_selecciona_patologia_idPatologia FOREIGN KEY (idPatologia) REFERENCES patologia (idPatologia)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
-    
+
     CREATE TABLE sintoma (
     idSintoma INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR (25) NOT NULL,
@@ -116,7 +117,7 @@ DDL - Creación de tablas
     fechaIngreso DATETIME NOT NULL,
     PRIMARY KEY (cedula, idChat, fechaIngreso),
     CONSTRAINT fk_usuario_entra_chat_cedula FOREIGN KEY (cedula) REFERENCES usuario (cedula),
-    CONSTRAINT fk_usuario_entra_chat_chat FOREIGN KEY (idChat) REFERENCES chat (idChat)
+    CONSTRAINT fk_usuario_entra_chat_chat FOREIGN KEY (idChat) REFERENCES salachat (idChat)
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
     
     CREATE TABLE paciente_indica_sintoma (
@@ -146,5 +147,13 @@ DDL - Creación de tablas
     ) ENGINE = InnoDB DEFAULT CHARSET = UTF8; 
     
     /* Fin de tablas */
+    
+    /* Procedimientos Almacenados */
+    DELIMITER $$
+	CREATE PROCEDURE CrearChat()
+	BEGIN
+		INSERT INTO chat (finalizado) VALUES (0);
+		SELECT MAX(idChat) FROM chat WHERE finalizado = 0;
+	END $$
     
 /* Fin */

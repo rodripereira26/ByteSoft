@@ -26,7 +26,7 @@ INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("2435
 INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("11111111", "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b", "xd", "xd", "xd", "xd");
 INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("22222222", "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b", "xd", "xd", "xd", "xdd");
 INSERT INTO usuario (cedula, contrasena, pNom, pApe, sApe, correo) VALUES ("33333333", "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b", "xd", "xd", "xd", "xddd");
-
+ 
 /*
 UsuarioTel
 */
@@ -40,12 +40,12 @@ INSERT INTO usuarioTel (cedula, telefono) VALUES ("24357009","24781256");
 /*
 Chat
 */
-INSERT INTO chat (idChat) VALUES (1);
-INSERT INTO chat (idChat) VALUES (2);
-INSERT INTO chat (idChat) VALUES (3);
-INSERT INTO chat (idChat) VALUES (4);
-INSERT INTO chat (idChat) VALUES (5);
-INSERT INTO chat (idChat) VALUES (6);
+INSERT INTO salachat (idChat) VALUES (1);
+INSERT INTO salachat (idChat) VALUES (2);
+INSERT INTO salachat (idChat) VALUES (3);
+INSERT INTO salachat (idChat) VALUES (4);
+INSERT INTO salachat (idChat) VALUES (5);
+INSERT INTO salachat (idChat) VALUES (6);
 
 /*
 Mensajes
@@ -56,7 +56,7 @@ INSERT INTO mensaje (cedula, idChat, mensaje, fechaEnvio) VALUES ("31264984", "2
 INSERT INTO mensaje (cedula, idChat, mensaje, fechaEnvio) VALUES ("76700056", "4","¿Cómo te sentís?", '2020-08-12');
 INSERT INTO mensaje (cedula, idChat, mensaje, fechaEnvio) VALUES ("15654523", "6","Holaaaa", '2020-08-15');
 INSERT INTO mensaje (cedula, idChat, mensaje, fechaEnvio) VALUES ("15654523", "6","Cómo está", '2020-08-15');
-
+ 
 /*
 Gestores
 */
@@ -76,7 +76,7 @@ INSERT INTO paciente (cedula, fecNac, sexo) VALUES ("49841235","1999-07-30","M")
 INSERT INTO paciente (cedula, fecNac, sexo) VALUES ("11111111","2001-05-26","M");
 
 /*
-Sintomas
+Síntomas
 */
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Fiebre","La fiebre es el aumento temporal en la temperatura del cuerpo en respuesta a alguna enfermedad o padecimiento."); 
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Comezón","Sensación molesta que se siente en una parte del cuerpo y que provoca la necesidad de rascarse.");
@@ -84,7 +84,7 @@ INSERT INTO sintoma (nombre, descripcion) VALUES ("Tos","Las vías respiratorias
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Deshidratación","La deshidratación es la alteración o falta de agua y sales minerales en el plasma de un cuerpo, también se puede definir como la pérdida de agua corporal por encima del 3 % .");
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Desmayo","Pérdida momentánea del sentido o del conocimiento que sufre una persona."); 
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Mareos","El mareo es un término que a menudo se utiliza para describir dos síntomas diferentes: sensación de mareo y vértigo. El mareo es la sensación de que podría desmayarse."); 
-INSERT INTO sintoma (nombre, descripcion) VALUES ("Náuseas","La náusea es la sensación de tener ganas de vomitar. El vómito es la salida violenta del contenido del estómago a través de la boca.");
+INSERT INTO sintoma (nombre, descripcion) VALUES ("Náuseas","La náUSEa es la sensación de tener ganas de vomitar. El vómito es la salida violenta del contenido del estómago a través de la boca.");
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Diarrea","Se le llama diarrea a las heces acuosas y blandas. Usted tiene diarrea si evacúa heces sueltas tres o más veces en un día. La diarrea aguda dura un corto tiempo y es un problema común.");
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Dolor de garganta","El dolor de garganta es dolor, carraspera o irritación de la garganta que a menudo empeora al tragar.");
 INSERT INTO sintoma (nombre, descripcion) VALUES ("Dolor abdominal","Es el dolor que se siente en el área entre el pecho y la ingle, a menudo denominada región estomacal o vientre."); 
@@ -119,18 +119,18 @@ INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("D
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Cáncer de pulmon","El cáncer de pulmón se produce cuando hay un crecimiento exagerado de células malignas en este órgano. Si no se diagnostica a tiempo se puede producir la metástasis del tiempo, en estos casos las células cancerosas se desplazan hacia otros órganos del cuerpo.","La elección de tratamiento dependerá de la etapa y de la extensión del cáncer, del tamaño del tumor o el tipo de cáncer de pulmón. Las principales opciones son: Cirugía, radioterapia, quimioterapia o imnunoterapia","1");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Depresión","La depresión se presenta como un conjunto de síntomas de predominio afectivo (tristeza patológica, apatía, anhedonia, desesperanza, decaimiento, irritabilidad, sensación subjetiva de malestar e impotencia frente a las exigencias de la vida.","El ambiente que rodea a una persona que sufre depresión es fundamental para lograr su rehabilitación. La comprensión y el cariño de los familiares y allegados es importante, como lo es la paciencia, puesto que la falta de ganas y motivación de los enfermos puede provocar la desesperación.","2");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Ébola","El virus del Ebola se empieza a propagar en poblaciones humanas por contacto estrecho con órganos, sangre, secreciones u otros líquidos corporales de animales infectados, como chimpancés, gorilas, murciélagos frugívoros, monos, antílopes y puercoespines que se encuentran muertos o enfermos en la selva.","No hay ningún tratamiento específico, aunque se están evaluando algunos en fase preclínica y experimental. Algunas de estas terapias son: el plasma de convaleciente (transfusiones de plasma que contienen anticuerpos contra el virus).","2");
-INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Gonorrea","La gonorrea es una infección de transmisión sexual (ITS) causada por una bacteria denominada Neisseria gonorrhoeae, que afecta al tracto genital, la boca y el ano. ","Los antibióticos son el mejor tratamiento para tratar la gonorrea aunque, a veces, algunas infecciones resultan ser resistentes a este tipo de medicamentos, por lo que en algunos casos es más frecuente recetar más de un antibiótico.","2");
+INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Gonorrea","La gonorrea es una infección de transmisión sexual (ITS) causada por una bacteria denominada Neisseria gonorrhoeae, que afecta al tracto genital, la boca y el ano. ","Los antibióticos son el mejor tratamiento para tratar la gonorrea, aunque, a veces, algunas infecciones resultan ser resistentes a este tipo de medicamentos, por lo que en algunos casos es más frecuente recetar más de un antibiótico.","2");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Gastroenteritis","La gastroenteritis es una infección o inflamación del revestimiento interno (mucosa) del estómago y el intestino delgado que puede estar causada por agentes infecciosos (virus, bacterias, parásitos), toxinas químicas y fármacos.","La gastroenteritis requiere un reposo alimenticio y reposición de agua con electrolitos con sueros orales. En caso de no poder acudir a la farmacia o al centro de salud, puede recurrirse a las bebidas carbonatadas o agua con bicarbonato y sal para recuperar todo el líquido perdido con los vómitos y las diarreas.","3");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Hepatitis A","La hepatitis A es una enfermedad hepática causada por el virus de la hepatitis A. Este virus se transmite principalmente cuando una persona que no está infectada y no está vacunada come o bebe algo contaminado por heces de una persona infectada por ese virus.","No existe un tratamiento específico para la hepatitis A más allá de las vacunas, pero la mayoría de personas que contraen la hepatitis A se recuperan por sí solas en pocas semanas.","2");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Hepatitis B","La hepatitis B es una infección hepática que está causada por el virus de la hepatitis B. Según la Organización Mundial de la Salud (OMS), esta patología supone un importante problema de salud a nivel mundial, ya que es el tipo más grave de hepatitis viral.","La hepatitis B no necesita un tratamiento específico en la fase aguda. Las medidas se centran en mantener el bienestar y el equilibrio nutricional, que incluye la reposición de los líquidos perdidos por los vómitos y la diarrea.","1");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Meningitis","La meningitis es una enfermedad habitualmente infecciosa provocada por virus o bacterias que provoca la infección e inflamación de las meninges -unas membranas que rodean el cerebro y la médula espinal-.","La mayor parte de las personas que sufre una meningitis viral se cura sin problemas. En la meningitis bacteriana el tratamiento consiste en cuidados específicos en el hospital y terapia intensa con antibióticos.","3");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Malaria","El paludismo o malaria es una enfermedad provocada por el parásito Plasmodium, un parásito unicelular, que se transmite a través de la picadura de mosquitos infectados hembra del género Anopheles.","La malaria requiere hospitalización por lo que una persona susceptible de haber sido infectada que presenta síntomas debe acudir inmediatamente al médico. El tratamiento principal es con cloroquina. Sin embargo, a veces el parásito puede ser resistente a este fármaco y el paciente requerirá otros tratamientos.","2");
 INSERT INTO patologia (nombre, descripcion, recomendacion, prioridad) VALUES ("Neumonía","La neumonía es una infección en uno o en los dos pulmones caracterizada por la multiplicación de microorganismos en el interior de los alvéolos, lo que provoca que aparezca una inflamación con daño pulmonar. Puede estar causada por múltiples patógenos (bactrias, hongos y virus).","“Una vez que diagnosticamos la neumonía se indica inmediatamente un tratamiento antibiótico. Cuando hay sospecha de que está presente el virus de la gripe se añade también un tratamiento antivírico (más habitual en invierno).","1");
-
+ 
 /*
 Médico
 */
-INSERT INTO medico (cedula, especializacion) VALUES ("31264984","Oncólogo");
+INSERT INTO medico (cedula, especializacion) VALUES ("31264984","oncólogo");
 INSERT INTO medico (cedula, especializacion) VALUES ("9679359","Pediatra");
 INSERT INTO medico (cedula, especializacion) VALUES ("76700056","Cirujano");
 INSERT INTO medico (cedula, especializacion) VALUES ("18360276","General");
@@ -206,7 +206,6 @@ INSERT INTO patologia_contiene_sintoma (idPatologia, idSintoma) VALUES (13,10);
 INSERT INTO patologia_contiene_sintoma (idPatologia, idSintoma) VALUES (13,12);
 INSERT INTO patologia_contiene_sintoma (idPatologia, idSintoma) VALUES (13,9);
 INSERT INTO patologia_contiene_sintoma (idPatologia, idSintoma) VALUES (13,3);
-
 /*
-Fin
+  Fin
 */
