@@ -28,10 +28,11 @@ PrincipalFTP() {
         dibujarBoton "DESINSTALAR" 11 6 80 3
         dibujarBoton "CONFIGURAR" 11 9 80 3
         dibujarBoton "LOG FTP" 11 12 80 3
+        dibujarBoton "VOLVER" 11 15 80 3
     else 
         dibujarBoton "INSTALAR" 11 6 80 3
+        dibujarBoton "VOLVER" 11 9 80 3
     fi
-    dibujarBoton "VOLVER" 11 15 80 3
     
     #endregion
 
@@ -160,7 +161,7 @@ instalarFTP() {
 
     tput sgr0
     clear                              
-    echo "Comenzará el proceso de instalación"
+    echo "COMENZARÁ EL PROCESO DE INSTALACIÓN"
     sleep 3
     clear
     yum -y update
@@ -168,37 +169,24 @@ instalarFTP() {
     yum -y update
     systemctl start vsftpd
     clear
-    echo "Instalación finalizada"
+    echo "INSTALACIÓN FINALIZADA"
     sleep 3
     clear
     echo "export ftp=true">>/etc/environment
     tput sgr0
     clear
-    #region inutil
-    # yum -y install wget
-    # wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
-    # rpm -ivh mysql57-community-release-el7-9.noarch.rpm
-    # yum update 
-    # yum install mysql-community-server
-    # systemctl start mysqld
-    # clear
-    # mensajeError "Se ha instalado MySQL" 2 37 33 2 2 2
-    # echo "export ftp=true">>/etc/environment
-    # tput sgr0
-    # clear
-    #endregion
 }
 desinstalarFTP() {
 
    tput sgr0
    clear
-   echo "Comenzará el proceso de desinstalación"
+   echo "COMENZARÁ EL PROCESO DE DESINSTALACIÓN"
    sleep 3
    clear
    yum -y remove vsftpd
    clear
    sed -i 's/export ftp=true//' /etc/environment
-   echo "Desinstalación finalizada"
+   echo "DESINSTALACIÓN FINALIZADA"
    sleep 3
    clear
    tput sgr0

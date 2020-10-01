@@ -45,9 +45,9 @@ VPermitirIP(){
                 if $respuestaGestor; then
                     iptables -I "$tipoRegla" -s $ip -j ACCEPT  > /dev/null 2>&1
                     if [ $? -eq 0 ]; then
-                        mensajeError "Ejecutado correctamente" 2 37 33 2 2 2
+                        mensajeError "EJECUTADO CORRECTAMENTE" 2 37 33 2 2 2
                     else
-                        mensajeError "Ip invalida o tipo de regla invalida" 1 37 33 2 1 2
+                        mensajeError "IP INVALIDA O TIPO DE REGLA INVALIDA" 1 37 33 2 1 2
                     fi
                 fi 
                 ;;

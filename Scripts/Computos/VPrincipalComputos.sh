@@ -114,9 +114,10 @@ comprobarRed () {
 
     if ping -c1 8.8.8.8 &>/dev/null;
     then
-        mensajeError "Se detectó conexión a internet" 2 37 33 2 2 2
+        mensajeError "SE DETECTÓ CONEXIÓN A INTERNET" 2 37 33 2 2 2
     else
-        mensajeError "No se detectó conexión a internet" 1 37 33 2 1 2
+        mensajeError "NO SE DETECTÓ CONEXIÓN A INTERNET" 1 37 33 2 1 2
     fi
 
 }
+probarFuncionEjecucionLocal ejecutarComputos "VPrincipalComputos.sh"

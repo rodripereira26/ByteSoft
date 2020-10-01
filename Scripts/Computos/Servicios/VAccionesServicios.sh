@@ -125,7 +125,7 @@ desactivarServicio() {
                 fi 
                 ;;
 
-                "2") 
+            "2") 
                 if $respuestaGestor;
                 then
                     continuar=false

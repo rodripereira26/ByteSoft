@@ -34,7 +34,7 @@ logearSSH() {
                     clear
                     su $usuario
                     if [ $? -eq 1 ]; then
-                        mensajeError "Usuario o contraseña incorrectos" 1 37 33 2 3 1 1
+                        mensajeError "USUARIO O CONTRASEÑA INCORRECTOS" 1 37 33 2 3 1 1
                         logearSSH
                     fi
                     continuar=false

@@ -70,7 +70,7 @@ ejecutarMysql() {
                 exportarBD
                 ;;
             "2")
-                mensajeError "Funcion importar en construccion" 1 37 33 2 1 2
+                importarBD
                 ;;
             "3")
                 continuarCiclo=false
@@ -170,7 +170,7 @@ instalarMySQL() {
 
     tput sgr0
     clear                              
-    echo "Comenzará el proceso de instalación"
+    echo "COMENZARÁ EL PROCESO DE INSTALACIÓN"
     sleep 3
     clear
     yum update
@@ -182,28 +182,16 @@ instalarMySQL() {
     yum install mysql-community-server
     systemctl start mysqld
     clear
-    echo "Instalación finalizada"
+    echo "INSTALACIÓN FINALIZADA"
     sleep 3
     clear
     echo "export mysql=true">>/etc/environment
     tput sgr0
     clear
- 
-    #yum -y install wget
-    #wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
-    #rpm -ivh mysql57-community-release-el7-9.noarch.rpm
-    #yum update 
-    #yum install mysql-community-server
-    #systemctl start mysqld
-    #clear
-    #mensajeError "Se ha instalado MySQL" 2 37 33 2 2 2
-    #echo "export mysql=true">>/etc/environment
-    #tput sgr0
-    #clear
 
     # Configuración
 
-    echo "Ingrese un espacio en blanco o, en caso de error, la siguiente contraseña: $(grep -i password /var/log/mysqld.log | head -1 | cut -d" " -f11)"
+    echo "INGRESE UN ESPACIO EN BLANCO O, EN CASO DE ERROR, LA SIGUIENTE CONTRASEÑA: $(grep -i password /var/log/mysqld.log | head -1 | cut -d" " -f11)"
     mysql_secure_installation
     clear
 
@@ -213,7 +201,7 @@ desinstalarMySQL() {
 
    tput sgr0
    clear
-   echo "Comenzará el proceso de desinstalación"
+   echo "COMENZARÁ EL PROCESO DE DESINSTALACIÓN"
    sleep 3
    clear
    yum remove mysql mysql-server
@@ -225,7 +213,7 @@ desinstalarMySQL() {
    rm -f /var/log/mysqld.log 
    clear
    sed -i 's/export mysql=true//' /etc/environment
-   echo "Desinstalación finalizada"
+   echo "DESINSTALACIÓN FINALIZADA"
    sleep 3
    clear
    tput sgr0
@@ -244,8 +232,10 @@ exportarBD() {
     colorBgDefecto=7
     iniciarPantallaNueva
     dibujarRectangulo 11 4 80 30 7 7 
+
     dibujarTxt "NOMBRE DE LA BASE DE DATOS" 11 11 0
     dibujarEntradaTxt 11 12 20 false
+
     dibujarTxt "DESTINO" 11 14 0
     dibujarEntradaTxt 11 15 20 true
 
@@ -259,18 +249,23 @@ exportarBD() {
         case $posDeEsteElemento in
             
             "0")
-                nombre=$respuestaGestor
+                if $modificado; then
+                    nombre=$respuestaGestor
+                fi
                 ;;
             
             "1")
-                ruta=$respuestaGestor
+                if $modificado; then
+                    ruta=$respuestaGestor
+                fi
                 ;;
 
             "2")
-                tput sgr0
-                clear
+
                 if $respuestaGestor; 
                 then
+                    tput sgr0
+                    clear
                     if [ -d $ruta ];
                     then
                         #mysqldump -u root -p $nombre | gzip > "$ruta"/$nombre.sql.gz
@@ -279,12 +274,12 @@ exportarBD() {
                         if [ -e $nombre.sql ];
                         then
                             tput setaf 2
-                            echo "Se ha exportado la base de datos"
+                            echo "SE HA EXPORTADO LA BASE DE DATOS"
                             tput sgr0
                             clear
                         else
                             tput setaf 1
-                            echo "Error al exportar la base de datos"
+                            echo "ERROR AL EXPORTAR LA BASE DE DATOS"
                             tput sgr0
                             clear
                         fi
@@ -306,4 +301,80 @@ exportarBD() {
     done
 
 }
+importarBD() {
+    local nombreBD=""
+    local archivoSQL=""
+    local continuarImport=true
+
+    colorBgDefecto=7
+    iniciarPantallaNueva
+
+    dibujarRectangulo 11 4 80 30 7 7 
+
+    dibujarTxt "NOMBRE DE LA BASE DE DATOS" 11 11 0
+    dibujarEntradaTxt 11 12 20 false
+
+    dibujarTxt "ARCHIVO SQL" 11 14 0
+    dibujarEntradaTxt 11 15 20 false
+
+
+    dibujarBoton "IMPORTAR" 11 20 40 3
+    dibujarBoton "VOLVER" 50 20 40 3
+
+    while $continuarImport; 
+    do
+        siguientePos
+
+        case $posDeEsteElemento in
+
+            "0")
+                if $modificado; then
+                    nombreBD=$respuestaGestor
+                fi
+                ;;
+            "1")
+                if $modificado; then
+                    archivoSQL=$respuestaGestor
+                fi
+                ;;
+
+            "2")
+
+                if $respuestaGestor; 
+                then
+                    tput sgr0
+                    clear
+                    if [ -d $archivoSQL -a "$nombreBD" ]; then
+                        mysqldump -u root -p $nombreBD < "$archivoSQL"
+                        if [ $? -eq 0 ];
+                        then
+                            tput setaf 2
+                            echo "SE HA IMPORTADO LA BASE DE DATOS"
+                            tput sgr0
+                            clear
+                        else
+                            tput setaf 1
+                            echo "ERROR AL IMPORTAR LA BASE DE DATOS"
+                            tput sgr0
+                            clear
+                        fi
+                    fi
+                    tput sgr0
+                    clear
+                fi
+                ;;
+
+            "3")
+                if $respuestaGestor; 
+                then
+                    continuarImport=false
+                fi
+                ;;
+
+        esac
+
+    done
+
+}
 #endregion
+importarBD

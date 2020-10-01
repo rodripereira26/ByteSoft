@@ -8,7 +8,6 @@
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
-#. "/Scripts/Computos/MySQL/configMySQL.sh"
 . "/Scripts/ConfigurarEntorno/RED/configRED.sh"
 #endregion
 

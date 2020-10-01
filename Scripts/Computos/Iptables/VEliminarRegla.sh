@@ -48,13 +48,13 @@ VEliminarRegla(){
                     if  [ $reglaEspecifica -a $tipoRegla ]; then
                         iptables -D $tipoRegla $reglaEspecifica  > /dev/null 2>&1
                         if [ $? -eq 0 ]; then
-                            mensajeError "Ejecutado correctamente" 2 37 33 2 0 2
+                            mensajeError "EJECUTADO CORRECTAMENTE" 2 37 33 2 0 2
                             mostrarTabla "$tipoRegla" "$reglaEspecifica" "$maximaReglas" 
                         else
-                            mensajeError "Ip invalida" 1 37 33 2 0 2
+                            mensajeError "IP INVALIDA" 1 37 33 2 0 2
                         fi
                     else
-                        mensajeError "Ingrese tipo regla y nro" 1 37 33 2 0 2 
+                        mensajeError "INGRESE TIPO REGLA Y NRO" 1 37 33 2 0 2 
                     fi
 
                 fi

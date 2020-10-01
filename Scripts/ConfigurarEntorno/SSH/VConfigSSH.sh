@@ -53,6 +53,7 @@ pantallaSSH() {
                 if $modificado; then             
                     pathBanner=$respuestaGestor
                 fi
+                ;;
             "3") 
                 if $respuestaGestor;
                 then
@@ -61,7 +62,7 @@ pantallaSSH() {
                     chmod 755 "$pathBanner"
 
                     configurarSSH $root $pathBanner
-                    mensajeError "El puerto por defecto será el 2022" 2 34 33 5 5 2 2
+                    mensajeError "EL PUERTO POR DEFECTO SERÁ EL 2022" 2 34 33 5 5 2 2
                     continuar=false
                 fi   
                 ;;  

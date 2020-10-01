@@ -42,7 +42,7 @@ logearMySQL() {
                     clear
                     mysql -u$usuario -p$contrasena 2> /dev/null
                     if [ $? -eq 1 ]; then
-                        mensajeError "Usuario o contraseña incorrectos" 1 37 33 2 3 1 1
+                        mensajeError "USUARIO O CONTRASEÑA INCORRECTOS" 1 37 33 2 3 1 1
                         logearMySQL
                     fi
                     continuar=false
