@@ -30,25 +30,21 @@ VBloquearIP(){
         case $posDeEsteElemento in
         
             "0")
-                if $modificado;
-				then 
+                if $modificado; then 
                     tipoRegla=$respuestaGestor
                 fi             
                 ;;
 
             "1")
-                if $modificado;
-				then 
+                if $modificado; then 
                     ip=$respuestaGestor
                 fi             
                 ;;
                 
             "2")
-                if $respuestaGestor;
-				then
+                if $respuestaGestor; then
                     iptables -I $tipoRegla -s $ip -j DROP  > /dev/null 2>&1
-                    if [ $? -eq 0 ];
-				    then
+                    if [ $? -eq 0 ]; then
                         mensajeError "EJECUTADO CORRECTAMENTE" 2 37 33 2 2 2
                     else
                         mensajeError "IP INVALIDA O TIPO DE REGLA INVALIDA" 1 37 33 2 1 2
@@ -56,8 +52,7 @@ VBloquearIP(){
                 fi 
                 ;;
             "3")
-                if $respuestaGestor;
-				then
+                if $respuestaGestor; then
                     continuar=false  
                 fi
                 ;;

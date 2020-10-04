@@ -6,8 +6,7 @@
 VBuscarLogUsuarios() {
     #region [rgba(170, 160, 26, 0.10)] variables 
     local continuar=true
-    if [ -z "$nombreFila" ];
-	then
+    if [ -z "$nombreFila" ]; then
         nombreFila=""
         textoBusqueda=""
     fi
@@ -37,15 +36,13 @@ VBuscarLogUsuarios() {
         case $posDeEsteElemento in
 
             "0") #NOMBRE FILA
-                if $modificado;
-                then
+                if $modificado; then
                     nombreFila=$respuestaGestor
                 fi
                 ;;
 
             "1") #BUSQUEDA
-                if $modificado;
-                then 
+                if $modificado; then 
                     textoBusqueda=$respuestaGestor
                     continuar=false
                 fi     
@@ -70,10 +67,8 @@ VBuscarLogUsuarios() {
 
 ejecutarVBuscarLogUsuarios() {
     VBuscarLogUsuarios
-    if [ "$posDeEsteElemento" = "1" ] || [ "$posDeEsteElemento" = "2" ];
-	then
-        if [ "$nombreFila" ];
-		then
+    if [ "$posDeEsteElemento" = "1" ] || [ "$posDeEsteElemento" = "2" ]; then
+        if [ "$nombreFila" ]; then
             cerrarPantalla
             case "$nombreFila" in
                 "DIA")

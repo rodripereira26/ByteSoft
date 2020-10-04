@@ -35,8 +35,7 @@ cargarRectangulo(){
 
     tput cup $2 $1 1>&2
     printf "%-$3s" " " 1>&2
-    if (( $4 > 1 ));
-	then
+    if (( $4 > 1 )); then
         cargarRectangulo $1 $(($2 + 1)) $3 $(($4 - 1))
     fi
 }

@@ -11,22 +11,19 @@ configuracionArchivosYDirectorios(){
     # $6 : log_ftp_protocol - registra peticiones FTP, util para depurar {default: NO}
     # $7 : write_enable - permitir escritura {default: NO}
     #endregion
-    if [ "$1" ];
-	then
+    if [ "$1" ]; then
         agregarConfiguracion "local_umask" "$1" "$archivoAConfigurar"
     else
         agregarConfiguracion "local_umask" '(none)' "$archivoAConfigurar"
     fi
 
-    if [ "$2" ];
-	then
+    if [ "$2" ]; then
         agregarConfiguracion "file_open_mode" "$2" "$archivoAConfigurar"
     else
         agregarConfiguracion "file_open_mode" '(none)' "$archivoAConfigurar"
     fi
 
-    if [ "$3" ];
-	then
+    if [ "$3" ]; then
         agregarConfiguracion "home" "$3" "/etc/default/useradd"
     else
         agregarConfiguracion "home" "/home" "/etc/default/useradd"
@@ -47,8 +44,7 @@ configuracionIniciosDeSesion(){
     #endregion
     
     agregarConfiguracion "userlist_enable" "$1" "$archivoAConfigurar"   
-    if [ "$1" = "YES" ];
-	then
+    if [ "$1" = "YES" ]; then
         agregarConfiguracion "userlist_deny" "$2" "$archivoAConfigurar"   
         agregarConfiguracion "userlist_log" "$3" "$archivoAConfigurar"   
     else
@@ -70,10 +66,8 @@ configurarFTPAnon(){
     local condicionAnonMKDIR=$([ $(grep -cE "^writeEnable=NO" "$archivoAConfigurar") -eq 0 ] && echo true || echo false)
 
     agregarConfiguracion "anonymous_enable" "$1" "$archivoAConfigurar"   
-    if [ "$1" = "YES" ];
-	then
-        if $condicionAnonMKDIR;
-		then
+    if [ "$1" = "YES" ]; then
+        if $condicionAnonMKDIR; then
             agregarConfiguracion "anon_mkdir_write_enable" "$2" "$archivoAConfigurar"
         fi
         agregarConfiguracion "anon_root" "$3" "$archivoAConfigurar"   
@@ -98,14 +92,12 @@ configuracionComandosDenegadosYPermitidos(){
     local cmds_allowed=$1
     local cmds_denied=$2
     #endregion
-    if [ "$cmds_allowed" ];
-	then
+    if [ "$cmds_allowed" ]; then
         agregarConfiguracion "cmds_allowed" "$cmds_allowed" "$archivoAConfigurar" 
     else
         agregarConfiguracion "cmds_allowed" '(none)' "$archivoAConfigurar" 
     fi
-    if [ "$cmds_denied" ];
-	then
+    if [ "$cmds_denied" ]; then
         agregarConfiguracion "cmds_denied" "$cmds_denied" "$archivoAConfigurar"
     else
         agregarConfiguracion "cmds_denied" '(none)' "$archivoAConfigurar" 
@@ -113,8 +105,7 @@ configuracionComandosDenegadosYPermitidos(){
 }
 configurarBanner(){
     # $1 : banner_file path {default: (none)}
-    if [ "$1" ];
-	then
+    if [ "$1" ]; then
         chmod 744 "$1"
         agregarConfiguracion "banner_file" "$1" "$archivoAConfigurar"   
     else
@@ -135,19 +126,16 @@ configurarPuertosPASV(){
     
     systemctl start firewalld
     
-    if [ $pasvHabilitado ];
-    then
+    if [ $pasvHabilitado ];then
         firewall-cmd --permanent --remove-port=$pasv_min_port-$pasv_max_port/tcp
     fi
 
     agregarConfiguracion "pasv_enable" "$1" "$archivoAConfigurar"
 
-    if [ "$1" = "YES" ];
-	then
+    if [ "$1" = "YES" ]; then
         agregarConfiguracion "pasv_min_port" "$2" "$archivoAConfigurar"
         agregarConfiguracion "pasv_max_port" "$3" "$archivoAConfigurar"
-        if [ $2 -ne 0 ] || [ $3 -ne 0 ];
-		then
+        if [ $2 -ne 0 ] || [ $3 -ne 0 ]; then
             firewall-cmd --permanent --zone=public --add-service=ftp
             firewall-cmd --permanent --zone=public --add-port=$2-$3/tcp
         fi
@@ -179,8 +167,7 @@ configurarMaximos(){
 }
 configuracionProtocolo(){
     # $1 : listen {default: NO}
-    if [ "$1" = "YES" ];
-	then
+    if [ "$1" = "YES" ]; then
         agregarConfiguracion "listen" "YES" "$archivoAConfigurar"
         agregarConfiguracion "listen_ipv6" "NO" "$archivoAConfigurar"
     else
@@ -199,17 +186,14 @@ agregarConfiguracion(){
     #endregion
     
     local patronBusqueda="^$1=.*"
-    if [ "$2" = "(none)" ];
-	then
+    if [ "$2" = "(none)" ]; then
         sed -i "/$patronBusqueda/d" "$3"
     else
-        if [ $(grep -cE  "$patronBusqueda" $3) -eq 1 ];
-		then
+        if [ $(grep -cE  "$patronBusqueda" $3) -eq 1 ]; then
             sed -i "s|$patronBusqueda|$1=$2|g" "$3"
         else
             sed -i "/$patronBusqueda/d" "$3" #elimina todas las lineas, si no hay, no hace nada y si es mas de una, las borra 
-            if [ $(cat -A "$3" | grep -c $) -gt $(wc -l "$3" | cut -d" " -f1) ];
-		    then # evita que dos lineas se junten en una
+            if [ $(cat -A "$3" | grep -c $) -gt $(wc -l "$3" | cut -d" " -f1) ]; then # evita que dos lineas se junten en una
                 echo "" >> "$3"
             fi
             echo "$1=$2" >> "$3"
@@ -222,8 +206,7 @@ getConfiguracion(){
     # $2 : respuesta por defecto
     local lectura=$(grep -oP "(?<=^$1=).+" "$archivoAConfigurar")
     
-    if [ "$lectura" ];
-	then
+    if [ "$lectura" ]; then
         echo -n $lectura 
     else
         echo -n $2
@@ -239,8 +222,7 @@ configuracionEsTrue(){
     #   operador (ej =) a 
     #   YES 
     #endregion
-    if [ "$(getConfiguracion $1)" $2 "$3" ];
-	then
+    if [ "$(getConfiguracion $1)" $2 "$3" ]; then
         echo true
     else
         echo false
@@ -249,8 +231,7 @@ configuracionEsTrue(){
 #endregion
 
 definirVariables(){
-    if [ -z "$(grep vsftpPrincipal /etc/environment)" ];
-	then
+    if [ -z "$(grep vsftpPrincipal /etc/environment)" ]; then
         echo "export auxialiarVsftpdConf=/Scripts/Computos/FTP/vsftpd.conf" >> /etc/environment
         echo "export copiaSeguridadVsftpConf=/Scripts/Computos/FTP/vsftpd__anterior.conf" >> /etc/environment
         echo "export vsftpPrincipal=/etc/vsftpd/vsftpd.conf" >> /etc/environment

@@ -18,8 +18,7 @@ VMenuServicioConf(){
 
 
     dibujarBoton "LOGUEAR MYSQL" 11 9 80 3
-    if [ $EUID -ne 0 ];
-	then 
+    if [ $EUID -ne 0 ]; then 
         dibujarBoton "LOGUEAR SSH" 11 12 80 3 #solo no root
         dibujarBoton "VOLVER" 11 15 80 3
     else

@@ -29,8 +29,7 @@ VMenuEliminarUsuario() {
         case $posDeEsteElemento in 
 
             "0")
-                if $modificado;
-                then
+                if $modificado; then 
                     usuarioAEliminar=$respuestaGestor                
                 fi
 

@@ -35,8 +35,7 @@ VComandos() {
         case $posDeEsteElemento in
 
             "0") #INGRESA COMANDO
-                if $modificado;
-				then             
+                if $modificado; then             
                     auxiliarComando=$respuestaGestor
                 fi
                 ;;
@@ -49,8 +48,7 @@ VComandos() {
                     comandosDenegados=$(quitarElemento "$auxiliarComando" "$comandosDenegados")
                     comandosPermitidos=$(quitarElemento "$auxiliarComando" "$comandosPermitidos")         
 
-                    if [ "$comandosPermitidos" ];
-			    	then
+                    if [ "$comandosPermitidos" ]; then
                         comandosPermitidos="$comandosPermitidos,$auxiliarComando"
                     else
                         comandosPermitidos="$auxiliarComando"
@@ -69,8 +67,7 @@ VComandos() {
                     comandosDenegados=$(quitarElemento "$auxiliarComando" "$comandosDenegados")
                     comandosPermitidos=$(quitarElemento "$auxiliarComando" "$comandosPermitidos")         
 
-                    if [ "$comandosDenegados" ];
-			    	then
+                    if [ "$comandosDenegados" ]; then
                         comandosDenegados="$comandosDenegados,$auxiliarComando"
                     else
                         comandosDenegados="$auxiliarComando"

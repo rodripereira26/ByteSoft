@@ -28,8 +28,7 @@ activarServicio() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado;
-				then 
+                if $modificado; then 
                     nombre=$respuestaGestor
                 fi 
                 ;;
@@ -41,13 +40,11 @@ activarServicio() {
                     then
                         respuestaComando=$(systemctl start $nombre 2>&1)
                    
-                        if [ "$respuestaComando" = "Failed to start $nombre.service: Unit not found." ];
-				        then
+                        if [ "$respuestaComando" = "Failed to start $nombre.service: Unit not found." ]; then
                                 mensajeError "SERVICIO NO INSTALADO EN CENTOS" 1 37 33 2 2 1 1 
                         else
                             activo=$(systemctl is-active $nombre)
-                            if [ "$activo" = "active" ];
-			            	then
+                            if [ "$activo" = "active" ]; then
                                 mensajeError "SERVICIO ACTIVADO" 2 42 33 2 2 2 2
                             else
                                 mensajeError "ERROR AL ACTIVAR EL SERVICIO" 1 37 33 2 2 1 1      
@@ -99,8 +96,7 @@ desactivarServicio() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado;
-				then 
+                if $modificado; then 
                     nombre=$respuestaGestor
                 fi 
                 ;;
@@ -111,13 +107,11 @@ desactivarServicio() {
                     if [ -n "$nombre" ]; 
                     then
                         respuestaComando=$(systemctl stop $nombre 2>&1)
-                        if [ "$respuestaComando" = "Failed to stop $nombre.service: Unit mysqld.service not loaded." ];
-				        then
+                        if [ "$respuestaComando" = "Failed to stop $nombre.service: Unit mysqld.service not loaded." ]; then
                                 mensajeError "SERVICIO NO INSTALADO EN CENTOS" 1 37 33 2 2 1 1 
                         else
                             activo=$(systemctl is-active $nombre)
-                            if [ "$activo" = "inactive" ];
-			            	then
+                            if [ "$activo" = "inactive" ]; then
                                 mensajeError "SERVICIO DESACTIVADO" 2 42 33 2 2 2 2
                             else
                                 mensajeError "ERROR AL DESACTIVAR EL SERVICIO" 1 37 33 2 2 1 1      

@@ -77,14 +77,11 @@ tomarDatoEntradaTxt() {
     do
         read -rsn1 press
 
-        if [ "$press" = $'\e' ];
-		then
+        if [ "$press" = $'\e' ]; then
             continuarLeyendo=false
 
-        elif [ "$press" = $'\177' ];
-		then
-            if [ "$entradaTXT" ];
-			then
+        elif [ "$press" = $'\177' ]; then
+            if [ "$entradaTXT" ]; then
                 entradaTXT=${entradaTXT::-1}
             fi
         else
@@ -94,8 +91,7 @@ tomarDatoEntradaTxt() {
         tput cup $posY $posX 1>&2
         printf "%${largo}s" 1>&2
 
-        if [ "$1" = 0 ];
-		then
+        if [ "$1" = 0 ]; then
             tput cup $posY $posX 1>&2
             echo -n "$entradaTXT" 1>&2
         fi

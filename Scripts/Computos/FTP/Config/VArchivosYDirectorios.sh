@@ -51,61 +51,51 @@ VArchivosYDirectorios() {
 
         case $posDeEsteElemento in
             "0") #PERMISOS ARCHIVOS CREADOS (022)
-                if $modificado;
-                then             
+                if $modificado; then             
                     permisosArchivosCreados="$respuestaGestor"
                 fi
                 ;;
             "1") #PERMISOS ARCHIVOS ABIERTOS (0666)
-                if $modificado;
-                then             
+                if $modificado; then             
                     permisosArchivosAbiertos="$respuestaGestor"
                 fi
                 ;;           
             "2") #DIRECTORIO HOME ((none) "/home/$USER")
-                if $modificado;
-                then 
+                if $modificado; then 
                     intentaDirectorio=$respuestaGestor
                 fi                
                 ;;
 
             "3") #¿HABILITAR ESCRITURA? (NO)
-                if $modificado;
-                then 
+                if $modificado; then 
                     permitirEscritura=$respuestaGestor
                 fi        
                 ;;
 
             "4") #¿REGISTRO CARGAS Y DESCARGAS?
-                if $modificado;
-                then 
+                if $modificado; then 
                     registrarCargaDescarga=$respuestaGestor
                 fi        
                 ;;
 
             "5") #¿FORZAR LOS ARCHIVOS CON PUNTO? (NO)
-                if $modificado;
-                then 
+                if $modificado; then 
                     forzarArchivosConPunto=$respuestaGestor
                 fi        
                 ;;
             "6") #¿REGISTRAR PETICIONES FTP?
-                if $modificado;
-                then 
+                if $modificado; then 
                     registrarPeticionesFTP=$respuestaGestor
                 fi        
                 ;;
             "7") #CONFIGURAR
                 if $respuestaGestor; 
                 then
-                    if [ -d "${intentaDirectorio/\$USER/}" -o -z "$intentaDirectorio" -o "$intentaDirectorio" = '(none)' ];
-                    then
-                        if [ "${permisosArchivosCreados//[0-9]/}" -a "$permisosArchivosCreados" -a ! "$permisosArchivosCreados" = '(none)' ];
-                        then #no es un numero
+                    if [ -d "${intentaDirectorio/\$USER/}" -o -z "$intentaDirectorio" -o "$intentaDirectorio" = '(none)' ]; then
+                        if [ "${permisosArchivosCreados//[0-9]/}" -a "$permisosArchivosCreados" -a ! "$permisosArchivosCreados" = '(none)' ]; then #no es un numero
                             mensajeError "INGRESE PERMISO DE ARCHIVOS CREADOS VÁLIDO EN PERMISOS" 1 37 33 0 1 1                            
                         else # es un numero  
-                            if [ "${permisosArchivosAbiertos//[0-9]/}" -a "$permisosArchivosAbiertos" -a ! "$permisosArchivosAbiertos" = '(none)' ];
-                            then #no es un numero
+                            if [ "${permisosArchivosAbiertos//[0-9]/}" -a "$permisosArchivosAbiertos" -a ! "$permisosArchivosAbiertos" = '(none)' ]; then #no es un numero
                                 mensajeError "INGRESE PERMISO DE ARCHIVOS ABIERTOS VÁLIDO EN PERMISOS" 1 37 33 0 1 1                            
                             else
                                 registrarCargaDescarga=$([ $registrarCargaDescarga = true ] && echo YES || echo NO) 
@@ -113,8 +103,7 @@ VArchivosYDirectorios() {
                                 registrarPeticionesFTP=$([ $registrarPeticionesFTP = true ] && echo YES || echo NO)                     
                                 permitirEscritura=$([ $permitirEscritura = true ] && echo YES || echo NO) 
 
-                                if [ -d "${intentaDirectorio/\$USER/}" -o "$intentaDirectorio" != '(none)' ];
-                                then
+                                if [ -d "${intentaDirectorio/\$USER/}" -o "$intentaDirectorio" != '(none)' ]; then
                                     chmod -R 755 "${intentaDirectorio/\$USER/}"
                                 fi
                                 configuracionArchivosYDirectorios "$permisosArchivosCreados" \

@@ -18,8 +18,7 @@ PrincipalRespaldos() {
     dibujarTxt "5 -> ENTER " 11 6 0
     dibujarTxt "6 -> ABAJO" 11 7 0
 
-    if [ $EUID -eq 0 ];
-	then #root
+    if [ $EUID -eq 0 ]; then #root
         dibujarBoton "BASE DE DATOS" 11 8 80 3 #root
         dibujarBoton "DIRECTORIOS" 11 11 80 3 #root
         dibujarBoton "RESTAURAR BD" 11 14 80 3 #????

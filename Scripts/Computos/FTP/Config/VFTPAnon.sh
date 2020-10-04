@@ -53,60 +53,50 @@ VFTPAnon() {
         case $posDeEsteElemento in
             
             "0") #¿PERMITIR USUARIO ANONIMO? (NO)
-                if $modificado;
-			    then             
+                if $modificado; then             
                     permitirAnon=$respuestaGestor
                 fi
                 ;;
             "1") #MAXIMOS BITS POR SEGUNDO (DEFECTO 0, ES ILIMITADO)
-                if $modificado;
-			    then 
+                if $modificado; then 
                     maximoBitsPorSegundo=$respuestaGestor
                 fi        
                 ;;
             "2") #PERMISOS ARCHIVOS CREADOS (077)
-                if $modificado;
-			    then             
+                if $modificado; then             
                     permisosArchivosCreados="$respuestaGestor"
                 fi
                 ;;
             "3") #¿PUEDE CREAR DIRECTORIOS? (NO)
-                if $modificado;
-				then 
+                if $modificado; then 
                     puedeEscribirAnon=$respuestaGestor
                 fi                
                 ;;
             "4") #¿PUEDE SUBIR ARCHIVOS? (NO)
-                if $modificado;
-				then 
+                if $modificado; then 
                     puedeSubirArchivos=$respuestaGestor
                 fi                
                 ;;
             "5") #INTENTA EL DIRECTORIO  ((none))
-                if $modificado;
-				then 
+                if $modificado; then 
                     intentaDirectorioAnon=$respuestaGestor
                 fi        
                 ;;
             "6") #CONFIGURAR
                 if $respuestaGestor; 
                 then
-                    if [ "${maximoBitsPorSegundo//[0-9]/}" -a "$maximoBitsPorSegundo" -a ! "$maximoBitsPorSegundo" = '(none)' ];
-				    then #no es un numero
+                    if [ "${maximoBitsPorSegundo//[0-9]/}" -a "$maximoBitsPorSegundo" -a ! "$maximoBitsPorSegundo" = '(none)' ]; then #no es un numero
                         mensajeError "INGRESE UN NUMERO VÁLIDO EN BITS POR SEGUNDO" 1 37 33 0 1 1
                     else
-                        if [ "${permisosArchivosCreados//[0-9]/}" -a "$permisosArchivosCreados" -a ! "$permisosArchivosCreados" = '(none)' ];
-				        then #no es un numero
+                        if [ "${permisosArchivosCreados//[0-9]/}" -a "$permisosArchivosCreados" -a ! "$permisosArchivosCreados" = '(none)' ]; then #no es un numero
                             mensajeError "INGRESE PERMISO DE ARCHIVOS CREADOS VÁLIDO EN PERMISOS" 1 37 33 0 1 1                            
                         else 
-                            if [ -d "$intentaDirectorioAnon" -o -z "$intentaDirectorioAnon" -o "$intentaDirectorioAnon" = '(none)' ];
-				            then
+                            if [ -d "$intentaDirectorioAnon" -o -z "$intentaDirectorioAnon" -o "$intentaDirectorioAnon" = '(none)' ]; then
                                 permitirAnon=$([ $permitirAnon = true ] && echo YES || echo NO) 
                                 puedeEscribirAnon=$([ $puedeEscribirAnon = true ] && echo YES || echo NO) 
                                 puedeSubirArchivos=$([ $puedeSubirArchivos = true ] && echo YES || echo NO) 
                                 
-                                if [ -d "$intentaDirectorioAnon" ];
-				                then 
+                                if [ -d "$intentaDirectorioAnon" ]; then 
                                     mkdir "$intentaDirectorioAnon"
                                     chmod 755 "$intentaDirectorioAnon"
                                 fi

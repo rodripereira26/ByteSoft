@@ -31,26 +31,22 @@ VDelay() {
         case $posDeEsteElemento in
             
             "0") #DELAY LOGUEO(0: segundos)
-                if $modificado;
-				then 
+                if $modificado; then 
                     delayLogueo=$respuestaGestor
                 fi        
                 ;;
             "1") #DELAY DENEGADO(1: segundos)
-                if $modificado;
-				then 
+                if $modificado; then 
                     delayDenagado=$respuestaGestor
                 fi                
                 ;;
             "2") #CONFIGURAR
                 if $respuestaGestor; 
                 then
-                    if [ "${delayLogueo//[0-9]/}" -a "$delayLogueo" -a ! "$delayLogueo" = '(none)' ];
-				    then #no es un numero
+                    if [ "${delayLogueo//[0-9]/}" -a "$delayLogueo" -a ! "$delayLogueo" = '(none)' ]; then #no es un numero
                         mensajeError "INGRESE UN NUMERO VÁLIDO EN LOGUEO" 1 37 33 0 1 1
                     else
-                        if [ "${delayDenagado//[0-9]/}" -a "$delayDenagado" -a ! "$delayDenagado" = '(none)' ];
-				        then #no es un numero
+                        if [ "${delayDenagado//[0-9]/}" -a "$delayDenagado" -a ! "$delayDenagado" = '(none)' ]; then #no es un numero
                             mensajeError "INGRESE UN NUMERO VÁLIDO EN DENEGADO" 1 37 33 0 1 1
                         else
                             configureDelay "$delayLogueo" "$delayDenagado"

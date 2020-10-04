@@ -40,42 +40,35 @@ VMaximos() {
         case $posDeEsteElemento in
             
             "0") #MÁXIMO POR IP(50)
-                if $modificado;
-				then 
+                if $modificado; then 
                     maximoPorIP=$respuestaGestor
                 fi        
                 ;;
             "1") #MÁXIMO POR DENEGADO(3)
-                if $modificado;
-				then 
+                if $modificado; then 
                     maximoLoginFallido=$respuestaGestor
                 fi                
                 ;;
             "2") #MÁXIMO CLIENTES (2000)
-                if $modificado;
-				then 
+                if $modificado; then 
                     maximoClientes=$respuestaGestor
                 fi                
                 ;;
             "3") #MÁXIMO BYTES POR SEGUNDO AUTENTIFICADOS (default: 0 ilimitado)
-                if $modificado;
-				then 
+                if $modificado; then 
                     maximoBitsSegAutentificados=$respuestaGestor
                 fi         
                 ;;
             "4") #CONFIGURAR
                 if $respuestaGestor; 
                 then
-                    if [ "${maximoPorIP//[0-9]/}" -a "$maximoPorIP" -a ! "$maximoPorIP" = '(none)' ];
-			    	then #no es un numero
+                    if [ "${maximoPorIP//[0-9]/}" -a "$maximoPorIP" -a ! "$maximoPorIP" = '(none)' ]; then #no es un numero
                         mensajeError "INGRESE UN NUMERO VÁLIDO EN MAXIMO POR IP" 1 37 33 0 1 1
                     else                   
-                        if [ "${maximoLoginFallido//[0-9]/}" -a "$maximoLoginFallido" -a ! "$maximoLoginFallido" = '(none)' ];
-			        	then #no es un numero
+                        if [ "${maximoLoginFallido//[0-9]/}" -a "$maximoLoginFallido" -a ! "$maximoLoginFallido" = '(none)' ]; then #no es un numero
                             mensajeError "INGRESE UN NUMERO VÁLIDO EN MAXIMO DENEGADO" 1 37 33 0 1 1
                         else
-                            if [ "${maximoClientes//[0-9]/}" -a "$maximoClientes" -a ! "$maximoClientes" = '(none)' ];
-			            	then #no es un numero
+                            if [ "${maximoClientes//[0-9]/}" -a "$maximoClientes" -a ! "$maximoClientes" = '(none)' ]; then #no es un numero
                                 mensajeError "INGRESE UN NUMERO VÁLIDO EN MAXIMO CLIENTES" 1 37 33 0 1 1
                             else
                                 configurarMaximos "$maximoPorIP" \

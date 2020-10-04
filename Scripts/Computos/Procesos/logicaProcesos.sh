@@ -27,8 +27,7 @@ matarProcesoPID() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado;
-				then 
+                if $modificado; then 
                     pid=$respuestaGestor
                 fi             
                 ;;
@@ -82,8 +81,7 @@ matarProcesoNombre() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado;
-				then 
+                if $modificado; then 
                     nombre=$respuestaGestor
                 fi             
                 ;;

@@ -19,7 +19,6 @@ VConfigRedParaLocal() {
     #region [rgba(27, 173, 192, 0.10)] tui
     iniciarPantallaNueva
     dibujarTxt "CONFIGURACION DE RED" 41 6 0
-    dibujarTxt "AGREGAR CONFIGURACION DEL PUENTE Y LA DE ETHERNET" 41 7 0
 
     dibujarTxt "IP SERVIDOR" 11 11 0
     dibujarEntradaTxt 11 12 20 false
@@ -44,34 +43,28 @@ VConfigRedParaLocal() {
 '
         case $posDeEsteElemento in
             "0")
-                if $modificado;
-				then
+                if $modificado; then
                     _IP_SERVIDOR=$respuestaGestor
                 fi
                 ;;
             
             "1")
-                if $modificado;
-				then
+                if $modificado; then
                     _IP_RESPALDO=$respuestaGestor
                 fi
                 ;;
             "2")
-                if $modificado;
-				then
+                if $modificado; then
                     _IP_SUBRED_ADMIN=$respuestaGestor
                 fi
                 ;;
 
             "3")
-                if $respuestaGestor;
-				then
-                    if [ "$_IP_SERVIDOR" -a "$_IP_RESPALDO" -a "$_IP_SUBRED_ADMIN" ];
-				    then
+                if $respuestaGestor; then
+                    if [ "$_IP_SERVIDOR" -a "$_IP_RESPALDO" -a "$_IP_SUBRED_ADMIN" ]; then
 
                         ping -c1 "$_IP_SERVIDOR" &> /dev/null
-                        if [ $? -eq 0 ] && [ $(hostname -I) != "$_IP_SERVIDOR" ];
-				        then
+                        if [ $? -eq 0 ] && [ $(hostname -I) != "$_IP_SERVIDOR" ]; then
                             mensajeError "YA HAY UNA IP EN LA RED" 1 37 33 2 1 2
                         else
                             mensajeError "CONFIGURE LA RED..." 2 37 33 0 2 2
@@ -80,22 +73,19 @@ VConfigRedParaLocal() {
                             nmtui-edit
                             systemctl restart NetworkManager
 
-                            if [ "$(grep IP_RESPALDO /etc/environment | wc -l)" -eq "0" ];
-				            then
+                            if [ "$(grep IP_RESPALDO /etc/environment | wc -l)" -eq "0" ]; then
                                 echo "export IP_RESPALDO=$_IP_RESPALDO" >> /etc/environment
                             else
                                 perl -pe "s/$patronIP_RESPALDO/$_IP_RESPALDO/g" -i /etc/environment
                             fi
 
-                            if [ "$(grep IP_SUBRED_ADMIN /etc/environment | wc -l)" -eq "0" ];
-				            then
+                            if [ "$(grep IP_SUBRED_ADMIN /etc/environment | wc -l)" -eq "0" ]; then
                                 echo "export IP_SUBRED_ADMIN=${_IP_SUBRED_ADMIN/"/"/:}" >> /etc/environment
                             else
                                 perl -pe "s/$patronIP_SUBRED_ADMIN/${_IP_SUBRED_ADMIN/"/"/:}/g" -i /etc/environment
                             fi
 
-                            if [ "$(grep IP_SERVIDOR /etc/environment | wc -l)" -eq "0" ];
-				            then
+                            if [ "$(grep IP_SERVIDOR /etc/environment | wc -l)" -eq "0" ]; then
                                 echo "export IP_SERVIDOR="$_IP_SERVIDOR"" >> /etc/environment
                             else
                                 perl -pe "s/$patronIP_SERVIDOR/$"$_IP_SERVIDOR"/g" -i /etc/environment

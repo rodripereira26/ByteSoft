@@ -44,27 +44,23 @@ VMenuModificarUsuario() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado;
-				then         
+                if $modificado; then         
                     user=$respuestaGestor 
                 fi
                 ;;
             "1")
-                if $modificado;
-				then 
+                if $modificado; then 
                     pw=$respuestaGestor
                 fi
                 ;;
             "2")
-                if $modificado;
-				then             
+                if $modificado; then             
                     pwN=$respuestaGestor
                 fi
                 ;;
 
             "3")
-                if $modificado;
-				then             
+                if $modificado; then             
                     reppwN=$respuestaGestor
                 fi
                 ;;
@@ -125,10 +121,8 @@ ejecutarModificarUsuario() {
             lpwN=""
             listaPalabras=()
             agregarALaLista=false
-            if [ -e "/home/USUARIOS" ];
-			then
-                if [ $EUID -ne 0 ];
-				then # no es root
+            if [ -e "/home/USUARIOS" ]; then
+                if [ $EUID -ne 0 ]; then # no es root
                     if [ -n "$user" -a -n "$pwN" -a ${#pwN} -gt 7 -a $posEnLista -gt 4 ]; 
                     then
                         if [ $(grep -E "^$user:.*::/home/USUARIOS/.*/$user" /etc/passwd) ]; 
@@ -136,8 +130,7 @@ ejecutarModificarUsuario() {
                             if [ "$pwN" = "$reppwN" ];
                             then
                                 respCambioContrasena=$(echo "$pw" | su $user -c "echo -e '$pw\n$pwN\n$pwN\n' | passwd 2> /dev/null")
-                                if [ $? -eq 0 ];
-				                then # verifica anterior comando
+                                if [ $? -eq 0 ]; then # verifica anterior comando
                                     VAvisoRegistrado "Modificado con éxito" 10 
                                 else
                                     VAvisoRegistrado "Contraseña incorrecta" 9

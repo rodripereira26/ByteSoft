@@ -40,15 +40,13 @@ VRespaldarDirectorios() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado;
-				then 
+                if $modificado; then 
                     usarPredeterminada=$respuestaGestor
                 fi 
                 ;;
 
             "1")
-                if $modificado;
-				then 
+                if $modificado; then 
                     ruta=$respuestaGestor
                 fi 
                 ;;

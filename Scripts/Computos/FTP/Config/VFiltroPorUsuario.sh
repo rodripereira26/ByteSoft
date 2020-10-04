@@ -35,21 +35,18 @@ VFiltroPorUsuario() {
         case $posDeEsteElemento in
 
             "0") #¿FILTRAR POR USUARIOS? (NO)
-                if $modificado;
-				then 
+                if $modificado; then 
                     filtroPorUsuarios=$respuestaGestor
                 fi
                 ;;
 
             "1") #POLITICA DE DENEGAR (YES)
-                if $modificado;
-				then 
+                if $modificado; then 
                     politicaDenegar=$respuestaGestor
                 fi        
                 ;;
             "2") #¿REGISTRAR DENEGACIONES DE INICIO DE SESION FTP? (NO)
-                if $modificado;
-				then 
+                if $modificado; then 
                     registrarDenegaciones=$respuestaGestor
                 fi        
                 ;;

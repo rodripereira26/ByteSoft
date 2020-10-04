@@ -128,35 +128,35 @@ preguntaDesinstalarMySQL() {
 
     pregunta "¿Desea desinstalar MySQL?" 7 28 15 21 2 7
                   
-    while $continuar; 
-    do
-        siguientePos
+                    while $continuar; 
+                    do
+                        siguientePos
 
-        case $posDeEsteElemento in
+                        case $posDeEsteElemento in
 
-            "0") 
-                if $respuestaGestor;
-                then
+                            "0") 
+                                if $respuestaGestor;
+                                then
 
-                    desinstalarMySQL
-                    continuar=false
-                    colorBgDefecto=7
-                fi
-                ;;
+                                    desinstalarMySQL
+                                    continuar=false
+                                    colorBgDefecto=7
+                                fi
+                                ;;
 
-            "1")
-                if $respuestaGestor;
-                then
-                    continuar=false
-                    colorBgDefecto=7
-                fi         
-                ;;
+                            "1")
+                                if $respuestaGestor;
+                                then
+                                    continuar=false
+                                    colorBgDefecto=7
+                                fi         
+                                ;;
 
-            *)  
-                ;;
+                            *)  
+                                ;;
 
-        esac
-    done
+                        esac
+                    done
 
 }
 #endregion
@@ -249,15 +249,13 @@ exportarBD() {
         case $posDeEsteElemento in
             
             "0")
-                if $modificado;
-				then
+                if $modificado; then
                     nombre=$respuestaGestor
                 fi
                 ;;
             
             "1")
-                if $modificado;
-				then
+                if $modificado; then
                     ruta=$respuestaGestor
                 fi
                 ;;
@@ -319,6 +317,7 @@ importarBD() {
     dibujarTxt "ARCHIVO SQL" 11 14 0
     dibujarEntradaTxt 11 15 20 false
 
+
     dibujarBoton "IMPORTAR" 11 20 40 3
     dibujarBoton "VOLVER" 50 20 40 3
 
@@ -329,14 +328,12 @@ importarBD() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado;
-				then
+                if $modificado; then
                     nombreBD=$respuestaGestor
                 fi
                 ;;
             "1")
-                if $modificado;
-				then
+                if $modificado; then
                     archivoSQL=$respuestaGestor
                 fi
                 ;;
@@ -347,8 +344,7 @@ importarBD() {
                 then
                     tput sgr0
                     clear
-                    if [ -d $archivoSQL -a "$nombreBD" ];
-				    then
+                    if [ -d $archivoSQL -a "$nombreBD" ]; then
                         mysqldump -u root -p $nombreBD < "$archivoSQL"
                         if [ $? -eq 0 ];
                         then
@@ -381,3 +377,4 @@ importarBD() {
 
 }
 #endregion
+importarBD

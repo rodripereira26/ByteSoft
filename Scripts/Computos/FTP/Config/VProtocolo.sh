@@ -29,8 +29,7 @@ VProtocolo() {
         case $posDeEsteElemento in
 
             "0") #IPV4 O IPV6
-                if $modificado;
-				then 
+                if $modificado; then 
                     escuchaIpV4=$respuestaGestor
                 fi        
                 ;;
