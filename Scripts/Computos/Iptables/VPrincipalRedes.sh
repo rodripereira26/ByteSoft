@@ -20,7 +20,8 @@ VPrincipalRed() {
     dibujarTxt "5 -> ENTER " 11 4 0
     dibujarTxt "6 -> ABAJO" 11 5 0
 
-    if [ $EUID -eq 0 ]; then #solo root 
+    if [ $EUID -eq 0 ];
+	then #solo root 
         dibujarBoton "PERMITIR IP" 11 9 80 3 #solo root
         dibujarBoton "BLOQUEAR IP" 11 12 80 3 #solo root
         dibujarBoton "ELIMINAR REGLA" 11 15 80 3 #solo root

@@ -16,7 +16,8 @@ menuProcesos(){
     dibujarTxt "6 -> ABAJO" 11 8 0
     
     dibujarBoton "VER PROCESOS ACTIVOS (Q PARA SALIR)" 11 9 80 3
-    if [ $EUID -eq 0 ]; then
+    if [ $EUID -eq 0 ];
+	then
         dibujarBoton "INSTALAR HTOP(VER PROCESOS MEJORADO)" 11 12 80 3 #solo root
         dibujarBoton "MATAR PROCESO USANDO EL PID" 11 15 80 3
         dibujarBoton "MATAR PROCESO USANDO EL NOMBRE" 11 18 80 3
@@ -54,7 +55,8 @@ ejecutarProcesos(){
 				tput sgr0
                 tput cup 0 0
                 htop
-                if [ $? -ne 0 ]; then
+                if [ $? -ne 0 ];
+				then
                     top
                 fi
 				;;

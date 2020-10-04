@@ -41,19 +41,22 @@ VRespaldarBD() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado; then 
+                if $modificado;
+				then 
                     usarPredeterminada=$respuestaGestor
                 fi 
                 ;;
 
             "1")
-                if $modificado; then 
+                if $modificado;
+				then 
                     ruta=$respuestaGestor
                 fi 
                 ;;
 
             "2")
-                if $modificado; then 
+                if $modificado;
+				then 
                     user=$respuestaGestor
                 fi 
                 ;;

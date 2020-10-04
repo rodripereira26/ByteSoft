@@ -4,6 +4,7 @@
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
 #
+
 #region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 . "/Scripts/Computos/VPrincipalComputos.sh"

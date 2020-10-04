@@ -14,7 +14,7 @@ pantallaSSH() {
     
     dibujarRectangulo 11 4 80 40 7 0
     dibujarTxt "CONFIGURANDO SSH" 44 7 0 7
-    dibujarTxt "Ejemplo: /Scripts/ConfigurarEntorno/SSH/bannerDefectoSSH.txt" 11 8 0
+    dibujarTxt "Ejemplo: /Scripts/ConfigurarEntorno/SSH/bannerDefectoSSH.txt" 20 8 0 7 
 
     dibujarTxt "USUARIOS PERMITIDOS (USER1,USER2...)" 36 11 0 7
     dibujarEntradaTxt 36 12 31 false
@@ -22,8 +22,8 @@ pantallaSSH() {
     dibujarTxt "PERMITIR USUARIOS ROOT" 40 16 0 7
     dibujarSwitch 36 17 30 3 $root
 
-    dibujarTxt "PATH DEL BANNER (none y no agrega el banner)" 11 11 0
-    dibujarEntradaTxt 11 12 80 false "$pathBanner"
+    dibujarTxt "PATH DEL BANNER (none y no agrega el banner)" 30 20 0 7
+    dibujarEntradaTxt 11 21 80 false "$pathBanner"
 
     dibujarBoton "CONFIGURAR" 27 24 50 3
 
@@ -34,7 +34,8 @@ pantallaSSH() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado; then 
+                if $modificado;
+				then 
                     usuarios=$respuestaGestor
                 fi 
                 ;;
@@ -42,7 +43,8 @@ pantallaSSH() {
             "1")
                 if $modificado; 
                 then          
-                    if [[ "$root" == "yes" ]]; then
+                    if [[ "$root" == "yes" ]];
+				    then
                         root="no"
                     else
                         root="yes"
@@ -50,7 +52,8 @@ pantallaSSH() {
                 fi
                 ;;
             "2") #PATH DEL BANNER
-                if $modificado; then             
+                if $modificado;
+				then             
                     pathBanner=$respuestaGestor
                 fi
                 ;;

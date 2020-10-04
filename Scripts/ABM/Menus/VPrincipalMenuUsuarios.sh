@@ -23,7 +23,8 @@ VMenuUsuarios() {
     dibujarTxt "6 -> ABAJO" 11 9 0
     dibujarTxt "ESC -> SALIR DE INPUT" 11 10 0
     
-    if [ $EUID -eq 0 ]; then 
+    if [ $EUID -eq 0 ];
+	then 
         dibujarBoton "AGREGAR USUARIO" 11 11 80 3 #necesita root
         dibujarBoton "ELIMINAR USUARIO" 11 14 80 3 #necesita root
         dibujarBoton "LISTAR USUARIOS (Q PARA SALIR)" 11 17 80 3 # puede ser root como que no

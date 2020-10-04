@@ -25,12 +25,14 @@ logearMySQL() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado; then 
+                if $modificado;
+				then 
                     usuario=$respuestaGestor
                 fi 
                 ;;
             "1")
-                if $modificado; then 
+                if $modificado;
+				then 
                     contrasena=$respuestaGestor
                 fi 
                 ;;
@@ -41,7 +43,8 @@ logearMySQL() {
                     tput sgr0 
                     clear
                     mysql -u$usuario -p$contrasena 2> /dev/null
-                    if [ $? -eq 1 ]; then
+                    if [ $? -eq 1 ];
+				    then
                         mensajeError "USUARIO O CONTRASEÑA INCORRECTOS" 1 37 33 2 3 1 1
                         logearMySQL
                     fi

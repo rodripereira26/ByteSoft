@@ -1,8 +1,8 @@
 #!/bin/bash
-
 #
 # root obligatorio 
 #
+
 #region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
@@ -29,7 +29,8 @@ preguntaInstalacion() {
                 "0") 
                     if $respuestaGestor;
                     then
-                        pantallaEleccionMaquina
+                        continuar=false
+                        ejecutarpantallaEleccionMaquina
                     fi
                     ;;
 
@@ -62,41 +63,47 @@ pantallaEleccionMaquina(){
     dibujarBoton "RESPALDOS" 20 10 80 3 
     dibujarBoton "SUBRED ADMIN" 20 13 80 3 
 
-    while $continuar;
+
+    while $continuar; 
     do
         siguientePos
 
-        case $posDeEsteElemento in
+        if $respuestaGestor; 
+        then
+            continuar=false
+        fi 
 
-            "0")
-                if $respuestaGestor; 
-                then
-                    pantallaInstalacionServidor
-                    continuar=false
-                fi
-                ;;
-
-            "1")
-                if $respuestaGestor; 
-                then
-                    pantallaInstalacionServidorRespaldos
-                    continuar=false
-                fi
-                ;;
-            "2")
-                if $respuestaGestor; 
-                then
-                    pantallaInstalacionServidorSubredAdmin
-                    continuar=false
-                fi
-                ;;
-            *)
-                ;;
-        esac
     done
     cerrarPantalla
 }
-#region instalacions
+ejecutarpantallaEleccionMaquina(){
+    pantallaEleccionMaquina
+    case $posDeEsteElemento in
+
+        "0")
+            if $respuestaGestor; 
+            then
+                pantallaInstalacionServidor
+            fi
+            ;;
+
+        "1")
+            if $respuestaGestor; 
+            then
+                pantallaInstalacionServidorRespaldos
+            fi
+            ;;
+        "2")
+            if $respuestaGestor; 
+            then
+                pantallaInstalacionServidorSubredAdmin
+            fi
+            ;;
+    esac
+}
+
+
+#region instalaciones
 pantallaInstalacionServidor() {
     
     colorBgDefecto=7
@@ -260,6 +267,9 @@ preguntaDesinstalar() {
                         continuar=false
                         colorBgDefecto=7
                     fi         
+                    ;;
+                *)
+                    continuar=false
                     ;;
 
             esac

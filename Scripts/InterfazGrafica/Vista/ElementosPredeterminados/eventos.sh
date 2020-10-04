@@ -9,7 +9,8 @@ hizoClick(){
     while $seguirLeyendo ; 
     do
         read -rsn1 press
-        if [[ "$1" =~ "$press" ]]; then
+        if [[ "$1" =~ "$press" ]];
+		then
             seguirLeyendo=false
         fi
     

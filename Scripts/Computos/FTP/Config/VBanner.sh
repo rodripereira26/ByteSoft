@@ -28,7 +28,8 @@ VBanner() {
         case $posDeEsteElemento in
 
             "0") #PATH DEL BANNER
-                if $modificado; then             
+                if $modificado;
+				then             
                     pathBanner=$respuestaGestor
                 fi
                 ;;
@@ -36,7 +37,8 @@ VBanner() {
                 if $respuestaGestor; 
                 then
                     # ver de agregar el path acaa
-                    if [ "$pathBanner" -a -e "$pathBanner" ]; then
+                    if [ "$pathBanner" -a -e "$pathBanner" ];
+				    then
                         cp "$pathBanner" "/etc/bannerFTP.txt"
                         pathBanner="/etc/banner.txt"
                         chmod 755 "$pathBanner"
