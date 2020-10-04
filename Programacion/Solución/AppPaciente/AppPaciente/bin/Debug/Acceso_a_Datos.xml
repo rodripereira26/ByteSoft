@@ -1,0 +1,550 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Acceso_a_Datos
+</name>
+</assembly>
+<members>
+<member name="T:Acceso_a_Datos.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Acceso_a_Datos.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Acceso_a_Datos.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Acceso_a_Datos.Conexion">
+<summary>
+Clase encargada de generar la conexión con la base de datos.
+</summary>
+</member>
+<member name="P:Acceso_a_Datos.Conexion.Connection">
+ <summary>
+ Objeto encargado de realizar la conexión a la base de datos.
+ </summary>
+ <returns>La conexión de tipo OdbcConnection.</returns>
+</member>
+<member name="M:Acceso_a_Datos.Conexion.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.Conexion.#ctor">
+ <summary>
+ Constructor por defecto de la clase.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.Conexion.SetRolConexion(Acceso_a_Datos.Conexion.EnumDbLogin)">
+ <summary>
+ Subrutina encargada de setear una conexión a la base de datos dependiendo del usuario logeado.
+ </summary>
+ <param name="RolBD"></param>
+</member>
+<member name="M:Acceso_a_Datos.Conexion.cerrarConexion">
+ <summary>
+ Subrutina encargada de cerrar la conexión con la base de datos.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.Conexion.abrirConexion">
+ <summary>
+ Subrutina encargada de abrir la conexión con la base de datos.
+ </summary>
+</member>
+<member name="T:Acceso_a_Datos.ModeloChat">
+ <summary>
+ Clase encargada de realizar las consultas del chat.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.crearChat">
+ <summary>
+ Función encargada de crear un nuevo chat en la base de datos.
+ </summary>
+ <returns>Identificador del chat creado</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.entrarChat(System.String,System.Int32)">
+ <summary>
+ Función encargada de registrar un ingreso a un determinado chat.
+ </summary>
+ <param name="cedula"></param>
+ <param name="id"></param>
+ <returns>True si se ingresó al chat.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.listarChat(System.String)">
+ <summary>
+ Función encargada de listar las peticiones de chat.
+ </summary>
+ <param name="usuario"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.enviarMensaje(System.String,System.Int64,System.String,System.DateTime)">
+ <summary>
+ Función encargada de enviar los mensajes.
+ </summary>
+ <param name="cedula"></param>
+ <param name="idChat"></param>
+ <param name="mensaje"></param>
+ <param name="fechaEnvio"></param>
+ <returns>True si el mensaje fue enviado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.recargarChat(System.Int32)">
+ <summary>
+ Función encargada de refrescar los mensajes del chat.
+ </summary>
+ <param name="idChat"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.obtenerRespuesta(System.String)">
+ <summary>
+ Función encargada de avisar al paciente si el médico a respondido su solicitud.
+ </summary>
+ <param name="usuario"></param>
+ <returns>Cantidad de mensajes existentes en una sala de chat.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.finalizarChat(System.String)">
+ <summary>
+ Función encargada de finalizar una sesión de chat.
+ </summary>
+ <param name="idChat"></param>
+ <returns>True si la sesión fue finalizada.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.VerificarCedula(System.String,System.String)">
+ <summary>
+ Función encargada de verificar si el médico ya ingresó al. 
+ </summary>
+ <param name="cedula"></param>
+ <param name="idChat"></param>
+ <returns>Cantidad de veces que el médico ingresó.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.MisChats(System.String,System.Byte)">
+ <summary>
+ Función encargada de listar los chats pertenecientes a un médico.
+ </summary>
+ <param name="cedula"></param>
+ <param name="finalizado"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.GetNombre(System.String)">
+ <summary>
+ Función encargada de obtener el nombre del usuario.
+ </summary>
+ <param name="cedula"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloChat.GetCorreo(System.String)">
+ <summary>
+ Función encargada de obtener el e-mail del usuario.
+ </summary>
+ <param name="cedula"></param>
+ <returns>Correo electrónico del usuario.</returns>
+</member>
+<member name="T:Acceso_a_Datos.ModeloConsultas">
+ <summary>
+ Clase base para realizar las consultas.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloConsultas.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloConsultas.ConsultaTabla(System.String)">
+ <summary>
+ Función encargada de devolver en forma de tabla los valores obtenidos a través de la consulta.
+ </summary>
+ <param name="Comando"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloConsultas.ConsultaCampo(System.String)">
+ <summary>
+ Función genérica encargada de devolver el dato solicitado por la consulta.
+ </summary>
+ <param name="Comando"></param>
+ <returns>La primera fila afectada por la consulta.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloConsultas.ConsultaArray(System.String)">
+ <summary>
+ Función encargada de devolver los datos solicitados de una columna en forma de ArrayList.
+ </summary>
+ <param name="Comando"></param>
+ <returns>ArrayList con las filas encontradas en la consulta.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloConsultas.InsertParametros(System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter})">
+ <summary>
+ Función encargada de ejecutar un insert en la base de datos utilizando OdbcParameters.
+ </summary>
+ <param name="Comando"></param>
+ <param name="Parametros"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloConsultas.InsertarSinParametros(System.String)">
+ <summary>
+ Función encargada de ejecutar un insert en la base de datos.
+ </summary>
+ <param name="Comando"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="T:Acceso_a_Datos.ModeloGestor">
+ <summary>
+ Clase encargada de realizar las consultas de los adminstradores.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.Registrar(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de registar a los administradores del sistema en la tabla usuarios.
+ </summary>
+ <param name="cedula"></param>
+ <param name="contraseña"></param>
+ <param name="PrimerNombre"></param>
+ <param name="SegundoNombre"></param>
+ <param name="PrimerApellido"></param>
+ <param name="SegundoApellido"></param>
+ <param name="Telefonos"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.RegistrarGestor(System.String)">
+ <summary>
+ Función encargada de registar a los administradores del sistema en la tabla gestor.
+ </summary>
+ <param name="cedula"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.RegistrarTelefono(System.String,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de registar los telefonos de los administradores.
+ </summary>
+ <param name="cedula"></param>
+ <param name="Telefonos"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.ListarPacientes">
+ <summary>
+ Función encargada de listar a los pacientes que se deban habilitar.
+ </summary>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.HabilitarPaciente(System.String)">
+ <summary>
+ Función encargada de habilitar a los pacientes.
+ </summary>
+ <param name="cedula"></param>
+ <returns>True si el update fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloGestor.Eliminar(System.String)">
+ <summary>
+ Función encargada de dar de baja a un paciente.
+ </summary>
+ <param name="cedula"></param>
+ <returns>True si el update fue realizado.</returns>
+</member>
+<member name="T:Acceso_a_Datos.ModeloMedico">
+ <summary>
+ Clase encargada de realizar las consultas de los médicos.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloMedico.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloMedico.Registrar(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Función encargada de registar a los médicos en la tabla usuarios.
+ </summary>
+ <param name="cedula"></param>
+ <param name="contraseña"></param>
+ <param name="PrimerNombre"></param>
+ <param name="SegundoNombre"></param>
+ <param name="PrimerApellido"></param>
+ <param name="SegundoApellido"></param>
+ <param name="Especializacion"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloMedico.RegistrarMedico(System.String,System.String)">
+ <summary>
+ Función encargada de registar a los médicos en la tabla médico.
+ </summary>
+ <param name="cedula"></param>
+ <param name="esp"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="T:Acceso_a_Datos.ModeloPaciente">
+ <summary>
+ Clase encargada de realizar las consultas de los adminstradores.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.VerificarEstado(System.String)">
+ <summary>
+ Función encargada de verificar si el paciente fue ingresado.
+ </summary>
+ <param name="cedula"></param>
+ <returns>True si el paciente ya es usuario del sistema.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.Registrar(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.ArrayList,System.String,System.String,System.String)">
+ <summary>
+ Función encargada de registrar a los pacientes utilizando una conexión auxiliar.
+ </summary>
+ <param name="cedula"></param>
+ <param name="contraseña"></param>
+ <param name="PrimerNombre"></param>
+ <param name="SegundoNombre"></param>
+ <param name="PrimerApellido"></param>
+ <param name="SegundoApellido"></param>
+ <param name="Telefonos"></param>
+ <param name="Mail"></param>
+ <param name="sexo"></param>
+ <param name="FechaNacimiento"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.RegistrarPaciente(System.String,System.String,System.String)">
+ <summary>
+ Función encargada de registar a los pacientes en la tabla pacientes.
+ </summary>
+ <param name="cedula"></param>
+ <param name="sexo"></param>
+ <param name="FechaNacimiento"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.RegistrarTelefono(System.String,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de registar los telefonos de los administradores.
+ </summary>
+ <param name="cedula"></param>
+ <param name="Telefonos"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.TraerPacientes">
+ <summary>
+ Función encargada de listar a los pacientes habilitados.
+ </summary>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.GetDatosPaciente(System.String)">
+ <summary>
+ Función encargada de obtener los datos del paciente.
+ </summary>
+ <param name="cedula"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.GetPatologiasCronicas(System.String)">
+ <summary>
+ Función encargada de obtener las enfermedades crónicas del paciente.
+ </summary>
+ <param name="cedula"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPaciente.GetHistorialConsultas(System.String)">
+ <summary>
+ Función encargada de obtener el historial de consultas del paciente.
+ </summary>
+ <param name="cedula"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="T:Acceso_a_Datos.ModeloPatologia">
+ <summary>
+ Clase encargada de realizar las consultas de las patologías.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.Registrar(System.String,System.String,System.String,System.Byte,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de registrar las patologías.
+ </summary>
+ <param name="nombre"></param>
+ <param name="descripcion"></param>
+ <param name="recomendacion"></param>
+ <param name="prioridad"></param>
+ <param name="nomSintomas"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.RegistrarAsociacion(System.String,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de registrar la asociación de los síntomas y las patologías.
+ </summary>
+ <param name="nombre"></param>
+ <param name="nomSintomas"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.ListarPatologias">
+ <summary>
+ Función encargada de listar las patologías.
+ </summary>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.EliminarPatologias(System.Collections.ArrayList)">
+ <summary>
+ Función encargada de eliminar las patologías
+ </summary>
+ <param name="ali"></param>
+ <returns>True si el delete fue realizado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.obtenerDiagnostico(System.Collections.ArrayList)">
+ <summary>
+ Función encargada de obtener un diagnóstico basado en los síntomas del paciente.
+ </summary>
+ <param name="sintomas"></param>
+ <returns>DataTable cargado con los valores obtenidos.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.DescripcionPatologia(System.String)">
+ <summary>
+ Función encargada de obtener la descripción de una patología
+ </summary>
+ <param name="nombre"></param>
+ <returns>Descripción de la patología seleccionada</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloPatologia.GuardarDiagnostico(System.String,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de registrar las patologías asociadas a los síntomas del paciente.
+ </summary>
+ <param name="usuario"></param>
+ <param name="diagnosticos"></param>
+ <returns>True si el insert fue realizado.</returns>
+</member>
+<member name="T:Acceso_a_Datos.ModeloSintoma">
+ <summary>
+ Clase encargada de realizar las consultas de los síntomas.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloSintoma.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloSintoma.Registrar(System.String,System.String)">
+ <summary>
+ Función encargada de registrar los síntomas.
+ </summary>
+ <param name="nombre"></param>
+ <param name="descripcion"></param>
+ <returns>True si se registraron los síntomas.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloSintoma.TraerSintomas">
+ <summary>
+ Función encargada de obtener el nombre de los síntomas.
+ </summary>
+ <returns>ArrayList con las filas encontradas en la consulta.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloSintoma.GuardarSintomas(System.String,System.Collections.ArrayList)">
+ <summary>
+ Función encargada de registrar los síntomas seleccionados por el paciente.
+ </summary>
+ <param name="usuario"></param>
+ <param name="nombreSintoma"></param>
+ <returns>True si los síntomas fueron registrados.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloSintoma.ListarSintomas">
+ <summary>
+ Función encargada de listar los síntomas.
+ </summary>
+ <returns>DataTable con los datos de los síntomas.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloSintoma.EliminarSintomas(System.Collections.ArrayList)">
+ <summary>
+ Función encargada de eliminar los síntomas.
+ </summary>
+ <param name="ali"></param>
+ <returns>True si el delete fue realizado.</returns>
+</member>
+<member name="T:Acceso_a_Datos.ModeloUsuario">
+ <summary>
+ Clase encargada de realizar las consultas de los usuarios.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.ModeloUsuario.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloUsuario.VerificarUsuario(System.String,System.String)">
+ <summary>
+ Función encargada de verificar si el usuario y la contraseña ingresados por el usuario son correctos.
+ </summary>
+ <param name="usuario"></param>
+ <param name="pass"></param>
+ <returns>True si coinciden las credenciales.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloUsuario.verificarRol(System.String,System.Int16)">
+ <summary>
+ Función encargada de verificar si el rol al que el usuario quiere acceder es correcto.
+ </summary>
+ <param name="usuario"></param>
+ <param name="rol"></param>
+ <returns>True si el rol es correcto.</returns>
+</member>
+<member name="M:Acceso_a_Datos.ModeloUsuario.SetConnection(System.Int16)">
+ <summary>
+ Subrutina encargada de setear una conexión en función del usuario logeado.
+ </summary>
+ <param name="rol"></param>
+</member>
+<member name="T:Acceso_a_Datos.EntradaSalida">
+ <summary>
+ Clase encargada de administrar la entrada y salida de los datos.
+ </summary>
+</member>
+<member name="M:Acceso_a_Datos.EntradaSalida.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Acceso_a_Datos.EntradaSalida.Serializar(System.Object,System.String)">
+ <summary>
+ Función encargada de serializar en disco un objeto.
+ </summary>
+ <param name="objeto"></param>
+ <param name="archivo"></param>
+ <returns>True si se completó la serialización.</returns>
+</member>
+<member name="M:Acceso_a_Datos.EntradaSalida.Deserializar(System.String)">
+ <summary>
+ Función encargada de deserializar del disco un objeto.
+ </summary>
+ <param name="archivo"></param>
+ <returns>Objeto que fue serializado.</returns>
+</member>
+<member name="M:Acceso_a_Datos.EntradaSalida.LeerCSV(System.String)">
+ <summary>
+ Función encargada de leer el archivo CSV que contiene un idioma.
+ </summary>
+ <param name="archivo"></param>
+ <returns>DataTable con la información del idioma.</returns>
+</member>
+</members>
+</doc>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Logica
+</name>
+</assembly>
+<members>
+<member name="T:Logica.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Logica.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Logica.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Logica.ControladorPaciente">
+<summary>
+Clase encargada de los datos de los pacientes.
+</summary>
+</member>
+<member name="T:Logica.ControladorGestor">
+<summary>
+Clase encargada de los datos de los administradores.
+</summary>
+</member>
+<member name="T:Logica.ControladorMedico">
+<summary>
+Clase encargada de los datos de los médicos.
+</summary>
+</member>
+<member name="T:Logica.ControladorSintoma">
+<summary>
+Clase encargada de los datos de los síntomas.
+</summary>
+</member>
+<member name="T:Logica.ControladorPatologia">
+<summary>
+Clase encargada de los datos de las patologías.
+</summary>
+</member>
+<member name="T:Logica.Encriptar">
+<summary>
+Clase encargada de la seguridad del sistema.
+</summary>
+</member>
+<member name="M:Logica.Encriptar.HASH256(System.Object)">
+<summary>
+Función encargada de encriptar las contraseñas mediante el algoritmo SHA25.
+</summary>
+</member>
+<member name="T:Logica.ControladorUsuario">
+<summary>
+Clase principal para los datos de los usuarios.
+</summary>
+</member>
+<member name="T:Logica.Verificacion">
+<summary>
+Clase encargada de las verificaciones del sistema.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_cedula(System.String)">
+<summary>
+Función encargada de verificar si la cédula ingresada contiene caracteres.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_digito(System.String)">
+<summary>
+Función encargada de verificar si el dígito verificador de la cédula es correcto.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_string(System.String)">
+<summary>
+Función encargada de verificar si el string ingresado contiene dígitos numéricos.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_int(System.String)">
+<summary>
+Función encargada de verificar si los dígitos ingresados contienen caracteres.
+</summary>
+</member>
+<member name="M:Logica.Verificacion.verificar_email(System.String)">
+<summary>
+Función encargada de verificar si el formato del email ingresado es correcto.
+</summary>
+</member>
+</members>
+</doc>
