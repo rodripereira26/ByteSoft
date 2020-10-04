@@ -29,6 +29,7 @@ preguntaInstalacion() {
                 "0") 
                     if $respuestaGestor;
                     then
+                        continuar=false
                         pantallaEleccionMaquina
                     fi
                     ;;
