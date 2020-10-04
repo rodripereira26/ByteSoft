@@ -11,6 +11,7 @@
             "cwd": "${workspaceFolder}",
             "program": "${command:SelectScriptName}",
             "args": [ 
+
              ],
             "terminalKind": "integrated"
 
