@@ -99,11 +99,14 @@ probarFuncionEjecucionLocal(){
     # $2 : nombre del archivo actual
     #endregion
     
-    if [ "$1" ]; then
-        if [ -z "$BASH_ARGV0" ]; then 
+    if [ "$1" ];
+    then
+        if [ -z "$BASH_ARGV0" ];
+        then
             BASH_ARGV0=$0
         fi
-        if [ $(basename "$BASH_ARGV0") = "$2" ]; then # para ejecutar script actual se pasa por parametro ejecutar
+        if [ $(basename "$BASH_ARGV0") = "$2" ];
+		then # para ejecutar script actual se pasa por parametro ejecutar
             $1
         fi
     fi

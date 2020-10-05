@@ -19,7 +19,8 @@ MenuLogs() {
     dibujarBoton "ÚLTIMOS LOGINS" 11 12 80 3
     dibujarBoton "LOGINS EXITOSOS" 11 15 80 3
 
-    if [ $EUID -eq 0 ]; then #root
+    if [ $EUID -eq 0 ];
+	then #root
         dibujarBoton "MENSAJES DEL SISTEMA" 11 18 80 3
         dibujarBoton "INICIO Y SEGURIDAD" 11 21 80 3
         dibujarBoton "LOGINS FALLIDOS" 11 24 80 3 

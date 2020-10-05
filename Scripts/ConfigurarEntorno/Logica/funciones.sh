@@ -37,6 +37,20 @@ crontabConf() {
 		echo 0
 	fi
 }
+firewallConfRespaldos(){
+	iptables -F
+	iptables -X
+	iptables -Z
+	iptables -t nat -F
+
+	iptables -P INPUT DROP
+	iptables -P OUTPUT DROP
+	iptables -P FORWARD DROP
+	
+	iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A OUTPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+
+}
 firewallConf() {
 	#Flush de las reglas
 	iptables -F

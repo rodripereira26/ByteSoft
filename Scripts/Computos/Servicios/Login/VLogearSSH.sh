@@ -23,7 +23,8 @@ logearSSH() {
         case $posDeEsteElemento in
 
             "0")
-                if $modificado; then 
+                if $modificado;
+			    then 
                     usuario=$respuestaGestor
                 fi 
                 ;;
@@ -33,7 +34,8 @@ logearSSH() {
                     tput sgr0 
                     clear
                     su $usuario
-                    if [ $? -eq 1 ]; then
+                    if [ $? -eq 1 ];
+			    	then
                         mensajeError "USUARIO O CONTRASEÑA INCORRECTOS" 1 37 33 2 3 1 1
                         logearSSH
                     fi

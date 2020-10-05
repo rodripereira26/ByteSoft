@@ -37,17 +37,20 @@ VPuertosPASV() {
         case $posDeEsteElemento in
             
             "0") #¿HABILITAR PASV? (YES)
-                if $modificado; then             
+                if $modificado;
+				then             
                     pasvHabilitado=$respuestaGestor
                 fi
                 ;;
             "1") #PUERTO MINIMO(0: cualquier puerto)
-                if $modificado; then 
+                if $modificado;
+				then 
                     puertoPASVminimo=$respuestaGestor
                 fi                
                 ;;
             "2") #PUERTO MAXIMO(0: cualquier puerto)
-                if $modificado; then 
+                if $modificado;
+				then 
                     puertoPASVmaximo=$respuestaGestor
                 fi        
                 ;;
@@ -55,10 +58,12 @@ VPuertosPASV() {
             "3") #CONFIGURAR
                 if $respuestaGestor; 
                 then
-                    if [ "${puertoPASVminimo//[0-9]/}" -a "$puertoPASVminimo" -a ! "$puertoPASVminimo" = '(none)' ]; then #no es un numero
+                    if [ "${puertoPASVminimo//[0-9]/}" -a "$puertoPASVminimo" -a ! "$puertoPASVminimo" = '(none)' ];
+				    then #no es un numero
                         mensajeError "INGRESE UN NUMERO VÁLIDO EN PUERTO MINIMO" 1 37 33 0 1 1
                     else
-                        if [ "${puertoPASVmaximo//[0-9]/}" -a "$puertoPASVmaximo" -a ! "$puertoPASVmaximo" = '(none)' ]; then #no es un numero
+                        if [ "${puertoPASVmaximo//[0-9]/}" -a "$puertoPASVmaximo" -a ! "$puertoPASVmaximo" = '(none)' ];
+				        then #no es un numero
                             mensajeError "INGRESE UN NUMERO VÁLIDO EN PUERTO MAXIMO" 1 37 33 0 1 1
                         else
                             pasvHabilitado=$([ $pasvHabilitado = true ] && echo YES || echo NO) 

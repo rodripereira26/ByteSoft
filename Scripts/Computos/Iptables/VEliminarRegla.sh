@@ -32,22 +32,27 @@ VEliminarRegla(){
 
         case $posDeEsteElemento in
             "0")
-                if [ $respuestaGestor ] && [ "$tipoRegla" != "$respuestaGestor" -a $modificado ]; then 
+                if [ $respuestaGestor ] && [ "$tipoRegla" != "$respuestaGestor" -a $modificado ];
+				then 
                     tipoRegla=$respuestaGestor
                     mostrarTabla "$tipoRegla" "$reglaEspecifica" "$maximaReglas" 
                 fi
                 ;;          
             "1")
-                if $modificado; then 
+                if $modificado;
+				then 
                     reglaEspecifica=$respuestaGestor
                 fi             
                 ;;
 
             "2")
-                if $respuestaGestor; then
-                    if  [ $reglaEspecifica -a $tipoRegla ]; then
+                if $respuestaGestor;
+				then
+                    if  [ $reglaEspecifica -a $tipoRegla ];
+				    then
                         iptables -D $tipoRegla $reglaEspecifica  > /dev/null 2>&1
-                        if [ $? -eq 0 ]; then
+                        if [ $? -eq 0 ];
+				        then
                             mensajeError "EJECUTADO CORRECTAMENTE" 2 37 33 2 0 2
                             mostrarTabla "$tipoRegla" "$reglaEspecifica" "$maximaReglas" 
                         else
@@ -61,7 +66,8 @@ VEliminarRegla(){
                 
                 ;;
             "3")
-                if $respuestaGestor; then
+                if $respuestaGestor;
+				then
                     continuar=false
                 fi
                 ;;
@@ -75,12 +81,14 @@ ejecutarEliminarRegla(){
     cerrarPantalla
 }
 mostrarTabla(){
-    if [ "$maximaReglas" ]; then
+    if [ "$maximaReglas" ];
+	then
         dibujarRectangulo 50 5 $(($(tput cols)-50)) $maximaReglas 7 8
     fi
     maximaReglas=$(iptables -L $tipoRegla -n --line-numbers  2> /dev/null | tail -1 | cut -d" " -f1)
 
-    if [ $maximaReglas ]; then
+    if [ $maximaReglas ];
+	then
         mensajeError "TIPO VALIDO" 2 37 33 2 0 2
         for ((i=0;i<maximaReglas;i++)); do
             tput cup $((i+5)) 50
