@@ -38,6 +38,7 @@ crontabConf() {
 	fi
 }
 firewallConfRespaldos(){
+	#Flush de las reglas
 	iptables -F
 	iptables -X
 	iptables -Z
@@ -46,10 +47,50 @@ firewallConfRespaldos(){
 	iptables -P INPUT DROP
 	iptables -P OUTPUT DROP
 	iptables -P FORWARD DROP
-	
-	iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
-	iptables -A OUTPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
 
+	# INPUT
+	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+	iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A INPUT -p tcp --dport 22 -j ACCEPT # SSH #cambiar por el 2022
+	iptables -A INPUT -i lo -j ACCEPT # LOCALHOST
+	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+	iptables -A INPUT -p tcp --dport 20:21 -j ACCEPT # FTP
+	iptables -A INPUT -p tcp --dport 25 -j ACCEPT # SMTP
+	iptables -A INPUT -p udp --dport 53 -j ACCEPT
+	iptables -A INPUT -p tcp --dport 80 -j ACCEPT # HTTP
+	iptables -A INPUT -p tcp --dport 443 -j ACCEPT # HTTPs
+	iptables -A INPUT -p tcp --dport 445 -j ACCEPT # SAMBA
+	iptables -A INPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
+	iptables -A INPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
+	iptables -A INPUT -p tcp --dport 2022 -j ACCEPT # SSH #cambiar por el 2022
+	iptables -A INPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
+	iptables -A INPUT -p tcp --dport 3128 -j ACCEPT # SQUID
+	iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+	iptables -I INPUT -i enp0s3 -p udp --dport 67:68 --sport \67:68 -j ACCEPT #DHCP
+	iptables -A INPUT -p tcp --dport 9418 -j ACCEPT # GIT
+
+	# OUTPUT
+	iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+	iptables -A OUTPUT -p tcp --dport 20:21 -j ACCEPT # FTP
+	iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT # SMTP
+	iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+	iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT # HTTP
+	iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT # HTTPS
+	iptables -A OUTPUT -p tcp --dport 445 -j ACCEPT # SAMBA
+	iptables -A OUTPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
+	iptables -A OUTPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
+	iptables -A OUTPUT -p tcp --dport 2022 -j ACCEPT # SSH
+	iptables -A OUTPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
+	iptables -A OUTPUT -p tcp --dport 8080 -j ACCEPT
+	iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT # GIT
+	iptables -A OUTPUT -p tcp --dport 3128 -j ACCEPT # SQUID
+	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
+
+	iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+	iptables -A OUTPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	
+	service iptables save > /dev/null 2>&1
+	service iptables restart > /dev/null 2>&1
 }
 firewallConf() {
 	#Flush de las reglas
@@ -145,4 +186,10 @@ desinstalar() {
 	rm -rf /etc/environment
 	touch /etc/environment
 
+	# elimina usuario de respaldos del servidor respaldos
+	if [ $(hostname -I) = "192.168.1.10" ];
+	then
+	    userdel bytesoftRespaldoEntrada
+		sed -i '/bytesoftRespaldoEntrada/d' /etc/sudoers 
+	fi
 }

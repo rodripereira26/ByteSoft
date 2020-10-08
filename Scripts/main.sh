@@ -1,9 +1,14 @@
 #!/bin/bash
 
-#
+# SECTION - COMANDO PARA SINCRONIZAR /Scripts en la maquina de respaldos
+: ' 
+ssh bytesoftRespaldoEntrada@$IP_RESPALDO "sudo rm -r /Scripts"
+rsync -az -e ssh "/Scripts/" bytesoftRespaldoEntrada@$IP_RESPALDO:/Scripts 
+'
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
-#
+#f
+
 
 #region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
@@ -32,8 +37,13 @@ Principal() {
         dibujarBoton "DESINSTALAR ENTORNO" 11 17 80 3 #necesita root 
         dibujarBoton "SALIR" 11 20 80 3
     else
-
-        dibujarBoton "SALIR" 11 14 80 3
+        if [ $(hostname -I) = "192.168.1.10" ] && [ $(whoami) = "bytesoftRespaldoEntrada" ] && [ $(grep -c "export sshRespaldos=true" /etc/environment) = "0" ];  
+        then
+            dibujarBoton "ENVIAR SSH-COPY-ID SERVIDOR RESPALDOS" 11 14 80 3 #necesita bytesoftRespaldoEntrada 
+            dibujarBoton "SALIR" 11 17 80 3
+        else
+            dibujarBoton "SALIR" 11 14 80 3
+        fi
     fi
     #endregion
    
@@ -68,7 +78,14 @@ ejecutarMain() {
             "DESINSTALAR ENTORNO")
                 preguntaDesinstalar
                 ;;
+            "ENVIAR SSH-COPY-ID SERVIDOR RESPALDOS")
+                clear
+                ssh-copy-id -p 2022 bytesoftRespaldoEntrada@$IP_SERVIDOR # FIXME - cambiar a lo que no sea root 
 
+                echo "export sshRespaldos=true" | sudo tee -a /etc/environment
+                . /etc/environment  
+
+                ;;
             "SALIR")
                 continuarCiclo=false
                 ;;

@@ -53,8 +53,8 @@ VMenuAgregarUsuario() {
             "2")
                 if $respuestaGestor; 
                 then
-                    declare -a listaPalabras
-                    declare -i posEnLista=0
+                    local -a listaPalabras
+                    local -i posEnLista=0
                     
                     agregarALaLista=true
 

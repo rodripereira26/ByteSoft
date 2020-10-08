@@ -9,6 +9,7 @@
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
 . "/Scripts/ConfigurarEntorno/RED/configRED.sh"
+. "/Scripts/ConfigurarEntorno/RED/configREDRespaldos.sh"
 #endregion
 
 preguntaInstalacion() {
@@ -49,7 +50,7 @@ preguntaInstalacion() {
         done
         cerrarPantalla
     else
-         mensajeError "LA INSTALACIÓN YA FUE REALIZADA" 1 36 33 2 3 1 1  
+         mensajeError "LA INSTALACIÓN YA FUE REALIZADA" 1 36 33 1 3 1 1  
     fi
 
 }
@@ -119,7 +120,7 @@ pantallaInstalacionServidor() {
             ;;
 
         "1")
-            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 2 3 1 1
+            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 1 3 1 1
 
             ;;
     esac
@@ -132,7 +133,7 @@ pantallaInstalacionServidor() {
             ;;
                         
         "1")
-            mensajeError "LAS CARPETAS YA FUERON CREADAS" 1 37 33 2 3 1 1
+            mensajeError "LAS CARPETAS YA FUERON CREADAS" 1 37 33 1 3 1 1
             ;;
     esac
     VConfigRedParaLocal "SERVIDOR"
@@ -144,7 +145,7 @@ pantallaInstalacionServidor() {
             ;;
                         
         "1")
-            mensajeError "EL CRONTAB YA FUE CONFIGURADO" 1 37 33 2 3 1 1
+            mensajeError "EL CRONTAB YA FUE CONFIGURADO" 1 37 33 1 3 1 1
             ;;
     esac
     
@@ -154,15 +155,15 @@ pantallaInstalacionServidor() {
     
     let PUERTO=$(grep "#Port 22" /etc/ssh/sshd_config | cut -f2 -d" ")
 
-    if [ $PUERTO -eq 22 ]; 
-    then
-        dibujarTxt "CONFIGURANDO SSH..." 40 24 1 
-        sleep 0.5
-        colorBgDefecto=0
-        pantallaSSH
-    else 
-        colorBgDefecto=7
-    fi
+    # if [ $PUERTO -eq 22 ]; 
+    # then
+    dibujarTxt "CONFIGURANDO SSH..." 40 24 1 
+    sleep 0.5
+    colorBgDefecto=0
+    pantallaSSH
+    # else 
+    #     colorBgDefecto=7
+    # fi
     cerrarPantalla
 }
 
@@ -182,14 +183,18 @@ pantallaInstalacionServidorRespaldos() {
             ;;
 
         "1")
-            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 2 3 1 1
+            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 1 3 1 1
             ;;
     esac
     VConfigRedParaLocal "RESPALDO"
     dibujarTxt "CONFIGURANDO FIREWALL..." 38 20 1
-    firewallConf
+    firewallConfRespaldos
     dibujarTxt "CONFIGURACION TERMINADA" 38 20 1
-    sleep 0.5  
+    sleep 0.5
+    dibujarTxt "CONFIGURANDO SSH..." 40 24 1 
+    sleep 0.5
+    colorBgDefecto=0
+    pantallaSSHRespaldos
 }
 
 pantallaInstalacionServidorSubredAdmin() {
@@ -208,7 +213,7 @@ pantallaInstalacionServidorSubredAdmin() {
             ;;
 
         "1")
-            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 2 3 1 1
+            mensajeError "LAS VARIABLES YA FUERON CREADAS" 1 37 33 1 3 1 1
             ;;
     esac
     VConfigRedParaLocal "SUBRED_ADMIN"
@@ -228,7 +233,7 @@ preguntaDesinstalar() {
 
     if [ -z $buscar ];
     then
-        mensajeError "NO SE HA INSTALADO EL ENTORNO" 1 36 33 2 3 1 1 
+        mensajeError "NO SE HA INSTALADO EL ENTORNO" 1 36 33 1 3 1 1 
     else
         
         pregunta "¿Desea desinstalar el entorno?" 7 36 15 21 2 7

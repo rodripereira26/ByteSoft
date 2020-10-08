@@ -14,7 +14,6 @@ pantallaSSH() {
     
     dibujarRectangulo 11 4 80 40 7 0
     dibujarTxt "CONFIGURANDO SSH" 44 7 0 7
-    dibujarTxt "Ejemplo: /Scripts/ConfigurarEntorno/SSH/bannerDefectoSSH.txt" 20 8 0 7 
 
     dibujarTxt "USUARIOS PERMITIDOS (USER1,USER2...)" 36 11 0 7
     dibujarEntradaTxt 36 12 31 false
@@ -22,10 +21,11 @@ pantallaSSH() {
     dibujarTxt "PERMITIR USUARIOS ROOT" 40 16 0 7
     dibujarSwitch 36 17 30 3 $root
 
-    dibujarTxt "PATH DEL BANNER (none y no agrega el banner)" 30 20 0 7
-    dibujarEntradaTxt 11 21 80 false "$pathBanner"
+    dibujarTxt "PATH DEL BANNER (none y no agrega el banner)" 30 22 0 7
+    dibujarTxt "Ejemplo: /Scripts/ConfigurarEntorno/SSH/bannerDefectoSSH.txt" 20 23 0 7 
+    dibujarEntradaTxt 11 24 80 false "$pathBanner"
 
-    dibujarBoton "CONFIGURAR" 27 24 50 3
+    dibujarBoton "CONFIGURAR" 27 26 50 3
 
     while $continuar; 
     do
@@ -64,7 +64,7 @@ pantallaSSH() {
                     pathBanner="/etc/bannerSSH.txt"
                     chmod 755 "$pathBanner"
 
-                    configurarSSH $root $pathBanner
+                    configurarSSH $root $pathBanner "$usuarios"
                     mensajeError "EL PUERTO POR DEFECTO SERÁ EL 2022" 2 34 33 5 5 2 2
                     continuar=false
                 fi   
@@ -75,14 +75,15 @@ pantallaSSH() {
     done
     cerrarPantalla
 }
-
 configurarSSH () {
     # $1 : root
     # $2 : pathBanner
-    root=$1
-    pathBanner=$2
-
-    if [ -z $usuarios ]; 
+    # $3 : usuarios
+    local root=$1
+    local pathBanner=$2
+    local usuarios=$3
+    
+    if [ -z "$usuarios" ]; 
     then
         cp -a /etc/ssh/sshd_config /var/bytesoft/.sshd_config
         sed -i 's/#Port 22/Port 2022/' /etc/ssh/sshd_config # Cambio el puerto por defecto al 7222
@@ -93,7 +94,9 @@ configurarSSH () {
         echo "AllowUsers ${usuarios/,/ }">>/etc/ssh/sshd_config
         sed -i "s/#PermitRootLogin yes/PermitRootLogin "$root"/" /etc/ssh/sshd_config
     fi
-    if [ "$pathBanner" ];
+
+    
+    if [ -e "$pathBanner" ];
     then
         echo "Banner $pathBanner">>/etc/ssh/sshd_config
     fi

@@ -1,12 +1,11 @@
 #!/bin/bash
 
 animacionTitulo() {
-    #region [rgba(47, 0, 255, 0.10)] args
+    #region [rgba(47, 0, 255, 0.10)] args y variables 
     # $1 : archivo de texto
     # $2 : posX
     # #3 : posY
-    #endregion
-    #region [rgba(170, 160, 26, 0.10)] variables 
+
     numeroDeLineas=$(cat $1 | wc -l)
     let numeroDeLineas=$numeroDeLineas+1
     let limiteSuperior=$numeroDeLineas-3
