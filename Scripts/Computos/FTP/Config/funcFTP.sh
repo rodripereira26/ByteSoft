@@ -90,11 +90,10 @@ configurarFTPAnon(){
     fi
 }
 configuracionComandosDenegadosYPermitidos(){
-    #region - args permitir/denegar comandos
+    #region - args y variables permitir/denegar comandos
     # $1 : cmds_allowed[] - comandos permitidos {formato: 1,2,3}
     # $2 : cmds_denied[] - comandos denegados (tiene prioridad) {formato: 1,2,3}
-    #endregion
-    #region [rgba(170, 160, 26, 0.10)] variables 
+
     local cmds_allowed=$1
     local cmds_denied=$2
     #endregion
@@ -122,12 +121,11 @@ configurarBanner(){
     fi
 }
 configurarPuertosPASV(){
-    #region [rgba(47, 0, 255, 0.10)] args
+    #region [rgba(47, 0, 255, 0.10)] args y variables
     # $1 : pasv_enable {default: YES} 
     # $2 : pasv_min_port {default: 0 (cualquier puerto no recomendable) }
     # $3 : pasv_max_port {default: 0 (cualquier puerto no recomendable) }
-    #endregion
-    #region variables
+    
     local pasvHabilitado=$(configuracionEsTrue pasv_enable '!=' NO)
     local pasv_min_port=$(getConfiguracion pasv_min_port '0')
     local pasv_max_port=$(getConfiguracion pasv_max_port '0')

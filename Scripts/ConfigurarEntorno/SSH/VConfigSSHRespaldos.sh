@@ -9,34 +9,35 @@ pantallaSSHRespaldos() {
     local root="no"
     local continuar=true
     local pathBanner="/Scripts/ConfigurarEntorno/SSH/bannerDefectoSSH.txt"
-
-    # TODO - AGREGAR INGRESAR CONTRASEÑA bytesoftRespaldoEntrada USUAARIO
-    # TODO - agregar ingresar contraseña clave privada local
+    local contrasenaBytesoft=""
+    local fraseContrasena=""
+    
     colorBgDefecto=0
     iniciarPantallaNueva
     
-    dibujarRectangulo 11 4 80 50 7 0
+    dibujarRectangulo 11 4 80 54 7 0
     dibujarTxt "CONFIGURANDO SSH" 44 7 0 7
 
-    dibujarTxt "USUARIOS PERMITIDOS (USER1,USER2...)" 36 11 0 7
+    dibujarTxt "USUARIOS PERMITIDOS (USER1,USER2...)" 33 11 0 7
     dibujarEntradaTxt 36 12 31 false
 
-    dibujarTxt "PERMITIR USUARIOS ROOT" 40 16 0 7
-    dibujarSwitch 36 17 30 3 $root
+    dibujarTxt "PERMITIR USUARIOS ROOT" 40 14 0 7
+    dibujarSwitch 36 15 30 3 $root
 
-    dibujarTxt "PERMITIR USUARIOS ROOT" 40 16 0 7
-    dibujarSwitch 36 17 30 3 $root
+    dibujarTxt "USUARIO" 47 18 0 7
+    dibujarTxt "bytesoftRespaldoEntrada" 40 19 0 7
 
-    
-    dibujarTxt "PERMITIR USUARIOS ROOT" 40 16 0 7
-    dibujarSwitch 36 17 30 3 $root
+    dibujarTxt "CONTRASEÑA" 45 21 0 7
+    dibujarEntradaTxt 36 22 31 true
 
+    dibujarTxt "FRASE CONTRASEÑA" 43 24 0 7
+    dibujarEntradaTxt 36 25 31 false
 
-    dibujarTxt "PATH DEL BANNER (none y no agrega el banner)" 30 22 0 7
-    dibujarTxt "Ejemplo: /Scripts/ConfigurarEntorno/SSH/bannerDefectoSSH.txt" 20 23 0 7 
-    dibujarEntradaTxt 11 24 80 false "$pathBanner"
+    dibujarTxt "PATH DEL BANNER (none y no agrega el banner)" 30 27 0 7
+    dibujarTxt "Ejemplo: /Scripts/ConfigurarEntorno/SSH/bannerDefectoSSH.txt" 20 28 0 7 
+    dibujarEntradaTxt 11 29 80 false "$pathBanner"
 
-    dibujarBoton "CONFIGURAR" 27 26 50 3
+    dibujarBoton "CONFIGURAR" 27 32 50 3
 
     while $continuar; 
     do
@@ -51,7 +52,7 @@ pantallaSSHRespaldos() {
                 fi 
                 ;;
 
-            "1")
+            "1") #PERMITIR USUARIOS ROOT
                 if $modificado; 
                 then          
                     if [[ "$root" == "yes" ]];
@@ -62,13 +63,26 @@ pantallaSSHRespaldos() {
                     fi
                 fi
                 ;;
+            
+            "2") #CONTRASEÑA
+                if $modificado;
+				then 
+                    contrasenaBytesoft=$respuestaGestor
+                fi 
+                ;;
+            "3") #FRASE CONTRASEÑA
+                if $modificado;
+				then 
+                    fraseContrasena=$respuestaGestor
+                fi 
+                ;;
             "2") #PATH DEL BANNER
                 if $modificado;
 				then             
                     pathBanner=$respuestaGestor
                 fi
                 ;;
-            "3") 
+            "3") #configurar
                 if $respuestaGestor;
                 then
                     if [ $(verificarUsuarioYContrasena "$contrasena") = "true" ];
@@ -77,7 +91,7 @@ pantallaSSHRespaldos() {
                         pathBanner="/etc/bannerSSH.txt"
                         chmod 755 "$pathBanner"
 
-                        configurarSSHRespaldos "$root" "$pathBanner" "$contrasena" "$fraseContrasena"
+                        configurarSSHRespaldos "$root" "$pathBanner" "$contrasenaBytesoft" "$fraseContrasena"
                         mensajeError "EL PUERTO POR DEFECTO SERÁ EL 2022" 2 34 33 5 5 2 2
                         continuar=false
                     fi
@@ -89,6 +103,7 @@ pantallaSSHRespaldos() {
     done
     cerrarPantalla
 }
+pantallaSSHRespaldos
 configurarSSHRespaldos () {
     #region descripcion y args
     # $1 : root

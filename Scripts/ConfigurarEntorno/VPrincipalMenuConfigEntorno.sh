@@ -8,8 +8,8 @@
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
 . "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
+. "/Scripts/ConfigurarEntorno/SSH/VConfigSSHRespaldos.sh"
 . "/Scripts/ConfigurarEntorno/RED/configRED.sh"
-. "/Scripts/ConfigurarEntorno/RED/configREDRespaldos.sh"
 #endregion
 
 preguntaInstalacion() {
