@@ -97,7 +97,7 @@ VConfigRedParaLocal() {
                         . "/etc/environment"
 
                         continuar=false
-                        mensajeError "TERMINÓ LA CONFIGURACION" 2 37 33 1 2 2
+                        mensajeError "RED CONFIGURADA" 2 37 33 1 2 2
                     else
                         mensajeError "INGRESE TODOS LOS CAMPOS" 1 37 33 1 1 2
                     fi

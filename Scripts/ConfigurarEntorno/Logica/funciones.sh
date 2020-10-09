@@ -189,7 +189,7 @@ desinstalar() {
 	# elimina usuario de respaldos del servidor respaldos
 	if [ $(hostname -I) = "192.168.1.10" ];
 	then
-	    userdel bytesoftRespaldoEntrada
-		sed -i '/bytesoftRespaldoEntrada/d' /etc/sudoers 
+	    userdel bytesoftRespaldo
+		sed -i '/bytesoftRespaldo/d' /etc/sudoers 
 	fi
 }

@@ -14,4 +14,4 @@ tar -czf "/var/bytesoft/backupsTotales/Logs/backupLog.tar.gz" /var/log
 tar -czf "/var/bytesoft/backupsTotales/DIR/backupDIR.tar.gz" /home/USUARIOS
 
 # Envío los datos al servidor remoto
-rsync -az -e ssh "/var/bytesoft" bytesoftRespaldoEntrada@$IP_RESPALDO:/var/bytesoft # IP de prueba
+rsync -az -e "ssh -p 2022" "/var/bytesoft" bytesoftRespaldo@$IP_RESPALDO:/var/bytesoft # IP de prueba

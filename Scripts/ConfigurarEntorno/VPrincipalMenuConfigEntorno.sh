@@ -7,8 +7,8 @@
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
 . "/Scripts/ConfigurarEntorno/Logica/CrearCarpetasYVariables.sh"
 . "/Scripts/ConfigurarEntorno/Logica/funciones.sh" 
-. "/Scripts/ConfigurarEntorno/SSH/VConfigSSH.sh" 
-. "/Scripts/ConfigurarEntorno/SSH/VConfigSSHRespaldos.sh"
+. "/Scripts/ConfigurarEntorno/SSH/VConfigSSHParaRespaldo.sh" 
+. "/Scripts/ConfigurarEntorno/SSH/VConfigSSHParaServidor.sh"
 . "/Scripts/ConfigurarEntorno/RED/configRED.sh"
 #endregion
 
@@ -160,7 +160,7 @@ pantallaInstalacionServidor() {
     dibujarTxt "CONFIGURANDO SSH..." 40 24 1 
     sleep 0.5
     colorBgDefecto=0
-    pantallaSSH
+    pantallaSSHServidor
     # else 
     #     colorBgDefecto=7
     # fi
@@ -195,6 +195,9 @@ pantallaInstalacionServidorRespaldos() {
     sleep 0.5
     colorBgDefecto=0
     pantallaSSHRespaldos
+    mkdir /var/bytesoft
+    chown -R bytesoftRespaldo:root /var/bytesoft
+    chmod -R 740 /var/bytesoft
 }
 
 pantallaInstalacionServidorSubredAdmin() {

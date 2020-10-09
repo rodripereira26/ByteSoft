@@ -259,4 +259,7 @@ definirVariables(){
     archivoAConfigurar=$vsftpPrincipal
 
 }
-definirVariables
+if [ $EUID -eq 0 ];
+then
+    definirVariables
+fi

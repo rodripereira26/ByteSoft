@@ -38,7 +38,7 @@ variablesEntorno(){
         echo "export instalacion=true">>/etc/environment
      
 
-        source /etc/environment # Actualizo el valor de las variables
+        . /etc/environment # Actualizo el valor de las variables
         echo 0
     else
         echo 1
