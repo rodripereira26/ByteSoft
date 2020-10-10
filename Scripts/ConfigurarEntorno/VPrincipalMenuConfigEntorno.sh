@@ -161,12 +161,12 @@ pantallaInstalacionServidor() {
     sleep 0.5
     colorBgDefecto=0
     pantallaSSHServidor
+    
     # else 
     #     colorBgDefecto=7
     # fi
     cerrarPantalla
 }
-
 pantallaInstalacionServidorRespaldos() {
     
     colorBgDefecto=7

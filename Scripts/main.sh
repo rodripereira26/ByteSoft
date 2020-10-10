@@ -2,8 +2,6 @@
 
 # Para acceder a OTROS privilegios, ejecutar con root
 # hay opciones que solo estan para usuarios no root
-#f
-
 
 #region imports
 . "/Scripts/InterfazGrafica/Control/inicio.sh" 
@@ -24,25 +22,36 @@ Principal() {
     dibujarTxt "6 -> ABAJO" 11 9 0
     dibujarTxt "ESC -> SALIR DE INPUT" 11 10 0
     
-    dibujarBoton "CENTRO DE COMPUTOS" 11 11 80 3
 
+    # if [ $(hostname -I) = "192.168.1.9" ];
+    # then
+    dibujarBoton "CENTRO DE COMPUTOS" 11 11 80 3
+    # fi
     if [ $EUID -eq 0 ];
     then
         dibujarBoton "CONFIGURACIÓN DEL ENTORNO" 11 14 80 3 #necesita root 
         dibujarBoton "DESINSTALAR ENTORNO" 11 17 80 3 #necesita root 
-        if [ $(hostname -I) = "192.168.1.9" ] && [ $(grep -c "export sshRespaldos=true" /etc/environment) = "0" ];  
+        if [ $(hostname -I) = "192.168.1.9" ];
         then
-            dibujarBoton "ENVIAR SSH-COPY-ID SERVIDOR RESPALDOS" 11 20 80 3 #necesita bytesoftRespaldo 
-            dibujarBoton "ENVIAR /SCRIPTS A RESPALDOS" 11 23 80 3
-            dibujarBoton "SALIR" 11 26 80 3
+            if [ $(grep -c "export sshRespaldos=true" /etc/environment) = "0" ];  
+            then
+                dibujarBoton "ENVIAR SSH-COPY-ID SERVIDOR RESPALDOS" 11 20 80 3 #necesita bytesoftRespaldo 
+                dibujarBoton "ENVIAR /SCRIPTS A RESPALDOS" 11 23 80 3
+                dibujarBoton "SALIR" 11 26 80 3
+            else
+                dibujarBoton "SINCRONIZAR /SCRIPTS CON RESPALDOS" 11 20 80 3
+                dibujarBoton "SALIR" 11 23 80 3
+            fi
+        elif [ $(hostname -I) = "192.168.1.10" ];
+        then
+            dibujarBoton "SALIR" 11 20 80 3
         else
-            dibujarBoton "SINCRONIZAR /SCRIPTS CON RESPALDOS" 11 20 80 3
-            dibujarBoton "SALIR" 11 23 80 3
-        fi    
+            dibujarBoton "SALIR" 11 20 80 3
+        fi 
     else
         dibujarBoton "SALIR" 11 14 80 3
-    
     fi
+
     #endregion
    
     while $continuar; 
@@ -78,25 +87,43 @@ ejecutarMain() {
                 ;;
                 
             "ENVIAR /SCRIPTS A RESPALDOS")
+                tput sgr0
                 clear
-                ssh root@$IP_RESPALDO "sudo rm -r /Scripts"
-                tput cup 0 0
-                rsync -az -e ssh "/Scripts/" root@$IP_RESPALDO:/Scripts     
+                ssh -o ConnectTimeout=10 root@$IP_RESPALDO "sudo rm -r /Scripts"
+                if [ $? -eq 0 ];
+                then
+                    rsync -az -e ssh "/Scripts/" root@$IP_RESPALDO:/Scripts
+                fi
+                sleep 1.5
                 ;;
 
             "SINCRONIZAR /SCRIPTS CON RESPALDOS")
+                tput sgr0
                 clear
                 ssh -p 2022 bytesoftRespaldo@$IP_RESPALDO "rm -r /Scripts"
                 tput cup 0 0
-                rsync -az -e "ssh -p 2022" "/Scripts/" bytesoftRespaldo@$IP_RESPALDO:/Scripts 
+                rsync -az -e "ssh -p 2022" "/Scripts/" bytesoftRespaldo@$IP_RESPALDO:/Scripts
+                sleep 1
                 ;;
 
             "ENVIAR SSH-COPY-ID SERVIDOR RESPALDOS")
                 clear
                 . /etc/environment  
                 ssh-copy-id -p 2022 bytesoftRespaldo@$IP_RESPALDO
-                echo "export sshRespaldos=true" | sudo tee -a /etc/environment
-                . /etc/environment
+                if [ $? -eq 0 ];
+                then
+                    echo "export sshRespaldos=true" | sudo tee -a /etc/environment
+                    mensajeError "SSH-KEY ENVIADO" 2 37 33 2 2 2
+                    . /etc/environment
+                else
+                    if ping -c1 $IP_RESPALDO &>/dev/null;
+                    then
+                        mensajeError "ASEGURESE DE HABER CONFIGURADO RESPALDOS" 1 37 33 2 1 2
+                    else
+                        mensajeError "NO SE DETECTÓ CONEXIÓN AL EQUIPO" 1 37 33 2 1 2
+                    fi
+                fi
+                sleep 1
                 ;;
 
             "SALIR")
@@ -112,7 +139,6 @@ ejecutarMain() {
 }
 
 main() {
-    
     tput sgr0
     tput civis
     #animacionTitulo "/Scripts/InterfazGrafica/Vista/ElementosExtra/tituloByteSoft.txt" 10 10

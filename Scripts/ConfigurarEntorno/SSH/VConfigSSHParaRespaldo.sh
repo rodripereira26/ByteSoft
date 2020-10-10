@@ -110,14 +110,15 @@ configurarSSHRespaldos () {
     chown bytesoftRespaldo:bytesoftRespaldo -R /home/bytesoftRespaldo
     chmod 755 -R /home/bytesoftRespaldo
 	echo -e "$pw\n$pw\n" | passwd bytesoftRespaldo
-    
+
     #permisos root
-    if [ $(grep -Ec "^bytesoftRespaldo    ALL=(ALL:ALL) ALL$"  /etc/sudoers) = "0" ]; 
+    if [ $(grep -Ec "^bytesoftRespaldo    ALL=(ALL) ALL$"  /etc/sudoers) = "0" ]; 
     then
         echo "bytesoftRespaldo    ALL=(ALL) ALL" >> /etc/sudoers
     fi
 
-
+    chown bytesoftRespaldo -R /Scripts
+    
     if [ -z "$usuarios" ]; 
     then
         cp -a /etc/ssh/sshd_config /var/bytesoft/.sshd_config
@@ -135,6 +136,7 @@ configurarSSHRespaldos () {
     then
         echo "Banner $pathBanner">>/etc/ssh/sshd_config
     fi
+    
     semanage port -a -t ssh_port_t -p tcp 2022 > /dev/null 2>&1
     systemctl restart sshd > /dev/null 2>&1
 }

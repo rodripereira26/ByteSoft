@@ -171,7 +171,7 @@ instalarMySQL() {
     tput sgr0
     clear                              
     echo "COMENZARÁ EL PROCESO DE INSTALACIÓN"
-    sleep 3
+    sleep 2
     clear
     yum update
     yum install wget
@@ -183,7 +183,7 @@ instalarMySQL() {
     systemctl start mysqld
     clear
     echo "INSTALACIÓN FINALIZADA"
-    sleep 3
+    sleep 2
     clear
     echo "export mysql=true">>/etc/environment
     tput sgr0
@@ -202,7 +202,7 @@ desinstalarMySQL() {
    tput sgr0
    clear
    echo "COMENZARÁ EL PROCESO DE DESINSTALACIÓN"
-   sleep 3
+   sleep 2
    clear
    yum remove mysql mysql-server
    rm -rf /var/lib/mysql
@@ -214,7 +214,7 @@ desinstalarMySQL() {
    clear
    sed -i 's/export mysql=true//' /etc/environment
    echo "DESINSTALACIÓN FINALIZADA"
-   sleep 3
+   sleep 2
    clear
    tput sgr0
    clear

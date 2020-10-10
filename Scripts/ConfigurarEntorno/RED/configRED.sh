@@ -71,6 +71,7 @@ VConfigRedParaLocal() {
                         mensajeError "CONFIGURE LA RED..." 2 37 33 0 2 2
                         sleep 1
                         nmtui-edit
+                        systemctl enable NetworkManager
                         systemctl restart NetworkManager
 
                         if [ "$(grep IP_RESPALDO /etc/environment | wc -l)" -eq "0" ];

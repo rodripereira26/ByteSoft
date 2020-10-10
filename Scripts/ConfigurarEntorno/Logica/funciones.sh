@@ -50,8 +50,7 @@ firewallConfRespaldos(){
 
 	# INPUT
 	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-	iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
-	iptables -A INPUT -p tcp --dport 22 -j ACCEPT # SSH #cambiar por el 2022
+	# iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
 	iptables -A INPUT -i lo -j ACCEPT # LOCALHOST
 	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A INPUT -p tcp --dport 20:21 -j ACCEPT # FTP
@@ -79,18 +78,26 @@ firewallConfRespaldos(){
 	iptables -A OUTPUT -p tcp --dport 445 -j ACCEPT # SAMBA
 	iptables -A OUTPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
 	iptables -A OUTPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
-	iptables -A OUTPUT -p tcp --dport 2022 -j ACCEPT # SSH
+	iptables -A OUTPUT -p tcp --sport 2022 -j ACCEPT # SSH
 	iptables -A OUTPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
 	iptables -A OUTPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT # GIT
 	iptables -A OUTPUT -p tcp --dport 3128 -j ACCEPT # SQUID
 	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
-
 	iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-	iptables -A OUTPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A OUTPUT -p tcp --dport 2022 -m state --state ESTABLISHED -j ACCEPT
+	
+	# iptables -A OUTPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
 	
 	service iptables save > /dev/null 2>&1
 	service iptables restart > /dev/null 2>&1
+
+	systemctl stop firewalld
+	systemctl disable firewalld
+
+	systemctl start iptables
+	systemctl enable iptables
+
 }
 firewallConf() {
 	#Flush de las reglas
@@ -121,6 +128,7 @@ firewallConf() {
 	iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -I INPUT -i enp0s3 -p udp --dport 67:68 --sport \67:68 -j ACCEPT #DHCP
 	iptables -A INPUT -p tcp --dport 9418 -j ACCEPT # GIT
+
 	#iptables -A INPUT -s $IP_SUBRED_ADMIN -j ACCEPT # IP de la subred de administradores
 
 	# OUTPUT
@@ -134,18 +142,23 @@ firewallConf() {
 	iptables -A OUTPUT -p tcp --dport 445 -j ACCEPT # SAMBA
 	iptables -A OUTPUT -p tcp --dport 993 -j ACCEPT # IMAP SSL
 	iptables -A OUTPUT -p tcp --dport 995 -j ACCEPT # POP3 SSL
-	iptables -A OUTPUT -p tcp --dport 2022 -j ACCEPT # SSH
+	iptables -A OUTPUT -p tcp --sport 2022 -j ACCEPT # SSH
 	iptables -A OUTPUT -p tcp --dport 3306 -j ACCEPT # MYSQL
 	iptables -A OUTPUT -p tcp --dport 8080 -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT # GIT
 	iptables -A OUTPUT -p tcp --dport 3128 -j ACCEPT # SQUID
 	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
+	iptables -A OUTPUT -p tcp --dport 2022 -m state --state ESTABLISHED -j ACCEPT
 
 	# Reinicio el servicio
 	service iptables save > /dev/null 2>&1
 	service iptables restart > /dev/null 2>&1
 
+	systemctl stop firewalld
+	systemctl disable firewalld
 
+	systemctl start iptables
+	systemctl enable iptables
 
 }
 
@@ -159,9 +172,16 @@ desinstalar() {
 	iptables -P INPUT ACCEPT
 	iptables -P OUTPUT ACCEPT
 	iptables -P FORWARD ACCEPT
-
+	
 	service iptables save > /dev/null 2>&1
 	service iptables restart > /dev/null 2>&1
+	
+	systemctl stop firewalld
+	systemctl disable firewalld
+	
+	systemctl start iptables
+	systemctl enable iptables
+
 
 
 	# Restauro SSH 

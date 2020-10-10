@@ -162,7 +162,7 @@ instalarFTP() {
     tput sgr0
     clear                              
     echo "COMENZARÁ EL PROCESO DE INSTALACIÓN"
-    sleep 3
+    sleep 1.5
     clear
     yum -y update
     yum -y install wget vsftpd
@@ -170,7 +170,7 @@ instalarFTP() {
     systemctl start vsftpd
     clear
     echo "INSTALACIÓN FINALIZADA"
-    sleep 3
+    sleep 1.5
     clear
     echo "export ftp=true">>/etc/environment
     tput sgr0
@@ -181,13 +181,13 @@ desinstalarFTP() {
    tput sgr0
    clear
    echo "COMENZARÁ EL PROCESO DE DESINSTALACIÓN"
-   sleep 3
+   sleep 1.5
    clear
    yum -y remove vsftpd
    clear
    sed -i 's/export ftp=true//' /etc/environment
    echo "DESINSTALACIÓN FINALIZADA"
-   sleep 3
+   sleep 1.5
    clear
    tput sgr0
    clear

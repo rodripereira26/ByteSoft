@@ -125,7 +125,6 @@ configurarSSHServidor () {
     touch /home/bytesoft/.ssh/known_hosts
  
 
-    clear
     semanage port -a -t ssh_port_t -p tcp 2022 > /dev/null 2>&1
     systemctl restart sshd > /dev/null 2>&1
 }

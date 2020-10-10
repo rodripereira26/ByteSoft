@@ -129,13 +129,14 @@ configurarPuertosPASV(){
     local pasvHabilitado=$(configuracionEsTrue pasv_enable '!=' NO)
     local pasv_min_port=$(getConfiguracion pasv_min_port '0')
     local pasv_max_port=$(getConfiguracion pasv_max_port '0')
+    local inputBorrar=$(iptables -L INPUT -n --line-number | grep -E "multiport dports $pasv_min_port:$pasv_max_port$" | cut -d" " -f1)
+    local outputBorrar=$(iptables -L OUTPUT -n --line-number | grep -E "multiport sports $pasv_min_port:$pasv_max_port$" | cut -d" " -f1)
     #endregion
-    
-    systemctl start firewalld
     
     if [ $pasvHabilitado ];
     then
-        firewall-cmd --permanent --remove-port=$pasv_min_port-$pasv_max_port/tcp
+        [ "$inputBorrar" ] && iptables -D INPUT $inputBorrar
+        [ "$outputBorrar" ] && iptables -D OUTPUT $outputBorrar
     fi
 
     agregarConfiguracion "pasv_enable" "$1" "$archivoAConfigurar"
@@ -146,14 +147,13 @@ configurarPuertosPASV(){
         agregarConfiguracion "pasv_max_port" "$3" "$archivoAConfigurar"
         if [ $2 -ne 0 ] || [ $3 -ne 0 ];
 		then
-            firewall-cmd --permanent --zone=public --add-service=ftp
-            firewall-cmd --permanent --zone=public --add-port=$2-$3/tcp
+            iptables -A INPUT -p tcp --match multiport --dports $2:$3 -j ACCEPT
+            iptables -A OUTPUT -p tcp --match multiport --sports $2:$3 -j ACCEPT
         fi
     else
         agregarConfiguracion "pasv_max_port" '(none)' "$archivoAConfigurar"
         agregarConfiguracion "pasv_min_port" '(none)' "$archivoAConfigurar"
     fi
-    firewall-cmd --reload
 }
 configureDelay(){
     #region [rgba(47, 0, 255, 0.10)] args

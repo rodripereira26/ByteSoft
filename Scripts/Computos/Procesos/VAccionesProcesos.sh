@@ -64,7 +64,7 @@ ejecutarProcesos(){
                 clear 
                 tput cup 0 0 
             	yum install -y htop
-                sleep 3
+                sleep 2
 				;;
 			"MATAR PROCESO USANDO EL PID")
             	matarProcesoPID
