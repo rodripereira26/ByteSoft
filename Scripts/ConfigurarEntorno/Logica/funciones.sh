@@ -207,7 +207,7 @@ desinstalar() {
 	touch /etc/environment
 
 	# elimina usuario de respaldos del servidor respaldos
-	if [ $(hostname -I) = "192.168.1.10" ];
+	if [ $(hostname -I) = "$IP_RESPALDO" ];
 	then
 	    userdel bytesoftRespaldo
 		sed -i '/bytesoftRespaldo/d' /etc/sudoers 

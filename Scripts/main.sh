@@ -23,7 +23,7 @@ Principal() {
     dibujarTxt "ESC -> SALIR DE INPUT" 11 10 0
     
 
-    # if [ $(hostname -I) = "192.168.1.9" ];
+    # if [ $(hostname -I) = "$IP_SERVIDOR" ];
     # then
     dibujarBoton "CENTRO DE COMPUTOS" 11 11 80 3
     # fi
@@ -31,7 +31,7 @@ Principal() {
     then
         dibujarBoton "CONFIGURACIÓN DEL ENTORNO" 11 14 80 3 #necesita root 
         dibujarBoton "DESINSTALAR ENTORNO" 11 17 80 3 #necesita root 
-        if [ $(hostname -I) = "192.168.1.9" ];
+        if [ $(hostname -I) = "$IP_SERVIDOR" ];
         then
             if [ $(grep -c "export sshRespaldos=true" /etc/environment) = "0" ];  
             then
@@ -42,7 +42,7 @@ Principal() {
                 dibujarBoton "SINCRONIZAR /SCRIPTS CON RESPALDOS" 11 20 80 3
                 dibujarBoton "SALIR" 11 23 80 3
             fi
-        elif [ $(hostname -I) = "192.168.1.10" ];
+        elif [ $(hostname -I) = "$IP_RESPALDO" ];
         then
             dibujarBoton "SALIR" 11 20 80 3
         else
@@ -89,7 +89,7 @@ ejecutarMain() {
             "ENVIAR /SCRIPTS A RESPALDOS")
                 tput sgr0
                 clear
-                ssh -o ConnectTimeout=10 root@$IP_RESPALDO "sudo rm -r /Scripts"
+                ssh -o ConnectTimeout=10 root@$IP_RESPALDO "sudo rm -r /Scripts/*"
                 if [ $? -eq 0 ];
                 then
                     rsync -az -e ssh "/Scripts/" root@$IP_RESPALDO:/Scripts
@@ -99,6 +99,9 @@ ejecutarMain() {
 
             "SINCRONIZAR /SCRIPTS CON RESPALDOS")
                 tput sgr0
+                clear
+                yum install -y rsync
+                sleep 0.5
                 clear
                 ssh -p 2022 bytesoftRespaldo@$IP_RESPALDO "rm -r /Scripts"
                 tput cup 0 0
