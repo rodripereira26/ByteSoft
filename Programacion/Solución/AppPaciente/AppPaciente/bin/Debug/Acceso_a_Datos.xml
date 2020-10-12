@@ -71,13 +71,13 @@ Clase encargada de generar la conexión con la base de datos.
  </summary>
  <returns>La instancia creada de la clase.</returns>
 </member>
-<member name="M:Acceso_a_Datos.ModeloChat.crearChat">
+<member name="M:Acceso_a_Datos.ModeloChat.CrearChat">
  <summary>
  Función encargada de crear un nuevo chat en la base de datos.
  </summary>
  <returns>Identificador del chat creado</returns>
 </member>
-<member name="M:Acceso_a_Datos.ModeloChat.entrarChat(System.String,System.Int32)">
+<member name="M:Acceso_a_Datos.ModeloChat.EntrarChat(System.String,System.Int32)">
  <summary>
  Función encargada de registrar un ingreso a un determinado chat.
  </summary>
@@ -85,14 +85,14 @@ Clase encargada de generar la conexión con la base de datos.
  <param name="id"></param>
  <returns>True si se ingresó al chat.</returns>
 </member>
-<member name="M:Acceso_a_Datos.ModeloChat.listarChat(System.String)">
+<member name="M:Acceso_a_Datos.ModeloChat.ListarChat(System.String)">
  <summary>
  Función encargada de listar las peticiones de chat.
  </summary>
  <param name="usuario"></param>
  <returns>DataTable cargado con los valores obtenidos.</returns>
 </member>
-<member name="M:Acceso_a_Datos.ModeloChat.enviarMensaje(System.String,System.Int64,System.String,System.DateTime)">
+<member name="M:Acceso_a_Datos.ModeloChat.EnviarMensaje(System.String,System.Int64,System.String,System.DateTime)">
  <summary>
  Función encargada de enviar los mensajes.
  </summary>
@@ -102,21 +102,21 @@ Clase encargada de generar la conexión con la base de datos.
  <param name="fechaEnvio"></param>
  <returns>True si el mensaje fue enviado.</returns>
 </member>
-<member name="M:Acceso_a_Datos.ModeloChat.recargarChat(System.Int32)">
+<member name="M:Acceso_a_Datos.ModeloChat.RecargarChat(System.Int32)">
  <summary>
  Función encargada de refrescar los mensajes del chat.
  </summary>
  <param name="idChat"></param>
  <returns>DataTable cargado con los valores obtenidos.</returns>
 </member>
-<member name="M:Acceso_a_Datos.ModeloChat.obtenerRespuesta(System.String)">
+<member name="M:Acceso_a_Datos.ModeloChat.ObtenerRespuesta(System.String)">
  <summary>
  Función encargada de avisar al paciente si el médico a respondido su solicitud.
  </summary>
  <param name="usuario"></param>
  <returns>Cantidad de mensajes existentes en una sala de chat.</returns>
 </member>
-<member name="M:Acceso_a_Datos.ModeloChat.finalizarChat(System.String)">
+<member name="M:Acceso_a_Datos.ModeloChat.FinalizarChat(System.String)">
  <summary>
  Función encargada de finalizar una sesión de chat.
  </summary>

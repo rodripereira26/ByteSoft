@@ -32,3 +32,4 @@ C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\App
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppGestion.xml
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\AppGestion.exe.config
 C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\Vista.exe
+C:\Users\rpere\OneDrive\Trabajos\ByteSoft\Programacion\Solución\AppPaciente\AppPaciente\bin\Debug\MaterialSkin.dll
