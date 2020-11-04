@@ -1,0 +1,81 @@
+1. Mostrar el nombre de los médicos de especialidad cardiología que realizaron más consultas en el último mes (30 días anteriores) que algún médico de especialidad en pediatría.
+
+SELECT u.pNom, u.pApe 
+FROM usuario u, medico m, observacion o 
+WHERE u.cedula = m.cedula AND m.cedula = o.cedulaMedico AND m.especializacion = 'Cardiólogo' AND fecha BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() 
+GROUP BY o.cedulaMedico HAVING count(idObservacion) > ANY 
+(
+	SELECT count(idObservacion) 
+	FROM observacion o, medico m 
+	WHERE m.cedula = o.cedulaMedico AND m.especializacion = "Pediatra" AND o.fecha BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() 
+	GROUP BY cedulaMedico
+);
+ 
+2. Mostrar el total de consultas realizadas en los meses de agosto, setiembre y octubre. Deberán aparecer tres líneas, una para cada mes indicando la cantidad de consultas.
+
+SELECT ‘Agosto’, count(*) 
+FROM paciente_obtiene_diagnostico 
+WHERE month(fecha) = 8
+	UNION
+SELECT ‘Setiembre’, count(*) 
+FROM paciente_obtiene_diagnostico 
+WHERE month(fecha) = 9
+	UNION
+SELECT ‘Octubre’, count(*) 
+FROM paciente_obtiene_diagnostico 
+WHERE month(fecha) = 10
+
+3. Mostrar el nombre de las patologías (o enfermedades) que no tienen como síntomas la fiebre o el dolor de garganta.
+
+SELECT p.nombre AS Patologia 
+FROM patologia p, patologia_contiene_sintoma ps, sintoma s 
+WHERE ps.idPatologia = p.idPatologia AND s.idSintoma = ps.idSintoma AND ps.idPatologia NOT IN 
+(
+	SELECT idPatologia 
+	FROM patologia_contiene_sintoma ps, sintoma s 
+	WHERE s.idSintoma = ps.idSintoma AND s.nombre IN ("Fiebre","Dolor de garganta") 
+	GROUP BY ps.idPatologia
+) 
+GROUP BY ps.idPatologia;
+ 
+4. Mostrar la cantidad de veces que cada patología fue diagnosticada por la app en los últimos 30 días. Mostrar únicamente aquellas que hayan sido diagnosticadas más de 10 veces.
+
+SELECT p.nombre AS Patologia, count(ps.idPatologia) AS Cantidad FROM paciente_obtiene_diagnostico ps, patologia p 
+WHERE p.idPatologia = ps.idPatologia AND ps.fecha BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() AND ps.idPatologia IN
+(
+	SELECT ps.idPatologia 
+	FROM paciente_obtiene_diagnostico ps, patologia p 
+	WHERE p.idPatologia = ps.idPatologia AND ps.fecha BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() 
+	GROUP BY ps.idPatologia HAVING count(ps.idPatologia) > 10
+)
+GROUP BY ps.idPatologia;
+
+5. Mostrar los datos de los clientes y las consultas que han realizado. En caso de no haber realizado consultas, deberán mostrarse de todos modos, los datos de esos pacientes.
+
+SELECT u.*, p.sexo AS Sexo, p.fecNac AS Nacimiento, pa.nombre AS Nombre, fecha 
+FROM usuario u, paciente p 
+LEFT JOIN paciente_obtiene_diagnostico ps ON ps.cedulaPaciente = p.cedula 
+LEFT JOIN patologia pa ON pa.idPatologia = ps.idPatologia 
+WHERE u.cedula = p.cedula;
+
+6. Mostrar el nombre de la o las patologías diagnosticadas más veces.
+
+SELECT p.nombre AS Patología 
+FROM patologia p, paciente_obtiene_diagnostico ps 
+WHERE ps.idPatologia = p.idPatologia 
+GROUP BY ps.idPatologia HAVING count(ps.idPatologia) >= ALL 
+(
+	SELECT count(idPatologia) 
+	FROM paciente_obtiene_diagnostico 
+	GROUP BY idPatologia
+);
+ 
+7. Crear una vista que muestre los datos de las consultas (incluyendo nombre y apellido de los pacientes) realizadas en la app de los clientes de sexo masculino en la última semana. Otorgarle al usuario u_prueba permisos para ejecutar esa consulta.
+
+CREATE VIEW DatosPaciente AS 
+SELECT u.pNom AS Nombre, u.pApe AS Apellido, pa.nombre AS Diagnostico, pd.fecha AS Fecha
+FROM usuario u, paciente p, paciente_obtiene_diagnostico pd, patologia pa 
+WHERE u.cedula = p.cedula AND pd.cedulaPaciente = p.cedula AND pa.idPatologia = pd.idPatologia AND pd.fecha BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE() AND p.sexo = "M" ORDER BY pd.fecha DESC;
+CREATE USER 'u_prueba'@'%' IDENTIFIED BY 'prueba';
+GRANT SELECT, CREATE VIEW ON bytesoft_bdd.DatosPaciente TO 'u_prueba'@'%';
+SELECT * FROM DatosPaciente;
