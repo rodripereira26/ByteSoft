@@ -191,7 +191,9 @@ instalarMySQL() {
 
     # Configuración
 
-    echo "INGRESE UN ESPACIO EN BLANCO O, EN CASO DE ERROR, LA SIGUIENTE CONTRASEÑA: $(grep -i password /var/log/mysqld.log | head -1 | cut -d" " -f11)"
+    echo "INGRESE UN ESPACIO EN BLANCO O, EN CASO DE ERROR, LA SIGUIENTE CONTRASEÑA:"
+    echo "$(grep -i password /var/log/mysqld.log | head -1)"
+    
     mysql_secure_installation
     clear
 

@@ -121,7 +121,6 @@ configurarSSHServidor () {
     #configurar SSH public key con el usuario ya instalado
     rm /home/bytesoft/.ssh/id_rsa 
     echo -e "\n$pwKeygen\n$pwKeygen\n" | ssh-keygen
-    chmod 700 /home/bytesoft/.ssh/id_rsa
     touch /home/bytesoft/.ssh/known_hosts
  
 
