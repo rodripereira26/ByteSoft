@@ -50,7 +50,7 @@ firewallConfRespaldos(){
 
 	# INPUT
 	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-	# iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A INPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA
 	iptables -A INPUT -i lo -j ACCEPT # LOCALHOST
 	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A INPUT -p tcp --dport 20:21 -j ACCEPT # FTP
@@ -68,8 +68,10 @@ firewallConfRespaldos(){
 	iptables -I INPUT -i enp0s3 -p udp --dport 67:68 --sport \67:68 -j ACCEPT #DHCP
 	iptables -A INPUT -p tcp --dport 9418 -j ACCEPT # GIT
 
+
 	# OUTPUT
 	iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+	iptables -A OUTPUT -d $IP_SERVIDOR -j ACCEPT #IP de la OVA
 	iptables -A OUTPUT -p tcp --dport 20:21 -j ACCEPT # FTP
 	iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT # SMTP
 	iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
@@ -84,8 +86,8 @@ firewallConfRespaldos(){
 	iptables -A OUTPUT -p tcp --dport 9418 -j ACCEPT # GIT
 	iptables -A OUTPUT -p tcp --dport 3128 -j ACCEPT # SQUID
 	iptables -A OUTPUT -p icmp --icmp-type echo-request -j ACCEPT # Peticiones de ping salientes
-	iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 2022 -m state --state ESTABLISHED -j ACCEPT
+
 	
 	# iptables -A OUTPUT -s $IP_SERVIDOR -j ACCEPT #IP de la OVA, cambiar por la del servidor
 	
@@ -97,6 +99,7 @@ firewallConfRespaldos(){
 
 	systemctl start iptables
 	systemctl enable iptables
+
 
 }
 firewallConf() {
@@ -113,6 +116,7 @@ firewallConf() {
 	# INPUT
 	#iptables -A INPUT -s $ip -j ACCEPT #IP de la OVA, cambiar por la del servidor
 	iptables -A INPUT -i lo -j ACCEPT # LOCALHOST
+	iptables -A INPUT -s $IP_RESPALDO -j ACCEPT #IP de la OVA
 	iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A INPUT -p tcp --dport 20:21 -j ACCEPT # FTP
 	iptables -A INPUT -p tcp --dport 25 -j ACCEPT # SMTP
@@ -133,6 +137,7 @@ firewallConf() {
 
 	# OUTPUT
 	#iptables -A OUTPUT -s $ip -j ACCEPT #IP de la OVA, cambiar por la del servidor
+	iptables -A OUTPUT -d $IP_RESPALDO -j ACCEPT #IP de la OVA
 	iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	iptables -A OUTPUT -p tcp --dport 20:21 -j ACCEPT # FTP
 	iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT # SMTP
@@ -169,6 +174,7 @@ desinstalar() {
 	iptables -X
 	iptables -Z
 	iptables -t nat -F
+	
 	iptables -P INPUT ACCEPT
 	iptables -P OUTPUT ACCEPT
 	iptables -P FORWARD ACCEPT
