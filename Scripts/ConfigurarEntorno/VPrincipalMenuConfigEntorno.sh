@@ -155,11 +155,16 @@ pantallaInstalacionServidor() {
     
     let PUERTO=$(grep "#Port 22" /etc/ssh/sshd_config | cut -f2 -d" ")
 
+    # if [ $PUERTO -eq 22 ]; 
+    # then
     dibujarTxt "CONFIGURANDO SSH..." 40 24 1 
     sleep 0.5
     colorBgDefecto=0
     pantallaSSHServidor
     
+    # else 
+    #     colorBgDefecto=7
+    # fi
     cerrarPantalla
 }
 pantallaInstalacionServidorRespaldos() {
