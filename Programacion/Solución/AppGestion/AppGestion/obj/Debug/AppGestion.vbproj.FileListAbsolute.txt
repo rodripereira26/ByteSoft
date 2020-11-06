@@ -1,0 +1,271 @@
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppGestion.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\MaterialSkin.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\MetroSet UI.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\MetroFramework.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppPaciente.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppMedico.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Logica.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Logica.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Vista.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Vista.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Vista.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppPaciente.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppPaciente.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppPaciente.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppMedico.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppMedico.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\bin\Debug\AppMedico.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.main.resources
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.Resources.resources
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppPaciente\obj\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppGestion.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\MaterialSkin.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\MetroSet UI.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\MetroFramework.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppPaciente.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppMedico.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Logica.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Logica.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Vista.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Vista.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Vista.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppPaciente.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppPaciente.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppPaciente.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppMedico.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppMedico.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\bin\Debug\AppMedico.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.main.resources
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.Resources.resources
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion2\AppGestion\AppGestion\obj\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MaterialSkin.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroSet UI.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroFramework.dll
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.main.resources
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.Resources.resources
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Proyecto Prog\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Guna.UI.dll
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe.config
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.pdb
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.xml
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.dll
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroFramework.dll
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.pdb
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.xml
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.pdb
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe.config
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.pdb
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.xml
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe.config
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.pdb
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.xml
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe.config
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.main.resources
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.Resources.resources
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.exe
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.xml
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.pdb
+C:\Users\Mat\Desktop\Pruebas\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe.config
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.pdb
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.dll
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MaterialSkin.dll
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroFramework.dll
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroSet UI.dll
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.pdb
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.pdb
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe.config
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.pdb
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe.config
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.pdb
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe.config
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.main.resources
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.Resources.resources
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.exe
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.xml
+C:\Users\Agustín Pérez\Desktop\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Guna.UI.dll
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.dll
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroFramework.dll
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.pdb
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.xml
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.pdb
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.xml
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.pdb
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.xml
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.pdb
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.xml
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.main.resources
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.Resources.resources
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Pull de proyecto\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.pdb
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe.config
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.pdb
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.xml
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.dll
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.dll
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroFramework.dll
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.pdb
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.xml
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.pdb
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.xml
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe.config
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.xml
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.pdb
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.xml
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe.config
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.pdb
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.xml
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe.config
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.main.resources
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.Resources.resources
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.exe
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.xml
+C:\Users\Mat\Desktop\MASTER LIMPIO\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.pdb
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Guna.UI.dll
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.dll
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.dll
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\MetroFramework.dll
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.pdb
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Logica.xml
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.pdb
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.xml
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Vista.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.pdb
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\Acceso_a_Datos.xml
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.pdb
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.xml
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppPaciente.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.pdb
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.xml
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\bin\Debug\AppMedico.exe.config
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbprojAssemblyReference.cache
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.main.resources
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.Resources.resources
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.GenerateResource.cache
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CoreCompileInputs.cache
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.vbproj.CopyComplete
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.exe
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.xml
+C:\Users\rpere\OneDrive\Escritorio\Programacion clean\PruebasDesign\Programacion\Solución\AppGestion\AppGestion\obj\Debug\AppGestion.pdb

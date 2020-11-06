@@ -1,0 +1,383 @@
+lblSex1;Male
+lblSex2;Female
+lblPatCron;You do not have chronic pathologies
+lblTel;No registered phones
+btnChangePass;Change Password
+lblPassActual;Current password
+lblRepetirCon;Repeat password
+lblCon;New Password
+lblCredenciales;Credentials
+btnRegistrar;Apply changes
+lblEmailPerfil;Name
+lblNomPerfil;Name
+lblMailPerfil;Email
+lblNombrePerfil;Name
+lblTelefonosPerfil;Phones
+btnVerPatologias;See chronic pathologies
+lblPatologiasCronicas;Chronic pathologies
+lblEspecializacionPerfil;Specialization
+lblEdadPerfil;Age
+btnModPatologias; Modify chronic pathologies
+lblEspecPerfil,Specialization
+lblSApePerfil;Last surname
+lblPApePerfil;First surname
+lblSNomPerfil; Second name
+lblPNomPerfil;First name
+lblMiInformacion;My information
+lblCorreoPerfil;Email
+lblTelesPerfil;Phones
+btnEliminarPerfil;Delete
+btnAceptarPerfil;Add
+lblContactoPerfil;Contact
+msgboxUpdate;Your profile has been successfully modified
+msgErrorUpdateTel;Error al modificar los teléfonos
+msgboxErrorUpdatePac;Error al modificar el perfil
+msgboxErrorTel;You have entered the wrong phone number
+msgboxErrorMail;You must enter a correct email
+msgboxErrorCamposPerfil;You must fill in the fields
+msgPreguntaIdioma;You must reboot to save changes
+mcbRecordarUsuario;Remember user
+lblContraseña;Password
+lblUsuario;User
+picIngresar;?????????????
+lblCrearCuenta;Request account
+lblRestablecer;Restore password
+msgPacienteHabilitado;You have not been enabled to enter the system
+msgErrorLogin;Login failed
+msgLoginIncorrecto;Incorrect username or password
+msgCedulaInvalida;You must enter a valid ID
+msgCamposIncompletos;Did not complete the fields
+lblLogin; Login
+btnIngresar;Enter
+lblPatologiaMain;Phatologies
+lblRegistroMain;Register
+lblUsuarioMain;User
+lblSintomaMain;Symptoms
+lblSubPat;Register, modify, delete and search for pathologies
+lblSubSin;Register, modify, delete and search for symptoms
+lblSubRegis;Register doctors and managers in the application
+lblSubUsu;Search, modify or delete users
+btnVerPerfil;View profile
+btnCambiarPass;Change password
+btnCerrarSesion;Sign off
+lblWelcome; Welcome to
+btnSeleccionMultiple1;ACTIVATE MULTIPLE SELECTION
+btnSeleccionMultiple2;DISABLE MULTIPLE SELECTION
+btnModificarElemento;MODIFY SELECTED ELEMENT
+btnEliminarElementos; DELETE ELEMENTS
+lblBuscar; Search
+btnRegistrar;REGISTER
+lblBuscarListado;Search
+btnAtras;Back
+btnRegistrarListado;REGISTER
+btnEliminarElementos;DELETE SELECTED ITEM
+btnEliminarElementos1;DELETE 
+btnModificarElemento;MODIFY SELECTED ITEM
+btnSeleccionMultiple;ACTIVATE MULTIPLE SELECTION
+btnSeleccionMultiple1;ENABLE DISABLE MULTIPLE SELECTION
+btnSeleccionMultiple1;DISABLE MULTIPLE SELECTION
+txtElementos;ELEMENTS 
+btnEliminarElementos3;DELETE SELECTED ITEM
+msgEliminarELementos;Are you sure you want to delete 1?
+msgEliminarELementos2;Are you sure you want to delete?
+txtEliminarPat;Delete pathologies
+msgRegistroPatologiaCSV;Pathologies were successfully registered
+msboxErrorPatologiaCSV;Error when registering pathologies
+msgRegistroSintomaCSV;Symptoms were successfully recorded
+msgErrorSintomaCSV;Failed to register symptoms
+msgRegistroMedicoCSV;Doctors registered successfully
+msgErrorMedicoCSV;Failed to register doctors
+lblTitulo1Pat;Register pathology
+lblTitulo2Pat;Register pathology using a CSV file
+lblTitulo3Pat; List of pathologies
+lblSubtitulo1Pat;Register pathologies manually
+lblSubtitulo2Pat;Select a CSV file to record pathologies
+lblSubtitulo3Pat;Access all registered pathologies and delete and modify options
+lblTitulo1Sin; Record symptom
+lblTitulo2Sin;Record symptom using CSV file
+lblTitulo3Sin;List of symptoms
+lblSubtitulo1Sin;Record symptom using CSV file
+lblSubtitulo2Sin;Select a CSV file to record symptoms
+lblSubtitulo3Sin;Access all logged symptoms and delete and modify options
+lblTitulo1Med;Register doctor
+lblTitulo2Med;Register doctor using a CSV file
+lblTitulo3Med;Register manager
+lblSubtitulo1Med;Register doctors manually
+lblSubtitulo2Med;Select a CSV file to register doctors
+lblSubtitulo3Med;Register managers manually
+msgArchivoSinFormato;The selected file is not in the correct format
+msgArchivoNoCorrecto;The selected file is not correct
+msgArchivoEnUso;The file is in use by another process
+Form RegistroMedico;
+lblMiFoto;My photo
+lblCorreoMed;Email
+btnRegistrarMedico; Register doctor
+lblSApeMed;Second surname
+lblPApeMed;First surname
+lblSNomMed;Second name
+lblPNomMed;First name
+lblEspecMed;Specialization
+lblNomPatMed;Identity card
+msgRegistroMedicoExistoso; Doctor successfully registered
+msgMedicoRegistrado;The doctor has already been registered
+msgUsuarioRegistradoMed;The user has already been registered
+msgMedicoDadodeBaja;The doctor is discharged. Do you want to re-enter the system?
+msgCorreoIncorrectoMed;The email entered is not correct
+msgCedulaIncorrectaMed;The ID entered is not correct
+msgRellenarCamposMed;You must fill in the fields
+msgInformacionSinGuardar;There is unsaved information, are you sure you want to exit?
+lblCI;Identity card
+lblCOn;Password
+lblRepConGestor;Repeat password
+lblSApeGestor;Second surname
+lblPApeGestor;First surname
+lblSNomGestor;First name
+lblSNomGestor;Second name
+lblMiFotoGestor;My photo
+btnRegistrarGestor;Sing up
+btnAceptarGestor;Add
+btnEliminar;Delete
+btnRegistrarGestor;Sing up
+msgboRegistrarGestor;Successfully registered manager
+msgboxErrorGestor;The user has already been registered
+msgboxCedulaError;The ID entered is not correct
+msgboxTelefonoError;You have entered the wrong phone number
+msgboxEstaDadoDeBaja;You are discharged. Do you want to re-enter the system?
+lblPatologia; Pathology
+lblTodosLosSintomas;All symptoms
+lblSintomasSeleccionados;:Symptoms
+btnGuardar;Save symptoms 
+btnVolver;Back
+btnAceptaR;Accept
+btnRechazar;Decline
+btnAceptaR;Accept
+btnRechazar;Decline
+btnRegPat;Modify pathology
+msgSuccessRegPat;Successfully registered pathology
+msgYaRegPat;The pathology has already been admitted
+msgReingPatYaReg;The pathology is discharged. Do you want to re-enter the system?
+msgActualizarPatDatos;Do you want to update the pathology with the data entered?
+msgActualizarPatDatosSuccess;Pathology successfully readmitted
+msgActualizarPatDatosError;Error when re-entering the pathology
+msgActualizarPatDatosSuccess;Pathology successfully readmitted
+msgActualizarPatDatosError;Error when re-entering the pathology
+msgPrioridadPat;You must enter a priority
+msgRecomendacionPat;You must enter a full recommendation
+msgDescripcionCompletaPat;You must enter a complete description
+msgNombrePat;You must enter a name
+msgSintomasSeleccPat;You must select symptoms for the pathology
+msgPatModificadaSuccess;Successfully modified pathology
+msgModificarPatErr;Error when modifying the pathology
+msgPrioridadIngresarPat;You must enter a priority
+msgRecomendacionPat;You must enter a full recommendation
+msgDescripcionPat;You must enter a complete description
+msgIngresarNombreErr;You must enter a name
+msgSeleccSintomasPat;You must select symptoms for the pathology
+msgInfoSinGuardarPat;There is unsaved information, are you sure you want to exit?
+txtModSintRegistrar;Modify Symptom
+lblMiHistorialPac;My history
+lblSubMiHistoiralPac;See your full history within the app
+btnHistorialPac;Sign in
+lblIngSinPac;Enter symptoms
+lblSubIngSin;Let's say what your symptoms are and we'll give you a primary diagnosis
+btnIngresarSinPac;Sign in
+lblSubListadoPat;See all the pathologies registered in the application
+lblListadoPat;List of pathologies
+btnListadoPac;Sign in 
+lblWelcomeGestor;Welcome to
+btnCerrarSesionGestor;Sign off
+btnVerPerfilGestora;View profile
+btnCambiarPassGestor;Change password
+msgboxErrorEntrarChat; Failed to close chat
+msgboxYaHizoConsulta; You have already made an inquiry
+msgBoxNoInicioChat;You have not started any chat yet
+msgBoxPatCronicaModificada;Chronic pathologies successfully modified
+msgBoxErrorPatCronica;Error when modifying chronic pathologies
+msgBoxErrorEncontrarPatologias;No pathologies were found containing the selected pathologies
+msgBoxErrorSeleccionarSintoma;No pathologies were found containing the selected symptoms
+msgBoxPatologiasGuardadas;Pathologies saved
+msgBoxDebeIngresarpatologia,You must enter pathologies
+lblEscriba;Write a message
+btnVerSintomasDiagPac;See symptoms and diagnosis
+btnFinalizar;Finalize
+btnAtrasChat;Back
+lblNombre;Name
+lblFicha;Patient file
+lblSexoFicha;Gender
+lblMailFicha;Email 
+lblPatCroFicha; Chronic pathologies
+lblNomFicha;Full name
+lblEdadFicha;Age
+lblObservacion;Obeservation
+lblDescPatObs;Derivation
+btnEnviarObservacion;Send observation
+lblMensajeAdv;You have not changed your password since you were registered, for security reasons, you must change it
+lblTituloAdv;Warning
+btnCambiarPass;Go to change password
+lblTituloHistorial;My history
+lblSubHistorial;See your full history within the app
+btnIngresarChatsPaciente;Sign in
+lblSubChats;See list of chats you have with your patients
+lblTituloChats;Chat
+btnVerPerfilMedico;See profile
+btnCambiarPassMedico;Change password
+btnCerrarSesionMedico;Sign off
+msgFinalizarChat;Do you want to end the chat session?
+msgSesionFinalizada;Session ended
+msgErrorFinalizarChat;Failed to end chat
+msgErrorEnviarMensaje;Error sending message
+msgHistorialChatEnviado;History has been sent to the patient
+msgErrorEnviarCorreo;Error sending mail
+msgErrorGenerarMensaje;Error generating message
+msgEdadFicha;Age:
+msgMailFicha;Emaiil:
+msgSexoFicha;Gender:
+msgNombreFicha;Full name:
+msgLaSesionFinalizo;The chat session has ended
+msgObservacionEnviada;Observation sent successfully
+msgLlenarCamposObservacion;You must fill all the fields
+msgTienesTantosMensajes;You have 99+ new messages 
+msgTienesMsg;You have 
+msgSinResponder; new messages
+msgSinMensajes,You don’t have any new messages
+msgEdadSolicitud; Years
+msgEntrarAChat;¿Do you want to join the chat with the user
+msgErrorIngresoChat;Error entering the chat
+msgSinIdiomaSeleccionado;The selected language file was not found
+msgNoDirectorioConf;The settings directory was not found
+msgErrorCargaIdioma;Error loading language
+lblMisPatologiasIngresar;My pathologies
+lblModificarCronicas;Modify chronic pathologies
+lblArrastrarDerIzq;"Drag pathologies from one list to the other
+btnModPatCronicas;Modify chronic pathologies
+lblMispatReg;My chronic pathologies
+lblRegistrarCronicass;Register chronic pathologies
+lblArrastrarRegCrinicas;Drag pathologies to the right
+btnGuardarPatologiasCronicas;Save chronic pathologiesat
+lblDiagnosticosdeLafecha;"My diagnosis from the date
+btnverSintomasLugarchat;List symptoms
+lblTitilDiagnosticosGenerados;Generated diagnosis
+msgErrorRegistrarSintomasObtenerDiagnostico;Error registering pathologies
+msgErrorRegistrarSintomasObtener;Error registering symptoms
+msgDeseaInciarChat;Do you want to start a new chat?
+msgPeticionChatEnviada;A chat request has been sent
+msgErrorCrearSoli;Error sending a chat request
+msgYainiciounchat;You have already started a chat 
+msgRegistroHechoEsperarHabilitacion;Your registration has been requested successfully, you must wait to be confirmed
+msgErrorRegistroPatologiaPaciente;Error registering the patologies
+msgErrorRegistroTelPaciente;Error registering telephones
+msgPacienteYaRegistrado;The pacient has already been registered
+msgUsuarioYaingresadopaciente;The user has already been registered
+msgPacienteDadoDeBaja;You have been suspended from the application, do you want to request to join again? (Your old information will be maintained)
+msgRegistroSOlicitadoESPERAR; Your registration has been requested succesfully, you must wait to be allowed in the system
+msgIngresarSexoPaciente;You must choose a sex
+msgIngresarFechaNacimiento;You must enter your date of birth
+msgTelefonoIncorrectoPaciente;You have entered a wrong telephone number
+msgIngresoEmailIncorrectoPaciente;you must enter a correct email
+msgContrasenanocoincidepaciente;Passwords dont match
+msgCedulaIncorrectapacc;The entered ID is not correct
+msgRellenarCamposPacc;You must fill all fields
+btnRegPat;Modify pathology
+msgSuccessRegPat;Successfully registered pathology
+msgYaRegPat;The pathology has already been registered
+msgReingPatYaReg; The pathology is discharged. Do you want to re-enter it to the system?
+msgActualizarPatDatos;Do you want to update the pathology with the entered information?
+msgActualizarPatDatosSuccess;Pathology successfully readmitted
+msgActualizarPatDatosError;Error when re-entering the pathology
+msgActualizarPatDatosSuccess;Pathology successfully readmitted
+msgActualizarPatDatosError;Error when re-entering the pathology
+msgPrioridadPat;You must enter a priority
+msgRecomendacionPat;You must enter a full recommendation
+msgDescripcionCompletaPat;You must enter a complete description
+msgNombrePat;You must enter a name
+msgSintomasSeleccPat;You must select symptoms for the pathology
+msgPatModificadaSuccess;Successfully modified pathology
+msgModificarPatErr;Error when modifying the pathology
+msgPrioridadIngresarPat;You must enter a priority
+msgRecomendacionPat;You must enter a full recommendation
+msgDescripcionPat;You must enter a complete description
+msgIngresarNombreErr;You must enter a name
+msgSeleccSintomasPat;You must select symptoms for the pathology
+msgInfoSinGuardarPat;There is unsaved information, are you sure you want to exit?
+txtModSintRegistrar;Modify Symptom
+msgRegistrarSintSuccess;Symptom successfully registered
+msgErrorRegistrarSint;Failed to register symptom
+msgIngresarNombreSint;You must enter a name
+msgDescripcionRegSint;You must complete the description
+msgSuccessModRegSint;Successfully modified symptom
+msgErrModRegSint;Failed to modify symptom
+msgRegNomSint;You must enter a name
+msgCompDescSint;You must complete the description
+msgConfSalirReg;There is unsaved information, are you sure you want to exit?
+msgboRegistrarGestor;Successfully registered manager
+msgboxErrorGestor;The user has already been registered
+msgboxEstaDadoDeBaja;You are discharged. Do you want to re-enter the system?
+msgboRegistrarGestor;Successfully registered manager
+msgboxTelefonoError;You have entered the wrong phone number
+msgboxCedulaError;The ID entered is not correct
+txtTitleRegGestor;Select a photo
+msgSelecSintUCAsociar;You must select symptoms
+xdxdUCHabilitarGestor;Do you want to enable this manager?
+msgDarbajaGestorUC;Do you want to unsubscribe this manager?
+xdxdlol;Do you want to cancel this patient?
+UserControl UCDiagnostico
+toolRecomendarXD;Warning: We recommend that you request a chat due to the severity of the illness.
+txtMostrarMenosXD;Show less
+txtMostrarMasXD;Show more
+xtnomsimpxd; What is?
+msgSApeXD;Wrong second name
+msgSNomXD;Wrong first name
+msgPaPEXD;Wrong first surname
+msgPNomXD;Wrong second surname
+msgMailIncorrectounu;Wrong email
+msgPassesDontMatch;Passwords don’t match
+lblCIRegPac;ID
+lblMailRegistroPaciente;email
+lblPApeRegPaciente;First surname
+lblSApeRegPaciente;Second surname
+lblMiFotoPac;My picture
+lblRepPassPac;Repeat password
+btnEliminarRegPac;Delete
+cbM;Male
+cbF;Female
+btnSoliCuentaPac;Request account
+lblFecNacPac;Date of birth
+lblSexoRegPac;Genre
+btnAceptarRegPac;Add
+btnPatCron;Add chronic pathology
+lblNomPat;Pathology name
+btnRegPatologia;Register
+lblDescPatologia;Description
+btnSintomasPatologia;Add symptom
+lblPrioPatologia;Priority
+mrbPMedia;Medium
+mrbPBaja;Low
+lblRecomendacionesPatologia;Recomendations
+mrbPAlta;High
+lblNA;No response
+btnNo;No
+btnSi;Yes
+lblIniciarCOnv;You have received a response from the doctor
+lblIniciarConversacion;Do you want to start the conversation?
+lblListadoPatPac;List of pathologies
+lblSubListadoPat;See all the pathologies registered in the application
+btnConsultaActual;Sign in
+lblCOnsultaa;Actual query
+lblVerConsultaaa;See your query while you wait
+btnIngresarSinPac;Sign in
+lblSubIngSin;Let's say what your symptoms are and we'll give you a primary diagnosis
+lblIngSinPac;Enter symptoms
+btnHistorialPac;Sign in
+lblSubMiHistoiralPac;See your full history within the app
+lblMiHistorialPac;My history
+btnReanudar;Sign in
+lblReanudarChatt;Resume chat
+lblContinuarChat;Continue chat with doctor
+btnAplicarCambiosAjustes;Apply changes
+lblIdiomaAjustes;Languaje
+lblColorSecundario;Secondary color
+lblTemaOscuro;Dark theme
+lblTemaActivado;Activated
+lblTemaDesactivado;Desactivated
+lblTituloAjustes;Configuration
+msgNoEstasHabilitado;You are not able to enter the system

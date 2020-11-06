@@ -1,0 +1,1347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblSex1" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="lblSex2" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="lblPatCron" xml:space="preserve">
+    <value>You do not have chronic pathologies</value>
+  </data>
+  <data name="lblTel" xml:space="preserve">
+    <value>No registered phones</value>
+  </data>
+  <data name="btnChangePass" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="lblPassActual" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="lblRepetirCon" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="lblCon" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="lblCredenciales" xml:space="preserve">
+    <value>Credentials</value>
+  </data>
+  <data name="btnRegistrar" xml:space="preserve">
+    <value>Apply changes</value>
+  </data>
+  <data name="lblEmailPerfil" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblNomPerfil" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblMailPerfil" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblNombrePerfil" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblTelefonosPerfil" xml:space="preserve">
+    <value>Phones</value>
+  </data>
+  <data name="btnVerPatologias" xml:space="preserve">
+    <value>See chronic pathologies</value>
+  </data>
+  <data name="lblPatologiasCronicas" xml:space="preserve">
+    <value>Chronic pathologies</value>
+  </data>
+  <data name="lblEspecializacionPerfil" xml:space="preserve">
+    <value>Specialization</value>
+  </data>
+  <data name="lblEdadPerfil" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="btnModPatologias" xml:space="preserve">
+    <value> Modify chronic pathologies</value>
+  </data>
+  <data name="lblSApePerfil" xml:space="preserve">
+    <value>Last surname</value>
+  </data>
+  <data name="lblPApePerfil" xml:space="preserve">
+    <value>First surname</value>
+  </data>
+  <data name="lblSNomPerfil" xml:space="preserve">
+    <value> Second name</value>
+  </data>
+  <data name="lblPNomPerfil" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="lblMiInformacion" xml:space="preserve">
+    <value>My information</value>
+  </data>
+  <data name="lblCorreoPerfil" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblTelesPerfil" xml:space="preserve">
+    <value>Phones</value>
+  </data>
+  <data name="btnEliminarPerfil" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnAceptarPerfil" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lblContactoPerfil" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="msgboxUpdate" xml:space="preserve">
+    <value>Your profile has been successfully modified</value>
+  </data>
+  <data name="msgErrorUpdateTel" xml:space="preserve">
+    <value>Error al modificar los teléfonos</value>
+  </data>
+  <data name="msgboxErrorUpdatePac" xml:space="preserve">
+    <value>Error al modificar el perfil</value>
+  </data>
+  <data name="msgboxErrorTel" xml:space="preserve">
+    <value>You have entered the wrong phone number</value>
+  </data>
+  <data name="msgboxErrorMail" xml:space="preserve">
+    <value>You must enter a correct email</value>
+  </data>
+  <data name="msgboxErrorCamposPerfil" xml:space="preserve">
+    <value>You must fill in the fields</value>
+  </data>
+  <data name="msgPreguntaIdioma" xml:space="preserve">
+    <value>You must reboot to save changes</value>
+  </data>
+  <data name="mcbRecordarUsuario" xml:space="preserve">
+    <value>Remember user</value>
+  </data>
+  <data name="lblContraseña" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lblUsuario" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="picIngresar" xml:space="preserve">
+    <value>?????????????</value>
+  </data>
+  <data name="lblCrearCuenta" xml:space="preserve">
+    <value>Request account</value>
+  </data>
+  <data name="lblRestablecer" xml:space="preserve">
+    <value>Restore password</value>
+  </data>
+  <data name="msgPacienteHabilitado" xml:space="preserve">
+    <value>You have not been enabled to enter the system</value>
+  </data>
+  <data name="msgErrorLogin" xml:space="preserve">
+    <value>Login failed</value>
+  </data>
+  <data name="msgLoginIncorrecto" xml:space="preserve">
+    <value>Incorrect username or password</value>
+  </data>
+  <data name="msgCedulaInvalida" xml:space="preserve">
+    <value>You must enter a valid ID</value>
+  </data>
+  <data name="msgCamposIncompletos" xml:space="preserve">
+    <value>Did not complete the fields</value>
+  </data>
+  <data name="lblLogin" xml:space="preserve">
+    <value> Login</value>
+  </data>
+  <data name="btnIngresar" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="lblPatologiaMain" xml:space="preserve">
+    <value>Phatologies</value>
+  </data>
+  <data name="lblRegistroMain" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="lblUsuarioMain" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="lblSintomaMain" xml:space="preserve">
+    <value>Symptoms</value>
+  </data>
+  <data name="lblSubPat" xml:space="preserve">
+    <value>Register, modify, delete and search for pathologies</value>
+  </data>
+  <data name="lblSubSin" xml:space="preserve">
+    <value>Register, modify, delete and search for symptoms</value>
+  </data>
+  <data name="lblSubRegis" xml:space="preserve">
+    <value>Register doctors and managers in the application</value>
+  </data>
+  <data name="lblSubUsu" xml:space="preserve">
+    <value>Search, modify or delete users</value>
+  </data>
+  <data name="btnVerPerfil" xml:space="preserve">
+    <value>View profile</value>
+  </data>
+  <data name="btnCambiarPass" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="btnCerrarSesion" xml:space="preserve">
+    <value>Sign off</value>
+  </data>
+  <data name="lblWelcome" xml:space="preserve">
+    <value> Welcome to</value>
+  </data>
+  <data name="btnSeleccionMultiple1" xml:space="preserve">
+    <value>ACTIVATE MULTIPLE SELECTION</value>
+  </data>
+  <data name="btnSeleccionMultiple2" xml:space="preserve">
+    <value>DISABLE MULTIPLE SELECTION</value>
+  </data>
+  <data name="btnModificarElemento" xml:space="preserve">
+    <value>MODIFY SELECTED ELEMENT</value>
+  </data>
+  <data name="btnEliminarElementos" xml:space="preserve">
+    <value> DELETE ELEMENTS</value>
+  </data>
+  <data name="lblBuscar" xml:space="preserve">
+    <value> Search</value>
+  </data>
+  <data name="btnRegistrar" xml:space="preserve">
+    <value>REGISTER</value>
+  </data>
+  <data name="lblBuscarListado" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnAtras" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnRegistrarListado" xml:space="preserve">
+    <value>REGISTER</value>
+  </data>
+  <data name="btnEliminarElementos" xml:space="preserve">
+    <value>DELETE SELECTED ITEM</value>
+  </data>
+  <data name="btnEliminarElementos1" xml:space="preserve">
+    <value>DELETE </value>
+  </data>
+  <data name="btnModificarElemento" xml:space="preserve">
+    <value>MODIFY SELECTED ITEM</value>
+  </data>
+  <data name="btnSeleccionMultiple" xml:space="preserve">
+    <value>ACTIVATE MULTIPLE SELECTION</value>
+  </data>
+  <data name="btnSeleccionMultiple1" xml:space="preserve">
+    <value>ENABLE DISABLE MULTIPLE SELECTION</value>
+  </data>
+  <data name="btnSeleccionMultiple1" xml:space="preserve">
+    <value>DISABLE MULTIPLE SELECTION</value>
+  </data>
+  <data name="txtElementos" xml:space="preserve">
+    <value>ELEMENTS </value>
+  </data>
+  <data name="btnEliminarElementos3" xml:space="preserve">
+    <value>DELETE SELECTED ITEM</value>
+  </data>
+  <data name="msgEliminarELementos" xml:space="preserve">
+    <value>Are you sure you want to delete 1?</value>
+  </data>
+  <data name="msgEliminarELementos2" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="txtEliminarPat" xml:space="preserve">
+    <value>Delete pathologies</value>
+  </data>
+  <data name="msgRegistroPatologiaCSV" xml:space="preserve">
+    <value>Pathologies were successfully registered</value>
+  </data>
+  <data name="msboxErrorPatologiaCSV" xml:space="preserve">
+    <value>Error when registering pathologies</value>
+  </data>
+  <data name="msgRegistroSintomaCSV" xml:space="preserve">
+    <value>Symptoms were successfully recorded</value>
+  </data>
+  <data name="msgErrorSintomaCSV" xml:space="preserve">
+    <value>Failed to register symptoms</value>
+  </data>
+  <data name="msgRegistroMedicoCSV" xml:space="preserve">
+    <value>Doctors registered successfully</value>
+  </data>
+  <data name="msgErrorMedicoCSV" xml:space="preserve">
+    <value>Failed to register doctors</value>
+  </data>
+  <data name="lblTitulo1Pat" xml:space="preserve">
+    <value>Register pathology</value>
+  </data>
+  <data name="lblTitulo2Pat" xml:space="preserve">
+    <value>Register pathology using a CSV file</value>
+  </data>
+  <data name="lblTitulo3Pat" xml:space="preserve">
+    <value> List of pathologies</value>
+  </data>
+  <data name="lblSubtitulo1Pat" xml:space="preserve">
+    <value>Register pathologies manually</value>
+  </data>
+  <data name="lblSubtitulo2Pat" xml:space="preserve">
+    <value>Select a CSV file to record pathologies</value>
+  </data>
+  <data name="lblSubtitulo3Pat" xml:space="preserve">
+    <value>Access all registered pathologies and delete and modify options</value>
+  </data>
+  <data name="lblTitulo1Sin" xml:space="preserve">
+    <value> Record symptom</value>
+  </data>
+  <data name="lblTitulo2Sin" xml:space="preserve">
+    <value>Record symptom using CSV file</value>
+  </data>
+  <data name="lblTitulo3Sin" xml:space="preserve">
+    <value>List of symptoms</value>
+  </data>
+  <data name="lblSubtitulo1Sin" xml:space="preserve">
+    <value>Record symptom using CSV file</value>
+  </data>
+  <data name="lblSubtitulo2Sin" xml:space="preserve">
+    <value>Select a CSV file to record symptoms</value>
+  </data>
+  <data name="lblSubtitulo3Sin" xml:space="preserve">
+    <value>Access all logged symptoms and delete and modify options</value>
+  </data>
+  <data name="lblTitulo1Med" xml:space="preserve">
+    <value>Register doctor</value>
+  </data>
+  <data name="lblTitulo2Med" xml:space="preserve">
+    <value>Register doctor using a CSV file</value>
+  </data>
+  <data name="lblTitulo3Med" xml:space="preserve">
+    <value>Register manager</value>
+  </data>
+  <data name="lblSubtitulo1Med" xml:space="preserve">
+    <value>Register doctors manually</value>
+  </data>
+  <data name="lblSubtitulo2Med" xml:space="preserve">
+    <value>Select a CSV file to register doctors</value>
+  </data>
+  <data name="lblSubtitulo3Med" xml:space="preserve">
+    <value>Register managers manually</value>
+  </data>
+  <data name="msgArchivoSinFormato" xml:space="preserve">
+    <value>The selected file is not in the correct format</value>
+  </data>
+  <data name="msgArchivoNoCorrecto" xml:space="preserve">
+    <value>The selected file is not correct</value>
+  </data>
+  <data name="msgArchivoEnUso" xml:space="preserve">
+    <value>The file is in use by another process</value>
+  </data>
+  <data name="Form RegistroMedico" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMiFoto" xml:space="preserve">
+    <value>My photo</value>
+  </data>
+  <data name="lblCorreoMed" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="btnRegistrarMedico" xml:space="preserve">
+    <value> Register doctor</value>
+  </data>
+  <data name="lblSApeMed" xml:space="preserve">
+    <value>Second surname</value>
+  </data>
+  <data name="lblPApeMed" xml:space="preserve">
+    <value>First surname</value>
+  </data>
+  <data name="lblSNomMed" xml:space="preserve">
+    <value>Second name</value>
+  </data>
+  <data name="lblPNomMed" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="lblEspecMed" xml:space="preserve">
+    <value>Specialization</value>
+  </data>
+  <data name="lblNomPatMed" xml:space="preserve">
+    <value>Identity card</value>
+  </data>
+  <data name="msgRegistroMedicoExistoso" xml:space="preserve">
+    <value> Doctor successfully registered</value>
+  </data>
+  <data name="msgMedicoRegistrado" xml:space="preserve">
+    <value>The doctor has already been registered</value>
+  </data>
+  <data name="msgUsuarioRegistradoMed" xml:space="preserve">
+    <value>The user has already been registered</value>
+  </data>
+  <data name="msgMedicoDadodeBaja" xml:space="preserve">
+    <value>The doctor is discharged. Do you want to re-enter the system?</value>
+  </data>
+  <data name="msgCorreoIncorrectoMed" xml:space="preserve">
+    <value>The email entered is not correct</value>
+  </data>
+  <data name="msgCedulaIncorrectaMed" xml:space="preserve">
+    <value>The ID entered is not correct</value>
+  </data>
+  <data name="msgRellenarCamposMed" xml:space="preserve">
+    <value>You must fill in the fields</value>
+  </data>
+  <data name="msgInformacionSinGuardar" xml:space="preserve">
+    <value>There is unsaved information, are you sure you want to exit?</value>
+  </data>
+  <data name="lblCI" xml:space="preserve">
+    <value>Identity card</value>
+  </data>
+  <data name="lblCOn" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lblRepConGestor" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="lblSApeGestor" xml:space="preserve">
+    <value>Second surname</value>
+  </data>
+  <data name="lblPApeGestor" xml:space="preserve">
+    <value>First surname</value>
+  </data>
+  <data name="lblSNomGestor" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="lblSNomGestor" xml:space="preserve">
+    <value>Second name</value>
+  </data>
+  <data name="lblMiFotoGestor" xml:space="preserve">
+    <value>My photo</value>
+  </data>
+  <data name="btnRegistrarGestor" xml:space="preserve">
+    <value>Sing up</value>
+  </data>
+  <data name="btnAceptarGestor" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnEliminar" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnRegistrarGestor" xml:space="preserve">
+    <value>Sing up</value>
+  </data>
+  <data name="msgboRegistrarGestor" xml:space="preserve">
+    <value>Successfully registered manager</value>
+  </data>
+  <data name="msgboxErrorGestor" xml:space="preserve">
+    <value>The user has already been registered</value>
+  </data>
+  <data name="msgboxCedulaError" xml:space="preserve">
+    <value>The ID entered is not correct</value>
+  </data>
+  <data name="msgboxTelefonoError" xml:space="preserve">
+    <value>You have entered the wrong phone number</value>
+  </data>
+  <data name="msgboxEstaDadoDeBaja" xml:space="preserve">
+    <value>You are discharged. Do you want to re-enter the system?</value>
+  </data>
+  <data name="lblPatologia" xml:space="preserve">
+    <value> Pathology</value>
+  </data>
+  <data name="lblTodosLosSintomas" xml:space="preserve">
+    <value>All symptoms</value>
+  </data>
+  <data name="lblSintomasSeleccionados" xml:space="preserve">
+    <value>Symptoms</value>
+  </data>
+  <data name="btnGuardar" xml:space="preserve">
+    <value>Save symptoms </value>
+  </data>
+  <data name="btnVolver" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnAceptaR" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="btnRechazar" xml:space="preserve">
+    <value>Decline</value>
+  </data>
+  <data name="btnAceptaR" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="btnRechazar" xml:space="preserve">
+    <value>Decline</value>
+  </data>
+  <data name="btnRegPat" xml:space="preserve">
+    <value>Modify pathology</value>
+  </data>
+  <data name="msgSuccessRegPat" xml:space="preserve">
+    <value>Successfully registered pathology</value>
+  </data>
+  <data name="msgYaRegPat" xml:space="preserve">
+    <value>The pathology has already been admitted</value>
+  </data>
+  <data name="msgReingPatYaReg" xml:space="preserve">
+    <value>The pathology is discharged. Do you want to re-enter the system?</value>
+  </data>
+  <data name="msgActualizarPatDatos" xml:space="preserve">
+    <value>Do you want to update the pathology with the data entered?</value>
+  </data>
+  <data name="msgActualizarPatDatosSuccess" xml:space="preserve">
+    <value>Pathology successfully readmitted</value>
+  </data>
+  <data name="msgActualizarPatDatosError" xml:space="preserve">
+    <value>Error when re-entering the pathology</value>
+  </data>
+  <data name="msgActualizarPatDatosSuccess" xml:space="preserve">
+    <value>Pathology successfully readmitted</value>
+  </data>
+  <data name="msgActualizarPatDatosError" xml:space="preserve">
+    <value>Error when re-entering the pathology</value>
+  </data>
+  <data name="msgPrioridadPat" xml:space="preserve">
+    <value>You must enter a priority</value>
+  </data>
+  <data name="msgRecomendacionPat" xml:space="preserve">
+    <value>You must enter a full recommendation</value>
+  </data>
+  <data name="msgDescripcionCompletaPat" xml:space="preserve">
+    <value>You must enter a complete description</value>
+  </data>
+  <data name="msgNombrePat" xml:space="preserve">
+    <value>You must enter a name</value>
+  </data>
+  <data name="msgSintomasSeleccPat" xml:space="preserve">
+    <value>You must select symptoms for the pathology</value>
+  </data>
+  <data name="msgPatModificadaSuccess" xml:space="preserve">
+    <value>Successfully modified pathology</value>
+  </data>
+  <data name="msgModificarPatErr" xml:space="preserve">
+    <value>Error when modifying the pathology</value>
+  </data>
+  <data name="msgPrioridadIngresarPat" xml:space="preserve">
+    <value>You must enter a priority</value>
+  </data>
+  <data name="msgRecomendacionPat" xml:space="preserve">
+    <value>You must enter a full recommendation</value>
+  </data>
+  <data name="msgDescripcionPat" xml:space="preserve">
+    <value>You must enter a complete description</value>
+  </data>
+  <data name="msgIngresarNombreErr" xml:space="preserve">
+    <value>You must enter a name</value>
+  </data>
+  <data name="msgSeleccSintomasPat" xml:space="preserve">
+    <value>You must select symptoms for the pathology</value>
+  </data>
+  <data name="msgInfoSinGuardarPat" xml:space="preserve">
+    <value>There is unsaved information, are you sure you want to exit?</value>
+  </data>
+  <data name="txtModSintRegistrar" xml:space="preserve">
+    <value>Modify Symptom</value>
+  </data>
+  <data name="lblMiHistorialPac" xml:space="preserve">
+    <value>My history</value>
+  </data>
+  <data name="lblSubMiHistoiralPac" xml:space="preserve">
+    <value>See your full history within the app</value>
+  </data>
+  <data name="btnHistorialPac" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="lblIngSinPac" xml:space="preserve">
+    <value>Enter symptoms</value>
+  </data>
+  <data name="lblSubIngSin" xml:space="preserve">
+    <value>Let's say what your symptoms are and we'll give you a primary diagnosis</value>
+  </data>
+  <data name="btnIngresarSinPac" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="lblSubListadoPat" xml:space="preserve">
+    <value>See all the pathologies registered in the application</value>
+  </data>
+  <data name="lblListadoPat" xml:space="preserve">
+    <value>List of pathologies</value>
+  </data>
+  <data name="btnListadoPac" xml:space="preserve">
+    <value>Sign in </value>
+  </data>
+  <data name="lblWelcomeGestor" xml:space="preserve">
+    <value>Welcome to</value>
+  </data>
+  <data name="btnCerrarSesionGestor" xml:space="preserve">
+    <value>Sign off</value>
+  </data>
+  <data name="btnAceptarPaciente" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="btnRegistroGestor" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="btnRechazarPaciente" xml:space="preserve">
+    <value>Decline</value>
+  </data>
+  <data name="btnVerPerfilGestor" xml:space="preserve">
+    <value>View profile</value>
+  </data>
+  <data name="btnCambiarPassGestor" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="msgboxErrorEntrarChat" xml:space="preserve">
+    <value> Failed to close chat</value>
+  </data>
+  <data name="msgboxYaHizoConsulta" xml:space="preserve">
+    <value> You have already made an inquiry</value>
+  </data>
+  <data name="msgBoxNoInicioChat" xml:space="preserve">
+    <value>You have not started any chat yet</value>
+  </data>
+  <data name="msgBoxPatCronicaModificada" xml:space="preserve">
+    <value>Chronic pathologies successfully modified</value>
+  </data>
+  <data name="msgBoxErrorPatCronica" xml:space="preserve">
+    <value>Error when modifying chronic pathologies</value>
+  </data>
+  <data name="msgBoxErrorEncontrarPatologias" xml:space="preserve">
+    <value>No pathologies were found containing the selected pathologies</value>
+  </data>
+  <data name="msgBoxErrorSeleccionarSintoma" xml:space="preserve">
+    <value>No pathologies were found containing the selected symptoms</value>
+  </data>
+  <data name="msgBoxPatologiasGuardadas" xml:space="preserve">
+    <value>Pathologies saved</value>
+  </data>
+  <data name="lblEscriba" xml:space="preserve">
+    <value>Write a message</value>
+  </data>
+  <data name="btnVerSintomasDiagPac" xml:space="preserve">
+    <value>See symptoms and diagnosis</value>
+  </data>
+  <data name="btnFinalizar" xml:space="preserve">
+    <value>Finalize</value>
+  </data>
+  <data name="btnAtrasChat" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="lblNombre" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblFicha" xml:space="preserve">
+    <value>Patient file</value>
+  </data>
+  <data name="lblSexoFicha" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="lblMailFicha" xml:space="preserve">
+    <value>Email </value>
+  </data>
+  <data name="lblPatCroFicha" xml:space="preserve">
+    <value> Chronic pathologies</value>
+  </data>
+  <data name="lblNomFicha" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="lblEdadFicha" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="lblObservacion" xml:space="preserve">
+    <value>Obeservation</value>
+  </data>
+  <data name="lblDescPatObs" xml:space="preserve">
+    <value>Derivation</value>
+  </data>
+  <data name="btnSoliChat" xml:space="preserve">
+    <value>Request a chat</value>
+  </data>
+  <data name="lblDescropcionPat" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="btnRecomendacionPattt" xml:space="preserve">
+    <value>Recomendation</value>
+  </data>
+  <data name="btnMasDesc" xml:space="preserve">
+    <value>Show more</value>
+  </data>
+  <data name="btnMasRec" xml:space="preserve">
+    <value>Show more</value>
+  </data>
+  <data name="btnEnviarObservacion" xml:space="preserve">
+    <value>Send observation</value>
+  </data>
+  <data name="lblMensajeAdv" xml:space="preserve">
+    <value>You have not changed your password since you were registered, for security reasons, you must change it</value>
+  </data>
+  <data name="lblTituloAdv" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="lblArrastreSintomas" xml:space="preserve">
+    <value>Drag the symptoms to the right</value>
+  </data>
+  <data name="btnCambiarPass" xml:space="preserve">
+    <value>Go to change password</value>
+  </data>
+  <data name="lblTituloHistorial" xml:space="preserve">
+    <value>My history</value>
+  </data>
+  <data name="lblSubHistorial" xml:space="preserve">
+    <value>See your full history within the app</value>
+  </data>
+  <data name="btnIngresarChatsPaciente" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="lblSubChats" xml:space="preserve">
+    <value>See list of chats you have with your patients</value>
+  </data>
+  <data name="lblTituloChats" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="msgBoxPatCronicaModificada" xml:space="preserve">
+    <value>chronic pathologies were succesfully modified </value>
+  </data>
+  <data name="lblIngreseSIntomas" xml:space="preserve">
+    <value>Which are your symptoms?</value>
+  </data>
+  <data name="lblMisSintomas" xml:space="preserve">
+    <value>my symptoms</value>
+  </data>
+  <data name="btnObtenerDiag" xml:space="preserve">
+    <value>Obtain primary diagnosis</value>
+  </data>
+  <data name="btnVerPerfilMedico" xml:space="preserve">
+    <value>See profile</value>
+  </data>
+  <data name="btnCambiarPassMedico" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="btnCerrarSesionMedico" xml:space="preserve">
+    <value>Sign off</value>
+  </data>
+  <data name="msgFinalizarChat" xml:space="preserve">
+    <value>Do you want to end the chat session?</value>
+  </data>
+  <data name="msgSesionFinalizada" xml:space="preserve">
+    <value>Session ended</value>
+  </data>
+  <data name="msgErrorFinalizarChat" xml:space="preserve">
+    <value>Failed to end chat</value>
+  </data>
+  <data name="msgErrorEnviarMensaje" xml:space="preserve">
+    <value>Error sending message</value>
+  </data>
+  <data name="msgHistorialChatEnviado" xml:space="preserve">
+    <value>History has been sent to the patient</value>
+  </data>
+  <data name="msgErrorEnviarCorreo" xml:space="preserve">
+    <value>Error sending mail</value>
+  </data>
+  <data name="msgErrorGenerarMensaje" xml:space="preserve">
+    <value>Error generating message</value>
+  </data>
+  <data name="msgEdadFicha" xml:space="preserve">
+    <value>Age:</value>
+  </data>
+  <data name="msgMailFicha" xml:space="preserve">
+    <value>Emaiil:</value>
+  </data>
+  <data name="msgSexoFicha" xml:space="preserve">
+    <value>Gender:</value>
+  </data>
+  <data name="msgNombreFicha" xml:space="preserve">
+    <value>Full name:</value>
+  </data>
+  <data name="msgLaSesionFinalizo" xml:space="preserve">
+    <value>The chat session has ended</value>
+  </data>
+  <data name="msgObservacionEnviada" xml:space="preserve">
+    <value>Observation sent successfully</value>
+  </data>
+  <data name="msgLlenarCamposObservacion" xml:space="preserve">
+    <value>You must fill all the fields</value>
+  </data>
+  <data name="msgTienesTantosMensajes" xml:space="preserve">
+    <value>You have 99+ new messages </value>
+  </data>
+  <data name="msgTienesMsg" xml:space="preserve">
+    <value>You have </value>
+  </data>
+  <data name="msgSinResponder" xml:space="preserve">
+    <value> new messages</value>
+  </data>
+  <data name="msgSinMensajes" xml:space="preserve">
+    <value>You don’t have any new messages</value>
+  </data>
+  <data name="msgEdadSolicitud" xml:space="preserve">
+    <value> Years</value>
+  </data>
+  <data name="msgEntrarAChat" xml:space="preserve">
+    <value>¿Do you want to join the chat with the user</value>
+  </data>
+  <data name="msgErrorIngresoChat" xml:space="preserve">
+    <value>Error entering the chat</value>
+  </data>
+  <data name="msgSinIdiomaSeleccionado" xml:space="preserve">
+    <value>The selected language file was not found</value>
+  </data>
+  <data name="msgNoDirectorioConf" xml:space="preserve">
+    <value>The settings directory was not found</value>
+  </data>
+  <data name="msgErrorCargaIdioma" xml:space="preserve">
+    <value>Error loading language</value>
+  </data>
+  <data name="lblMisPatologiasIngresar" xml:space="preserve">
+    <value>My pathologies</value>
+  </data>
+  <data name="lblModificarCronicas" xml:space="preserve">
+    <value>Modify chronic pathologies</value>
+  </data>
+  <data name="lblArrastrarDerIzq" xml:space="preserve">
+    <value>"Drag pathologies from one list to the other</value>
+  </data>
+  <data name="btnModPatCronicas" xml:space="preserve">
+    <value>Modify chronic pathologies</value>
+  </data>
+  <data name="lblMispatReg" xml:space="preserve">
+    <value>My chronic pathologies</value>
+  </data>
+  <data name="lblRegistrarCronicass" xml:space="preserve">
+    <value>Register chronic pathologies</value>
+  </data>
+  <data name="lblArrastrarRegCrinicas" xml:space="preserve">
+    <value>Drag pathologies to the right</value>
+  </data>
+  <data name="btnGuardarPatologiasCronicas" xml:space="preserve">
+    <value>Save chronic pathologiesat</value>
+  </data>
+  <data name="lblDiagnosticosdeLafecha" xml:space="preserve">
+    <value>My diagnosis from the date</value>
+  </data>
+  <data name="btnverSintomasLugarchat" xml:space="preserve">
+    <value>List symptoms</value>
+  </data>
+  <data name="lblTitilDiagnosticosGenerados" xml:space="preserve">
+    <value>Generated diagnosis</value>
+  </data>
+  <data name="msgErrorRegistrarSintomasObtenerDiagnostico" xml:space="preserve">
+    <value>Error registering pathologies</value>
+  </data>
+  <data name="msgErrorRegistrarSintomasObtener" xml:space="preserve">
+    <value>Error registering symptoms</value>
+  </data>
+  <data name="msgDeseaInciarChat" xml:space="preserve">
+    <value>Do you want to start a new chat?</value>
+  </data>
+  <data name="msgPeticionChatEnviada" xml:space="preserve">
+    <value>A chat request has been sent</value>
+  </data>
+  <data name="msgErrorCrearSoli" xml:space="preserve">
+    <value>Error sending a chat request</value>
+  </data>
+  <data name="msgYainiciounchat" xml:space="preserve">
+    <value>You have already started a chat </value>
+  </data>
+  <data name="msgRegistroHechoEsperarHabilitacion" xml:space="preserve">
+    <value>Your registration has been requested successfully, you must wait to be confirmed</value>
+  </data>
+  <data name="msgErrorRegistroPatologiaPaciente" xml:space="preserve">
+    <value>Error registering the patologies</value>
+  </data>
+  <data name="msgErrorRegistroTelPaciente" xml:space="preserve">
+    <value>Error registering telephones</value>
+  </data>
+  <data name="msgPacienteYaRegistrado" xml:space="preserve">
+    <value>The pacient has already been registered</value>
+  </data>
+  <data name="msgUsuarioYaingresadopaciente" xml:space="preserve">
+    <value>The user has already been registered</value>
+  </data>
+  <data name="msgPacienteDadoDeBaja" xml:space="preserve">
+    <value>You have been suspended from the application, do you want to request to join again? (Your old information will be maintained)</value>
+  </data>
+  <data name="msgRegistroSOlicitadoESPERAR" xml:space="preserve">
+    <value> Your registration has been requested succesfully, you must wait to be allowed in the system</value>
+  </data>
+  <data name="msgIngresarSexoPaciente" xml:space="preserve">
+    <value>You must choose a sex</value>
+  </data>
+  <data name="msgIngresarFechaNacimiento" xml:space="preserve">
+    <value>You must enter your date of birth</value>
+  </data>
+  <data name="msgTelefonoIncorrectoPaciente" xml:space="preserve">
+    <value>You have entered a wrong telephone number</value>
+  </data>
+  <data name="msgIngresoEmailIncorrectoPaciente" xml:space="preserve">
+    <value>you must enter a correct email</value>
+  </data>
+  <data name="msgContrasenanocoincidepaciente" xml:space="preserve">
+    <value>Passwords dont match</value>
+  </data>
+  <data name="msgCedulaIncorrectapacc" xml:space="preserve">
+    <value>The entered ID is not correct</value>
+  </data>
+  <data name="msgRellenarCamposPacc" xml:space="preserve">
+    <value>You must fill all fields</value>
+  </data>
+  <data name="btnRegPat" xml:space="preserve">
+    <value>Modify pathology</value>
+  </data>
+  <data name="msgSuccessRegPat" xml:space="preserve">
+    <value>Successfully registered pathology</value>
+  </data>
+  <data name="msgYaRegPat" xml:space="preserve">
+    <value>The pathology has already been registered</value>
+  </data>
+  <data name="msgReingPatYaReg" xml:space="preserve">
+    <value> The pathology is discharged. Do you want to re-enter it to the system?</value>
+  </data>
+  <data name="msgActualizarPatDatos" xml:space="preserve">
+    <value>Do you want to update the pathology with the entered information?</value>
+  </data>
+  <data name="msgActualizarPatDatosSuccess" xml:space="preserve">
+    <value>Pathology successfully readmitted</value>
+  </data>
+  <data name="msgActualizarPatDatosError" xml:space="preserve">
+    <value>Error when re-entering the pathology</value>
+  </data>
+  <data name="msgActualizarPatDatosSuccess" xml:space="preserve">
+    <value>Pathology successfully readmitted</value>
+  </data>
+  <data name="msgActualizarPatDatosError" xml:space="preserve">
+    <value>Error when re-entering the pathology</value>
+  </data>
+  <data name="msgPrioridadPat" xml:space="preserve">
+    <value>You must enter a priority</value>
+  </data>
+  <data name="msgRecomendacionPat" xml:space="preserve">
+    <value>You must enter a full recommendation</value>
+  </data>
+  <data name="msgDescripcionCompletaPat" xml:space="preserve">
+    <value>You must enter a complete description</value>
+  </data>
+  <data name="msgNombrePat" xml:space="preserve">
+    <value>You must enter a name</value>
+  </data>
+  <data name="msgSintomasSeleccPat" xml:space="preserve">
+    <value>You must select symptoms for the pathology</value>
+  </data>
+  <data name="msgPatModificadaSuccess" xml:space="preserve">
+    <value>Successfully modified pathology</value>
+  </data>
+  <data name="msgModificarPatErr" xml:space="preserve">
+    <value>Error when modifying the pathology</value>
+  </data>
+  <data name="msgPrioridadIngresarPat" xml:space="preserve">
+    <value>You must enter a priority</value>
+  </data>
+  <data name="msgRecomendacionPat" xml:space="preserve">
+    <value>You must enter a full recommendation</value>
+  </data>
+  <data name="msgDescripcionPat" xml:space="preserve">
+    <value>You must enter a complete description</value>
+  </data>
+  <data name="msgIngresarNombreErr" xml:space="preserve">
+    <value>You must enter a name</value>
+  </data>
+  <data name="msgSeleccSintomasPat" xml:space="preserve">
+    <value>You must select symptoms for the pathology</value>
+  </data>
+  <data name="msgInfoSinGuardarPat" xml:space="preserve">
+    <value>There is unsaved information, are you sure you want to exit?</value>
+  </data>
+  <data name="txtModSintRegistrar" xml:space="preserve">
+    <value>Modify Symptom</value>
+  </data>
+  <data name="msgRegistrarSintSuccess" xml:space="preserve">
+    <value>Symptom successfully registered</value>
+  </data>
+  <data name="msgErrorRegistrarSint" xml:space="preserve">
+    <value>Failed to register symptom</value>
+  </data>
+  <data name="msgIngresarNombreSint" xml:space="preserve">
+    <value>You must enter a name</value>
+  </data>
+  <data name="msgDescripcionRegSint" xml:space="preserve">
+    <value>You must complete the description</value>
+  </data>
+  <data name="msgSuccessModRegSint" xml:space="preserve">
+    <value>Successfully modified symptom</value>
+  </data>
+  <data name="msgErrModRegSint" xml:space="preserve">
+    <value>Failed to modify symptom</value>
+  </data>
+  <data name="msgRegNomSint" xml:space="preserve">
+    <value>You must enter a name</value>
+  </data>
+  <data name="msgCompDescSint" xml:space="preserve">
+    <value>You must complete the description</value>
+  </data>
+  <data name="msgConfSalirReg" xml:space="preserve">
+    <value>There is unsaved information, are you sure you want to exit?</value>
+  </data>
+  <data name="msgboRegistrarGestor" xml:space="preserve">
+    <value>Successfully registered manager</value>
+  </data>
+  <data name="msgboxErrorGestor" xml:space="preserve">
+    <value>The user has already been registered</value>
+  </data>
+  <data name="msgboxEstaDadoDeBaja" xml:space="preserve">
+    <value>You are discharged. Do you want to re-enter the system?</value>
+  </data>
+  <data name="msgboRegistrarGestor" xml:space="preserve">
+    <value>Successfully registered manager</value>
+  </data>
+  <data name="msgboxTelefonoError" xml:space="preserve">
+    <value>You have entered the wrong phone number</value>
+  </data>
+  <data name="msgboxCedulaError" xml:space="preserve">
+    <value>The ID entered is not correct</value>
+  </data>
+  <data name="txtTitleRegGestor" xml:space="preserve">
+    <value>Select a photo</value>
+  </data>
+  <data name="msgSelecSintUCAsociar" xml:space="preserve">
+    <value>You must select symptoms</value>
+  </data>
+  <data name="xdxdUCHabilitarGestor" xml:space="preserve">
+    <value>Do you want to enable this manager?</value>
+  </data>
+  <data name="msgDarbajaGestorUC" xml:space="preserve">
+    <value>Do you want to unsubscribe this manager?</value>
+  </data>
+  <data name="xdxdlol" xml:space="preserve">
+    <value>Do you want to cancel this patient?</value>
+  </data>
+  <data name="toolRecomendarXD" xml:space="preserve">
+    <value>Warning: We recommend that you request a chat due to the severity of the illness.</value>
+  </data>
+  <data name="txtMostrarMenosXD" xml:space="preserve">
+    <value>Show less</value>
+  </data>
+  <data name="txtMostrarMasXD" xml:space="preserve">
+    <value>Show more</value>
+  </data>
+  <data name="xtnomsimpxd" xml:space="preserve">
+    <value> What is?</value>
+  </data>
+  <data name="msgSApeXD" xml:space="preserve">
+    <value>Wrong second name</value>
+  </data>
+  <data name="msgSNomXD" xml:space="preserve">
+    <value>Wrong first name</value>
+  </data>
+  <data name="msgPaPEXD" xml:space="preserve">
+    <value>Wrong first surname</value>
+  </data>
+  <data name="msgPNomXD" xml:space="preserve">
+    <value>Wrong second surname</value>
+  </data>
+  <data name="msgMailIncorrectounu" xml:space="preserve">
+    <value>Wrong email</value>
+  </data>
+  <data name="msgPassesDontMatch" xml:space="preserve">
+    <value>Passwords don’t match</value>
+  </data>
+  <data name="lblCIRegPac" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="lblMailRegistroPaciente" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="lblPApeRegPaciente" xml:space="preserve">
+    <value>First surname</value>
+  </data>
+  <data name="lblSApeRegPaciente" xml:space="preserve">
+    <value>Second surname</value>
+  </data>
+  <data name="lblMiFotoPac" xml:space="preserve">
+    <value>My picture</value>
+  </data>
+  <data name="lblRepPassPac" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="btnEliminarRegPac" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="cbM" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="cbF" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="btnSoliCuentaPac" xml:space="preserve">
+    <value>Request account</value>
+  </data>
+  <data name="lblFecNacPac" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="lblSexoRegPac" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="btnAceptarRegPac" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnPatCron" xml:space="preserve">
+    <value>Add chronic pathology</value>
+  </data>
+  <data name="lblNomPat" xml:space="preserve">
+    <value>Pathology name</value>
+  </data>
+  <data name="btnRegPatologia" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="lblDescPatologia" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="btnSintomasPatologia" xml:space="preserve">
+    <value>Add symptom</value>
+  </data>
+  <data name="lblPrioPatologia" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="mrbPMedia" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="mrbPBaja" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="lblRecomendacionesPatologia" xml:space="preserve">
+    <value>Recomendations</value>
+  </data>
+  <data name="mrbPAlta" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="lblNA" xml:space="preserve">
+    <value>No response</value>
+  </data>
+  <data name="btnNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="btnSi" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="lblIniciarCOnv" xml:space="preserve">
+    <value>You have received a response from the doctor</value>
+  </data>
+  <data name="lblIniciarConversacion" xml:space="preserve">
+    <value>Do you want to start the conversation?</value>
+  </data>
+  <data name="lblListadoPatPac" xml:space="preserve">
+    <value>List of pathologies</value>
+  </data>
+  <data name="lblSubListadoPat" xml:space="preserve">
+    <value>See all the pathologies registered in the application</value>
+  </data>
+  <data name="btnConsultaActual" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="lblCOnsultaa" xml:space="preserve">
+    <value>Actual query</value>
+  </data>
+  <data name="lblVerConsultaaa" xml:space="preserve">
+    <value>See your query while you wait</value>
+  </data>
+  <data name="btnIngresarSinPac" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="lblSubIngSin" xml:space="preserve">
+    <value>Let's say what your symptoms are and we'll give you a primary diagnosis</value>
+  </data>
+  <data name="lblIngSinPac" xml:space="preserve">
+    <value>Enter symptoms</value>
+  </data>
+  <data name="btnHistorialPac" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="lblSubMiHistoiralPac" xml:space="preserve">
+    <value>See your full history within the app</value>
+  </data>
+  <data name="lblMiHistorialPac" xml:space="preserve">
+    <value>My history</value>
+  </data>
+  <data name="btnReanudar" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="lblReanudarChatt" xml:space="preserve">
+    <value>Resume chat</value>
+  </data>
+  <data name="lblContinuarChat" xml:space="preserve">
+    <value>Continue chat with doctor</value>
+  </data>
+  <data name="btnAplicarCambiosAjustes" xml:space="preserve">
+    <value>Apply changes</value>
+  </data>
+  <data name="lblIdiomaAjustes" xml:space="preserve">
+    <value>Languaje</value>
+  </data>
+  <data name="lblDescripcionSintoma" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lblColorSecundario" xml:space="preserve">
+    <value>Secondary color</value>
+  </data>
+  <data name="lblTemaOscuro" xml:space="preserve">
+    <value>Dark theme</value>
+  </data>
+  <data name="lblTemaActivado" xml:space="preserve">
+    <value>Activated</value>
+  </data>
+  <data name="lblTemaDesactivado" xml:space="preserve">
+    <value>Desactivated</value>
+  </data>
+  <data name="lblTituloAjustes" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="msgNoEstasHabilitado" xml:space="preserve">
+    <value>You are not able to enter the system</value>
+  </data>
+  <data name="btnUsuariosGestion" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="btnSintomasGestion" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="btnPatologiaGestion" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="lblCIGestor" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="lblPNomGestor" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="lblMailGestor" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="btnImg" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="btnListadoPatMedico" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="lblTituloListadoPatMedico" xml:space="preserve">
+    <value>List of pathologies</value>
+  </data>
+  <data name="lblListadoPatMedico" xml:space="preserve">
+    <value>List all registered pathologies</value>
+  </data>
+  <data name="btnHistorialMedico" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="IconButton1" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnAceptarChat" xml:space="preserve">
+    <value>Start chat</value>
+  </data>
+  <data name="btnDiagnostico" xml:space="preserve">
+    <value>Patient's diagnosis</value>
+  </data>
+  <data name="txtnomsimpxd" xml:space="preserve">
+    <value>What is </value>
+  </data>
+</root>

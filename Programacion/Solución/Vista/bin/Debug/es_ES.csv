@@ -1,0 +1,372 @@
+lblSex1;Masculino
+lblSex2;Femenino
+lblPatCron;Usted no tiene patologías crónicas
+lblTel;No hay teléfonos registrados
+btnChangePass;Cambiar contraseña
+lblPassActual;Contraseña actual
+lblRepetirCon;Repetir contraseña
+lblCon;Nueva contraseña
+lblCredenciales;Credenciales
+btnRegistrar;Aplicar cambios
+lblEmailPerfil;Nombre
+lblNomPerfil;Nombre
+lblMailPerfil;Correo electrónico
+lblNombrePerfil;Nombre
+lblTelefonosPerfil;Teléfonos
+btnVerPatologias;Ver patologías crónicas
+lblPatologiasCronicas;Patologías crónicas
+lblEspecializacionPerfil;Especialización
+lblEdadPerfil;Edad
+btnModPatologias;Modificar patologías crónicas
+lblEspecPerfil,Especialización
+lblSApePerfil;Segundo apellido
+lblPApePerfil;Primer apellido
+lblSNomPerfil;Segundo nombre
+lblPNomPerfil;Primer nombre
+lblMiInformacion;Mi información
+lblCorreoPerfil;Correo electrónico
+lblTelesPerfil;Teléfonos
+btnEliminarPerfil;Borrar
+btnAceptarPerfil;Añadir
+lblContactoPerfil;Contacto
+msgboxUpdate;Su perfil ha sido modificado con exito
+msgErrorUpdateTel;Error al modificar los teléfonos
+msgboxErrorUpdatePac;Error al modificar el perfil
+msgboxErrorTel;Ha ingresado un teléfono incorrecto
+msgboxErrorMail;Debe ingresar un e-mail correcto
+msgboxErrorCamposPerfil;Debe rellenar los campos
+msgPreguntaIdioma;Debe reiniciar para guardar los cambios
+mcbRecordarUsuario;Recordar Usuario
+lblContraseña;Contraseña
+lblUsuario;Usuario
+picIngresar;?????????????
+lblCrearCuenta;Solicitar Cuenta
+lblRestablecer;Restablecer contraseña
+msgPacienteHabilitado;Usted no ha sido habilitado para ingresar al sistema
+msgErrorLogin;Error al ingresar al sistema
+msgLoginIncorrecto;Usuario o contraseña incorrectos
+msgCedulaInvalida;Debe ingresar una cédula válida
+msgCamposIncompletos;No completó los campos
+lblLogin;Inciar Sesión
+btnIngresar;Ingresar
+lblPatologiaMain;Patologias
+lblRegistroMain;Registro
+lblUsuarioMain;Usuarios
+lblSintomaMain;Sintomas
+lblSubPat;Registrar, modificar, eliminar y buscar patologías
+lblSubSin;Registrar, modificar, eliminar y buscar síntomas
+lblSubRegis;Registrar médicos y gestores en la aplicación
+lblSubUsu;Buscar, modificar o eliminar usuarios
+btnVerPerfil;Ver perfil
+btnCambiarPass;Cambiar contraseña
+btnCerrarSesion;Cerrar Sesión
+lblWelcome;Bienvenido/a
+btnSeleccionMultiple1;ACTIVAR SELECCIÓN MÚLTIPLE
+btnSeleccionMultiple2;DESACTIVAR SELECCIÓN MÚLTIPLE
+btnModificarElemento;MODIFICAR ELEMENTO SELECCIONADO
+btnEliminarElementos;ELIMINAR ELEMENTO
+lblBuscar;Buscar
+btnRegistrar;REGISTRAR
+lblBuscarListado;Buscar
+btnAtras;Atrás
+btnRegistrarListado;REGISTRAR
+btnEliminarElementos;ELIMINAR ELEMENTO SELECCIONADO
+btnEliminarElementos1;ELIMINAR 
+btnModificarElemento;MODIFICAR ELEMENTO SELECCIONADO
+btnSeleccionMultiple;ACTIVAR SELECCIÓN MÚLTIPLE
+btnSeleccionMultiple1;ACTIVAR DESACTIVAR SELECCIÓN MÚLTIPLE
+btnSeleccionMultiple1;DESACTIVAR SELECCIÓN MÚLTIPLE
+txtElementos;ELEMENTOS
+btnEliminarElementos3;ELIMINAR ELEMENTO SELECCIONADO
+msgEliminarELementos;¿Seguro desea eliminar 1
+msgEliminarELementos2;¿Seguro desea eliminar
+txtEliminarPat;Eliminar patologías
+msgRegistroPatologiaCSV;Se registraron las patologías exitosamente
+msboxErrorPatologiaCSV;Error al registrar las patologías
+msgRegistroSintomaCSV;Se registraron los síntomas exitosamente
+msgErrorSintomaCSV;Error al registrar los síntomas
+msgRegistroMedicoCSV;Se registraron los médicos exitosamente
+msgErrorMedicoCSV;Error al registrar a los médicos
+lblTitulo1Pat;Registrar patología
+lblTitulo2Pat;Registrar patología mediante un archivo CSV
+lblTitulo3Pat;Listado de patologías
+lblSubtitulo1Pat;Registre patologías manualmente
+lblSubtitulo2Pat;Seleccione un archivo CSV para registrar patologías
+lblSubtitulo3Pat;Acceda a todos los patologías registradas y a opciones de eliminar y modificar
+lblTitulo1Sin;Registrar síntoma
+lblTitulo2Sin;Registrar síntoma mediante un archivo CSV
+lblTitulo3Sin;Listado de síntomas
+lblSubtitulo1Sin;Registre síntomas manualmente
+lblSubtitulo2Sin;Seleccione un archivo CSV para registrar síntomas
+lblSubtitulo3Sin;Acceda a todos los síntomas registrados y a opciones de eliminar y modificar
+lblTitulo1Med;Registrar médico
+lblTitulo2Med;Registrar médico mediante un archivo CSV
+lblTitulo3Med;Registrar gestor
+lblSubtitulo1Med;Registre médicos manualmente
+lblSubtitulo2Med;Seleccione un archivo CSV para registrar médicos
+lblSubtitulo3Med;Registre gestores manualmente
+msgArchivoSinFormato;El archivo seleccionado no posee el formato correcto
+msgArchivoNoCorrecto;El arhivo seleccionado no es correcto
+msgArchivoEnUso;El archivo se encuentra en uso por otro proceso
+lblMiFoto;Mi foto
+lblCorreoMed;Correo electrónico
+btnRegistrarMedico;Registrar médico
+lblSApeMed;Segundo apellido
+lblPApeMed;Primer apellido
+lblSNomMed;Segundo nombre
+lblPNomMed;Primer nombre
+lblEspecMed;Especialización
+lblNomPatMed;Cédula de identidad
+msgRegistroMedicoExistoso;Médico registrado con éxito
+msgMedicoRegistrado;El médico ya fue registrado
+msgUsuarioRegistradoMed;El usuario ya fue registrado
+msgMedicoDadodeBaja;El médico se ecuentra dado de baja. ¿Desea reingresar al sistema?
+msgCorreoIncorrectoMed;El correo ingresado no es correcto
+msgCedulaIncorrectaMed;La cédula ingresada no es correcta
+msgRellenarCamposMed;Debe rellenar los campos
+msgInformacionSinGuardar;Hay información sin guardar, ¿Seguro desea salir?
+lblCI;Cédula
+lblCOn;Contraseña
+lblRepConGestor;Repetir contraseña
+lblSApeGestor;Segundo apellido
+lblPApeGestor;Primer apellido
+lblSNomGestor;Segundo nombre
+lblSApeGestor;Segundo apellido
+lblMiFotoGestor;Mi foto
+btnRegistrarGestor;Registrarme
+btnAceptarGestor;Añadir
+btnEliminar;Borrar
+btnRegistrarGestor;Registrarme
+msgboRegistrarGestor;Gestor registrado con éxito
+msgboxErrorGestor;El usuario ya fue registrado
+msgboxCedulaError;La cédula ingresada no es correcta
+msgboxTelefonoError;Ha ingresado un teléfono incorrecto
+msgboxEstaDadoDeBaja;Usted se encuentra dado de baja. ¿Desea reingresar al sistema?
+lblPatologia;
+lblTodosLosSintomas;Todos los síntomas
+lblSintomasSeleccionados;:Síntomas
+btnGuardar;Guardar síntomas
+btnVolver;Atrás
+btnAceptaR;Aceptar
+btnRechazar;Rechazar
+btnAceptaR;Aceptar
+btnRechazar;Rechazar
+lblMiHistorialPac;Mi historial
+lblSubMiHistoiralPac;Vea su historial completo dentro de la aplicación
+btnHistorialPac;Ingresar
+lblIngSinPac;Ingresar síntomas
+lblSubIngSin;Dígamos cuáles son sus síntomas y le daremos un diagnóstico primario
+btnIngresarSinPac;Ingresar
+lblSubListadoPat;Vea todas las patologías registradas en la aplicación
+lblListadoPat;Listado de patologías
+btnListadoPac;Ingresar
+lblWelcomeGestor;Bienvenido/a
+btnCerrarSesionGestor;Cerrar Sesión
+btnVerPerfilGestora;Ver perfil
+btnCambiarPassGestor;Cambiar contraseña
+msgboxErrorEntrarChat; Error al cerrar el chat
+msgboxYaHizoConsulta; Usted ya ha realizado una consulta
+msgBoxNoInicioChat;Usted aún no ha iniciado ningún chat
+msgBoxPatCronicaModificada;Patologias crónicas modificadas con éxito
+msgBoxErrorPatCronica;Error al modificar las patologías crónicas
+msgBoxErrorEncontrarPatologias;No se encontraron patologías que contenga los síntomas seleccionados
+msgBoxErrorSeleccionarSintoma;No seleccionó ningún síntoma
+msgBoxPatologiasGuardadas;Patologías guardadas
+msgBoxDebeIngresarpatologia,Debe ingresar patologías
+lblEscriba;Escriba un mensaje
+btnVerSintomasDiagPac;Ver síntomas y diagnóstico
+btnFinalizar;Finalizar
+btnAtrasChat;Atras
+Form UCChat;
+lblNombre;Nombre
+lblFicha;Ficha del paciente 
+lblSexoFicha;Sexo 
+lblMailFicha;Email 
+lblPatCroFicha;Patologias crónicas
+lblNomFicha;Nombre completo 
+lblEdadFicha;Edad
+lblObservacion;Observación
+lblDescPatObs;Derivación
+btnEnviarObservacion;Enviar observación
+lblMensajeAdv;No has cambiado tu constraseña desde que fuiste registreado, por razones de seguridad, debes cambiarla
+lblTituloAdv;Advertencia
+btnCambiarPass;ir a cambiar contraseña
+lblTituloHistorial;Mi historial
+lblSubHistorial;Vea su historial completo dentro de la aplicación
+btnHistorialMedico;Ingresar
+btnIngresarChatsPaciente;Ingresar
+lblSubChats;Ver lista de chats que tiene con su pacientes
+lblTituloChats;Chat
+btnIngresarChatsPaciente;Ingresar
+lblListadoPatMedico;Vea todas las patologías registradas en la aplicación
+lblTituloListadoPatMedico;Listado de patologías
+btnListadoPatMedico;Ingresar
+lblNAChats;No hay solicitudes de chat
+btnVerPerfilMedico;Ver perfil
+btnCambiarPassMedico;Cambiar contraseña
+btnCerrarSesionMedico;Cerrar sesión
+btnObtenerDiag;Obtener diagnósitco primario
+lblIngreseSIntomas;¿Cuáles son tus síntomas?
+lblMisSintomas;Mis síntomas
+lblArrastreSintomas;Arrastre síntomas hacia la derecha 
+btnSoliChat;Solicitar chat
+lblTitulo;Posibles Diagnósticos
+msgFinalizarChat;¿Desea finalizar la sesión de chat?
+msgSesionFinalizada;Sesión finalizada
+msgErrorFinalizarChat;Error al finalizar el chat
+msgErrorEnviarMensaje;Error al enviar el mensaje
+msgHistorialChatEnviado;Se ha enviado el historial al paciente
+msgErrorEnviarCorreo;Error al enviar el correo
+msgErrorGenerarMensaje;Error al generar el mensaje
+msgEdadFicha;Edad:
+msgMailFicha;Mail:
+msgSexoFicha;Sexo:
+msgNombreFicha;Nombre completo:
+msgLaSesionFinalizo;La sesión de chat ha finalizado
+msgObservacionEnviada;Observacion enviada con éxito
+msgLlenarCamposObservacion;Debe llenar los campos
+msgTienesTantosMensajes;Tienes 99+ mensajes sin responder
+msgTienesMsg;Tienes 
+msgSinResponder; mensajes sin responder
+msgSinMensajes,No tienes mensajes nuevos
+msgEdadSolicitud; años
+msgEntrarAChat;¿Desea entrar al chat con el usuario 
+msgErrorIngresoChat;Error al ingresar al chat
+msgSinIdiomaSeleccionado;No se encuentra el archivo del idioma seleccionado
+msgNoDirectorioConf;No se encuentra el directorio de configuración
+msgErrorCargaIdioma;Error al cargar el idioma
+lblMisPatologiasIngresar;Mis patologías
+lblModificarCronicas;Modificar patologías crónicas
+lblArrastrarDerIzq;"Arrastre patologías hacia la derecha o izquierda
+btnModPatCronicas;Modificar patologías crónicas
+lblMispatReg;Mis patologías crónicas
+lblRegistrarCronicass;Registrar patologías crónicas
+lblArrastrarRegCrinicas;Arrastre patologías hacia la derecha
+btnGuardarPatologiasCronicas;Guardar Patologías
+lblDiagnosticosdeLafecha;"Mis diagnósticos de la fecha 
+btnverSintomasLugarchat;Ver síntomas 
+lblTitilDiagnosticosGenerados;Diagnosticos generados
+msgErrorRegistrarSintomasObtenerDiagnostico;Error al registrar las patologías
+msgErrorRegistrarSintomasObtener;Error al registrar los sintomas
+msgDeseaInciarChat;¿Desea iniciar un chat?
+msgPeticionChatEnviada;Se ha enviado una solicitud de chat
+msgErrorCrearSoli;Error al crear la solicitud de chat
+msgYainiciounchat;Usted ya ha iniciado un chat
+msgRegistroHechoEsperarHabilitacion;Su registro ha sido solicitado con éxito, debe esperar a ser habilitiado
+msgErrorRegistroPatologiaPaciente;Error al registrar las patologías
+msgErrorRegistroTelPaciente;Error al registrar los teléfonos
+msgPacienteYaRegistrado;El paciente ya fue registrado
+msgUsuarioYaingresadopaciente;El usuario ya fue ingresado
+msgPacienteDadoDeBaja;Usted se encuentra dado de baja. ¿Desea solicitar reingresar al sistema? (Se mantendrá su información anterior)
+msgRegistroSOlicitadoESPERAR;Su registro ha sido solicitado con éxito, debe esperar a ser habilitiado
+msgIngresarSexoPaciente;Debe ingresar un sexo
+msgIngresarFechaNacimiento;Debe ingresar su fecha de nacimiento
+msgTelefonoIncorrectoPaciente;Ha ingresado un teléfono incorrecto
+msgIngresoEmailIncorrectoPaciente;Debe ingresar un e-mail correcto
+msgContrasenanocoincidepaciente;Las contraseñas no coinciden
+msgCedulaIncorrectapacc;La cédula ingresada no es correcta
+msgRellenarCamposPacc;Debe rellenar los campos
+btnRegPat;Modificar patologia
+msgSuccessRegPat;Patología registrada con éxito
+msgYaRegPat;La patología ya fue ingresada
+msgReingPatYaReg;La patología se encuentra dada de baja. ¿Desea reingresarla al sistema?
+msgActualizarPatDatos;¿Desea actualizar la patología con los datos ingresados?
+msgActualizarPatDatosSuccess;Patología reingresada con éxito
+msgActualizarPatDatosError;Error al reingresar la patología
+msgActualizarPatDatosSuccess;Patología reingresada con éxito
+msgActualizarPatDatosError;Error al reingresar la patología
+msgPrioridadPat;Debe ingresar una prioridad
+msgRecomendacionPat;Debe ingresar una recomendación completa
+msgDescripcionCompletaPat;Debe ingresar una descripción completa
+msgNombrePat;Debe ingresar un nombre
+msgSintomasSeleccPat;Debe seleccionar síntomas para la patología
+msgPatModificadaSuccess;Patología modificada con éxito
+msgModificarPatErr;Error al modificar la patología
+msgPrioridadIngresarPat;Debe ingresar una prioridad
+msgRecomendacionPat;Debe ingresar una recomendación completa
+msgDescripcionPat;Debe ingresar una descripción completa
+msgIngresarNombreErr;Debe ingresar un nombre
+msgSeleccSintomasPat;Debe seleccionar síntomas para la patología
+msgInfoSinGuardarPat;Hay información sin guardar, ¿seguro desea salir?
+txtModSintRegistrar;Modificar Síntoma
+msgRegistrarSintSuccess;Síntoma registrado con éxito
+msgErrorRegistrarSint;Error al registrar el síntoma
+msgIngresarNombreSint;Debe Ingresar un nombre
+msgDescripcionRegSint;Debe completar la descripción
+msgSuccessModRegSint;Síntoma modificado con éxito
+msgErrModRegSint;Error al modificar el síntoma
+msgRegNomSint;Debe Ingresar un nombre
+msgCompDescSint;Debe completar la descripción
+msgConfSalirReg;Hay información sin guardar, ¿Seguro desea salir?
+Form frmRegistroGestor
+msgboRegistrarGestor;Gestor registrado con éxito
+msgboxErrorGestor;El usuario ya fue registrado
+msgboxEstaDadoDeBaja;Usted se encuentra dado de baja. ¿Desea reingresar al sistema?
+msgboRegistrarGestor;Gestor registrado con éxito
+msgboxTelefonoError;Ha ingresado un teléfono incorrecto
+msgboxCedulaError;La cédula ingresada no es correcta
+txtTitleRegGestor;Seleccione una fotografía
+msgSelecSintUCAsociar;Debe seleccionar síntomas
+xdxdUCHabilitarGestor;¿Desea habilitar a este gestor?
+msgDarbajaGestorUC;¿Desea dar de baja a este gestor?
+xdxdlol;¿Desea dar de baja a este paciente?
+toolRecomendarXD;Advertencia: Recomendamos que solicite un chat debido a la gravedad de la enfermedad.
+txtMostrarMenosXD;Mostrar menos
+txtMostrarMasXD;Mostrar más
+txtnomsimpxd;¿Qué es
+msgSApeXD;Segundo apellido incorrecto
+msgSNomXD;Segundo nombre incorrecto
+msgPaPEXD;Primer apellido incorrecto
+msgPNomXD;Primer nombre incorrecto
+msgMailIncorrectounu;E-mail incorrecto
+msgPassesDontMatch;Las contraseñas no coinciden
+lblCIRegPac;Cédula de Identidad
+lblMailRegistroPaciente;Correo electrónico
+lblPApeRegPaciente;Primer apellido
+lblSApeRegPaciente;Segundo apellido
+lblMiFotoPac;Mi foto
+lblRepPassPac;Repetir contraseña
+btnEliminarRegPac;Borrar
+cbM;Masculino
+cbF;Femenino
+btnSoliCuentaPac;Solicitar cuenta
+lblFecNacPac;Fecha de Nacimiento
+lblSexoRegPac;Sexo
+btnAceptarRegPac;Añadir
+btnPatCron;Añadir patologías crónicas
+lblNomPat;Nombre de la patología
+btnRegPatologia;Registrar
+lblDescPatologia;Descripción
+btnSintomasPatologia;Añadir síntomas
+lblPrioPatologia;Prioridad
+mrbPMedia;Media
+mrbPBaja;Baja
+lblRecomendacionesPatologia;Recomendaciones
+mrbPAlta;Alta
+lblNA;No hay respuesta
+btnNo;No
+btnSi;Sí
+lblIniciarCOnv;Ha recibido una respuesta del médico
+lblIniciarConversacion;¿Desea Iniciar la conversación?
+lblListadoPatPac;Listado de patologías
+lblSubListadoPat;Vea todas las patologías registradas en la aplicación
+btnConsultaActual;Ingresar
+lblCOnsultaa;Consulta actual
+lblVerConsultaaa;Vea su consulta mientras espera
+btnIngresarSinPac;Ingresar
+lblSubIngSin;Dígamos cuáles son sus síntomas y le daremos un diagnóstico primario
+lblIngSinPac;Ingresar síntomas
+btnHistorialPac;Ingresar
+lblSubMiHistoiralPac;Vea su historial completo dentro de la aplicación
+lblMiHistorialPac;Mi historial
+btnReanudar;Ingresar
+lblReanudarChatt;Reanudar chat
+lblContinuarChat;Continuar chat con médico
+btnAplicarCambiosAjustes;Aplicar cambios
+lblIdiomaAjustes;Idioma
+lblColorSecundario;Color secundario
+lblTemaOscuro;Tema oscuro
+lblTemaActivado;Activado
+lblTemaDesactivado;Desactivado
+lblTituloAjustes;Configuración
+msgNoEstasHabilitado;Usted no se encuentra habilitado para ingresar al sistema

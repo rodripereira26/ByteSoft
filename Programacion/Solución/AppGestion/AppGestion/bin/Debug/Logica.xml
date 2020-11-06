@@ -1,0 +1,200 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Logica
+</name>
+</assembly>
+<members>
+<member name="T:Logica.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Logica.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Logica.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Logica.Configuracion">
+ <summary>
+ Clase serializable encargada de almacenar la configuración del usuario.
+ </summary>
+</member>
+<member name="M:Logica.Configuracion.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="M:Logica.Configuracion.GuardarConfiguracion">
+ <summary>
+ Subrutina encargada de guardar en disco la configuración del usuario.
+ </summary>
+</member>
+<member name="M:Logica.Configuracion.CargarConfiguracion">
+ <summary>
+ Subrutina encargada de cargar del disco la configuración del usuario.
+ </summary>
+</member>
+<member name="M:Logica.Configuracion.Instanciar(Logica.Configuracion)">
+ <summary>
+ Subrutina encargada de instanciar la configuración almacenada en disco.
+ </summary>
+ <param name="instanciaDisco"></param>
+</member>
+<member name="M:Logica.Configuracion.SetConnection">
+ <summary>
+ Subrutina encargada de setear la conexión a la base de datos.
+ </summary>
+</member>
+<member name="M:Logica.Configuracion.RecorrerTablaIdioma(System.String)">
+ <summary>
+ Función encargada de iterar el archivo CSV que contiene el idioma.
+ </summary>
+ <param name="archivo"></param>
+ <returns>DataTable con la información del idioma.</returns>
+</member>
+<member name="T:Logica.ControladorPaciente">
+<summary>
+Clase encargada de los datos de los pacientes.
+</summary>
+</member>
+<member name="T:Logica.ControladorGestor">
+<summary>
+Clase encargada de los datos de los administradores.
+</summary>
+</member>
+<member name="T:Logica.ControladorMedico">
+<summary>
+Clase encargada de los datos de los médicos.
+</summary>
+</member>
+<member name="T:Logica.ControladorSintoma">
+<summary>
+Clase encargada de los datos de los síntomas.
+</summary>
+</member>
+<member name="T:Logica.Datos_Temporales">
+ <summary>
+ Clase encargada de almacenar los datos utilizados en la sesión actual.
+ </summary>
+</member>
+<member name="P:Logica.Datos_Temporales.userLog">
+ <summary>
+ Cédula del usuario logeado.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Logica.Datos_Temporales.idchat">
+ <summary>
+ Identificación del chat seleccionado.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Logica.Datos_Temporales.rol">
+ <summary>
+ Rol del usuario logeado en el sistema.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Logica.Datos_Temporales.pacienteSelecionado">
+ <summary>
+ Cédula del paciente seleccionado por el médico.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Logica.Datos_Temporales.pathConf">
+ <summary>
+ Ruta en la que se encuentran los archivos de configuración del sistema.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Logica.Datos_Temporales.vertical">
+ <summary>
+ Medida en vertical del tamaño del form actual.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Logica.Datos_Temporales.horizontal">
+ <summary>
+ Medida en horizontal del tamaño del form actual.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:Logica.ControladorPatologia">
+<summary>
+Clase encargada de los datos de las patologías.
+</summary>
+</member>
+<member name="M:Logica.ControladorPatologia.Singleton">
+ <summary>
+ Función encargada de devolver una instancia singleton de la clase.
+ </summary>
+ <returns>La instancia creada de la clase.</returns>
+</member>
+<member name="T:Logica.Encriptar">
+ <summary>
+ Clase encargada de realizar las encriptaciones.
+ </summary>
+</member>
+<member name="M:Logica.Encriptar.HASH256(System.Object)">
+ <summary>
+ Función encargada de hashear una contraseña utilizando SHA256.
+ </summary>
+ <param name="texto"></param>
+ <returns>Contraseña hasheada del usuario.</returns>
+</member>
+<member name="T:Logica.ControladorUsuario">
+<summary>
+Clase principal para los datos de los usuarios.
+</summary>
+</member>
+<member name="T:Logica.Verificacion">
+ <summary>
+ Clase encargada de realizar las verificaciones.
+ </summary>
+</member>
+<member name="M:Logica.Verificacion.Verificar_Cedula(System.String)">
+ <summary>
+ Función encargada de verificar si la cédula ingresada contiene caracteres.
+ </summary>
+ <param name="ced"></param>
+ <returns>True si la cédula ingresada tiene el formato correcto</returns>
+</member>
+<member name="M:Logica.Verificacion.Verificar_Digito(System.String)">
+ <summary>
+ Función encargada de verificar si el dígito verificador de la cédula es correcto.
+ </summary>
+ <param name="ced"></param>
+ <returns>True si el dígito es correcto.</returns>
+</member>
+<member name="M:Logica.Verificacion.Verificar_String(System.String)">
+ <summary>
+ Función encargada de verificar si el string ingresado contiene dígitos numéricos.
+ </summary>
+ <param name="texto"></param>
+ <returns>True si el string ingresado es correcto.</returns>
+</member>
+<member name="M:Logica.Verificacion.Verificar_Int(System.String)">
+ <summary>
+ Función encargada de verificar si los dígitos ingresados contienen caracteres.
+ </summary>
+ <param name="numero"></param>
+ <returns>True si los dígitos ingresados son correctos.</returns>
+</member>
+<member name="M:Logica.Verificacion.VerificarEmail(System.String)">
+ <summary>
+ Función encargada de verificar si e-mail ingresado contiene el formato correcto.
+ </summary>
+ <param name="email"></param>
+ <returns>True si el e-mail es correcto.</returns>
+</member>
+</members>
+</doc>

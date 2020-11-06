@@ -1,4 +1,4 @@
 Descarga de OVA's: 
-	OneDrive: 
+	OneDrive: https://1drv.ms/u/s!AuWQjhQBGX3Aj4Az1cUS3AeGVB0IGQ?e=6lerQh
 	Servidor ByteSoft (backup): https://bytesoft.com.uy/windowscliente.ova
 				    https://bytesoft.com.uy/ovaservidor.ova  

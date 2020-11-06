@@ -1,0 +1,184 @@
+CREATE DATABASE bytesoft_bdd
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE `usuario` (
+  `cedula` int NOT NULL,
+  `contrasena` varchar(70) NOT NULL,
+  `pNom` varchar(25) NOT NULL,
+  `pApe` varchar(25) NOT NULL,
+  `sNom` varchar(25) DEFAULT NULL,
+  `sApe` varchar(25) NOT NULL,
+  `correo` varchar(40) NOT NULL,
+  `fotoPerfil` longtext,
+  `bajalogica` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`cedula`),
+  UNIQUE KEY `correo` (`correo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `usuarioTel`;
+CREATE TABLE `usuarioTel` (
+  `cedula` int NOT NULL,
+  `telefono` int NOT NULL,
+  PRIMARY KEY (`cedula`,`telefono`),
+  CONSTRAINT `fk_telefonos` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `salachat`;
+CREATE TABLE `salachat` (
+  `idChat` int NOT NULL AUTO_INCREMENT,
+  `finalizado` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idChat`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `mensaje`;
+CREATE TABLE `mensaje` (
+  `idMensaje` int NOT NULL AUTO_INCREMENT,
+  `fechaEnvio` datetime NOT NULL,
+  `cedula` int NOT NULL,
+  `idChat` int NOT NULL,
+  `mensaje` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`idMensaje`,`fechaEnvio`),
+  KEY `fk_chat_cedula` (`cedula`),
+  KEY `fk_chat_idChat` (`idChat`),
+  CONSTRAINT `fk_chat_cedula` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`),
+  CONSTRAINT `fk_chat_idChat` FOREIGN KEY (`idChat`) REFERENCES `salachat` (`idChat`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `gestor`;
+CREATE TABLE `gestor` (
+  `cedula` int NOT NULL,
+  `verificacion` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`cedula`),
+  CONSTRAINT `fk_gestor_cedula` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `paciente`;
+CREATE TABLE `paciente` (
+  `cedula` int NOT NULL,
+  `fecNac` datetime NOT NULL,
+  `sexo` char(1) NOT NULL,
+  `verificacion` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`cedula`),
+  CONSTRAINT `fk_paciente_cedula` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `DatosPaciente`;
+/*!50001 DROP VIEW IF EXISTS `DatosPaciente`*/;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `DatosPaciente` AS SELECT 
+ 1 AS `Nombre`,
+ 1 AS `Apellido`,
+ 1 AS `Diagnostico`,
+ 1 AS `Fecha`*/;
+
+DROP TABLE IF EXISTS `medico`;
+CREATE TABLE `medico` (
+  `cedula` int NOT NULL,
+  `especializacion` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`cedula`),
+  CONSTRAINT `fk_medico_cedula` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `patologia`;
+CREATE TABLE `patologia` (
+  `idPatologia` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(25) NOT NULL,
+  `descripcion` varchar(550) NOT NULL,
+  `recomendacion` varchar(550) NOT NULL,
+  `prioridad` tinyint(1) NOT NULL,
+  `bajalogica` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idPatologia`),
+  UNIQUE KEY `nombre` (`nombre`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `pacientePatologia`;
+CREATE TABLE `pacientePatologia` (
+  `cedula` int NOT NULL,
+  `IdPatologia` int NOT NULL,
+  PRIMARY KEY (`cedula`,`IdPatologia`),
+  CONSTRAINT `fk_pacientePatologia_cedula` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`),
+  CONSTRAINT `fk_pacientePatologia_idPatologia` FOREIGN KEY (`IdPatologia`) REFERENCES `patologia` (`idPatologia`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `sintoma`;
+CREATE TABLE `sintoma` (
+  `idSintoma` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(25) NOT NULL,
+  `descripcion` varchar(550) NOT NULL,
+  `bajalogica` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idSintoma`),
+  UNIQUE KEY `nombre` (`nombre`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `paciente_indica_sintoma`;
+CREATE TABLE `paciente_indica_sintoma` (
+  `cedulaPaciente` int NOT NULL,
+  `idSintoma` int NOT NULL,
+  `fechaIngreso` datetime NOT NULL,
+  `id` int NOT NULL,
+  PRIMARY KEY (`cedulaPaciente`,`idSintoma`,`fechaIngreso`),
+  KEY `fk_paciente_indica_sintoma_sintoma` (`idSintoma`),
+CONSTRAINT `fk_paciente_indica_sintoma_cedula` FOREIGN KEY (`cedulaPaciente`) REFERENCES `paciente` (`cedula`),
+  CONSTRAINT `fk_paciente_indica_sintoma_sintoma` FOREIGN KEY (`idSintoma`) REFERENCES `sintoma` (`idSintoma`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `paciente_obtiene_diagnostico`;
+CREATE TABLE `paciente_obtiene_diagnostico` (
+  `cedulaPaciente` int NOT NULL,
+  `idPatologia` int NOT NULL,
+  `fecha` datetime NOT NULL,
+  `idDiagnostico` int NOT NULL,
+  PRIMARY KEY (`cedulaPaciente`,`idPatologia`,`fecha`),
+  KEY `fk_paciente_obtiene_diagnostico_idPatolgia` (`idPatologia`),
+  CONSTRAINT `fk_paciente_obtiene_diagnostico_cedulaPaciente` FOREIGN KEY (`cedulaPaciente`) REFERENCES `paciente` (`cedula`),
+  CONSTRAINT `fk_paciente_obtiene_diagnostico_idPatolgia` FOREIGN KEY (`idPatologia`) REFERENCES `patologia` (`idPatologia`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `DatosPaciente`;
+/*!50001 DROP VIEW IF EXISTS `DatosPaciente`*/;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `DatosPaciente` AS SELECT 
+ 1 AS `Nombre`,
+ 1 AS `Apellido`,
+ 1 AS `Diagnostico`,
+ 1 AS `Fecha`*/;
+ 
+ DROP TABLE IF EXISTS `usuario_entra_chat`;
+CREATE TABLE `usuario_entra_chat` (
+  `cedula` int NOT NULL,
+  `idChat` int NOT NULL,
+  `fechaIngreso` datetime NOT NULL,
+  PRIMARY KEY (`cedula`,`idChat`,`fechaIngreso`),
+  KEY `fk_usuario_entra_chat_chat` (`idChat`),
+  CONSTRAINT `fk_usuario_entra_chat_cedula` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`),
+  CONSTRAINT `fk_usuario_entra_chat_chat` FOREIGN KEY (`idChat`) REFERENCES `salachat` (`idChat`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `observacion`;
+CREATE TABLE `observacion` (
+  `idObservacion` int NOT NULL AUTO_INCREMENT,
+  `fecha` datetime NOT NULL,
+  `cedulaMedico` int NOT NULL,
+  `cedulaPaciente` int NOT NULL,
+  `recomendacion` varchar(60) NOT NULL,
+  `derivacion` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`idObservacion`,`fecha`),
+  KEY `fk_observacion_cedulaMedico` (`cedulaMedico`),
+  KEY `fk_observacion_cedulaPaciente` (`cedulaPaciente`),
+  CONSTRAINT `fk_observacion_cedulaMedico` FOREIGN KEY (`cedulaMedico`) REFERENCES `medico` (`cedula`),
+  CONSTRAINT `fk_observacion_cedulaPaciente` FOREIGN KEY (`cedulaPaciente`) REFERENCES `paciente` (`cedula`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `patologia_contiene_sintoma`;
+CREATE TABLE `patologia_contiene_sintoma` (
+  `idPatologia` int NOT NULL,
+  `idSintoma` int NOT NULL,
+  PRIMARY KEY (`idPatologia`,`idSintoma`),
+  KEY `fk_patologia_contiene_sintoma_sintoma` (`idSintoma`),
+  CONSTRAINT `fk_patologia_contiene_sintoma_idPatologia` FOREIGN KEY (`idPatologia`) REFERENCES `patologia` (`idPatologia`),
+  CONSTRAINT `fk_patologia_contiene_sintoma_sintoma` FOREIGN KEY (`idSintoma`) REFERENCES `sintoma` (`idSintoma`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+update paciente set verificacion = 1 where cedula = 11111111
+update gestor set verificacion = 1 where cedula = 22222222
