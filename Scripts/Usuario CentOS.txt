@@ -1,0 +1,2 @@
+Usuario: root
+Contraseña: root
